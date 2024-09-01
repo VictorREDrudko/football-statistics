@@ -1,0 +1,10 @@
+.year {
+  font-size: 22px;
+  display: inline-block;
+  margin: 5px 0;
+  color: yellow;
+}
+
+.title {
+  margin-bottom: 10px;
+}

@@ -1,8 +1,6 @@
 .App {
-  padding: 30px;
   display: flex;
-}
-
-.App > div {
-  margin-right: 50px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
