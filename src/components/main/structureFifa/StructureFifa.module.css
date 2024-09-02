@@ -44,6 +44,10 @@
   transition: all 0.5s;
 }
 
+.items a {
+  color: white;
+}
+
 .items:hover {
   background-color: #306140;
   scale: 1.2;
@@ -58,6 +62,10 @@
   cursor: pointer;
   font-size: 18px;
   transition: all 0.5s;
+}
+
+a.item  {
+  color: white;
 }
 
 .item:hover {

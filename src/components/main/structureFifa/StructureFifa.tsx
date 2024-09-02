@@ -1,5 +1,6 @@
 import s from './StructureFifa.module.css'
 import worldMapImage from './../../../image/map-fifa.png'
+import { NavLink } from 'react-router-dom'
 
 type StructureFifaType = {
   confederations: string[]
@@ -9,7 +10,7 @@ export const StructureFifa = ({confederations} : StructureFifaType) => {
   const mappedStructure = confederations.map((el, index) => {
     return (
       <li key={index} className={s.items}>
-        <a>{el}</a>
+        <NavLink to={`/${el}`.toLowerCase()}>{el}</NavLink>
       </li>
     )
   })
@@ -17,7 +18,7 @@ export const StructureFifa = ({confederations} : StructureFifaType) => {
   return (
     <div className={s.wrapper}>
       <div className={s.wrapperLinks}>
-        <a className={s.item}>FIFA</a>
+        <NavLink to={'/fifa'} className={s.item}>FIFA</NavLink>
         <span className={s.text}>continental confederations</span>
         <ul className={s.containerLink}>{mappedStructure}</ul>
       </div>

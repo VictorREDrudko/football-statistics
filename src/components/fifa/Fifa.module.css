@@ -1,0 +1,50 @@
+.wrapper {
+  color: white;
+  border: 1px solid red;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.wrapperCard {
+  border: 1px solid green;
+  width: 280px;
+  border-radius: 20px;
+  background-color: #063314;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.wrapperCard:hover {
+  background-color: #104d23;
+  scale: 1.1;
+}
+
+.wrapperImg {
+  width: 100%;
+  padding: 10px;
+}
+
+.wrapperImg img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.wrapperCard h3 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.wrapperContent {
+  padding: 10px;
+}
+
+.wrapperContent span {
+  font-size: 14px;
+}
+
+span.title {
+  font-weight: 600;
+  font-size: 16px;
+  color: yellow;
+}

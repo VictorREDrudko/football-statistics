@@ -16,3 +16,7 @@ body {
   line-height:135%;
 }
 
+a {
+  text-decoration: none;
+}
+

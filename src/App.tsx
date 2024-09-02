@@ -1,5 +1,7 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Main } from './components/main/Main';
+import { Fifa } from './components/fifa/Fifa';
 
 // DATA
 const historyFootball: string[] = [
@@ -27,7 +29,11 @@ const confederations: string[] = [
 function App() {
 	return (
 		<div className="App">
-      <Main historyFootball={historyFootball} confederations={confederations}/>
+      <Routes>
+        <Route path="/" element={<Main historyFootball={historyFootball} confederations={confederations}/>} />
+        <Route path="/fifa" element={<Fifa/>} />
+      </Routes>
+      
     </div>
 	);
 }
