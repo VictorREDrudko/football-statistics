@@ -1,15 +1,14 @@
 import s from './Main.module.css'
-import worldMapImage from './../../image/map-fifa.png'
 import worldFootballImage from './../../image/football.png'
 import { FootballHistory } from './footballHistory/FootballHistory'
 import { StructureFifa } from './structureFifa/StructureFifa'
 
 type MainType = {
   historyFootball: string[]
-  structure: string[]
+  confederations: string[]
 }
 
-export const Main = ({historyFootball, structure} : MainType) => {
+export const Main = ({historyFootball, confederations} : MainType) => {
   return (
     <div className={s.container}>
       <div className={s.containerImg}>
@@ -17,7 +16,7 @@ export const Main = ({historyFootball, structure} : MainType) => {
       </div>
       <div className={s.containerContent}>
         <h1>association football</h1>
-        <StructureFifa structure={structure}/>
+        <StructureFifa confederations={confederations}/>
         <FootballHistory historyFootball={historyFootball}/>
       </div>
     </div>

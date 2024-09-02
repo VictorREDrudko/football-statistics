@@ -1,25 +1,29 @@
 import s from './StructureFifa.module.css'
+import worldMapImage from './../../../image/map-fifa.png'
 
 type StructureFifaType = {
-  structure: string[]
+  confederations: string[]
 }
 
-export const StructureFifa = ({structure} : StructureFifaType) => {
-  const mappedStructure = structure.map(el => {
+export const StructureFifa = ({confederations} : StructureFifaType) => {
+  const mappedStructure = confederations.map((el, index) => {
     return (
-      <li>
+      <li key={index} className={s.items}>
         <a>{el}</a>
       </li>
     )
   })
 
   return (
-    <div>
-      <h2>Structure</h2>
-      <span>FIFA - The Fédération Internationale de Football Association (211 national associations)</span>
-      <span>continental confederations</span>
-      <ul className={s.containerLink}>{mappedStructure}</ul>
-      {/* <img src={worldMapImage} alt='map' className={s.image}/> */}
+    <div className={s.wrapper}>
+      <div className={s.wrapperLinks}>
+        <a className={s.item}>FIFA</a>
+        <span className={s.text}>continental confederations</span>
+        <ul className={s.containerLink}>{mappedStructure}</ul>
+      </div>
+      <div className={s.containerImg}>
+        <img src={worldMapImage} alt='map' className={s.imageMap}/>
+      </div>
     </div>
   )
 }

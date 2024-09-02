@@ -13,8 +13,7 @@ const historyFootball: string[] = [
   '1930 The first FIFA World Cup'
 ]
 
-const structure: string[] = [
-  'FIFA',
+const confederations: string[] = [
   'AFC',
   'CAF',
   'CONCACAF',
@@ -28,7 +27,7 @@ const structure: string[] = [
 function App() {
 	return (
 		<div className="App">
-      <Main historyFootball={historyFootball} structure={structure}/>
+      <Main historyFootball={historyFootball} confederations={confederations}/>
     </div>
 	);
 }

@@ -5,9 +5,9 @@ type FootballHistoryType = {
 }
 
 export const FootballHistory = ({historyFootball} : FootballHistoryType) => {
-  const mappedFootballHistory = historyFootball.map(el => {
+  const mappedFootballHistory = historyFootball.map((el, index) => {
     return (
-      <li>
+      <li key={index}>
         <span className={s.year}>{el.slice(0, 5)}</span>
         <span> - {el.slice(5)}</span>
       </li>
