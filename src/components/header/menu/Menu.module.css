@@ -6,7 +6,6 @@
 .item {
   cursor: pointer;
   padding: 5px 10px;
-  border-radius: 10px;
   transition: all 0.5s;
 }
 
@@ -15,7 +14,8 @@
 }
 
 .item:hover {
-  background-color: #494a4d;
+  background-color: #575405;
+  border-radius: 10px 0;
 }
 
 

@@ -15,7 +15,6 @@ export const Main = ({historyFootball, confederations} : MainType) => {
         <img src={worldFootballImage} alt='football' className={s.imageFootball}/>
       </div>
       <div className={s.containerContent}>
-        <h1>association football</h1>
         <StructureFifa confederations={confederations}/>
         <FootballHistory historyFootball={historyFootball}/>
       </div>
