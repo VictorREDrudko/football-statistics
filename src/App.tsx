@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Main } from './components/main/Main';
 import { Fifa } from './components/fifa/Fifa';
+import { Header } from './components/header/Header';
 
 // DATA
 const historyFootball: string[] = [
@@ -15,7 +16,8 @@ const historyFootball: string[] = [
   '1930 The first FIFA World Cup'
 ]
 
-const confederations: string[] = [
+const footballOrganizations: string[] = [
+  'FIFA',
   'AFC',
   'CAF',
   'CONCACAF',
@@ -29,11 +31,11 @@ const confederations: string[] = [
 function App() {
 	return (
 		<div className="App">
+      <Header footballOrganizations={footballOrganizations}/>
       <Routes>
-        <Route path="/" element={<Main historyFootball={historyFootball} confederations={confederations}/>} />
+        <Route path="/" element={<Main historyFootball={historyFootball} confederations={footballOrganizations}/>} />
         <Route path="/fifa" element={<Fifa/>} />
       </Routes>
-      
     </div>
 	);
 }

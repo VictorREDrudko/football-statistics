@@ -1,0 +1,12 @@
+.wrapperIcon {
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.wrapperIcon:hover {
+  scale: 1.1;
+}
+
+.wrapperIcon img {
+  height: 40px;
+}

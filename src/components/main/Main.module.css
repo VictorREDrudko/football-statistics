@@ -1,5 +1,5 @@
 .container {
-  position: relative;
+  /* position: relative; */
   width: 100%;
   color: white;
 }
@@ -16,7 +16,7 @@
 }
 
 .containerContent {
-  position: absolute;
+  /* position: absolute; */
   top: 0px;
   left: 0px;
   padding: 50px;
