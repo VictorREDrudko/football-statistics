@@ -26,6 +26,21 @@ const footballOrganizations: string[] = [
   'UEFA',
 ]
 
+const tournamentsWorldCup = [ 1930, 1934, 1938, 1950, 1954, 1958, 1962, 1966, 1970, 1974, 
+                              1978, 1982, 1986, 1990, 1994, 1998, 2002, 2006, 2010, 2014, 
+                              2018, 2022]
+
+const worldCup = {
+  1930: {
+    id: 1,
+    year: '1930',
+    country: 'Uruguay',
+    teams: 13,
+    matches: 18,
+    goals: 70,
+    goalsPerMatch: 3.89,
+  }
+}
 
 
 function App() {
@@ -34,7 +49,7 @@ function App() {
       <Header footballOrganizations={footballOrganizations}/>
       <Routes>
         <Route path="/" element={<Main historyFootball={historyFootball} confederations={footballOrganizations}/>} />
-        <Route path="/fifa" element={<Fifa/>} />
+        <Route path="/fifa" element={<Fifa tournamentsWorldCup={tournamentsWorldCup}/>} />
       </Routes>
     </div>
 	);

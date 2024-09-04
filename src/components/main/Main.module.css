@@ -4,17 +4,6 @@
   color: white;
 }
 
-.containerImg {
-  height: 100vh;
-  opacity: 0.5;
-}
-
-.imageFootball {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .containerContent {
   position: absolute;
   top: 0px;
