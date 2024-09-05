@@ -1,0 +1,15 @@
+.wrapper {
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

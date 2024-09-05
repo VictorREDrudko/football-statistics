@@ -3,6 +3,7 @@ import './App.css';
 import { Main } from './components/main/Main';
 import { Fifa } from './components/fifa/Fifa';
 import { Header } from './components/header/Header';
+import { WorldCup1930 } from './components/fifa/worldCup/1930/WorldCup1930';
 
 // DATA
 const historyFootball: string[] = [
@@ -50,6 +51,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Main historyFootball={historyFootball} confederations={footballOrganizations}/>} />
         <Route path="/fifa" element={<Fifa tournamentsWorldCup={tournamentsWorldCup}/>} />
+
+        <Route path="/fifa/1930" element={<WorldCup1930 />} />
       </Routes>
     </div>
 	);
