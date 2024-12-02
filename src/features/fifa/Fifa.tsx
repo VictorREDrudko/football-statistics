@@ -1,8 +1,8 @@
 import s from './Fifa.module.css'
-import fifaImage from './../../../image/background-fifa.png'
-import cupImage from './../../../image/world-cup.png'
-import { Background } from '../background/Background'
+import fifaImage from './../../assets/background-fifa.png'
+import cupImage from './../../assets/world-cup.png'
 import { NavLink } from 'react-router-dom'
+import { Background } from '../../common/components/background/Background'
 
 type InfoAboutFifa = {
   title: string
@@ -30,7 +30,7 @@ export const Fifa = () => {
           {infoAboutFifa.tournaments} 
           <span className={s.cup}>{infoAboutFifa.cup.toUpperCase()}</span>
         </p>
-        <NavLink to={'/world-cup'}>
+        <NavLink to={'/fifa/world-cup'}>
           <img className={s.image} src={cupImage} alt="world cup image" />
         </NavLink>
       </div>

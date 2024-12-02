@@ -1,6 +1,6 @@
 import s from './Header.module.css'
-import mainIcon from './../../../image/main-icon.png'
-import ratingIcon from './../../../image/rating-icon.png'
+import mainIcon from './../../../assets/main-icon.png'
+import ratingIcon from './../../../assets/rating-icon.png'
 import { Menu } from './menu/Menu'
 import { Icon } from './icon/Icon'
 

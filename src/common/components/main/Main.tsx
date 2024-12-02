@@ -1,5 +1,5 @@
 import s from './Main.module.css'
-import worldFootballImage from './../../../image/football.png'
+import worldFootballImage from './../../../assets/football.png'
 import { FootballHistory } from './footballHistory/FootballHistory'
 import { StructureFifa } from './structureFifa/StructureFifa'
 import { Background } from '../background/Background'

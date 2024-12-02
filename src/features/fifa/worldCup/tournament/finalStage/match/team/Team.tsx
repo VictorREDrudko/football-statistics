@@ -1,4 +1,4 @@
-import { Country } from '../../../../countries/Country'
+import { Country } from '../../../../../../../common/components/countries/Country'
 import s from './Team.module.css'
 
 type TeamProps = {

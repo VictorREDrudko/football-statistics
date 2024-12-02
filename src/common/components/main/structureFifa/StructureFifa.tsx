@@ -1,6 +1,5 @@
 import s from './StructureFifa.module.css'
-import worldMapImage from './../../../../image/map-fifa.png'
-import { NavLink } from 'react-router-dom'
+import worldMapImage from './../../../../assets/map-fifa.png'
 
 type StructureFifaType = {
   confederations: string[]
