@@ -15,10 +15,12 @@
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "@types/uuid": "^9.0.8",
+    "init": "^0.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
+    "storybook": "^8.3.6",
     "typescript": "^5.3.3",
     "uuid": "^9.0.1",
     "web-vitals": "^3.5.1"
@@ -27,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -46,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "husky": "^8.0.0"
   }
 }
