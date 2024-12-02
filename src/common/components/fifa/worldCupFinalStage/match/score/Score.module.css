@@ -1,0 +1,23 @@
+.container {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main, 
+.pen {
+  text-align: center;
+}
+
+.main {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.pen {
+  font-size: 1rem;
+}
+
+.ind {
+  font-size: 0.8rem;
+}

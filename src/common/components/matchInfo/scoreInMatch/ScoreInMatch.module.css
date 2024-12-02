@@ -1,0 +1,23 @@
+.container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main, 
+.pen {
+  text-align: center;
+}
+
+.main {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.pen {
+  font-size: 1.1rem;
+}
+
+.ind {
+  font-size: 0.8rem;
+}

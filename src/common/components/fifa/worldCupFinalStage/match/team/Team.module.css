@@ -1,0 +1,14 @@
+.container {
+  padding-top: 5px;
+  max-width: 200px;
+  width: 100%;
+}
+
+.container div span {
+  font-size: 1rem;
+}
+
+.container div img {
+  width: 25px;
+  height: 15px;
+}
