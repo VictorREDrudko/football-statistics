@@ -32,7 +32,7 @@ const tournamentsWorldCup = [ 1930, 1934, 1938, 1950, 1954, 1958, 1962, 1966, 19
                               1978, 1982, 1986, 1990, 1994, 1998, 2002, 2006, 2010, 2014, 
                               2018, 2022]
 
-const worldCup = {
+const GenerateStatisticWorldCup = {
   1930: {
     id: 1,
     year: '1930',
@@ -51,7 +51,9 @@ function App() {
       <Header footballOrganizations={footballOrganizations}/>
       <Routes>
         <Route path="/" element={<Main historyFootball={historyFootball} confederations={footballOrganizations}/>} />
-        <Route path="/fifa" element={<Fifa tournamentsWorldCup={tournamentsWorldCup}/>} />
+        <Route path="/fifa" element={<Fifa/>} />
+        {/* <Route path="/fifa/world-cup" element={<WorldCup tournamentsWorldCup={tournamentsWorldCup}/>} /> */}
+
         <Route path="/fifa/1930" element={<WorldCup1930 />} />
       </Routes>
     </div>

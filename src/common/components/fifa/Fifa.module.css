@@ -7,7 +7,7 @@
 .wrapperContent {
   position: absolute;
   top: 80px;
-  left: 400px;
+  left: 0px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -15,35 +15,50 @@
 
 
 .title {
-  margin-top: 50px;
-}
-
-.containerTournaments {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  background-color: rgba(25, 107, 73, 0.5);
-  max-width: 760px;
-  padding: 20px;
   margin-top: 20px;
-  border-radius: 40px 0;
+  padding: 20px;
+  font-size: 50px;
+  max-width: 600px;
+  width: 100%;
+  line-height: 70px;
+  text-align: center;
+  color: rgb(85, 85, 234);
 }
 
-.item {
-  padding: 5px 10px;
-  transition: all 0.5s;
+.description {
+  margin-top: 10px;
+  padding: 20px;
+  font-size: 16px;
+  max-width: 700px;
+  width: 100%;
+  line-height: 30px;
 }
 
-.item a {
-  color: yellowgreen;
-  font-size: 20px;
+.tournaments {
+  padding: 20px;
+  font-size: 16px;
+  max-width: 700px;
+  width: 100%;
+  line-height: 20px;
+}
+
+.cup {
+  font-size: 26px;
+  color: yellow;
   font-weight: 600;
+  line-height: 40px;
 }
 
-.item:hover {
-  background-color: #575405;
-  border-radius: 10px 0;
+.image {
+  height: 80px;
+  cursor: pointer;
+  position: absolute;
+  bottom: -10px;
+  left: 180px;
+
 }
+
+
 
 
 
