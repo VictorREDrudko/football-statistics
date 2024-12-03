@@ -1,3 +1,19 @@
 .container {
   color: aliceblue;
 }
+
+.matchesInGroup {
+  margin: 40px 0;
+}
+
+.matchesInPlayOff {
+  margin: 40px 0;
+}
+
+.headerTable {
+  border: 1px solid black;
+  background: yellow;
+  color: green;
+  padding: 5px;
+  text-align: center;
+}

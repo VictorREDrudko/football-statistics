@@ -14,9 +14,19 @@ body {
   background-color: black;
   font-size: 0.94em;
   line-height: 135%;
+  height: 100%;
 }
 
 a {
   text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 

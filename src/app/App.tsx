@@ -2,11 +2,64 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Header } from '../common/components/header/Header';
 import { Main } from '../common/components/main/Main';
-import { MatchType } from '../common/components/matchInfo/MatchInfo';
 import { Fifa } from '../features/fifa/Fifa';
 import { WorldCup } from '../features/fifa/worldCup/WorldCup';
 import { Tournament } from '../features/fifa/worldCup/tournament/Tournament';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import background1930 from './../assets/background-world-cup-1930.png'
+import logo1930 from './../assets/logo-world-cup/1930.png'
+
+// Types
+type ImageFifaWorldCup = {
+  background: string
+  logo: string
+}
+
+type StatisticWorldCup = {
+  title: string
+  hostCountry: string
+  teamsInFinalStage: number
+  teamsInQualification: number
+  matches: number
+  goals: number
+  goalsPerMatch: number
+}
+
+type Goals = {
+  playersScoredGoal: string[]
+  timeGoals: string[] 
+}
+
+type Stadium = {
+  title: string
+  city: string
+  country: string
+  attendance: string
+}
+
+export type MatchFifaWorldCup = {
+  id: string
+  date: string
+  stage: string
+  teams: string[]
+  score: number[][]
+  goals: Goals[]
+  stadium: Stadium
+}
+
+export type FifaWorldCup = {
+  image: ImageFifaWorldCup
+  statistic: StatisticWorldCup
+  info: string
+  qualification: MatchFifaWorldCup[] | 'Not qualification'
+  finalStage: MatchFifaWorldCup[]
+}
+
+export type DataFifaWorldCup = {
+  [key: string] : FifaWorldCup
+}
+
+
 
 
 // DATA
@@ -31,35 +84,28 @@ const footballOrganizations: string[] = [
   'UEFA',
 ]
 
-const tournamentsWorldCup = [ 1930, 1934, 1938, 1950, 1954, 1958, 1962, 1966, 1970, 1974, 
+const tournamentsWorldCup: number[] = [ 1930, 1934, 1938, 1950, 1954, 1958, 1962, 1966, 1970, 1974, 
                               1978, 1982, 1986, 1990, 1994, 1998, 2002, 2006, 2010, 2014, 
                               2018, 2022]
 
-const GenerateStatisticWorldCup = {
-  1930: {
-    id: 1,
-    year: '1930',
-    country: 'Uruguay',
-    teams: 13,
-    matches: 18,
-    goals: 70,
-    goalsPerMatch: 3.89,
-  }
-}
-
-
-export type Matches = {
-  qualification: number
-  finalStage: MatchType[]
-}
-
-export type DataFifaWorldCup = {
-  [key: string] : Matches
-}
 
 const dataFifaWorldCup: DataFifaWorldCup = {
   ['1930'] : {
-    qualification: 1,
+    image: {
+      background: background1930,
+      logo: logo1930
+    },
+    statistic: {
+      title: '1930 FIFA World Cup',
+      hostCountry: 'Uruguay',
+      teamsInFinalStage: 13,
+      teamsInQualification: 0,
+      matches: 18,
+      goals: 70,
+      goalsPerMatch: 3.89,
+    },
+    info: 'Same text',
+    qualification: 'Not qualification',
     finalStage: [
       {
         id: '1-1930',
@@ -67,10 +113,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'group 1',
         teams: ['France', 'Mexico'],
         score: [[4, 1], [], []],
-        forwards: [
-          { players: ['L. Laurent', 'Langiller', 'Maschinot'],
+        goals: [
+          { playersScoredGoal: ['L. Laurent', 'Langiller', 'Maschinot'],
             timeGoals: ['19', '40', '43, 87'] }, 
-          { players: ['Carreño'],
+          { playersScoredGoal: ['Carreño'],
             timeGoals: ['80'] }, 
         ],
         stadium: 
@@ -86,10 +132,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'group 4',
         teams: ['United States', 'Belgium'],
         score: [[3, 0], [], []],
-        forwards: [
-          { players: ['McGhee', 'Florie', 'Patenaude'],
+        goals: [
+          { playersScoredGoal: ['McGhee', 'Florie', 'Patenaude'],
             timeGoals: ['23', '45', '69'] }, 
-          { players: [''],
+          { playersScoredGoal: [''],
             timeGoals: [''] }, 
         ],
         stadium: 
@@ -105,10 +151,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'group 2',
         teams: ['Yugoslavia', 'Brazil'],
         score: [[2, 1], [], []],
-        forwards: [
-          { players: ['Tirnanić', 'Bek'],
+        goals: [
+          { playersScoredGoal: ['Tirnanić', 'Bek'],
             timeGoals: ['21', '30'] }, 
-          { players: ['Preguinho'],
+          { playersScoredGoal: ['Preguinho'],
             timeGoals: ['62'] }, 
         ],
         stadium: 
@@ -124,10 +170,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'group 3',
         teams: ['Romania', 'Peru'],
         score: [[3, 1], [], []],
-        forwards: [
-          { players: ['Deșu', 'Stanciu', 'Kovács'],
+        goals: [
+          { playersScoredGoal: ['Deșu', 'Stanciu', 'Kovács'],
             timeGoals: ['1', '79', '89'] }, 
-          { players: ['De Souza'],
+          { playersScoredGoal: ['De Souza'],
             timeGoals: ['75'] }, 
         ],
         stadium: 
@@ -143,10 +189,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'group 1',
         teams: ['Argentina', 'France'],
         score: [[1, 0], [], []],
-        forwards: [
-          { players: ['Monti'],
+        goals: [
+          { playersScoredGoal: ['Monti'],
             timeGoals: ['81'] }, 
-          { players: [''],
+          { playersScoredGoal: [''],
             timeGoals: [''] }, 
         ],
         stadium: 
@@ -162,10 +208,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'group 1',
         teams: ['Chile', 'Mexico'],
         score: [[3, 0], [], []],
-        forwards: [
-          { players: ['Vidal', 'M. Rosas'],
+        goals: [
+          { playersScoredGoal: ['Vidal', 'M. Rosas'],
             timeGoals: ['1, 65', '52(o.g.)'] }, 
-          { players: [''],
+          { playersScoredGoal: [''],
             timeGoals: [''] }, 
         ],
         stadium: 
@@ -181,10 +227,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'group 2',
         teams: ['Yugoslavia', 'Bolivia'],
         score: [[4, 0], [], []],
-        forwards: [
-          { players: ['Bek', 'Marjanović', 'Vujadinović'],
+        goals: [
+          { playersScoredGoal: ['Bek', 'Marjanović', 'Vujadinović'],
             timeGoals: ['60, 67', '65', '85'] }, 
-          { players: [''],
+          { playersScoredGoal: [''],
             timeGoals: [''] }, 
         ],
         stadium: 
@@ -200,10 +246,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'group 4',
         teams: ['United States', 'Paraguay'],
         score: [[3, 0], [], []],
-        forwards: [
-          { players: ['Patenaude'],
+        goals: [
+          { playersScoredGoal: ['Patenaude'],
             timeGoals: ['10, 15, 50'] }, 
-          { players: [''],
+          { playersScoredGoal: [''],
             timeGoals: [''] }, 
         ],
         stadium: 
@@ -216,13 +262,13 @@ const dataFifaWorldCup: DataFifaWorldCup = {
       {
         id: '9-1930',
         date: '18.07.1930',
-        stage: 'group 4',
+        stage: 'group 3',
         teams: ['Uruguay', 'Peru'],
         score: [[1, 0], [], []],
-        forwards: [
-          { players: ['Vargas Peña'],
+        goals: [
+          { playersScoredGoal: ['Vargas Peña'],
             timeGoals: ['40'] }, 
-          { players: [''],
+          { playersScoredGoal: [''],
             timeGoals: [''] }, 
         ],
         stadium: 
@@ -238,10 +284,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'group 1',
         teams: ['Chile', 'France'],
         score: [[1, 0], [], []],
-        forwards: [
-          { players: ['Subiabre'],
+        goals: [
+          { playersScoredGoal: ['Subiabre'],
             timeGoals: ['67'] }, 
-          { players: [''],
+          { playersScoredGoal: [''],
             timeGoals: [''] }, 
         ],
         stadium: 
@@ -257,10 +303,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'group 1',
         teams: ['Argentina', 'Mexico'],
         score: [[6, 3], [], []],
-        forwards: [
-          { players: ['Stábile', 'Zumelzú', 'Varallo'],
+        goals: [
+          { playersScoredGoal: ['Stábile', 'Zumelzú', 'Varallo'],
             timeGoals: ['8, 17, 80', '12, 55', '53'] }, 
-          { players: ['M. Rosas', 'Gayón'],
+          { playersScoredGoal: ['M. Rosas', 'Gayón'],
             timeGoals: ['42(pen.), 65', '75'] }, 
         ],
         stadium: 
@@ -276,10 +322,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'group 2',
         teams: ['Brazil', 'Bolivia'],
         score: [[4, 0], [], []],
-        forwards: [
-          { players: ['Moderato', 'Preguinho'],
+        goals: [
+          { playersScoredGoal: ['Moderato', 'Preguinho'],
             timeGoals: ['37, 73', '57, 83'] }, 
-          { players: [''],
+          { playersScoredGoal: [''],
             timeGoals: [''] }, 
         ],
         stadium: 
@@ -295,10 +341,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'group 4',
         teams: ['Paraguay', 'Belgium'],
         score: [[1, 0], [], []],
-        forwards: [
-          { players: ['Vargas Peña'],
+        goals: [
+          { playersScoredGoal: ['Vargas Peña'],
             timeGoals: ['40',] }, 
-          { players: [''],
+          { playersScoredGoal: [''],
             timeGoals: [''] }, 
         ],
         stadium: 
@@ -314,10 +360,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'group 3',
         teams: ['Uruguay', 'Romania'],
         score: [[4, 0], [], []],
-        forwards: [
-          { players: ['Dorado', 'Scarone', 'Anselmo', 'Cea'],
+        goals: [
+          { playersScoredGoal: ['Dorado', 'Scarone', 'Anselmo', 'Cea'],
             timeGoals: ['7', '26', '31', '35'] }, 
-          { players: [''],
+          { playersScoredGoal: [''],
             timeGoals: [''] }, 
         ],
         stadium: 
@@ -333,10 +379,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'group 1',
         teams: ['Argentina', 'Chile'],
         score: [[3, 1], [], []],
-        forwards: [
-          { players: ['Stábile', 'M. Evaristo'],
+        goals: [
+          { playersScoredGoal: ['Stábile', 'M. Evaristo'],
             timeGoals: ['12, 13', '51'] }, 
-          { players: ['	Subiabre'],
+          { playersScoredGoal: ['	Subiabre'],
             timeGoals: ['15'] }, 
         ],
         stadium: 
@@ -349,13 +395,13 @@ const dataFifaWorldCup: DataFifaWorldCup = {
       {
         id: '16-1930',
         date: '26.07.1930',
-        stage: 'semi-finals',
+        stage: '1/2 finals',
         teams: ['Argentina', 'United States'],
         score: [[6, 1], [], []],
-        forwards: [
-          { players: ['Monti', 'Scopelli', 'Stábile', 'Peucelle'],
+        goals: [
+          { playersScoredGoal: ['Monti', 'Scopelli', 'Stábile', 'Peucelle'],
             timeGoals: ['20', '56', '69, 87', '80, 85'] }, 
-          { players: ['Brown'],
+          { playersScoredGoal: ['Brown'],
             timeGoals: ['89'] }, 
         ],
         stadium: 
@@ -368,13 +414,13 @@ const dataFifaWorldCup: DataFifaWorldCup = {
       {
         id: '17-1930',
         date: '27.07.1930',
-        stage: 'semi-finals',
+        stage: '1/2 finals',
         teams: ['Uruguay', 'Yugoslavia'],
         score: [[6, 1], [], []],
-        forwards: [
-          { players: ['Cea', 'Anselmo', 'Iriarte'],
+        goals: [
+          { playersScoredGoal: ['Cea', 'Anselmo', 'Iriarte'],
             timeGoals: ['18, 67, 72', '20, 31', '61'] }, 
-          { players: ['Vujadinović'],
+          { playersScoredGoal: ['Vujadinović'],
             timeGoals: ['4'] }, 
         ],
         stadium: 
@@ -390,10 +436,10 @@ const dataFifaWorldCup: DataFifaWorldCup = {
         stage: 'final',
         teams: ['Uruguay', 'Argentina'],
         score: [[4, 2], [], []],
-        forwards: [
-          { players: ['Dorado', 'Cea', 'Iriarte', 'Castro'],
+        goals: [
+          { playersScoredGoal: ['Dorado', 'Cea', 'Iriarte', 'Castro'],
             timeGoals: ['12', '57', '68', '89'] }, 
-          { players: ['Peucelle', 'Stábile'],
+          { playersScoredGoal: ['Peucelle', 'Stábile'],
             timeGoals: ['20', '37'] }, 
         ],
         stadium: 
@@ -405,33 +451,31 @@ const dataFifaWorldCup: DataFifaWorldCup = {
       },
     ]
   },
-  ['1934'] : {
-    qualification: 2,
-    finalStage: [
-      {
-        id: '1-1934',
-        date: '13.07.1934',
-        stage: 'group 4',
-        teams: ['Belgium', 'United States'],
-        score: [[9, 8], [], []],
-        forwards: [
-          { players: ['McGhee', 'Florie', 'Patenaude'],
-            timeGoals: ['23', '45', '69'] }, 
-          { players: [''],
-            timeGoals: [''] }, 
-        ],
-        stadium: 
-        {title: 'Estadio Parque Central',
-          city: 'Montevideo',
-          country: 'Uruguay',
-          attendance: '18 346',
-        }
-      },
-    ]
-  },
+  // ['1934'] : {
+  //   qualification: 2,
+  //   finalStage: [
+  //     {
+  //       id: '1-1934',
+  //       date: '13.07.1934',
+  //       stage: 'group 4',
+  //       teams: ['Belgium', 'United States'],
+  //       score: [[9, 8], [], []],
+  //       goals: [
+  //         { playersScoredGoal: ['McGhee', 'Florie', 'Patenaude'],
+  //           timeGoals: ['23', '45', '69'] }, 
+  //         { playersScoredGoal: [''],
+  //           timeGoals: [''] }, 
+  //       ],
+  //       stadium: 
+  //       {title: 'Estadio Parque Central',
+  //         city: 'Montevideo',
+  //         country: 'Uruguay',
+  //         attendance: '18 346',
+  //       }
+  //     },
+  //   ]
+  // },
 }
-
-
 
 
 function App() {

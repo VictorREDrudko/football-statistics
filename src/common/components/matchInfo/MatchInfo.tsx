@@ -5,7 +5,7 @@ import { ScoreInMatch, ScoreType } from './scoreInMatch/ScoreInMatch'
 
 type TeamsType = string[]
 
-export type MatchType = {
+type MatchType = {
   id: string
   date: string
   stage: string

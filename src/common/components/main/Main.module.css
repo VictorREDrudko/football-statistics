@@ -1,16 +1,17 @@
 .container {
   position: relative;
   width: 100%;
+  height: 100vh;
   color: white;
 }
 
 .containerContent {
+  margin-top: 60px;
+  padding: 20px;
   position: absolute;
   top: 0px;
   left: 0px;
-  padding: 50px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  width: 100%;
+  gap: 2rem;
 }

@@ -1,23 +1,22 @@
 import { Background } from '../../../../common/components/background/Background'
 import s from './Tournament.module.css'
-import imageFifaWorldCup from './../../../../assets/background-world-cup-1930.png'
 import { Statistics } from './statistics/Statistics'
 import { InfoAboutTournament } from './infoAboutTournament/InfoAboutTournament'
 import { Qualification } from './qualification/Qualification'
 import { FinalStage } from './finalStage/FinalStage'
-import { Matches } from '../../../../app/App'
+import { FifaWorldCup } from '../../../../app/App'
 
 type TournamentProps = {
-  data: Matches
+  data: FifaWorldCup
 }
 
 
 export const Tournament = (props: TournamentProps) => {
   return (
     <div className={s.wrapper}>
-      <Background image={imageFifaWorldCup}/>
+      <Background image={props.data.image.background}/>
       <div className={s.content}>
-        <Statistics/>
+        <Statistics logo={props.data.image.logo}/>
         <InfoAboutTournament/>
       </div>
       <Qualification/>

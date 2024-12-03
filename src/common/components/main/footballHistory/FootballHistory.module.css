@@ -1,11 +1,19 @@
+/* .container {
+} */
+
 .year {
-  font-size: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
   display: inline-block;
-  margin: 5px 0;
+  line-height: 1.8rem;
   color: yellow;
 }
 
 .title {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.text {
+  font-size: 1.0rem;
 }
 

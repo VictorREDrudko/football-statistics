@@ -1,11 +1,11 @@
-import s from './StructureFifa.module.css'
+import s from './InfoFootball.module.css'
 import worldMapImage from './../../../../assets/map-fifa.png'
 
 type StructureFifaType = {
   confederations: string[]
 }
 
-export const StructureFifa = ({confederations} : StructureFifaType) => {
+export const InfoFootball = ({confederations} : StructureFifaType) => {
   return (
     <div className={s.wrapper}>
       <div className={s.containerText}>

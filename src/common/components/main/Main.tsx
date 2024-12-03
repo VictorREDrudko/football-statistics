@@ -1,8 +1,8 @@
 import s from './Main.module.css'
 import worldFootballImage from './../../../assets/football.png'
 import { FootballHistory } from './footballHistory/FootballHistory'
-import { StructureFifa } from './structureFifa/StructureFifa'
 import { Background } from '../background/Background'
+import { InfoFootball } from './infoFootball/InfoFootball'
 
 type MainType = {
   historyFootball: string[]
@@ -14,7 +14,7 @@ export const Main = ({historyFootball, confederations} : MainType) => {
     <div className={s.container}>
       <Background image={worldFootballImage}/>
       <div className={s.containerContent}>
-        <StructureFifa confederations={confederations}/>
+        <InfoFootball confederations={confederations}/>
         <FootballHistory historyFootball={historyFootball}/>
       </div>
     </div>
