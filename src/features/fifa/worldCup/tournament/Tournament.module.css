@@ -1,15 +1,52 @@
 .wrapper {
-  position: relative;
+  padding: 20px 10px;
 }
 
-.content {
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: center;
+.containerAboutTournament {
   width: 100%;
+  height: 100%;
+  background-image: url("./../../../../assets/background-world-cup-1930.png");
+  background-size: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
+
+.containerDescription {
+  padding: 10px;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+}
+
+
+.containerStatistic {
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .containerAboutTournament {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .containerStatistic {
+    flex-shrink: 1;
+    order: 2;
+  }
+
+  .containerDescription {
+    order: 1;
+    margin-top: 60px;
+  }
+}
+
+
+
+
+
+
+

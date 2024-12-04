@@ -10,17 +10,23 @@ type TournamentProps = {
   data: FifaWorldCup
 }
 
-
 export const Tournament = (props: TournamentProps) => {
   return (
     <div className={s.wrapper}>
-      <Background image={props.data.image.background}/>
-      <div className={s.content}>
-        <Statistics logo={props.data.image.logo}/>
-        <InfoAboutTournament/>
-      </div>
-      <Qualification/>
-      <FinalStage data={props.data.finalStage}/>
+      <section className={s.containerAboutTournament}>
+        <div className={s.containerStatistic}>
+          <Statistics logo={props.data.image.logo} statistic={props.data.statistic}/>
+        </div>
+        <div className={s.containerDescription}>
+          <InfoAboutTournament info={props.data.info} ball={props.data.image.ball}/>
+        </div>
+      </section>
+      <section className={s.containerFinalStage}>
+        <FinalStage data={props.data.finalStage}/>
+      </section>
+      <section className={s.containerFinalStage}>
+        <Qualification/>
+      </section>
     </div>
   )
 }

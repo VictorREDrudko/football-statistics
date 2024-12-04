@@ -108,14 +108,16 @@ export const FinalStage = (props: FinalStageProps) => {
 
     // Add properties position and qualification
     const addPropertiesToDataTeamsInGroup = sortDataTeamsInGroup.map((dataTeam : StatisticTeam, index) => {
-      const qualificationTeam = NameUniqueTeamsPlayOff.includes(dataTeam.team, 0) 
-      return ( {...dataTeam, position: index + 1, qualification: qualificationTeam} )
+      const qualificationTeam = NameUniqueTeamsPlayOff.includes(dataTeam.team, 0);
+      const qualification =  qualificationTeam ? '+' : ''
+      return ( {...dataTeam, position: index + 1, qualification: qualification} )
     })
 
 
     const addBodyTable = addPropertiesToDataTeamsInGroup.map((item, index) => {
+      const styleQualificationTeam = item.qualification === '+' ? {backgroundColor: 'rgba(120, 255, 0, 1)'} : undefined
       return (
-      <tr key={index} >
+      <tr key={index} className={s.bodyTable} style={styleQualificationTeam}>
         <th>{item.position}</th>
         <th>{item.team}</th>
         <th>{item.played}</th>
@@ -133,7 +135,7 @@ export const FinalStage = (props: FinalStageProps) => {
 
     const mappedMatch = filteredMatchInGroup.map(match => {
       return (
-      <div key={match.id}>
+      <div key={match.id} className={s.containerMatchInGroup}>
         <Match teams={match.teams} score={match.score} id={match.id}/>
       </div>
       )
@@ -141,8 +143,8 @@ export const FinalStage = (props: FinalStageProps) => {
 
     return (
       <div key={index}>
-        <table style={{border: '1px solid black', borderCollapse: 'collapse', marginBottom: '10px', width: '550px'}}>
-          <caption>{titleGroup}</caption>
+        <table className={s.table}>
+          <caption className={s.titleTable}>{titleGroup}</caption>
           <thead>
             <tr>{headerTable}</tr>
           </thead>
@@ -158,7 +160,7 @@ export const FinalStage = (props: FinalStageProps) => {
 
     const mappedMatch = filteredMatchInPlayOff.map(match => {
       return (
-      <div key={match.id}>
+      <div key={match.id} className={s.containerMatchInPlayOff}>
         <Match teams={match.teams} score={match.score} id={match.id}/>
       </div>
       )
@@ -173,7 +175,8 @@ export const FinalStage = (props: FinalStageProps) => {
 
   return (
     <div className={s.container}>
-      <div>
+      <h2 className={s.titleGroupStage}>Group stage</h2>
+      <div className={s.containerGroupRound}>
         {mappedMatchesInGroup}
       </div>
       <div>

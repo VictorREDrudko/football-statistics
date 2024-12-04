@@ -5,24 +5,29 @@ import { Main } from '../common/components/main/Main';
 import { Fifa } from '../features/fifa/Fifa';
 import { WorldCup } from '../features/fifa/worldCup/WorldCup';
 import { Tournament } from '../features/fifa/worldCup/tournament/Tournament';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import background1930 from './../assets/background-world-cup-1930.png'
+import background1930_2 from './../assets/background-world-cup-1930-2.png'
 import logo1930 from './../assets/logo-world-cup/1930.png'
+import ballImg from './../assets/ball.png'
 
 // Types
 type ImageFifaWorldCup = {
   background: string
+  background2: string
   logo: string
+  ball: string
 }
 
-type StatisticWorldCup = {
-  title: string
+export type StatisticWorldCup = {
   hostCountry: string
   teamsInFinalStage: number
   teamsInQualification: number
   matches: number
   goals: number
   goalsPerMatch: number
+  topScorer: string
+  topScorerGoals: number
 }
 
 type Goals = {
@@ -47,10 +52,16 @@ export type MatchFifaWorldCup = {
   stadium: Stadium
 }
 
+export type InfoFifaWorldCup = {
+  title: string
+  dates: string
+  peculiarities: string[]
+}
+
 export type FifaWorldCup = {
   image: ImageFifaWorldCup
   statistic: StatisticWorldCup
-  info: string
+  info: InfoFifaWorldCup
   qualification: MatchFifaWorldCup[] | 'Not qualification'
   finalStage: MatchFifaWorldCup[]
 }
@@ -93,18 +104,31 @@ const dataFifaWorldCup: DataFifaWorldCup = {
   ['1930'] : {
     image: {
       background: background1930,
-      logo: logo1930
+      background2: background1930_2,
+      logo: logo1930,
+      ball: ballImg,
     },
     statistic: {
-      title: '1930 FIFA World Cup',
       hostCountry: 'Uruguay',
       teamsInFinalStage: 13,
       teamsInQualification: 0,
       matches: 18,
       goals: 70,
       goalsPerMatch: 3.89,
+      topScorer: 'G.Stábile',
+      topScorerGoals: 8,
     },
-    info: 'Same text',
+    info: {
+      title: '1930 FIFA World Cup',
+      dates: "The first FIFA World Cup in football was the inaugural in Uruguay from 13 to 30 July 1930.",
+      peculiarities: [
+        "Only a handful of European teams chose to participate because of the difficulty of traveling to South America due to the Great Depression",
+        "Francisco Varallo from Argentina was the last surviving player from this World Cup. He died in 2010 at the age of 100.",
+        "The first World Cup was the only one without qualification.",
+        "France's Lucien Laurent was the scorer of the first World Cup goal",
+        "All matches were played in the Uruguayan capital, Montevideo."
+      ]
+    },
     qualification: 'Not qualification',
     finalStage: [
       {
