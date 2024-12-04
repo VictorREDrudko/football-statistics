@@ -1,44 +1,87 @@
 .wrapper {
   width: 100%;
+  height: 100vh;
   position: relative;
 }
 
 .wrapperContent {
   position: absolute;
-  top: 200px;
-  left: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+}
+
+.title {
+  text-align: center;
+  color: yellowgreen;
+  font-size: 40px;
+  line-height: 60px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
 }
 
 .containerTournaments {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  background-color: rgba(25, 107, 73, 0.5);
-  max-width: 760px;
+  gap: 20px;
+  justify-content: space-around;
+  background-color: rgba(10, 102, 45, 0.3);
+  border: 1px solid rgba(109, 114, 3, 0.8);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.8);
+  max-width: 700px;
   padding: 20px;
-  margin-top: 20px;
   border-radius: 40px 0;
 }
 
-.title {
-  text-align: center;
-  color: yellow;
-  font-size: 40px;
-  margin-bottom: 40px;
-}
-
 .item {
-  padding: 5px 10px;
+  padding: 10px 30px;
   transition: all 0.5s;
+  border: 1px solid rgba(109, 114, 3, 0.7);
+  background-color: rgba(10, 102, 45, 0.6);
+  border-radius: 20px 0;
 }
 
 .item a {
-  color: yellowgreen;
+  color: gold;
   font-size: 20px;
   font-weight: 600;
 }
 
 .item:hover {
   background-color: #575405;
-  border-radius: 10px 0;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 1000px) {
+  .wrapperContent {
+    margin-top: 80px;
+  }
+
+  .containerTournaments {
+    gap: 15px;
+    padding: 10px;
+    border-radius: 30px 0;
+  }
+
+  .title {
+    font-size: 35px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .item {
+    padding: 5px 20px;
+  }
+
+  .item a {
+    font-size: 18px;
+  }
 }

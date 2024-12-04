@@ -13,11 +13,12 @@ type InfoAboutFifa = {
 
 const infoAboutFifa : InfoAboutFifa = {
   title: 'International Federation of Association Football',
-  description: 'FIFA, is the international self-regulatory governing body of association football, beach soccer, and futsal. It was founded in 1904. Its membership now comprises 211 national associations. These national associations must also be members of one of the six regional confederations: CAF (Africa), AFC (Asia and Australia), UEFA (Europe), CONCACAF (North & Central America and the Caribbean), OFC (Oceania), and CONMEBOL (South America).',
-  tournaments: "FIFA is responsible for organizing football's international tournaments, notably the ",
-  cup: 'World Cup'
+  description: 'FIFA, is the international self-regulatory governing body of association football, beach soccer, and futsal. It was founded in 1904. Its membership now comprises 211 national associations (six regional confederations: CAF (Africa), AFC (Asia and Australia), UEFA (Europe), CONCACAF (North & Central America and the Caribbean), OFC (Oceania), and CONMEBOL (South America)).',
+  tournaments: "is the most important tournament by FIFA",
+  cup: 'World Cup - '
 }
 
+const description = infoAboutFifa.description.split('.')
 
 export const Fifa = () => {
   return (
@@ -25,14 +26,17 @@ export const Fifa = () => {
       <Background image={fifaImage}/>
       <div className={s.wrapperContent}>
         <h2 className={s.title}>{infoAboutFifa.title}</h2>
-        <p className={s.description}>{infoAboutFifa.description}</p>
-        <p className={s.tournaments}>
-          {infoAboutFifa.tournaments} 
-          <span className={s.cup}>{infoAboutFifa.cup.toUpperCase()}</span>
-        </p>
-        <NavLink to={'/fifa/world-cup'}>
-          <img className={s.image} src={cupImage} alt="world cup image" />
-        </NavLink>
+        <p className={s.description}>{description[0]}</p>
+        <p className={s.description}>{description[1]}</p>
+        <p className={s.description}>{description[2]}</p>
+        <p className={s.description}>{description[3]}</p>
+        <div className={s.containerTournaments}>
+          <NavLink to={'/fifa/world-cup'} className={s.link}>
+            <img className={s.image} src={cupImage} alt="world cup image" />
+            <span className={s.cup}>{infoAboutFifa.cup.toUpperCase()}</span>
+          </NavLink>
+          <p className={s.tournaments}>{infoAboutFifa.tournaments}</p>
+        </div>
       </div>
     </div>
   )

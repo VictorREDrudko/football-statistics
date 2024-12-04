@@ -1,61 +1,129 @@
 .wrapper {
   color: white;
   width: 100%;
+  height: 100vh;
   position: relative;
 }
 
 .wrapperContent {
   position: absolute;
   top: 80px;
-  left: 0px;
+  left: 20px;
+  margin-right: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 
 .title {
-  margin-top: 20px;
+  margin: 40px 0 40px 0;
   padding: 20px;
-  font-size: 50px;
-  max-width: 600px;
+  font-size: 35px;
+  max-width: 550px;
   width: 100%;
   line-height: 70px;
-  text-align: center;
-  color: rgb(85, 85, 234);
+  text-align: left;
+  color: #b2c3fe;
+  text-transform: uppercase;
+  border: 1px solid grey;
+  border-radius: 50px 0;
+  box-shadow: 0 0 10px 5px rgba(200, 200, 200, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .description {
-  margin-top: 10px;
-  padding: 20px;
-  font-size: 16px;
-  max-width: 700px;
+  padding: 0 10px;
+  font-size: 18px;
+  max-width: 600px;
   width: 100%;
   line-height: 30px;
+  font-style: italic;
+}
+
+.containerTournaments {
+  padding: 20px;
+  color: #b2c3fe;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .tournaments {
-  padding: 20px;
-  font-size: 16px;
-  max-width: 700px;
-  width: 100%;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 30px;
+  font-style: italic;
+  padding: 10px;
 }
 
 .cup {
-  font-size: 26px;
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 20px;
   color: yellow;
   font-weight: 600;
-  line-height: 40px;
+  line-height: 30px;
+  background-color: #2f3209;
+  border-radius: 10px 0;
 }
 
+.cup:hover {
+  background-color: #575405;
+  border-radius: 10px 0;
+  box-shadow: 0px 0px 5px 5px rgba(249, 255, 90, 0.5);
+  transition: all 0.5s;
+  } 
+
 .image {
-  height: 80px;
+  width: 20px;
   cursor: pointer;
-  position: absolute;
-  bottom: -10px;
-  left: 180px;
+  transition: all 0.5s;
 }
+
+.image:hover {
+  scale: 1.2;
+} 
+
+.link {
+  display: flex;
+  gap: 10px;
+}
+
+
+
+@media (max-width: 400px) {
+  .wrapperContent {
+    position: absolute;
+    top: 60px;
+    gap: 10px;
+  }
+
+  .title {
+    margin: 15px 0 15px 0;
+    padding: 10px;
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 30px 0;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .cup {
+    padding: 10px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .tournaments {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
 
 
 
