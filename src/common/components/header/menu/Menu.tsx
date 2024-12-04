@@ -6,9 +6,10 @@ type MenuType = {
   footballOrganizations: string[]
   isOpen: boolean
   onClickHundler: () => void
+  menuRef: MutableRefObject<null>
 }
 
-export const Menu = ({footballOrganizations, isOpen, onClickHundler}:MenuType) => {
+export const Menu = ({footballOrganizations, isOpen, onClickHundler, menuRef}:MenuType) => {
 
   const mappedFootballOrganizations = footballOrganizations.map((el, index) => {
     return (
@@ -21,7 +22,7 @@ export const Menu = ({footballOrganizations, isOpen, onClickHundler}:MenuType) =
   const classMenu = isOpen ? `${s.wrapper} ${s.active}` : s.wrapper
 
   return (
-    <nav className={classMenu}>
+    <nav className={classMenu} ref={menuRef}>
       <ul className={s.wrapperItems}>{mappedFootballOrganizations}</ul>
     </nav>
 

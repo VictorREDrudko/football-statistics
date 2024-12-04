@@ -7,7 +7,6 @@ import { useRef, useState } from 'react'
 import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useOutsideClick } from '../../hooks/UseOutsideClick'
-import { NavLink } from 'react-router-dom'
 
 
 type HeaderType = {
@@ -19,9 +18,7 @@ export const Header = ({footballOrganizations}:HeaderType) => {
   const menuRef = useRef(null)
   
   useOutsideClick(menuRef, () => {
-    console.log('111111111111')
     if(isOpen) {
-      console.log('22222222222')
       setTimeout(() => setIsOpen(false), 50)
     }
   })
@@ -30,31 +27,18 @@ export const Header = ({footballOrganizations}:HeaderType) => {
     setIsOpen(!isOpen)
   }
 
-
-  const mappedFootballOrganizations = footballOrganizations.map((el, index) => {
-    return (
-      <li key={index} className={s.item} onClick={onClickHundler}>
-        <NavLink to={`/${el.toLowerCase()}`} className={({isActive}) => isActive ? s.active : ''}>{el}</NavLink>
-      </li>
-    )
-  })
-
   const classMenu = isOpen ? `${s.wrapper1} ${s.active}` : s.wrapper1
 
   return (
     <div className={s.wrapper}>
       <Icon image={mainIcon} path={'/'}/>
-      {/* <div ref={menuRef}>
-        <Menu footballOrganizations={footballOrganizations} isOpen={isOpen} onClickHundler={onClickHundler}/>
-      </div> */}
-      <nav className={classMenu} ref={menuRef}>
-        <ul className={s.wrapperItems}>{mappedFootballOrganizations}</ul>
-      </nav>
+      <div ref={menuRef}>
+        <Menu footballOrganizations={footballOrganizations} isOpen={isOpen} onClickHundler={onClickHundler} menuRef={menuRef}/>
+      </div>
       <Icon image={ratingIcon} path={'/rating'}/>
       <button onClick={onClickHundler} className={s.menuButton}>
         {isOpen ? <AiOutlineClose size={30} color='white'/> : <AiOutlineMenu size={30} color='white'/>}
       </button>
-      
     </div>
   )
 }
