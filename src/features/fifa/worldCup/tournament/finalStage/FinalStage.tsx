@@ -2,7 +2,7 @@ import { MatchFifaWorldCup } from '../../../../../app/App'
 import s from './FinalStage.module.css'
 import { Match } from './match/Match'
 
-type FinalStageProps = {
+export type FinalStageProps = {
   data: MatchFifaWorldCup[]
 }
 
@@ -136,7 +136,7 @@ export const FinalStage = (props: FinalStageProps) => {
     const mappedMatch = filteredMatchInGroup.map(match => {
       return (
       <div key={match.id} className={s.containerMatchInGroup}>
-        <Match teams={match.teams} score={match.score} id={match.id}/>
+        <Match match={match} />
       </div>
       )
     })
@@ -161,7 +161,7 @@ export const FinalStage = (props: FinalStageProps) => {
     const mappedMatch = filteredMatchInPlayOff.map(match => {
       return (
       <div key={match.id} className={s.containerMatchInPlayOff}>
-        <Match teams={match.teams} score={match.score} id={match.id}/>
+        <Match match={match} />
       </div>
       )
     })

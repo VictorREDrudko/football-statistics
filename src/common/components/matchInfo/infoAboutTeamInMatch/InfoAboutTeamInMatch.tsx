@@ -1,15 +1,11 @@
+import { Goals } from "../../../../app/App"
 import { Country } from "../../countries/Country"
 import { InfoAboutGoals } from "./infoAboutGoals/InfoAboutGoals"
 import s from './InfoAboutTeamInMatch.module.css'
 
-export type PlayersForwardType = {
-  players: string[]
-  timeGoals: string[] 
-}
-
 type InfoAboutTeamInMatchProps = {
   team: string
-  forwards: PlayersForwardType
+  forwards: Goals
   year: string
 }
 

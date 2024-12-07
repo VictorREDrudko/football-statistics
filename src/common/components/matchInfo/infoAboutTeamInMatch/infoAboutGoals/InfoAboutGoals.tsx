@@ -1,13 +1,13 @@
-import { PlayersForwardType } from "../InfoAboutTeamInMatch"
+import { Goals } from '../../../../../app/App'
 import s from './InfoAboutGoals.module.css'
 
 type InfoAboutGoalsProps = {
-  forwards: PlayersForwardType
+  forwards: Goals
 }
 
 
 export const InfoAboutGoals = (props: InfoAboutGoalsProps) => {
-  const mappedForwards = props.forwards.players.map((player, index) => {
+  const mappedForwards = props.forwards.playersScoredGoal.map((player, index) => {
     return <li key={index}>{player}</li>
   })
 

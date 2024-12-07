@@ -11,6 +11,10 @@ import background1930_2 from './../assets/background-world-cup-1930-2.png'
 import logo1930 from './../assets/logo-world-cup/1930.png'
 import ballImg from './../assets/ball.png'
 
+
+
+
+
 // Types
 type ImageFifaWorldCup = {
   background: string
@@ -30,7 +34,7 @@ export type StatisticWorldCup = {
   topScorerGoals: number
 }
 
-type Goals = {
+export type Goals = {
   playersScoredGoal: string[]
   timeGoals: string[] 
 }
@@ -524,3 +528,9 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
