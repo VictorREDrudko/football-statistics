@@ -23,16 +23,17 @@ const description = infoAboutFifa.description.split('.')
 export const Fifa = () => {
   return (
     <div className={s.wrapper}>
-      <Background image={fifaImage}/>
       <div className={s.wrapperContent}>
         <h2 className={s.title}>{infoAboutFifa.title}</h2>
-        <p className={s.description}>{description[0]}</p>
-        <p className={s.description}>{description[1]}</p>
-        <p className={s.description}>{description[2]}</p>
-        <p className={s.description}>{description[3]}</p>
+        <div className={s.wrapperDescription}>
+          <p className={s.description}>{description[0]}</p>
+          <p className={s.description}>{description[1]}</p>
+          <p className={s.description}>{description[2]}</p>
+          <p className={s.description}>{description[3]}</p>
+        </div>
         <div className={s.containerTournaments}>
+          <img className={s.image} src={cupImage} alt="world cup image" />
           <NavLink to={'/fifa/world-cup'} className={s.link}>
-            <img className={s.image} src={cupImage} alt="world cup image" />
             <span className={s.cup}>{infoAboutFifa.cup.toUpperCase()}</span>
           </NavLink>
           <p className={s.tournaments}>{infoAboutFifa.tournaments}</p>

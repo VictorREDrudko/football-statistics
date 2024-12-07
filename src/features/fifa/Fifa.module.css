@@ -1,15 +1,16 @@
 .wrapper {
   color: white;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
+  background-image: url("./../../assets/background-fifa.png");
+  background-size: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .wrapperContent {
-  position: absolute;
-  top: 80px;
-  left: 20px;
-  margin-right: 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -17,36 +18,44 @@
 
 
 .title {
-  margin: 40px 0 40px 0;
+  margin-top: 80px;
   padding: 20px;
-  font-size: 35px;
-  max-width: 550px;
+  font-size: 40px;
   width: 100%;
   line-height: 70px;
-  text-align: left;
-  color: #b2c3fe;
+  text-align: right;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
-  border: 1px solid grey;
-  border-radius: 50px 0;
-  box-shadow: 0 0 10px 5px rgba(200, 200, 200, 0.5);
-  background: rgba(0, 0, 0, 0.5);
+}
+
+.wrapperDescription {
+  max-width: 750px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(0, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 45px 0;
+  box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.7),
+  1px 2px 4px 0px rgba(0,255,255,0.7),
+  2px 4px 8px 0px rgba(0,255,255,0.7),
+  2px 4px 16px 0px rgba(0,255,255,0.7);
 }
 
 .description {
   padding: 0 10px;
   font-size: 18px;
-  max-width: 600px;
-  width: 100%;
   line-height: 30px;
   font-style: italic;
+  margin-top: 30px;
 }
 
 .containerTournaments {
   padding: 20px;
-  color: #b2c3fe;
+  color: rgba(255,255,255,1);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  
 }
 
 .tournaments {
@@ -60,29 +69,29 @@
   margin-left: 10px;
   padding: 10px;
   font-size: 20px;
-  color: yellow;
+  color: rgba(255,255,255,1);
   font-weight: 600;
   line-height: 30px;
-  background-color: #2f3209;
+  background-color: rgb(1, 72, 67);
   border-radius: 10px 0;
+  border: 1px solid rgba(0,255,255,0.7);
 }
 
 .cup:hover {
-  background-color: #575405;
+  background-color: rgb(6, 110, 102);
   border-radius: 10px 0;
-  box-shadow: 0px 0px 5px 5px rgba(249, 255, 90, 0.5);
   transition: all 0.5s;
+  box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.7),
+              1px 2px 4px 0px rgba(0,255,255,0.7),
+              2px 4px 8px 0px rgba(0,255,255,0.7),
+              2px 4px 16px 0px rgba(0,255,255,0.7);
   } 
 
 .image {
-  width: 20px;
+  width: 50px;
   cursor: pointer;
   transition: all 0.5s;
 }
-
-.image:hover {
-  scale: 1.2;
-} 
 
 .link {
   display: flex;
