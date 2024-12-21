@@ -1,0 +1,138 @@
+.wrapper {
+  height: 100vh;
+  background-image: url("./../../assets/football-live.png");
+  background-size: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 80%;
+}
+
+.title {
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5),
+              -1px 1px 1px rgba(0, 0, 0, 0.5),
+              -5px 5px 5px rgba(0, 0, 0, 0.5),
+              -7px 7px 7px rgba(0, 0, 0, 0.5);
+  /* color: rgba(55, 141, 55, 0.8); */
+  color: white;
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.title::before {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 2px;
+  background-color: rgba(55, 141, 55, 0.4);
+  position: absolute;
+  /* top: 7rem; */
+  bottom: -1.5rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.description {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.containerLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.question {
+  color: white;
+  font-style: italic;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.link {
+  background-color: rgba(55, 141, 55, 0.5);
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: white;
+  font-style: italic;
+  font-size: 1.3rem;
+  font-weight: 600;
+  max-width: 500px;
+  width: 100%;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+  width: 170px;
+}
+
+.link:hover {
+  background-color: rgba(55, 141, 55, 0.8);
+}
+
+.image {
+  display: inline-block;
+  margin: 40px 0;
+  border-radius: 2rem;
+  max-width: 25rem;
+  width: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 380px) {
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+
+  .link {
+    font-size: 1rem;
+  }
+}

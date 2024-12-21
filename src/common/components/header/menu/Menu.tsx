@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 import s from './Menu.module.css'
 import { MutableRefObject } from 'react'
 
@@ -14,7 +14,7 @@ export const Menu = ({footballOrganizations, isOpen, onClickHundler, menuRef}:Me
   const mappedFootballOrganizations = footballOrganizations.map((el, index) => {
     return (
       <li key={index} className={s.item} onClick={onClickHundler}>
-        <NavLink to={`/${el.toLowerCase()}`} className={({isActive}) => isActive ? s.active : ''}>{el}</NavLink>
+        {/* <NavLink to={`/${el.toLowerCase()}`} className={({isActive}) => isActive ? s.active : ''}>{el}</NavLink> */}
       </li>
     )
   })

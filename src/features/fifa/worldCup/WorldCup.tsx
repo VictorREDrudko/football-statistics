@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 import world_cup from './../../../assets/background-world-cup.png'
 import s from './WorldCup.module.css'
 import { Background } from '../../../common/components/background/Background'
@@ -12,18 +12,15 @@ export const WorldCup = (props: FifaProps) => {
   const mappedTournaments = props.tournamentsWorldCup.map((el, index) => {
     return (
       <li onClick={() => props.changeYear(el.toString())} key={index} className={s.item}>
-        <NavLink to={`/fifa/world-cup/${el}`}>{el}</NavLink>
+        {/* <NavLink to={`/fifa/world-cup/${el}`}>{el}</NavLink> */}
       </li>
     )
   })
 
   return (
     <div className={s.wrapper}>
-      <Background image={world_cup}/>
-      <div className={s.wrapperContent}>
-        <h2 className={s.title}>Tournaments FIFA World Cup</h2>
-        <ul className={s.containerTournaments}>{mappedTournaments}</ul>
-      </div>
+      <h2 className={s.title}>Tournaments FIFA World Cup</h2>
+      <ul className={s.containerTournaments}>{mappedTournaments}</ul>
     </div>
   )
 }

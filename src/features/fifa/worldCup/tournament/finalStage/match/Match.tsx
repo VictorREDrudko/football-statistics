@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { MatchFifaWorldCup } from '../../../../../../app/App'
 import { MatchInfo } from '../../../../../../common/components/matchInfo/MatchInfo'
 import s from './Match.module.css'
 import { Score } from './score/Score'
 import { Team } from './team/Team'
+import { MatchFifaWorldCup } from 'data/type-data'
 
 export type MatchProps = {
   match: MatchFifaWorldCup
@@ -17,9 +17,9 @@ export const Match = (props: MatchProps) => {
 
   const infoMatch = mode ? 
     <div className={s.container} onClick={onClickHundler}>
-      <Team team={props.match.teams[0]} year={props.match.id}/>
+      <Team team={props.match.teams[0]} year={props.match.id} />
       <Score score={props.match.score}/>
-      <Team team={props.match.teams[1]} year={props.match.id}/>
+      <Team team={props.match.teams[1]} year={props.match.id} />
     </div> : 
     <div onClick={onClickHundler}>
       <MatchInfo match={props.match}/>

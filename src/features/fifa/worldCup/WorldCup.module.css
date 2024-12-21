@@ -2,28 +2,24 @@
   width: 100%;
   height: 100vh;
   position: relative;
-}
-
-.wrapperContent {
-  position: absolute;
+  background-image: url("./../../../assets/background-world-cup.png");
+  background-size: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 10px;
+  justify-content: center;
+  padding: 20px;
 }
 
 .title {
-  text-align: center;
-  color: yellowgreen;
+  color: white;
   font-size: 40px;
   line-height: 60px;
   margin-bottom: 40px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .containerTournaments {
@@ -31,9 +27,13 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-around;
-  background-color: rgba(10, 102, 45, 0.3);
-  border: 1px solid rgba(109, 114, 3, 0.8);
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.8);
+  background-color: rgba(2, 115, 60, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.5s;
+  box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.7),
+              1px 2px 4px 0px rgba(0,255,255,0.7),
+              2px 4px 8px 0px rgba(0,255,255,0.7),
+              2px 4px 16px 0px rgba(0,255,255,0.7);
   max-width: 700px;
   padding: 20px;
   border-radius: 40px 0;
@@ -42,20 +42,25 @@
 .item {
   padding: 10px 30px;
   transition: all 0.5s;
-  border: 1px solid rgba(109, 114, 3, 0.7);
-  background-color: rgba(10, 102, 45, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px 0;
+  color: white;
 }
 
 .item a {
-  color: gold;
   font-size: 20px;
   font-weight: 600;
+  color: inherit;
 }
 
 .item:hover {
-  background-color: #575405;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  color: rgba(7, 54, 56, 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.7),
+  1px 2px 4px 0px rgba(0,0,0,0.7),
+  2px 4px 8px 0px rgba(0,0,0,0.7),
+  4px 8px 24px 0px rgba(0,255,255,0.7);
   transform: scale(1.1);
 }
 

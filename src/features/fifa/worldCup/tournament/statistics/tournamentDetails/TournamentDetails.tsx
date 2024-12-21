@@ -1,4 +1,4 @@
-import { StatisticWorldCup } from '../../../../../../app/App'
+import { StatisticWorldCup } from 'data/type-data'
 import s from './TournamentDetails.module.css'
 
 type TournamentDetailsProps = {

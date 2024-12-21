@@ -1,4 +1,4 @@
-import { Country } from '../../countries/Country'
+import { Country } from '../../country/Country'
 import s from './GeneralInfoAboutMatch.module.css'
 
 export type StadiumType = {

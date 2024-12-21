@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 import s from './Icon.module.css'
 
 type IconType = {
@@ -9,9 +9,9 @@ type IconType = {
 export const Icon = ({image, path}: IconType) => {
   return (
     <div className={s.wrapperIcon}>
-      <NavLink to={path}>
+      {/* <NavLink to={path}>
         <img src={image} alt="my-icon-football" />
-      </NavLink>
+      </NavLink> */}
   </div>
   )
 }

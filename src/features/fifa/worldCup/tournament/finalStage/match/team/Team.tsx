@@ -1,4 +1,4 @@
-import { Country } from '../../../../../../../common/components/countries/Country'
+import { Country } from '../../../../../../../common/components/country/Country'
 import s from './Team.module.css'
 
 type TeamProps = {
@@ -9,7 +9,7 @@ type TeamProps = {
 export const Team = (props: TeamProps) => {
   return (
     <div className={s.container}>
-      <Country name={props.team} year={props.year}/>
+      <Country name={props.team} year={props.year} />
     </div>
   )
 }

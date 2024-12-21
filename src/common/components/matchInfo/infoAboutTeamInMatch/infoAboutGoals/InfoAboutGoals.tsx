@@ -1,4 +1,4 @@
-import { Goals } from '../../../../../app/App'
+import { Goals } from 'data/type-data'
 import s from './InfoAboutGoals.module.css'
 
 type InfoAboutGoalsProps = {

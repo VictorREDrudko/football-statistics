@@ -1,5 +1,5 @@
-import { Goals } from "../../../../app/App"
-import { Country } from "../../countries/Country"
+import { Goals } from "data/type-data"
+import { Country } from "../../country/Country"
 import { InfoAboutGoals } from "./infoAboutGoals/InfoAboutGoals"
 import s from './InfoAboutTeamInMatch.module.css'
 

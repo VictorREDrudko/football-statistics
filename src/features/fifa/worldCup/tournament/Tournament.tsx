@@ -4,7 +4,8 @@ import { Statistics } from './statistics/Statistics'
 import { InfoAboutTournament } from './infoAboutTournament/InfoAboutTournament'
 import { Qualification } from './qualification/Qualification'
 import { FinalStage } from './finalStage/FinalStage'
-import { FifaWorldCup } from '../../../../app/App'
+import { FifaWorldCup } from 'data/type-data'
+
 
 type TournamentProps = {
   data: FifaWorldCup
@@ -22,7 +23,7 @@ export const Tournament = (props: TournamentProps) => {
         </div>
       </section>
       <section className={s.containerFinalStage}>
-        <FinalStage data={props.data.finalStage}/>
+        <FinalStage data={props.data.finalStage} date={props.data.info.title}/>
       </section>
       <section className={s.containerFinalStage}>
         <Qualification/>

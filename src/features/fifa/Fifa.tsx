@@ -1,7 +1,7 @@
 import s from './Fifa.module.css'
 import fifaImage from './../../assets/background-fifa.png'
 import cupImage from './../../assets/world-cup.png'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 import { Background } from '../../common/components/background/Background'
 
 type InfoAboutFifa = {
@@ -33,9 +33,9 @@ export const Fifa = () => {
         </div>
         <div className={s.containerTournaments}>
           <img className={s.image} src={cupImage} alt="world cup image" />
-          <NavLink to={'/fifa/world-cup'} className={s.link}>
+          {/* <NavLink to={'/fifa/world-cup'} className={s.link}>
             <span className={s.cup}>{infoAboutFifa.cup.toUpperCase()}</span>
-          </NavLink>
+          </NavLink> */}
           <p className={s.tournaments}>{infoAboutFifa.tournaments}</p>
         </div>
       </div>

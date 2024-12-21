@@ -1,4 +1,4 @@
-import { InfoFifaWorldCup } from '../../../../../app/App'
+import { InfoFifaWorldCup } from 'data/type-data'
 import s from './InfoAboutTournament.module.css'
 
 type InfoAboutTournamentProps = {

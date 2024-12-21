@@ -1,0 +1,10 @@
+.containerTeamScore {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.textScore {
+  display: inline-block;
+  margin-left: 5px;
+}

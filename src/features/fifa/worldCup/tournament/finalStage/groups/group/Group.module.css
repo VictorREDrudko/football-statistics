@@ -1,0 +1,112 @@
+.table {
+  border-collapse: collapse;
+  font-size: 1rem;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0,0.7),
+              1px 2px 4px 0px rgba(0, 0, 0, 0.7),
+              2px 4px 8px 0px rgba(0, 0, 0, 0.7),
+              2px 4px 16px 0px rgba(205,255,166,0.7);
+}
+
+
+
+
+
+.titleTable {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0,0.7),
+              1px 2px 4px 0px rgba(0, 0, 0, 0.7),
+              2px 4px 8px 0px rgba(0, 0, 0, 0.7),
+              2px 4px 16px 0px rgba(205,255,166,0.7);
+}
+
+
+.headerTable {
+  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(20, 20, 20, 0.8);
+  color: rgba(0, 250, 137, 1);
+  padding: 10px;
+  position: relative;
+}
+
+.headerTable:hover {
+  cursor: pointer;
+}
+
+
+[title]::after {
+  content: attr(title);
+  position: absolute;
+  top: 40px;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+[title]:hover::after {
+  opacity: 1;
+}
+
+
+
+.titleGroupStage {
+ font-size: 50px;
+ text-align: center;
+ font-weight: 600;
+ color: white;
+ margin-top: 60px;
+ margin-bottom: 40px;
+}
+
+.titleTable::first-letter {
+  text-transform: uppercase;
+}
+
+.bodyTable th {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(80, 80, 80, 0.8);
+  color: rgba(220, 220, 220, 0.8);
+  padding: 10px 5px;
+}
+
+.matchesInGroup {
+  margin: 40px 0;
+}
+
+.matchesInPlayOff {
+  margin: 40px 0;
+}
+
+
+.containerMatchInPlayOff {
+  margin-top: 40px;
+  background-color: red;
+}
+
+.containerMatchInGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-top: 10px;
+  border-radius: 20px 0;
+  cursor: pointer;
+  color: black;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0,0.7),
+              1px 2px 4px 0px rgba(0, 0, 0, 0.7),
+              2px 4px 8px 0px rgba(0, 0, 0, 0.7),
+              2px 4px 16px 0px rgba(205,255,166,0.7);
+}
+
+.containerMatchInGroup:hover {
+  transform: scale(1.03);
+  background-color: rgba(190, 190, 190, 0.8);
+  color: black;
+  transition: all 0.3s;
+}
+
+
+

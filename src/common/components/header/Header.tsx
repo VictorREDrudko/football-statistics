@@ -4,8 +4,8 @@ import ratingIcon from './../../../assets/rating-icon.png'
 import { Menu } from './menu/Menu'
 import { Icon } from './icon/Icon'
 import { useRef, useState } from 'react'
-import { AiOutlineClose } from "react-icons/ai";
-import { AiOutlineMenu } from "react-icons/ai";
+// import { AiOutlineClose } from "react-icons/ai";
+// import { AiOutlineMenu } from "react-icons/ai";
 import { useOutsideClick } from '../../hooks/UseOutsideClick'
 
 
@@ -37,7 +37,7 @@ export const Header = ({footballOrganizations}:HeaderType) => {
       </div>
       <Icon image={ratingIcon} path={'/rating'}/>
       <button onClick={onClickHundler} className={s.menuButton}>
-        {isOpen ? <AiOutlineClose size={30} color='white'/> : <AiOutlineMenu size={30} color='white'/>}
+        {/* {isOpen ? <AiOutlineClose size={30} color='white'/> : <AiOutlineMenu size={30} color='white'/>} */}
       </button>
     </div>
   )
