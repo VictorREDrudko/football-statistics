@@ -1,11 +1,4 @@
-// import { Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
-import { Header } from '../../common/components/header/Header';
-import { Main } from '../../common/components/main/Main';
-import { Fifa } from '../fifa/Fifa';
-import { WorldCup } from '../fifa/worldCup/WorldCup';
-// import { aboutFootball, dataFifaWorldCup, tournamentsWorldCup } from '../../app/store';
-import { Tournament } from '../fifa/worldCup/tournament/Tournament';
 
 export const AboutFootball = () => {
   const [year, setYear] = useState('1930')

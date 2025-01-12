@@ -1,32 +1,19 @@
-import backgroundStart from './../assets/background-football.png'
-import background1930 from './../assets/background-world-cup-1930.png'
-import background1930_2 from './../assets/background-world-cup-1930-2.png'
-import logo1930 from './../assets/logo-world-cup/1930.png'
-import ballImg from './../assets/ball.png'
-import { DataFifaWorldCup } from './type-data'
-
-import footballLive from './../assets/football-live.png'
+import { AboutProject, DataFifaWorldCup, Header, StartPage } from './type-data'
+import backgroundFootballLive from './../assets/football-live.png'
 import iconProject from './../assets/main-icon.png'
+import backgroundStartPage from './../assets/background-football.png'
 
 // DATA
-export const aboutProject = {
-  background: footballLive,
+export const aboutProject: AboutProject = {
   image: iconProject,
   title: 'football is life',
   description: 'This project is about football',
   question: 'Do you love football as much as I do?..'
 }
 
-
-
-
-
-
-
-
-
-
-export const aboutFootball = {
+export const startPage: StartPage = {
+  title: 'association football',
+  text: "Association football (or football) is a team sport played between two teams of 11 players each. The objective of the game is to score more goals than the opposing team. With an estimated 250 million players active in over 200 countries and territories, it is the world's most popular sport.",
   historicalData: [
     '1848 The Cambridge football rules',
     '1850s many clubs were created',
@@ -37,17 +24,45 @@ export const aboutFootball = {
     '1904 was formed FIFA',
     '1930 The first FIFA World Cup'
   ],
-  organizations: [
-    'FIFA',
-    'AFC',
-    'CAF',
-    'CONCACAF',
-    'CONMEBOL',
-    'OFC',
-    'UEFA',
-  ],
-  title: 'association football'
 }
+
+export const header: Header = [
+  'National tournaments',
+  'Club tournaments',
+  'National teams',
+  'Clubs',
+]
+
+
+
+
+
+
+export const background = {
+  startProject: backgroundFootballLive,
+  startPage: backgroundStartPage,
+}
+
+// export const header = [
+//   'FIFA',
+//   'AFC',
+//   'CAF',
+//   'CONCACAF',
+//   'CONMEBOL',
+//   'OFC',
+//   'UEFA',
+// ]
+
+
+
+
+
+
+
+
+
+
+
 
 
 

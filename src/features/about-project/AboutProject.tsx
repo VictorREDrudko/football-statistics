@@ -1,5 +1,6 @@
 import { aboutProject } from 'data/data'
 import s from './AboutProject.module.css'
+import { Link } from 'react-router-dom'
 
 export const AboutProject = () => {
   return (
@@ -10,10 +11,9 @@ export const AboutProject = () => {
         <img className={s.image} src={aboutProject.image} alt="ball" />
         <div className={s.containerLink}>
           <span className={s.question}>{aboutProject.question}</span>
-          <a className={s.link} href={'#'}>click here...</a>
+          <Link className={s.link} to={'/start'}>click here...</Link>
         </div>
       </div>
-
     </div>
   )
 }

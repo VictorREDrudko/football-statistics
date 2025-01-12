@@ -1,4 +1,25 @@
 // Types
+export type AboutProject = {
+  image: string,
+  title: string
+  description: string,
+  question: string
+}
+
+export type StartPage = {
+  title: string
+  text: string
+  historicalData: string[]
+}
+
+export type Header = string[]
+
+
+
+
+
+
+
 type ImageFifaWorldCup = {
   background: string
   background2: string
