@@ -1,11 +1,14 @@
-import { AboutProject, DataFifaWorldCup, Header, StartPage } from './type-data'
+import { AboutProject, DataFifaWorldCup, Menu, StartPage } from './type-data'
 import backgroundFootballLive from './../assets/football-live.png'
-import iconProject from './../assets/main-icon.png'
+import logoProject from './../assets/logo.png'
 import backgroundStartPage from './../assets/background-football.png'
+import ratingIcon from './../assets/icon/rating-icon.png'
+import projectIcon from './../assets/icon/project-icon.png'
+import pitchImg from './../assets/pitch.png'
 
 // DATA
 export const aboutProject: AboutProject = {
-  image: iconProject,
+  image: logoProject,
   title: 'football is life',
   description: 'This project is about football',
   question: 'Do you love football as much as I do?..'
@@ -13,7 +16,8 @@ export const aboutProject: AboutProject = {
 
 export const startPage: StartPage = {
   title: 'association football',
-  text: "Association football (or football) is a team sport played between two teams of 11 players each. The objective of the game is to score more goals than the opposing team. With an estimated 250 million players active in over 200 countries and territories, it is the world's most popular sport.",
+  text: "Association football (or football / soccer) is a team sport played between two teams of 11 players each. The objective of the game is to score more goals than the opposing team. With an estimated 250 million players active in over 200 countries and territories, it is the world's most popular sport.",
+  img: pitchImg,
   historicalData: [
     '1848 The Cambridge football rules',
     '1850s many clubs were created',
@@ -26,12 +30,19 @@ export const startPage: StartPage = {
   ],
 }
 
-export const header: Header = [
+export const menu: Menu = [
+  'About',
   'National tournaments',
   'Club tournaments',
   'National teams',
   'Clubs',
 ]
+
+export const icons = {
+  project: projectIcon,
+  raiting: ratingIcon,
+
+}
 
 
 

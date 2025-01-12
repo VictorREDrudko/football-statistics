@@ -1,19 +1,13 @@
 import s from './Header.module.css'
-import mainIcon from './../../../assets/main-icon.png'
-import ratingIcon from './../../../assets/rating-icon.png'
 import { Menu } from './menu/Menu'
 import { Icon } from './icon/Icon'
 import { useRef, useState } from 'react'
-// import { AiOutlineClose } from "react-icons/ai";
-// import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 import { useOutsideClick } from '../../hooks/UseOutsideClick'
+import { icons } from 'data/data';
 
-
-type HeaderType = {
-  footballOrganizations: string[]
-}
-
-export const Header = ({footballOrganizations}:HeaderType) => {
+export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null)
   
@@ -31,13 +25,13 @@ export const Header = ({footballOrganizations}:HeaderType) => {
 
   return (
     <div className={s.wrapper}>
-      <Icon image={mainIcon} path={'/'}/>
+      <Icon image={icons.project} path={'/'} height={'40px'}/>
       <div ref={menuRef}>
-        <Menu footballOrganizations={footballOrganizations} isOpen={isOpen} onClickHundler={onClickHundler} menuRef={menuRef}/>
+        <Menu isOpen={isOpen} onClickHundler={onClickHundler} menuRef={menuRef}/>
       </div>
-      <Icon image={ratingIcon} path={'/rating'}/>
+      <Icon image={icons.raiting} path={'/rating'} height={'50px'}/>
       <button onClick={onClickHundler} className={s.menuButton}>
-        {/* {isOpen ? <AiOutlineClose size={30} color='white'/> : <AiOutlineMenu size={30} color='white'/>} */}
+        {isOpen ? <AiOutlineClose size={30} color='white'/> : <AiOutlineMenu size={30} color='white'/>}
       </button>
     </div>
   )

@@ -1,41 +1,30 @@
 .wrapperItems {
   display: flex;
-  gap: 20px;
+  gap: 2rem;
 }
 
 .item {
-  cursor: pointer;
-  padding: 5px;
-  transition: all 0.5s;
+  padding: 5px 10px;
 }
-
-.wrapperItems .item:first-child {
-  margin-right: 50px;
-}
-
-.item:hover {
-  /* background-color: #575405; */
-  background-color: rgb(0, 114, 105);
-  border: 1px solid rgba(0,255,255,1);
-  border-radius: 10px 0;
-  /* box-shadow: 0px 0px 5px 5px rgba(249, 255, 90, 0.5); */
-  transition: all 0.5s;
-  box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.7),
-              1px 2px 4px 0px rgba(0,255,255,0.7),
-              2px 4px 8px 0px rgba(0,255,255,0.7),
-              2px 4px 16px 0px rgba(0,255,255,0.7);
-}
-
 
 .item a {
   color: white;
-  font-size: 20px;
+  text-transform: uppercase;
+  font-size: 1.0rem;
   font-weight: 600;
+  transition: all 0.5s;
+}
+
+.item a:hover {
+  color: rgb(125, 250, 55);
 }
 
 .item a.active {
-  color: rgba(0,255,255,1);
+  color: rgb(125, 250, 55);
 }
+
+
+
 
 
 @media (max-width: 1000px) {

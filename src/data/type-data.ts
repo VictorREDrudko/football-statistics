@@ -9,10 +9,11 @@ export type AboutProject = {
 export type StartPage = {
   title: string
   text: string
+  img: string
   historicalData: string[]
 }
 
-export type Header = string[]
+export type Menu = string[]
 
 
 

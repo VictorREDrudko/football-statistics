@@ -1,14 +1,16 @@
-import { AboutProject } from 'features/about-project/AboutProject';
+import { StartProject } from 'features/start-project/StartProject';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { StartPage } from 'features/start-page/StartPage';
+import { About } from 'features/about/About';
+import { Header } from 'common/components/header/Header';
 
 function App() {
 	return (
     <>
+      <Header/>
       <Routes>
-        <Route path='/' element={<AboutProject/>}/>
-        <Route path='/start' element={<StartPage/>}/>
+        <Route path='/' element={<StartProject/>}/>
+        <Route path='/about' element={<About/>}/>
       </Routes>
     </>
 

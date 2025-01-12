@@ -2,17 +2,17 @@
 import { NavLink } from 'react-router-dom'
 import s from './Menu.module.css'
 import { MutableRefObject } from 'react'
+import { menu } from 'data/data'
 
 type MenuType = {
-  footballOrganizations: string[]
   isOpen: boolean
   onClickHundler: () => void
   menuRef: MutableRefObject<null>
 }
 
-export const Menu = ({footballOrganizations, isOpen, onClickHundler, menuRef}:MenuType) => {
+export const Menu = ({isOpen, onClickHundler, menuRef}:MenuType) => {
 
-  const mappedFootballOrganizations = footballOrganizations.map((el, index) => {
+  const mappedFootballOrganizations = menu.map((el, index) => {
     return (
       <li key={index} className={s.item} onClick={onClickHundler}>
         <NavLink to={`/${el.toLowerCase()}`} className={({isActive}) => isActive ? s.active : ''}>{el}</NavLink>
