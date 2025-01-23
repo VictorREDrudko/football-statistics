@@ -1,0 +1,71 @@
+.container {
+  padding: 10px;
+  background-color: #024107;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0px 1px 2px 0px rgba(126, 249, 126, 0.8),
+  1px 2px 4px 0px rgba(126, 249, 126, 0.8),
+  2px 4px 8px 0px rgba(126, 249, 126, 0.8),
+  2px 4px 16px 0px rgba(126, 249, 126, 0.8);
+  border: 1px solid white;
+  max-width: 350px;
+  width: 100%;
+}
+
+.containerCoatOfArms {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgCoatOfArms {
+  opacity: 0.5;
+  max-width: 500px;
+  width: 100%;
+}
+
+.containerRating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 75%;
+  top: 48%;
+}
+
+.rating {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border: 1px solid rgba(2, 87, 2, 1);
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 5px rgba(126, 249, 126, 0.5);
+}
+
+.value {
+  font-size: 1.6rem;
+  color: yellow;
+}
+
+.title {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: yellow;
+}
+

@@ -13,7 +13,12 @@ export type StartPage = {
   historicalData: string[]
 }
 
-export type Menu = string[]
+type ItemMenu = {
+  title: string
+  path: string
+}
+
+export type Menu = ItemMenu[]
 
 
 
@@ -77,4 +82,41 @@ export type FifaWorldCup = {
 
 export type DataFifaWorldCup = {
   [key: string] : FifaWorldCup
+}
+
+
+
+export type InfoCup = {
+  appearances: number
+  champions: number []
+  secondPlace: number []
+}
+
+export type AchievementsType = {
+  worldCup: InfoCup
+  confederationsCup: InfoCup
+}
+
+export type AssociationDate = {
+  founded: number
+  fifaAffiliation: number
+  uefaAffiliation: number
+}
+
+
+export type NationalTeam = {
+  id: string
+  name: string[]
+  associationIcon: string
+  uefaIcon: string
+  flag: string[]
+  coatOfArms: string
+  confederation: string
+  associationDate: AssociationDate
+  rating: number
+  achievements: AchievementsType
+}
+
+export type NationalTeams = {
+  [name: string]: NationalTeam
 }

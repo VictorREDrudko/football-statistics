@@ -1,0 +1,21 @@
+.container {
+ display: flex;
+ justify-content: center;
+ gap: 10px;
+}
+
+.title {
+  display: inline-block;
+  max-width: 120px;
+  width: 100%;
+  font-size: 1.0rem;
+  font-weight: 400;
+}
+
+.value {
+  font-size: 1.0rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgb(210, 250, 140);
+  font-style: italic;
+}
