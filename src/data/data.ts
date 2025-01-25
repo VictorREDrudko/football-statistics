@@ -68,6 +68,112 @@ import coatOfArmsFaroeIslands from './../assets/icon/coat-of-arms/Faroe-Islands.
 import iconFinland from './../assets/icon/national/Finland.png'
 import flagFinland from './../assets/icon/flag/Finland.png'
 import coatOfArmsFinland from './../assets/icon/coat-of-arms/Finland.png'
+import iconGeorgia from './../assets/icon/national/Georgia.png'
+import flagGeorgia from './../assets/icon/flag/Georgia.png'
+import coatOfArmsGeorgia from './../assets/icon/coat-of-arms/Georgia.png'
+import iconGibraltar from './../assets/icon/national/Gibraltar.png'
+import flagGibraltar from './../assets/icon/flag/Gibraltar.png'
+import coatOfArmsGibraltar from './../assets/icon/coat-of-arms/Gibraltar.png'
+import iconGreece from './../assets/icon/national/Greece.png'
+import flagGreece from './../assets/icon/flag/Greece.png'
+import coatOfArmsGreece from './../assets/icon/coat-of-arms/Greece.png'
+import iconHungary from './../assets/icon/national/Hungary.png'
+import flagHungary from './../assets/icon/flag/Hungary.png'
+import coatOfArmsHungary from './../assets/icon/coat-of-arms/Hungary.png'
+import iconIceland from './../assets/icon/national/Iceland.png'
+import flagIceland from './../assets/icon/flag/Iceland.png'
+import coatOfArmsIceland from './../assets/icon/coat-of-arms/Iceland.png'
+import iconIsrael from './../assets/icon/national/Israel.png'
+import flagIsrael from './../assets/icon/flag/Israel.png'
+import coatOfArmsIsrael from './../assets/icon/coat-of-arms/Israel.png'
+import iconKazakhstan from './../assets/icon/national/Kazakhstan.png'
+import flagKazakhstan from './../assets/icon/flag/Kazakhstan.png'
+import coatOfArmsKazakhstan from './../assets/icon/coat-of-arms/Kazakhstan.png'
+import iconKosovo from './../assets/icon/national/Kosovo.png'
+import flagKosovo from './../assets/icon/flag/Kosovo.png'
+import coatOfArmsKosovo from './../assets/icon/coat-of-arms/Kosovo.png'
+import iconLatvia from './../assets/icon/national/Latvia.png'
+import flagLatvia from './../assets/icon/flag/Latvia.png'
+import coatOfArmsLatvia from './../assets/icon/coat-of-arms/Latvia.png'
+import iconLiechtenstein from './../assets/icon/national/Liechtenstein.png'
+import flagLiechtenstein from './../assets/icon/flag/Liechtenstein.png'
+import coatOfArmsLiechtenstein from './../assets/icon/coat-of-arms/Liechtenstein.png'
+import iconLithuania from './../assets/icon/national/Lithuania.png'
+import flagLithuania from './../assets/icon/flag/Lithuania.png'
+import coatOfArmsLithuania from './../assets/icon/coat-of-arms/Lithuania.png'
+import iconLuxembourg from './../assets/icon/national/Luxembourg.png'
+import flagLuxembourg from './../assets/icon/flag/Luxembourg.png'
+import coatOfArmsLuxembourg from './../assets/icon/coat-of-arms/Luxembourg.png'
+import iconMalta from './../assets/icon/national/Malta.png'
+import flagMalta from './../assets/icon/flag/Malta.png'
+import coatOfArmsMalta from './../assets/icon/coat-of-arms/Malta.png'
+import iconMoldova from './../assets/icon/national/Moldova.png'
+import flagMoldova from './../assets/icon/flag/Moldova.png'
+import coatOfArmsMoldova from './../assets/icon/coat-of-arms/Moldova.png'
+import iconMontenegro from './../assets/icon/national/Montenegro.png'
+import flagMontenegro from './../assets/icon/flag/Montenegro.png'
+import coatOfArmsMontenegro from './../assets/icon/coat-of-arms/Montenegro.png'
+import iconNetherlands from './../assets/icon/national/Netherlands.png'
+import flagNetherlands from './../assets/icon/flag/Netherlands.png'
+import coatOfArmsNetherlands from './../assets/icon/coat-of-arms/Netherlands.png'
+import iconNorthMacedonia from './../assets/icon/national/North-Macedonia.png'
+import flagNorthMacedonia from './../assets/icon/flag/North-Macedonia.png'
+import coatOfArmsNorthMacedonia from './../assets/icon/coat-of-arms/North-Macedonia.png'
+import iconNorthernIreland from './../assets/icon/national/Northern-Ireland.png'
+import flagNorthernIreland from './../assets/icon/flag/Northern-Ireland.png'
+import coatOfArmsNorthernIreland from './../assets/icon/coat-of-arms/Northern-Ireland.png'
+import iconNorway from './../assets/icon/national/Norway.png'
+import flagNorway from './../assets/icon/flag/Norway.png'
+import coatOfArmsNorway from './../assets/icon/coat-of-arms/Norway.png'
+import iconPoland from './../assets/icon/national/Poland.png'
+import flagPoland from './../assets/icon/flag/Poland.png'
+import coatOfArmsPoland from './../assets/icon/coat-of-arms/Poland.png'
+import iconPortugal from './../assets/icon/national/Portugal.png'
+import flagPortugal from './../assets/icon/flag/Portugal.png'
+import coatOfArmsPortugal from './../assets/icon/coat-of-arms/Portugal.png'
+import iconRepublicOfIreland from './../assets/icon/national/Republic-of-Ireland.png'
+import flagRepublicOfIreland from './../assets/icon/flag/Republic-of-Ireland.png'
+import coatOfArmsRepublicOfIreland from './../assets/icon/coat-of-arms/Republic-of-Ireland.png'
+import iconRomania from './../assets/icon/national/Romania.png'
+import flagRomania from './../assets/icon/flag/Romania.png'
+import coatOfArmsRomania from './../assets/icon/coat-of-arms/Romania.png'
+import iconRussia from './../assets/icon/national/Russia.png'
+import flagRussia from './../assets/icon/flag/Russia.png'
+import coatOfArmsRussia from './../assets/icon/coat-of-arms/Russia.png'
+import iconSanMarino from './../assets/icon/national/San-Marino.png'
+import flagSanMarino from './../assets/icon/flag/San-Marino.png'
+import coatOfArmsSanMarino from './../assets/icon/coat-of-arms/San-Marino.png'
+import iconScotland from './../assets/icon/national/Scotland.png'
+import flagScotland from './../assets/icon/flag/Scotland.png'
+import coatOfArmsScotland from './../assets/icon/coat-of-arms/Scotland.png'
+import iconSerbia from './../assets/icon/national/Serbia.png'
+import flagSerbia from './../assets/icon/flag/Serbia.png'
+import coatOfArmsSerbia from './../assets/icon/coat-of-arms/Serbia.png'
+import iconSlovakia from './../assets/icon/national/Slovakia.png'
+import flagSlovakia from './../assets/icon/flag/Slovakia.png'
+import coatOfArmsSlovakia from './../assets/icon/coat-of-arms/Slovakia.png'
+import iconSlovenia from './../assets/icon/national/Slovenia.png'
+import flagSlovenia from './../assets/icon/flag/Slovenia.png'
+import coatOfArmsSlovenia from './../assets/icon/coat-of-arms/Slovenia.png'
+import iconSweden from './../assets/icon/national/Sweden.png'
+import flagSweden from './../assets/icon/flag/Sweden.png'
+import coatOfArmsSweden from './../assets/icon/coat-of-arms/Sweden.png'
+import iconSwitzerland from './../assets/icon/national/Switzerland.png'
+import flagSwitzerland from './../assets/icon/flag/Switzerland.png'
+import coatOfArmsSwitzerland from './../assets/icon/coat-of-arms/Switzerland.png'
+import iconTurkey from './../assets/icon/national/Turkey.png'
+import flagTurkey from './../assets/icon/flag/Turkey.png'
+import coatOfArmsTurkey from './../assets/icon/coat-of-arms/Turkey.png'
+import iconUkraine from './../assets/icon/national/Ukraine.png'
+import flagUkraine from './../assets/icon/flag/Ukraine.png'
+import coatOfArmsUkraine from './../assets/icon/coat-of-arms/Ukraine.png'
+import iconWales from './../assets/icon/national/Wales.png'
+import flagWales from './../assets/icon/flag/Wales.png'
+import coatOfArmsWales from './../assets/icon/coat-of-arms/Wales.png'
+
+
+
+
 
 import iconUefa from './../assets/icon/confederation/icon-uefa.png'
 import iconCup from './../assets/icon/icon-cup.png'
@@ -123,7 +229,7 @@ export const uefaCup = 0
 
 
 export const nameTeams = {
-  uefa: ['Germany', 'England', 'Italy', 'Spain', 'France', 'Albania', 'Andorra', 'Armenia', 'Austria', 'Azerbaijan', 'Belarus', 'Belgium', 'Bosnia and Herzegovina', 'Bulgaria', 'Croatia', 'Cyprus', 'Czech Republic', 'Denmark', 'Estonia', 'Faroe Islands', 'Finland']
+  uefa: ['Germany', 'England', 'Italy', 'Spain', 'France', 'Albania', 'Andorra', 'Armenia', 'Austria', 'Azerbaijan', 'Belarus', 'Belgium', 'Bosnia and Herzegovina', 'Bulgaria', 'Croatia', 'Cyprus', 'Czech Republic', 'Denmark', 'Estonia', 'Faroe Islands', 'Finland', 'Georgia', 'Gibraltar', 'Greece', 'Hungary', 'Iceland', 'Israel', 'Kazakhstan', 'Kosovo', 'Latvia', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Malta', 'Moldova', 'Montenegro', 'Netherlands', 'North Macedonia', 'Northern Ireland', 'Norway', 'Poland', 'Portugal', 'Republic of Ireland', 'Romania', 'Russia', 'San Marino', 'Scotland', 'Serbia', 'Slovakia', 'Slovenia', 'Sweden', 'Switzerland', 'Turkey', 'Ukraine', 'Wales' ],
 }
 
 
@@ -679,6 +785,924 @@ export const nationalTeams: NationalTeams = {
     associationDate: {
       founded: 1907,
       fifaAffiliation: 1908,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Greece': {
+    id: v1(),
+    name: ['Greece'],
+    flag: [flagGreece],
+    coatOfArms: coatOfArmsGreece,
+    associationIcon: iconGreece,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1926,
+      fifaAffiliation: 1927,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Gibraltar': {
+    id: v1(),
+    name: ['Gibraltar'],
+    flag: [flagGibraltar],
+    coatOfArms: coatOfArmsGibraltar,
+    associationIcon: iconGibraltar,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1895,
+      fifaAffiliation: 2016,
+      uefaAffiliation: 2013,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Georgia': {
+    id: v1(),
+    name: ['Georgia'],
+    flag: [flagGeorgia],
+    coatOfArms: coatOfArmsGeorgia,
+    associationIcon: iconGeorgia,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1990,
+      fifaAffiliation: 1992,
+      uefaAffiliation: 1992,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Hungary': {
+    id: v1(),
+    name: ['Hungary'],
+    flag: [flagHungary],
+    coatOfArms: coatOfArmsHungary,
+    associationIcon: iconHungary,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1901,
+      fifaAffiliation: 1906,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Iceland': {
+    id: v1(),
+    name: ['Iceland'],
+    flag: [flagIceland],
+    coatOfArms: coatOfArmsIceland,
+    associationIcon: iconIceland,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1947,
+      fifaAffiliation: 1947,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Israel': {
+    id: v1(),
+    name: ['Israel'],
+    flag: [flagIsrael],
+    coatOfArms: coatOfArmsIsrael,
+    associationIcon: iconIsrael,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1928,
+      fifaAffiliation: 1929,
+      uefaAffiliation: 1994,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Kazakhstan': {
+    id: v1(),
+    name: ['Kazakhstan'],
+    flag: [flagKazakhstan],
+    coatOfArms: coatOfArmsKazakhstan,
+    associationIcon: iconKazakhstan,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1994,
+      fifaAffiliation: 1994,
+      uefaAffiliation: 2002,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Kosovo': {
+    id: v1(),
+    name: ['Kosovo'],
+    flag: [flagKosovo],
+    coatOfArms: coatOfArmsKosovo,
+    associationIcon: iconKosovo,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 2008,
+      fifaAffiliation: 2016,
+      uefaAffiliation: 2016,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Latvia': {
+    id: v1(),
+    name: ['Latvia'],
+    flag: [flagLatvia],
+    coatOfArms: coatOfArmsLatvia,
+    associationIcon: iconLatvia,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1921,
+      fifaAffiliation: 1922,
+      uefaAffiliation: 1992,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Liechtenstein': {
+    id: v1(),
+    name: ['Liechtenstein'],
+    flag: [flagLiechtenstein],
+    coatOfArms: coatOfArmsLiechtenstein,
+    associationIcon: iconLiechtenstein,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1934,
+      fifaAffiliation: 1974,
+      uefaAffiliation: 1974,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Lithuania': {
+    id: v1(),
+    name: ['Lithuania'],
+    flag: [flagLithuania],
+    coatOfArms: coatOfArmsLithuania,
+    associationIcon: iconLithuania,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1922,
+      fifaAffiliation: 1923,
+      uefaAffiliation: 1992,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Luxembourg': {
+    id: v1(),
+    name: ['Luxembourg'],
+    flag: [flagLuxembourg],
+    coatOfArms: coatOfArmsLuxembourg,
+    associationIcon: iconLuxembourg,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1908,
+      fifaAffiliation: 1910,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Malta': {
+    id: v1(),
+    name: ['Malta'],
+    flag: [flagMalta],
+    coatOfArms: coatOfArmsMalta,
+    associationIcon: iconMalta,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1900,
+      fifaAffiliation: 1959,
+      uefaAffiliation: 1960,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Moldova': {
+    id: v1(),
+    name: ['Moldova'],
+    flag: [flagMoldova],
+    coatOfArms: coatOfArmsMoldova,
+    associationIcon: iconMoldova,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1990,
+      fifaAffiliation: 1994,
+      uefaAffiliation: 1993,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Montenegro': {
+    id: v1(),
+    name: ['Montenegro'],
+    flag: [flagMontenegro],
+    coatOfArms: coatOfArmsMontenegro,
+    associationIcon: iconMontenegro,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1931,
+      fifaAffiliation: 2007,
+      uefaAffiliation: 2007,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Netherlands': {
+    id: v1(),
+    name: ['Netherlands'],
+    flag: [flagNetherlands],
+    coatOfArms: coatOfArmsNetherlands,
+    associationIcon: iconNetherlands,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1889,
+      fifaAffiliation: 1904,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'North Macedonia': {
+    id: v1(),
+    name: ['North Macedonia'],
+    flag: [flagNorthMacedonia],
+    coatOfArms: coatOfArmsNorthMacedonia,
+    associationIcon: iconNorthMacedonia,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1926,
+      fifaAffiliation: 1994,
+      uefaAffiliation: 1994,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Northern Ireland': {
+    id: v1(),
+    name: ['Northern Ireland'],
+    flag: [flagNorthernIreland],
+    coatOfArms: coatOfArmsNorthernIreland,
+    associationIcon: iconNorthernIreland,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1880,
+      fifaAffiliation: 1911,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Norway': {
+    id: v1(),
+    name: ['Norway'],
+    flag: [flagNorway],
+    coatOfArms: coatOfArmsNorway,
+    associationIcon: iconNorway,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1902,
+      fifaAffiliation: 1908,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Poland': {
+    id: v1(),
+    name: ['Poland'],
+    flag: [flagPoland],
+    coatOfArms: coatOfArmsPoland,
+    associationIcon: iconPoland,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1919,
+      fifaAffiliation: 1923,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Portugal': {
+    id: v1(),
+    name: ['Portugal'],
+    flag: [flagPortugal],
+    coatOfArms: coatOfArmsPortugal,
+    associationIcon: iconPortugal,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1914,
+      fifaAffiliation: 1923,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Republic of Ireland': {
+    id: v1(),
+    name: ['Republic of Ireland'],
+    flag: [flagRepublicOfIreland],
+    coatOfArms: coatOfArmsRepublicOfIreland,
+    associationIcon: iconRepublicOfIreland,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1921,
+      fifaAffiliation: 1923,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Romania': {
+    id: v1(),
+    name: ['Romania'],
+    flag: [flagRomania],
+    coatOfArms: coatOfArmsRomania,
+    associationIcon: iconRomania,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1909,
+      fifaAffiliation: 1923,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Russia': {
+    id: v1(),
+    name: ['Russia'],
+    flag: [flagRussia],
+    coatOfArms: coatOfArmsRussia,
+    associationIcon: iconRussia,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1912,
+      fifaAffiliation: 1912,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'San Marino': {
+    id: v1(),
+    name: ['San Marino'],
+    flag: [flagSanMarino],
+    coatOfArms: coatOfArmsSanMarino,
+    associationIcon: iconSanMarino,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1931,
+      fifaAffiliation: 1988,
+      uefaAffiliation: 1988,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Scotland': {
+    id: v1(),
+    name: ['Scotland'],
+    flag: [flagScotland],
+    coatOfArms: coatOfArmsScotland,
+    associationIcon: iconScotland,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1873,
+      fifaAffiliation: 1910,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Serbia': {
+    id: v1(),
+    name: ['Serbia'],
+    flag: [flagSerbia],
+    coatOfArms: coatOfArmsSerbia,
+    associationIcon: iconSerbia,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1919,
+      fifaAffiliation: 1921,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Slovakia': {
+    id: v1(),
+    name: ['Slovakia'],
+    flag: [flagSlovakia],
+    coatOfArms: coatOfArmsSlovakia,
+    associationIcon: iconSlovakia,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1938,
+      fifaAffiliation: 1994,
+      uefaAffiliation: 1993,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Slovenia': {
+    id: v1(),
+    name: ['Slovenia'],
+    flag: [flagSlovenia],
+    coatOfArms: coatOfArmsSlovenia,
+    associationIcon: iconSlovenia,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1920,
+      fifaAffiliation: 1992,
+      uefaAffiliation: 1992,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Sweden': {
+    id: v1(),
+    name: ['Sweden'],
+    flag: [flagSweden],
+    coatOfArms: coatOfArmsSweden,
+    associationIcon: iconSweden,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1904,
+      fifaAffiliation: 1904,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Switzerland': {
+    id: v1(),
+    name: ['Switzerland'],
+    flag: [flagSwitzerland],
+    coatOfArms: coatOfArmsSwitzerland,
+    associationIcon: iconSwitzerland,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1895,
+      fifaAffiliation: 1904,
+      uefaAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Turkey': {
+    id: v1(),
+    name: ['Turkey'],
+    flag: [flagTurkey],
+    coatOfArms: coatOfArmsTurkey,
+    associationIcon: iconTurkey,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1923,
+      fifaAffiliation: 1923,
+      uefaAffiliation: 1962,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Ukraine': {
+    id: v1(),
+    name: ['Ukraine'],
+    flag: [flagUkraine],
+    coatOfArms: coatOfArmsUkraine,
+    associationIcon: iconUkraine,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1991,
+      fifaAffiliation: 1992,
+      uefaAffiliation: 1992,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Wales': {
+    id: v1(),
+    name: ['Wales'],
+    flag: [flagWales],
+    coatOfArms: coatOfArmsWales,
+    associationIcon: iconWales,
+    confederation: 'UEFA',
+    uefaIcon: iconUefa,
+    associationDate: {
+      founded: 1876,
+      fifaAffiliation: 1910,
       uefaAffiliation: 1954,
     },
     rating: 0,
