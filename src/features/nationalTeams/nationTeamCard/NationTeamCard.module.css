@@ -58,6 +58,23 @@
   box-shadow: 0px 0px 10px 5px rgba(126, 249, 126, 0.5);
 }
 
+.button {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: rgb(135, 1, 1);
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: -10px;
+  top: 5px;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  background-color: rgb(209, 1, 1);
+  scale: 1.2;
+}
+
 .value {
   font-size: 1.6rem;
   color: yellow;

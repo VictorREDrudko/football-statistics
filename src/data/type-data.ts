@@ -100,7 +100,7 @@ export type AchievementsType = {
 export type AssociationDate = {
   founded: number
   fifaAffiliation: number
-  uefaAffiliation: number
+  confederationAffiliation: number
 }
 
 
@@ -108,7 +108,7 @@ export type NationalTeam = {
   id: string
   name: string[]
   associationIcon: string
-  uefaIcon: string
+  confederationIcon: string
   flag: string[]
   coatOfArms: string
   confederation: string
@@ -120,3 +120,6 @@ export type NationalTeam = {
 export type NationalTeams = {
   [name: string]: NationalTeam
 }
+
+export type ConfederationType = 'AFC' | 'CAF' | 'CONCACAF' | 'CONMEBOL' | 'OFC' | 'UEFA' | 'all'
+

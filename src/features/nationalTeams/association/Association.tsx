@@ -13,7 +13,7 @@ export const Association = ({associationDate}: AssociationProps) => {
       <TitleItem title="Football Association"/>
       <RowItem title="Founded:" value={associationDate.founded}/>
       <RowItem title="FIFA affiliation:" value={associationDate.fifaAffiliation}/>
-      <RowItem title="UEFA affiliation:" value={associationDate.uefaAffiliation}/>
+      <RowItem title="Conf. affiliation:" value={associationDate.confederationAffiliation}/>
     </div>
   )
 }

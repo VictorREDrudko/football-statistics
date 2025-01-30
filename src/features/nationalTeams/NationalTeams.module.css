@@ -1,4 +1,4 @@
-.wrapper {
+.container {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
@@ -6,4 +6,12 @@
   align-items: center;
   gap: 40px;
   padding: 80px 10px 10px 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
