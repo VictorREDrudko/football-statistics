@@ -2,7 +2,7 @@ import s from './RowItem.module.css'
 
 type RowItemProps = {
   title: string
-  value: number
+  value: number | '-'
 }
 
 export const RowItem = ({title, value}: RowItemProps) => {

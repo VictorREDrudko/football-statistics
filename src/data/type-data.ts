@@ -99,7 +99,7 @@ export type AchievementsType = {
 
 export type AssociationDate = {
   founded: number
-  fifaAffiliation: number
+  fifaAffiliation: number | "-"
   confederationAffiliation: number
 }
 
