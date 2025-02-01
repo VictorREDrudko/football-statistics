@@ -9,7 +9,7 @@ export const NationalTeams = () => {
   const [isInfoCard, setIsInfoCard] = useState(false)
   const [team, setTeam] = useState<string>('')
 
-  const mapped = nameTeams.caf.map(el => {
+  const mapped = nameTeams.afc.map(el => {
     return <ListNationalTeams data={nationalTeams[el]}
                               key={nationalTeams[el].id} 
                               openInfoCard={(bool: boolean) => setIsInfoCard(bool)}

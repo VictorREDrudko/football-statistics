@@ -294,9 +294,59 @@ import coatOfArmsUganda from './../assets/icon/coat-of-arms/Uganda.png'
 import iconZanzibar from './../assets/icon/national/Zanzibar.png'
 import flagZanzibar from './../assets/icon/flag/Zanzibar.png'
 import coatOfArmsZanzibar from './../assets/icon/coat-of-arms/Zanzibar.png'
+import iconAngola from './../assets/icon/national/Angola.png'
+import flagAngola from './../assets/icon/flag/Angola.png'
+import coatOfArmsAngola from './../assets/icon/coat-of-arms/Angola.png'
+import iconBotswana from './../assets/icon/national/Botswana.png'
+import flagBotswana from './../assets/icon/flag/Botswana.png'
+import coatOfArmsBotswana from './../assets/icon/coat-of-arms/Botswana.png'
+import iconComoros from './../assets/icon/national/Comoros.png'
+import flagComoros from './../assets/icon/flag/Comoros.png'
+import coatOfArmsComoros from './../assets/icon/coat-of-arms/Comoros.png'
+import iconEswatini from './../assets/icon/national/Eswatini.png'
+import flagEswatini from './../assets/icon/flag/Eswatini.png'
+import coatOfArmsEswatini from './../assets/icon/coat-of-arms/Eswatini.png'
+import iconLesotho from './../assets/icon/national/Lesotho.png'
+import flagLesotho from './../assets/icon/flag/Lesotho.png'
+import coatOfArmsLesotho from './../assets/icon/coat-of-arms/Lesotho.png'
+import iconMadagascar from './../assets/icon/national/Madagascar.png'
+import flagMadagascar from './../assets/icon/flag/Madagascar.png'
+import coatOfArmsMadagascar from './../assets/icon/coat-of-arms/Madagascar.png'
+import iconMalawi from './../assets/icon/national/Malawi.png'
+import flagMalawi from './../assets/icon/flag/Malawi.png'
+import coatOfArmsMalawi from './../assets/icon/coat-of-arms/Malawi.png'
+import iconMauritius from './../assets/icon/national/Mauritius.png'
+import flagMauritius from './../assets/icon/flag/Mauritius.png'
+import coatOfArmsMauritius from './../assets/icon/coat-of-arms/Mauritius.png'
+import iconNamibia from './../assets/icon/national/Namibia.png'
+import flagNamibia from './../assets/icon/flag/Namibia.png'
+import coatOfArmsNamibia from './../assets/icon/coat-of-arms/Namibia.png'
+import iconMozambique from './../assets/icon/national/Mozambique.png'
+import flagMozambique from './../assets/icon/flag/Mozambique.png'
+import coatOfArmsMozambique from './../assets/icon/coat-of-arms/Mozambique.png'
+import iconSeychelles from './../assets/icon/national/Seychelles.png'
+import flagSeychelles from './../assets/icon/flag/Seychelles.png'
+import coatOfArmsSeychelles from './../assets/icon/coat-of-arms/Seychelles.png'
+import iconSouthAfrica from './../assets/icon/national/South-Africa.png'
+import flagSouthAfrica from './../assets/icon/flag/South-Africa.png'
+import coatOfArmsSouthAfrica from './../assets/icon/coat-of-arms/South-Africa.png'
+import iconZambia from './../assets/icon/national/Zambia.png'
+import flagZambia from './../assets/icon/flag/Zambia.png'
+import coatOfArmsZambia from './../assets/icon/coat-of-arms/Zambia.png'
+import iconZimbabwe from './../assets/icon/national/Zimbabwe.png'
+import flagZimbabwe from './../assets/icon/flag/Zimbabwe.png'
+import coatOfArmsZimbabwe from './../assets/icon/coat-of-arms/Zimbabwe.png'
+import iconReunion from './../assets/icon/national/Reunion.png'
+import flagReunion from './../assets/icon/flag/Reunion.png'
+import coatOfArmsReunion from './../assets/icon/coat-of-arms/Reunion.png'
+
+import iconAustralia from './../assets/icon/national/Australia.png'
+import flagAustralia from './../assets/icon/flag/Australia.png'
+import coatOfArmsAustralia from './../assets/icon/coat-of-arms/Australia.png'
 
 import iconUefa from './../assets/icon/confederation/icon-uefa.png'
 import iconCaf from './../assets/icon/confederation/icon-caf.png'
+import iconAfc from './../assets/icon/confederation/icon-afc.png'
 import iconCup from './../assets/icon/icon-cup.png'
 import iconMedal from './../assets/icon/icon-medal.png'
 import { v1 } from 'uuid'
@@ -304,7 +354,8 @@ import { v1 } from 'uuid'
 // DATA
 export const nameTeams = {
   'uefa': ['Germany', 'England', 'Italy', 'Spain', 'France', 'Albania', 'Andorra', 'Armenia', 'Austria', 'Azerbaijan', 'Belarus', 'Belgium', 'Bosnia and Herzegovina', 'Bulgaria', 'Croatia', 'Cyprus', 'Czech Republic', 'Denmark', 'Estonia', 'Faroe Islands', 'Finland', 'Georgia', 'Gibraltar', 'Greece', 'Hungary', 'Iceland', 'Israel', 'Kazakhstan', 'Kosovo', 'Latvia', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Malta', 'Moldova', 'Montenegro', 'Netherlands', 'North Macedonia', 'Northern Ireland', 'Norway', 'Poland', 'Portugal', 'Republic of Ireland', 'Romania', 'Russia', 'San Marino', 'Scotland', 'Serbia', 'Slovakia', 'Slovenia', 'Sweden', 'Switzerland', 'Turkey', 'Ukraine', 'Wales' ],
-  'caf': ['Algeria', 'Egypt', 'Libya', 'Morocco', 'Tunisia', 'Benin', 'Burkina Faso', 'Cape Verde', 'Gambia', 'Ghana', 'Guinea', 'Guinea-Bissau', 'Ivory Coast', 'Liberia', 'Mali', 'Mauritania', 'Niger', 'Nigeria', 'Senegal', 'Sierra Leone', 'Togo', 'Cameroon', 'Central African Republic', 'Chad', 'Congo', 'DR Congo', 'Equatorial Guinea', 'Gabon', 'São Tomé and Príncipe', 'Burundi', 'Djibouti', 'Eritrea', 'Ethiopia', 'Kenya', 'Rwanda', 'Somalia', 'South Sudan', 'Sudan', 'Tanzania', 'Uganda', 'Zanzibar']
+  'caf': ['Algeria', 'Egypt', 'Libya', 'Morocco', 'Tunisia', 'Benin', 'Burkina Faso', 'Cape Verde', 'Gambia', 'Ghana', 'Guinea', 'Guinea-Bissau', 'Ivory Coast', 'Liberia', 'Mali', 'Mauritania', 'Niger', 'Nigeria', 'Senegal', 'Sierra Leone', 'Togo', 'Cameroon', 'Central African Republic', 'Chad', 'Congo', 'DR Congo', 'Equatorial Guinea', 'Gabon', 'São Tomé and Príncipe', 'Burundi', 'Djibouti', 'Eritrea', 'Ethiopia', 'Kenya', 'Rwanda', 'Somalia', 'South Sudan', 'Sudan', 'Tanzania', 'Uganda', 'Zanzibar', 'Angola', 'Botswana', 'Comoros', 'Eswatini', 'Lesotho', 'Madagascar', 'Malawi', 'Mauritius', 'Mozambique', 'Namibia', 'Seychelles', 'South Africa', 'Zambia', 'Zimbabwe', 'Reunion'],
+  'afc': ['Australia']
 }
 
 
@@ -2901,9 +2952,439 @@ export const nationalTeams: NationalTeams = {
       },
     }
   },
+  'Angola': {
+    id: v1(),
+    name: ['Angola'],
+    flag: [flagAngola],
+    coatOfArms: coatOfArmsAngola,
+    associationIcon: iconAngola,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1979,
+      fifaAffiliation: 1980,
+      confederationAffiliation: 1980,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Botswana': {
+    id: v1(),
+    name: ['Botswana'],
+    flag: [flagBotswana],
+    coatOfArms: coatOfArmsBotswana,
+    associationIcon: iconBotswana,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1970,
+      fifaAffiliation: 1978,
+      confederationAffiliation: 1976,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Comoros': {
+    id: v1(),
+    name: ['Comoros'],
+    flag: [flagComoros],
+    coatOfArms: coatOfArmsComoros,
+    associationIcon: iconComoros,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1979,
+      fifaAffiliation: 2005,
+      confederationAffiliation: 2005,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Eswatini': {
+    id: v1(),
+    name: ['Eswatini'],
+    flag: [flagEswatini],
+    coatOfArms: coatOfArmsEswatini,
+    associationIcon: iconEswatini,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1968,
+      fifaAffiliation: 1978,
+      confederationAffiliation: 1978,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Lesotho': {
+    id: v1(),
+    name: ['Lesotho'],
+    flag: [flagLesotho],
+    coatOfArms: coatOfArmsLesotho,
+    associationIcon: iconLesotho,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1932,
+      fifaAffiliation: 1964,
+      confederationAffiliation: 1964,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Madagascar': {
+    id: v1(),
+    name: ['Madagascar'],
+    flag: [flagMadagascar],
+    coatOfArms: coatOfArmsMadagascar,
+    associationIcon: iconMadagascar,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1961,
+      fifaAffiliation: 1964,
+      confederationAffiliation: 1963,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Malawi': {
+    id: v1(),
+    name: ['Malawi'],
+    flag: [flagMalawi],
+    coatOfArms: coatOfArmsMalawi,
+    associationIcon: iconMalawi,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1966,
+      fifaAffiliation: 1968,
+      confederationAffiliation: 1968,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Mauritius': {
+    id: v1(),
+    name: ['Mauritius'],
+    flag: [flagMauritius],
+    coatOfArms: coatOfArmsMauritius,
+    associationIcon: iconMauritius,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1952,
+      fifaAffiliation: 1964,
+      confederationAffiliation: 1963,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Mozambique': {
+    id: v1(),
+    name: ['Mozambique'],
+    flag: [flagMozambique],
+    coatOfArms: coatOfArmsMozambique,
+    associationIcon: iconMozambique,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1976,
+      fifaAffiliation: 1980,
+      confederationAffiliation: 1980,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Namibia': {
+    id: v1(),
+    name: ['Namibia'],
+    flag: [flagNamibia],
+    coatOfArms: coatOfArmsNamibia,
+    associationIcon: iconNamibia,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1990,
+      fifaAffiliation: 1992,
+      confederationAffiliation: 1992,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Seychelles': {
+    id: v1(),
+    name: ['Seychelles'],
+    flag: [flagSeychelles],
+    coatOfArms: coatOfArmsSeychelles,
+    associationIcon: iconSeychelles,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1979,
+      fifaAffiliation: 1986,
+      confederationAffiliation: 1986,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'South Africa': {
+    id: v1(),
+    name: ['South Africa'],
+    flag: [flagSouthAfrica],
+    coatOfArms: coatOfArmsSouthAfrica,
+    associationIcon: iconSouthAfrica,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1991,
+      fifaAffiliation: 1992,
+      confederationAffiliation: 1992,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Zambia': {
+    id: v1(),
+    name: ['Zambia'],
+    flag: [flagZambia],
+    coatOfArms: coatOfArmsZambia,
+    associationIcon: iconZambia,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1929,
+      fifaAffiliation: 1964,
+      confederationAffiliation: 1964,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Zimbabwe': {
+    id: v1(),
+    name: ['Zimbabwe'],
+    flag: [flagZimbabwe],
+    coatOfArms: coatOfArmsZimbabwe,
+    associationIcon: iconZimbabwe,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1965,
+      fifaAffiliation: 1965,
+      confederationAffiliation: 1980,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Reunion': {
+    id: v1(),
+    name: ['Reunion'],
+    flag: [flagReunion],
+    coatOfArms: coatOfArmsReunion,
+    associationIcon: iconReunion,
+    confederation: 'CAF',
+    confederationIcon: iconCaf,
+    associationDate: {
+      founded: 1956,
+      fifaAffiliation: '-',
+      confederationAffiliation: 1992,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Australia': {
+    id: v1(),
+    name: ['Australia'],
+    flag: [flagAustralia],
+    coatOfArms: coatOfArmsAustralia,
+    associationIcon: iconAustralia,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1961,
+      fifaAffiliation: 1963,
+      confederationAffiliation: 2006,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
 }
-
-
 
 
 
@@ -2944,6 +3425,7 @@ export const icons = {
   confederation: {
     uefa: iconUefa,
     caf: iconCaf,
+    afc: iconAfc,
   },
   trophy: {
     cup: iconCup,
