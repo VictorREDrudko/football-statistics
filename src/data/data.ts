@@ -342,12 +342,277 @@ import coatOfArmsReunion from './../assets/icon/coat-of-arms/Reunion.png'
 
 import iconAustralia from './../assets/icon/national/Australia.png'
 import flagAustralia from './../assets/icon/flag/Australia.png'
-import coatOfArmsAustralia from './../assets/icon/coat-of-arms/Australia.png'
+import coatOfArmsAustralia from './../assets/icon/coat-of-arms/Brunei.png'
+import iconBrunei from './../assets/icon/national/Brunei.png'
+import flagBrunei from './../assets/icon/flag/Brunei.png'
+import coatOfArmsBrunei from './../assets/icon/coat-of-arms/Australia.png'
+import iconCambodia from './../assets/icon/national/Cambodia.png'
+import flagCambodia from './../assets/icon/flag/Cambodia.png'
+import coatOfArmsCambodia from './../assets/icon/coat-of-arms/Cambodia.png'
+import iconTimorLeste from './../assets/icon/national/Timor-Leste.png'
+import flagTimorLeste from './../assets/icon/flag/Timor-Leste.png'
+import coatOfArmsTimorLeste from './../assets/icon/coat-of-arms/Timor-Leste.png'
+import iconIndonesia from './../assets/icon/national/Indonesia.png'
+import flagIndonesia from './../assets/icon/flag/Indonesia.png'
+import coatOfArmsIndonesia from './../assets/icon/coat-of-arms/Indonesia.png'
+import iconLaos from './../assets/icon/national/Laos.png'
+import flagLaos from './../assets/icon/flag/Laos.png'
+import coatOfArmsLaos from './../assets/icon/coat-of-arms/Laos.png'
+import iconMalaysia from './../assets/icon/national/Malaysia.png'
+import flagMalaysia from './../assets/icon/flag/Malaysia.png'
+import coatOfArmsMalaysia from './../assets/icon/coat-of-arms/Malaysia.png'
+import iconMyanmar from './../assets/icon/national/Myanmar.png'
+import flagMyanmar from './../assets/icon/flag/Myanmar.png'
+import coatOfArmsMyanmar from './../assets/icon/coat-of-arms/Myanmar.png'
+import iconPhilippines from './../assets/icon/national/Philippines.png'
+import flagPhilippines from './../assets/icon/flag/Philippines.png'
+import coatOfArmsPhilippines from './../assets/icon/coat-of-arms/Philippines.png'
+import iconSingapore from './../assets/icon/national/Singapore.png'
+import flagSingapore from './../assets/icon/flag/Singapore.png'
+import coatOfArmsSingapore from './../assets/icon/coat-of-arms/Singapore.png'
+import iconThailand from './../assets/icon/national/Thailand.png'
+import flagThailand from './../assets/icon/flag/Thailand.png'
+import coatOfArmsThailand from './../assets/icon/coat-of-arms/Thailand.png'
+import iconVietnam from './../assets/icon/national/Vietnam.png'
+import flagVietnam from './../assets/icon/flag/Vietnam.png'
+import coatOfArmsVietnam from './../assets/icon/coat-of-arms/Vietnam.png'
+import iconAfghanistan from './../assets/icon/national/Afghanistan.png'
+import flagAfghanistan from './../assets/icon/flag/Afghanistan.png'
+import coatOfArmsAfghanistan from './../assets/icon/coat-of-arms/Afghanistan.png'
+import iconIran from './../assets/icon/national/Iran.png'
+import flagIran from './../assets/icon/flag/Iran.png'
+import coatOfArmsIran from './../assets/icon/coat-of-arms/Iran.png'
+import iconKyrgyzRepublic from './../assets/icon/national/Kyrgyz-Republic.png'
+import flagKyrgyzRepublic from './../assets/icon/flag/Kyrgyz-Republic.png'
+import coatOfArmsKyrgyzRepublic from './../assets/icon/coat-of-arms/Kyrgyz-Republic.png'
+import iconTajikistan from './../assets/icon/national/Tajikistan.png'
+import flagTajikistan from './../assets/icon/flag/Tajikistan.png'
+import coatOfArmsTajikistan from './../assets/icon/coat-of-arms/Tajikistan.png'
+import iconTurkmenistan from './../assets/icon/national/Turkmenistan.png'
+import flagTurkmenistan from './../assets/icon/flag/Turkmenistan.png'
+import coatOfArmsTurkmenistan from './../assets/icon/coat-of-arms/Turkmenistan.png'
+import iconUzbekistan from './../assets/icon/national/Uzbekistan.png'
+import flagUzbekistan from './../assets/icon/flag/Uzbekistan.png'
+import coatOfArmsUzbekistan from './../assets/icon/coat-of-arms/Uzbekistan.png'
+import iconChina from './../assets/icon/national/China.png'
+import flagChina from './../assets/icon/flag/China.png'
+import coatOfArmsChina from './../assets/icon/coat-of-arms/China.png'
+import iconTaiwan from './../assets/icon/national/Taiwan.png'
+import flagTaiwan from './../assets/icon/flag/Taiwan.png'
+import coatOfArmsTaiwan from './../assets/icon/coat-of-arms/Taiwan.png'
+import iconDPRKorea from './../assets/icon/national/DPR-Korea.png'
+import flagDPRKorea from './../assets/icon/flag/DPR-Korea.png'
+import coatOfArmsDPRKorea from './../assets/icon/coat-of-arms/DPR-Korea.png'
+import iconGuam from './../assets/icon/national/Guam.png'
+import flagGuam from './../assets/icon/flag/Guam.png'
+import coatOfArmsGuam from './../assets/icon/coat-of-arms/Guam.png'
+import iconHongKong from './../assets/icon/national/Hong-Kong.png'
+import flagHongKong from './../assets/icon/flag/Hong-Kong.png'
+import coatOfArmsHongKong from './../assets/icon/coat-of-arms/Hong-Kong.png'
+import iconJapan from './../assets/icon/national/Japan.png'
+import flagJapan from './../assets/icon/flag/Japan.png'
+import coatOfArmsJapan from './../assets/icon/coat-of-arms/Japan.png'
+import iconKoreaRepublic from './../assets/icon/national/Korea-Republic.png'
+import flagKoreaRepublic from './../assets/icon/flag/Korea-Republic.png'
+import coatOfArmsKoreaRepublic from './../assets/icon/coat-of-arms/Korea-Republic.png'
+import iconMacau from './../assets/icon/national/Macau.png'
+import flagMacau from './../assets/icon/flag/Macau.png'
+import coatOfArmsMacau from './../assets/icon/coat-of-arms/Macau.png'
+import iconMongolia from './../assets/icon/national/Mongolia.png'
+import flagMongolia from './../assets/icon/flag/Mongolia.png'
+import coatOfArmsMongolia from './../assets/icon/coat-of-arms/Mongolia.png'
+import iconNorthernMarianaIslands from './../assets/icon/national/Northern-Mariana-Islands.png'
+import flagNorthernMarianaIslands from './../assets/icon/flag/Northern-Mariana-Islands.png'
+import coatOfArmsNorthernMarianaIslands from './../assets/icon/coat-of-arms/Northern-Mariana-Islands.png'
+import iconBangladesh from './../assets/icon/national/Bangladesh.png'
+import flagBangladesh from './../assets/icon/flag/Bangladesh.png'
+import coatOfArmsBangladesh from './../assets/icon/coat-of-arms/Bangladesh.png'
+import iconBhutan from './../assets/icon/national/Bhutan.png'
+import flagBhutan from './../assets/icon/flag/Bhutan.png'
+import coatOfArmsBhutan from './../assets/icon/coat-of-arms/Bhutan.png'
+import iconIndia from './../assets/icon/national/India.png'
+import flagIndia from './../assets/icon/flag/India.png'
+import coatOfArmsIndia from './../assets/icon/coat-of-arms/India.png'
+import iconMaldives from './../assets/icon/national/Maldives.png'
+import flagMaldives from './../assets/icon/flag/Maldives.png'
+import coatOfArmsMaldives from './../assets/icon/coat-of-arms/Maldives.png'
+import iconNepal from './../assets/icon/national/Nepal.png'
+import flagNepal from './../assets/icon/flag/Nepal.png'
+import coatOfArmsNepal from './../assets/icon/coat-of-arms/Nepal.png'
+import iconPakistan from './../assets/icon/national/Pakistan.png'
+import flagPakistan from './../assets/icon/flag/Pakistan.png'
+import coatOfArmsPakistan from './../assets/icon/coat-of-arms/Pakistan.png'
+import iconSriLanka from './../assets/icon/national/Sri-Lanka.png'
+import flagSriLanka from './../assets/icon/flag/Sri-Lanka.png'
+import coatOfArmsSriLanka from './../assets/icon/coat-of-arms/Sri-Lanka.png'
+import iconBahrain from './../assets/icon/national/Bahrain.png'
+import flagBahrain from './../assets/icon/flag/Bahrain.png'
+import coatOfArmsBahrain from './../assets/icon/coat-of-arms/Bahrain.png'
+import iconIraq from './../assets/icon/national/Iraq.png'
+import flagIraq from './../assets/icon/flag/Iraq.png'
+import coatOfArmsIraq from './../assets/icon/coat-of-arms/Iraq.png'
+import iconJordan from './../assets/icon/national/Jordan.png'
+import flagJordan from './../assets/icon/flag/Jordan.png'
+import coatOfArmsJordan from './../assets/icon/coat-of-arms/Jordan.png'
+import iconKuwait from './../assets/icon/national/Kuwait.png'
+import flagKuwait from './../assets/icon/flag/Kuwait.png'
+import coatOfArmsKuwait from './../assets/icon/coat-of-arms/Kuwait.png'
+import iconLebanon from './../assets/icon/national/Lebanon.png'
+import flagLebanon from './../assets/icon/flag/Lebanon.png'
+import coatOfArmsLebanon from './../assets/icon/coat-of-arms/Lebanon.png'
+import iconOman from './../assets/icon/national/Oman.png'
+import flagOman from './../assets/icon/flag/Oman.png'
+import coatOfArmsOman from './../assets/icon/coat-of-arms/Oman.png'
+import iconPalestine from './../assets/icon/national/Palestine.png'
+import flagPalestine from './../assets/icon/flag/Palestine.png'
+import coatOfArmsPalestine from './../assets/icon/coat-of-arms/Palestine.png'
+import iconQatar from './../assets/icon/national/Qatar.png'
+import flagQatar from './../assets/icon/flag/Qatar.png'
+import coatOfArmsQatar from './../assets/icon/coat-of-arms/Qatar.png'
+import iconSaudiArabia from './../assets/icon/national/Saudi-Arabia.png'
+import flagSaudiArabia from './../assets/icon/flag/Saudi-Arabia.png'
+import coatOfArmsSaudiArabia from './../assets/icon/coat-of-arms/Saudi-Arabia.png'
+import iconSyria from './../assets/icon/national/Syria.png'
+import flagSyria from './../assets/icon/flag/Syria.png'
+import coatOfArmsSyria from './../assets/icon/coat-of-arms/Syria.png'
+import iconUnitedArabEmirates from './../assets/icon/national/United-Arab-Emirates.png'
+import flagUnitedArabEmirates from './../assets/icon/flag/United-Arab-Emirates.png'
+import coatOfArmsUnitedArabEmirates from './../assets/icon/coat-of-arms/United-Arab-Emirates.png'
+import iconYemen from './../assets/icon/national/Yemen.png'
+import flagYemen from './../assets/icon/flag/Yemen.png'
+import coatOfArmsYemen from './../assets/icon/coat-of-arms/Yemen.png'
+
+import iconCanada from './../assets/icon/national/Canada.png'
+import flagCanada from './../assets/icon/flag/Canada.png'
+import coatOfArmsCanada from './../assets/icon/coat-of-arms/Canada.png'
+import iconMexico from './../assets/icon/national/Mexico.png'
+import flagMexico from './../assets/icon/flag/Mexico.png'
+import coatOfArmsMexico from './../assets/icon/coat-of-arms/Mexico.png'
+import iconUnitedStates from './../assets/icon/national/United-States.png'
+import flagUnitedStates from './../assets/icon/flag/United-States.png'
+import coatOfArmsUnitedStates from './../assets/icon/coat-of-arms/United-States.png'
+import iconBelize from './../assets/icon/national/Belize.png'
+import flagBelize from './../assets/icon/flag/Belize.png'
+import coatOfArmsBelize from './../assets/icon/coat-of-arms/Belize.png'
+import iconCostaRica from './../assets/icon/national/Costa-Rica.png'
+import flagCostaRica from './../assets/icon/flag/Costa-Rica.png'
+import coatOfArmsCostaRica from './../assets/icon/coat-of-arms/Costa-Rica.png'
+import iconElSalvador from './../assets/icon/national/El-Salvador.png'
+import flagElSalvador from './../assets/icon/flag/El-Salvador.png'
+import coatOfArmsElSalvador from './../assets/icon/coat-of-arms/El-Salvador.png'
+import iconGuatemala from './../assets/icon/national/Guatemala.png'
+import flagGuatemala from './../assets/icon/flag/Guatemala.png'
+import coatOfArmsGuatemala from './../assets/icon/coat-of-arms/Guatemala.png'
+import iconHonduras from './../assets/icon/national/Honduras.png'
+import flagHonduras from './../assets/icon/flag/Honduras.png'
+import coatOfArmsHonduras from './../assets/icon/coat-of-arms/Honduras.png'
+import iconNicaragua from './../assets/icon/national/Nicaragua.png'
+import flagNicaragua from './../assets/icon/flag/Nicaragua.png'
+import coatOfArmsNicaragua from './../assets/icon/coat-of-arms/Nicaragua.png'
+import iconPanama from './../assets/icon/national/Panama.png'
+import flagPanama from './../assets/icon/flag/Panama.png'
+import coatOfArmsPanama from './../assets/icon/coat-of-arms/Panama.png'
+import iconAnguilla from './../assets/icon/national/Anguilla.png'
+import flagAnguilla from './../assets/icon/flag/Anguilla.png'
+import coatOfArmsAnguilla from './../assets/icon/coat-of-arms/Anguilla.png'
+import iconAntiguaAndBarbuda from './../assets/icon/national/Antigua-and-Barbuda.png'
+import flagAntiguaAndBarbuda from './../assets/icon/flag/Antigua-and-Barbuda.png'
+import coatOfArmsAntiguaAndBarbuda from './../assets/icon/coat-of-arms/Antigua-and-Barbuda.png'
+import iconAruba from './../assets/icon/national/Aruba.png'
+import flagAruba from './../assets/icon/flag/Aruba.png'
+import coatOfArmsAruba from './../assets/icon/coat-of-arms/Aruba.png'
+import iconBahamas from './../assets/icon/national/Bahamas.png'
+import flagBahamas from './../assets/icon/flag/Bahamas.png'
+import coatOfArmsBahamas from './../assets/icon/coat-of-arms/Bahamas.png'
+import iconBarbados from './../assets/icon/national/Barbados.png'
+import flagBarbados from './../assets/icon/flag/Barbados.png'
+import coatOfArmsBarbados from './../assets/icon/coat-of-arms/Barbados.png'
+import iconBermuda from './../assets/icon/national/Bermuda.png'
+import flagBermuda from './../assets/icon/flag/Bermuda.png'
+import coatOfArmsBermuda from './../assets/icon/coat-of-arms/Bermuda.png'
+import iconBonaire from './../assets/icon/national/Bonaire.png'
+import flagBonaire from './../assets/icon/flag/Bonaire.png'
+import coatOfArmsBonaire from './../assets/icon/coat-of-arms/Bonaire.png'
+import iconBritishVirginIslands from './../assets/icon/national/British-Virgin-Islands.png'
+import flagBritishVirginIslands from './../assets/icon/flag/British-Virgin-Islands.png'
+import coatOfArmsBritishVirginIslands from './../assets/icon/coat-of-arms/British-Virgin-Islands.png'
+import iconCaymanIslands from './../assets/icon/national/Cayman-Islands.png'
+import flagCaymanIslands from './../assets/icon/flag/Cayman-Islands.png'
+import coatOfArmsCaymanIslands from './../assets/icon/coat-of-arms/Cayman-Islands.png'
+import iconCuba from './../assets/icon/national/Cuba.png'
+import flagCuba from './../assets/icon/flag/Cuba.png'
+import coatOfArmsCuba from './../assets/icon/coat-of-arms/Cuba.png'
+import iconCuracao from './../assets/icon/national/Curacao.png'
+import flagCuracao from './../assets/icon/flag/Curacao.png'
+import coatOfArmsCuracao from './../assets/icon/coat-of-arms/Curacao.png'
+import iconDominica from './../assets/icon/national/Dominica.png'
+import flagDominica from './../assets/icon/flag/Dominica.png'
+import coatOfArmsDominica from './../assets/icon/coat-of-arms/Dominica.png'
+import iconDominicanRepublic from './../assets/icon/national/Dominican-Republic.png'
+import flagDominicanRepublic from './../assets/icon/flag/Dominican-Republic.png'
+import coatOfArmsDominicanRepublic from './../assets/icon/coat-of-arms/Dominican-Republic.png'
+import iconFrenchGuiana from './../assets/icon/national/French-Guiana.png'
+import flagFrenchGuiana from './../assets/icon/flag/French-Guiana.png'
+import coatOfArmsFrenchGuiana from './../assets/icon/coat-of-arms/French-Guiana.png'
+import iconGrenada from './../assets/icon/national/Grenada.png'
+import flagGrenada from './../assets/icon/flag/Grenada.png'
+import coatOfArmsGrenada from './../assets/icon/coat-of-arms/Grenada.png'
+import iconGuadeloupe from './../assets/icon/national/Guadeloupe.png'
+import flagGuadeloupe from './../assets/icon/flag/Guadeloupe.png'
+import coatOfArmsGuadeloupe from './../assets/icon/coat-of-arms/Guadeloupe.png'
+import iconGuyana from './../assets/icon/national/Guyana.png'
+import flagGuyana from './../assets/icon/flag/Guyana.png'
+import coatOfArmsGuyana from './../assets/icon/coat-of-arms/Guyana.png'
+import iconHaiti from './../assets/icon/national/Haiti.png'
+import flagHaiti from './../assets/icon/flag/Haiti.png'
+import coatOfArmsHaiti from './../assets/icon/coat-of-arms/Haiti.png'
+import iconJamaica from './../assets/icon/national/Jamaica.png'
+import flagJamaica from './../assets/icon/flag/Jamaica.png'
+import coatOfArmsJamaica from './../assets/icon/coat-of-arms/Jamaica.png'
+import iconMartinique from './../assets/icon/national/Martinique.png'
+import flagMartinique from './../assets/icon/flag/Martinique.png'
+import coatOfArmsMartinique from './../assets/icon/coat-of-arms/Martinique.png'
+import iconMontserrat from './../assets/icon/national/Montserrat.png'
+import flagMontserrat from './../assets/icon/flag/Montserrat.png'
+import coatOfArmsMontserrat from './../assets/icon/coat-of-arms/Montserrat.png'
+import iconPuertoRico from './../assets/icon/national/Puerto-Rico.png'
+import flagPuertoRico from './../assets/icon/flag/Puerto-Rico.png'
+import coatOfArmsPuertoRico from './../assets/icon/coat-of-arms/Puerto-Rico.png'
+import iconSaintKittsAndNevis from './../assets/icon/national/Saint-Kitts-and-Nevis.png'
+import flagSaintKittsAndNevis from './../assets/icon/flag/Saint-Kitts-and-Nevis.png'
+import coatOfArmsSaintKittsAndNevis from './../assets/icon/coat-of-arms/Saint-Kitts-and-Nevis.png'
+import iconSaintLucia from './../assets/icon/national/Saint-Lucia.png'
+import flagSaintLucia from './../assets/icon/flag/Saint-Lucia.png'
+import coatOfArmsSaintLucia from './../assets/icon/coat-of-arms/Saint-Lucia.png'
+import iconSaintMartin from './../assets/icon/national/Saint-Martin.png'
+import flagSaintMartin from './../assets/icon/flag/Saint-Martin.png'
+import coatOfArmsSaintMartin from './../assets/icon/coat-of-arms/Saint-Martin.png'
+import iconSaintVincentAndTheGrenadines from './../assets/icon/national/Saint-Vincent-and-the-Grenadines.png'
+import flagSaintVincentAndTheGrenadines from './../assets/icon/flag/Saint-Vincent-and-the-Grenadines.png'
+import coatOfArmsSaintVincentAndTheGrenadines from './../assets/icon/coat-of-arms/Saint-Vincent-and-the-Grenadines.png'
+import iconSintMaarten from './../assets/icon/national/Sint-Maarten.png'
+import flagSintMaarten from './../assets/icon/flag/Sint-Maarten.png'
+import coatOfArmsSintMaarten from './../assets/icon/coat-of-arms/Sint-Maarten.png'
+import iconSuriname from './../assets/icon/national/Suriname.png'
+import flagSuriname from './../assets/icon/flag/Suriname.png'
+import coatOfArmsSuriname from './../assets/icon/coat-of-arms/Suriname.png'
+import iconTrinidadAndTobago from './../assets/icon/national/Trinidad-and-Tobago.png'
+import flagTrinidadAndTobago from './../assets/icon/flag/Trinidad-and-Tobago.png'
+import coatOfArmsTrinidadAndTobago from './../assets/icon/coat-of-arms/Trinidad-and-Tobago.png'
+import iconTurksAndCaicosIslands from './../assets/icon/national/Turks-and-Caicos-Islands.png'
+import flagTurksAndCaicosIslands from './../assets/icon/flag/Turks-and-Caicos-Islands.png'
+import coatOfArmsTurksAndCaicosIslands from './../assets/icon/coat-of-arms/Turks-and-Caicos-Islands.png'
+import iconUSVirginIslands from './../assets/icon/national/U.S.-Virgin-Islands.png'
+import flagUSVirginIslands from './../assets/icon/flag/U.S.-Virgin-Islands.png'
+import coatOfArmsUSVirginIslands from './../assets/icon/coat-of-arms/U.S.-Virgin-Islands.png'
+
 
 import iconUefa from './../assets/icon/confederation/icon-uefa.png'
 import iconCaf from './../assets/icon/confederation/icon-caf.png'
 import iconAfc from './../assets/icon/confederation/icon-afc.png'
+import iconConcacaf from './../assets/icon/confederation/icon-concacaf.png'
 import iconCup from './../assets/icon/icon-cup.png'
+
 import iconMedal from './../assets/icon/icon-medal.png'
 import { v1 } from 'uuid'
 
@@ -355,7 +620,8 @@ import { v1 } from 'uuid'
 export const nameTeams = {
   'uefa': ['Germany', 'England', 'Italy', 'Spain', 'France', 'Albania', 'Andorra', 'Armenia', 'Austria', 'Azerbaijan', 'Belarus', 'Belgium', 'Bosnia and Herzegovina', 'Bulgaria', 'Croatia', 'Cyprus', 'Czech Republic', 'Denmark', 'Estonia', 'Faroe Islands', 'Finland', 'Georgia', 'Gibraltar', 'Greece', 'Hungary', 'Iceland', 'Israel', 'Kazakhstan', 'Kosovo', 'Latvia', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Malta', 'Moldova', 'Montenegro', 'Netherlands', 'North Macedonia', 'Northern Ireland', 'Norway', 'Poland', 'Portugal', 'Republic of Ireland', 'Romania', 'Russia', 'San Marino', 'Scotland', 'Serbia', 'Slovakia', 'Slovenia', 'Sweden', 'Switzerland', 'Turkey', 'Ukraine', 'Wales' ],
   'caf': ['Algeria', 'Egypt', 'Libya', 'Morocco', 'Tunisia', 'Benin', 'Burkina Faso', 'Cape Verde', 'Gambia', 'Ghana', 'Guinea', 'Guinea-Bissau', 'Ivory Coast', 'Liberia', 'Mali', 'Mauritania', 'Niger', 'Nigeria', 'Senegal', 'Sierra Leone', 'Togo', 'Cameroon', 'Central African Republic', 'Chad', 'Congo', 'DR Congo', 'Equatorial Guinea', 'Gabon', 'São Tomé and Príncipe', 'Burundi', 'Djibouti', 'Eritrea', 'Ethiopia', 'Kenya', 'Rwanda', 'Somalia', 'South Sudan', 'Sudan', 'Tanzania', 'Uganda', 'Zanzibar', 'Angola', 'Botswana', 'Comoros', 'Eswatini', 'Lesotho', 'Madagascar', 'Malawi', 'Mauritius', 'Mozambique', 'Namibia', 'Seychelles', 'South Africa', 'Zambia', 'Zimbabwe', 'Reunion'],
-  'afc': ['Australia']
+  'afc': ['Australia', 'Brunei', 'Cambodia', 'Timor-Leste', 'Indonesia', 'Laos', 'Malaysia', 'Myanmar', 'Philippines', 'Singapore', 'Thailand', 'Vietnam', 'Afghanistan', 'Iran', 'Kyrgyz Republic', 'Tajikistan', 'Turkmenistan', 'Uzbekistan', 'China', 'Taiwan', 'DPR Korea', 'Guam', 'Hong Kong', 'Japan', 'Korea Republic', 'Macau', 'Mongolia', 'Northern Mariana Islands', 'Bangladesh', 'Bhutan', 'India', 'Maldives', 'Nepal', 'Pakistan', 'Sri Lanka', 'Bahrain', 'Iraq', 'Jordan', 'Kuwait', 'Lebanon', 'Oman', 'Palestine', 'Qatar', 'Saudi Arabia', 'Syria', 'United Arab Emirates', 'Yemen'],
+  'concacaf': ['Canada', 'Mexico', 'United States', 'Belize', 'Costa Rica', 'El Salvador', 'Guatemala', 'Honduras', 'Nicaragua', 'Panama', 'Anguilla', 'Antigua and Barbuda', 'Aruba', 'Bahamas', 'Barbados', 'Bermuda', 'Bonaire', 'British Virgin Islands', 'Cayman Islands', 'Cuba', 'Curaçao', 'Dominica', 'Dominican Republic', 'French Guiana', 'Grenada', 'Guadeloupe', 'Guyana', 'Haiti', 'Jamaica', 'Martinique', 'Montserrat', 'Puerto Rico', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Martin', 'Saint Vincent and the Grenadines', 'Sint Maarten', 'Suriname', 'Trinidad and Tobago', 'Turks and Caicos Islands', 'U.S. Virgin Islands']
 }
 
 
@@ -3384,8 +3650,2356 @@ export const nationalTeams: NationalTeams = {
       },
     }
   },
+  'Brunei': {
+    id: v1(),
+    name: ['Brunei'],
+    flag: [flagBrunei],
+    coatOfArms: coatOfArmsBrunei,
+    associationIcon: iconBrunei,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1952,
+      fifaAffiliation: 1972,
+      confederationAffiliation: 1969,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Cambodia': {
+    id: v1(),
+    name: ['Cambodia'],
+    flag: [flagCambodia],
+    coatOfArms: coatOfArmsCambodia,
+    associationIcon: iconCambodia,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1933,
+      fifaAffiliation: 1954,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Timor-Leste': {
+    id: v1(),
+    name: ['Timor-Leste'],
+    flag: [flagTimorLeste],
+    coatOfArms: coatOfArmsTimorLeste,
+    associationIcon: iconTimorLeste,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 2002,
+      fifaAffiliation: 2005,
+      confederationAffiliation: 2002,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Indonesia': {
+    id: v1(),
+    name: ['Indonesia'],
+    flag: [flagIndonesia],
+    coatOfArms: coatOfArmsIndonesia,
+    associationIcon: iconIndonesia,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1930,
+      fifaAffiliation: 1952,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Laos': {
+    id: v1(),
+    name: ['Laos'],
+    flag: [flagLaos],
+    coatOfArms: coatOfArmsLaos,
+    associationIcon: iconLaos,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1951,
+      fifaAffiliation: 1952,
+      confederationAffiliation: 1968,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Malaysia': {
+    id: v1(),
+    name: ['Malaysia'],
+    flag: [flagMalaysia],
+    coatOfArms: coatOfArmsMalaysia,
+    associationIcon: iconMalaysia,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1933,
+      fifaAffiliation: 1954,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Myanmar': {
+    id: v1(),
+    name: ['Myanmar'],
+    flag: [flagMyanmar],
+    coatOfArms: coatOfArmsMyanmar,
+    associationIcon: iconMyanmar,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1947,
+      fifaAffiliation: 1948,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Philippines': {
+    id: v1(),
+    name: ['Philippines'],
+    flag: [flagPhilippines],
+    coatOfArms: coatOfArmsPhilippines,
+    associationIcon: iconPhilippines,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1907,
+      fifaAffiliation: 1930,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Singapore': {
+    id: v1(),
+    name: ['Singapore'],
+    flag: [flagSingapore],
+    coatOfArms: coatOfArmsSingapore,
+    associationIcon: iconSingapore,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1892,
+      fifaAffiliation: 1952,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Thailand': {
+    id: v1(),
+    name: ['Thailand'],
+    flag: [flagThailand],
+    coatOfArms: coatOfArmsThailand,
+    associationIcon: iconThailand,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1916,
+      fifaAffiliation: 1925,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Vietnam': {
+    id: v1(),
+    name: ['Vietnam'],
+    flag: [flagVietnam],
+    coatOfArms: coatOfArmsVietnam,
+    associationIcon: iconVietnam,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1952,
+      fifaAffiliation: 1952,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Afghanistan': {
+    id: v1(),
+    name: ['Afghanistan'],
+    flag: [flagAfghanistan],
+    coatOfArms: coatOfArmsAfghanistan,
+    associationIcon: iconAfghanistan,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1933,
+      fifaAffiliation: 1948,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Iran': {
+    id: v1(),
+    name: ['Iran'],
+    flag: [flagIran],
+    coatOfArms: coatOfArmsIran,
+    associationIcon: iconIran,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1920,
+      fifaAffiliation: 1948,
+      confederationAffiliation: 1958,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Kyrgyz Republic': {
+    id: v1(),
+    name: ['Kyrgyz Republic'],
+    flag: [flagKyrgyzRepublic],
+    coatOfArms: coatOfArmsKyrgyzRepublic,
+    associationIcon: iconKyrgyzRepublic,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1992,
+      fifaAffiliation: 1994,
+      confederationAffiliation: 1993,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Tajikistan': {
+    id: v1(),
+    name: ['Tajikistan'],
+    flag: [flagTajikistan],
+    coatOfArms: coatOfArmsTajikistan,
+    associationIcon: iconTajikistan,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1936,
+      fifaAffiliation: 1994,
+      confederationAffiliation: 1993,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Turkmenistan': {
+    id: v1(),
+    name: ['Turkmenistan'],
+    flag: [flagTurkmenistan],
+    coatOfArms: coatOfArmsTurkmenistan,
+    associationIcon: iconTurkmenistan,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1992,
+      fifaAffiliation: 1994,
+      confederationAffiliation: 1993,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Uzbekistan': {
+    id: v1(),
+    name: ['Uzbekistan'],
+    flag: [flagUzbekistan],
+    coatOfArms: coatOfArmsUzbekistan,
+    associationIcon: iconUzbekistan,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1946,
+      fifaAffiliation: 1994,
+      confederationAffiliation: 1993,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'China': {
+    id: v1(),
+    name: ['China'],
+    flag: [flagChina],
+    coatOfArms: coatOfArmsChina,
+    associationIcon: iconChina,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1924,
+      fifaAffiliation: 1931,
+      confederationAffiliation: 1974,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Taiwan': {
+    id: v1(),
+    name: ['Taiwan'],
+    flag: [flagTaiwan],
+    coatOfArms: coatOfArmsTaiwan,
+    associationIcon: iconTaiwan,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1936,
+      fifaAffiliation: 1954,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'DPR Korea': {
+    id: v1(),
+    name: ['DPR Korea'],
+    flag: [flagDPRKorea],
+    coatOfArms: coatOfArmsDPRKorea,
+    associationIcon: iconDPRKorea,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1945,
+      fifaAffiliation: 1958,
+      confederationAffiliation: 1974,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Guam': {
+    id: v1(),
+    name: ['Guam'],
+    flag: [flagGuam],
+    coatOfArms: coatOfArmsGuam,
+    associationIcon: iconGuam,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1975,
+      fifaAffiliation: 1996,
+      confederationAffiliation: 1991,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Hong Kong': {
+    id: v1(),
+    name: ['Hong Kong'],
+    flag: [flagHongKong],
+    coatOfArms: coatOfArmsHongKong,
+    associationIcon: iconHongKong,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1914,
+      fifaAffiliation: 1954,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Japan': {
+    id: v1(),
+    name: ['Japan'],
+    flag: [flagJapan],
+    coatOfArms: coatOfArmsJapan,
+    associationIcon: iconJapan,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1921,
+      fifaAffiliation: 1921,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Korea Republic': {
+    id: v1(),
+    name: ['Korea Republic'],
+    flag: [flagKoreaRepublic],
+    coatOfArms: coatOfArmsKoreaRepublic,
+    associationIcon: iconKoreaRepublic,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1928,
+      fifaAffiliation: 1948,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Macau': {
+    id: v1(),
+    name: ['Macau'],
+    flag: [flagMacau],
+    coatOfArms: coatOfArmsMacau,
+    associationIcon: iconMacau,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1939,
+      fifaAffiliation: 1978,
+      confederationAffiliation: 1978,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Mongolia': {
+    id: v1(),
+    name: ['Mongolia'],
+    flag: [flagMongolia],
+    coatOfArms: coatOfArmsMongolia,
+    associationIcon: iconMongolia,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1959,
+      fifaAffiliation: 1998,
+      confederationAffiliation: 1993,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Northern Mariana Islands': {
+    id: v1(),
+    name: ['Northern Mariana Islands'],
+    flag: [flagNorthernMarianaIslands],
+    coatOfArms: coatOfArmsNorthernMarianaIslands,
+    associationIcon: iconNorthernMarianaIslands,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 2005,
+      fifaAffiliation: '-',
+      confederationAffiliation: 2020,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Bangladesh': {
+    id: v1(),
+    name: ['Bangladesh'],
+    flag: [flagBangladesh],
+    coatOfArms: coatOfArmsBangladesh,
+    associationIcon: iconBangladesh,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1972,
+      fifaAffiliation: 1976,
+      confederationAffiliation: 1974,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Bhutan': {
+    id: v1(),
+    name: ['Bhutan'],
+    flag: [flagBhutan],
+    coatOfArms: coatOfArmsBhutan,
+    associationIcon: iconBhutan,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1983,
+      fifaAffiliation: 2000,
+      confederationAffiliation: 1993,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'India': {
+    id: v1(),
+    name: ['India'],
+    flag: [flagIndia],
+    coatOfArms: coatOfArmsIndia,
+    associationIcon: iconIndia,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1937,
+      fifaAffiliation: 1948,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Maldives': {
+    id: v1(),
+    name: ['Maldives'],
+    flag: [flagMaldives],
+    coatOfArms: coatOfArmsMaldives,
+    associationIcon: iconMaldives,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1982,
+      fifaAffiliation: 1986,
+      confederationAffiliation: 1984,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Nepal': {
+    id: v1(),
+    name: ['Nepal'],
+    flag: [flagNepal],
+    coatOfArms: coatOfArmsNepal,
+    associationIcon: iconNepal,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1951,
+      fifaAffiliation: 1972,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Pakistan': {
+    id: v1(),
+    name: ['Pakistan'],
+    flag: [flagPakistan],
+    coatOfArms: coatOfArmsPakistan,
+    associationIcon: iconPakistan,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1947,
+      fifaAffiliation: 1948,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Sri Lanka': {
+    id: v1(),
+    name: ['Sri Lanka'],
+    flag: [flagSriLanka],
+    coatOfArms: coatOfArmsSriLanka,
+    associationIcon: iconSriLanka,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1939,
+      fifaAffiliation: 1952,
+      confederationAffiliation: 1954,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Bahrain': {
+    id: v1(),
+    name: ['Bahrain'],
+    flag: [flagBahrain],
+    coatOfArms: coatOfArmsBahrain,
+    associationIcon: iconBahrain,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1957,
+      fifaAffiliation: 1968,
+      confederationAffiliation: 1969,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Iraq': {
+    id: v1(),
+    name: ['Iraq'],
+    flag: [flagIraq],
+    coatOfArms: coatOfArmsIraq,
+    associationIcon: iconIraq,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1948,
+      fifaAffiliation: 1950,
+      confederationAffiliation: 1970,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Jordan': {
+    id: v1(),
+    name: ['Jordan'],
+    flag: [flagJordan],
+    coatOfArms: coatOfArmsJordan,
+    associationIcon: iconJordan,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1949,
+      fifaAffiliation: 1956,
+      confederationAffiliation: 1970,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Kuwait': {
+    id: v1(),
+    name: ['Kuwait'],
+    flag: [flagKuwait],
+    coatOfArms: coatOfArmsKuwait,
+    associationIcon: iconKuwait,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1952,
+      fifaAffiliation: 1964,
+      confederationAffiliation: 1964,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Lebanon': {
+    id: v1(),
+    name: ['Lebanon'],
+    flag: [flagLebanon],
+    coatOfArms: coatOfArmsLebanon,
+    associationIcon: iconLebanon,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1933,
+      fifaAffiliation: 1936,
+      confederationAffiliation: 1964,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Oman': {
+    id: v1(),
+    name: ['Oman'],
+    flag: [flagOman],
+    coatOfArms: coatOfArmsOman,
+    associationIcon: iconOman,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1978,
+      fifaAffiliation: 1980,
+      confederationAffiliation: 1980,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Palestine': {
+    id: v1(),
+    name: ['Palestine'],
+    flag: [flagPalestine],
+    coatOfArms: coatOfArmsPalestine,
+    associationIcon: iconPalestine,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1998,
+      fifaAffiliation: 1998,
+      confederationAffiliation: 1998,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Qatar': {
+    id: v1(),
+    name: ['Qatar'],
+    flag: [flagQatar],
+    coatOfArms: coatOfArmsQatar,
+    associationIcon: iconQatar,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1960,
+      fifaAffiliation: 1972,
+      confederationAffiliation: 1974,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Saudi Arabia': {
+    id: v1(),
+    name: ['Saudi Arabia'],
+    flag: [flagSaudiArabia],
+    coatOfArms: coatOfArmsSaudiArabia,
+    associationIcon: iconSaudiArabia,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1956,
+      fifaAffiliation: 1956,
+      confederationAffiliation: 1972,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Syria': {
+    id: v1(),
+    name: ['Syria'],
+    flag: [flagSyria],
+    coatOfArms: coatOfArmsSyria,
+    associationIcon: iconSyria,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1936,
+      fifaAffiliation: 1937,
+      confederationAffiliation: 1970,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'United Arab Emirates': {
+    id: v1(),
+    name: ['United Arab Emirates'],
+    flag: [flagUnitedArabEmirates],
+    coatOfArms: coatOfArmsUnitedArabEmirates,
+    associationIcon: iconUnitedArabEmirates,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1971,
+      fifaAffiliation: 1974,
+      confederationAffiliation: 1974,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Yemen': {
+    id: v1(),
+    name: ['Yemen'],
+    flag: [flagYemen],
+    coatOfArms: coatOfArmsYemen,
+    associationIcon: iconYemen,
+    confederation: 'AFC',
+    confederationIcon: iconAfc,
+    associationDate: {
+      founded: 1962,
+      fifaAffiliation: 1980,
+      confederationAffiliation: 1980,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Canada': {
+    id: v1(),
+    name: ['Canada'],
+    flag: [flagCanada],
+    coatOfArms: coatOfArmsCanada,
+    associationIcon: iconCanada,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1912,
+      fifaAffiliation: 1913,
+      confederationAffiliation: 1961,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Mexico': {
+    id: v1(),
+    name: ['Mexico'],
+    flag: [flagMexico],
+    coatOfArms: coatOfArmsMexico,
+    associationIcon: iconMexico,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1922,
+      fifaAffiliation: 1929,
+      confederationAffiliation: 1961,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'United States': {
+    id: v1(),
+    name: ['United States'],
+    flag: [flagUnitedStates],
+    coatOfArms: coatOfArmsUnitedStates,
+    associationIcon: iconUnitedStates,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1913,
+      fifaAffiliation: 1914,
+      confederationAffiliation: 1961,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Belize': {
+    id: v1(),
+    name: ['Belize'],
+    flag: [flagBelize],
+    coatOfArms: coatOfArmsBelize,
+    associationIcon: iconBelize,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1980,
+      fifaAffiliation: 1986,
+      confederationAffiliation: 1986,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Costa Rica': {
+    id: v1(),
+    name: ['Costa Rica'],
+    flag: [flagCostaRica],
+    coatOfArms: coatOfArmsCostaRica,
+    associationIcon: iconCostaRica,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1921,
+      fifaAffiliation: 1927,
+      confederationAffiliation: 1961,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'El Salvador': {
+    id: v1(),
+    name: ['El Salvador'],
+    flag: [flagElSalvador],
+    coatOfArms: coatOfArmsElSalvador,
+    associationIcon: iconElSalvador,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1935,
+      fifaAffiliation: 1938,
+      confederationAffiliation: 1961,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Guatemala': {
+    id: v1(),
+    name: ['Guatemala'],
+    flag: [flagGuatemala],
+    coatOfArms: coatOfArmsGuatemala,
+    associationIcon: iconGuatemala,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1919,
+      fifaAffiliation: 1946,
+      confederationAffiliation: 1961,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Honduras': {
+    id: v1(),
+    name: ['Honduras'],
+    flag: [flagHonduras],
+    coatOfArms: coatOfArmsHonduras,
+    associationIcon: iconHonduras,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1935,
+      fifaAffiliation: 1946,
+      confederationAffiliation: 1961,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Nicaragua': {
+    id: v1(),
+    name: ['Nicaragua'],
+    flag: [flagNicaragua],
+    coatOfArms: coatOfArmsNicaragua,
+    associationIcon: iconNicaragua,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1931,
+      fifaAffiliation: 1950,
+      confederationAffiliation: 1961,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Panama': {
+    id: v1(),
+    name: ['Panama'],
+    flag: [flagPanama],
+    coatOfArms: coatOfArmsPanama,
+    associationIcon: iconPanama,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1937,
+      fifaAffiliation: 1938,
+      confederationAffiliation: 1961,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Anguilla': {
+    id: v1(),
+    name: ['Anguilla'],
+    flag: [flagAnguilla],
+    coatOfArms: coatOfArmsAnguilla,
+    associationIcon: iconAnguilla,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1990,
+      fifaAffiliation: 1996,
+      confederationAffiliation: 1996,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Antigua and Barbuda': {
+    id: v1(),
+    name: ['Antigua and Barbuda'],
+    flag: [flagAntiguaAndBarbuda],
+    coatOfArms: coatOfArmsAntiguaAndBarbuda,
+    associationIcon: iconAntiguaAndBarbuda,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1928,
+      fifaAffiliation: 1972,
+      confederationAffiliation: 1961,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Aruba': {
+    id: v1(),
+    name: ['Aruba'],
+    flag: [flagAruba],
+    coatOfArms: coatOfArmsAruba,
+    associationIcon: iconAruba,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1932,
+      fifaAffiliation: 1988,
+      confederationAffiliation: 1986,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Bahamas': {
+    id: v1(),
+    name: ['Bahamas'],
+    flag: [flagBahamas],
+    coatOfArms: coatOfArmsBahamas,
+    associationIcon: iconBahamas,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1967,
+      fifaAffiliation: 1968,
+      confederationAffiliation: 1961,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Barbados': {
+    id: v1(),
+    name: ['Barbados'],
+    flag: [flagBarbados],
+    coatOfArms: coatOfArmsBarbados,
+    associationIcon: iconBarbados,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1910,
+      fifaAffiliation: 1968,
+      confederationAffiliation: 1967,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Bermuda': {
+    id: v1(),
+    name: ['Bermuda'],
+    flag: [flagBermuda],
+    coatOfArms: coatOfArmsBermuda,
+    associationIcon: iconBermuda,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1928,
+      fifaAffiliation: 1962,
+      confederationAffiliation: 1967,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Bonaire': {
+    id: v1(),
+    name: ['Bonaire'],
+    flag: [flagBonaire],
+    coatOfArms: coatOfArmsBonaire,
+    associationIcon: iconBonaire,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1960,
+      fifaAffiliation: '-',
+      confederationAffiliation: 2014,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'British Virgin Islands': {
+    id: v1(),
+    name: ['British Virgin Islands'],
+    flag: [flagBritishVirginIslands],
+    coatOfArms: coatOfArmsBritishVirginIslands,
+    associationIcon: iconBritishVirginIslands,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1974,
+      fifaAffiliation: 1996,
+      confederationAffiliation: 1996,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Cayman Islands': {
+    id: v1(),
+    name: ['Cayman Islands'],
+    flag: [flagCaymanIslands],
+    coatOfArms: coatOfArmsCaymanIslands,
+    associationIcon: iconCaymanIslands,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1966,
+      fifaAffiliation: 1992,
+      confederationAffiliation: 1990,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Cuba': {
+    id: v1(),
+    name: ['Cuba'],
+    flag: [flagCuba],
+    coatOfArms: coatOfArmsCuba,
+    associationIcon: iconCuba,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1924,
+      fifaAffiliation: 1929,
+      confederationAffiliation: 1961,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Curaçao': {
+    id: v1(),
+    name: ['Curaçao'],
+    flag: [flagCuracao],
+    coatOfArms: coatOfArmsCuracao,
+    associationIcon: iconCuracao,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1990,
+      fifaAffiliation: 1996,
+      confederationAffiliation: 1996,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Dominica': {
+    id: v1(),
+    name: ['Dominica'],
+    flag: [flagDominica],
+    coatOfArms: coatOfArmsDominica,
+    associationIcon: iconDominica,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1970,
+      fifaAffiliation: 1994,
+      confederationAffiliation: 1994,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Dominican Republic': {
+    id: v1(),
+    name: ['Dominican Republic'],
+    flag: [flagDominicanRepublic],
+    coatOfArms: coatOfArmsDominicanRepublic,
+    associationIcon: iconDominicanRepublic,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1953,
+      fifaAffiliation: 1958,
+      confederationAffiliation: 1964,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'French Guiana': {
+    id: v1(),
+    name: ['French Guiana'],
+    flag: [flagFrenchGuiana],
+    coatOfArms: coatOfArmsFrenchGuiana,
+    associationIcon: iconFrenchGuiana,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1962,
+      fifaAffiliation: '-',
+      confederationAffiliation: 2013,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Grenada': {
+    id: v1(),
+    name: ['Grenada'],
+    flag: [flagGrenada],
+    coatOfArms: coatOfArmsGrenada,
+    associationIcon: iconGrenada,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1924,
+      fifaAffiliation: 1978,
+      confederationAffiliation: 1978,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Guadeloupe': {
+    id: v1(),
+    name: ['Guadeloupe'],
+    flag: [flagGuadeloupe],
+    coatOfArms: coatOfArmsGuadeloupe,
+    associationIcon: iconGuadeloupe,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1958,
+      fifaAffiliation: '-',
+      confederationAffiliation: 2013,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Guyana': {
+    id: v1(),
+    name: ['Guyana'],
+    flag: [flagGuyana],
+    coatOfArms: coatOfArmsGuyana,
+    associationIcon: iconGuyana,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1902,
+      fifaAffiliation: 1970,
+      confederationAffiliation: 1969,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Haiti': {
+    id: v1(),
+    name: ['Haiti'],
+    flag: [flagHaiti],
+    coatOfArms: coatOfArmsHaiti,
+    associationIcon: iconHaiti,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1904,
+      fifaAffiliation: 1934,
+      confederationAffiliation: 1961,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Jamaica': {
+    id: v1(),
+    name: ['Jamaica'],
+    flag: [flagJamaica],
+    coatOfArms: coatOfArmsJamaica,
+    associationIcon: iconJamaica,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1910,
+      fifaAffiliation: 1962,
+      confederationAffiliation: 1963,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Martinique': {
+    id: v1(),
+    name: ['Martinique'],
+    flag: [flagMartinique],
+    coatOfArms: coatOfArmsMartinique,
+    associationIcon: iconMartinique,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1953,
+      fifaAffiliation: '-',
+      confederationAffiliation: 2013,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Montserrat': {
+    id: v1(),
+    name: ['Montserrat'],
+    flag: [flagMontserrat],
+    coatOfArms: coatOfArmsMontserrat,
+    associationIcon: iconMontserrat,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1994,
+      fifaAffiliation: 1996,
+      confederationAffiliation: 1996,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Puerto Rico': {
+    id: v1(),
+    name: ['Puerto Rico'],
+    flag: [flagPuertoRico],
+    coatOfArms: coatOfArmsPuertoRico,
+    associationIcon: iconPuertoRico,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1940,
+      fifaAffiliation: 1960,
+      confederationAffiliation: 1964,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Saint Kitts and Nevis': {
+    id: v1(),
+    name: ['Saint Kitts and Nevis'],
+    flag: [flagSaintKittsAndNevis],
+    coatOfArms: coatOfArmsSaintKittsAndNevis,
+    associationIcon: iconSaintKittsAndNevis,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1932,
+      fifaAffiliation: 1992,
+      confederationAffiliation: 1992,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Saint Lucia': {
+    id: v1(),
+    name: ['Saint Lucia'],
+    flag: [flagSaintLucia],
+    coatOfArms: coatOfArmsSaintLucia,
+    associationIcon: iconSaintLucia,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1979,
+      fifaAffiliation: 1988,
+      confederationAffiliation: 1986,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Saint Martin': {
+    id: v1(),
+    name: ['Saint Martin'],
+    flag: [flagSaintMartin],
+    coatOfArms: coatOfArmsSaintMartin,
+    associationIcon: iconSaintMartin,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1999,
+      fifaAffiliation: '-',
+      confederationAffiliation: 2013,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Saint Vincent and the Grenadines': {
+    id: v1(),
+    name: ['Saint Vincent and the Grenadines'],
+    flag: [flagSaintVincentAndTheGrenadines],
+    coatOfArms: coatOfArmsSaintVincentAndTheGrenadines,
+    associationIcon: iconSaintVincentAndTheGrenadines,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1979,
+      fifaAffiliation: 1988,
+      confederationAffiliation: 1986,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Sint Maarten': {
+    id: v1(),
+    name: ['Sint Maarten'],
+    flag: [flagSintMaarten],
+    coatOfArms: coatOfArmsSintMaarten,
+    associationIcon: iconSintMaarten,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1986,
+      fifaAffiliation: '-',
+      confederationAffiliation: 2013,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Suriname': {
+    id: v1(),
+    name: ['Suriname'],
+    flag: [flagSuriname],
+    coatOfArms: coatOfArmsSuriname,
+    associationIcon: iconSuriname,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1920,
+      fifaAffiliation: 1929,
+      confederationAffiliation: 1961,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Trinidad and Tobago': {
+    id: v1(),
+    name: ['Trinidad and Tobago'],
+    flag: [flagTrinidadAndTobago],
+    coatOfArms: coatOfArmsTrinidadAndTobago,
+    associationIcon: iconTrinidadAndTobago,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1908,
+      fifaAffiliation: 1964,
+      confederationAffiliation: 1964,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Turks and Caicos Islands': {
+    id: v1(),
+    name: ['Turks and Caicos Islands'],
+    flag: [flagTurksAndCaicosIslands],
+    coatOfArms: coatOfArmsTurksAndCaicosIslands,
+    associationIcon: iconTurksAndCaicosIslands,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1996,
+      fifaAffiliation: 1998,
+      confederationAffiliation: 1996,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'U.S. Virgin Islands': {
+    id: v1(),
+    name: ['U.S. Virgin Islands'],
+    flag: [flagUSVirginIslands],
+    coatOfArms: coatOfArmsUSVirginIslands,
+    associationIcon: iconUSVirginIslands,
+    confederation: 'CONCACAF',
+    confederationIcon: iconConcacaf,
+    associationDate: {
+      founded: 1987,
+      fifaAffiliation: 1998,
+      confederationAffiliation: 1987,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
 }
-
 
 
 export const aboutProject: AboutProject = {
