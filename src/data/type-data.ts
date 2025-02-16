@@ -121,5 +121,9 @@ export type NationalTeams = {
   [name: string]: NationalTeam
 }
 
-export type ConfederationType = 'AFC' | 'CAF' | 'CONCACAF' | 'CONMEBOL' | 'OFC' | 'UEFA' | 'all'
+export type TeamsConfederation = {
+  [name in ConfederationType]: string[]
+}
+
+export type ConfederationType = 'afc' | 'caf' | 'concacaf' | 'conmebol' | 'ofc' | 'uefa'
 

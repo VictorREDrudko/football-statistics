@@ -11,7 +11,7 @@ export const Confederation = ({icon, name} : ConfederationType) => {
       <span className={s.title}>Confederation:</span>
       <div className={s.container}>
         <img className={s.image} src={icon} alt={`association-icon-${name}`} />
-        <span className={s.name}>{name}</span>
+        {/* <span className={s.name}>{name}</span> */}
       </div>
     </div>
   )

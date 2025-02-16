@@ -1,26 +1,85 @@
-import { nameTeams, nationalTeams } from 'data/data'
+import { confederation, nameTeams, nationalTeams } from 'data/data'
 import s from './NationalTeams.module.css'
 import { NationalTeamsCard } from './nationTeamCard/NationTeamCard'
 import { ListNationalTeams } from './listNationalTeams/ListNationalTeams'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Select } from './select/Select'
+import { ConfederationType, NationalTeam } from 'data/type-data'
+import { useNavigate, useParams } from 'react-router-dom'
+import { urlWithHyphen, urlWithoutHyphen } from 'common/utils/urlWithHyphen'
 
 export const NationalTeams = () => {
-  const [isInfoCard, setIsInfoCard] = useState(false)
   const [team, setTeam] = useState<string>('')
+  const [confeder, setConfeder] = useState<ConfederationType>('uefa');
+  const [sorting, setSorting] = useState<string>('alphabet')
 
-  const mapped = nameTeams.concacaf.map(el => {
-    return <ListNationalTeams data={nationalTeams[el]}
-                              key={nationalTeams[el].id} 
-                              openInfoCard={(bool: boolean) => setIsInfoCard(bool)}
-                              setTeam={(team: string) => setTeam(team)}/>
+  const navigate = useNavigate();
+
+  const { confederationRoute, teamRoute } = useParams<{ confederationRoute: string, teamRoute: string }>();
+
+  useEffect(() => {
+    if (confederationRoute && confederation.includes(confederationRoute as ConfederationType)) {
+      setConfeder(confederationRoute as ConfederationType);
+    } else {
+      setConfeder('uefa');
+    }
+    if (teamRoute) {
+      setTeam(urlWithoutHyphen(teamRoute));
+    } 
+  }, [confederationRoute, teamRoute]);
+
+    const navigateToTeam = (team: string) => {
+      navigate(`/teams/${confederationRoute}/${urlWithHyphen(team)}`)
+  };
+
+  const closeInfoCard = () => {
+    setTeam('');
+    navigate(`/teams/${confederationRoute}`);
+  };
+
+
+  // Сортировка
+  // Нужно создать массив объектов (команд) 
+  const arrayTeams: NationalTeam[] = nameTeams[confeder].map(el => {
+    return nationalTeams[el]
   })
 
-  const rendering = isInfoCard ? 
-    <NationalTeamsCard data={nationalTeams[team]} closeInfoCard={(bool: boolean) => setIsInfoCard(bool)}/>
+  const sortTeams = (teams: NationalTeam[]) => {
+    if (sorting === 'alphabet') {
+      return teams.sort((a, b) => a.name[0].localeCompare(b.name[0]));
+    } else if (sorting === 'rating') {
+      // Добавьте логику сортировки по рейтингу, если есть рейтинг у команд
+      return teams.sort((a, b) => b.rating - a.rating);
+    }
+    return teams;
+  };
+
+  const sortedTeams = sortTeams([...arrayTeams]);
+
+  const mapped = sortedTeams.map(el => {
+    return <ListNationalTeams data={el}
+                              key={el.id} 
+                              setTeam={(team: string) => setTeam(team)}
+                              navigateToTeam={navigateToTeam}/>
+  })
+
+  const sort = (sort: string) => {
+    setSorting(sort)
+  }
+
+  // const sortAlphabet = nameTeams[confeder].sort((a: string, b: string) => {
+  //   return a.localeCompare(b)
+  // })
+
+  const rendering = team ? 
+    <NationalTeamsCard data={nationalTeams[team]} closeInfoCard={closeInfoCard}/>
     : 
     <>
-      <Select/>
+      <div className={s.containerNumber}>
+        <span className={s.number}>{arrayTeams.length}</span>
+        <span className={s.title}>Teams</span>
+      </div>
+      <Select setConfeder={setConfeder} sort={sort} sorting={sorting} />
       <ul className={s.wrapper}> {mapped} </ul>
     </>
 

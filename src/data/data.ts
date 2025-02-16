@@ -1,4 +1,4 @@
-import { AboutProject, ConfederationType, DataFifaWorldCup, Menu, NationalTeams, StartPage } from './type-data'
+import { AboutProject, ConfederationType, DataFifaWorldCup, Menu, NationalTeams, StartPage, TeamsConfederation } from './type-data'
 import backgroundFootballLive from './../assets/football-live.png'
 import logoProject from './../assets/logo.png'
 import backgroundStartPage from './../assets/background-football.png'
@@ -606,23 +606,99 @@ import iconUSVirginIslands from './../assets/icon/national/U.S.-Virgin-Islands.p
 import flagUSVirginIslands from './../assets/icon/flag/U.S.-Virgin-Islands.png'
 import coatOfArmsUSVirginIslands from './../assets/icon/coat-of-arms/U.S.-Virgin-Islands.png'
 
+import iconAmericanSamoa from './../assets/icon/national/American-Samoa.png'
+import flagAmericanSamoa from './../assets/icon/flag/American-Samoa.png'
+import coatOfArmsAmericanSamoa from './../assets/icon/coat-of-arms/American-Samoa.png'
+import iconCookIslands from './../assets/icon/national/Cook-Islands.png'
+import flagCookIslands from './../assets/icon/flag/Cook-Islands.png'
+import coatOfArmsCookIslands from './../assets/icon/coat-of-arms/Cook-Islands.png'
+import iconFiji from './../assets/icon/national/Fiji.png'
+import flagFiji from './../assets/icon/flag/Fiji.png'
+import coatOfArmsFiji from './../assets/icon/coat-of-arms/Fiji.png'
+import iconKiribati from './../assets/icon/national/Kiribati.png'
+import flagKiribati from './../assets/icon/flag/Kiribati.png'
+import coatOfArmsKiribati from './../assets/icon/coat-of-arms/Kiribati.png'
+import iconNewCaledonia from './../assets/icon/national/New-Caledonia.png'
+import flagNewCaledonia from './../assets/icon/flag/New-Caledonia.png'
+import coatOfArmsNewCaledonia from './../assets/icon/coat-of-arms/New-Caledonia.png'
+import iconNewZealand from './../assets/icon/national/New-Zealand.png'
+import flagNewZealand from './../assets/icon/flag/New-Zealand.png'
+import coatOfArmsNewZealand from './../assets/icon/coat-of-arms/New-Zealand.png'
+import iconPapuaNewGuinea from './../assets/icon/national/Papua-New-Guinea.png'
+import flagPapuaNewGuinea from './../assets/icon/flag/Papua-New-Guinea.png'
+import coatOfArmsPapuaNewGuinea from './../assets/icon/coat-of-arms/Papua-New-Guinea.png'
+import iconSamoa from './../assets/icon/national/Samoa.png'
+import flagSamoa from './../assets/icon/flag/Samoa.png'
+import coatOfArmsSamoa from './../assets/icon/coat-of-arms/Samoa.png'
+import iconSolomonIslands from './../assets/icon/national/Solomon-Islands.png'
+import flagSolomonIslands from './../assets/icon/flag/Solomon-Islands.png'
+import coatOfArmsSolomonIslands from './../assets/icon/coat-of-arms/Solomon-Islands.png'
+import iconTahiti from './../assets/icon/national/Tahiti.png'
+import flagTahiti from './../assets/icon/flag/Tahiti.png'
+import coatOfArmsTahiti from './../assets/icon/coat-of-arms/Tahiti.png'
+import iconTonga from './../assets/icon/national/Tonga.png'
+import flagTonga from './../assets/icon/flag/Tonga.png'
+import coatOfArmsTonga from './../assets/icon/coat-of-arms/Tonga.png'
+import iconTuvalu from './../assets/icon/national/Tuvalu.png'
+import flagTuvalu from './../assets/icon/flag/Tuvalu.png'
+import coatOfArmsTuvalu from './../assets/icon/coat-of-arms/Tuvalu.png'
+import iconVanuatu from './../assets/icon/national/Vanuatu.png'
+import flagVanuatu from './../assets/icon/flag/Vanuatu.png'
+import coatOfArmsVanuatu from './../assets/icon/coat-of-arms/Vanuatu.png'
+import iconArgentina from './../assets/icon/national/Argentina.png'
+import flagArgentina from './../assets/icon/flag/Argentina.png'
+import coatOfArmsArgentina from './../assets/icon/coat-of-arms/Argentina.png'
+import iconBolivia from './../assets/icon/national/Bolivia.png'
+import flagBolivia from './../assets/icon/flag/Bolivia.png'
+import coatOfArmsBolivia from './../assets/icon/coat-of-arms/Bolivia.png'
+import iconBrazil from './../assets/icon/national/Brazil.png'
+import flagBrazil from './../assets/icon/flag/Brazil.png'
+import coatOfArmsBrazil from './../assets/icon/coat-of-arms/Brazil.png'
+import iconChile from './../assets/icon/national/Chile.png'
+import flagChile from './../assets/icon/flag/Chile.png'
+import coatOfArmsChile from './../assets/icon/coat-of-arms/Chile.png'
+import iconColombia from './../assets/icon/national/Colombia.png'
+import flagColombia from './../assets/icon/flag/Colombia.png'
+import coatOfArmsColombia from './../assets/icon/coat-of-arms/Colombia.png'
+import iconEcuador from './../assets/icon/national/Ecuador.png'
+import flagEcuador from './../assets/icon/flag/Ecuador.png'
+import coatOfArmsEcuador from './../assets/icon/coat-of-arms/Ecuador.png'
+import iconParaguay from './../assets/icon/national/Paraguay.png'
+import flagParaguay from './../assets/icon/flag/Paraguay.png'
+import coatOfArmsParaguay from './../assets/icon/coat-of-arms/Paraguay.png'
+import iconPeru from './../assets/icon/national/Peru.png'
+import flagPeru from './../assets/icon/flag/Peru.png'
+import coatOfArmsPeru from './../assets/icon/coat-of-arms/Peru.png'
+import iconUruguay from './../assets/icon/national/Uruguay.png'
+import flagUruguay from './../assets/icon/flag/Uruguay.png'
+import coatOfArmsUruguay from './../assets/icon/coat-of-arms/Uruguay.png'
+import iconVenezuela from './../assets/icon/national/Venezuela.png'
+import flagVenezuela from './../assets/icon/flag/Venezuela.png'
+import coatOfArmsVenezuela from './../assets/icon/coat-of-arms/Venezuela.png'
+
 
 import iconUefa from './../assets/icon/confederation/icon-uefa.png'
 import iconCaf from './../assets/icon/confederation/icon-caf.png'
 import iconAfc from './../assets/icon/confederation/icon-afc.png'
 import iconConcacaf from './../assets/icon/confederation/icon-concacaf.png'
+import iconOfc from './../assets/icon/confederation/icon-ofc.png'
+import iconConmebol from './../assets/icon/confederation/icon-conmebol.png'
 import iconCup from './../assets/icon/icon-cup.png'
 
 import iconMedal from './../assets/icon/icon-medal.png'
 import { v1 } from 'uuid'
 
 // DATA
-export const nameTeams = {
-  'uefa': ['Germany', 'England', 'Italy', 'Spain', 'France', 'Albania', 'Andorra', 'Armenia', 'Austria', 'Azerbaijan', 'Belarus', 'Belgium', 'Bosnia and Herzegovina', 'Bulgaria', 'Croatia', 'Cyprus', 'Czech Republic', 'Denmark', 'Estonia', 'Faroe Islands', 'Finland', 'Georgia', 'Gibraltar', 'Greece', 'Hungary', 'Iceland', 'Israel', 'Kazakhstan', 'Kosovo', 'Latvia', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Malta', 'Moldova', 'Montenegro', 'Netherlands', 'North Macedonia', 'Northern Ireland', 'Norway', 'Poland', 'Portugal', 'Republic of Ireland', 'Romania', 'Russia', 'San Marino', 'Scotland', 'Serbia', 'Slovakia', 'Slovenia', 'Sweden', 'Switzerland', 'Turkey', 'Ukraine', 'Wales' ],
-  'caf': ['Algeria', 'Egypt', 'Libya', 'Morocco', 'Tunisia', 'Benin', 'Burkina Faso', 'Cape Verde', 'Gambia', 'Ghana', 'Guinea', 'Guinea-Bissau', 'Ivory Coast', 'Liberia', 'Mali', 'Mauritania', 'Niger', 'Nigeria', 'Senegal', 'Sierra Leone', 'Togo', 'Cameroon', 'Central African Republic', 'Chad', 'Congo', 'DR Congo', 'Equatorial Guinea', 'Gabon', 'São Tomé and Príncipe', 'Burundi', 'Djibouti', 'Eritrea', 'Ethiopia', 'Kenya', 'Rwanda', 'Somalia', 'South Sudan', 'Sudan', 'Tanzania', 'Uganda', 'Zanzibar', 'Angola', 'Botswana', 'Comoros', 'Eswatini', 'Lesotho', 'Madagascar', 'Malawi', 'Mauritius', 'Mozambique', 'Namibia', 'Seychelles', 'South Africa', 'Zambia', 'Zimbabwe', 'Reunion'],
-  'afc': ['Australia', 'Brunei', 'Cambodia', 'Timor-Leste', 'Indonesia', 'Laos', 'Malaysia', 'Myanmar', 'Philippines', 'Singapore', 'Thailand', 'Vietnam', 'Afghanistan', 'Iran', 'Kyrgyz Republic', 'Tajikistan', 'Turkmenistan', 'Uzbekistan', 'China', 'Taiwan', 'DPR Korea', 'Guam', 'Hong Kong', 'Japan', 'Korea Republic', 'Macau', 'Mongolia', 'Northern Mariana Islands', 'Bangladesh', 'Bhutan', 'India', 'Maldives', 'Nepal', 'Pakistan', 'Sri Lanka', 'Bahrain', 'Iraq', 'Jordan', 'Kuwait', 'Lebanon', 'Oman', 'Palestine', 'Qatar', 'Saudi Arabia', 'Syria', 'United Arab Emirates', 'Yemen'],
-  'concacaf': ['Canada', 'Mexico', 'United States', 'Belize', 'Costa Rica', 'El Salvador', 'Guatemala', 'Honduras', 'Nicaragua', 'Panama', 'Anguilla', 'Antigua and Barbuda', 'Aruba', 'Bahamas', 'Barbados', 'Bermuda', 'Bonaire', 'British Virgin Islands', 'Cayman Islands', 'Cuba', 'Curaçao', 'Dominica', 'Dominican Republic', 'French Guiana', 'Grenada', 'Guadeloupe', 'Guyana', 'Haiti', 'Jamaica', 'Martinique', 'Montserrat', 'Puerto Rico', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Martin', 'Saint Vincent and the Grenadines', 'Sint Maarten', 'Suriname', 'Trinidad and Tobago', 'Turks and Caicos Islands', 'U.S. Virgin Islands']
+export const nameTeams: TeamsConfederation = {
+  uefa: ['Germany', 'England', 'Italy', 'Spain', 'France', 'Albania', 'Andorra', 'Armenia', 'Austria', 'Azerbaijan', 'Belarus', 'Belgium', 'Bosnia and Herzegovina', 'Bulgaria', 'Croatia', 'Cyprus', 'Czech Republic', 'Denmark', 'Estonia', 'Faroe Islands', 'Finland', 'Georgia', 'Gibraltar', 'Greece', 'Hungary', 'Iceland', 'Israel', 'Kazakhstan', 'Kosovo', 'Latvia', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Malta', 'Moldova', 'Montenegro', 'Netherlands', 'North Macedonia', 'Northern Ireland', 'Norway', 'Poland', 'Portugal', 'Republic of Ireland', 'Romania', 'Russia', 'San Marino', 'Scotland', 'Serbia', 'Slovakia', 'Slovenia', 'Sweden', 'Switzerland', 'Turkey', 'Ukraine', 'Wales' ],
+  caf: ['Algeria', 'Egypt', 'Libya', 'Morocco', 'Tunisia', 'Benin', 'Burkina Faso', 'Cape Verde', 'Gambia', 'Ghana', 'Guinea', 'Guinea-Bissau', 'Ivory Coast', 'Liberia', 'Mali', 'Mauritania', 'Niger', 'Nigeria', 'Senegal', 'Sierra Leone', 'Togo', 'Cameroon', 'Central African Republic', 'Chad', 'Congo', 'DR Congo', 'Equatorial Guinea', 'Gabon', 'São Tomé and Príncipe', 'Burundi', 'Djibouti', 'Eritrea', 'Ethiopia', 'Kenya', 'Rwanda', 'Somalia', 'South Sudan', 'Sudan', 'Tanzania', 'Uganda', 'Zanzibar', 'Angola', 'Botswana', 'Comoros', 'Eswatini', 'Lesotho', 'Madagascar', 'Malawi', 'Mauritius', 'Mozambique', 'Namibia', 'Seychelles', 'South Africa', 'Zambia', 'Zimbabwe', 'Reunion'],
+  afc: ['Australia', 'Brunei', 'Cambodia', 'Timor-Leste', 'Indonesia', 'Laos', 'Malaysia', 'Myanmar', 'Philippines', 'Singapore', 'Thailand', 'Vietnam', 'Afghanistan', 'Iran', 'Kyrgyz Republic', 'Tajikistan', 'Turkmenistan', 'Uzbekistan', 'China', 'Taiwan', 'DPR Korea', 'Guam', 'Hong Kong', 'Japan', 'Korea Republic', 'Macau', 'Mongolia', 'Northern Mariana Islands', 'Bangladesh', 'Bhutan', 'India', 'Maldives', 'Nepal', 'Pakistan', 'Sri Lanka', 'Bahrain', 'Iraq', 'Jordan', 'Kuwait', 'Lebanon', 'Oman', 'Palestine', 'Qatar', 'Saudi Arabia', 'Syria', 'United Arab Emirates', 'Yemen'],
+  concacaf: ['Canada', 'Mexico', 'United States', 'Belize', 'Costa Rica', 'El Salvador', 'Guatemala', 'Honduras', 'Nicaragua', 'Panama', 'Anguilla', 'Antigua and Barbuda', 'Aruba', 'Bahamas', 'Barbados', 'Bermuda', 'Bonaire', 'British Virgin Islands', 'Cayman Islands', 'Cuba', 'Curaçao', 'Dominica', 'Dominican Republic', 'French Guiana', 'Grenada', 'Guadeloupe', 'Guyana', 'Haiti', 'Jamaica', 'Martinique', 'Montserrat', 'Puerto Rico', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Martin', 'Saint Vincent and the Grenadines', 'Sint Maarten', 'Suriname', 'Trinidad and Tobago', 'Turks and Caicos Islands', 'U.S. Virgin Islands'],
+  ofc: ['American Samoa', 'Cook Islands', 'Fiji', 'Kiribati', 'New Caledonia', 'New Zealand', 'Papua New Guinea', 'Samoa', 'Solomon Islands', 'Tahiti', 'Tonga', 'Tuvalu', 'Vanuatu'],
+  conmebol: ['Argentina', 'Bolivia', 'Brazil', 'Chile', 'Colombia', 'Ecuador', 'Paraguay', 'Peru', 'Uruguay', 'Venezuela']
 }
+
+export const confederation: ConfederationType[] = Object.keys(nameTeams) as ConfederationType[]
 
 
 export const nationalTeams: NationalTeams = {
@@ -5999,7 +6075,629 @@ export const nationalTeams: NationalTeams = {
       },
     }
   },
+  'American Samoa': {
+    id: v1(),
+    name: ['American Samoa'],
+    flag: [flagAmericanSamoa],
+    coatOfArms: coatOfArmsAmericanSamoa,
+    associationIcon: iconAmericanSamoa,
+    confederation: 'OFC',
+    confederationIcon: iconOfc,
+    associationDate: {
+      founded: 1984,
+      fifaAffiliation: 1998,
+      confederationAffiliation: 1998,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },  
+  'Cook Islands': {
+    id: v1(),
+    name: ['Cook Islands'],
+    flag: [flagCookIslands],
+    coatOfArms: coatOfArmsCookIslands,
+    associationIcon: iconCookIslands,
+    confederation: 'OFC',
+    confederationIcon: iconOfc,
+    associationDate: {
+      founded: 1971,
+      fifaAffiliation: 1994,
+      confederationAffiliation: 1994,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Fiji': {
+    id: v1(),
+    name: ['Fiji'],
+    flag: [flagFiji],
+    coatOfArms: coatOfArmsFiji,
+    associationIcon: iconFiji,
+    confederation: 'OFC',
+    confederationIcon: iconOfc,
+    associationDate: {
+      founded: 1938,
+      fifaAffiliation: 1964,
+      confederationAffiliation: 1966,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Kiribati': {
+    id: v1(),
+    name: ['Kiribati'],
+    flag: [flagKiribati],
+    coatOfArms: coatOfArmsKiribati,
+    associationIcon: iconKiribati,
+    confederation: 'OFC',
+    confederationIcon: iconOfc,
+    associationDate: {
+      founded: 1980,
+      fifaAffiliation: '-',
+      confederationAffiliation: 2007,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'New Caledonia': {
+    id: v1(),
+    name: ['New Caledonia'],
+    flag: [flagNewCaledonia],
+    coatOfArms: coatOfArmsNewCaledonia,
+    associationIcon: iconNewCaledonia,
+    confederation: 'OFC',
+    confederationIcon: iconOfc,
+    associationDate: {
+      founded: 1928,
+      fifaAffiliation: 2004,
+      confederationAffiliation: 1999,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'New Zealand': {
+    id: v1(),
+    name: ['New Zealand'],
+    flag: [flagNewZealand],
+    coatOfArms: coatOfArmsNewZealand,
+    associationIcon: iconNewZealand,
+    confederation: 'OFC',
+    confederationIcon: iconOfc,
+    associationDate: {
+      founded: 1891,
+      fifaAffiliation: 1948,
+      confederationAffiliation: 1966,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Papua New Guinea': {
+    id: v1(),
+    name: ['Papua New Guinea'],
+    flag: [flagPapuaNewGuinea],
+    coatOfArms: coatOfArmsPapuaNewGuinea,
+    associationIcon: iconPapuaNewGuinea,
+    confederation: 'OFC',
+    confederationIcon: iconOfc,
+    associationDate: {
+      founded: 1962,
+      fifaAffiliation: 1966,
+      confederationAffiliation: 1966,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Samoa': {
+    id: v1(),
+    name: ['Samoa'],
+    flag: [flagSamoa],
+    coatOfArms: coatOfArmsSamoa,
+    associationIcon: iconSamoa,
+    confederation: 'OFC',
+    confederationIcon: iconOfc,
+    associationDate: {
+      founded: 1968,
+      fifaAffiliation: 1986,
+      confederationAffiliation: 1986,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Solomon Islands': {
+    id: v1(),
+    name: ['Solomon Islands'],
+    flag: [flagSolomonIslands],
+    coatOfArms: coatOfArmsSolomonIslands,
+    associationIcon: iconSolomonIslands,
+    confederation: 'OFC',
+    confederationIcon: iconOfc,
+    associationDate: {
+      founded: 1979,
+      fifaAffiliation: 1988,
+      confederationAffiliation: 1988,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Tahiti': {
+    id: v1(),
+    name: ['Tahiti'],
+    flag: [flagTahiti],
+    coatOfArms: coatOfArmsTahiti,
+    associationIcon: iconTahiti,
+    confederation: 'OFC',
+    confederationIcon: iconOfc,
+    associationDate: {
+      founded: 1989,
+      fifaAffiliation: 1990,
+      confederationAffiliation: 1990,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Tonga': {
+    id: v1(),
+    name: ['Tonga'],
+    flag: [flagTonga],
+    coatOfArms: coatOfArmsTonga,
+    associationIcon: iconTonga,
+    confederation: 'OFC',
+    confederationIcon: iconOfc,
+    associationDate: {
+      founded: 1965,
+      fifaAffiliation: 1994,
+      confederationAffiliation: 1994,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Tuvalu': {
+    id: v1(),
+    name: ['Tuvalu'],
+    flag: [flagTuvalu],
+    coatOfArms: coatOfArmsTuvalu,
+    associationIcon: iconTuvalu,
+    confederation: 'OFC',
+    confederationIcon: iconOfc,
+    associationDate: {
+      founded: 1979,
+      fifaAffiliation: '-',
+      confederationAffiliation: 2006,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Vanuatu': {
+    id: v1(),
+    name: ['Vanuatu'],
+    flag: [flagVanuatu],
+    coatOfArms: coatOfArmsVanuatu,
+    associationIcon: iconVanuatu,
+    confederation: 'OFC',
+    confederationIcon: iconOfc,
+    associationDate: {
+      founded: 1934,
+      fifaAffiliation: 1988,
+      confederationAffiliation: 1988,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Argentina': {
+    id: v1(),
+    name: ['Argentina'],
+    flag: [flagArgentina],
+    coatOfArms: coatOfArmsArgentina,
+    associationIcon: iconArgentina,
+    confederation: 'CONMEBOL',
+    confederationIcon: iconConmebol,
+    associationDate: {
+      founded: 1893,
+      fifaAffiliation: 1912,
+      confederationAffiliation: 1916,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Bolivia': {
+    id: v1(),
+    name: ['Bolivia'],
+    flag: [flagBolivia],
+    coatOfArms: coatOfArmsBolivia,
+    associationIcon: iconBolivia,
+    confederation: 'CONMEBOL',
+    confederationIcon: iconConmebol,
+    associationDate: {
+      founded: 1925,
+      fifaAffiliation: 1926,
+      confederationAffiliation: 1926,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Brazil': {
+    id: v1(),
+    name: ['Brazil'],
+    flag: [flagBrazil],
+    coatOfArms: coatOfArmsBrazil,
+    associationIcon: iconBrazil,
+    confederation: 'CONMEBOL',
+    confederationIcon: iconConmebol,
+    associationDate: {
+      founded: 1914,
+      fifaAffiliation: 1923,
+      confederationAffiliation: 1916,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Chile': {
+    id: v1(),
+    name: ['Chile'],
+    flag: [flagChile],
+    coatOfArms: coatOfArmsChile,
+    associationIcon: iconChile,
+    confederation: 'CONMEBOL',
+    confederationIcon: iconConmebol,
+    associationDate: {
+      founded: 1895,
+      fifaAffiliation: 1913,
+      confederationAffiliation: 1916,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Colombia': {
+    id: v1(),
+    name: ['Colombia'],
+    flag: [flagColombia],
+    coatOfArms: coatOfArmsColombia,
+    associationIcon: iconColombia,
+    confederation: 'CONMEBOL',
+    confederationIcon: iconConmebol,
+    associationDate: {
+      founded: 1924,
+      fifaAffiliation: 1936,
+      confederationAffiliation: 1936,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Ecuador': {
+    id: v1(),
+    name: ['Ecuador'],
+    flag: [flagEcuador],
+    coatOfArms: coatOfArmsEcuador,
+    associationIcon: iconEcuador,
+    confederation: 'CONMEBOL',
+    confederationIcon: iconConmebol,
+    associationDate: {
+      founded: 1925,
+      fifaAffiliation: 1926,
+      confederationAffiliation: 1927,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Paraguay': {
+    id: v1(),
+    name: ['Paraguay'],
+    flag: [flagParaguay],
+    coatOfArms: coatOfArmsParaguay,
+    associationIcon: iconParaguay,
+    confederation: 'CONMEBOL',
+    confederationIcon: iconConmebol,
+    associationDate: {
+      founded: 1906,
+      fifaAffiliation: 1925,
+      confederationAffiliation: 1921,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Peru': {
+    id: v1(),
+    name: ['Peru'],
+    flag: [flagPeru],
+    coatOfArms: coatOfArmsPeru,
+    associationIcon: iconPeru,
+    confederation: 'CONMEBOL',
+    confederationIcon: iconConmebol,
+    associationDate: {
+      founded: 1922,
+      fifaAffiliation: 1924,
+      confederationAffiliation: 1925,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Uruguay': {
+    id: v1(),
+    name: ['Uruguay'],
+    flag: [flagUruguay],
+    coatOfArms: coatOfArmsUruguay,
+    associationIcon: iconUruguay,
+    confederation: 'CONMEBOL',
+    confederationIcon: iconConmebol,
+    associationDate: {
+      founded: 1900,
+      fifaAffiliation: 1923,
+      confederationAffiliation: 1916,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
+  'Venezuela': {
+    id: v1(),
+    name: ['Venezuela'],
+    flag: [flagVenezuela],
+    coatOfArms: coatOfArmsVenezuela,
+    associationIcon: iconVenezuela,
+    confederation: 'CONMEBOL',
+    confederationIcon: iconConmebol,
+    associationDate: {
+      founded: 1925,
+      fifaAffiliation: 1952,
+      confederationAffiliation: 1953,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
 }
+
 
 
 export const aboutProject: AboutProject = {
@@ -6056,15 +6754,15 @@ export const background = {
   startPage: backgroundStartPage,
 }
 
-export const confederation: ConfederationType[] = [
-  'all',
-  'AFC',
-  'CAF',
-  'CONCACAF',
-  'CONMEBOL',
-  'OFC',
-  'UEFA',
-]
+// export const confederation: ConfederationType[] = [
+//   'all',
+//   'AFC',
+//   'CAF',
+//   'CONCACAF',
+//   'CONMEBOL',
+//   'OFC',
+//   'UEFA',
+// ]
 
 
 

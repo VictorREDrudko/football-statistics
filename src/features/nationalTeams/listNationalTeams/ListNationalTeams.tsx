@@ -3,15 +3,14 @@ import s from './ListNationalTeams.module.css'
 
 type Props = {
   data: NationalTeam
-  openInfoCard: (bool: boolean) => void
   setTeam: (team: string) => void
+  navigateToTeam: (team: string) => void;
 }
 
-export const ListNationalTeams = ({data, openInfoCard, setTeam}: Props) => {
+export const ListNationalTeams = ({data, setTeam, navigateToTeam}: Props) => {
   const showInfoTeam = () => {
-    openInfoCard(true)
-    setTeam(data.name[0])
-    
+    setTeam(data.name[0]);
+    navigateToTeam(data.name[0]);
   }
 
   return (
