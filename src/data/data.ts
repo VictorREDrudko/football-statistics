@@ -676,7 +676,6 @@ import iconVenezuela from './../assets/icon/national/Venezuela.png'
 import flagVenezuela from './../assets/icon/flag/Venezuela.png'
 import coatOfArmsVenezuela from './../assets/icon/coat-of-arms/Venezuela.png'
 
-
 import iconUefa from './../assets/icon/confederation/icon-uefa.png'
 import iconCaf from './../assets/icon/confederation/icon-caf.png'
 import iconAfc from './../assets/icon/confederation/icon-afc.png'
@@ -684,6 +683,15 @@ import iconConcacaf from './../assets/icon/confederation/icon-concacaf.png'
 import iconOfc from './../assets/icon/confederation/icon-ofc.png'
 import iconConmebol from './../assets/icon/confederation/icon-conmebol.png'
 import iconCup from './../assets/icon/icon-cup.png'
+
+import iconWorldCup from './../assets/icon-cup/world.png'
+import iconUefaCup from './../assets/icon-cup/uefa.png'
+import iconCafCup from './../assets/icon-cup/caf.png'
+import iconAfcCup from './../assets/icon-cup/afc.png'
+import iconConmebolCup from './../assets/icon-cup/conmebol.png'
+import iconConcacafCup from './../assets/icon-cup/concacaf.png'
+import iconOfcCup from './../assets/icon-cup/ofc.png'
+
 
 import iconMedal from './../assets/icon/icon-medal.png'
 import { v1 } from 'uuid'
@@ -6742,6 +6750,15 @@ export const icons = {
   trophy: {
     cup: iconCup,
     medal: iconMedal,
+  },
+  trophyTournaments: {
+    iconWorldCup,
+    iconUefaCup,
+    iconCafCup,
+    iconAfcCup,
+    iconConmebolCup,
+    iconConcacafCup,
+    iconOfcCup
   }
 }
 
