@@ -1,4 +1,4 @@
-import { AboutProject, ConfederationType, DataFifaWorldCup, Menu, NationalTeams, StartPage, TeamsConfederation } from './type-data'
+import { AboutProject, ConfederationType, DataFifaWorldCup, Menu, NameTournament, NationalTeams, NationalTournaments, StartPage, TeamsConfederation, Tournament } from './type-data'
 import backgroundFootballLive from './../assets/football-live.png'
 import logoProject from './../assets/logo.png'
 import backgroundStartPage from './../assets/background-football.png'
@@ -6751,15 +6751,6 @@ export const icons = {
     cup: iconCup,
     medal: iconMedal,
   },
-  trophyTournaments: {
-    iconWorldCup,
-    iconUefaCup,
-    iconCafCup,
-    iconAfcCup,
-    iconConmebolCup,
-    iconConcacafCup,
-    iconOfcCup
-  }
 }
 
 export const countWorldCup = 0
@@ -6771,15 +6762,61 @@ export const background = {
   startPage: backgroundStartPage,
 }
 
-// export const confederation: ConfederationType[] = [
-//   'all',
-//   'AFC',
-//   'CAF',
-//   'CONCACAF',
-//   'CONMEBOL',
-//   'OFC',
-//   'UEFA',
-// ]
+
+export const nationalTournaments: NationalTournaments = {
+  'concacaf': {
+    id: '5-concacaf',
+    title: 'CONCACAF Gold Cup',
+    iconCup: iconConcacafCup,
+    path: 'concacaf-cup',
+    color: '#300010',
+  },
+  'conmebol': {
+    id: '6-conmebol',
+    title: 'CONMEBOL Copa América',
+    iconCup: iconConmebolCup,
+    path: 'conmebol-cup',
+    color: '#292600',
+  },
+  'ofc': {
+    id: '7-ofc',
+    title: 'OFC Nations Cup',
+    iconCup: iconOfcCup,
+    path: 'ofc-cup',
+    color: '#5E2A00',
+  },
+  'worldCup': {
+    id: '1-worldCup',
+    title: 'FIFA World Cup',
+    iconCup: iconWorldCup,
+    path: 'fifa-world-cup',
+    color: '#5F5C1C',
+    size: '190px',
+  },
+  'uefa': {
+    id: '2-uefa',
+    title: 'European Championship',
+    iconCup: iconUefaCup,
+    path: 'uefa-cup',
+    color: '#002645',
+  },
+  'afc': {
+    id: '3-afc',
+    title: 'AFC Asian Cup',
+    iconCup: iconAfcCup,
+    path: 'afc-cup',
+    color: '#2C003D',
+  },
+  'caf': {
+    id: '4-caf',
+    title: 'Africa Cup of Nations',
+    iconCup: iconCafCup,
+    path: 'caf-cup',
+    color: '#012B00',
+  },
+}
+
+export const nationalTournamentsKeys: NameTournament[]= Object.keys(nationalTournaments) as NameTournament[];
 
 
 

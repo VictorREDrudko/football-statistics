@@ -20,6 +20,22 @@ type ItemMenu = {
 
 export type Menu = ItemMenu[]
 
+export type Tournament = {
+  id: string
+  title: string
+  iconCup: string
+  path: string
+  color: string
+  size?: string
+}
+
+export type NameTournament = 'worldCup' | 'uefa' | 'afc' | 'caf' | 'concacaf' | 'conmebol' | 'ofc'
+
+export type NationalTournaments = {
+  [key in NameTournament]: Tournament
+}
+
+
 
 
 
