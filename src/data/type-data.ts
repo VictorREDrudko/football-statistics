@@ -20,6 +20,8 @@ type ItemMenu = {
 
 export type Menu = ItemMenu[]
 
+
+
 export type Tournament = {
   id: string
   title: string
@@ -36,6 +38,17 @@ export type NationalTournaments = {
 }
 
 
+
+export type WorldCupTournament = {
+  id: string
+  icon: string
+  hostCountry: string[]
+  date: string
+}
+
+export type AllWorldCup = {
+  [key in string] : WorldCupTournament
+}
 
 
 

@@ -1,4 +1,4 @@
-import { AboutProject, ConfederationType, DataFifaWorldCup, Menu, NameTournament, NationalTeams, NationalTournaments, StartPage, TeamsConfederation, Tournament } from './type-data'
+import { AboutProject, AllWorldCup, ConfederationType, DataFifaWorldCup, Menu, NameTournament, NationalTeams, NationalTournaments, StartPage, TeamsConfederation, Tournament } from './type-data'
 import backgroundFootballLive from './../assets/football-live.png'
 import logoProject from './../assets/logo.png'
 import backgroundStartPage from './../assets/background-football.png'
@@ -692,6 +692,29 @@ import iconConmebolCup from './../assets/icon-cup/conmebol.png'
 import iconConcacafCup from './../assets/icon-cup/concacaf.png'
 import iconOfcCup from './../assets/icon-cup/ofc.png'
 
+
+import iconWorldCup1930 from './../assets/icon/worldCup/1930.png'
+import iconWorldCup1934 from './../assets/icon/worldCup/1934.png'
+import iconWorldCup1938 from './../assets/icon/worldCup/1938.png'
+import iconWorldCup1950 from './../assets/icon/worldCup/1950.png'
+import iconWorldCup1954 from './../assets/icon/worldCup/1954.png'
+import iconWorldCup1958 from './../assets/icon/worldCup/1958.png'
+import iconWorldCup1962 from './../assets/icon/worldCup/1962.png'
+import iconWorldCup1966 from './../assets/icon/worldCup/1966.png'
+import iconWorldCup1970 from './../assets/icon/worldCup/1970.png'
+import iconWorldCup1974 from './../assets/icon/worldCup/1974.png'
+import iconWorldCup1978 from './../assets/icon/worldCup/1978.png'
+import iconWorldCup1982 from './../assets/icon/worldCup/1982.png'
+import iconWorldCup1986 from './../assets/icon/worldCup/1986.png'
+import iconWorldCup1990 from './../assets/icon/worldCup/1990.png'
+import iconWorldCup1994 from './../assets/icon/worldCup/1994.png'
+import iconWorldCup1998 from './../assets/icon/worldCup/1998.png'
+import iconWorldCup2002 from './../assets/icon/worldCup/2002.png'
+import iconWorldCup2006 from './../assets/icon/worldCup/2006.png'
+import iconWorldCup2010 from './../assets/icon/worldCup/2010.png'
+import iconWorldCup2014 from './../assets/icon/worldCup/2014.png'
+import iconWorldCup2018 from './../assets/icon/worldCup/2018.png'
+import iconWorldCup2022 from './../assets/icon/worldCup/2022.png'
 
 import iconMedal from './../assets/icon/icon-medal.png'
 import { v1 } from 'uuid'
@@ -6764,28 +6787,28 @@ export const background = {
 
 
 export const nationalTournaments: NationalTournaments = {
-  'concacaf': {
+  concacaf: {
     id: '5-concacaf',
     title: 'CONCACAF Gold Cup',
     iconCup: iconConcacafCup,
     path: 'concacaf-cup',
     color: '#300010',
   },
-  'conmebol': {
+  conmebol: {
     id: '6-conmebol',
     title: 'CONMEBOL Copa América',
     iconCup: iconConmebolCup,
     path: 'conmebol-cup',
     color: '#292600',
   },
-  'ofc': {
+  ofc: {
     id: '7-ofc',
     title: 'OFC Nations Cup',
     iconCup: iconOfcCup,
     path: 'ofc-cup',
     color: '#5E2A00',
   },
-  'worldCup': {
+  worldCup: {
     id: '1-worldCup',
     title: 'FIFA World Cup',
     iconCup: iconWorldCup,
@@ -6793,21 +6816,21 @@ export const nationalTournaments: NationalTournaments = {
     color: '#5F5C1C',
     size: '190px',
   },
-  'uefa': {
+  uefa: {
     id: '2-uefa',
     title: 'European Championship',
     iconCup: iconUefaCup,
     path: 'uefa-cup',
     color: '#002645',
   },
-  'afc': {
+  afc: {
     id: '3-afc',
     title: 'AFC Asian Cup',
     iconCup: iconAfcCup,
     path: 'afc-cup',
     color: '#2C003D',
   },
-  'caf': {
+  caf: {
     id: '4-caf',
     title: 'Africa Cup of Nations',
     iconCup: iconCafCup,
@@ -6817,6 +6840,143 @@ export const nationalTournaments: NationalTournaments = {
 }
 
 export const nationalTournamentsKeys: NameTournament[]= Object.keys(nationalTournaments) as NameTournament[];
+
+export const fifaWorldCup : AllWorldCup = {
+  1930: {
+    id: '1-1930',
+    date: '13-30 July',
+    icon: iconWorldCup1930,
+    hostCountry: ['Uruguay'],
+  },
+  1934: {
+    id: '2-1934',
+    date: '27 May - 10 June',
+    icon: iconWorldCup1934,
+    hostCountry: ['Italy'],
+  },
+  1938: {
+    id: '3-1938',
+    date: '4-19 June',
+    icon: iconWorldCup1938,
+    hostCountry: ['France'],
+  },
+  1950: {
+    id: '4-1950',
+    date: '	24 June - 16 July',
+    icon: iconWorldCup1950,
+    hostCountry: ['Brazil'],
+  },
+  1954: {
+    id: '5-1954',
+    date: '16 June - 4 July',
+    icon: iconWorldCup1954,
+    hostCountry: ['Switzerland'],
+  },
+  1958: {
+    id: '6-1958',
+    date: '8-29 June',
+    icon: iconWorldCup1958,
+    hostCountry: ['Sweden'],
+  },
+  1962: {
+    id: '7-1962',
+    date: '30 May - 17 June',
+    icon: iconWorldCup1962,
+    hostCountry: ['Chile'],
+  },
+  1966: {
+    id: '8-1966',
+    date: '11-30 July',
+    icon: iconWorldCup1966,
+    hostCountry: ['England'],
+  },
+  1970: {
+    id: '9-1970',
+    date: '31 May - 21 June',
+    icon: iconWorldCup1970,
+    hostCountry: ['Mexico'],
+  },
+  1974: {
+    id: '10-1974',
+    date: '13 June - 7 July',
+    icon: iconWorldCup1974,
+    hostCountry: ['Germany'],
+  },
+  1978: {
+    id: '11-1978',
+    date: '1-25 June',
+    icon: iconWorldCup1978,
+    hostCountry: ['Argentina'],
+  },
+  1982: {
+    id: '12-1982',
+    date: '13 June - 11 July',
+    icon: iconWorldCup1982,
+    hostCountry: ['Spain'],
+  },
+  1986: {
+    id: '13-1986',
+    date: '31 May - 29 June',
+    icon: iconWorldCup1986,
+    hostCountry: ['Mexico'],
+  },
+  1990: {
+    id: '14-1990',
+    date: '	8June - 8 July',
+    icon: iconWorldCup1990,
+    hostCountry: ['Italy'],
+  },
+  1994: {
+    id: '15-1994',
+    date: 'June 17 - July 17',
+    icon: iconWorldCup1994,
+    hostCountry: ['United States'],
+  },
+  1998: {
+    id: '16-1998',
+    date: '10 June - 12 July',
+    icon: iconWorldCup1998,
+    hostCountry: ['France'],
+  },
+  2002: {
+    id: '17-2002',
+    date: '31 May - 30 June',
+    icon: iconWorldCup2002,
+    hostCountry: ['Korea Republic', 'Japan'],
+  },
+  2006: {
+    id: '18-2006',
+    date: '9 June - 9 July',
+    icon: iconWorldCup2006,
+    hostCountry: ['Germany'],
+  },
+  2010: {
+    id: '19-2010',
+    date: '11 June - 11 July',
+    icon: iconWorldCup2010,
+    hostCountry: ['South Africa'],
+  },
+  2014: {
+    id: '20-2014',
+    date: '12 June - 13 July',
+    icon: iconWorldCup2014,
+    hostCountry: ['Brazil'],
+  },
+  2018: {
+    id: '21-2018',
+    date: '14 June - 15 July',
+    icon: iconWorldCup2018,
+    hostCountry: ['Russia'],
+  },
+  2022: {
+    id: '22-2022',
+    date: '20 November - 18 December',
+    icon: iconWorldCup2022,
+    hostCountry: ['Qatar'],
+  },
+}
+
+export const fifaWorldCupKeys: string[]= Object.keys(fifaWorldCup);
 
 
 
