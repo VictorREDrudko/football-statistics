@@ -6,6 +6,7 @@ import { Header } from 'common/components/header/Header';
 import { NationalTeams } from 'features/nationalTeams/NationalTeams';
 import { NationaleTournaments } from 'features/nationalTournaments/NationalTournaments';
 import { WorldCup } from 'features/worldCup/WorldCup';
+import { FinalStage } from 'features/worldCup/finalStage/FinalStage';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/teams' element={<Navigate to='/teams/uefa'/>}/>
         <Route path='/teams/:confederationRoute' element={<NationalTeams/>}/>
         <Route path='/teams/:confederationRoute/:teamRoute' element={<NationalTeams />} />
+        <Route path='/national-tournaments/fifa-world-cup/final-stage/:year' element={<FinalStage />} />
       </Routes>
     </>
 

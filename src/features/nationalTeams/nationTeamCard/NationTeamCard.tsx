@@ -4,6 +4,7 @@ import { Association } from '../association/Association'
 import { Confederation } from '../confederation/Confederation'
 import { TitleCard } from '../titleCard/TitleCard'
 import s from './NationTeamCard.module.css'
+import { getCurrentCountryAttribut } from 'data/data'
 
 type Props = {
   data: NationalTeam
@@ -11,13 +12,15 @@ type Props = {
 }
 
 export const NationalTeamsCard = ({data, closeInfoCard}: Props) => {
-  console.log(data)
+  const flag = getCurrentCountryAttribut(data.flag)
+  const name = getCurrentCountryAttribut(data.name)
+
   return (
     <div className={s.container}>
       <div className={s.containerCoatOfArms}>
         <img className={s.imgCoatOfArms} src={data.coatOfArms} alt={`coat of arms ${data.name}`} />
       </div>
-      <TitleCard flag={data.flag[0]} name={data.name[0]} icon={data.associationIcon}/>
+      <TitleCard flag={flag} name={name} icon={data.associationIcon}/>
       <button className={s.button} onClick={closeInfoCard}>X</button>
       <div className={s.containerRating}>
         <div className={s.rating}>

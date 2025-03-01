@@ -1,4 +1,4 @@
-import { confederation, nameTeams, nationalTeams } from 'data/data'
+import { confederation, getCurrentCountryAttribut, nameTeams, nationalTeams } from 'data/data'
 import s from './NationalTeams.module.css'
 import { NationalTeamsCard } from './nationTeamCard/NationTeamCard'
 import { ListNationalTeams } from './listNationalTeams/ListNationalTeams'
@@ -28,8 +28,8 @@ export const NationalTeams = () => {
     } 
   }, [confederationRoute, teamRoute]);
 
-    const navigateToTeam = (team: string) => {
-      navigate(`/teams/${confederationRoute}/${urlWithHyphen(team)}`)
+  const navigateToTeam = (team: string) => {
+    navigate(`/teams/${confederationRoute}/${urlWithHyphen(team)}`)
   };
 
   const closeInfoCard = () => {
@@ -46,7 +46,7 @@ export const NationalTeams = () => {
 
   const sortTeams = (teams: NationalTeam[]) => {
     if (sorting === 'alphabet') {
-      return teams.sort((a, b) => a.name[0].localeCompare(b.name[0]));
+      return teams.sort((a, b) => getCurrentCountryAttribut(a.name).localeCompare(getCurrentCountryAttribut(b.name)));
     } else if (sorting === 'rating') {
       // Добавьте логику сортировки по рейтингу, если есть рейтинг у команд
       return teams.sort((a, b) => b.rating - a.rating);
@@ -66,10 +66,6 @@ export const NationalTeams = () => {
   const sort = (sort: string) => {
     setSorting(sort)
   }
-
-  // const sortAlphabet = nameTeams[confeder].sort((a: string, b: string) => {
-  //   return a.localeCompare(b)
-  // })
 
   const rendering = team ? 
     <NationalTeamsCard data={nationalTeams[team]} closeInfoCard={closeInfoCard}/>

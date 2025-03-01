@@ -1,5 +1,6 @@
 import { NationalTeam } from 'data/type-data'
 import s from './ListNationalTeams.module.css'
+import { getCurrentCountryAttribut } from 'data/data'
 
 type Props = {
   data: NationalTeam
@@ -9,17 +10,20 @@ type Props = {
 
 export const ListNationalTeams = ({data, setTeam, navigateToTeam}: Props) => {
   const showInfoTeam = () => {
-    setTeam(data.name[0]);
-    navigateToTeam(data.name[0]);
+    setTeam(getCurrentCountryAttribut(data.name));
+    navigateToTeam(getCurrentCountryAttribut(data.name));
   }
+
+  const flag = getCurrentCountryAttribut(data.flag)
+  const name = getCurrentCountryAttribut(data.name)
 
   return (
     <li className={s.container} onClick={showInfoTeam}>
       <div className={s.containerIcon}>
-        <img className={s.flag} src={data.flag[0]} alt={`${data.name} flag picture` } />
+        <img className={s.flag} src={flag} alt={`${name} flag picture` } />
         <img className={s.icon} src={data.associationIcon} alt={`${data.name} football association icon`} />
       </div>
-      <h3 className={s.title}>{data.name}</h3>
+      <h3 className={s.title}>{name}</h3>
     </li>
   )
 }

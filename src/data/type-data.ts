@@ -44,6 +44,7 @@ export type WorldCupTournament = {
   icon: string
   hostCountry: string[]
   date: string
+  finalStage?: MatchFifaWorldCup[]
 }
 
 export type AllWorldCup = {
@@ -132,13 +133,17 @@ export type AssociationDate = {
   confederationAffiliation: number
 }
 
+export type Attribut = {
+  title: string
+  period: string
+}
 
 export type NationalTeam = {
   id: string
-  name: string[]
+  name: Attribut[]
   associationIcon: string
   confederationIcon: string
-  flag: string[]
+  flag: Attribut[]
   coatOfArms: string
   confederation: string
   associationDate: AssociationDate
@@ -155,4 +160,5 @@ export type TeamsConfederation = {
 }
 
 export type ConfederationType = 'afc' | 'caf' | 'concacaf' | 'conmebol' | 'ofc' | 'uefa'
+
 

@@ -1,4 +1,4 @@
-import { AboutProject, AllWorldCup, ConfederationType, DataFifaWorldCup, Menu, NameTournament, NationalTeams, NationalTournaments, StartPage, TeamsConfederation, Tournament } from './type-data'
+import { AboutProject, AllWorldCup, Attribut, ConfederationType, DataFifaWorldCup, Menu, NameTournament, NationalTeams, NationalTournaments, StartPage, TeamsConfederation, Tournament } from './type-data'
 import backgroundFootballLive from './../assets/football-live.png'
 import logoProject from './../assets/logo.png'
 import backgroundStartPage from './../assets/background-football.png'
@@ -7,6 +7,8 @@ import projectIcon from './../assets/icon/project-icon.png'
 import pitchImg from './../assets/pitch.png'
 import iconGermany from './../assets/icon/national/Germany.png'
 import flagGermany from './../assets/icon/flag/Germany.png'
+import flagGermany1 from './../assets/icon/flag/Germany1.png'
+import flagGermany2 from './../assets/icon/flag/Germany2.png'
 import coatOfArmsGermany from './../assets/icon/coat-of-arms/Germany.png'
 import iconEngland from './../assets/icon/national/England.png'
 import flagEngland from './../assets/icon/flag/England.png'
@@ -170,6 +172,8 @@ import coatOfArmsUkraine from './../assets/icon/coat-of-arms/Ukraine.png'
 import iconWales from './../assets/icon/national/Wales.png'
 import flagWales from './../assets/icon/flag/Wales.png'
 import coatOfArmsWales from './../assets/icon/coat-of-arms/Wales.png'
+import flagYugoslavia from './../assets/icon/flag/Yugoslavia.png'
+import flagYugoslavia1 from './../assets/icon/flag/Yugoslavia1.png'
 
 import iconAlgeria from './../assets/icon/national/Algeria.png'
 import flagAlgeria from './../assets/icon/flag/Algeria.png'
@@ -732,11 +736,42 @@ export const nameTeams: TeamsConfederation = {
 export const confederation: ConfederationType[] = Object.keys(nameTeams) as ConfederationType[]
 
 
+export const getCountryAttribut = (attributes: Attribut[], year: string) => {
+  const currentYear = new Date().getFullYear();
+
+  for (let attribut of attributes) {
+      let periods = attribut.period.split(', ');
+
+      for (let period of periods) {
+          let [start, end] = period.split('-');
+          end = end === 'p.t.' ? currentYear.toString() : end;
+          if (+year >= +start && +year <= +end) {
+              return attribut.title;
+          }
+      }
+  }
+  return undefined;
+}
+
+export const getCurrentCountryAttribut= (attributes: Attribut[]) => {
+    const currentAttribut = attributes.filter(attribut => attribut.period.includes('p.t.'))
+    return currentAttribut[0].title
+}
+
 export const nationalTeams: NationalTeams = {
   'Germany': {
     id: v1(),
-    name: ['Germany'],
-    flag: [flagGermany],
+    name: [
+      {title: 'Germany', period: '1990-p.t.'},
+      {title: 'German Reich', period: '1919-1945'},
+      {title: 'West Germany', period: '1946-1989'},
+      
+    ],
+    flag: [
+      {title: flagGermany, period: '1919-1932, 1946-p.t.'},
+      {title: flagGermany1, period: '1933-1934'},
+      {title: flagGermany2, period: '1935-1945'},
+    ],
     coatOfArms: coatOfArmsGermany,
     associationIcon: iconGermany,
     confederation: 'UEFA',
@@ -762,8 +797,12 @@ export const nationalTeams: NationalTeams = {
   },
   'England': {
     id: v1(),
-    name: ['England'],
-    flag: [flagEngland],
+    name: [
+      {title: 'England', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagEngland, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsEngland,
     associationIcon: iconEngland,
     confederation: 'UEFA',
@@ -789,8 +828,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Italy': {
     id: v1(),
-    name: ['Italy'],
-    flag: [flagItaly],
+    name: [
+      {title: 'Italy', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagItaly, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsItaly,
     associationIcon: iconItaly,
     confederation: 'UEFA',
@@ -816,8 +859,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Spain': {
     id: v1(),
-    name: ['Spain'],
-    flag: [flagSpain],
+    name: [
+      {title: 'Spain', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSpain, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsSpain,
     associationIcon: iconSpain,
     confederation: 'UEFA',
@@ -843,8 +890,12 @@ export const nationalTeams: NationalTeams = {
   },
   'France': {
     id: v1(),
-    name: ['France'],
-    flag: [flagFrance],
+    name: [
+      {title: 'France', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagFrance, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsFrance,
     associationIcon: iconFrance,
     confederation: 'UEFA',
@@ -870,8 +921,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Albania': {
     id: v1(),
-    name: ['Albania'],
-    flag: [flagAlbania],
+    name: [
+      {title: 'Albania', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagAlbania, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsAlbania,
     associationIcon: iconAlbania,
     confederation: 'UEFA',
@@ -897,8 +952,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Andorra': {
     id: v1(),
-    name: ['Andorra'],
-    flag: [flagAndorra],
+    name: [
+      {title: 'Andorra', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagAndorra, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsAndorra,
     associationIcon: iconAndorra,
     confederation: 'UEFA',
@@ -924,8 +983,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Armenia': {
     id: v1(),
-    name: ['Armenia'],
-    flag: [flagArmenia],
+    name: [
+      {title: 'Armenia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagArmenia, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsArmenia,
     associationIcon: iconArmenia,
     confederation: 'UEFA',
@@ -951,8 +1014,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Austria': {
     id: v1(),
-    name: ['Austria'],
-    flag: [flagAustria],
+    name: [
+      {title: 'Austria', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagAustria, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsAustria,
     associationIcon: iconAustria,
     confederation: 'UEFA',
@@ -978,8 +1045,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Azerbaijan': {
     id: v1(),
-    name: ['Azerbaijan'],
-    flag: [flagAzerbaijan],
+    name: [
+      {title: 'Azerbaijan', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagAzerbaijan, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsAzerbaijan,
     associationIcon: iconAzerbaijan,
     confederation: 'UEFA',
@@ -1005,8 +1076,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Belarus': {
     id: v1(),
-    name: ['Belarus'],
-    flag: [flagBelarus],
+    name: [
+      {title: 'Belarus', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBelarus, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsBelarus,
     associationIcon: iconBelarus,
     confederation: 'UEFA',
@@ -1032,8 +1107,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Belgium': {
     id: v1(),
-    name: ['Belgium'],
-    flag: [flagBelgium],
+    name: [
+      {title: 'Belgium', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBelgium, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsBelgium,
     associationIcon: iconBelgium,
     confederation: 'UEFA',
@@ -1059,8 +1138,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Bosnia and Herzegovina': {
     id: v1(),
-    name: ['Bosnia and Herzegovina'],
-    flag: [flagBosniaAndHerzegovina],
+    name: [
+      {title: 'Bosnia and Herzegovina', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBosniaAndHerzegovina, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsBosniaAndHerzegovina,
     associationIcon: iconBosniaAndHerzegovina,
     confederation: 'UEFA',
@@ -1086,8 +1169,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Bulgaria': {
     id: v1(),
-    name: ['Bulgaria'],
-    flag: [flagBulgaria],
+    name: [
+      {title: 'Bulgaria', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBulgaria, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsBulgaria,
     associationIcon: iconBulgaria,
     confederation: 'UEFA',
@@ -1113,8 +1200,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Croatia': {
     id: v1(),
-    name: ['Croatia'],
-    flag: [flagCroatia],
+    name: [
+      {title: 'Croatia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagCroatia, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsCroatia,
     associationIcon: iconCroatia,
     confederation: 'UEFA',
@@ -1140,8 +1231,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Cyprus': {
     id: v1(),
-    name: ['Cyprus'],
-    flag: [flagCyprus],
+    name: [
+      {title: 'Cyprus', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagCyprus, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsCyprus,
     associationIcon: iconCyprus,
     confederation: 'UEFA',
@@ -1167,8 +1262,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Czech Republic': {
     id: v1(),
-    name: ['Czech Republic'],
-    flag: [flagCzechRepublic],
+    name: [
+      {title: 'Czech Republic', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagCzechRepublic, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsCzechRepublic,
     associationIcon: iconCzechRepublic,
     confederation: 'UEFA',
@@ -1194,8 +1293,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Denmark': {
     id: v1(),
-    name: ['Denmark'],
-    flag: [flagDenmark],
+    name: [
+      {title: 'Denmark', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagDenmark, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsDenmark,
     associationIcon: iconDenmark,
     confederation: 'UEFA',
@@ -1221,8 +1324,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Estonia': {
     id: v1(),
-    name: ['Estonia'],
-    flag: [flagEstonia],
+    name: [
+      {title: 'Estonia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagEstonia, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsEstonia,
     associationIcon: iconEstonia,
     confederation: 'UEFA',
@@ -1248,8 +1355,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Faroe Islands': {
     id: v1(),
-    name: ['Faroe Islands'],
-    flag: [flagFaroeIslands],
+    name: [
+      {title: 'Faroe Islands', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagFaroeIslands, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsFaroeIslands,
     associationIcon: iconFaroeIslands,
     confederation: 'UEFA',
@@ -1275,8 +1386,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Finland': {
     id: v1(),
-    name: ['Finland'],
-    flag: [flagFinland],
+    name: [
+      {title: 'Finland', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagFinland, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsFinland,
     associationIcon: iconFinland,
     confederation: 'UEFA',
@@ -1302,8 +1417,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Greece': {
     id: v1(),
-    name: ['Greece'],
-    flag: [flagGreece],
+    name: [
+      {title: 'Greece', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagGreece, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsGreece,
     associationIcon: iconGreece,
     confederation: 'UEFA',
@@ -1329,8 +1448,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Gibraltar': {
     id: v1(),
-    name: ['Gibraltar'],
-    flag: [flagGibraltar],
+    name: [
+      {title: 'Gibraltar', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagGibraltar, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsGibraltar,
     associationIcon: iconGibraltar,
     confederation: 'UEFA',
@@ -1356,8 +1479,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Georgia': {
     id: v1(),
-    name: ['Georgia'],
-    flag: [flagGeorgia],
+    name: [
+      {title: 'Georgia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagGeorgia, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsGeorgia,
     associationIcon: iconGeorgia,
     confederation: 'UEFA',
@@ -1383,8 +1510,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Hungary': {
     id: v1(),
-    name: ['Hungary'],
-    flag: [flagHungary],
+    name: [
+      {title: 'Hungary', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagHungary, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsHungary,
     associationIcon: iconHungary,
     confederation: 'UEFA',
@@ -1410,8 +1541,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Iceland': {
     id: v1(),
-    name: ['Iceland'],
-    flag: [flagIceland],
+    name: [
+      {title: 'Iceland', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagIceland, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsIceland,
     associationIcon: iconIceland,
     confederation: 'UEFA',
@@ -1437,8 +1572,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Israel': {
     id: v1(),
-    name: ['Israel'],
-    flag: [flagIsrael],
+    name: [
+      {title: 'Israel', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagIsrael, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsIsrael,
     associationIcon: iconIsrael,
     confederation: 'UEFA',
@@ -1464,8 +1603,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Kazakhstan': {
     id: v1(),
-    name: ['Kazakhstan'],
-    flag: [flagKazakhstan],
+    name: [
+      {title: 'Kazakhstan', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagKazakhstan, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsKazakhstan,
     associationIcon: iconKazakhstan,
     confederation: 'UEFA',
@@ -1491,8 +1634,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Kosovo': {
     id: v1(),
-    name: ['Kosovo'],
-    flag: [flagKosovo],
+    name: [
+      {title: 'Kosovo', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagKosovo, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsKosovo,
     associationIcon: iconKosovo,
     confederation: 'UEFA',
@@ -1518,8 +1665,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Latvia': {
     id: v1(),
-    name: ['Latvia'],
-    flag: [flagLatvia],
+    name: [
+      {title: 'Latvia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagLatvia, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsLatvia,
     associationIcon: iconLatvia,
     confederation: 'UEFA',
@@ -1545,8 +1696,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Liechtenstein': {
     id: v1(),
-    name: ['Liechtenstein'],
-    flag: [flagLiechtenstein],
+    name: [
+      {title: 'Liechtenstein', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagLiechtenstein, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsLiechtenstein,
     associationIcon: iconLiechtenstein,
     confederation: 'UEFA',
@@ -1572,8 +1727,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Lithuania': {
     id: v1(),
-    name: ['Lithuania'],
-    flag: [flagLithuania],
+    name: [
+      {title: 'Lithuania', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagLithuania, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsLithuania,
     associationIcon: iconLithuania,
     confederation: 'UEFA',
@@ -1599,8 +1758,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Luxembourg': {
     id: v1(),
-    name: ['Luxembourg'],
-    flag: [flagLuxembourg],
+    name: [
+      {title: 'Luxembourg', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagLuxembourg, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsLuxembourg,
     associationIcon: iconLuxembourg,
     confederation: 'UEFA',
@@ -1626,8 +1789,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Malta': {
     id: v1(),
-    name: ['Malta'],
-    flag: [flagMalta],
+    name: [
+      {title: 'Malta', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMalta, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsMalta,
     associationIcon: iconMalta,
     confederation: 'UEFA',
@@ -1653,8 +1820,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Moldova': {
     id: v1(),
-    name: ['Moldova'],
-    flag: [flagMoldova],
+    name: [
+      {title: 'Moldova', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMoldova, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsMoldova,
     associationIcon: iconMoldova,
     confederation: 'UEFA',
@@ -1680,8 +1851,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Montenegro': {
     id: v1(),
-    name: ['Montenegro'],
-    flag: [flagMontenegro],
+    name: [
+      {title: 'Montenegro', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMontenegro, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsMontenegro,
     associationIcon: iconMontenegro,
     confederation: 'UEFA',
@@ -1707,8 +1882,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Netherlands': {
     id: v1(),
-    name: ['Netherlands'],
-    flag: [flagNetherlands],
+    name: [
+      {title: 'Netherlands', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagNetherlands, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsNetherlands,
     associationIcon: iconNetherlands,
     confederation: 'UEFA',
@@ -1734,8 +1913,12 @@ export const nationalTeams: NationalTeams = {
   },
   'North Macedonia': {
     id: v1(),
-    name: ['North Macedonia'],
-    flag: [flagNorthMacedonia],
+    name: [
+      {title: 'North Macedonia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagNorthMacedonia, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsNorthMacedonia,
     associationIcon: iconNorthMacedonia,
     confederation: 'UEFA',
@@ -1761,8 +1944,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Northern Ireland': {
     id: v1(),
-    name: ['Northern Ireland'],
-    flag: [flagNorthernIreland],
+    name: [
+      {title: 'Northern Ireland', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagNorthernIreland, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsNorthernIreland,
     associationIcon: iconNorthernIreland,
     confederation: 'UEFA',
@@ -1788,8 +1975,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Norway': {
     id: v1(),
-    name: ['Norway'],
-    flag: [flagNorway],
+    name: [
+      {title: 'Norway', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagNorway, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsNorway,
     associationIcon: iconNorway,
     confederation: 'UEFA',
@@ -1815,8 +2006,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Poland': {
     id: v1(),
-    name: ['Poland'],
-    flag: [flagPoland],
+    name: [
+      {title: 'Poland', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagPoland, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsPoland,
     associationIcon: iconPoland,
     confederation: 'UEFA',
@@ -1842,8 +2037,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Portugal': {
     id: v1(),
-    name: ['Portugal'],
-    flag: [flagPortugal],
+    name: [
+      {title: 'Portugal', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagPortugal, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsPortugal,
     associationIcon: iconPortugal,
     confederation: 'UEFA',
@@ -1869,8 +2068,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Republic of Ireland': {
     id: v1(),
-    name: ['Republic of Ireland'],
-    flag: [flagRepublicOfIreland],
+    name: [
+      {title: 'Republic of Ireland', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagRepublicOfIreland, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsRepublicOfIreland,
     associationIcon: iconRepublicOfIreland,
     confederation: 'UEFA',
@@ -1896,8 +2099,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Romania': {
     id: v1(),
-    name: ['Romania'],
-    flag: [flagRomania],
+    name: [
+      {title: 'Romania', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagRomania, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsRomania,
     associationIcon: iconRomania,
     confederation: 'UEFA',
@@ -1923,8 +2130,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Russia': {
     id: v1(),
-    name: ['Russia'],
-    flag: [flagRussia],
+    name: [
+      {title: 'Russia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagRussia, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsRussia,
     associationIcon: iconRussia,
     confederation: 'UEFA',
@@ -1950,8 +2161,12 @@ export const nationalTeams: NationalTeams = {
   },
   'San Marino': {
     id: v1(),
-    name: ['San Marino'],
-    flag: [flagSanMarino],
+    name: [
+      {title: 'San Marino', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSanMarino, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsSanMarino,
     associationIcon: iconSanMarino,
     confederation: 'UEFA',
@@ -1977,8 +2192,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Scotland': {
     id: v1(),
-    name: ['Scotland'],
-    flag: [flagScotland],
+    name: [
+      {title: 'Scotland', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagScotland, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsScotland,
     associationIcon: iconScotland,
     confederation: 'UEFA',
@@ -2004,8 +2223,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Serbia': {
     id: v1(),
-    name: ['Serbia'],
-    flag: [flagSerbia],
+    name: [
+      {title: 'Serbia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSerbia, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsSerbia,
     associationIcon: iconSerbia,
     confederation: 'UEFA',
@@ -2031,8 +2254,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Slovakia': {
     id: v1(),
-    name: ['Slovakia'],
-    flag: [flagSlovakia],
+    name: [
+      {title: 'Slovakia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSlovakia, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsSlovakia,
     associationIcon: iconSlovakia,
     confederation: 'UEFA',
@@ -2058,8 +2285,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Slovenia': {
     id: v1(),
-    name: ['Slovenia'],
-    flag: [flagSlovenia],
+    name: [
+      {title: 'Slovenia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSlovenia, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsSlovenia,
     associationIcon: iconSlovenia,
     confederation: 'UEFA',
@@ -2085,8 +2316,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Sweden': {
     id: v1(),
-    name: ['Sweden'],
-    flag: [flagSweden],
+    name: [
+      {title: 'Sweden', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSweden, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsSweden,
     associationIcon: iconSweden,
     confederation: 'UEFA',
@@ -2112,8 +2347,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Switzerland': {
     id: v1(),
-    name: ['Switzerland'],
-    flag: [flagSwitzerland],
+    name: [
+      {title: 'Switzerland', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSwitzerland, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsSwitzerland,
     associationIcon: iconSwitzerland,
     confederation: 'UEFA',
@@ -2139,8 +2378,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Turkey': {
     id: v1(),
-    name: ['Turkey'],
-    flag: [flagTurkey],
+    name: [
+      {title: 'Turkey', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagTurkey, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsTurkey,
     associationIcon: iconTurkey,
     confederation: 'UEFA',
@@ -2166,8 +2409,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Ukraine': {
     id: v1(),
-    name: ['Ukraine'],
-    flag: [flagUkraine],
+    name: [
+      {title: 'Ukraine', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagUkraine, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsUkraine,
     associationIcon: iconUkraine,
     confederation: 'UEFA',
@@ -2193,8 +2440,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Wales': {
     id: v1(),
-    name: ['Wales'],
-    flag: [flagWales],
+    name: [
+      {title: 'Wales', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagWales, period: '0000-p.t.'}
+    ],
     coatOfArms: coatOfArmsWales,
     associationIcon: iconWales,
     confederation: 'UEFA',
@@ -2218,10 +2469,46 @@ export const nationalTeams: NationalTeams = {
       },
     }
   },
+  'Yugoslavia': {
+    id: v1(),
+    name: [
+      {title: 'Yugoslavia', period: '1918-1992'},
+    ],
+    flag: [
+      {title: flagYugoslavia, period: '1918-1944, 1992-2006'},
+      {title: flagYugoslavia1, period: '1945-1992'}
+    ],
+    coatOfArms: '',
+    associationIcon: '',
+    confederation: 'UEFA',
+    confederationIcon: iconUefa,
+    associationDate: {
+      founded: 0,
+      fifaAffiliation: 0,
+      confederationAffiliation: 0,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    }
+  },
   'Algeria': {
     id: v1(),
-    name: ['Algeria'],
-    flag: [flagAlgeria],
+    name: [
+      {title: 'Algeria', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagAlgeria, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsAlgeria,
     associationIcon: iconAlgeria,
     confederation: 'CAF',
@@ -2247,8 +2534,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Egypt': {
     id: v1(),
-    name: ['Egypt'],
-    flag: [flagEgypt],
+    name: [
+      {title: 'Egypt', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagEgypt, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsEgypt,
     associationIcon: iconEgypt,
     confederation: 'CAF',
@@ -2274,8 +2565,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Libya': {
     id: v1(),
-    name: ['Libya'],
-    flag: [flagLibya],
+    name: [
+      {title: 'Libya', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagLibya, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsLibya,
     associationIcon: iconLibya,
     confederation: 'CAF',
@@ -2301,8 +2596,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Morocco': {
     id: v1(),
-    name: ['Morocco'],
-    flag: [flagMorocco],
+    name: [
+      {title: 'Morocco', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMorocco, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMorocco,
     associationIcon: iconMorocco,
     confederation: 'CAF',
@@ -2328,8 +2627,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Tunisia': {
     id: v1(),
-    name: ['Tunisia'],
-    flag: [flagTunisia],
+    name: [
+      {title: 'Tunisia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagTunisia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsTunisia,
     associationIcon: iconTunisia,
     confederation: 'CAF',
@@ -2355,8 +2658,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Benin': {
     id: v1(),
-    name: ['Benin'],
-    flag: [flagBenin],
+    name: [
+      {title: 'Benin', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBenin, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBenin,
     associationIcon: iconBenin,
     confederation: 'CAF',
@@ -2382,8 +2689,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Burkina Faso': {
     id: v1(),
-    name: ['Burkina Faso'],
-    flag: [flagBurkinaFaso],
+    name: [
+      {title: 'Burkina Faso', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBurkinaFaso, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBurkinaFaso,
     associationIcon: iconBurkinaFaso,
     confederation: 'CAF',
@@ -2409,8 +2720,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Cape Verde': {
     id: v1(),
-    name: ['Cape Verde'],
-    flag: [flagCapeVerde],
+    name: [
+      {title: 'Cape Verde', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagCapeVerde, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsCapeVerde,
     associationIcon: iconCapeVerde,
     confederation: 'CAF',
@@ -2436,8 +2751,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Gambia': {
     id: v1(),
-    name: ['Gambia'],
-    flag: [flagGambia],
+    name: [
+      {title: 'Gambia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagGambia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsGambia,
     associationIcon: iconGambia,
     confederation: 'CAF',
@@ -2463,8 +2782,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Ghana': {
     id: v1(),
-    name: ['Ghana'],
-    flag: [flagGhana],
+    name: [
+      {title: 'Ghana', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagGhana, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsGhana,
     associationIcon: iconGhana,
     confederation: 'CAF',
@@ -2490,8 +2813,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Guinea': {
     id: v1(),
-    name: ['Guinea'],
-    flag: [flagGuinea],
+    name: [
+      {title: 'Guinea', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagGuinea, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsGuinea,
     associationIcon: iconGuinea,
     confederation: 'CAF',
@@ -2517,8 +2844,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Guinea-Bissau': {
     id: v1(),
-    name: ['Guinea-Bissau'],
-    flag: [flagGuineaBissau],
+    name: [
+      {title: 'Guinea-Bissau', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagGuineaBissau, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsGuineaBissau,
     associationIcon: iconGuineaBissau,
     confederation: 'CAF',
@@ -2544,8 +2875,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Ivory Coast': {
     id: v1(),
-    name: ['Ivory Coast'],
-    flag: [flagIvoryCoast],
+    name: [
+      {title: 'Ivory Coast', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagIvoryCoast, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsIvoryCoast,
     associationIcon: iconIvoryCoast,
     confederation: 'CAF',
@@ -2571,8 +2906,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Liberia': {
     id: v1(),
-    name: ['Liberia'],
-    flag: [flagLiberia],
+    name: [
+      {title: 'Liberia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagLiberia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsLiberia,
     associationIcon: iconLiberia,
     confederation: 'CAF',
@@ -2598,8 +2937,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Mali': {
     id: v1(),
-    name: ['Mali'],
-    flag: [flagMali],
+    name: [
+      {title: 'Mali', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMali, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMali,
     associationIcon: iconMali,
     confederation: 'CAF',
@@ -2625,8 +2968,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Mauritania': {
     id: v1(),
-    name: ['Mauritania'],
-    flag: [flagMauritania],
+    name: [
+      {title: 'Mauritania', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMauritania, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMauritania,
     associationIcon: iconMauritania,
     confederation: 'CAF',
@@ -2652,8 +2999,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Niger': {
     id: v1(),
-    name: ['Niger'],
-    flag: [flagNiger],
+    name: [
+      {title: 'Niger', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagNiger, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsNiger,
     associationIcon: iconNiger,
     confederation: 'CAF',
@@ -2679,8 +3030,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Nigeria': {
     id: v1(),
-    name: ['Nigeria'],
-    flag: [flagNigeria],
+    name: [
+      {title: 'Nigeria', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagNigeria, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsNigeria,
     associationIcon: iconNigeria,
     confederation: 'CAF',
@@ -2706,8 +3061,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Senegal': {
     id: v1(),
-    name: ['Senegal'],
-    flag: [flagSenegal],
+    name: [
+      {title: 'Senegal', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSenegal, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSenegal,
     associationIcon: iconSenegal,
     confederation: 'CAF',
@@ -2733,8 +3092,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Sierra Leone': {
     id: v1(),
-    name: ['Sierra Leone'],
-    flag: [flagSierraLeone],
+    name: [
+      {title: 'Sierra Leone', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSierraLeone, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSierraLeone,
     associationIcon: iconSierraLeone,
     confederation: 'CAF',
@@ -2760,8 +3123,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Togo': {
     id: v1(),
-    name: ['Togo'],
-    flag: [flagTogo],
+    name: [
+      {title: 'Togo', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagTogo, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsTogo,
     associationIcon: iconTogo,
     confederation: 'CAF',
@@ -2787,8 +3154,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Cameroon': {
     id: v1(),
-    name: ['Cameroon'],
-    flag: [flagCameroon],
+    name: [
+      {title: 'Cameroon', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagCameroon, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsCameroon,
     associationIcon: iconCameroon,
     confederation: 'CAF',
@@ -2814,8 +3185,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Central African Republic': {
     id: v1(),
-    name: ['Central African Republic'],
-    flag: [flagCentralAfricanRepublic],
+    name: [
+      {title: 'Central African Republic', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagCentralAfricanRepublic, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsCentralAfricanRepublic,
     associationIcon: iconCentralAfricanRepublic,
     confederation: 'CAF',
@@ -2841,8 +3216,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Chad': {
     id: v1(),
-    name: ['Chad'],
-    flag: [flagChad],
+    name: [
+      {title: 'Chad', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagChad, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsChad,
     associationIcon: iconChad,
     confederation: 'CAF',
@@ -2868,8 +3247,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Congo': {
     id: v1(),
-    name: ['Congo'],
-    flag: [flagCongo],
+    name: [
+      {title: 'Congo', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagCongo, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsCongo,
     associationIcon: iconCongo,
     confederation: 'CAF',
@@ -2895,8 +3278,12 @@ export const nationalTeams: NationalTeams = {
   },
   'DR Congo': {
     id: v1(),
-    name: ['DR Congo'],
-    flag: [flagDRCongo],
+    name: [
+      {title: 'DR Congo', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagDRCongo, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsDRCongo,
     associationIcon: iconDRCongo,
     confederation: 'CAF',
@@ -2922,8 +3309,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Equatorial Guinea': {
     id: v1(),
-    name: ['Equatorial Guinea'],
-    flag: [flagEquatorialGuinea],
+    name: [
+      {title: 'Equatorial Guinea', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagEquatorialGuinea, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsEquatorialGuinea,
     associationIcon: iconEquatorialGuinea,
     confederation: 'CAF',
@@ -2949,8 +3340,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Gabon': {
     id: v1(),
-    name: ['Gabon'],
-    flag: [flagGabon],
+    name: [
+      {title: 'Gabon', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagGabon, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsGabon,
     associationIcon: iconGabon,
     confederation: 'CAF',
@@ -2976,8 +3371,12 @@ export const nationalTeams: NationalTeams = {
   },
   'São Tomé and Príncipe': {
     id: v1(),
-    name: ['São Tomé and Príncipe'],
-    flag: [flagSãoToméAndPríncipe],
+    name: [
+      {title: 'São Tomé and Príncipe', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSãoToméAndPríncipe, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSãoToméAndPríncipe,
     associationIcon: iconSãoToméAndPríncipe,
     confederation: 'CAF',
@@ -3003,8 +3402,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Burundi': {
     id: v1(),
-    name: ['Burundi'],
-    flag: [flagGabon],
+    name: [
+      {title: 'Burundi', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBurundi, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBurundi,
     associationIcon: iconBurundi,
     confederation: 'CAF',
@@ -3030,8 +3433,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Djibouti': {
     id: v1(),
-    name: ['Djibouti'],
-    flag: [flagDjibouti],
+    name: [
+      {title: 'Djibouti', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagDjibouti, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsDjibouti,
     associationIcon: iconDjibouti,
     confederation: 'CAF',
@@ -3057,8 +3464,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Eritrea': {
     id: v1(),
-    name: ['Eritrea'],
-    flag: [flagEritrea],
+    name: [
+      {title: 'Eritrea', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagEritrea, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsEritrea,
     associationIcon: iconEritrea,
     confederation: 'CAF',
@@ -3084,8 +3495,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Ethiopia': {
     id: v1(),
-    name: ['Ethiopia'],
-    flag: [flagEthiopia],
+    name: [
+      {title: 'Ethiopia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagEthiopia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsEthiopia,
     associationIcon: iconEthiopia,
     confederation: 'CAF',
@@ -3111,8 +3526,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Kenya': {
     id: v1(),
-    name: ['Kenya'],
-    flag: [flagKenya],
+    name: [
+      {title: 'Kenya', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagKenya, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsKenya,
     associationIcon: iconKenya,
     confederation: 'CAF',
@@ -3138,8 +3557,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Rwanda': {
     id: v1(),
-    name: ['Rwanda'],
-    flag: [flagRwanda],
+    name: [
+      {title: 'Rwanda', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagRwanda, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsRwanda,
     associationIcon: iconRwanda,
     confederation: 'CAF',
@@ -3165,8 +3588,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Somalia': {
     id: v1(),
-    name: ['Somalia'],
-    flag: [flagSomalia],
+    name: [
+      {title: 'Somalia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSomalia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSomalia,
     associationIcon: iconSomalia,
     confederation: 'CAF',
@@ -3192,8 +3619,12 @@ export const nationalTeams: NationalTeams = {
   },
   'South Sudan': {
     id: v1(),
-    name: ['South Sudan'],
-    flag: [flagSouthSudan],
+    name: [
+      {title: 'South Sudan', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSouthSudan, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSouthSudan,
     associationIcon: iconSouthSudan,
     confederation: 'CAF',
@@ -3219,8 +3650,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Sudan': {
     id: v1(),
-    name: ['Sudan'],
-    flag: [flagSudan],
+    name: [
+      {title: 'Sudan', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSudan, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSudan,
     associationIcon: iconSudan,
     confederation: 'CAF',
@@ -3246,8 +3681,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Tanzania': {
     id: v1(),
-    name: ['Tanzania'],
-    flag: [flagTanzania],
+    name: [
+      {title: 'Tanzania', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagTanzania, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsTanzania,
     associationIcon: iconTanzania,
     confederation: 'CAF',
@@ -3273,8 +3712,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Uganda': {
     id: v1(),
-    name: ['Uganda'],
-    flag: [flagUganda],
+    name: [
+      {title: 'Uganda', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagUganda, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsUganda,
     associationIcon: iconUganda,
     confederation: 'CAF',
@@ -3300,8 +3743,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Zanzibar': {
     id: v1(),
-    name: ['Zanzibar'],
-    flag: [flagZanzibar],
+    name: [
+      {title: 'Zanzibar', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagZanzibar, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsZanzibar,
     associationIcon: iconZanzibar,
     confederation: 'CAF',
@@ -3327,8 +3774,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Angola': {
     id: v1(),
-    name: ['Angola'],
-    flag: [flagAngola],
+    name: [
+      {title: 'Angola', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagAngola, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsAngola,
     associationIcon: iconAngola,
     confederation: 'CAF',
@@ -3354,8 +3805,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Botswana': {
     id: v1(),
-    name: ['Botswana'],
-    flag: [flagBotswana],
+    name: [
+      {title: 'Botswana', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBotswana, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBotswana,
     associationIcon: iconBotswana,
     confederation: 'CAF',
@@ -3381,8 +3836,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Comoros': {
     id: v1(),
-    name: ['Comoros'],
-    flag: [flagComoros],
+    name: [
+      {title: 'Comoros', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagComoros, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsComoros,
     associationIcon: iconComoros,
     confederation: 'CAF',
@@ -3408,8 +3867,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Eswatini': {
     id: v1(),
-    name: ['Eswatini'],
-    flag: [flagEswatini],
+    name: [
+      {title: 'Eswatini', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagEswatini, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsEswatini,
     associationIcon: iconEswatini,
     confederation: 'CAF',
@@ -3435,8 +3898,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Lesotho': {
     id: v1(),
-    name: ['Lesotho'],
-    flag: [flagLesotho],
+    name: [
+      {title: 'Lesotho', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagLesotho, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsLesotho,
     associationIcon: iconLesotho,
     confederation: 'CAF',
@@ -3462,8 +3929,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Madagascar': {
     id: v1(),
-    name: ['Madagascar'],
-    flag: [flagMadagascar],
+    name: [
+      {title: 'Madagascar', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMadagascar, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMadagascar,
     associationIcon: iconMadagascar,
     confederation: 'CAF',
@@ -3489,8 +3960,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Malawi': {
     id: v1(),
-    name: ['Malawi'],
-    flag: [flagMalawi],
+    name: [
+      {title: 'Malawi', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMalawi, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMalawi,
     associationIcon: iconMalawi,
     confederation: 'CAF',
@@ -3516,8 +3991,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Mauritius': {
     id: v1(),
-    name: ['Mauritius'],
-    flag: [flagMauritius],
+    name: [
+      {title: 'Mauritius', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMauritius, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMauritius,
     associationIcon: iconMauritius,
     confederation: 'CAF',
@@ -3543,8 +4022,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Mozambique': {
     id: v1(),
-    name: ['Mozambique'],
-    flag: [flagMozambique],
+    name: [
+      {title: 'Mozambique', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMozambique, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMozambique,
     associationIcon: iconMozambique,
     confederation: 'CAF',
@@ -3570,8 +4053,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Namibia': {
     id: v1(),
-    name: ['Namibia'],
-    flag: [flagNamibia],
+    name: [
+      {title: 'Namibia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagNamibia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsNamibia,
     associationIcon: iconNamibia,
     confederation: 'CAF',
@@ -3597,8 +4084,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Seychelles': {
     id: v1(),
-    name: ['Seychelles'],
-    flag: [flagSeychelles],
+    name: [
+      {title: 'Seychelles', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSeychelles, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSeychelles,
     associationIcon: iconSeychelles,
     confederation: 'CAF',
@@ -3624,8 +4115,12 @@ export const nationalTeams: NationalTeams = {
   },
   'South Africa': {
     id: v1(),
-    name: ['South Africa'],
-    flag: [flagSouthAfrica],
+    name: [
+      {title: 'South Africa', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSouthAfrica, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSouthAfrica,
     associationIcon: iconSouthAfrica,
     confederation: 'CAF',
@@ -3651,8 +4146,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Zambia': {
     id: v1(),
-    name: ['Zambia'],
-    flag: [flagZambia],
+    name: [
+      {title: 'Zambia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagZambia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsZambia,
     associationIcon: iconZambia,
     confederation: 'CAF',
@@ -3678,8 +4177,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Zimbabwe': {
     id: v1(),
-    name: ['Zimbabwe'],
-    flag: [flagZimbabwe],
+    name: [
+      {title: 'Zimbabwe', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagZimbabwe, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsZimbabwe,
     associationIcon: iconZimbabwe,
     confederation: 'CAF',
@@ -3705,8 +4208,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Reunion': {
     id: v1(),
-    name: ['Reunion'],
-    flag: [flagReunion],
+    name: [
+      {title: 'Reunion', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagReunion, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsReunion,
     associationIcon: iconReunion,
     confederation: 'CAF',
@@ -3732,8 +4239,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Australia': {
     id: v1(),
-    name: ['Australia'],
-    flag: [flagAustralia],
+    name: [
+      {title: 'Australia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagAustralia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsAustralia,
     associationIcon: iconAustralia,
     confederation: 'AFC',
@@ -3759,8 +4270,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Brunei': {
     id: v1(),
-    name: ['Brunei'],
-    flag: [flagBrunei],
+    name: [
+      {title: 'Brunei', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBrunei, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBrunei,
     associationIcon: iconBrunei,
     confederation: 'AFC',
@@ -3786,8 +4301,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Cambodia': {
     id: v1(),
-    name: ['Cambodia'],
-    flag: [flagCambodia],
+    name: [
+      {title: 'Cambodia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagCambodia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsCambodia,
     associationIcon: iconCambodia,
     confederation: 'AFC',
@@ -3813,8 +4332,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Timor-Leste': {
     id: v1(),
-    name: ['Timor-Leste'],
-    flag: [flagTimorLeste],
+    name: [
+      {title: 'Timor-Leste', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagTimorLeste, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsTimorLeste,
     associationIcon: iconTimorLeste,
     confederation: 'AFC',
@@ -3840,8 +4363,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Indonesia': {
     id: v1(),
-    name: ['Indonesia'],
-    flag: [flagIndonesia],
+    name: [
+      {title: 'Indonesia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagIndonesia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsIndonesia,
     associationIcon: iconIndonesia,
     confederation: 'AFC',
@@ -3867,8 +4394,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Laos': {
     id: v1(),
-    name: ['Laos'],
-    flag: [flagLaos],
+    name: [
+      {title: 'Laos', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagLaos, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsLaos,
     associationIcon: iconLaos,
     confederation: 'AFC',
@@ -3894,8 +4425,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Malaysia': {
     id: v1(),
-    name: ['Malaysia'],
-    flag: [flagMalaysia],
+    name: [
+      {title: 'Malaysia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMalaysia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMalaysia,
     associationIcon: iconMalaysia,
     confederation: 'AFC',
@@ -3921,8 +4456,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Myanmar': {
     id: v1(),
-    name: ['Myanmar'],
-    flag: [flagMyanmar],
+    name: [
+      {title: 'Myanmar', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMyanmar, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMyanmar,
     associationIcon: iconMyanmar,
     confederation: 'AFC',
@@ -3948,8 +4487,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Philippines': {
     id: v1(),
-    name: ['Philippines'],
-    flag: [flagPhilippines],
+    name: [
+      {title: 'Philippines', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagPhilippines, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsPhilippines,
     associationIcon: iconPhilippines,
     confederation: 'AFC',
@@ -3975,8 +4518,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Singapore': {
     id: v1(),
-    name: ['Singapore'],
-    flag: [flagSingapore],
+    name: [
+      {title: 'Singapore', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSingapore, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSingapore,
     associationIcon: iconSingapore,
     confederation: 'AFC',
@@ -4002,8 +4549,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Thailand': {
     id: v1(),
-    name: ['Thailand'],
-    flag: [flagThailand],
+    name: [
+      {title: 'Thailand', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagThailand, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsThailand,
     associationIcon: iconThailand,
     confederation: 'AFC',
@@ -4029,8 +4580,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Vietnam': {
     id: v1(),
-    name: ['Vietnam'],
-    flag: [flagVietnam],
+    name: [
+      {title: 'Vietnam', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagVietnam, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsVietnam,
     associationIcon: iconVietnam,
     confederation: 'AFC',
@@ -4056,8 +4611,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Afghanistan': {
     id: v1(),
-    name: ['Afghanistan'],
-    flag: [flagAfghanistan],
+    name: [
+      {title: 'Afghanistan', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagAfghanistan, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsAfghanistan,
     associationIcon: iconAfghanistan,
     confederation: 'AFC',
@@ -4083,8 +4642,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Iran': {
     id: v1(),
-    name: ['Iran'],
-    flag: [flagIran],
+    name: [
+      {title: 'Iran', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagIran, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsIran,
     associationIcon: iconIran,
     confederation: 'AFC',
@@ -4110,8 +4673,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Kyrgyz Republic': {
     id: v1(),
-    name: ['Kyrgyz Republic'],
-    flag: [flagKyrgyzRepublic],
+    name: [
+      {title: 'Kyrgyz Republic', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagKyrgyzRepublic, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsKyrgyzRepublic,
     associationIcon: iconKyrgyzRepublic,
     confederation: 'AFC',
@@ -4137,8 +4704,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Tajikistan': {
     id: v1(),
-    name: ['Tajikistan'],
-    flag: [flagTajikistan],
+    name: [
+      {title: 'Tajikistan', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagTajikistan, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsTajikistan,
     associationIcon: iconTajikistan,
     confederation: 'AFC',
@@ -4164,8 +4735,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Turkmenistan': {
     id: v1(),
-    name: ['Turkmenistan'],
-    flag: [flagTurkmenistan],
+    name: [
+      {title: 'Turkmenistan', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagTurkmenistan, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsTurkmenistan,
     associationIcon: iconTurkmenistan,
     confederation: 'AFC',
@@ -4191,8 +4766,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Uzbekistan': {
     id: v1(),
-    name: ['Uzbekistan'],
-    flag: [flagUzbekistan],
+    name: [
+      {title: 'Uzbekistan', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagUzbekistan, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsUzbekistan,
     associationIcon: iconUzbekistan,
     confederation: 'AFC',
@@ -4218,8 +4797,12 @@ export const nationalTeams: NationalTeams = {
   },
   'China': {
     id: v1(),
-    name: ['China'],
-    flag: [flagChina],
+    name: [
+      {title: 'China', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagChina, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsChina,
     associationIcon: iconChina,
     confederation: 'AFC',
@@ -4245,8 +4828,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Taiwan': {
     id: v1(),
-    name: ['Taiwan'],
-    flag: [flagTaiwan],
+    name: [
+      {title: 'Taiwan', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagTaiwan, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsTaiwan,
     associationIcon: iconTaiwan,
     confederation: 'AFC',
@@ -4272,8 +4859,12 @@ export const nationalTeams: NationalTeams = {
   },
   'DPR Korea': {
     id: v1(),
-    name: ['DPR Korea'],
-    flag: [flagDPRKorea],
+    name: [
+      {title: 'DPR Korea', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagDPRKorea, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsDPRKorea,
     associationIcon: iconDPRKorea,
     confederation: 'AFC',
@@ -4299,8 +4890,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Guam': {
     id: v1(),
-    name: ['Guam'],
-    flag: [flagGuam],
+    name: [
+      {title: 'Guam', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagGuam, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsGuam,
     associationIcon: iconGuam,
     confederation: 'AFC',
@@ -4326,8 +4921,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Hong Kong': {
     id: v1(),
-    name: ['Hong Kong'],
-    flag: [flagHongKong],
+    name: [
+      {title: 'Hong Kong', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagHongKong, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsHongKong,
     associationIcon: iconHongKong,
     confederation: 'AFC',
@@ -4353,8 +4952,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Japan': {
     id: v1(),
-    name: ['Japan'],
-    flag: [flagJapan],
+    name: [
+      {title: 'Japan', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagJapan, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsJapan,
     associationIcon: iconJapan,
     confederation: 'AFC',
@@ -4380,8 +4983,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Korea Republic': {
     id: v1(),
-    name: ['Korea Republic'],
-    flag: [flagKoreaRepublic],
+    name: [
+      {title: 'Korea Republic', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagKoreaRepublic, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsKoreaRepublic,
     associationIcon: iconKoreaRepublic,
     confederation: 'AFC',
@@ -4407,8 +5014,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Macau': {
     id: v1(),
-    name: ['Macau'],
-    flag: [flagMacau],
+    name: [
+      {title: 'Macau', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMacau, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMacau,
     associationIcon: iconMacau,
     confederation: 'AFC',
@@ -4434,8 +5045,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Mongolia': {
     id: v1(),
-    name: ['Mongolia'],
-    flag: [flagMongolia],
+    name: [
+      {title: 'Mongolia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMongolia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMongolia,
     associationIcon: iconMongolia,
     confederation: 'AFC',
@@ -4461,8 +5076,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Northern Mariana Islands': {
     id: v1(),
-    name: ['Northern Mariana Islands'],
-    flag: [flagNorthernMarianaIslands],
+    name: [
+      {title: 'Northern Mariana Islands', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagNorthernMarianaIslands, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsNorthernMarianaIslands,
     associationIcon: iconNorthernMarianaIslands,
     confederation: 'AFC',
@@ -4488,8 +5107,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Bangladesh': {
     id: v1(),
-    name: ['Bangladesh'],
-    flag: [flagBangladesh],
+    name: [
+      {title: 'Bangladesh', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBangladesh, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBangladesh,
     associationIcon: iconBangladesh,
     confederation: 'AFC',
@@ -4515,8 +5138,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Bhutan': {
     id: v1(),
-    name: ['Bhutan'],
-    flag: [flagBhutan],
+    name: [
+      {title: 'Bhutan', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBhutan, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBhutan,
     associationIcon: iconBhutan,
     confederation: 'AFC',
@@ -4542,8 +5169,12 @@ export const nationalTeams: NationalTeams = {
   },
   'India': {
     id: v1(),
-    name: ['India'],
-    flag: [flagIndia],
+    name: [
+      {title: 'India', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagIndia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsIndia,
     associationIcon: iconIndia,
     confederation: 'AFC',
@@ -4569,8 +5200,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Maldives': {
     id: v1(),
-    name: ['Maldives'],
-    flag: [flagMaldives],
+    name: [
+      {title: 'Maldives', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMaldives, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMaldives,
     associationIcon: iconMaldives,
     confederation: 'AFC',
@@ -4596,8 +5231,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Nepal': {
     id: v1(),
-    name: ['Nepal'],
-    flag: [flagNepal],
+    name: [
+      {title: 'Nepal', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagNepal, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsNepal,
     associationIcon: iconNepal,
     confederation: 'AFC',
@@ -4623,8 +5262,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Pakistan': {
     id: v1(),
-    name: ['Pakistan'],
-    flag: [flagPakistan],
+    name: [
+      {title: 'Pakistan', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagPakistan, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsPakistan,
     associationIcon: iconPakistan,
     confederation: 'AFC',
@@ -4650,8 +5293,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Sri Lanka': {
     id: v1(),
-    name: ['Sri Lanka'],
-    flag: [flagSriLanka],
+    name: [
+      {title: 'Sri Lanka', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSriLanka, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSriLanka,
     associationIcon: iconSriLanka,
     confederation: 'AFC',
@@ -4677,8 +5324,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Bahrain': {
     id: v1(),
-    name: ['Bahrain'],
-    flag: [flagBahrain],
+    name: [
+      {title: 'Bahrain', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBahrain, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBahrain,
     associationIcon: iconBahrain,
     confederation: 'AFC',
@@ -4704,8 +5355,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Iraq': {
     id: v1(),
-    name: ['Iraq'],
-    flag: [flagIraq],
+    name: [
+      {title: 'Iraq', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagIraq, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsIraq,
     associationIcon: iconIraq,
     confederation: 'AFC',
@@ -4731,8 +5386,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Jordan': {
     id: v1(),
-    name: ['Jordan'],
-    flag: [flagJordan],
+    name: [
+      {title: 'Jordan', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagJordan, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsJordan,
     associationIcon: iconJordan,
     confederation: 'AFC',
@@ -4758,8 +5417,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Kuwait': {
     id: v1(),
-    name: ['Kuwait'],
-    flag: [flagKuwait],
+    name: [
+      {title: 'Kuwait', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagKuwait, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsKuwait,
     associationIcon: iconKuwait,
     confederation: 'AFC',
@@ -4785,8 +5448,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Lebanon': {
     id: v1(),
-    name: ['Lebanon'],
-    flag: [flagLebanon],
+    name: [
+      {title: 'Lebanon', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagLebanon, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsLebanon,
     associationIcon: iconLebanon,
     confederation: 'AFC',
@@ -4812,8 +5479,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Oman': {
     id: v1(),
-    name: ['Oman'],
-    flag: [flagOman],
+    name: [
+      {title: 'Oman', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagOman, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsOman,
     associationIcon: iconOman,
     confederation: 'AFC',
@@ -4839,8 +5510,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Palestine': {
     id: v1(),
-    name: ['Palestine'],
-    flag: [flagPalestine],
+    name: [
+      {title: 'Palestine', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagPalestine, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsPalestine,
     associationIcon: iconPalestine,
     confederation: 'AFC',
@@ -4866,8 +5541,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Qatar': {
     id: v1(),
-    name: ['Qatar'],
-    flag: [flagQatar],
+    name: [
+      {title: 'Qatar', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagQatar, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsQatar,
     associationIcon: iconQatar,
     confederation: 'AFC',
@@ -4893,8 +5572,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Saudi Arabia': {
     id: v1(),
-    name: ['Saudi Arabia'],
-    flag: [flagSaudiArabia],
+    name: [
+      {title: 'Saudi Arabia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSaudiArabia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSaudiArabia,
     associationIcon: iconSaudiArabia,
     confederation: 'AFC',
@@ -4920,8 +5603,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Syria': {
     id: v1(),
-    name: ['Syria'],
-    flag: [flagSyria],
+    name: [
+      {title: 'Syria', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSyria, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSyria,
     associationIcon: iconSyria,
     confederation: 'AFC',
@@ -4947,8 +5634,12 @@ export const nationalTeams: NationalTeams = {
   },
   'United Arab Emirates': {
     id: v1(),
-    name: ['United Arab Emirates'],
-    flag: [flagUnitedArabEmirates],
+    name: [
+      {title: 'United Arab Emirates', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagUnitedArabEmirates, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsUnitedArabEmirates,
     associationIcon: iconUnitedArabEmirates,
     confederation: 'AFC',
@@ -4974,8 +5665,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Yemen': {
     id: v1(),
-    name: ['Yemen'],
-    flag: [flagYemen],
+    name: [
+      {title: 'Yemen', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagYemen, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsYemen,
     associationIcon: iconYemen,
     confederation: 'AFC',
@@ -5001,8 +5696,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Canada': {
     id: v1(),
-    name: ['Canada'],
-    flag: [flagCanada],
+    name: [
+      {title: 'Canada', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagCanada, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsCanada,
     associationIcon: iconCanada,
     confederation: 'CONCACAF',
@@ -5028,8 +5727,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Mexico': {
     id: v1(),
-    name: ['Mexico'],
-    flag: [flagMexico],
+    name: [
+      {title: 'Mexico', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMexico, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMexico,
     associationIcon: iconMexico,
     confederation: 'CONCACAF',
@@ -5055,8 +5758,12 @@ export const nationalTeams: NationalTeams = {
   },
   'United States': {
     id: v1(),
-    name: ['United States'],
-    flag: [flagUnitedStates],
+    name: [
+      {title: 'United States', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagUnitedStates, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsUnitedStates,
     associationIcon: iconUnitedStates,
     confederation: 'CONCACAF',
@@ -5082,8 +5789,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Belize': {
     id: v1(),
-    name: ['Belize'],
-    flag: [flagBelize],
+    name: [
+      {title: 'Belize', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBelize, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBelize,
     associationIcon: iconBelize,
     confederation: 'CONCACAF',
@@ -5109,8 +5820,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Costa Rica': {
     id: v1(),
-    name: ['Costa Rica'],
-    flag: [flagCostaRica],
+    name: [
+      {title: 'Costa Rica', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagCostaRica, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsCostaRica,
     associationIcon: iconCostaRica,
     confederation: 'CONCACAF',
@@ -5136,8 +5851,12 @@ export const nationalTeams: NationalTeams = {
   },
   'El Salvador': {
     id: v1(),
-    name: ['El Salvador'],
-    flag: [flagElSalvador],
+    name: [
+      {title: 'El Salvador', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagElSalvador, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsElSalvador,
     associationIcon: iconElSalvador,
     confederation: 'CONCACAF',
@@ -5163,8 +5882,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Guatemala': {
     id: v1(),
-    name: ['Guatemala'],
-    flag: [flagGuatemala],
+    name: [
+      {title: 'Guatemala', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagGuatemala, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsGuatemala,
     associationIcon: iconGuatemala,
     confederation: 'CONCACAF',
@@ -5190,8 +5913,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Honduras': {
     id: v1(),
-    name: ['Honduras'],
-    flag: [flagHonduras],
+    name: [
+      {title: 'Honduras', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagHonduras, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsHonduras,
     associationIcon: iconHonduras,
     confederation: 'CONCACAF',
@@ -5217,8 +5944,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Nicaragua': {
     id: v1(),
-    name: ['Nicaragua'],
-    flag: [flagNicaragua],
+    name: [
+      {title: 'Nicaragua', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagNicaragua, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsNicaragua,
     associationIcon: iconNicaragua,
     confederation: 'CONCACAF',
@@ -5244,8 +5975,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Panama': {
     id: v1(),
-    name: ['Panama'],
-    flag: [flagPanama],
+    name: [
+      {title: 'Panama', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagPanama, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsPanama,
     associationIcon: iconPanama,
     confederation: 'CONCACAF',
@@ -5271,8 +6006,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Anguilla': {
     id: v1(),
-    name: ['Anguilla'],
-    flag: [flagAnguilla],
+    name: [
+      {title: 'Anguilla', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagAnguilla, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsAnguilla,
     associationIcon: iconAnguilla,
     confederation: 'CONCACAF',
@@ -5298,8 +6037,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Antigua and Barbuda': {
     id: v1(),
-    name: ['Antigua and Barbuda'],
-    flag: [flagAntiguaAndBarbuda],
+    name: [
+      {title: 'Antigua and Barbuda', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagAntiguaAndBarbuda, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsAntiguaAndBarbuda,
     associationIcon: iconAntiguaAndBarbuda,
     confederation: 'CONCACAF',
@@ -5325,8 +6068,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Aruba': {
     id: v1(),
-    name: ['Aruba'],
-    flag: [flagAruba],
+    name: [
+      {title: 'Aruba', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagAruba, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsAruba,
     associationIcon: iconAruba,
     confederation: 'CONCACAF',
@@ -5352,8 +6099,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Bahamas': {
     id: v1(),
-    name: ['Bahamas'],
-    flag: [flagBahamas],
+    name: [
+      {title: 'Bahamas', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBahamas, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBahamas,
     associationIcon: iconBahamas,
     confederation: 'CONCACAF',
@@ -5379,8 +6130,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Barbados': {
     id: v1(),
-    name: ['Barbados'],
-    flag: [flagBarbados],
+    name: [
+      {title: 'Barbados', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBarbados, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBarbados,
     associationIcon: iconBarbados,
     confederation: 'CONCACAF',
@@ -5406,8 +6161,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Bermuda': {
     id: v1(),
-    name: ['Bermuda'],
-    flag: [flagBermuda],
+    name: [
+      {title: 'Bermuda', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBermuda, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBermuda,
     associationIcon: iconBermuda,
     confederation: 'CONCACAF',
@@ -5433,8 +6192,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Bonaire': {
     id: v1(),
-    name: ['Bonaire'],
-    flag: [flagBonaire],
+    name: [
+      {title: 'Bonaire', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBonaire, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBonaire,
     associationIcon: iconBonaire,
     confederation: 'CONCACAF',
@@ -5460,8 +6223,12 @@ export const nationalTeams: NationalTeams = {
   },
   'British Virgin Islands': {
     id: v1(),
-    name: ['British Virgin Islands'],
-    flag: [flagBritishVirginIslands],
+    name: [
+      {title: 'British Virgin Islands', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBritishVirginIslands, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBritishVirginIslands,
     associationIcon: iconBritishVirginIslands,
     confederation: 'CONCACAF',
@@ -5487,8 +6254,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Cayman Islands': {
     id: v1(),
-    name: ['Cayman Islands'],
-    flag: [flagCaymanIslands],
+    name: [
+      {title: 'Cayman Islands', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagCaymanIslands, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsCaymanIslands,
     associationIcon: iconCaymanIslands,
     confederation: 'CONCACAF',
@@ -5514,8 +6285,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Cuba': {
     id: v1(),
-    name: ['Cuba'],
-    flag: [flagCuba],
+    name: [
+      {title: 'Cuba', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagCuba, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsCuba,
     associationIcon: iconCuba,
     confederation: 'CONCACAF',
@@ -5541,8 +6316,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Curaçao': {
     id: v1(),
-    name: ['Curaçao'],
-    flag: [flagCuracao],
+    name: [
+      {title: 'Curaçao', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagCuracao, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsCuracao,
     associationIcon: iconCuracao,
     confederation: 'CONCACAF',
@@ -5568,8 +6347,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Dominica': {
     id: v1(),
-    name: ['Dominica'],
-    flag: [flagDominica],
+    name: [
+      {title: 'Dominica', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagDominica, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsDominica,
     associationIcon: iconDominica,
     confederation: 'CONCACAF',
@@ -5595,8 +6378,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Dominican Republic': {
     id: v1(),
-    name: ['Dominican Republic'],
-    flag: [flagDominicanRepublic],
+    name: [
+      {title: 'Dominican Republic', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagDominicanRepublic, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsDominicanRepublic,
     associationIcon: iconDominicanRepublic,
     confederation: 'CONCACAF',
@@ -5622,8 +6409,12 @@ export const nationalTeams: NationalTeams = {
   },
   'French Guiana': {
     id: v1(),
-    name: ['French Guiana'],
-    flag: [flagFrenchGuiana],
+    name: [
+      {title: 'French Guiana', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagFrenchGuiana, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsFrenchGuiana,
     associationIcon: iconFrenchGuiana,
     confederation: 'CONCACAF',
@@ -5649,8 +6440,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Grenada': {
     id: v1(),
-    name: ['Grenada'],
-    flag: [flagGrenada],
+    name: [
+      {title: 'Grenada', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagGrenada, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsGrenada,
     associationIcon: iconGrenada,
     confederation: 'CONCACAF',
@@ -5676,8 +6471,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Guadeloupe': {
     id: v1(),
-    name: ['Guadeloupe'],
-    flag: [flagGuadeloupe],
+    name: [
+      {title: 'Guadeloupe', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagGuadeloupe, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsGuadeloupe,
     associationIcon: iconGuadeloupe,
     confederation: 'CONCACAF',
@@ -5703,8 +6502,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Guyana': {
     id: v1(),
-    name: ['Guyana'],
-    flag: [flagGuyana],
+    name: [
+      {title: 'Guyana', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagGuyana, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsGuyana,
     associationIcon: iconGuyana,
     confederation: 'CONCACAF',
@@ -5730,8 +6533,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Haiti': {
     id: v1(),
-    name: ['Haiti'],
-    flag: [flagHaiti],
+    name: [
+      {title: 'Haiti', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagHaiti, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsHaiti,
     associationIcon: iconHaiti,
     confederation: 'CONCACAF',
@@ -5757,8 +6564,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Jamaica': {
     id: v1(),
-    name: ['Jamaica'],
-    flag: [flagJamaica],
+    name: [
+      {title: 'Jamaica', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagJamaica, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsJamaica,
     associationIcon: iconJamaica,
     confederation: 'CONCACAF',
@@ -5784,8 +6595,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Martinique': {
     id: v1(),
-    name: ['Martinique'],
-    flag: [flagMartinique],
+    name: [
+      {title: 'Martinique', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMartinique, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMartinique,
     associationIcon: iconMartinique,
     confederation: 'CONCACAF',
@@ -5811,8 +6626,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Montserrat': {
     id: v1(),
-    name: ['Montserrat'],
-    flag: [flagMontserrat],
+    name: [
+      {title: 'Montserrat', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagMontserrat, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsMontserrat,
     associationIcon: iconMontserrat,
     confederation: 'CONCACAF',
@@ -5838,8 +6657,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Puerto Rico': {
     id: v1(),
-    name: ['Puerto Rico'],
-    flag: [flagPuertoRico],
+    name: [
+      {title: 'Puerto Rico', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagPuertoRico, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsPuertoRico,
     associationIcon: iconPuertoRico,
     confederation: 'CONCACAF',
@@ -5865,8 +6688,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Saint Kitts and Nevis': {
     id: v1(),
-    name: ['Saint Kitts and Nevis'],
-    flag: [flagSaintKittsAndNevis],
+    name: [
+      {title: 'Saint Kitts and Nevis', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSaintKittsAndNevis, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSaintKittsAndNevis,
     associationIcon: iconSaintKittsAndNevis,
     confederation: 'CONCACAF',
@@ -5892,8 +6719,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Saint Lucia': {
     id: v1(),
-    name: ['Saint Lucia'],
-    flag: [flagSaintLucia],
+    name: [
+      {title: 'Saint Lucia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSaintLucia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSaintLucia,
     associationIcon: iconSaintLucia,
     confederation: 'CONCACAF',
@@ -5919,8 +6750,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Saint Martin': {
     id: v1(),
-    name: ['Saint Martin'],
-    flag: [flagSaintMartin],
+    name: [
+      {title: 'Saint Martin', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSaintMartin, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSaintMartin,
     associationIcon: iconSaintMartin,
     confederation: 'CONCACAF',
@@ -5946,8 +6781,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Saint Vincent and the Grenadines': {
     id: v1(),
-    name: ['Saint Vincent and the Grenadines'],
-    flag: [flagSaintVincentAndTheGrenadines],
+    name: [
+      {title: 'Saint Vincent and the Grenadines', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSaintVincentAndTheGrenadines, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSaintVincentAndTheGrenadines,
     associationIcon: iconSaintVincentAndTheGrenadines,
     confederation: 'CONCACAF',
@@ -5973,8 +6812,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Sint Maarten': {
     id: v1(),
-    name: ['Sint Maarten'],
-    flag: [flagSintMaarten],
+    name: [
+      {title: 'Sint Maarten', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSintMaarten, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSintMaarten,
     associationIcon: iconSintMaarten,
     confederation: 'CONCACAF',
@@ -6000,8 +6843,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Suriname': {
     id: v1(),
-    name: ['Suriname'],
-    flag: [flagSuriname],
+    name: [
+      {title: 'Suriname', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSuriname, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSuriname,
     associationIcon: iconSuriname,
     confederation: 'CONCACAF',
@@ -6027,8 +6874,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Trinidad and Tobago': {
     id: v1(),
-    name: ['Trinidad and Tobago'],
-    flag: [flagTrinidadAndTobago],
+    name: [
+      {title: 'Trinidad and Tobago', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagTrinidadAndTobago, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsTrinidadAndTobago,
     associationIcon: iconTrinidadAndTobago,
     confederation: 'CONCACAF',
@@ -6054,8 +6905,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Turks and Caicos Islands': {
     id: v1(),
-    name: ['Turks and Caicos Islands'],
-    flag: [flagTurksAndCaicosIslands],
+    name: [
+      {title: 'Turks and Caicos Islands', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagTurksAndCaicosIslands, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsTurksAndCaicosIslands,
     associationIcon: iconTurksAndCaicosIslands,
     confederation: 'CONCACAF',
@@ -6081,8 +6936,12 @@ export const nationalTeams: NationalTeams = {
   },
   'U.S. Virgin Islands': {
     id: v1(),
-    name: ['U.S. Virgin Islands'],
-    flag: [flagUSVirginIslands],
+    name: [
+      {title: 'U.S. Virgin Islands', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagUSVirginIslands, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsUSVirginIslands,
     associationIcon: iconUSVirginIslands,
     confederation: 'CONCACAF',
@@ -6108,8 +6967,12 @@ export const nationalTeams: NationalTeams = {
   },
   'American Samoa': {
     id: v1(),
-    name: ['American Samoa'],
-    flag: [flagAmericanSamoa],
+    name: [
+      {title: 'American Samoa', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagAmericanSamoa, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsAmericanSamoa,
     associationIcon: iconAmericanSamoa,
     confederation: 'OFC',
@@ -6135,8 +6998,12 @@ export const nationalTeams: NationalTeams = {
   },  
   'Cook Islands': {
     id: v1(),
-    name: ['Cook Islands'],
-    flag: [flagCookIslands],
+    name: [
+      {title: 'Cook Islands', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagCookIslands, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsCookIslands,
     associationIcon: iconCookIslands,
     confederation: 'OFC',
@@ -6162,8 +7029,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Fiji': {
     id: v1(),
-    name: ['Fiji'],
-    flag: [flagFiji],
+    name: [
+      {title: 'Fiji', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagFiji, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsFiji,
     associationIcon: iconFiji,
     confederation: 'OFC',
@@ -6189,8 +7060,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Kiribati': {
     id: v1(),
-    name: ['Kiribati'],
-    flag: [flagKiribati],
+    name: [
+      {title: 'Kiribati', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagKiribati, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsKiribati,
     associationIcon: iconKiribati,
     confederation: 'OFC',
@@ -6216,8 +7091,12 @@ export const nationalTeams: NationalTeams = {
   },
   'New Caledonia': {
     id: v1(),
-    name: ['New Caledonia'],
-    flag: [flagNewCaledonia],
+    name: [
+      {title: 'New Caledonia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagNewCaledonia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsNewCaledonia,
     associationIcon: iconNewCaledonia,
     confederation: 'OFC',
@@ -6243,8 +7122,12 @@ export const nationalTeams: NationalTeams = {
   },
   'New Zealand': {
     id: v1(),
-    name: ['New Zealand'],
-    flag: [flagNewZealand],
+    name: [
+      {title: 'New Zealand', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagNewZealand, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsNewZealand,
     associationIcon: iconNewZealand,
     confederation: 'OFC',
@@ -6270,8 +7153,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Papua New Guinea': {
     id: v1(),
-    name: ['Papua New Guinea'],
-    flag: [flagPapuaNewGuinea],
+    name: [
+      {title: 'Papua New Guinea', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagPapuaNewGuinea, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsPapuaNewGuinea,
     associationIcon: iconPapuaNewGuinea,
     confederation: 'OFC',
@@ -6297,8 +7184,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Samoa': {
     id: v1(),
-    name: ['Samoa'],
-    flag: [flagSamoa],
+    name: [
+      {title: 'Samoa', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSamoa, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSamoa,
     associationIcon: iconSamoa,
     confederation: 'OFC',
@@ -6324,8 +7215,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Solomon Islands': {
     id: v1(),
-    name: ['Solomon Islands'],
-    flag: [flagSolomonIslands],
+    name: [
+      {title: 'Solomon Islands', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagSolomonIslands, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsSolomonIslands,
     associationIcon: iconSolomonIslands,
     confederation: 'OFC',
@@ -6351,8 +7246,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Tahiti': {
     id: v1(),
-    name: ['Tahiti'],
-    flag: [flagTahiti],
+    name: [
+      {title: 'Tahiti', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagTahiti, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsTahiti,
     associationIcon: iconTahiti,
     confederation: 'OFC',
@@ -6378,8 +7277,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Tonga': {
     id: v1(),
-    name: ['Tonga'],
-    flag: [flagTonga],
+    name: [
+      {title: 'Tonga', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagTonga, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsTonga,
     associationIcon: iconTonga,
     confederation: 'OFC',
@@ -6405,8 +7308,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Tuvalu': {
     id: v1(),
-    name: ['Tuvalu'],
-    flag: [flagTuvalu],
+    name: [
+      {title: 'Tuvalu', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagTuvalu, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsTuvalu,
     associationIcon: iconTuvalu,
     confederation: 'OFC',
@@ -6432,8 +7339,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Vanuatu': {
     id: v1(),
-    name: ['Vanuatu'],
-    flag: [flagVanuatu],
+    name: [
+      {title: 'Vanuatu', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagVanuatu, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsVanuatu,
     associationIcon: iconVanuatu,
     confederation: 'OFC',
@@ -6459,8 +7370,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Argentina': {
     id: v1(),
-    name: ['Argentina'],
-    flag: [flagArgentina],
+    name: [
+      {title: 'Argentina', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagArgentina, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsArgentina,
     associationIcon: iconArgentina,
     confederation: 'CONMEBOL',
@@ -6486,8 +7401,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Bolivia': {
     id: v1(),
-    name: ['Bolivia'],
-    flag: [flagBolivia],
+    name: [
+      {title: 'Bolivia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBolivia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBolivia,
     associationIcon: iconBolivia,
     confederation: 'CONMEBOL',
@@ -6513,8 +7432,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Brazil': {
     id: v1(),
-    name: ['Brazil'],
-    flag: [flagBrazil],
+    name: [
+      {title: 'Brazil', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagBrazil, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsBrazil,
     associationIcon: iconBrazil,
     confederation: 'CONMEBOL',
@@ -6540,8 +7463,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Chile': {
     id: v1(),
-    name: ['Chile'],
-    flag: [flagChile],
+    name: [
+      {title: 'Chile', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagChile, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsChile,
     associationIcon: iconChile,
     confederation: 'CONMEBOL',
@@ -6567,8 +7494,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Colombia': {
     id: v1(),
-    name: ['Colombia'],
-    flag: [flagColombia],
+    name: [
+      {title: 'Colombia', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagColombia, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsColombia,
     associationIcon: iconColombia,
     confederation: 'CONMEBOL',
@@ -6594,8 +7525,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Ecuador': {
     id: v1(),
-    name: ['Ecuador'],
-    flag: [flagEcuador],
+    name: [
+      {title: 'Ecuador', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagEcuador, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsEcuador,
     associationIcon: iconEcuador,
     confederation: 'CONMEBOL',
@@ -6621,8 +7556,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Paraguay': {
     id: v1(),
-    name: ['Paraguay'],
-    flag: [flagParaguay],
+    name: [
+      {title: 'Paraguay', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagParaguay, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsParaguay,
     associationIcon: iconParaguay,
     confederation: 'CONMEBOL',
@@ -6648,8 +7587,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Peru': {
     id: v1(),
-    name: ['Peru'],
-    flag: [flagPeru],
+    name: [
+      {title: 'Peru', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagPeru, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsPeru,
     associationIcon: iconPeru,
     confederation: 'CONMEBOL',
@@ -6675,8 +7618,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Uruguay': {
     id: v1(),
-    name: ['Uruguay'],
-    flag: [flagUruguay],
+    name: [
+      {title: 'Uruguay', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagUruguay, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsUruguay,
     associationIcon: iconUruguay,
     confederation: 'CONMEBOL',
@@ -6702,8 +7649,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Venezuela': {
     id: v1(),
-    name: ['Venezuela'],
-    flag: [flagVenezuela],
+    name: [
+      {title: 'Venezuela', period: '0000-p.t.'},
+    ],
+    flag: [
+      {title: flagVenezuela, period: '0000-p.t.'},
+    ],
     coatOfArms: coatOfArmsVenezuela,
     associationIcon: iconVenezuela,
     confederation: 'CONMEBOL',
@@ -6728,8 +7679,6 @@ export const nationalTeams: NationalTeams = {
     }
   },
 }
-
-
 
 export const aboutProject: AboutProject = {
   image: logoProject,
@@ -6779,12 +7728,10 @@ export const icons = {
 export const countWorldCup = 0
 export const uefaCup = 0
 
-
 export const background = {
   startProject: backgroundFootballLive,
   startPage: backgroundStartPage,
 }
-
 
 export const nationalTournaments: NationalTournaments = {
   concacaf: {
@@ -6847,6 +7794,350 @@ export const fifaWorldCup : AllWorldCup = {
     date: '13-30 July',
     icon: iconWorldCup1930,
     hostCountry: ['Uruguay'],
+    finalStage: [
+      {
+        id: '1-1930',
+        date: '13.07.1930',
+        stage: 'group 1',
+        teams: ['France', 'Mexico'],
+        score: [[4, 1], [], []],
+        goals: [
+          { playersScoredGoal: ['L. Laurent', 'Langiller', 'Maschinot'],
+            timeGoals: ['19', '40', '43, 87'] }, 
+          { playersScoredGoal: ['Carreño'],
+            timeGoals: ['80'] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Pocitos',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '4 444',
+        }
+      },
+      {
+        id: '2-1930',
+        date: '13.07.1930',
+        stage: 'group 4',
+        teams: ['United States', 'Belgium'],
+        score: [[3, 0], [], []],
+        goals: [
+          { playersScoredGoal: ['McGhee', 'Florie', 'Patenaude'],
+            timeGoals: ['23', '45', '69'] }, 
+          { playersScoredGoal: [''],
+            timeGoals: [''] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Parque Central',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '18 346',
+        }
+      },
+      {
+        id: '3-1930',
+        date: '14.07.1930',
+        stage: 'group 2',
+        teams: ['Yugoslavia', 'Brazil'],
+        score: [[2, 1], [], []],
+        goals: [
+          { playersScoredGoal: ['Tirnanić', 'Bek'],
+            timeGoals: ['21', '30'] }, 
+          { playersScoredGoal: ['Preguinho'],
+            timeGoals: ['62'] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Parque Central',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '24 059',
+        }
+      },
+      {
+        id: '4-1930',
+        date: '14.07.1930',
+        stage: 'group 3',
+        teams: ['Romania', 'Peru'],
+        score: [[3, 1], [], []],
+        goals: [
+          { playersScoredGoal: ['Deșu', 'Stanciu', 'Kovács'],
+            timeGoals: ['1', '79', '89'] }, 
+          { playersScoredGoal: ['De Souza'],
+            timeGoals: ['75'] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Pocitos',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '2 549',
+        }
+      },
+      {
+        id: '5-1930',
+        date: '15.07.1930',
+        stage: 'group 1',
+        teams: ['Argentina', 'France'],
+        score: [[1, 0], [], []],
+        goals: [
+          { playersScoredGoal: ['Monti'],
+            timeGoals: ['81'] }, 
+          { playersScoredGoal: [''],
+            timeGoals: [''] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Parque Central',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '23 409',
+        }
+      },
+      {
+        id: '6-1930',
+        date: '16.07.1930',
+        stage: 'group 1',
+        teams: ['Chile', 'Mexico'],
+        score: [[3, 0], [], []],
+        goals: [
+          { playersScoredGoal: ['Vidal', 'M. Rosas'],
+            timeGoals: ['1, 65', '52(o.g.)'] }, 
+          { playersScoredGoal: [''],
+            timeGoals: [''] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Parque Central',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '9 249',
+        }
+      },
+      {
+        id: '7-1930',
+        date: '17.07.1930',
+        stage: 'group 2',
+        teams: ['Yugoslavia', 'Bolivia'],
+        score: [[4, 0], [], []],
+        goals: [
+          { playersScoredGoal: ['Bek', 'Marjanović', 'Vujadinović'],
+            timeGoals: ['60, 67', '65', '85'] }, 
+          { playersScoredGoal: [''],
+            timeGoals: [''] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Parque Central',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '18 306',
+        }
+      },
+      {
+        id: '8-1930',
+        date: '17.07.1930',
+        stage: 'group 4',
+        teams: ['United States', 'Paraguay'],
+        score: [[3, 0], [], []],
+        goals: [
+          { playersScoredGoal: ['Patenaude'],
+            timeGoals: ['10, 15, 50'] }, 
+          { playersScoredGoal: [''],
+            timeGoals: [''] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Parque Central',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '18 306',
+        }
+      },
+      {
+        id: '9-1930',
+        date: '18.07.1930',
+        stage: 'group 3',
+        teams: ['Uruguay', 'Peru'],
+        score: [[1, 0], [], []],
+        goals: [
+          { playersScoredGoal: ['Vargas Peña'],
+            timeGoals: ['40'] }, 
+          { playersScoredGoal: [''],
+            timeGoals: [''] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Centenario',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '12 000',
+        }
+      },
+      {
+        id: '10-1930',
+        date: '19.07.1930',
+        stage: 'group 1',
+        teams: ['Chile', 'France'],
+        score: [[1, 0], [], []],
+        goals: [
+          { playersScoredGoal: ['Subiabre'],
+            timeGoals: ['67'] }, 
+          { playersScoredGoal: [''],
+            timeGoals: [''] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Centenario',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '2 000',
+        }
+      },
+      {
+        id: '11-1930',
+        date: '19.07.1930',
+        stage: 'group 1',
+        teams: ['Argentina', 'Mexico'],
+        score: [[6, 3], [], []],
+        goals: [
+          { playersScoredGoal: ['Stábile', 'Zumelzú', 'Varallo'],
+            timeGoals: ['8, 17, 80', '12, 55', '53'] }, 
+          { playersScoredGoal: ['M. Rosas', 'Gayón'],
+            timeGoals: ['42(pen.), 65', '75'] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Centenario',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '42 100',
+        }
+      },
+      {
+        id: '12-1930',
+        date: '20.07.1930',
+        stage: 'group 2',
+        teams: ['Brazil', 'Bolivia'],
+        score: [[4, 0], [], []],
+        goals: [
+          { playersScoredGoal: ['Moderato', 'Preguinho'],
+            timeGoals: ['37, 73', '57, 83'] }, 
+          { playersScoredGoal: [''],
+            timeGoals: [''] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Centenario',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '25 466',
+        }
+      },
+      {
+        id: '13-1930',
+        date: '20.07.1930',
+        stage: 'group 4',
+        teams: ['Paraguay', 'Belgium'],
+        score: [[1, 0], [], []],
+        goals: [
+          { playersScoredGoal: ['Vargas Peña'],
+            timeGoals: ['40',] }, 
+          { playersScoredGoal: [''],
+            timeGoals: [''] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Centenario',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '12 000',
+        }
+      },
+      {
+        id: '14-1930',
+        date: '21.07.1930',
+        stage: 'group 3',
+        teams: ['Uruguay', 'Romania'],
+        score: [[4, 0], [], []],
+        goals: [
+          { playersScoredGoal: ['Dorado', 'Scarone', 'Anselmo', 'Cea'],
+            timeGoals: ['7', '26', '31', '35'] }, 
+          { playersScoredGoal: [''],
+            timeGoals: [''] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Centenario',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '70 022',
+        }
+      },
+      {
+        id: '15-1930',
+        date: '22.07.1930',
+        stage: 'group 1',
+        teams: ['Argentina', 'Chile'],
+        score: [[3, 1], [], []],
+        goals: [
+          { playersScoredGoal: ['Stábile', 'M. Evaristo'],
+            timeGoals: ['12, 13', '51'] }, 
+          { playersScoredGoal: ['	Subiabre'],
+            timeGoals: ['15'] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Centenario',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '41 459',
+        }
+      },
+      {
+        id: '16-1930',
+        date: '26.07.1930',
+        stage: '1/2 finals',
+        teams: ['Argentina', 'United States'],
+        score: [[6, 1], [2, 2], [5, 4]],
+        goals: [
+          { playersScoredGoal: ['Monti', 'Scopelli', 'Stábile', 'Peucelle'],
+            timeGoals: ['20', '56', '69, 87', '80, 85'] }, 
+          { playersScoredGoal: ['Brown'],
+            timeGoals: ['89'] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Centenario',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '72 886',
+        }
+      },
+      {
+        id: '17-1930',
+        date: '27.07.1930',
+        stage: '1/2 finals',
+        teams: ['Uruguay', 'Yugoslavia'],
+        score: [[6, 1], [], []],
+        goals: [
+          { playersScoredGoal: ['Cea', 'Anselmo', 'Iriarte'],
+            timeGoals: ['18, 67, 72', '20, 31', '61'] }, 
+          { playersScoredGoal: ['Vujadinović'],
+            timeGoals: ['4'] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Centenario',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '79 867',
+        }
+      },
+      {
+        id: '18-1930',
+        date: '30.07.1930',
+        stage: 'final',
+        teams: ['Uruguay', 'Argentina'],
+        score: [[4, 2], [], []],
+        goals: [
+          { playersScoredGoal: ['Dorado', 'Cea', 'Iriarte', 'Castro'],
+            timeGoals: ['12', '57', '68', '89'] }, 
+          { playersScoredGoal: ['Peucelle', 'Stábile'],
+            timeGoals: ['20', '37'] }, 
+        ],
+        stadium: 
+        {title: 'Estadio Centenario',
+          city: 'Montevideo',
+          country: 'Uruguay',
+          attendance: '68 346',
+        }
+      },
+    ],
   },
   1934: {
     id: '2-1934',

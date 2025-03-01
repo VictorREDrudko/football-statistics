@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import s from './WorldCupCard.module.css'
 import { WorldCupTournament } from "data/type-data"
-import { nationalTeams } from "data/data"
+import { getCurrentCountryAttribut, nationalTeams } from "data/data"
 
 type Props = {
   tournament: WorldCupTournament
@@ -11,16 +11,19 @@ export const WorldCupCard = ({tournament} : Props) => {
   const number = tournament.id.split('-')[0]
   const year = tournament.id.split('-')[1]
 
+  const flag = getCurrentCountryAttribut(nationalTeams[tournament.hostCountry[0]].flag)
+  const name = getCurrentCountryAttribut(nationalTeams[tournament.hostCountry[0]].name) 
+
   const country = tournament.hostCountry.length === 1 ? (
     <div className={s.country}>
-      <img className={s.flag} src={nationalTeams[tournament.hostCountry[0]].flag[0]} alt={`flag ${nationalTeams[tournament.hostCountry[0]].name}`} />
+      <img className={s.flag} src={flag} alt={`flag ${name}`} />
       <span className={s.nameCountry}>{tournament.hostCountry[0]}</span>
     </div>
   ) :
     tournament.hostCountry.map((nameCountry) => {
       return (
         <div key={nationalTeams[nameCountry].id} className={s.country}>
-          <img className={s.flag} src={nationalTeams[nameCountry].flag[0]} alt={`flag ${nationalTeams[nameCountry].name}`} />
+          <img className={s.flag} src={flag} alt={`flag ${name}`} />
           <span className={s.nameCountry}>{nameCountry}</span>
         </div>
       )
