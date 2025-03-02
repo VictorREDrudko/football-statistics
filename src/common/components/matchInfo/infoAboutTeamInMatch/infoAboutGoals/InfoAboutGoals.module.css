@@ -7,3 +7,15 @@
 .container li {
   font-style: italic;
 }
+
+@media (max-width: 480px) {
+  .container {
+    margin-top: 0px;
+    gap: 5px;
+  }
+
+  .container li {
+    font-size: 0.65rem;
+    line-height: 110%;
+  }
+}

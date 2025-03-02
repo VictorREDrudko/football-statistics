@@ -6,10 +6,10 @@ type TeamProps = {
   year: string
 }
 
-export const Team = (props: TeamProps) => {
-  return (
-    <div className={s.container}>
-      <Country name={props.team} year={props.year} />
-    </div>
-  )
-}
+// export const Team = (props: TeamProps) => {
+//   return (
+//     <div className={s.container}>
+//       <Country name={props.team} year={props.year} />
+//     </div>
+//   )
+// }

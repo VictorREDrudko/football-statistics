@@ -14,7 +14,6 @@ export const FinalStage = () => {
 
   return (
     <div className={s.container}>
-      <h2 className={s.titleStage}>Group stage</h2>
       <Groups matchesInGroup={matchesInGroup} teamsPlayOff={uniqueTeamsInPlayOff} year={year}/>
       <h2 className={s.titleStage}>Knockout stage</h2>
       <KnockoutStage matches={matchesInPlayOff}/>

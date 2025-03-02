@@ -4,7 +4,6 @@ import { Groups } from './groups/Groups'
 import { KnockoutStage } from './knockout-stage/KnockoutStage'
 import { MatchPlayOff } from './match-play-off/MatchPlayOff'
 import { Match } from './match/Match'
-import { Team } from './match/team/Team'
 
 export type FinalStageProps = {
   data: MatchFifaWorldCup[]

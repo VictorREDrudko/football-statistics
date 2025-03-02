@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container div:first-child,
+  .container div:last-child {
+    max-width: 170px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 10px;
+  }
+
+  .container div:first-child span,
+  .container div:last-child span {
+    font-size: 0.65rem !important;
+    width: 75px !important;
+  }
+
+  .container div img {
+    width: 25px !important;
+    margin-right: 0px !important;
+  }
+}

@@ -1,0 +1,36 @@
+.container {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main, 
+.pen {
+  text-align: center;
+}
+
+.main {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.pen {
+  font-size: 1rem;
+}
+
+.ind {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 40px;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .main {
+    font-size: 0.65rem;
+    margin-bottom: 0px;
+  }
+}

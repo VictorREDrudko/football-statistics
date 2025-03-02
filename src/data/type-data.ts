@@ -79,7 +79,7 @@ export type Goals = {
   timeGoals: string[] 
 }
 
-type Stadium = {
+export type Stadium = {
   title: string
   city: string
   country: string

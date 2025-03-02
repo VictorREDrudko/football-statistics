@@ -1,6 +1,20 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.containerMatch {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: start;
-  gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .containerMatch {
+    padding: 0px;
+    width: 100%;
+  }
 }

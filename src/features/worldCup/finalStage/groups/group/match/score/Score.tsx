@@ -1,13 +1,11 @@
-import s from './ScoreInMatch.module.css'
+import s from './Score.module.css'
 
-export type ScoreType = number[]
-
-type ScoreInMatchProps = {
-  score: ScoreType[]
+export type ScoreProps = {
+  score: Array<number[]>
 }
 
-export const ScoreInMatch = ({score}: ScoreInMatchProps) => {
-  const mappedScore = score.map((sc, index) => {
+export const Score = (props: ScoreProps) => {
+  const mappedScore = props.score.map((sc, index) => {
     if (index === 1) {
       return sc.length === 2 ? 
       <div>

@@ -1,3 +1,30 @@
 .container {
-  padding: 20px;
+  padding: 10px;
+  min-width: 150px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    min-width: 110px;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+
+  .container div span {
+    font-size: 0.65rem !important;
+    width: 75px !important;
+  }
+
+  .container div img {
+    width: 25px !important;
+    margin-right: 5px !important;
+  }
 }

@@ -18,11 +18,11 @@ export const Group = ({dataForGroup, year, titleGroup}: GroupProps) => {
   const addBodyTable = dataForGroup.map((item, index) => {
     const styleQualificationTeam = item.qualification === '+' ? {backgroundColor: 'rgba(24, 255, 0, 1)'} : undefined
     item.position = index + 1
-      
+
     return (
       <tr key={index} className={s.bodyTable} style={styleQualificationTeam}>
         <th>{item.position}</th>
-        <th> <Team name={item.team} year={year ? year.slice(0, 4) : ''} /></th>
+        <th> <Team name={item.team} year={year ? year.slice(0, 4) : ''} spanStyle={{fontSize: '1rem'}}/></th>
         <th>{item.played}</th>
         <th>{item.won}</th>
         <th>{item.drawn}</th>

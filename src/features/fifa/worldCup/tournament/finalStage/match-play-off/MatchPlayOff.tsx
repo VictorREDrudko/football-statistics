@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { MatchInfo } from '../../../../../../common/components/matchInfo/MatchInfo'
 import s from './MatchPlayOff.module.css'
-import { Team } from '../match/team/Team'
 import { Score } from '../match/score/Score'
 import { MatchFifaWorldCup } from 'data/type-data'
 
@@ -32,11 +31,11 @@ export const MatchPlayOff = (props: MatchProps) => {
   const infoMatch = mode ? 
     <div className={s.container} onClick={onClickHundler}>
       <div className={s.containerTeamScore}>
-        <Team team={props.match.teams[0]} year={props.match.id} />
+        {/* <Team team={props.match.teams[0]} year={props.match.id} /> */}
         <div>{viewScore1}</div>
       </div>
       <div className={s.containermaTeamScore}>
-        <Team team={props.match.teams[1]} year={props.match.id} />
+        {/* <Team team={props.match.teams[1]} year={props.match.id} /> */}
         <div>{viewScore2}</div>
       </div>
     </div> : 

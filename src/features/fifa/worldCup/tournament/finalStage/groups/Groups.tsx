@@ -1,5 +1,5 @@
 import { MatchFifaWorldCup } from 'data/type-data'
-import { Team } from '../match/team/Team'
+// import { Team } from '../match/team/Team'
 import { Group } from './group/Group'
 import s from './Groups.module.css'
 import { MatchesInGroup } from './mathes-in-group/MatchesInGroup'

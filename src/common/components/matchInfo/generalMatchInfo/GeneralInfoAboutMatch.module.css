@@ -1,18 +1,69 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 5px 10px;
-  font-size: 1rem;
-  align-self: center;
+  align-items: flex-start;
+  gap: 5px;
+  max-width: 500px;
+  width: 100%;
+  padding: 10px;
 }
 
 .date {
-  font-weight: 600;
+  font-weight: 700;
   display: inline-block;
-  margin-bottom: 10px;
+  font-size: 1rem;
 }
 
-.nameStadium {
+.containerStadium {
+  display: flex;
+  gap: 5px;
+}
+
+.text {
   font-style: italic;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.containerStadium .text:last-child {
+  font-weight: 400;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .container {
+    gap: 0px;
+    max-width: 450px;
+    width: 100%;
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+
+  .date {
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 300px;
+    padding: 5px;
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 0.65rem;
+    line-height: 110%;
+  }
+
+  .date {
+    font-weight: 500;
+    font-size: 0.7rem;
+  }
 }

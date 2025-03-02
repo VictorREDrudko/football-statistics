@@ -1,4 +1,4 @@
-import { Team } from '../../match/team/Team'
+// import { Team } from '../../match/team/Team'
 import { StatisticTeam } from '../Groups'
 import s from './Group.module.css'
 
@@ -25,7 +25,7 @@ export const Group = (props: GroupProps) => {
     return (
       <tr key={index} className={s.bodyTable} style={styleQualificationTeam}>
         <th>{item.position}</th>
-        <th> <Team team={item.team} year={props.year.slice(0, 4)} /></th>
+        {/* <th> <Team team={item.team} year={props.year.slice(0, 4)} /></th> */}
         <th>{item.played}</th>
         <th>{item.won}</th>
         <th>{item.drawn}</th>

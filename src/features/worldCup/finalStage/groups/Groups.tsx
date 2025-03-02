@@ -1,8 +1,8 @@
 import { MatchFifaWorldCup } from 'data/type-data'
 import { Group } from './group/Group'
 import s from './Groups.module.css'
-import { MatchesInGroup } from './mathes-in-group/MatchesInGroup'
 import { addDataTeamInGroup, getInitialDataTeam, getMatchesInGroup, getUniqueTeamsInGroup, sortTeamsInGroup, uniqueTitleGroups } from 'data/worldCupFinalStage'
+import { MatchesInGroup } from './mathes-in-group/MatchesInGroup'
 
 type Groups = {
   matchesInGroup: MatchFifaWorldCup[] | ''
@@ -33,6 +33,11 @@ export const Groups = ({matchesInGroup, teamsPlayOff, year}: Groups) => {
   })
 
   return (
-    <div className={s.wrapper}> {mappedMatchesInGroups} </div>
+    <div className={s.container}>
+      <h2 className={s.titleStage}>Group stage</h2>
+      <div className={s.containerGroups}>
+        {mappedMatchesInGroups} 
+      </div>
+    </div>
   )
 }

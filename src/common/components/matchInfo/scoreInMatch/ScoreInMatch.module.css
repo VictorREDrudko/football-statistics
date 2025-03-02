@@ -1,7 +1,9 @@
 .container {
-  margin: 20px 0;
+  padding: 10px;
   display: flex;
   flex-direction: column;
+  max-width: 60px;
+  width: 100%;
 }
 
 .main, 
@@ -10,14 +12,29 @@
 }
 
 .main {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
+  font-size: 1.0rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .pen {
-  font-size: 1.1rem;
+  font-size: 1.0rem;
 }
 
 .ind {
   font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    font-size: 0.65rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
 }

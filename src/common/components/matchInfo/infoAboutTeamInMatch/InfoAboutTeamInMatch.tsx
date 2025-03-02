@@ -1,19 +1,20 @@
 import { Goals } from "data/type-data"
-import { Country } from "../../country/Country"
 import { InfoAboutGoals } from "./infoAboutGoals/InfoAboutGoals"
 import s from './InfoAboutTeamInMatch.module.css'
+import { Team } from "features/worldCup/team/Team"
 
 type InfoAboutTeamInMatchProps = {
-  team: string
+  nameTeam: string
   forwards: Goals
   year: string
 }
 
-export const InfoAboutTeamInMatch = (props: InfoAboutTeamInMatchProps) => {
+export const InfoAboutTeamInMatch = ({nameTeam, forwards, year}: InfoAboutTeamInMatchProps) => {
+
   return (
     <div className={s.container}>
-      <Country name={props.team} year={props.year}/>
-      <InfoAboutGoals forwards={props.forwards}/>
+      <Team name={nameTeam} year={year} spanStyle={{fontSize: '1.0rem', margin: '0', width: '150px'}}/>
+      <InfoAboutGoals forwards={forwards}/>
     </div>
   )
 }

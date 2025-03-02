@@ -1,6 +1,6 @@
 import { MatchFifaWorldCup } from "data/type-data"
 import s from './MatchesInGroup.module.css'
-import { Match } from "features/fifa/worldCup/tournament/finalStage/match/Match"
+import { Match } from "../group/match/Match"
 
 type MatchesInGroupProps = {
   matches: MatchFifaWorldCup[] 
@@ -16,6 +16,6 @@ export const MatchesInGroup = (props: MatchesInGroupProps) => {
   })
   
   return (
-     <div className={s.matchesInGroup}>{mappedMatch}</div>
+     <div>{mappedMatch}</div>
   )
 }
