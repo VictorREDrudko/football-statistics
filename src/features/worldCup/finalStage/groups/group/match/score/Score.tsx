@@ -1,3 +1,4 @@
+import { showScore } from 'data/worldCupFinalStage'
 import s from './Score.module.css'
 
 export type ScoreProps = {
@@ -5,29 +6,24 @@ export type ScoreProps = {
 }
 
 export const Score = (props: ScoreProps) => {
-  const mappedScore = props.score.map((sc, index) => {
-    if (index === 1) {
-      return sc.length === 2 ? 
-      <div>
-        <span className={s.pen} key={index}>{sc[0] + ' : ' + sc[1]}</span>
-        <span className={s.ind}>{' e.t.'}</span>
-      </div> : ''
-    }
+  const newScore: number[] | Array<number[]> = showScore(props.score)
+  let score = ''
 
-    if (index === 2) {
-      return sc.length === 2 ? 
-        <div>
-          <span className={s.pen} key={index}>{sc[0] + ' : ' + sc[1]}</span>
-          <span className={s.ind}>{' pen.'}</span>
-        </div> : ''
-    }
+  if (typeof(newScore[0]) === 'number') {
+    score = `${newScore[0]} : ${newScore[1]}`
+  }
 
-    return sc.length === 2 ? <span className={s.main} key={index}>{sc[0] + ' : ' + sc[1]}</span> : ''
-  })
-  
+  if (Array.isArray(newScore) && Array.isArray(newScore[0]) && newScore.length === 1) {
+    score = `${newScore[0][0]} : ${newScore[0][1]} e.t.`
+  }
+
+  if (Array.isArray(newScore) && newScore.length === 2 && Array.isArray(newScore[0]) && Array.isArray(newScore[1])) {
+    score = `${newScore[0][0]}(${newScore[1][0]}) : ${newScore[0][1]}(${newScore[1][1]})`
+  }
+
   return (
     <div className={s.container}>
-      {mappedScore}
+      <span className={s.score}>{score}</span>
     </div>
   )
 }

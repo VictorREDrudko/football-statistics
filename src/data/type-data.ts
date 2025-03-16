@@ -160,5 +160,16 @@ export type TeamsConfederation = {
 }
 
 export type ConfederationType = 'afc' | 'caf' | 'concacaf' | 'conmebol' | 'ofc' | 'uefa'
+// export type YearType = '1930' | '1934' | '1938' | '1950' | '1954' | '1958'
 
 
+export type Background = {
+  startProject: string
+  startPage: string
+  worldCup: {
+    [key in string] : {
+      image1: string
+      image2: string
+    }
+  },
+}

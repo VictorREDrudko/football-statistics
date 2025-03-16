@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.container div span {
+  font-size: 0.8rem;
+}
+
+.container div img {
+  width: 35px;
+}
+
+.container div:first-child {
+  width: 150px;
+}
+
+.containerScore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 60px;
+}

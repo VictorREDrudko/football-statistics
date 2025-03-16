@@ -3,14 +3,16 @@ import { Group } from './group/Group'
 import s from './Groups.module.css'
 import { addDataTeamInGroup, getInitialDataTeam, getMatchesInGroup, getUniqueTeamsInGroup, sortTeamsInGroup, uniqueTitleGroups } from 'data/worldCupFinalStage'
 import { MatchesInGroup } from './mathes-in-group/MatchesInGroup'
+import { background } from 'data/data'
 
 type Groups = {
-  matchesInGroup: MatchFifaWorldCup[] | ''
+  matchesInGroup: MatchFifaWorldCup[] | undefined
   teamsPlayOff: Array<string>
   year: string | undefined
 }
 
 export const Groups = ({matchesInGroup, teamsPlayOff, year}: Groups) => {
+  const yearFWC = year ? year : '1930'
   const sortTitlesGroups = uniqueTitleGroups(matchesInGroup)
 
   const mappedMatchesInGroups = sortTitlesGroups.map((titleGroup, index) => {
@@ -33,7 +35,7 @@ export const Groups = ({matchesInGroup, teamsPlayOff, year}: Groups) => {
   })
 
   return (
-    <div className={s.container}>
+    <div className={s.container} style={ {backgroundImage: `url(${background.worldCup[yearFWC].image2})`} }>
       <h2 className={s.titleStage}>Group stage</h2>
       <div className={s.containerGroups}>
         {mappedMatchesInGroups} 

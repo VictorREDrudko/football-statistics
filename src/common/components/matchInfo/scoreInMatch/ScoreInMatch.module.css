@@ -1,40 +1,41 @@
 .container {
-  padding: 10px;
   display: flex;
   flex-direction: column;
-  max-width: 60px;
+  align-items: center;
+  max-width: 70px;
   width: 100%;
 }
 
-.main, 
-.pen {
+.score, 
+.index {
   text-align: center;
+  font-size: 1rem;
 }
 
-.main {
-  font-size: 1.0rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+.score {
+  font-size: 1rem;
 }
 
-.pen {
-  font-size: 1.0rem;
-}
-
-.ind {
+.index {
+  margin-top: 10px;
   font-size: 0.8rem;
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 0 5px;
-  }
+  /* .container {
+    padding: 5px;
+  } */
 }
 
 @media (max-width: 480px) {
-  .main {
+  .container {
+    max-width: 40px;
+  }
+  .score {
     font-size: 0.65rem;
-    font-weight: 400;
-    margin-bottom: 5px;
+  }
+  
+  .index {
+    font-size: 0.55rem;
   }
 }

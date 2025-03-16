@@ -24,7 +24,6 @@ function App() {
         <Route path='/national-tournaments/fifa-world-cup/final-stage/:year' element={<FinalStage />} />
       </Routes>
     </>
-
 	);
 }
 

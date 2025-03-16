@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("./../../../../assets/background-world-cup-1930-2.png");
   background-size: no-repeat;
   background-position: center;
   background-size: cover;
@@ -17,6 +16,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: gold;
+  letter-spacing: 2px;
 }
 
 .containerGroups {

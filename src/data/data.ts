@@ -1,10 +1,13 @@
-import { AboutProject, AllWorldCup, Attribut, ConfederationType, DataFifaWorldCup, Menu, NameTournament, NationalTeams, NationalTournaments, StartPage, TeamsConfederation, Tournament } from './type-data'
+import { AboutProject, AllWorldCup, Attribut, Background, ConfederationType, DataFifaWorldCup, Menu, NameTournament, NationalTeams, NationalTournaments, StartPage, TeamsConfederation, Tournament } from './type-data'
 import backgroundFootballLive from './../assets/football-live.png'
+import backgroundFWC1930_1 from './../assets/background-fwc-1930-1.png'
+import backgroundFWC1930_2 from './../assets/background-fwc-1930-2.png'
 import logoProject from './../assets/logo.png'
 import backgroundStartPage from './../assets/background-football.png'
 import ratingIcon from './../assets/icon/rating-icon.png'
 import projectIcon from './../assets/icon/project-icon.png'
 import pitchImg from './../assets/pitch.png'
+
 import iconGermany from './../assets/icon/national/Germany.png'
 import flagGermany from './../assets/icon/flag/Germany.png'
 import flagGermany1 from './../assets/icon/flag/Germany1.png'
@@ -722,6 +725,7 @@ import iconWorldCup2022 from './../assets/icon/worldCup/2022.png'
 
 import iconMedal from './../assets/icon/icon-medal.png'
 import { v1 } from 'uuid'
+import { WorldCup } from 'features/worldCup/WorldCup'
 
 // DATA
 export const nameTeams: TeamsConfederation = {
@@ -7728,9 +7732,20 @@ export const icons = {
 export const countWorldCup = 0
 export const uefaCup = 0
 
-export const background = {
+export const background: Background = {
   startProject: backgroundFootballLive,
   startPage: backgroundStartPage,
+  worldCup: {
+    1930: {
+      image1: backgroundFWC1930_1,
+      image2: backgroundFWC1930_2,
+    }
+    // 1934: 'backgroundFWC1930_2',
+    // 1938: 'backgroundFWC1930_2',
+    // 1950: 'backgroundFWC1930_2',
+    // 1954: 'backgroundFWC1930_2',
+    // 1958: 'backgroundFWC1930_2',
+  },
 }
 
 export const nationalTournaments: NationalTournaments = {
@@ -8083,9 +8098,9 @@ export const fifaWorldCup : AllWorldCup = {
       {
         id: '16-1930',
         date: '26.07.1930',
-        stage: '1/2 finals',
+        stage: '1/2 semi-final',
         teams: ['Argentina', 'United States'],
-        score: [[6, 1], [2, 2], [5, 4]],
+        score: [[6, 1], [], []],
         goals: [
           { playersScoredGoal: ['Monti', 'Scopelli', 'Stábile', 'Peucelle'],
             timeGoals: ['20', '56', '69, 87', '80, 85'] }, 
@@ -8102,7 +8117,7 @@ export const fifaWorldCup : AllWorldCup = {
       {
         id: '17-1930',
         date: '27.07.1930',
-        stage: '1/2 finals',
+        stage: '1/2 semi-final',
         teams: ['Uruguay', 'Yugoslavia'],
         score: [[6, 1], [], []],
         goals: [
@@ -8618,7 +8633,7 @@ export const dataFifaWorldCup: DataFifaWorldCup = {
         date: '26.07.1930',
         stage: '1/2 finals',
         teams: ['Argentina', 'United States'],
-        score: [[6, 1], [2, 2], [5, 4]],
+        score: [[6, 1], [2, 2], [5,4]],
         goals: [
           { playersScoredGoal: ['Monti', 'Scopelli', 'Stábile', 'Peucelle'],
             timeGoals: ['20', '56', '69, 87', '80, 85'] }, 
@@ -8673,3 +8688,8 @@ export const dataFifaWorldCup: DataFifaWorldCup = {
     ]
   },
 }
+
+
+// 1/8 финала — "Round of 16"
+
+// 1/4 финала — "Quarter-finals"
