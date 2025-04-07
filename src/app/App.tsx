@@ -17,11 +17,11 @@ function App() {
         <Route path='/' element={<StartProject/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/national-tournaments' element={<NationaleTournaments/>}/>
-        <Route path='/national-tournaments/fifa-world-cup' element={<WorldCup/>}/>
+        <Route path='/national-tournaments/world-cup' element={<WorldCup/>}/>
         <Route path='/teams' element={<Navigate to='/teams/uefa'/>}/>
         <Route path='/teams/:confederationRoute' element={<NationalTeams/>}/>
         <Route path='/teams/:confederationRoute/:teamRoute' element={<NationalTeams />} />
-        <Route path='/national-tournaments/fifa-world-cup/final-stage/:year' element={<FinalStage />} />
+        <Route path='/national-tournaments/world-cup/final-stage/:urlYear' element={<FinalStage />} />
       </Routes>
     </>
 	);

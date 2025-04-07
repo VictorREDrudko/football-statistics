@@ -1,22 +1,29 @@
-import { getAllMatchesInGroupStage, getMatchesInPlayOff, getTournament, getUniqueTeamsInPlayOff } from "data/worldCupFinalStage";
 import { useParams } from "react-router-dom"
 import s from './FinalStage.module.css'
-import { Groups } from "./groups/Groups";
+import { StatisticsTournament } from "./statisticsTournament/StatisticsTournament";
+import { GroupStage } from "./groupStage/GroupStage";
+import { getQualifiedTeamsForPlayoff, getTournamentData, worldCupYears } from "logics/worldCup/WorldCupFinalStageLogic";
 import { PlayOffStage } from "./playOffStage/PlayOffStage";
 
 export const FinalStage = () => {
-  const { year } = useParams<{ year: string}>();
+  const { urlYear } = useParams<{ urlYear: string}>();
+  const year = urlYear && worldCupYears.includes(urlYear) ? urlYear : '1930';
 
-  const allMatchesInTournament = getTournament(year)
-  const matchesInGroup = getAllMatchesInGroupStage(allMatchesInTournament)
-  const matchesInPlayOff = getMatchesInPlayOff(allMatchesInTournament)
+  const tournamentData = getTournamentData(year)
+  const matches = tournamentData.finalStage
 
-  const uniqueTeamsInPlayOff = getUniqueTeamsInPlayOff(matchesInPlayOff)
+  const groupStageMatches = matches.filter(match => match.stage.slice(0, 5) === "group")
+  const playOffStageMatches = matches.filter(match => match.stage.slice(0, 5) !== "group")
+
+  const qualifiedTeamsForPlayoff = getQualifiedTeamsForPlayoff(playOffStageMatches)
+
+  const hasMatchesGroupStage = groupStageMatches.length === 0 ? false : true
 
   return (
     <div className={s.container}>
-      <Groups matchesInGroup={matchesInGroup} teamsPlayOff={uniqueTeamsInPlayOff} year={year}/>
-      <PlayOffStage year={year} matchesInPlayOff={matchesInPlayOff}/>
+      <StatisticsTournament tournamentData={tournamentData}/>
+      {hasMatchesGroupStage && <GroupStage groupStageMatches={groupStageMatches} qualifiedTeamsForPlayoff={qualifiedTeamsForPlayoff} year={year}/>}
+      <PlayOffStage year={year} playOffStageMatches={playOffStageMatches}/>
     </div>
   )
 }

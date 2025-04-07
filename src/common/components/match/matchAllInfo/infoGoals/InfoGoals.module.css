@@ -1,0 +1,82 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0.4rem 0.8rem 0.8rem;
+}
+
+.containerTeamsGoals {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.containerPlayerScoredGoal {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.containerTeamGoals {
+  display: flex;
+  flex-direction: column;
+  width: 12.5rem;
+}
+
+.containerPlayerScoredGoal span:first-child {
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.containerPlayerScoredGoal span:last-child {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 605px) {
+  .container {
+    padding-top: 0;
+    padding-left: 0.5rem;
+  }
+
+  .containerTeamsGoals {
+    gap: 1.5rem;
+  }
+
+  .containerTeamGoals {
+    width: 9rem;
+  }
+
+  .containerPlayerScoredGoal span:first-child {
+    font-weight: 600;
+    font-size: 0.75rem;
+  }
+  
+  .containerPlayerScoredGoal span:last-child {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.2rem 0.5rem 0.3rem;
+  }
+
+  .containerTeamsGoals {
+    gap: 0.4rem;
+  }
+
+  .containerTeamGoals {
+    width: 6rem;
+  }
+
+  .containerPlayerScoredGoal span:first-child {
+    font-size: 0.55rem;
+    line-height: 120%;
+  }
+  
+  .containerPlayerScoredGoal span:last-child {
+    font-size: 0.6rem;
+    line-height: 120%;
+  }
+}
+

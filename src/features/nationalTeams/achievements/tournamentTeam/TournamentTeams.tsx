@@ -2,8 +2,8 @@ import { TitleCup } from '../titleCup/TitleCup'
 import s from './TournamentTeams.module.css'
 import { TrophyRow } from '../trophyRow/TrophyRow'
 import { icons } from 'data/data'
-import { InfoCup } from 'data/type-data'
 import { Appearances } from './appearances/Appearances'
+import { InfoCup } from 'data/type-nationalTeams'
 
 type Props = {
   data: InfoCup

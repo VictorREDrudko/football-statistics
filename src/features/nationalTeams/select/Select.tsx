@@ -1,10 +1,10 @@
-import { confederation } from 'data/data'
+import { confederation } from 'data/nationalTeams'
 import s from './Select.module.css'
-import { ConfederationType } from 'data/type-data'
 import { NavLink } from 'react-router-dom'
+import { Confederation } from 'data/type-nationalTeams'
 
 type Props = {
-  setConfeder: (el: ConfederationType) => void
+  setConfeder: (el: Confederation) => void
   sort: (sort: string) => void
   sorting: string
 }

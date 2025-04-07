@@ -1,11 +1,12 @@
-import { AchievementsType } from 'data/type-data'
+import { Achievement } from 'data/type-nationalTeams'
 import { TitleItem } from '../titleItem/TitleItem'
 import s from './Achievements.module.css'
 import { TournamentTeams } from './tournamentTeam/TournamentTeams'
 import { countWorldCup, uefaCup } from 'data/data'
 
+
 type Props = {
-  data: AchievementsType
+  data: Achievement
 }
 
 export const Achievements = ({data}: Props) => {

@@ -1,4 +1,4 @@
-import { AssociationDate } from 'data/type-data'
+import { AssociationDate } from 'data/type-nationalTeams'
 import { RowItem } from '../rowItem/RowItem'
 import { TitleItem } from '../titleItem/TitleItem'
 import s from './Association.module.css'

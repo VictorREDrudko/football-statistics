@@ -1,0 +1,16 @@
+@import url('./../../../../../../data/theme/theme.css');
+
+.containerNode {
+  width: 100%;
+  padding: 0.4rem 0.4rem 0.8rem 0.4rem;
+  border: 1px solid var(--bg-second-transparent70);
+  border-radius: 0.8rem;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0,0.7),
+              1px 2px 4px 0px rgba(0, 0, 0, 0.7),
+              2px 4px 8px 0px rgba(0, 0, 0, 0.7),
+              2px 4px 16px 0px rgba(255, 255, 255, 0.7);
+  color: var(--bg-second);
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s;
+}

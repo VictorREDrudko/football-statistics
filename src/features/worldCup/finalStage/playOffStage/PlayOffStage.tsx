@@ -1,40 +1,40 @@
-import { background } from 'data/data'
 import s from './PlayOffStage.module.css'
-import { MatchesInGroup } from '../groups/mathes-in-group/MatchesInGroup'
-import { MatchFifaWorldCup } from 'data/type-data'
-import { getUniqueStagePlayOff } from 'data/worldCupFinalStage'
-import { KnockoutStage } from '../knockout-stage/KnockoutStage'
+import { WorldCupMatch } from 'data/worldCupData/type-worldCupData'
+import { worldCupData } from 'data/worldCupData/worldCupData'
+import { StageTitle } from 'common/components/stageTitle/StageTitle'
+import { MatchesByStage } from 'common/components/matchesByStage/MatchesByStage'
+import { SubStageTitle } from 'common/components/subStageTitle/SubStageTitle'
+import { FlowchartPlayOffStage } from './flowchartPlayOffStage/FlowchartPlayOffStage'
+import { getUniqueStagePlayOff } from 'logics/worldCup/WorldCupFinalStageLogic'
 
 type Props = {
-  year: string | undefined
-  matchesInPlayOff: MatchFifaWorldCup[] | undefined
+  year: string
+  playOffStageMatches: WorldCupMatch[]
 }
 
-export const PlayOffStage = ({year, matchesInPlayOff} : Props) => {
-  const yearFWC = year ? year : '1930'
-  const matches = matchesInPlayOff ? matchesInPlayOff : []
+export const PlayOffStage = ({year, playOffStageMatches} : Props) => {
+  const playOffStages = getUniqueStagePlayOff(playOffStageMatches);
 
-  const stage = getUniqueStagePlayOff(matches)
+  const playOffMatches = playOffStages.map((nameStage, index) => {
+    const matchesPlayoffStage = playOffStageMatches.filter(match => match.stage === nameStage);
 
-  const mappedStage = stage.map((nameStage, index) => {
-    const filterMatches = matches.filter(match => match.stage === nameStage)
     return (
-      <div className={s.containerStage} key={index}>
-        <span className={s.nameStage}>{nameStage}</span>
-        <MatchesInGroup matches={filterMatches}/>
+      <div className={s.containerMatchesStagePlayOff} key={index}>
+        <SubStageTitle title={nameStage.split(":")[1]}/>
+        <MatchesByStage matches={matchesPlayoffStage}/>
       </div>
     )
   })
 
   return (
-    <div className={s.container} style={ {backgroundImage: `url(${background.worldCup[yearFWC].image1})`} }>
-      <h2 className={s.titleStage}>Knockout stage</h2>
-      <div className={s.containerStages}>
-        {mappedStage}
+    <div className={s.container} style={ {backgroundImage: `url(${worldCupData[year].background[0]})`} }>
+      <StageTitle title={'Knockout stage'}/>
+      <div className={s.containerMatchesPlayOff}>
+        {playOffMatches}
       </div>
-      <div className={s.containerBlock}>
-        <KnockoutStage matches={matchesInPlayOff}/>
-        <div className={s.wrapper} ></div>
+      <div className={s.containerFlowchart}>
+        <FlowchartPlayOffStage matches={playOffStageMatches} playOffStages={playOffStages}/>
+        <div className={s.wrapperFlowchart} ></div>
       </div>
     </div>
   )

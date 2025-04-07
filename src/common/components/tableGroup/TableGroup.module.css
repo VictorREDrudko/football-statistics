@@ -1,0 +1,88 @@
+@import url('./../../../data/theme/theme.css');
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px 0px var(--bg-second-transparent70);
+  height: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.tableHeader {
+  font-size: 0.8rem;
+  border: 1px solid var(--bg-second-transparent50);
+  background-color: var(--bg-main-transparent70);
+  color: var(--accent-second);
+  padding: 0.5rem;
+  position: relative;
+}
+
+.tableHeader:hover {
+  cursor: pointer;
+}
+
+[title]::after {
+  content: attr(title);
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.5s;
+  font-size: 1rem;
+  color: var(--bg-second);
+  font-weight: normal;
+}
+
+[title]:hover::after {
+  opacity: 1;
+}
+
+.bodyTable th {
+  border: 1px solid var(--bg-second-transparent50);
+  background-color: var(--no-accent-transparent50);
+  color: var(--bg-second-transparent70);
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+}
+
+
+@media (max-width: 605px) {
+  .tableHeader:last-child,
+  .tableHeader:nth-child(9),
+  .bodyTable th:last-child,
+  .bodyTable th:nth-child(9) {
+    display: none;
+  }
+
+  .tableHeader {
+    padding: 0.5rem 0.3rem;
+  }
+
+  .bodyTable th {
+    padding: 0.5rem 0.3rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tableHeader:nth-child(3),
+  .bodyTable th:nth-child(3) {
+    display: none;
+  }
+
+  .titleTable {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .tableHeader {
+    padding: 0.3rem;
+    font-size: 0.65rem;
+  }
+
+  .bodyTable th {
+    padding: 0.3rem;
+    font-size: 0.65rem;
+  }
+}

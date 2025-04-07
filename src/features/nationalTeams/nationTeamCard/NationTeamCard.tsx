@@ -1,4 +1,4 @@
-import { NationalTeam } from 'data/type-data'
+import { NationalTeam } from 'data/type-nationalTeams'
 import { Achievements } from '../achievements/Achievements'
 import { Association } from '../association/Association'
 import { Confederation } from '../confederation/Confederation'
@@ -12,13 +12,13 @@ type Props = {
 }
 
 export const NationalTeamsCard = ({data, closeInfoCard}: Props) => {
-  const flag = getCurrentCountryAttribut(data.flag)
-  const name = getCurrentCountryAttribut(data.name)
+  const flag = getCurrentCountryAttribut(data.flags)
+  const name = getCurrentCountryAttribut(data.names)
 
   return (
     <div className={s.container}>
       <div className={s.containerCoatOfArms}>
-        <img className={s.imgCoatOfArms} src={data.coatOfArms} alt={`coat of arms ${data.name}`} />
+        <img className={s.imgCoatOfArms} src={data.coatOfArms} alt={`coat of arms ${data.names}`} />
       </div>
       <TitleCard flag={flag} name={name} icon={data.associationIcon}/>
       <button className={s.button} onClick={closeInfoCard}>X</button>
@@ -28,7 +28,7 @@ export const NationalTeamsCard = ({data, closeInfoCard}: Props) => {
         </div>
         <span className={s.title}>Rating</span>
       </div>
-      <Confederation icon={data.confederationIcon} name={data.confederation}/>
+      {/* <Confederation icon={data.confederationIcon} name={data.confederation}/> */}
       <Association associationDate={data.associationDate}/>
       <Achievements data={data.achievements}/>
   </div>

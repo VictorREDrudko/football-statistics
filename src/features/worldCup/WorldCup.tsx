@@ -1,15 +1,16 @@
-import { fifaWorldCup, fifaWorldCupKeys } from "data/data"
+import { worldCupYears } from 'logics/worldCup/WorldCupFinalStageLogic'
 import s from './WorldCup.module.css'
 import { WorldCupCard } from "./worldCupCard/WorldCupCard"
+import { worldCupData } from 'data/worldCupData/worldCupData'
 
 export const WorldCup = () => {
-  const mapped = fifaWorldCupKeys.map((year) => {
-    return <WorldCupCard tournament={fifaWorldCup[year]} key={fifaWorldCup[year].id}/>
+  const cardsWorldCup = worldCupYears.map((year) => {
+    return <WorldCupCard tournament={worldCupData[year]} key={worldCupData[year].id}/>
   })
 
   return (
     <div className={s.container}>
-      {mapped}
+      {cardsWorldCup}
     </div>
   )
 }

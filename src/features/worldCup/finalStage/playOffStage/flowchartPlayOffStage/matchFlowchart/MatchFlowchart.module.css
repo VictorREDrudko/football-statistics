@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+}
+
+.containerTeams {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.5rem;
+  width: 10rem;
+}
+
+.containerScore {
+  padding: 0.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+}

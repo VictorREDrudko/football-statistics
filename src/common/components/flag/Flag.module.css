@@ -1,0 +1,18 @@
+.image {
+  display: inline-block;
+  margin-right: 5px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+@media (max-width: 605px) {
+  .image {
+    width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image {
+    width: 0;
+  }
+}

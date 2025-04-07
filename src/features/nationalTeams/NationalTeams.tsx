@@ -1,16 +1,17 @@
-import { confederation, getCurrentCountryAttribut, nameTeams, nationalTeams } from 'data/data'
 import s from './NationalTeams.module.css'
 import { NationalTeamsCard } from './nationTeamCard/NationTeamCard'
 import { ListNationalTeams } from './listNationalTeams/ListNationalTeams'
 import { useEffect, useState } from 'react'
 import { Select } from './select/Select'
-import { ConfederationType, NationalTeam } from 'data/type-data'
 import { useNavigate, useParams } from 'react-router-dom'
 import { urlWithHyphen, urlWithoutHyphen } from 'common/utils/urlWithHyphen'
+import { Confederation, NationalTeam } from 'data/type-nationalTeams'
+import { confederation, confederationTeamNames, nationalTeams } from 'data/nationalTeams'
+import { getCurrentCountryAttribut } from 'data/data'
 
 export const NationalTeams = () => {
   const [team, setTeam] = useState<string>('')
-  const [confeder, setConfeder] = useState<ConfederationType>('uefa');
+  const [confeder, setConfeder] = useState<Confederation>('uefa');
   const [sorting, setSorting] = useState<string>('alphabet')
 
   const navigate = useNavigate();
@@ -18,8 +19,8 @@ export const NationalTeams = () => {
   const { confederationRoute, teamRoute } = useParams<{ confederationRoute: string, teamRoute: string }>();
 
   useEffect(() => {
-    if (confederationRoute && confederation.includes(confederationRoute as ConfederationType)) {
-      setConfeder(confederationRoute as ConfederationType);
+    if (confederationRoute && confederation.includes(confederationRoute as Confederation)) {
+      setConfeder(confederationRoute as Confederation);
     } else {
       setConfeder('uefa');
     }
@@ -40,13 +41,13 @@ export const NationalTeams = () => {
 
   // Сортировка
   // Нужно создать массив объектов (команд) 
-  const arrayTeams: NationalTeam[] = nameTeams[confeder].map(el => {
+  const arrayTeams: NationalTeam[] = confederationTeamNames[confeder].map(el => {
     return nationalTeams[el]
   })
 
   const sortTeams = (teams: NationalTeam[]) => {
     if (sorting === 'alphabet') {
-      return teams.sort((a, b) => getCurrentCountryAttribut(a.name).localeCompare(getCurrentCountryAttribut(b.name)));
+      return teams.sort((a, b) => getCurrentCountryAttribut(a.names).localeCompare(getCurrentCountryAttribut(b.names)));
     } else if (sorting === 'rating') {
       // Добавьте логику сортировки по рейтингу, если есть рейтинг у команд
       return teams.sort((a, b) => b.rating - a.rating);

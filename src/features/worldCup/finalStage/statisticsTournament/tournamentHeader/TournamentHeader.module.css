@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.year,
+.newTitle {
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-second);
+  text-align: center;
+}
+
+.year {
+  font-size: 6.0rem;
+  margin-bottom: 2rem;
+}
+
+.newTitle {
+  font-size: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+.image {
+  border-radius: 3rem 0;
+  max-width: 20rem;
+  width: 100%;
+  box-shadow: 2px 2px 5px var(--bg-second), 
+              5px 4px 10px var(--bg-second-transparent50);
+}
+
+@media (max-width: 768px) {
+  .year {
+    font-size: 3.0rem;
+    margin-bottom: 0;
+    line-height: 100%;
+  }
+
+  .image {
+    border-radius: 2rem 0;
+    max-width: 14rem;
+    width: 100%;
+  }
+
+  .newTitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .year {
+    margin-bottom: 1rem;
+  }
+}

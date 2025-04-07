@@ -1,0 +1,34 @@
+@import url('./../../../../../data/theme/theme.css');
+
+.container {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* style for createNodes (WorldCupFinalStageLogic)*/
+.node {
+  background-color: var(--bg-main-transparent50);
+  border-radius: 0.8rem;
+}
+
+.lastNode {
+  background-color: var(--accent-second-transparent20);
+  border-radius: 0.8rem;
+}
+
+.lastNode::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('./../../../../../assets/icon-cup/world.png'); /* путь к изображению */
+  background-size: 15%; /* Чтобы изображение сохраняло свои пропорции */
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -1,3 +1,5 @@
+@import url('./../../../../data/theme/theme.css');
+
 .container {
   display: flex;
   flex-direction: column;
@@ -5,51 +7,39 @@
   background-size: no-repeat;
   background-position: center;
   background-size: cover;
-  margin-top: 60px;
+  padding: 4rem 0;
   position: relative;
 }
 
-.titleStage {
-  padding-top: 40px;
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: gold;
-  letter-spacing: 2px;
-}
-
-.containerStages {
+.containerMatchesPlayOff {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   gap: 40px;
   width: 100%;
+  padding-top: 2rem;
 }
 
-.containerStage {
+.containerMatchesStagePlayOff {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 600px;
+  max-width: 35rem;
   width: 100%;
-  padding: 0 10px;
+  padding: 1.2rem 0.8rem;
+  margin: 0.8rem;
+  background-color: var(--bg-main-transparent50);
+  border-radius: 2rem 0;
+  border: 1px solid var(--bg-second-transparent50);
+  box-shadow: 0 2px 5px var(--bg-second-transparent50), 0 4px 6px var(--bg-second-transparent50);
 }
 
-.nameStage {
-  display: block;
-  text-align: center;
-  letter-spacing: 2px;
-  font-size: 1rem;
-}
-
-.containerBlock {
+.containerFlowchart {
   width: 100%;
   position: relative;
 }
 
-.wrapper {
+.wrapperFlowchart {
   position: absolute;
   top: 0;
   left: 0;
