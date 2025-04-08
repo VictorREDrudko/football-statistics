@@ -24,6 +24,7 @@ import { WorldCupData } from "./type-worldCupData";
 
 import backgroundFWC1930_1 from "./../../assets/backgroundWC/1930-1.png";
 import backgroundFWC1930_2 from "./../../assets/backgroundWC/1930-2.png";
+import backgroundFWC1934_2 from "./../../assets/backgroundWC/1934-2.png";
 
 export const worldCupCharacteristic: string[] = [
   "Host country",
@@ -401,7 +402,7 @@ export const worldCupData: WorldCupData = {
     title: "1934 FIFA World Cup",
     date: "27 May - 10 June",
     icon: iconWorldCup1934,
-    background: [],
+    background: [backgroundFWC1934_2],
     hostCountry: ["Italy"],
     finalStage: [
       {

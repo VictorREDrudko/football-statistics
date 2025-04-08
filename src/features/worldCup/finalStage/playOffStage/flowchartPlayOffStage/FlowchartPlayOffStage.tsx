@@ -2,7 +2,7 @@ import s from './FlowchartPlayOffStage.module.css'
 import { ReactFlow, ReactFlowProvider } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { WorldCupMatch } from 'data/worldCupData/type-worldCupData';
-import { createHeight, createNodes, edges } from 'logics/worldCup/WorldCupFinalStageLogic';
+import { createEdges, createHeight, createNodes } from 'logics/worldCup/WorldCupFinalStageLogic';
 import { CustomNodeComponent } from './customNodeComponent/CustomNodeComponent';
 
 // Настройка карты типов узлов
@@ -18,6 +18,7 @@ type Props = {
 export const FlowchartPlayOffStage = ({matches, playOffStages}: Props) => {
   const nodes = createNodes(playOffStages, matches)
   const height = createHeight(playOffStages, matches)
+  const edges = createEdges(playOffStages)
 
   console.log(nodes)
 

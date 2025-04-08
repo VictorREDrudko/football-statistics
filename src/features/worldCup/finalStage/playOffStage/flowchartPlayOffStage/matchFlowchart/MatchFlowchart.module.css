@@ -3,16 +3,19 @@
 }
 
 .containerTeams {
+  margin-top: 0.5rem;
+  margin-left: 0.3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
   gap: 0.5rem;
-  width: 10rem;
+  width: 11rem;
 }
 
 .containerScore {
-  padding: 0.2rem 1rem;
+  margin-top: 0.5rem;
+  padding: 0rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
