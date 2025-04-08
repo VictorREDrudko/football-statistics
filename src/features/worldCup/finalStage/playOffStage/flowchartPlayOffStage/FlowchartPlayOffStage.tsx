@@ -20,8 +20,6 @@ export const FlowchartPlayOffStage = ({matches, playOffStages}: Props) => {
   const height = createHeight(playOffStages, matches)
   const edges = createEdges(playOffStages)
 
-  console.log(nodes)
-
   return (
   <div className={s.container} style={{height}}>
     <ReactFlowProvider>

@@ -50,7 +50,9 @@
   height: 100%;
 }
 
-/* .containerMatchesFinalStage h2:last-of-type {
-  margin-top: 1rem;
-} */
+@media (max-width: 480px) {
+  .containerFlowchart {
+    display: none;
+  }
+}
 
