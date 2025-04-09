@@ -1,6 +1,6 @@
 import { CountryTeam } from 'common/components/countryTeam/CountryTeam'
 import s from './ScoreMatchFlowchart.module.css'
-import { convertMatchScore } from 'logics/worldCup/WorldCupFinalStageLogic'
+import { convertMatchScore } from 'logics/worldCup/worldCupFinalStageLogic'
 
 type Props = {
   score: Array<number[]>

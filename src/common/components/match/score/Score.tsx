@@ -1,4 +1,4 @@
-import { convertMatchScore } from 'logics/worldCup/WorldCupFinalStageLogic'
+import { convertMatchScore } from 'logics/worldCup/worldCupFinalStageLogic'
 import s from './Score.module.css'
 
 export type Props = {

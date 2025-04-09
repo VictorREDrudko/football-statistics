@@ -1,4 +1,4 @@
-import { worldCupYears } from 'logics/worldCup/WorldCupFinalStageLogic'
+import { worldCupYears } from 'logics/worldCup/worldCupFinalStageLogic'
 import s from './WorldCup.module.css'
 import { WorldCupCard } from "./worldCupCard/WorldCupCard"
 import { worldCupData } from 'data/worldCupData/worldCupData'

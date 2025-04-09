@@ -2,8 +2,8 @@ import s from './FlowchartPlayOffStage.module.css'
 import { ReactFlow, ReactFlowProvider } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { WorldCupMatch } from 'data/worldCupData/type-worldCupData';
-import { createEdges, createHeight, createNodes } from 'logics/worldCup/WorldCupFinalStageLogic';
 import { CustomNodeComponent } from './customNodeComponent/CustomNodeComponent';
+import { createEdges, createHeight, createNodes } from 'logics/worldCup/flowchartRenderer';
 
 // Настройка карты типов узлов
 const nodeTypes = {
@@ -37,7 +37,7 @@ export const FlowchartPlayOffStage = ({matches, playOffStages}: Props) => {
                   zoomOnScroll={false} // Отключение масштабирования колесиком мыши
                   zoomOnPinch={false} // Отключение масштабирования на сенсорных устройствах
                   zoomOnDoubleClick={false} // Отключение зума по двойному клику
-                  style={{ overflow: 'hidden', height: '100%', width: '1440px' }}
+                  style={{ overflow: 'hidden', height: '100%',}}
       > 
       </ReactFlow>
     </ReactFlowProvider>

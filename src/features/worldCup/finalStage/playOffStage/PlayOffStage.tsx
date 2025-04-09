@@ -5,7 +5,7 @@ import { StageTitle } from 'common/components/stageTitle/StageTitle'
 import { MatchesByStage } from 'common/components/matchesByStage/MatchesByStage'
 import { SubStageTitle } from 'common/components/subStageTitle/SubStageTitle'
 import { FlowchartPlayOffStage } from './flowchartPlayOffStage/FlowchartPlayOffStage'
-import { filterFinalAnd3PlaceMatches, filterMatchesPlayoff, getUniqueStagePlayOff } from 'logics/worldCup/WorldCupFinalStageLogic'
+import { filterFinalAnd3PlaceMatches, filterMatchesPlayoff, getUniqueStagePlayOff } from 'logics/worldCup/worldCupFinalStageLogic'
 
 type Props = {
   year: string

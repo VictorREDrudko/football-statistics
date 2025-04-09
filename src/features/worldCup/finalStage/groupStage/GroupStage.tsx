@@ -1,6 +1,6 @@
 import s from './GroupStage.module.css'
 import { WorldCupMatch } from 'data/worldCupData/type-worldCupData'
-import { createGroupTableData, getSortGroupNames } from 'logics/worldCup/WorldCupFinalStageLogic'
+import { createGroupTableData, getSortGroupNames } from 'logics/worldCup/worldCupFinalStageLogic'
 import { worldCupData } from 'data/worldCupData/worldCupData'
 import { StageTitle } from 'common/components/stageTitle/StageTitle'
 import { TableGroup } from 'common/components/tableGroup/TableGroup'
