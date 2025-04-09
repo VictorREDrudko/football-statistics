@@ -37,7 +37,7 @@ export const FlowchartPlayOffStage = ({matches, playOffStages}: Props) => {
                   zoomOnScroll={false} // Отключение масштабирования колесиком мыши
                   zoomOnPinch={false} // Отключение масштабирования на сенсорных устройствах
                   zoomOnDoubleClick={false} // Отключение зума по двойному клику
-                  style={{ overflow: 'hidden', height: '100%' }}
+                  style={{ overflow: 'hidden', height: '100%', width: '1440px' }}
       > 
       </ReactFlow>
     </ReactFlowProvider>

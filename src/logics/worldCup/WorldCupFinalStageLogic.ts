@@ -410,6 +410,8 @@ export const createHeight = (playOffStages: string[], matches: WorldCupMatch[]) 
   if (playOffStages.length === 5) {
     return "750px";
   }
+
+  return '350px'
 };
 
 export const createEdges = (playOffStages: string[]) => {

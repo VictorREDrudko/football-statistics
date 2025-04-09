@@ -1,7 +1,8 @@
 @import url('./../../../../../data/theme/theme.css');
 
 .container {
-  width: 100%;
+  width: 1440px;
+  height: 350px;
   padding: 0.5rem;
   overflow: hidden;
   position: relative;
