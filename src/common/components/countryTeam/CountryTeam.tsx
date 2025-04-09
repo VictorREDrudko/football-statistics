@@ -11,7 +11,8 @@ type Props = {
 }
 
 export const CountryTeam = ({countryName, year, style, styleFlag}: Props) => {
-  const name = choiseCountryName(nationalTeams[countryName].names, year);
+
+  const name = countryName !== '' ? choiseCountryName(nationalTeams[countryName].names, year) : '';
 
   return (
     <div className={s.container}>

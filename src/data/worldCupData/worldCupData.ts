@@ -25,6 +25,7 @@ import { WorldCupData } from "./type-worldCupData";
 import backgroundFWC1930_1 from "./../../assets/backgroundWC/1930-1.png";
 import backgroundFWC1930_2 from "./../../assets/backgroundWC/1930-2.png";
 import backgroundFWC1934_2 from "./../../assets/backgroundWC/1934-2.png";
+import backgroundFWC1938_2 from "./../../assets/backgroundWC/1938-2.png";
 
 export const worldCupCharacteristic: string[] = [
   "Host country",
@@ -804,9 +805,447 @@ export const worldCupData: WorldCupData = {
     title: "1938 FIFA World Cup",
     date: "4-19 June",
     icon: iconWorldCup1938,
-    background: [],
+    background: [backgroundFWC1938_2],
     hostCountry: ["France"],
-    finalStage: [],
+    finalStage: [
+      {
+        id: "1-1938",
+        date: "04.06.1938",
+        stage: "5:1/8 round of 16",
+        teams: ["Switzerland", "Germany"],
+        score: [[1, 1], [0, 0], []],
+        goals: [
+          {
+            playersScoredGoal: ["Abegglen"],
+            timeGoals: ["43"],
+          },
+          { 
+            playersScoredGoal: ["Gauchel"], 
+            timeGoals: ["29"] 
+          },
+        ],
+        stadium: {
+          title: "Parc des Princes",
+          city: "Paris",
+          country: "France",
+          attendance: "27 152",
+        },
+      },
+      {
+        id: "2-1938",
+        date: "05.06.1938",
+        stage: "5:1/8 round of 16",
+        teams: ["Hungary", "Indonesia"],
+        score: [[6, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Kohut", "Toldi", "G.Sárosi", "Zsengellér"],
+            timeGoals: ["13", "15", "28, 89", "35, 76"],
+          },
+          { 
+            playersScoredGoal: [], 
+            timeGoals: [] 
+          },
+        ],
+        stadium: {
+          title: "Vélodrome Municipal",
+          city: "Reims",
+          country: "France",
+          attendance: "9 000",
+        },
+      },
+      {
+        id: "0-1938",
+        date: "05.06.1938",
+        stage: "5:1/8 round of 16",
+        teams: ["Sweden", ""],
+        score: [[], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          { 
+            playersScoredGoal: [], 
+            timeGoals: [] 
+          },
+        ],
+        stadium: {
+          title: "",
+          city: "",
+          country: "",
+          attendance: "",
+        },
+      },
+      {
+        id: "3-1938",
+        date: "05.06.1938",
+        stage: "5:1/8 round of 16",
+        teams: ["Cuba", "Romania"],
+        score: [[2, 2], [1, 1], []],
+        goals: [
+          {
+            playersScoredGoal: ["Socorro", "Magriñá"],
+            timeGoals: ["44, 103", "69"],
+          },
+          { 
+            playersScoredGoal: ["Bindea", "Barátky", "Dobay"], 
+            timeGoals: ["35", "88", "105"] 
+          },
+        ],
+        stadium: {
+          title: "Stade du T.O.E.C.",
+          city: "Toulouse",
+          country: "France",
+          attendance: "7 000",
+        },
+      },
+      {
+        id: "4-1938",
+        date: "05.06.1938",
+        stage: "5:1/8 round of 16",
+        teams: ["France", "Belgium"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Veinante", "Nicolas"],
+            timeGoals: ["1", "16, 69"],
+          },
+          { 
+            playersScoredGoal: ["Isemborghs"], 
+            timeGoals: ["38"] 
+          },
+        ],
+        stadium: {
+          title: "Stade Olympique de Colombes",
+          city: "Paris",
+          country: "France",
+          attendance: "30 454",
+        },
+      },
+      {
+        id: "5-1938",
+        date: "05.06.1938",
+        stage: "5:1/8 round of 16",
+        teams: ["Italy", "Norway"],
+        score: [[1, 1], [1, 0], []],
+        goals: [
+          {
+            playersScoredGoal: ["Ferraris", "Piola"],
+            timeGoals: ["2", "94"],
+          },
+          { 
+            playersScoredGoal: ["Brustad"], 
+            timeGoals: ["83"] 
+          },
+        ],
+        stadium: {
+          title: "Stade Vélodrome",
+          city: "Marseille",
+          country: "France",
+          attendance: "19 000",
+        },
+      },
+      {
+        id: "6-1938",
+        date: "05.06.1938",
+        stage: "5:1/8 round of 16",
+        teams: ["Brazil", "Poland"],
+        score: [[4, 4], [2, 1], []],
+        goals: [
+          {
+            playersScoredGoal: ["Leônidas", "Romeu", "Perácio"],
+            timeGoals: ["18, 93, 104", "25", "44, 71"],
+          },
+          { 
+            playersScoredGoal: ["Scherfke", "Wilimowski"], 
+            timeGoals: ["23(p)", "53, 59, 89, 118"] 
+          },
+        ],
+        stadium: {
+          title: "Stade de la Meinau",
+          city: "Strasbourg",
+          country: "France",
+          attendance: "13 452",
+        },
+      },
+      {
+        id: "7-1938",
+        date: "05.06.1938",
+        stage: "5:1/8 round of 16",
+        teams: ["Czechoslovakia", "Netherlands"],
+        score: [[0, 0], [3, 0], []],
+        goals: [
+          {
+            playersScoredGoal: ["Košťálek", "Zeman", "Nejedlý"],
+            timeGoals: ["93", "111", "118"],
+          },
+          { 
+            playersScoredGoal: [], 
+            timeGoals: [] 
+          },
+        ],
+        stadium: {
+          title: "Stade municipal",
+          city: "Le Havre",
+          country: "France",
+          attendance: "11 000",
+        },
+      },
+      {
+        id: "8-1938",
+        date: "09.06.1938 REPLAY",
+        stage: "5:1/8 round of 16",
+        teams: ["Switzerland", "Germany"],
+        score: [[4, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Walaschek", "Bickel", "Abegglen"],
+            timeGoals: ["42", "64", "75, 78"],
+          },
+          { 
+            playersScoredGoal: ["Hahnemann", "Lörtscher"], 
+            timeGoals: ["8", "22(o.g.)"] 
+          },
+        ],
+        stadium: {
+          title: "Parc des Princes",
+          city: "Paris",
+          country: "France",
+          attendance: "20 025",
+        },
+      },
+      {
+        id: "9-1938",
+        date: "09.06.1938 REPLAY",
+        stage: "5:1/8 round of 16",
+        teams: ["Cuba", "Romania"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Socorro", "Fernández"],
+            timeGoals: ["51", "57"],
+          },
+          { 
+            playersScoredGoal: ["Dobay"], 
+            timeGoals: ["35"] 
+          },
+        ],
+        stadium: {
+          title: "Stade du T.O.E.C.",
+          city: "Toulouse",
+          country: "France",
+          attendance: "8 000",
+        },
+      },
+      {
+        id: "10-1938",
+        date: "12.06.1938",
+        stage: "4:1/4 quarter-finals",
+        teams: ["Hungary", "Switzerland"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["G.Sárosi", "Zsengellér"],
+            timeGoals: ["40", "89"],
+          },
+          { 
+            playersScoredGoal: [], 
+            timeGoals: [] 
+          },
+        ],
+        stadium: {
+          title: "Stade Victor Boucquey",
+          city: "Lille",
+          country: "France",
+          attendance: "15 000",
+        },
+      },
+      {
+        id: "11-1938",
+        date: "12.06.1938",
+        stage: "4:1/4 quarter-finals",
+        teams: ["Sweden", "Cuba"],
+        score: [[8, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["H.Andersson", "Wetterström", "Keller", "Nyberg"],
+            timeGoals: ["9, 81, 89", "22, 37, 44", "80", "84"],
+          },
+          { 
+            playersScoredGoal: [], 
+            timeGoals: [] 
+          },
+        ],
+        stadium: {
+          title: "Stade du Fort Carré",
+          city: "Antibes",
+          country: "France",
+          attendance: "7 000",
+        },
+      },
+      {
+        id: "12-1938",
+        date: "12.06.1938",
+        stage: "4:1/4 quarter-finals",
+        teams: ["Italy", "France"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Colaussi", "Piola"],
+            timeGoals: ["9", "51, 72"],
+          },
+          { 
+            playersScoredGoal: ["Heisserer"], 
+            timeGoals: ["10"] 
+          },
+        ],
+        stadium: {
+          title: "Stade Olympique de Colombes",
+          city: "Paris",
+          country: "France",
+          attendance: "58 455",
+        },
+      },
+      {
+        id: "13-1938",
+        date: "12.06.1938",
+        stage: "4:1/4 quarter-finals",
+        teams: ["Brazil", "Czechoslovakia"],
+        score: [[1, 1], [0, 0], []],
+        goals: [
+          {
+            playersScoredGoal: ["Leônidas"],
+            timeGoals: ["30"],
+          },
+          { 
+            playersScoredGoal: ["Nejedlý"], 
+            timeGoals: ["65(p)"] 
+          },
+        ],
+        stadium: {
+          title: "Parc Lescure",
+          city: "Bordeaux",
+          country: "France",
+          attendance: "22 021",
+        },
+      },
+      {
+        id: "14-1938",
+        date: "14.06.1938 REPLAY",
+        stage: "4:1/4 quarter-finals",
+        teams: ["Brazil", "Czechoslovakia"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Leônidas", "Roberto"],
+            timeGoals: ["57", "62"],
+          },
+          { 
+            playersScoredGoal: ["Kopecký"], 
+            timeGoals: ["25"] 
+          },
+        ],
+        stadium: {
+          title: "Parc Lescure",
+          city: "Bordeaux",
+          country: "France",
+          attendance: "18 141",
+        },
+      },
+      {
+        id: "15-1938",
+        date: "16.06.1938",
+        stage: "3:1/2 semi-finals",
+        teams: ["Hungary", "Sweden"],
+        score: [[5, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Jacobsson", "Titkos", "Zsengellér", "G.Sárosi"],
+            timeGoals: ["19(o.g.)", "37", "39, 85", "65"],
+          },
+          { 
+            playersScoredGoal: ["Nyberg"], 
+            timeGoals: ["1"] 
+          },
+        ],
+        stadium: {
+          title: "Parc des Princes",
+          city: "Paris",
+          country: "France",
+          attendance: "20 000",
+        },
+      },
+      {
+        id: "16-1938",
+        date: "16.06.1938",
+        stage: "3:1/2 semi-finals",
+        teams: ["Italy", "Brazil"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Colaussi", "Meazza"],
+            timeGoals: ["51", "60(p)"],
+          },
+          { 
+            playersScoredGoal: ["Romeu"], 
+            timeGoals: ["87"] 
+          },
+        ],
+        stadium: {
+          title: "Stade Vélodrome",
+          city: "Marseille",
+          country: "France",
+          attendance: "33 000",
+        },
+      },
+      {
+        id: "17-1938",
+        date: "19.06.1938",
+        stage: "2:third place play-off",
+        teams: ["Brazil", "Sweden"],
+        score: [[4, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Romeu", "Leônidas", "Perácio"],
+            timeGoals: ["44", "63, 74", "80"],
+          },
+          { 
+            playersScoredGoal: ["Jonasson", "Nyberg"], 
+            timeGoals: ["28", "38"] 
+          },
+        ],
+        stadium: {
+          title: "Parc Lescure",
+          city: "Bordeaux",
+          country: "France",
+          attendance: "12 000",
+        },
+      },
+      {
+        id: "18-1938",
+        date: "19.06.1938",
+        stage: "1:final",
+        teams: ["Italy", "Hungary"],
+        score: [[4, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Colaussi", "Piola"],
+            timeGoals: ["6, 35", "16, 82"],
+          },
+          { 
+            playersScoredGoal: ["Titkos", "G.Sárosi"], 
+            timeGoals: ["8", "70"] 
+          },
+        ],
+        stadium: {
+          title: "Stade Olympique de Colombes",
+          city: "Paris",
+          country: "France",
+          attendance: "45 000",
+        },
+      },
+    ],
     qualification: [],
   },
   1950: {

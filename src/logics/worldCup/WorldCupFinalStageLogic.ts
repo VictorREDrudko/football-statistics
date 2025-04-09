@@ -74,22 +74,35 @@ export const createGroupTableData = (qualifiedTeamsForPlayoff: string[], groupMa
 
 export const createWorldCupStatsData = (dataTournament: WorldCupInfo) => {
   const matches = dataTournament.finalStage;
-  const numberOfTeams = Array.from(new Set(matches.map((match) => match.teams).flat())).length
+  const numberOfTeams = Array.from(new Set(matches.map((match) => match.teams).flat())).filter(name => name !== '').length
+
+  // количество не сыгранных игр
+  let countNoMatch = 0;
+
+  matches.forEach((match) => {
+    if(match.score[0].length === 0) {
+      countNoMatch += 1 
+    }
+  });
+
+  const countMatches = dataTournament.finalStage.length - countNoMatch
 
   let attendance = 0;
   matches.forEach((match) => {
     attendance += Number(match.stadium.attendance.replace(" ", ""));
   });
-  const averageAttendance = +(attendance / matches.length).toFixed(0);
+  const averageAttendance = +(attendance / countMatches).toFixed(0);
 
   const attendanceString = attendance.toLocaleString().replace(",", " ");
   const averageAttendanceString = averageAttendance.toLocaleString().replace(",", " ");
 
-  let goals = 0;
+  let countGoals = 0;
   matches.forEach((match) => {
-    goals += match.score[0][0] + match.score[0][1] 
-    if (match.score[1].length > 0) {
-      goals += match.score[1][0] + match.score[1][1] 
+    if(match.score[0].length > 0) {
+      countGoals += match.score[0][0] + match.score[0][1] 
+      if (match.score[1].length > 0) {
+        countGoals += match.score[1][0] + match.score[1][1] 
+      }
     }
   });
 
@@ -124,8 +137,8 @@ export const createWorldCupStatsData = (dataTournament: WorldCupInfo) => {
     dataTournament.date, 
     'Not yet', 
     numberOfTeams, 
-    dataTournament.finalStage.length, 
-    [goals, `(${(goals / matches.length).toFixed(2)} per match)`],
+    countMatches, 
+    [countGoals, `(${(countGoals / countMatches).toFixed(2)} per match)`],
     [attendanceString, `(${averageAttendanceString} per match)`],
     topScorer
   ]
@@ -147,6 +160,9 @@ export const getUniqueStagePlayOff = (matches: WorldCupMatch[]) => {
 };
 
 export const convertMatchScore = (score: Array<number[]>) => {
+  // Вариант когда матч не состоялся
+  if(score[0].length === 0) return []
+
   if (score[1].length > 0 && score[2].length === 0 && score.length === 3) {
     const goalsTeam1 = score[0][0] + score[1][0];
     const goalsTeam2 = score[0][1] + score[1][1];

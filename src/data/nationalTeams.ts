@@ -371,6 +371,7 @@ import flagTimorLeste from "./../assets/icon/flag/Timor-Leste.png";
 import coatOfArmsTimorLeste from "./../assets/icon/coat-of-arms/Timor-Leste.png";
 import iconIndonesia from "./../assets/icon/national/Indonesia.png";
 import flagIndonesia from "./../assets/icon/flag/Indonesia.png";
+import flagIndonesia2 from "./../assets/icon/flag/Indonesia2.png";
 import coatOfArmsIndonesia from "./../assets/icon/coat-of-arms/Indonesia.png";
 import iconLaos from "./../assets/icon/national/Laos.png";
 import flagLaos from "./../assets/icon/flag/Laos.png";
@@ -3896,8 +3897,14 @@ export const nationalTeams: NationalTeams = {
   },
   Indonesia: {
     id: v1(),
-    names: [{ nameCountry: "Indonesia", period: "0000-p.t." }],
-    flags: [{ flagCountry: flagIndonesia, period: "0000-p.t." }],
+    names: [
+      { nameCountry: "Indonesia", period: "1949-p.t." },
+      { nameCountry: "D.East Indies", period: "1800-1948" }
+    ],
+    flags: [
+      { flagCountry: flagIndonesia, period: "1949-p.t." },
+      { flagCountry: flagIndonesia2, period: "1800-1948" }
+    ],
     coatOfArms: coatOfArmsIndonesia,
     associationIcon: iconIndonesia,
     associationDate: {

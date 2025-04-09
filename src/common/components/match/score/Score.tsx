@@ -25,6 +25,11 @@ export const Score = ({score}: Props) => {
     resultScore = `${matchScore[0][0]}(${matchScore[1][0]}) : ${matchScore[0][1]}(${matchScore[1][1]})`
   }
 
+  // вариант 4: матч не состоялся
+  if (matchScore.length === 0) {
+    resultScore = `w/o`
+  }
+
   return (
     <div className={s.container}>
       <span className={s.score}>{resultScore}</span>
