@@ -26,6 +26,8 @@ import backgroundFWC1930_1 from "./../../assets/backgroundWC/1930-1.png";
 import backgroundFWC1930_2 from "./../../assets/backgroundWC/1930-2.png";
 import backgroundFWC1934_2 from "./../../assets/backgroundWC/1934-2.png";
 import backgroundFWC1938_2 from "./../../assets/backgroundWC/1938-2.png";
+import backgroundFWC1950_1 from "./../../assets/backgroundWC/1950-1.png";
+import backgroundFWC1950_2 from "./../../assets/backgroundWC/1950-2.png";
 
 export const worldCupCharacteristic: string[] = [
   "Host country",
@@ -1253,9 +1255,494 @@ export const worldCupData: WorldCupData = {
     title: "1950 FIFA World Cup",
     date: "	24 June - 16 July",
     icon: iconWorldCup1950,
-    background: [],
+    background: [backgroundFWC1950_1, backgroundFWC1950_2],
     hostCountry: ["Brazil"],
-    finalStage: [],
+    finalStage: [
+      {
+        id: "1-1950",
+        date: "24.06.1950",
+        stage: "group 1",
+        teams: ["Brazil", "Mexico"],
+        score: [[4, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Ademir", "Jair", "Baltazar"],
+            timeGoals: ["30, 79", "65", "71"],
+          },
+          {
+            playersScoredGoal: [], 
+            timeGoals: [] },
+        ],
+        stadium: {
+          title: "Estádio do Maracanã",
+          city: "Rio de Janeiro",
+          country: "Brazil",
+          attendance: "81 649",
+        },
+      },
+      {
+        id: "2-1950",
+        date: "25.06.1950",
+        stage: "group 1",
+        teams: ["Yugoslavia", "Switzerland"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Mitić", "Tomašević", "Ognjanov"],
+            timeGoals: ["59", "70", "84"],
+          },
+          {
+            playersScoredGoal: [], 
+            timeGoals: [] },
+        ],
+        stadium: {
+          title: "Estádio Independência",
+          city: "Belo Horizonte",
+          country: "Brazil",
+          attendance: "7 336",
+        },
+      },
+      {
+        id: "3-1950",
+        date: "25.06.1950",
+        stage: "group 2",
+        teams: ["England", "Chile"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Mortensen", "Mannion"],
+            timeGoals: ["39", "51"],
+          },
+          {
+            playersScoredGoal: [], 
+            timeGoals: [] },
+        ],
+        stadium: {
+          title: "Estádio do Maracanã",
+          city: "Rio de Janeiro",
+          country: "Brazil",
+          attendance: "29 703",
+        },
+      },
+      {
+        id: "4-1950",
+        date: "25.06.1950",
+        stage: "group 2",
+        teams: ["Spain", "United States"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Igoa", "Basora", "Zarra"],
+            timeGoals: ["81", "83", "89"],
+          },
+          {
+            playersScoredGoal: ["Pariani"], 
+            timeGoals: ["17"] },
+        ],
+        stadium: {
+          title: "Estádio Durival de Britto",
+          city: "Curitiba",
+          country: "Brazil",
+          attendance: "9 511",
+        },
+      },
+      {
+        id: "5-1950",
+        date: "25.06.1950",
+        stage: "group 3",
+        teams: ["Sweden", "Italy"],
+        score: [[3, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Jeppson", "Andersson"],
+            timeGoals: ["25, 68", "33"],
+          },
+          {
+            playersScoredGoal: ["Carapellese", "Muccinelli"], 
+            timeGoals: ["7", "75"] },
+        ],
+        stadium: {
+          title: "Estádio Durival de Britto",
+          city: "Curitiba",
+          country: "Brazil",
+          attendance: "36 502",
+        },
+      },
+      {
+        id: "6-1950",
+        date: "28.06.1950",
+        stage: "group 1",
+        teams: ["Brazil", "Switzerland"],
+        score: [[2, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Alfredo", "Baltazar"],
+            timeGoals: ["3", "32"],
+          },
+          {
+            playersScoredGoal: ["Fatton"], 
+            timeGoals: ["17, 88"] },
+        ],
+        stadium: {
+          title: "Estádio do Pacaembu",
+          city: "São Paulo",
+          country: "Brazil",
+          attendance: "42 032",
+        },
+      },
+      {
+        id: "7-1950",
+        date: "28.06.1950",
+        stage: "group 1",
+        teams: ["Yugoslavia", "Mexico"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Bobek", "Ž.Čajkovski", "Tomašević"],
+            timeGoals: ["20", "23, 51", "81"],
+          },
+          {
+            playersScoredGoal: ["Ortiz"], 
+            timeGoals: ["89(p)"] },
+        ],
+        stadium: {
+          title: "Estádio dos Eucaliptos",
+          city: "Porto Alegre",
+          country: "Brazil",
+          attendance: "11 078",
+        },
+      },
+      {
+        id: "8-1950",
+        date: "29.06.1950",
+        stage: "group 2",
+        teams: ["Spain", "Chile"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Basora", "Zarra"],
+            timeGoals: ["17", "30"],
+          },
+          {
+            playersScoredGoal: [], 
+            timeGoals: [] },
+        ],
+        stadium: {
+          title: "Estádio do Maracanã",
+          city: "Rio de Janeiro",
+          country: "Brazil",
+          attendance: "19 790",
+        },
+      },
+      {
+        id: "9-1950",
+        date: "29.06.1950",
+        stage: "group 2",
+        teams: ["United States", "England"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Gaetjens"],
+            timeGoals: ["38"],
+          },
+          {
+            playersScoredGoal: [], 
+            timeGoals: [] },
+        ],
+        stadium: {
+          title: "Estádio Independência",
+          city: "Belo Horizonte",
+          country: "Brazil",
+          attendance: "10 151",
+        },
+      },
+      {
+        id: "10-1950",
+        date: "29.06.1950",
+        stage: "group 3",
+        teams: ["Sweden", "Paraguay"],
+        score: [[2, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Sundqvist", "Palmér"],
+            timeGoals: ["17", "26"],
+          },
+          {
+            playersScoredGoal: ["López", "López Fretes"], 
+            timeGoals: ["35", "74"] },
+        ],
+        stadium: {
+          title: "Estádio Durival Britto",
+          city: "Curitiba",
+          country: "Brazil",
+          attendance: "7 903",
+        },
+      },
+      {
+        id: "11-1950",
+        date: "01.07.1950",
+        stage: "group 1",
+        teams: ["Brazil", "Yugoslavia"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Ademir", "Zizinho"],
+            timeGoals: ["4", "69"],
+          },
+          {
+            playersScoredGoal: [], 
+            timeGoals: [] },
+        ],
+        stadium: {
+          title: "Estádio do Maracanã",
+          city: "Rio de Janeiro",
+          country: "Brazil",
+          attendance: "142 429",
+        },
+      },
+      {
+        id: "12-1950",
+        date: "02.07.1950",
+        stage: "group 1",
+        teams: ["Switzerland", "Mexico"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Bader", "Antenen"],
+            timeGoals: ["10", "44"],
+          },
+          {
+            playersScoredGoal: ["Casarín"], 
+            timeGoals: ["89"] },
+        ],
+        stadium: {
+          title: "Estádio dos Eucaliptos",
+          city: "Porto Alegre",
+          country: "Brazil",
+          attendance: "3 580",
+        },
+      },
+      {
+        id: "13-1950",
+        date: "02.07.1950",
+        stage: "group 2",
+        teams: ["Spain", "England"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Zarra"],
+            timeGoals: ["48"],
+          },
+          {
+            playersScoredGoal: [], 
+            timeGoals: [] },
+        ],
+        stadium: {
+          title: "Estádio do Maracanã",
+          city: "Rio de Janeiro",
+          country: "Brazil",
+          attendance: "74 462",
+        },
+      },
+      {
+        id: "14-1950",
+        date: "02.07.1950",
+        stage: "group 2",
+        teams: ["Chile", "United States"],
+        score: [[5, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Robledo", "Cremaschi", "Prieto", "Riera"],
+            timeGoals: ["16", "32, 60", "54", "82"],
+          },
+          {
+            playersScoredGoal: ["Wallace", "Maca"], 
+            timeGoals: ["47", "48(p)"] },
+        ],
+        stadium: {
+          title: "Estádio Ilha do Retiro",
+          city: "Recife",
+          country: "Brazil",
+          attendance: "8 501",
+        },
+      },
+      {
+        id: "15-1950",
+        date: "02.07.1950",
+        stage: "group 3",
+        teams: ["Italy", "Paraguay"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Carapellese", "Pandolfini"],
+            timeGoals: ["12", "62"],
+          },
+          {
+            playersScoredGoal: [], 
+            timeGoals: [] },
+        ],
+        stadium: {
+          title: "Estádio do Pacaembu",
+          city: "São Paulo",
+          country: "Brazil",
+          attendance: "25 811",
+        },
+      },
+      {
+        id: "16-1950",
+        date: "02.07.1950",
+        stage: "group 4",
+        teams: ["Uruguay", "Bolivia"],
+        score: [[8, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Míguez", "Vidal", "Schiaffino", "Pérez", "Ghiggia"],
+            timeGoals: ["14, 40, 51", "18", "23, 54", "83", "87"],
+          },
+          {
+            playersScoredGoal: [], 
+            timeGoals: [] },
+        ],
+        stadium: {
+          title: "Estádio Independência",
+          city: "Belo Horizonte",
+          country: "Brazil",
+          attendance: "5 284",
+        },
+      },
+      {
+        id: "17-1950",
+        date: "09.07.1950",
+        stage: "group Final round",
+        teams: ["Uruguay", "Spain"],
+        score: [[2, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Ghiggia", "Varela"],
+            timeGoals: ["29", "73"],
+          },
+          {
+            playersScoredGoal: ["Basora"], 
+            timeGoals: ["37, 39"] },
+        ],
+        stadium: {
+          title: "Estádio do Pacaembu",
+          city: "São Paulo",
+          country: "Brazil",
+          attendance: "44 802",
+        },
+      },
+      {
+        id: "18-1950",
+        date: "09.07.1950",
+        stage: "group Final round",
+        teams: ["Brazil", "Sweden"],
+        score: [[7, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Ademir", "Chico", "Maneca"],
+            timeGoals: ["17, 36, 52, 58", "39, 88", "85"],
+          },
+          {
+            playersScoredGoal: ["Andersson"], 
+            timeGoals: ["67(p)"] },
+        ],
+        stadium: {
+          title: "Estádio do Maracanã",
+          city: "Rio de Janeiro",
+          country: "Brazil",
+          attendance: "138 886",
+        },
+      },
+      {
+        id: "19-1950",
+        date: "13.07.1950",
+        stage: "group Final round",
+        teams: ["Brazil", "Spain"],
+        score: [[6, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Ademir", "Jair", "Chico", "Zizinho"],
+            timeGoals: ["15, 57", "21", "31, 55", "67"],
+          },
+          {
+            playersScoredGoal: ["Igoa"], 
+            timeGoals: ["71"] },
+        ],
+        stadium: {
+          title: "Estádio do Maracanã",
+          city: "Rio de Janeiro",
+          country: "Brazil",
+          attendance: "152 772",
+        },
+      },
+      {
+        id: "20-1950",
+        date: "13.07.1950",
+        stage: "group Final round",
+        teams: ["Uruguay", "Sweden"],
+        score: [[3, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Ghiggia", "Míguez"],
+            timeGoals: ["39", "77, 85"],
+          },
+          {
+            playersScoredGoal: ["Palmér", "Sundqvist"], 
+            timeGoals: ["5", "40"] },
+        ],
+        stadium: {
+          title: "Estádio do Pacaembu",
+          city: "São Paulo",
+          country: "Brazil",
+          attendance: "7 987",
+        },
+      },
+      {
+        id: "21-1950",
+        date: "16.07.1950",
+        stage: "group Final round",
+        teams: ["Sweden", "Spain"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Sundqvist", "Mellberg", "Palmér"],
+            timeGoals: ["15", "33", "80"],
+          },
+          {
+            playersScoredGoal: ["Zarra"], 
+            timeGoals: ["82"] },
+        ],
+        stadium: {
+          title: "Estádio do Pacaembu",
+          city: "São Paulo",
+          country: "Brazil",
+          attendance: "11 227",
+        },
+      },
+      {
+        id: "22-1950",
+        date: "16.07.1950",
+        stage: "group Final round",
+        teams: ["Uruguay", "Brazil"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Schiaffino", "Ghiggia"],
+            timeGoals: ["66", "79"],
+          },
+          {
+            playersScoredGoal: ["Friaça"], 
+            timeGoals: ["47"] },
+        ],
+        stadium: {
+          title: "Estádio do Maracanã",
+          city: "Rio de Janeiro",
+          country: "Brazil",
+          attendance: "173 850",
+        },
+      },
+    ],
     qualification: [],
   },
   1954: {

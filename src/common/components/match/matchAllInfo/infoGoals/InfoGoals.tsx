@@ -21,7 +21,7 @@ export const InfoGoals = ({infoGoals}: Props) => {
       }
 
       return (
-          <div className={s.containerPlayerScoredGoal}>
+          <div className={s.containerPlayerScoredGoal} key={index}>
             <span>{playerScoredGoal}</span>
             <span>{timeGoal}</span>
           </div>
