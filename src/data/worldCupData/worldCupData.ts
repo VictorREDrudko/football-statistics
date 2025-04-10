@@ -30,6 +30,10 @@ import backgroundFWC1950_1 from "./../../assets/backgroundWC/1950-1.png";
 import backgroundFWC1950_2 from "./../../assets/backgroundWC/1950-2.png";
 import backgroundFWC1954_1 from "./../../assets/backgroundWC/1954-1.png";
 import backgroundFWC1954_2 from "./../../assets/backgroundWC/1954-2.png";
+import backgroundFWC1962_1 from "./../../assets/backgroundWC/1962-1.png";
+import backgroundFWC1962_2 from "./../../assets/backgroundWC/1962-2.png";
+import backgroundFWC1966_1 from "./../../assets/backgroundWC/1966-1.png";
+import backgroundFWC1966_2 from "./../../assets/backgroundWC/1966-2.png";
 import { stadiums } from "./stadiums";
 import { v1 } from "uuid";
 
@@ -2979,7 +2983,7 @@ export const worldCupData: WorldCupData = {
     title: "1962 FIFA World Cup",
     date: "30 May - 17 June",
     icon: iconWorldCup1962,
-    background: [],
+    background: [backgroundFWC1962_2, backgroundFWC1962_1, ],
     hostCountry: ["Chile"],
     finalStage: [
       {
@@ -3662,9 +3666,682 @@ export const worldCupData: WorldCupData = {
     title: "1966 FIFA World Cup",
     date: "11-30 July",
     icon: iconWorldCup1966,
-    background: [],
+    background: [backgroundFWC1966_2, backgroundFWC1966_1],
     hostCountry: ["England"],
-    finalStage: [],
+    finalStage: [
+      {
+        id: v1(),
+        date: "11.07.1966",
+        stage: stage.group[1],
+        teams: ["England", "Uruguay"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.wembley,
+          attendance: "87 148",
+        },
+      },
+      {
+        id: v1(),
+        date: "13.07.1966",
+        stage: stage.group[1],
+        teams: ["France", "Mexico"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Hausser"],
+            timeGoals: ["62"],
+          },
+          {
+            playersScoredGoal: ["Borja"],
+            timeGoals: ["48"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.wembley,
+          attendance: "69 237",
+        },
+      },
+      {
+        id: v1(),
+        date: "15.07.1966",
+        stage: stage.group[1],
+        teams: ["Uruguay", "France"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rocha", "Cortés"],
+            timeGoals: ["26", "31"],
+          },
+          {
+            playersScoredGoal: ["De Bourgoing"],
+            timeGoals: ["15(p)"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.city,
+          attendance: "45 662",
+        },
+      },
+      {
+        id: v1(),
+        date: "16.07.1966",
+        stage: stage.group[1],
+        teams: ["England", "Mexico"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["B.Charlton", "Hunt"],
+            timeGoals: ["37", "75"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.wembley,
+          attendance: "92 570",
+        },
+      },
+      {
+        id: v1(),
+        date: "19.07.1966",
+        stage: stage.group[1],
+        teams: ["Uruguay", "Mexico"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.wembley,
+          attendance: "61 112",
+        },
+      },
+      {
+        id: v1(),
+        date: "20.07.1966",
+        stage: stage.group[1],
+        teams: ["England", "France"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Hunt"],
+            timeGoals: ["38", "75"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.wembley,
+          attendance: "98 270",
+        },
+      },
+      {
+        id: v1(),
+        date: "12.07.1966",
+        stage: stage.group[2],
+        teams: ["Germany", "Switzerland"],
+        score: [[5, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Held", "Haller", "Beckenbauer"],
+            timeGoals: ["16", "21, 77(p)", "40, 52"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.hillsborough,
+          attendance: "36 127",
+        },
+      },
+      {
+        id: v1(),
+        date: "13.07.1966",
+        stage: stage.group[2],
+        teams: ["Argentina", "Spain"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Artime"],
+            timeGoals: ["65, 79"],
+          },
+          {
+            playersScoredGoal: ["Pirri"],
+            timeGoals: ["71"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.villa,
+          attendance: "42 738",
+        },
+      },
+      {
+        id: v1(),
+        date: "15.07.1966",
+        stage: stage.group[2],
+        teams: ["Spain", "Switzerland"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Sanchís", "Amancio"],
+            timeGoals: ["57", "75"],
+          },
+          {
+            playersScoredGoal: ["Quentin"],
+            timeGoals: ["31"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.hillsborough,
+          attendance: "32 028",
+        },
+      },
+      {
+        id: v1(),
+        date: "16.07.1966",
+        stage: stage.group[2],
+        teams: ["Argentina", "Germany"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.villa,
+          attendance: "46 587",
+        },
+      },
+      {
+        id: v1(),
+        date: "19.07.1966",
+        stage: stage.group[2],
+        teams: ["Argentina", "Switzerland"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Artime", "Onega"],
+            timeGoals: ["52", "79"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.hillsborough,
+          attendance: "32 127",
+        },
+      },
+      {
+        id: v1(),
+        date: "20.07.1966",
+        stage: stage.group[2],
+        teams: ["Germany", "Spain"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Emmerich", "Seeler"],
+            timeGoals: ["39", "84"],
+          },
+          {
+            playersScoredGoal: ["Fusté"],
+            timeGoals: ["23"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.villa,
+          attendance: "42 187",
+        },
+      },
+      {
+        id: v1(),
+        date: "12.07.1966",
+        stage: stage.group[3],
+        teams: ["Brazil", "Bulgaria"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Pelé", "Garrincha"],
+            timeGoals: ["15", "63"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.goodison,
+          attendance: "47 308",
+        },
+      },
+      {
+        id: v1(),
+        date: "13.07.1966",
+        stage: stage.group[3],
+        teams: ["Portugal", "Hungary"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["José Augusto", "Torres"],
+            timeGoals: ["2, 67", "90"],
+          },
+          {
+            playersScoredGoal: ["Bene"],
+            timeGoals: ["60"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.oldTrafford,
+          attendance: "29 886",
+        },
+      },
+      {
+        id: v1(),
+        date: "15.07.1966",
+        stage: stage.group[3],
+        teams: ["Hungary", "Brazil"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Bene", "Farkas", "Mészöly"],
+            timeGoals: ["2", "64", "73(p)"],
+          },
+          {
+            playersScoredGoal: ["Tostão"],
+            timeGoals: ["14"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.goodison,
+          attendance: "51 387",
+        },
+      },
+      {
+        id: v1(),
+        date: "16.07.1966",
+        stage: stage.group[3],
+        teams: ["Portugal", "Bulgaria"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Vutsov", "Eusébio", "Torres"],
+            timeGoals: ["7(o.g.)", "38", "81"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.oldTrafford,
+          attendance: "25 438",
+        },
+      },
+      {
+        id: v1(),
+        date: "19.07.1966",
+        stage: stage.group[3],
+        teams: ["Portugal", "Brazil"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Simões", "Eusébio"],
+            timeGoals: ["15", "27, 85"],
+          },
+          {
+            playersScoredGoal: ["Rildo"],
+            timeGoals: ["73"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.goodison,
+          attendance: "58 479",
+        },
+      },
+      {
+        id: v1(),
+        date: "20.07.1966",
+        stage: stage.group[3],
+        teams: ["Hungary", "Bulgaria"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Davidov", "Mészöly", "Bene"],
+            timeGoals: ["43(o.g.)", "45", "54"],
+          },
+          {
+            playersScoredGoal: ["Asparuhov"],
+            timeGoals: ["15"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.oldTrafford,
+          attendance: "24 129",
+        },
+      },
+      {
+        id: v1(),
+        date: "12.07.1966",
+        stage: stage.group[4],
+        teams: ["Soviet Union", "DPR Korea"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Malofeyev", "Banishevskiy"],
+            timeGoals: ["31, 88", "33"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.ayresome,
+          attendance: "23 006",
+        },
+      },
+      {
+        id: v1(),
+        date: "13.07.1966",
+        stage: stage.group[4],
+        teams: ["Italy", "Chile"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Mazzola", "Barison"],
+            timeGoals: ["8", "88"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.roker,
+          attendance: "27 199",
+        },
+      },
+      {
+        id: v1(),
+        date: "15.07.1966",
+        stage: stage.group[4],
+        teams: ["Chile", "DPR Korea"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Marcos"],
+            timeGoals: ["26(p)"],
+          },
+          {
+            playersScoredGoal: ["Pak Seung-zin"],
+            timeGoals: ["88"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.ayresome,
+          attendance: "13 792",
+        },
+      },
+      {
+        id: v1(),
+        date: "16.07.1966",
+        stage: stage.group[4],
+        teams: ["Soviet Union", "Italy"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Chislenko"],
+            timeGoals: ["57"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.roker,
+          attendance: "27 793",
+        },
+      },
+      {
+        id: v1(),
+        date: "19.07.1966",
+        stage: stage.group[4],
+        teams: ["DPR Korea", "Italy"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Pak Doo-ik"],
+            timeGoals: ["42"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.ayresome,
+          attendance: "17 829",
+        },
+      },
+      {
+        id: v1(),
+        date: "20.07.1966",
+        stage: stage.group[4],
+        teams: ["Soviet Union", "Chile"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Porkuyan"],
+            timeGoals: ["28, 85"],
+          },
+          {
+            playersScoredGoal: ["Marcos"],
+            timeGoals: ["32"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.roker,
+          attendance: "16 027",
+        },
+      },
+      {
+        id: v1(),
+        date: "23.07.1966",
+        stage: stage[1_4],
+        teams: ["England", "Argentina"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Hurst"],
+            timeGoals: ["78"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.wembley,
+          attendance: "90 584",
+        },
+      },
+      {
+        id: v1(),
+        date: "23.07.1966",
+        stage: stage[1_4],
+        teams: ["Germany", "Uruguay"],
+        score: [[4, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Haller", "Beckenbauer", "Seeler"],
+            timeGoals: ["11, 83", "70", "75"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.hillsborough,
+          attendance: "40 007",
+        },
+      },
+      {
+        id: v1(),
+        date: "23.07.1966",
+        stage: stage[1_4],
+        teams: ["Soviet Union", "Hungary"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Chislenko", "Porkuyan"],
+            timeGoals: ["5", "46"],
+          },
+          {
+            playersScoredGoal: ["Bene"],
+            timeGoals: ["57"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.roker,
+          attendance: "26 844",
+        },
+      },
+      {
+        id: v1(),
+        date: "23.07.1966",
+        stage: stage[1_4],
+        teams: ["Portugal", "DPR Korea"],
+        score: [[5, 3], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Eusébio", "José Augusto"],
+            timeGoals: ["27, 43(p), 56, 59(p)", "80"],
+          },
+          {
+            playersScoredGoal: ["Pak Seung-zin", "Li Dong-woon", "Yang Seung-kook"],
+            timeGoals: ["1", "22", "25"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.goodison,
+          attendance: "40 248",
+        },
+      },
+      {
+        id: v1(),
+        date: "25.07.1966",
+        stage: stage[1_2],
+        teams: ["Germany", "Soviet Union"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Haller", "Beckenbauer"],
+            timeGoals: ["43", "67"],
+          },
+          {
+            playersScoredGoal: ["Porkuyan"],
+            timeGoals: ["88"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.goodison,
+          attendance: "38 273",
+        },
+      },
+      {
+        id: v1(),
+        date: "26.07.1966",
+        stage: stage[1_2],
+        teams: ["England", "Portugal"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["B.Charlton"],
+            timeGoals: ["30", "80"],
+          },
+          {
+            playersScoredGoal: ["Eusébio"],
+            timeGoals: ["82(p)"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.wembley,
+          attendance: "94 493",
+        },
+      },
+      {
+        id: v1(),
+        date: "28.07.1966",
+        stage: stage.place3,
+        teams: ["Portugal", "Soviet Union"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Eusébio", "Torres"],
+            timeGoals: ["12(p)", "89"],
+          },
+          {
+            playersScoredGoal: ["Malofeyev"],
+            timeGoals: ["43"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.wembley,
+          attendance: "87 696",
+        },
+      },
+      {
+        id: v1(),
+        date: "30.07.1966",
+        stage: stage.final,
+        teams: ["England", "Germany"],
+        score: [[2, 2], [2, 0], []],
+        goals: [
+          {
+            playersScoredGoal: ["Hurst", "Peters"],
+            timeGoals: ["18, 101, 120", "78"],
+          },
+          {
+            playersScoredGoal: ["Haller", "Weber"],
+            timeGoals: ["12", "89"],
+          },
+        ],
+        stadium: {
+          ...stadiums.England.wembley,
+          attendance: "96 924",
+        },
+      },
+    ],
     qualification: [],
   },
   1970: {

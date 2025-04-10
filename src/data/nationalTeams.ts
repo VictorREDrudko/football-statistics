@@ -4333,7 +4333,9 @@ export const nationalTeams: NationalTeams = {
   },
   "DPR Korea": {
     id: v1(),
-    names: [{ nameCountry: "DPR Korea", period: "0000-p.t." }],
+    names: [
+      { nameCountry: "DPR Korea", period: "0000-p.t." },
+    ],
     flags: [{ flagCountry: flagDPRKorea, period: "0000-p.t." }],
     coatOfArms: coatOfArmsDPRKorea,
     associationIcon: iconDPRKorea,

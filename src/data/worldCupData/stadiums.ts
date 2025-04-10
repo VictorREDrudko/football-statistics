@@ -274,6 +274,48 @@ export const stadiums: Stadiums = {
       country: "Chile",
     }
   },
+  England: {
+    wembley: {
+      title: "Wembley Stadium",
+      city: "London",
+      country: "England",
+    },
+    city: {
+      title: "White City Stadium",
+      city: "London",
+      country: "England",
+    },
+    oldTrafford: {
+      title: "Old Trafford",
+      city: "Manchester",
+      country: "England",
+    },
+    goodison: {
+      title: "Goodison Park",
+      city: "Liverpool",
+      country: "England",
+    },
+    villa: {
+      title: "Villa Park",
+      city: "Birmingham",
+      country: "England",
+    },
+    hillsborough: {
+      title: "Hillsborough Stadium",
+      city: "Sheffield",
+      country: "England",
+    },
+    roker: {
+      title: "Roker Park",
+      city: "Sunderland",
+      country: "England",
+    },
+    ayresome: {
+      title: "Ayresome Park",
+      city: "Middlesbrough",
+      country: "England",
+    }
+  },
 }
 
 

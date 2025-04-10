@@ -1,3 +1,3 @@
-export const getNumberTournament = (tournamentId: string) => {
-  return tournamentId.split('-')[0]
+export const getNumberTournament = (date: string) => {
+  return date.split('.')[1]
 }
