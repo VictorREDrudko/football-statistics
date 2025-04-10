@@ -28,6 +28,8 @@ import backgroundFWC1934_2 from "./../../assets/backgroundWC/1934-2.png";
 import backgroundFWC1938_2 from "./../../assets/backgroundWC/1938-2.png";
 import backgroundFWC1950_1 from "./../../assets/backgroundWC/1950-1.png";
 import backgroundFWC1950_2 from "./../../assets/backgroundWC/1950-2.png";
+import backgroundFWC1954_1 from "./../../assets/backgroundWC/1954-1.png";
+import backgroundFWC1954_2 from "./../../assets/backgroundWC/1954-2.png";
 
 export const worldCupCharacteristic: string[] = [
   "Host country",
@@ -419,9 +421,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Iraragorri", "Lángara"],
             timeGoals: ["18(p), 25", "29"],
           },
-          { 
-            playersScoredGoal: ["Leônidas"], 
-            timeGoals: ["55"] 
+          {
+            playersScoredGoal: ["Leônidas"],
+            timeGoals: ["55"],
           },
         ],
         stadium: {
@@ -442,9 +444,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Teleki", "Toldi", "Vincze"],
             timeGoals: ["11", "31, 61", "53"],
           },
-          { 
-            playersScoredGoal: ["Fawzi"], 
-            timeGoals: ["35, 39"] 
+          {
+            playersScoredGoal: ["Fawzi"],
+            timeGoals: ["35, 39"],
           },
         ],
         stadium: {
@@ -465,9 +467,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Kielholz", "Abegglen"],
             timeGoals: ["7, 43", "66"],
           },
-          { 
-            playersScoredGoal: ["Smit", "Vente"], 
-            timeGoals: ["29", "69"] 
+          {
+            playersScoredGoal: ["Smit", "Vente"],
+            timeGoals: ["29", "69"],
           },
         ],
         stadium: {
@@ -488,9 +490,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Schiavio", "Orsi", "Ferrari", "Meazza"],
             timeGoals: ["18, 29, 64", "20, 69", "63", "90"],
           },
-          { 
-            playersScoredGoal: ["Donelli"], 
-            timeGoals: ["57"] 
+          {
+            playersScoredGoal: ["Donelli"],
+            timeGoals: ["57"],
           },
         ],
         stadium: {
@@ -511,9 +513,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Puč", "Nejedlý"],
             timeGoals: ["50", "67"],
           },
-          { 
-            playersScoredGoal: ["Dobay"], 
-            timeGoals: ["11"] 
+          {
+            playersScoredGoal: ["Dobay"],
+            timeGoals: ["11"],
           },
         ],
         stadium: {
@@ -534,9 +536,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Jonasson", "Kroon"],
             timeGoals: ["9", "79"],
           },
-          { 
-            playersScoredGoal: ["Belis", "Galateo"], 
-            timeGoals: ["4", "48"] 
+          {
+            playersScoredGoal: ["Belis", "Galateo"],
+            timeGoals: ["4", "48"],
           },
         ],
         stadium: {
@@ -557,9 +559,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Sindelar", "Schall", "Bican"],
             timeGoals: ["44", "93", "109"],
           },
-          { 
-            playersScoredGoal: ["Nicolas", "Verriest"], 
-            timeGoals: ["18", "116(p)"] 
+          {
+            playersScoredGoal: ["Nicolas", "Verriest"],
+            timeGoals: ["18", "116(p)"],
           },
         ],
         stadium: {
@@ -580,9 +582,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Kobierski", "Siffling", "Conen"],
             timeGoals: ["25", "49", "66, 70, 87"],
           },
-          { 
-            playersScoredGoal: ["Voorhoof"], 
-            timeGoals: ["29, 43"] 
+          {
+            playersScoredGoal: ["Voorhoof"],
+            timeGoals: ["29, 43"],
           },
         ],
         stadium: {
@@ -603,9 +605,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Horvath", "Zischek"],
             timeGoals: ["8", "51"],
           },
-          { 
-            playersScoredGoal: ["Sárosi"], 
-            timeGoals: ["60(p)"] 
+          {
+            playersScoredGoal: ["Sárosi"],
+            timeGoals: ["60(p)"],
           },
         ],
         stadium: {
@@ -626,9 +628,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Ferrari"],
             timeGoals: ["44"],
           },
-          { 
-            playersScoredGoal: ["Regueiro"], 
-            timeGoals: ["30"] 
+          {
+            playersScoredGoal: ["Regueiro"],
+            timeGoals: ["30"],
           },
         ],
         stadium: {
@@ -649,9 +651,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Hohmann"],
             timeGoals: ["60, 63"],
           },
-          { 
-            playersScoredGoal: ["Dunker"], 
-            timeGoals: ["82"] 
+          {
+            playersScoredGoal: ["Dunker"],
+            timeGoals: ["82"],
           },
         ],
         stadium: {
@@ -672,9 +674,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Svoboda", "Sobotka", "Nejedlý"],
             timeGoals: ["24", "49", "82"],
           },
-          { 
-            playersScoredGoal: ["Kielholz", "Jäggi"], 
-            timeGoals: ["18", "78"] 
+          {
+            playersScoredGoal: ["Kielholz", "Jäggi"],
+            timeGoals: ["18", "78"],
           },
         ],
         stadium: {
@@ -695,9 +697,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Meazza"],
             timeGoals: ["11"],
           },
-          { 
-            playersScoredGoal: [], 
-            timeGoals: [] 
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
           },
         ],
         stadium: {
@@ -718,9 +720,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Guaita"],
             timeGoals: ["19"],
           },
-          { 
-            playersScoredGoal: [], 
-            timeGoals: [] 
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
           },
         ],
         stadium: {
@@ -741,9 +743,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Nejedlý"],
             timeGoals: ["21, 69, 80"],
           },
-          { 
-            playersScoredGoal: ["Noack"], 
-            timeGoals: ["62"] 
+          {
+            playersScoredGoal: ["Noack"],
+            timeGoals: ["62"],
           },
         ],
         stadium: {
@@ -764,9 +766,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Lehner", "Conen"],
             timeGoals: ["1, 42", "27"],
           },
-          { 
-            playersScoredGoal: ["Horvath", "Sesta"], 
-            timeGoals: ["28", "54"] 
+          {
+            playersScoredGoal: ["Horvath", "Sesta"],
+            timeGoals: ["28", "54"],
           },
         ],
         stadium: {
@@ -787,9 +789,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Orsi", "Schiavio"],
             timeGoals: ["81", "95"],
           },
-          { 
-            playersScoredGoal: ["Puč"], 
-            timeGoals: ["71"] 
+          {
+            playersScoredGoal: ["Puč"],
+            timeGoals: ["71"],
           },
         ],
         stadium: {
@@ -821,9 +823,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Abegglen"],
             timeGoals: ["43"],
           },
-          { 
-            playersScoredGoal: ["Gauchel"], 
-            timeGoals: ["29"] 
+          {
+            playersScoredGoal: ["Gauchel"],
+            timeGoals: ["29"],
           },
         ],
         stadium: {
@@ -844,9 +846,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Kohut", "Toldi", "G.Sárosi", "Zsengellér"],
             timeGoals: ["13", "15", "28, 89", "35, 76"],
           },
-          { 
-            playersScoredGoal: [], 
-            timeGoals: [] 
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
           },
         ],
         stadium: {
@@ -867,9 +869,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: [],
             timeGoals: [],
           },
-          { 
-            playersScoredGoal: [], 
-            timeGoals: [] 
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
           },
         ],
         stadium: {
@@ -890,9 +892,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Socorro", "Magriñá"],
             timeGoals: ["44, 103", "69"],
           },
-          { 
-            playersScoredGoal: ["Bindea", "Barátky", "Dobay"], 
-            timeGoals: ["35", "88", "105"] 
+          {
+            playersScoredGoal: ["Bindea", "Barátky", "Dobay"],
+            timeGoals: ["35", "88", "105"],
           },
         ],
         stadium: {
@@ -913,9 +915,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Veinante", "Nicolas"],
             timeGoals: ["1", "16, 69"],
           },
-          { 
-            playersScoredGoal: ["Isemborghs"], 
-            timeGoals: ["38"] 
+          {
+            playersScoredGoal: ["Isemborghs"],
+            timeGoals: ["38"],
           },
         ],
         stadium: {
@@ -936,9 +938,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Ferraris", "Piola"],
             timeGoals: ["2", "94"],
           },
-          { 
-            playersScoredGoal: ["Brustad"], 
-            timeGoals: ["83"] 
+          {
+            playersScoredGoal: ["Brustad"],
+            timeGoals: ["83"],
           },
         ],
         stadium: {
@@ -959,9 +961,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Leônidas", "Romeu", "Perácio"],
             timeGoals: ["18, 93, 104", "25", "44, 71"],
           },
-          { 
-            playersScoredGoal: ["Scherfke", "Wilimowski"], 
-            timeGoals: ["23(p)", "53, 59, 89, 118"] 
+          {
+            playersScoredGoal: ["Scherfke", "Wilimowski"],
+            timeGoals: ["23(p)", "53, 59, 89, 118"],
           },
         ],
         stadium: {
@@ -982,9 +984,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Košťálek", "Zeman", "Nejedlý"],
             timeGoals: ["93", "111", "118"],
           },
-          { 
-            playersScoredGoal: [], 
-            timeGoals: [] 
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
           },
         ],
         stadium: {
@@ -1005,9 +1007,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Walaschek", "Bickel", "Abegglen"],
             timeGoals: ["42", "64", "75, 78"],
           },
-          { 
-            playersScoredGoal: ["Hahnemann", "Lörtscher"], 
-            timeGoals: ["8", "22(o.g.)"] 
+          {
+            playersScoredGoal: ["Hahnemann", "Lörtscher"],
+            timeGoals: ["8", "22(o.g.)"],
           },
         ],
         stadium: {
@@ -1028,9 +1030,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Socorro", "Fernández"],
             timeGoals: ["51", "57"],
           },
-          { 
-            playersScoredGoal: ["Dobay"], 
-            timeGoals: ["35"] 
+          {
+            playersScoredGoal: ["Dobay"],
+            timeGoals: ["35"],
           },
         ],
         stadium: {
@@ -1051,9 +1053,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["G.Sárosi", "Zsengellér"],
             timeGoals: ["40", "89"],
           },
-          { 
-            playersScoredGoal: [], 
-            timeGoals: [] 
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
           },
         ],
         stadium: {
@@ -1071,12 +1073,17 @@ export const worldCupData: WorldCupData = {
         score: [[8, 0], [], []],
         goals: [
           {
-            playersScoredGoal: ["H.Andersson", "Wetterström", "Keller", "Nyberg"],
+            playersScoredGoal: [
+              "H.Andersson",
+              "Wetterström",
+              "Keller",
+              "Nyberg",
+            ],
             timeGoals: ["9, 81, 89", "22, 37, 44", "80", "84"],
           },
-          { 
-            playersScoredGoal: [], 
-            timeGoals: [] 
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
           },
         ],
         stadium: {
@@ -1097,9 +1104,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Colaussi", "Piola"],
             timeGoals: ["9", "51, 72"],
           },
-          { 
-            playersScoredGoal: ["Heisserer"], 
-            timeGoals: ["10"] 
+          {
+            playersScoredGoal: ["Heisserer"],
+            timeGoals: ["10"],
           },
         ],
         stadium: {
@@ -1120,9 +1127,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Leônidas"],
             timeGoals: ["30"],
           },
-          { 
-            playersScoredGoal: ["Nejedlý"], 
-            timeGoals: ["65(p)"] 
+          {
+            playersScoredGoal: ["Nejedlý"],
+            timeGoals: ["65(p)"],
           },
         ],
         stadium: {
@@ -1143,9 +1150,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Leônidas", "Roberto"],
             timeGoals: ["57", "62"],
           },
-          { 
-            playersScoredGoal: ["Kopecký"], 
-            timeGoals: ["25"] 
+          {
+            playersScoredGoal: ["Kopecký"],
+            timeGoals: ["25"],
           },
         ],
         stadium: {
@@ -1163,12 +1170,17 @@ export const worldCupData: WorldCupData = {
         score: [[5, 1], [], []],
         goals: [
           {
-            playersScoredGoal: ["Jacobsson", "Titkos", "Zsengellér", "G.Sárosi"],
+            playersScoredGoal: [
+              "Jacobsson",
+              "Titkos",
+              "Zsengellér",
+              "G.Sárosi",
+            ],
             timeGoals: ["19(o.g.)", "37", "39, 85", "65"],
           },
-          { 
-            playersScoredGoal: ["Nyberg"], 
-            timeGoals: ["1"] 
+          {
+            playersScoredGoal: ["Nyberg"],
+            timeGoals: ["1"],
           },
         ],
         stadium: {
@@ -1189,9 +1201,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Colaussi", "Meazza"],
             timeGoals: ["51", "60(p)"],
           },
-          { 
-            playersScoredGoal: ["Romeu"], 
-            timeGoals: ["87"] 
+          {
+            playersScoredGoal: ["Romeu"],
+            timeGoals: ["87"],
           },
         ],
         stadium: {
@@ -1212,9 +1224,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Romeu", "Leônidas", "Perácio"],
             timeGoals: ["44", "63, 74", "80"],
           },
-          { 
-            playersScoredGoal: ["Jonasson", "Nyberg"], 
-            timeGoals: ["28", "38"] 
+          {
+            playersScoredGoal: ["Jonasson", "Nyberg"],
+            timeGoals: ["28", "38"],
           },
         ],
         stadium: {
@@ -1235,9 +1247,9 @@ export const worldCupData: WorldCupData = {
             playersScoredGoal: ["Colaussi", "Piola"],
             timeGoals: ["6, 35", "16, 82"],
           },
-          { 
-            playersScoredGoal: ["Titkos", "G.Sárosi"], 
-            timeGoals: ["8", "70"] 
+          {
+            playersScoredGoal: ["Titkos", "G.Sárosi"],
+            timeGoals: ["8", "70"],
           },
         ],
         stadium: {
@@ -1270,8 +1282,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["30, 79", "65", "71"],
           },
           {
-            playersScoredGoal: [], 
-            timeGoals: [] },
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
         ],
         stadium: {
           title: "Estádio do Maracanã",
@@ -1292,8 +1305,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["59", "70", "84"],
           },
           {
-            playersScoredGoal: [], 
-            timeGoals: [] },
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
         ],
         stadium: {
           title: "Estádio Independência",
@@ -1314,8 +1328,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["39", "51"],
           },
           {
-            playersScoredGoal: [], 
-            timeGoals: [] },
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
         ],
         stadium: {
           title: "Estádio do Maracanã",
@@ -1336,8 +1351,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["81", "83", "89"],
           },
           {
-            playersScoredGoal: ["Pariani"], 
-            timeGoals: ["17"] },
+            playersScoredGoal: ["Pariani"],
+            timeGoals: ["17"],
+          },
         ],
         stadium: {
           title: "Estádio Durival de Britto",
@@ -1358,8 +1374,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["25, 68", "33"],
           },
           {
-            playersScoredGoal: ["Carapellese", "Muccinelli"], 
-            timeGoals: ["7", "75"] },
+            playersScoredGoal: ["Carapellese", "Muccinelli"],
+            timeGoals: ["7", "75"],
+          },
         ],
         stadium: {
           title: "Estádio Durival de Britto",
@@ -1380,8 +1397,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["3", "32"],
           },
           {
-            playersScoredGoal: ["Fatton"], 
-            timeGoals: ["17, 88"] },
+            playersScoredGoal: ["Fatton"],
+            timeGoals: ["17, 88"],
+          },
         ],
         stadium: {
           title: "Estádio do Pacaembu",
@@ -1402,8 +1420,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["20", "23, 51", "81"],
           },
           {
-            playersScoredGoal: ["Ortiz"], 
-            timeGoals: ["89(p)"] },
+            playersScoredGoal: ["Ortiz"],
+            timeGoals: ["89(p)"],
+          },
         ],
         stadium: {
           title: "Estádio dos Eucaliptos",
@@ -1424,8 +1443,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["17", "30"],
           },
           {
-            playersScoredGoal: [], 
-            timeGoals: [] },
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
         ],
         stadium: {
           title: "Estádio do Maracanã",
@@ -1446,8 +1466,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["38"],
           },
           {
-            playersScoredGoal: [], 
-            timeGoals: [] },
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
         ],
         stadium: {
           title: "Estádio Independência",
@@ -1468,8 +1489,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["17", "26"],
           },
           {
-            playersScoredGoal: ["López", "López Fretes"], 
-            timeGoals: ["35", "74"] },
+            playersScoredGoal: ["López", "López Fretes"],
+            timeGoals: ["35", "74"],
+          },
         ],
         stadium: {
           title: "Estádio Durival Britto",
@@ -1490,8 +1512,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["4", "69"],
           },
           {
-            playersScoredGoal: [], 
-            timeGoals: [] },
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
         ],
         stadium: {
           title: "Estádio do Maracanã",
@@ -1512,8 +1535,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["10", "44"],
           },
           {
-            playersScoredGoal: ["Casarín"], 
-            timeGoals: ["89"] },
+            playersScoredGoal: ["Casarín"],
+            timeGoals: ["89"],
+          },
         ],
         stadium: {
           title: "Estádio dos Eucaliptos",
@@ -1534,8 +1558,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["48"],
           },
           {
-            playersScoredGoal: [], 
-            timeGoals: [] },
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
         ],
         stadium: {
           title: "Estádio do Maracanã",
@@ -1556,8 +1581,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["16", "32, 60", "54", "82"],
           },
           {
-            playersScoredGoal: ["Wallace", "Maca"], 
-            timeGoals: ["47", "48(p)"] },
+            playersScoredGoal: ["Wallace", "Maca"],
+            timeGoals: ["47", "48(p)"],
+          },
         ],
         stadium: {
           title: "Estádio Ilha do Retiro",
@@ -1578,8 +1604,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["12", "62"],
           },
           {
-            playersScoredGoal: [], 
-            timeGoals: [] },
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
         ],
         stadium: {
           title: "Estádio do Pacaembu",
@@ -1596,12 +1623,19 @@ export const worldCupData: WorldCupData = {
         score: [[8, 0], [], []],
         goals: [
           {
-            playersScoredGoal: ["Míguez", "Vidal", "Schiaffino", "Pérez", "Ghiggia"],
+            playersScoredGoal: [
+              "Míguez",
+              "Vidal",
+              "Schiaffino",
+              "Pérez",
+              "Ghiggia",
+            ],
             timeGoals: ["14, 40, 51", "18", "23, 54", "83", "87"],
           },
           {
-            playersScoredGoal: [], 
-            timeGoals: [] },
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
         ],
         stadium: {
           title: "Estádio Independência",
@@ -1622,8 +1656,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["29", "73"],
           },
           {
-            playersScoredGoal: ["Basora"], 
-            timeGoals: ["37, 39"] },
+            playersScoredGoal: ["Basora"],
+            timeGoals: ["37, 39"],
+          },
         ],
         stadium: {
           title: "Estádio do Pacaembu",
@@ -1644,8 +1679,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["17, 36, 52, 58", "39, 88", "85"],
           },
           {
-            playersScoredGoal: ["Andersson"], 
-            timeGoals: ["67(p)"] },
+            playersScoredGoal: ["Andersson"],
+            timeGoals: ["67(p)"],
+          },
         ],
         stadium: {
           title: "Estádio do Maracanã",
@@ -1666,8 +1702,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["15, 57", "21", "31, 55", "67"],
           },
           {
-            playersScoredGoal: ["Igoa"], 
-            timeGoals: ["71"] },
+            playersScoredGoal: ["Igoa"],
+            timeGoals: ["71"],
+          },
         ],
         stadium: {
           title: "Estádio do Maracanã",
@@ -1688,8 +1725,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["39", "77, 85"],
           },
           {
-            playersScoredGoal: ["Palmér", "Sundqvist"], 
-            timeGoals: ["5", "40"] },
+            playersScoredGoal: ["Palmér", "Sundqvist"],
+            timeGoals: ["5", "40"],
+          },
         ],
         stadium: {
           title: "Estádio do Pacaembu",
@@ -1710,8 +1748,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["15", "33", "80"],
           },
           {
-            playersScoredGoal: ["Zarra"], 
-            timeGoals: ["82"] },
+            playersScoredGoal: ["Zarra"],
+            timeGoals: ["82"],
+          },
         ],
         stadium: {
           title: "Estádio do Pacaembu",
@@ -1732,8 +1771,9 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["66", "79"],
           },
           {
-            playersScoredGoal: ["Friaça"], 
-            timeGoals: ["47"] },
+            playersScoredGoal: ["Friaça"],
+            timeGoals: ["47"],
+          },
         ],
         stadium: {
           title: "Estádio do Maracanã",
@@ -1750,9 +1790,614 @@ export const worldCupData: WorldCupData = {
     title: "1954 FIFA World Cup",
     date: "16 June - 4 July",
     icon: iconWorldCup1954,
-    background: [],
+    background: [backgroundFWC1954_2, backgroundFWC1954_1],
     hostCountry: ["Switzerland"],
-    finalStage: [],
+    finalStage: [
+      {
+        id: "1-1954",
+        date: "16.06.1954",
+        stage: "group 1",
+        teams: ["Brazil", "Mexico"],
+        score: [[5, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Baltazar", "Didi", "Pinga", "Julinho"],
+            timeGoals: ["23", "30", "34, 44", "69"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Charmilles Stadium",
+          city: "Geneva",
+          country: "Switzerland",
+          attendance: "13 470",
+        },
+      },
+      {
+        id: "2-1954",
+        date: "16.06.1954",
+        stage: "group 1",
+        teams: ["Yugoslavia", "France"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Milutinović"],
+            timeGoals: ["15"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Olympique de la Pontaise",
+          city: "Lausanne",
+          country: "Switzerland",
+          attendance: "16 000",
+        },
+      },
+      {
+        id: "3-1954",
+        date: "16.06.1954",
+        stage: "group 3",
+        teams: ["Uruguay", "Czechoslovakia"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Míguez", "Schiaffino"],
+            timeGoals: ["71", "84"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Wankdorf Stadium",
+          city: "Bern",
+          country: "Switzerland",
+          attendance: "20 500",
+        },
+      },
+      {
+        id: "4-1954",
+        date: "16.06.1954",
+        stage: "group 3",
+        teams: ["Austria", "Scotland"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Probst"],
+            timeGoals: ["33"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Hardturm Stadium",
+          city: "Zürich",
+          country: "Switzerland",
+          attendance: "25 000",
+        },
+      },
+      {
+        id: "5-1954",
+        date: "17.06.1954",
+        stage: "group 2",
+        teams: ["Germany", "Turkey"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Schäfer", "Klodt", "O.Walter", "Morlock"],
+            timeGoals: ["14", "52", "60", "84"],
+          },
+          {
+            playersScoredGoal: ["Mamat"],
+            timeGoals: ["2"],
+          },
+        ],
+        stadium: {
+          title: "Wankdorf Stadium",
+          city: "Bern",
+          country: "Switzerland",
+          attendance: "28 000",
+        },
+      },
+      {
+        id: "6-1954",
+        date: "17.06.1954",
+        stage: "group 2",
+        teams: ["Hungary", "Korea Republic"],
+        score: [[9, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [
+              "Puskás",
+              "Lantos",
+              "Kocsis",
+              "Czibor",
+              "Palotás",
+            ],
+            timeGoals: ["12, 89", "18", "24, 36, 50", "59", "75, 83"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Hardturm Stadium",
+          city: "Zürich",
+          country: "Switzerland",
+          attendance: "13 000",
+        },
+      },
+      {
+        id: "7-1954",
+        date: "17.06.1954",
+        stage: "group 4",
+        teams: ["Switzerland", "Italy"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Ballaman", "Hügi"],
+            timeGoals: ["18", "78"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Olympique de la Pontaise",
+          city: "Lausanne",
+          country: "Switzerland",
+          attendance: "40 749",
+        },
+      },
+      {
+        id: "8-1954",
+        date: "17.06.1954",
+        stage: "group 4",
+        teams: ["England", "Belgium"],
+        score: [[3, 3], [1, 1], []],
+        goals: [
+          {
+            playersScoredGoal: ["Broadis", "Lofthouse"],
+            timeGoals: ["26, 63", "36, 91"],
+          },
+          {
+            playersScoredGoal: ["Anoul", "Coppens", "Dickinson"],
+            timeGoals: ["5, 71", "67", "94(o.g.)"],
+          },
+        ],
+        stadium: {
+          title: "St. Jakob Stadium",
+          city: "Basel",
+          country: "Switzerland",
+          attendance: "14 000",
+        },
+      },
+      {
+        id: "9-1954",
+        date: "19.06.1954",
+        stage: "group 1",
+        teams: ["Brazil", "Yugoslavia"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Didi"],
+            timeGoals: ["69"],
+          },
+          {
+            playersScoredGoal: ["Zebec"],
+            timeGoals: ["48"],
+          },
+        ],
+        stadium: {
+          title: "Olympique de la Pontaise",
+          city: "Lausanne",
+          country: "Switzerland",
+          attendance: "24 637",
+        },
+      },
+      {
+        id: "10-1954",
+        date: "19.06.1954",
+        stage: "group 1",
+        teams: ["France", "Mexico"],
+        score: [[3, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Vincent", "Cárdenas", "Kopa"],
+            timeGoals: ["19", "46(o.g.)", "88(p)"],
+          },
+          {
+            playersScoredGoal: ["Lamadrid", "Balcázar"],
+            timeGoals: ["54", "85"],
+          },
+        ],
+        stadium: {
+          title: "Charmilles Stadium",
+          city: "Geneva",
+          country: "Switzerland",
+          attendance: "19 000",
+        },
+      },
+      {
+        id: "11-1954",
+        date: "19.06.1954",
+        stage: "group 3",
+        teams: ["Uruguay", "Scotland"],
+        score: [[7, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Borges", "Míguez", "Abbadie"],
+            timeGoals: ["17, 47, 57", "30, 83", "54, 85"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "St. Jakob Stadium",
+          city: "Basel",
+          country: "Switzerland",
+          attendance: "34 000",
+        },
+      },
+      {
+        id: "12-1954",
+        date: "19.06.1954",
+        stage: "group 3",
+        teams: ["Austria", "Czechoslovakia"],
+        score: [[5, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Stojaspal", "Probst"],
+            timeGoals: ["3, 65", "4, 21, 24"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Hardturm Stadium",
+          city: "Zürich",
+          country: "Switzerland",
+          attendance: "26 000",
+        },
+      },
+      {
+        id: "13-1954",
+        date: "20.06.1954",
+        stage: "group 2",
+        teams: ["Hungary", "Germany"],
+        score: [[8, 3], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Kocsis", "Puskás", "Hidegkuti", "J.Tóth"],
+            timeGoals: ["3, 21, 69, 78", "17", "52, 54", "75"],
+          },
+          {
+            playersScoredGoal: ["Pfaff", "Rahn", "Herrmann"],
+            timeGoals: ["25", "77", "84"],
+          },
+        ],
+        stadium: {
+          title: "St. Jakob Stadium",
+          city: "Basel",
+          country: "Switzerland",
+          attendance: "56 000",
+        },
+      },
+      {
+        id: "14-1954",
+        date: "20.06.1954",
+        stage: "group 2",
+        teams: ["Turkey", "Korea Republic"],
+        score: [[7, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Mamat", "Küçükandonyadis", "Sargun", "Keskin"],
+            timeGoals: ["10, 30", "24", "37, 64, 70", "76"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Charmilles Stadium",
+          city: "Geneva",
+          country: "Switzerland",
+          attendance: "3 541",
+        },
+      },
+      {
+        id: "15-1954",
+        date: "20.06.1954",
+        stage: "group 4",
+        teams: ["Italy", "Belgium"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Pandolfini", "Galli", "Frignani", "Lorenzi"],
+            timeGoals: ["41(p)", "48", "58", "78"],
+          },
+          {
+            playersScoredGoal: ["Anoul"],
+            timeGoals: ["81"],
+          },
+        ],
+        stadium: {
+          title: "Cornaredo Stadium",
+          city: "Lugano",
+          country: "Switzerland",
+          attendance: "24 000",
+        },
+      },
+      {
+        id: "16-1954",
+        date: "20.06.1954",
+        stage: "group 4",
+        teams: ["England", "Switzerland"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Mullen", "Wilshaw"],
+            timeGoals: ["43", "69"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Wankdorf Stadium",
+          city: "Bern",
+          country: "Switzerland",
+          attendance: "43 119",
+        },
+      },
+      {
+        id: "17-1954",
+        date: "23.06.1954",
+        stage: "group 2",
+        teams: ["Germany", "Turkey"],
+        score: [[7, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["O.Walter", "Schäfer", "Morlock", "F.Walter"],
+            timeGoals: ["7", "12, 79", "30, 60, 77", "62"],
+          },
+          {
+            playersScoredGoal: ["Ertan", "Küçükandonyadis"],
+            timeGoals: ["21", "82"],
+          },
+        ],
+        stadium: {
+          title: "Hardturm Stadium",
+          city: "Zürich",
+          country: "Switzerland",
+          attendance: "17 000",
+        },
+      },
+      {
+        id: "18-1954",
+        date: "23.06.1954",
+        stage: "group 4",
+        teams: ["Switzerland", "Italy"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Hügi", "Ballaman", "Fatton"],
+            timeGoals: ["14, 85", "48", "90"],
+          },
+          {
+            playersScoredGoal: ["Nesti"],
+            timeGoals: ["67"],
+          },
+        ],
+        stadium: {
+          title: "St. Jakob Stadium",
+          city: "Basel",
+          country: "Switzerland",
+          attendance: "28 655",
+        },
+      },
+      {
+        id: "19-1954",
+        date: "26.06.1954",
+        stage: "4:1/4 quarter-finals",
+        teams: ["Austria", "Switzerland"],
+        score: [[7, 5], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Wagner", "A.Körner", "Ocwirk", "Probst"],
+            timeGoals: ["25, 27, 53", "26, 34", "32", "76"],
+          },
+          {
+            playersScoredGoal: ["Ballaman", "Hügi"],
+            timeGoals: ["16, 39", "17, 19, 60"],
+          },
+        ],
+        stadium: {
+          title: "Stade Olympique de la Pontaise",
+          city: "Lausanne",
+          country: "Switzerland",
+          attendance: "30 340",
+        },
+      },
+      {
+        id: "20-1954",
+        date: "26.06.1954",
+        stage: "4:1/4 quarter-finals",
+        teams: ["Uruguay", "England"],
+        score: [[4, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Borges", "Varela", "Schiaffino", "Ambrois"],
+            timeGoals: ["5", "39", "46", "78"],
+          },
+          {
+            playersScoredGoal: ["Lofthouse", "Finney"],
+            timeGoals: ["16", "67"],
+          },
+        ],
+        stadium: {
+          title: "St. Jakob Stadium",
+          city: "Basel",
+          country: "Switzerland",
+          attendance: "28 000",
+        },
+      },
+      {
+        id: "21-1954",
+        date: "27.06.1954",
+        stage: "4:1/4 quarter-finals",
+        teams: ["Germany", "Yugoslavia"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Horvat", "Rahn"],
+            timeGoals: ["9(o.g.)", "85"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Charmilles Stadium",
+          city: "Geneva",
+          country: "Switzerland",
+          attendance: "17 000",
+        },
+      },
+      {
+        id: "22-1954",
+        date: "27.06.1954",
+        stage: "4:1/4 quarter-finals",
+        teams: ["Hungary", "Brazil"],
+        score: [[4, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Hidegkuti", "Kocsis", "Lantos"],
+            timeGoals: ["4", "7, 88", "60(p)"],
+          },
+          {
+            playersScoredGoal: ["Djalma Santos", "Julinho"],
+            timeGoals: ["18(p)", "65"],
+          },
+        ],
+        stadium: {
+          title: "Wankdorf Stadium",
+          city: "Bern",
+          country: "Switzerland",
+          attendance: "40 000",
+        },
+      },
+      {
+        id: "23-1954",
+        date: "30.06.1954",
+        stage: "3:1/2 semi-finals",
+        teams: ["Germany", "Austria"],
+        score: [[6, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Schäfer", "Morlock", "F.Walter", "O.Walter"],
+            timeGoals: ["31", "47", "54(p), 64(p)", "61, 89"],
+          },
+          {
+            playersScoredGoal: ["Probst"],
+            timeGoals: ["51"],
+          },
+        ],
+        stadium: {
+          title: "St. Jakob Stadium",
+          city: "Basel",
+          country: "Switzerland",
+          attendance: "58 000",
+        },
+      },
+      {
+        id: "24-1954",
+        date: "30.06.1954",
+        stage: "3:1/2 semi-finals",
+        teams: ["Hungary", "Uruguay"],
+        score: [[2, 2], [2, 0], []],
+        goals: [
+          {
+            playersScoredGoal: ["Czibor", "Hidegkuti", "Kocsis"],
+            timeGoals: ["13", "46", "111, 116"],
+          },
+          {
+            playersScoredGoal: ["Hohberg"],
+            timeGoals: ["75, 86"],
+          },
+        ],
+        stadium: {
+          title: "Stade Olympique de la Pontaise",
+          city: "Lausanne",
+          country: "Switzerland",
+          attendance: "45 000",
+        },
+      },
+      {
+        id: "25-1954",
+        date: "03.07.1954",
+        stage: "2:third place play-off",
+        teams: ["Austria", "Uruguay"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Stojaspal", "Cruz", "Ocwirk"],
+            timeGoals: ["16(p)", "59(o.g.)", "89"],
+          },
+          {
+            playersScoredGoal: ["Hohberg"],
+            timeGoals: ["22"],
+          },
+        ],
+        stadium: {
+          title: "Hardturm Stadium",
+          city: "Zürich",
+          country: "Switzerland",
+          attendance: "32 000",
+        },
+      },
+      {
+        id: "26-1954",
+        date: "03.07.1954",
+        stage: "1:final",
+        teams: ["Germany", "Hungary"],
+        score: [[3, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Morlock", "Rahn"],
+            timeGoals: ["10", "18, 84"],
+          },
+          {
+            playersScoredGoal: ["Puskás", "Czibor"],
+            timeGoals: ["6", "8"],
+          },
+        ],
+        stadium: {
+          title: "Wankdorf Stadium",
+          city: "Bern",
+          country: "Switzerland",
+          attendance: "62 500",
+        },
+      },
+    ],
     qualification: [],
   },
   1958: {

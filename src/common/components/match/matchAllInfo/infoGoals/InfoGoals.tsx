@@ -6,7 +6,7 @@ type Props = {
 }
 
 export const InfoGoals = ({infoGoals}: Props) => {
-  const renderTeamsGoals = infoGoals.map(teamGoals => {
+  const renderTeamsGoals = infoGoals.map((teamGoals, key) => {
     const renderTeamGoals = teamGoals.playersScoredGoal.map((playerScoredGoal, index )=> {
       let timeGoal =  teamGoals.timeGoals[index].indexOf(',') === -1 ? 
                       teamGoals.timeGoals[index] + "'" :
@@ -29,7 +29,7 @@ export const InfoGoals = ({infoGoals}: Props) => {
     })
 
     return (
-      <div className={s.containerTeamGoals}>
+      <div className={s.containerTeamGoals} key={key}>
         {renderTeamGoals}
       </div>
     )

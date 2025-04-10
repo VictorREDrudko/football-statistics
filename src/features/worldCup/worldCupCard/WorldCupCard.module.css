@@ -119,3 +119,10 @@
   background-color: var(--bg-second);
   box-shadow: 5px 5px 15px 0px var(--bg-main);
 }
+
+.disabled {
+  pointer-events: none;
+  color: var(--bg-second-transparent50);
+  background-color: var(--no-accent-transparent80);
+  text-decoration: none;
+}

@@ -21,6 +21,16 @@ export const WorldCupCard = ({tournament} : Props) => {
                           key={index + 1}/>
   })
 
+  // Управление активностью ссылки
+  let isDisabledFinalStage
+  let isDisabledQualification
+
+  if(tournament.finalStage.length === 0) isDisabledFinalStage = true
+  if(tournament.qualification.length === 0) isDisabledQualification = true
+
+  const disabledFinalStage = `${s.link} ${isDisabledFinalStage ? s.disabled : ''}`
+  const disabledQualification = `${s.link} ${isDisabledQualification ? s.disabled : ''}`
+
   return (
     <div className={s.container}>
       <div className={s.containerImage}>
@@ -37,8 +47,8 @@ export const WorldCupCard = ({tournament} : Props) => {
         </div>
       </div>
       <div className={s.containerLink}>
-        <NavLink className={s.link} to={`final-stage/${yearTournament}`}>Final stage</NavLink>
-        <NavLink className={s.link} to={`qualification/${yearTournament}`}>Qualification</NavLink>
+        <NavLink className={disabledFinalStage} to={`final-stage/${yearTournament}`}>Final stage</NavLink>
+        <NavLink  className={disabledQualification} to={`qualification/${yearTournament}`}>Qualification</NavLink>
       </div>
     </div>
   )

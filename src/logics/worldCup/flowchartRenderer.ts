@@ -27,7 +27,8 @@ export const createNodes = (playOffStages: string[], matches: WorldCupMatch[]) =
   }
 
   // вариант 2: создание nodes когда play-off включает: финал, матч за 3 место, 1/2, 1/4, 1,8 (5 стадий)
-  if (matchesByStage.length === 5) {
+  // вариант 3: создание nodes когда play-off включает: финал, матч за 3 место, 1/2, 1/4 (4 стадии)
+  if (matchesByStage.length === 5 || matchesByStage.length === 4) {
     // создание id node
     let countId = 0
 
@@ -139,12 +140,14 @@ export const createNodes = (playOffStages: string[], matches: WorldCupMatch[]) =
       }
     })
   }
+  
   return nodes;
 }
 
 // высота контейнера
 export const createHeight = (playOffStages: string[], matches: WorldCupMatch[]) => {
   if (playOffStages.length === 2) return "350px";
+  if (playOffStages.length === 4) return "680px"
   if (playOffStages.length === 5) return "750px"
   return '350px'
 };
@@ -167,6 +170,61 @@ export const createEdges = (playOffStages: string[]) => {
           type: "step",
           source: "2",
           target: "3",
+          animated: true,
+          style: { stroke: "white", strokeWidth: 1 },
+        },
+      ]
+    )
+  }
+
+  if(playOffStages.length === 4) {
+    return (
+      [
+        {
+          id: "0->4",
+          type: "step",
+          source: "0",
+          target: "4",
+          animated: true,
+          style: { stroke: "white", strokeWidth: 1 },
+        },
+        {
+          id: "1->4",
+          type: "step",
+          source: "1",
+          target: "4",
+          animated: true,
+          style: { stroke: "white", strokeWidth: 1 },
+        },
+        {
+          id: "2->5",
+          type: "step",
+          source: "2",
+          target: "5",
+          animated: true,
+          style: { stroke: "white", strokeWidth: 1 },
+        },
+        {
+          id: "3->5",
+          type: "step",
+          source: "3",
+          target: "5",
+          animated: true,
+          style: { stroke: "white", strokeWidth: 1 },
+        },
+        {
+          id: "4->7",
+          type: "step",
+          source: "4",
+          target: "7",
+          animated: true,
+          style: { stroke: "white", strokeWidth: 1 },
+        },
+        {
+          id: "5->7",
+          type: "step",
+          source: "5",
+          target: "7",
           animated: true,
           style: { stroke: "white", strokeWidth: 1 },
         },
