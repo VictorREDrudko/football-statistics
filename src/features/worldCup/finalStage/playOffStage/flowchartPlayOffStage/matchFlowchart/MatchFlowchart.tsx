@@ -2,14 +2,14 @@ import { WorldCupMatch } from 'data/worldCupData/type-worldCupData'
 import s from './MatchFlowchart.module.css'
 import { CountryTeam } from 'common/components/countryTeam/CountryTeam'
 import { ScoreMatchFlowchart } from './scoreMatchFlowchart/ScoreMatchFlowchart'
-import { background } from 'data/data'
+import { getYearTournament } from 'utils/getYearTournament'
 
 type Props = {
   match: WorldCupMatch
 }
 
 export const MatchFlowchart = ({match}: Props) => {
-  const year = match.id.split('-')[1]
+  const year = getYearTournament(match.date);
 
   return (
     <div className={s.container}>

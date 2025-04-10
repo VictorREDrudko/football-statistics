@@ -20,7 +20,7 @@ import iconWorldCup2010 from "./../../assets/icon/worldCup/2010.png";
 import iconWorldCup2014 from "./../../assets/icon/worldCup/2014.png";
 import iconWorldCup2018 from "./../../assets/icon/worldCup/2018.png";
 import iconWorldCup2022 from "./../../assets/icon/worldCup/2022.png";
-import { WorldCupData } from "./type-worldCupData";
+import { Stage, WorldCupData } from "./type-worldCupData";
 
 import backgroundFWC1930_1 from "./../../assets/backgroundWC/1930-1.png";
 import backgroundFWC1930_2 from "./../../assets/backgroundWC/1930-2.png";
@@ -30,6 +30,8 @@ import backgroundFWC1950_1 from "./../../assets/backgroundWC/1950-1.png";
 import backgroundFWC1950_2 from "./../../assets/backgroundWC/1950-2.png";
 import backgroundFWC1954_1 from "./../../assets/backgroundWC/1954-1.png";
 import backgroundFWC1954_2 from "./../../assets/backgroundWC/1954-2.png";
+import { stadiums } from "./stadiums";
+import { v1 } from "uuid";
 
 export const worldCupCharacteristic: string[] = [
   "Host country",
@@ -42,9 +44,29 @@ export const worldCupCharacteristic: string[] = [
   "Top scorer(s)",
 ];
 
+export const stage: Stage = {
+  final: "1:final",
+  place3: "2:third place play-off",
+  1_2: "3:1/2 semi-final",
+  1_4: "4:1/4 quarter-finals",
+  1_8: "5:1/8 round of 16",
+  1_16: "6:1/16 round of 32",
+  group: {
+    1: "group 1",
+    2: "group 2",
+    3: "group 3",
+    4: "group 4",
+    5: "group 5",
+    6: "group 6",
+    7: "group 7",
+    8: "group 8",
+    final: "group Final round",
+  },
+};
+
 export const worldCupData: WorldCupData = {
   1930: {
-    id: "1-1930-FWC",
+    id: "world-cup.1.1930",
     title: "1930 FIFA World Cup",
     date: "13-30 July",
     icon: iconWorldCup1930,
@@ -52,9 +74,9 @@ export const worldCupData: WorldCupData = {
     hostCountry: ["Uruguay"],
     finalStage: [
       {
-        id: "1-1930",
+        id: v1(),
         date: "13.07.1930",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["France", "Mexico"],
         score: [[4, 1], [], []],
         goals: [
@@ -65,73 +87,14 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: ["Carreño"], timeGoals: ["80"] },
         ],
         stadium: {
-          title: "Estadio Pocitos",
-          city: "Montevideo",
-          country: "Uruguay",
+          ...stadiums.Uruguay.pocitos,
           attendance: "4 444",
         },
       },
       {
-        id: "2-1930",
-        date: "13.07.1930",
-        stage: "group 4",
-        teams: ["United States", "Belgium"],
-        score: [[3, 0], [], []],
-        goals: [
-          {
-            playersScoredGoal: ["McGhee", "Florie", "Patenaude"],
-            timeGoals: ["23", "45", "69"],
-          },
-          { playersScoredGoal: [], timeGoals: [] },
-        ],
-        stadium: {
-          title: "Estadio Parque Central",
-          city: "Montevideo",
-          country: "Uruguay",
-          attendance: "18 346",
-        },
-      },
-      {
-        id: "3-1930",
-        date: "14.07.1930",
-        stage: "group 2",
-        teams: ["Yugoslavia", "Brazil"],
-        score: [[2, 1], [], []],
-        goals: [
-          { playersScoredGoal: ["Tirnanić", "Bek"], timeGoals: ["21", "30"] },
-          { playersScoredGoal: ["Preguinho"], timeGoals: ["62"] },
-        ],
-        stadium: {
-          title: "Estadio Parque Central",
-          city: "Montevideo",
-          country: "Uruguay",
-          attendance: "24 059",
-        },
-      },
-      {
-        id: "4-1930",
-        date: "14.07.1930",
-        stage: "group 3",
-        teams: ["Romania", "Peru"],
-        score: [[3, 1], [], []],
-        goals: [
-          {
-            playersScoredGoal: ["Deșu", "Stanciu", "Kovács"],
-            timeGoals: ["1", "79", "89"],
-          },
-          { playersScoredGoal: ["De Souza"], timeGoals: ["75"] },
-        ],
-        stadium: {
-          title: "Estadio Pocitos",
-          city: "Montevideo",
-          country: "Uruguay",
-          attendance: "2 549",
-        },
-      },
-      {
-        id: "5-1930",
+        id: v1(),
         date: "15.07.1930",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Argentina", "France"],
         score: [[1, 0], [], []],
         goals: [
@@ -139,16 +102,14 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: [], timeGoals: [] },
         ],
         stadium: {
-          title: "Estadio Parque Central",
-          city: "Montevideo",
-          country: "Uruguay",
+          ...stadiums.Uruguay.parqueCentral,
           attendance: "23 409",
         },
       },
       {
-        id: "6-1930",
+        id: v1(),
         date: "16.07.1930",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Chile", "Mexico"],
         score: [[3, 0], [], []],
         goals: [
@@ -159,70 +120,14 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: [], timeGoals: [] },
         ],
         stadium: {
-          title: "Estadio Parque Central",
-          city: "Montevideo",
-          country: "Uruguay",
+          ...stadiums.Uruguay.parqueCentral,
           attendance: "9 249",
         },
       },
       {
-        id: "7-1930",
-        date: "17.07.1930",
-        stage: "group 2",
-        teams: ["Yugoslavia", "Bolivia"],
-        score: [[4, 0], [], []],
-        goals: [
-          {
-            playersScoredGoal: ["Bek", "Marjanović", "Vujadinović"],
-            timeGoals: ["60, 67", "65", "85"],
-          },
-          { playersScoredGoal: [], timeGoals: [] },
-        ],
-        stadium: {
-          title: "Estadio Parque Central",
-          city: "Montevideo",
-          country: "Uruguay",
-          attendance: "18 306",
-        },
-      },
-      {
-        id: "8-1930",
-        date: "17.07.1930",
-        stage: "group 4",
-        teams: ["United States", "Paraguay"],
-        score: [[3, 0], [], []],
-        goals: [
-          { playersScoredGoal: ["Patenaude"], timeGoals: ["10, 15, 50"] },
-          { playersScoredGoal: [], timeGoals: [] },
-        ],
-        stadium: {
-          title: "Estadio Parque Central",
-          city: "Montevideo",
-          country: "Uruguay",
-          attendance: "18 306",
-        },
-      },
-      {
-        id: "9-1930",
-        date: "18.07.1930",
-        stage: "group 3",
-        teams: ["Uruguay", "Peru"],
-        score: [[1, 0], [], []],
-        goals: [
-          { playersScoredGoal: ["Vargas Peña"], timeGoals: ["40"] },
-          { playersScoredGoal: [], timeGoals: [] },
-        ],
-        stadium: {
-          title: "Estadio Centenario",
-          city: "Montevideo",
-          country: "Uruguay",
-          attendance: "57 735",
-        },
-      },
-      {
-        id: "10-1930",
+        id: v1(),
         date: "19.07.1930",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Chile", "France"],
         score: [[1, 0], [], []],
         goals: [
@@ -230,16 +135,14 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: [], timeGoals: [] },
         ],
         stadium: {
-          title: "Estadio Centenario",
-          city: "Montevideo",
-          country: "Uruguay",
+          ...stadiums.Uruguay.centenario,
           attendance: "2 000",
         },
       },
       {
-        id: "11-1930",
+        id: v1(),
         date: "19.07.1930",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Argentina", "Mexico"],
         score: [[6, 3], [], []],
         goals: [
@@ -253,73 +156,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estadio Centenario",
-          city: "Montevideo",
-          country: "Uruguay",
+          ...stadiums.Uruguay.centenario,
           attendance: "42 100",
         },
       },
       {
-        id: "12-1930",
-        date: "20.07.1930",
-        stage: "group 2",
-        teams: ["Brazil", "Bolivia"],
-        score: [[4, 0], [], []],
-        goals: [
-          {
-            playersScoredGoal: ["Moderato", "Preguinho"],
-            timeGoals: ["37, 73", "57, 83"],
-          },
-          { playersScoredGoal: [], timeGoals: [] },
-        ],
-        stadium: {
-          title: "Estadio Centenario",
-          city: "Montevideo",
-          country: "Uruguay",
-          attendance: "25 466",
-        },
-      },
-      {
-        id: "13-1930",
-        date: "20.07.1930",
-        stage: "group 4",
-        teams: ["Paraguay", "Belgium"],
-        score: [[1, 0], [], []],
-        goals: [
-          { playersScoredGoal: ["Vargas Peña"], timeGoals: ["40"] },
-          { playersScoredGoal: [], timeGoals: [] },
-        ],
-        stadium: {
-          title: "Estadio Centenario",
-          city: "Montevideo",
-          country: "Uruguay",
-          attendance: "12 000",
-        },
-      },
-      {
-        id: "14-1930",
-        date: "21.07.1930",
-        stage: "group 3",
-        teams: ["Uruguay", "Romania"],
-        score: [[4, 0], [], []],
-        goals: [
-          {
-            playersScoredGoal: ["Dorado", "Scarone", "Anselmo", "Cea"],
-            timeGoals: ["7", "26", "31", "35"],
-          },
-          { playersScoredGoal: [], timeGoals: [] },
-        ],
-        stadium: {
-          title: "Estadio Centenario",
-          city: "Montevideo",
-          country: "Uruguay",
-          attendance: "70 022",
-        },
-      },
-      {
-        id: "15-1930",
+        id: v1(),
         date: "22.07.1930",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Argentina", "Chile"],
         score: [[3, 1], [], []],
         goals: [
@@ -330,16 +174,165 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: ["Subiabre"], timeGoals: ["15"] },
         ],
         stadium: {
-          title: "Estadio Centenario",
-          city: "Montevideo",
-          country: "Uruguay",
+          ...stadiums.Uruguay.centenario,
           attendance: "41 459",
         },
       },
       {
-        id: "16-1930",
+        id: v1(),
+        date: "14.07.1930",
+        stage: stage.group[2],
+        teams: ["Yugoslavia", "Brazil"],
+        score: [[2, 1], [], []],
+        goals: [
+          { playersScoredGoal: ["Tirnanić", "Bek"], timeGoals: ["21", "30"] },
+          { playersScoredGoal: ["Preguinho"], timeGoals: ["62"] },
+        ],
+        stadium: {
+          ...stadiums.Uruguay.parqueCentral,
+          attendance: "24 059",
+        },
+      },
+      {
+        id: v1(),
+        date: "17.07.1930",
+        stage: stage.group[2],
+        teams: ["Yugoslavia", "Bolivia"],
+        score: [[4, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Bek", "Marjanović", "Vujadinović"],
+            timeGoals: ["60, 67", "65", "85"],
+          },
+          { playersScoredGoal: [], timeGoals: [] },
+        ],
+        stadium: {
+          ...stadiums.Uruguay.parqueCentral,
+          attendance: "18 306",
+        },
+      },
+      {
+        id: v1(),
+        date: "20.07.1930",
+        stage: stage.group[2],
+        teams: ["Brazil", "Bolivia"],
+        score: [[4, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Moderato", "Preguinho"],
+            timeGoals: ["37, 73", "57, 83"],
+          },
+          { playersScoredGoal: [], timeGoals: [] },
+        ],
+        stadium: {
+          ...stadiums.Uruguay.centenario,
+          attendance: "25 466",
+        },
+      },
+      {
+        id: v1(),
+        date: "14.07.1930",
+        stage: stage.group[3],
+        teams: ["Romania", "Peru"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Deșu", "Stanciu", "Kovács"],
+            timeGoals: ["1", "79", "89"],
+          },
+          { playersScoredGoal: ["De Souza"], timeGoals: ["75"] },
+        ],
+        stadium: {
+          ...stadiums.Uruguay.pocitos,
+          attendance: "2 549",
+        },
+      },
+      {
+        id: v1(),
+        date: "18.07.1930",
+        stage: stage.group[3],
+        teams: ["Uruguay", "Peru"],
+        score: [[1, 0], [], []],
+        goals: [
+          { playersScoredGoal: ["Vargas Peña"], timeGoals: ["40"] },
+          { playersScoredGoal: [], timeGoals: [] },
+        ],
+        stadium: {
+          ...stadiums.Uruguay.centenario,
+          attendance: "57 735",
+        },
+      },
+      {
+        id: v1(),
+        date: "21.07.1930",
+        stage: stage.group[3],
+        teams: ["Uruguay", "Romania"],
+        score: [[4, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Dorado", "Scarone", "Anselmo", "Cea"],
+            timeGoals: ["7", "26", "31", "35"],
+          },
+          { playersScoredGoal: [], timeGoals: [] },
+        ],
+        stadium: {
+          ...stadiums.Uruguay.centenario,
+          attendance: "70 022",
+        },
+      },
+
+      {
+        id: v1(),
+        date: "13.07.1930",
+        stage: stage.group[4],
+        teams: ["United States", "Belgium"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["McGhee", "Florie", "Patenaude"],
+            timeGoals: ["23", "45", "69"],
+          },
+          { playersScoredGoal: [], timeGoals: [] },
+        ],
+        stadium: {
+          ...stadiums.Uruguay.parqueCentral,
+          attendance: "18 346",
+        },
+      },
+      {
+        id: v1(),
+        date: "17.07.1930",
+        stage: stage.group[4],
+        teams: ["United States", "Paraguay"],
+        score: [[3, 0], [], []],
+        goals: [
+          { playersScoredGoal: ["Patenaude"], timeGoals: ["10, 15, 50"] },
+          { playersScoredGoal: [], timeGoals: [] },
+        ],
+        stadium: {
+          ...stadiums.Uruguay.parqueCentral,
+          attendance: "18 306",
+        },
+      },
+      {
+        id: v1(),
+        date: "20.07.1930",
+        stage: stage.group[4],
+        teams: ["Paraguay", "Belgium"],
+        score: [[1, 0], [], []],
+        goals: [
+          { playersScoredGoal: ["Vargas Peña"], timeGoals: ["40"] },
+          { playersScoredGoal: [], timeGoals: [] },
+        ],
+        stadium: {
+          ...stadiums.Uruguay.centenario,
+          attendance: "12 000",
+        },
+      },
+      {
+        id: v1(),
         date: "26.07.1930",
-        stage: "2:1/2 semi-final",
+        stage: stage[1_2],
         teams: ["Argentina", "United States"],
         score: [[6, 1], [], []],
         goals: [
@@ -350,16 +343,14 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: ["Brown"], timeGoals: ["89"] },
         ],
         stadium: {
-          title: "Estadio Centenario",
-          city: "Montevideo",
-          country: "Uruguay",
+          ...stadiums.Uruguay.centenario,
           attendance: "72 886",
         },
       },
       {
-        id: "17-1930",
+        id: v1(),
         date: "27.07.1930",
-        stage: "2:1/2 semi-final",
+        stage: stage[1_2],
         teams: ["Uruguay", "Yugoslavia"],
         score: [[6, 1], [], []],
         goals: [
@@ -370,16 +361,14 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: ["Vujadinović"], timeGoals: ["4"] },
         ],
         stadium: {
-          title: "Estadio Centenario",
-          city: "Montevideo",
-          country: "Uruguay",
+          ...stadiums.Uruguay.centenario,
           attendance: "79 867",
         },
       },
       {
-        id: "18-1930",
+        id: v1(),
         date: "30.07.1930",
-        stage: "1:final",
+        stage: stage.final,
         teams: ["Uruguay", "Argentina"],
         score: [[4, 2], [], []],
         goals: [
@@ -393,9 +382,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estadio Centenario",
-          city: "Montevideo",
-          country: "Uruguay",
+          ...stadiums.Uruguay.centenario,
           attendance: "68 346",
         },
       },
@@ -403,7 +390,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1934: {
-    id: "2-1934-FWC",
+    id: "world-cup.2.1934",
     title: "1934 FIFA World Cup",
     date: "27 May - 10 June",
     icon: iconWorldCup1934,
@@ -411,9 +398,9 @@ export const worldCupData: WorldCupData = {
     hostCountry: ["Italy"],
     finalStage: [
       {
-        id: "1-1934",
+        id: v1(),
         date: "27.05.1934",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Spain", "Brazil"],
         score: [[3, 1], [], []],
         goals: [
@@ -427,16 +414,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio Luigi Ferraris",
-          city: "Genoa",
-          country: "Italy",
+          ...stadiums.Italy.ferraris,
           attendance: "21 000",
         },
       },
       {
-        id: "2-1934",
+        id: v1(),
         date: "27.05.1934",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Hungary", "Egypt"],
         score: [[4, 2], [], []],
         goals: [
@@ -450,16 +435,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio Giorgio Ascarelli",
-          city: "Naples",
-          country: "Italy",
+          ...stadiums.Italy.ascarelli,
           attendance: "9 000",
         },
       },
       {
-        id: "3-1934",
+        id: v1(),
         date: "27.05.1934",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Switzerland", "Netherlands"],
         score: [[3, 2], [], []],
         goals: [
@@ -473,16 +456,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio San Siro",
-          city: "Milan",
-          country: "Italy",
+          ...stadiums.Italy.sanSiro,
           attendance: "33 000",
         },
       },
       {
-        id: "4-1934",
+        id: v1(),
         date: "27.05.1934",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Italy", "United States"],
         score: [[7, 1], [], []],
         goals: [
@@ -496,16 +477,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio Nazionale PNF",
-          city: "Rome",
-          country: "Italy",
+          ...stadiums.Italy.nazionalePNF,
           attendance: "25 000",
         },
       },
       {
-        id: "5-1934",
+        id: v1(),
         date: "27.05.1934",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Czechoslovakia", "Romania"],
         score: [[2, 1], [], []],
         goals: [
@@ -519,16 +498,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio Littorio",
-          city: "Trieste",
-          country: "Italy",
+          ...stadiums.Italy.littorio,
           attendance: "9 000",
         },
       },
       {
-        id: "6-1934",
+        id: v1(),
         date: "27.05.1934",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Sweden", "Argentina"],
         score: [[3, 2], [], []],
         goals: [
@@ -542,16 +519,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio Littoriale",
-          city: "Bologna",
-          country: "Italy",
+          ...stadiums.Italy.littoriale,
           attendance: "14 000",
         },
       },
       {
-        id: "7-1934",
+        id: v1(),
         date: "27.05.1934",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Austria", "France"],
         score: [[1, 1], [2, 1], []],
         goals: [
@@ -565,16 +540,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio Benito Mussolini",
-          city: "Turin",
-          country: "Italy",
+          ...stadiums.Italy.mussolini,
           attendance: "16 000",
         },
       },
       {
-        id: "8-1934",
+        id: v1(),
         date: "27.05.1934",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Germany", "Belgium"],
         score: [[5, 2], [], []],
         goals: [
@@ -588,16 +561,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio Giovanni Berta",
-          city: "Florence",
-          country: "Italy",
+          ...stadiums.Italy.berta,
           attendance: "8 000",
         },
       },
       {
-        id: "9-1934",
+        id: v1(),
         date: "31.05.1934",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Austria", "Hungary"],
         score: [[2, 1], [], []],
         goals: [
@@ -611,16 +582,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio Littoriale",
-          city: "Bologna",
-          country: "Italy",
+          ...stadiums.Italy.littoriale,
           attendance: "23 000",
         },
       },
       {
-        id: "10-1934",
+        id: v1(),
         date: "31.05.1934",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Italy", "Spain"],
         score: [[1, 1], [0, 0], []],
         goals: [
@@ -634,16 +603,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio Giovanni Berta",
-          city: "Florence",
-          country: "Italy",
+          ...stadiums.Italy.berta,
           attendance: "35 000",
         },
       },
       {
-        id: "11-1934",
+        id: v1(),
         date: "31.05.1934",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Germany", "Sweden"],
         score: [[2, 1], [], []],
         goals: [
@@ -657,16 +624,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio San Siro",
-          city: "Milan",
-          country: "Italy",
+          ...stadiums.Italy.sanSiro,
           attendance: "3 000",
         },
       },
       {
-        id: "12-1934",
+        id: v1(),
         date: "31.05.1934",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Czechoslovakia", "Switzerland"],
         score: [[3, 2], [], []],
         goals: [
@@ -680,16 +645,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio Benito Mussolini",
-          city: "Turin",
-          country: "Italy",
+          ...stadiums.Italy.mussolini,
           attendance: "12 000",
         },
       },
       {
-        id: "13-1934",
+        id: v1(),
         date: "01.06.1934 REPLAY",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Italy", "Spain"],
         score: [[1, 0], [], []],
         goals: [
@@ -703,16 +666,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio Giovanni Berta",
-          city: "Florence",
-          country: "Italy",
+          ...stadiums.Italy.berta,
           attendance: "43 000",
         },
       },
       {
-        id: "14-1934",
+        id: v1(),
         date: "03.06.1934",
-        stage: "3:1/2 semi-finals",
+        stage: stage[1_2],
         teams: ["Italy", "Austria"],
         score: [[1, 0], [], []],
         goals: [
@@ -726,16 +687,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio San Siro",
-          city: "Milan",
-          country: "Italy",
+          ...stadiums.Italy.sanSiro,
           attendance: "35 000",
         },
       },
       {
-        id: "15-1934",
+        id: v1(),
         date: "03.06.1934",
-        stage: "3:1/2 semi-finals",
+        stage: stage[1_2],
         teams: ["Czechoslovakia", "Germany"],
         score: [[3, 1], [], []],
         goals: [
@@ -749,16 +708,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio Nazionale PNF",
-          city: "Rome",
-          country: "Italy",
+          ...stadiums.Italy.nazionalePNF,
           attendance: "15 000",
         },
       },
       {
-        id: "16-1934",
+        id: v1(),
         date: "07.06.1934",
-        stage: "2:third place play-off",
+        stage: stage.place3,
         teams: ["Germany", "Austria"],
         score: [[3, 2], [], []],
         goals: [
@@ -772,16 +729,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio Giorgio Ascarelli",
-          city: "Naples",
-          country: "Italy",
+          ...stadiums.Italy.ascarelli,
           attendance: "7 000",
         },
       },
       {
-        id: "17-1934",
+        id: v1(),
         date: "07.06.1934",
-        stage: "1:final",
+        stage: stage.final,
         teams: ["Italy", "Czechoslovakia"],
         score: [[1, 1], [1, 0], []],
         goals: [
@@ -795,9 +750,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stadio Nazionale PNF",
-          city: "Rome",
-          country: "Italy",
+          ...stadiums.Italy.nazionalePNF,
           attendance: "55 000",
         },
       },
@@ -805,7 +758,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1938: {
-    id: "3-1938-FWC",
+    id: "world-cup.3.1938",
     title: "1938 FIFA World Cup",
     date: "4-19 June",
     icon: iconWorldCup1938,
@@ -813,9 +766,9 @@ export const worldCupData: WorldCupData = {
     hostCountry: ["France"],
     finalStage: [
       {
-        id: "1-1938",
+        id: v1(),
         date: "04.06.1938",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Switzerland", "Germany"],
         score: [[1, 1], [0, 0], []],
         goals: [
@@ -829,16 +782,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Parc des Princes",
-          city: "Paris",
-          country: "France",
+          ...stadiums.France.parcDesPrinces,
           attendance: "27 152",
         },
       },
       {
-        id: "2-1938",
+        id: v1(),
         date: "05.06.1938",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Hungary", "Indonesia"],
         score: [[6, 0], [], []],
         goals: [
@@ -852,16 +803,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Vélodrome Municipal",
-          city: "Reims",
-          country: "France",
+          ...stadiums.France.velodrome,
           attendance: "9 000",
         },
       },
       {
-        id: "0-1938",
+        id: v1(),
         date: "05.06.1938",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Sweden", ""],
         score: [[], [], []],
         goals: [
@@ -875,16 +824,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "",
-          city: "",
-          country: "",
+          ...stadiums.noMatch.noPlace,
           attendance: "",
         },
       },
       {
-        id: "3-1938",
+        id: v1(),
         date: "05.06.1938",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Cuba", "Romania"],
         score: [[2, 2], [1, 1], []],
         goals: [
@@ -898,16 +845,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stade du T.O.E.C.",
-          city: "Toulouse",
-          country: "France",
+          ...stadiums.France.toec,
           attendance: "7 000",
         },
       },
       {
-        id: "4-1938",
+        id: v1(),
         date: "05.06.1938",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["France", "Belgium"],
         score: [[3, 1], [], []],
         goals: [
@@ -921,16 +866,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stade Olympique de Colombes",
-          city: "Paris",
-          country: "France",
+          ...stadiums.France.colombes,
           attendance: "30 454",
         },
       },
       {
-        id: "5-1938",
+        id: v1(),
         date: "05.06.1938",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Italy", "Norway"],
         score: [[1, 1], [1, 0], []],
         goals: [
@@ -944,16 +887,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stade Vélodrome",
-          city: "Marseille",
-          country: "France",
+          ...stadiums.France.velodrome,
           attendance: "19 000",
         },
       },
       {
-        id: "6-1938",
+        id: v1(),
         date: "05.06.1938",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Brazil", "Poland"],
         score: [[4, 4], [2, 1], []],
         goals: [
@@ -967,16 +908,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stade de la Meinau",
-          city: "Strasbourg",
-          country: "France",
+          ...stadiums.France.meinau,
           attendance: "13 452",
         },
       },
       {
-        id: "7-1938",
+        id: v1(),
         date: "05.06.1938",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Czechoslovakia", "Netherlands"],
         score: [[0, 0], [3, 0], []],
         goals: [
@@ -990,16 +929,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stade municipal",
-          city: "Le Havre",
-          country: "France",
+          ...stadiums.France.municipalHavre,
           attendance: "11 000",
         },
       },
       {
-        id: "8-1938",
+        id: v1(),
         date: "09.06.1938 REPLAY",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Switzerland", "Germany"],
         score: [[4, 2], [], []],
         goals: [
@@ -1013,16 +950,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Parc des Princes",
-          city: "Paris",
-          country: "France",
+          ...stadiums.France.parcDesPrinces,
           attendance: "20 025",
         },
       },
       {
-        id: "9-1938",
+        id: v1(),
         date: "09.06.1938 REPLAY",
-        stage: "5:1/8 round of 16",
+        stage: stage[1_8],
         teams: ["Cuba", "Romania"],
         score: [[2, 1], [], []],
         goals: [
@@ -1036,16 +971,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stade du T.O.E.C.",
-          city: "Toulouse",
-          country: "France",
+          ...stadiums.France.toec,
           attendance: "8 000",
         },
       },
       {
-        id: "10-1938",
+        id: v1(),
         date: "12.06.1938",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Hungary", "Switzerland"],
         score: [[2, 0], [], []],
         goals: [
@@ -1059,16 +992,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stade Victor Boucquey",
-          city: "Lille",
-          country: "France",
+          ...stadiums.France.boucquey,
           attendance: "15 000",
         },
       },
       {
-        id: "11-1938",
+        id: v1(),
         date: "12.06.1938",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Sweden", "Cuba"],
         score: [[8, 0], [], []],
         goals: [
@@ -1087,16 +1018,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stade du Fort Carré",
-          city: "Antibes",
-          country: "France",
+          ...stadiums.France.fortCarre,
           attendance: "7 000",
         },
       },
       {
-        id: "12-1938",
+        id: v1(),
         date: "12.06.1938",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Italy", "France"],
         score: [[3, 1], [], []],
         goals: [
@@ -1110,16 +1039,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stade Olympique de Colombes",
-          city: "Paris",
-          country: "France",
+          ...stadiums.France.colombes,
           attendance: "58 455",
         },
       },
       {
-        id: "13-1938",
+        id: v1(),
         date: "12.06.1938",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Brazil", "Czechoslovakia"],
         score: [[1, 1], [0, 0], []],
         goals: [
@@ -1133,16 +1060,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Parc Lescure",
-          city: "Bordeaux",
-          country: "France",
+          ...stadiums.France.parcLescure,
           attendance: "22 021",
         },
       },
       {
-        id: "14-1938",
+        id: v1(),
         date: "14.06.1938 REPLAY",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Brazil", "Czechoslovakia"],
         score: [[2, 1], [], []],
         goals: [
@@ -1156,16 +1081,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Parc Lescure",
-          city: "Bordeaux",
-          country: "France",
+          ...stadiums.France.parcLescure,
           attendance: "18 141",
         },
       },
       {
-        id: "15-1938",
+        id: v1(),
         date: "16.06.1938",
-        stage: "3:1/2 semi-finals",
+        stage: stage[1_2],
         teams: ["Hungary", "Sweden"],
         score: [[5, 1], [], []],
         goals: [
@@ -1184,16 +1107,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Parc des Princes",
-          city: "Paris",
-          country: "France",
+          ...stadiums.France.parcDesPrinces,
           attendance: "20 000",
         },
       },
       {
-        id: "16-1938",
+        id: v1(),
         date: "16.06.1938",
-        stage: "3:1/2 semi-finals",
+        stage: stage[1_2],
         teams: ["Italy", "Brazil"],
         score: [[2, 1], [], []],
         goals: [
@@ -1207,16 +1128,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stade Vélodrome",
-          city: "Marseille",
-          country: "France",
+          ...stadiums.France.velodrome,
           attendance: "33 000",
         },
       },
       {
-        id: "17-1938",
+        id: v1(),
         date: "19.06.1938",
-        stage: "2:third place play-off",
+        stage: stage.place3,
         teams: ["Brazil", "Sweden"],
         score: [[4, 2], [], []],
         goals: [
@@ -1230,16 +1149,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Parc Lescure",
-          city: "Bordeaux",
-          country: "France",
+          ...stadiums.France.parcLescure,
           attendance: "12 000",
         },
       },
       {
-        id: "18-1938",
+        id: v1(),
         date: "19.06.1938",
-        stage: "1:final",
+        stage: stage.final,
         teams: ["Italy", "Hungary"],
         score: [[4, 2], [], []],
         goals: [
@@ -1253,9 +1170,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stade Olympique de Colombes",
-          city: "Paris",
-          country: "France",
+          ...stadiums.France.colombes,
           attendance: "45 000",
         },
       },
@@ -1263,7 +1178,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1950: {
-    id: "4-1950-FWC",
+    id: "world-cup.4.1950",
     title: "1950 FIFA World Cup",
     date: "	24 June - 16 July",
     icon: iconWorldCup1950,
@@ -1271,9 +1186,9 @@ export const worldCupData: WorldCupData = {
     hostCountry: ["Brazil"],
     finalStage: [
       {
-        id: "1-1950",
+        id: v1(),
         date: "24.06.1950",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Brazil", "Mexico"],
         score: [[4, 0], [], []],
         goals: [
@@ -1287,16 +1202,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio do Maracanã",
-          city: "Rio de Janeiro",
-          country: "Brazil",
+          ...stadiums.Brazil.maracana,
           attendance: "81 649",
         },
       },
       {
-        id: "2-1950",
+        id: v1(),
         date: "25.06.1950",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Yugoslavia", "Switzerland"],
         score: [[3, 0], [], []],
         goals: [
@@ -1310,16 +1223,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio Independência",
-          city: "Belo Horizonte",
-          country: "Brazil",
+          ...stadiums.Brazil.independencia,
           attendance: "7 336",
         },
       },
       {
-        id: "3-1950",
+        id: v1(),
         date: "25.06.1950",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["England", "Chile"],
         score: [[2, 0], [], []],
         goals: [
@@ -1333,16 +1244,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio do Maracanã",
-          city: "Rio de Janeiro",
-          country: "Brazil",
+          ...stadiums.Brazil.maracana,
           attendance: "29 703",
         },
       },
       {
-        id: "4-1950",
+        id: v1(),
         date: "25.06.1950",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["Spain", "United States"],
         score: [[3, 1], [], []],
         goals: [
@@ -1356,16 +1265,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio Durival de Britto",
-          city: "Curitiba",
-          country: "Brazil",
+          ...stadiums.Brazil.britto,
           attendance: "9 511",
         },
       },
       {
-        id: "5-1950",
+        id: v1(),
         date: "25.06.1950",
-        stage: "group 3",
+        stage: stage.group[3],
         teams: ["Sweden", "Italy"],
         score: [[3, 2], [], []],
         goals: [
@@ -1379,16 +1286,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio Durival de Britto",
-          city: "Curitiba",
-          country: "Brazil",
+          ...stadiums.Brazil.britto,
           attendance: "36 502",
         },
       },
       {
-        id: "6-1950",
+        id: v1(),
         date: "28.06.1950",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Brazil", "Switzerland"],
         score: [[2, 2], [], []],
         goals: [
@@ -1402,16 +1307,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio do Pacaembu",
-          city: "São Paulo",
-          country: "Brazil",
+          ...stadiums.Brazil.pacaembu,
           attendance: "42 032",
         },
       },
       {
-        id: "7-1950",
+        id: v1(),
         date: "28.06.1950",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Yugoslavia", "Mexico"],
         score: [[4, 1], [], []],
         goals: [
@@ -1425,16 +1328,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio dos Eucaliptos",
-          city: "Porto Alegre",
-          country: "Brazil",
+          ...stadiums.Brazil.eucaliptos,
           attendance: "11 078",
         },
       },
       {
-        id: "8-1950",
+        id: v1(),
         date: "29.06.1950",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["Spain", "Chile"],
         score: [[2, 0], [], []],
         goals: [
@@ -1448,16 +1349,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio do Maracanã",
-          city: "Rio de Janeiro",
-          country: "Brazil",
+          ...stadiums.Brazil.maracana,
           attendance: "19 790",
         },
       },
       {
-        id: "9-1950",
+        id: v1(),
         date: "29.06.1950",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["United States", "England"],
         score: [[1, 0], [], []],
         goals: [
@@ -1471,16 +1370,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio Independência",
-          city: "Belo Horizonte",
-          country: "Brazil",
+          ...stadiums.Brazil.independencia,
           attendance: "10 151",
         },
       },
       {
-        id: "10-1950",
+        id: v1(),
         date: "29.06.1950",
-        stage: "group 3",
+        stage: stage.group[3],
         teams: ["Sweden", "Paraguay"],
         score: [[2, 2], [], []],
         goals: [
@@ -1494,16 +1391,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio Durival Britto",
-          city: "Curitiba",
-          country: "Brazil",
+          ...stadiums.Brazil.britto,
           attendance: "7 903",
         },
       },
       {
-        id: "11-1950",
+        id: v1(),
         date: "01.07.1950",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Brazil", "Yugoslavia"],
         score: [[2, 0], [], []],
         goals: [
@@ -1517,16 +1412,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio do Maracanã",
-          city: "Rio de Janeiro",
-          country: "Brazil",
+          ...stadiums.Brazil.maracana,
           attendance: "142 429",
         },
       },
       {
-        id: "12-1950",
+        id: v1(),
         date: "02.07.1950",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Switzerland", "Mexico"],
         score: [[2, 1], [], []],
         goals: [
@@ -1540,16 +1433,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio dos Eucaliptos",
-          city: "Porto Alegre",
-          country: "Brazil",
+          ...stadiums.Brazil.eucaliptos,
           attendance: "3 580",
         },
       },
       {
-        id: "13-1950",
+        id: v1(),
         date: "02.07.1950",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["Spain", "England"],
         score: [[1, 0], [], []],
         goals: [
@@ -1563,16 +1454,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio do Maracanã",
-          city: "Rio de Janeiro",
-          country: "Brazil",
+          ...stadiums.Brazil.maracana,
           attendance: "74 462",
         },
       },
       {
-        id: "14-1950",
+        id: v1(),
         date: "02.07.1950",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["Chile", "United States"],
         score: [[5, 2], [], []],
         goals: [
@@ -1586,16 +1475,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio Ilha do Retiro",
-          city: "Recife",
-          country: "Brazil",
+          ...stadiums.Brazil.retiro,
           attendance: "8 501",
         },
       },
       {
-        id: "15-1950",
+        id: v1(),
         date: "02.07.1950",
-        stage: "group 3",
+        stage: stage.group[3],
         teams: ["Italy", "Paraguay"],
         score: [[2, 0], [], []],
         goals: [
@@ -1609,16 +1496,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio do Pacaembu",
-          city: "São Paulo",
-          country: "Brazil",
+          ...stadiums.Brazil.pacaembu,
           attendance: "25 811",
         },
       },
       {
-        id: "16-1950",
+        id: v1(),
         date: "02.07.1950",
-        stage: "group 4",
+        stage: stage.group[4],
         teams: ["Uruguay", "Bolivia"],
         score: [[8, 0], [], []],
         goals: [
@@ -1638,16 +1523,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio Independência",
-          city: "Belo Horizonte",
-          country: "Brazil",
+          ...stadiums.Brazil.independencia,
           attendance: "5 284",
         },
       },
       {
-        id: "17-1950",
+        id: v1(),
         date: "09.07.1950",
-        stage: "group Final round",
+        stage: stage.group.final,
         teams: ["Uruguay", "Spain"],
         score: [[2, 2], [], []],
         goals: [
@@ -1661,16 +1544,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio do Pacaembu",
-          city: "São Paulo",
-          country: "Brazil",
+          ...stadiums.Brazil.pacaembu,
           attendance: "44 802",
         },
       },
       {
-        id: "18-1950",
+        id: v1(),
         date: "09.07.1950",
-        stage: "group Final round",
+        stage: stage.group.final,
         teams: ["Brazil", "Sweden"],
         score: [[7, 1], [], []],
         goals: [
@@ -1684,16 +1565,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio do Maracanã",
-          city: "Rio de Janeiro",
-          country: "Brazil",
+          ...stadiums.Brazil.maracana,
           attendance: "138 886",
         },
       },
       {
-        id: "19-1950",
+        id: v1(),
         date: "13.07.1950",
-        stage: "group Final round",
+        stage: stage.group.final,
         teams: ["Brazil", "Spain"],
         score: [[6, 1], [], []],
         goals: [
@@ -1707,16 +1586,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio do Maracanã",
-          city: "Rio de Janeiro",
-          country: "Brazil",
+          ...stadiums.Brazil.maracana,
           attendance: "152 772",
         },
       },
       {
-        id: "20-1950",
+        id: v1(),
         date: "13.07.1950",
-        stage: "group Final round",
+        stage: stage.group.final,
         teams: ["Uruguay", "Sweden"],
         score: [[3, 2], [], []],
         goals: [
@@ -1730,16 +1607,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio do Pacaembu",
-          city: "São Paulo",
-          country: "Brazil",
+          ...stadiums.Brazil.pacaembu,
           attendance: "7 987",
         },
       },
       {
-        id: "21-1950",
+        id: v1(),
         date: "16.07.1950",
-        stage: "group Final round",
+        stage: stage.group.final,
         teams: ["Sweden", "Spain"],
         score: [[3, 1], [], []],
         goals: [
@@ -1753,16 +1628,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio do Pacaembu",
-          city: "São Paulo",
-          country: "Brazil",
+          ...stadiums.Brazil.pacaembu,
           attendance: "11 227",
         },
       },
       {
-        id: "22-1950",
+        id: v1(),
         date: "16.07.1950",
-        stage: "group Final round",
+        stage: stage.group.final,
         teams: ["Uruguay", "Brazil"],
         score: [[2, 1], [], []],
         goals: [
@@ -1776,9 +1649,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Estádio do Maracanã",
-          city: "Rio de Janeiro",
-          country: "Brazil",
+          ...stadiums.Brazil.maracana,
           attendance: "173 850",
         },
       },
@@ -1786,7 +1657,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1954: {
-    id: "5-1954-FWC",
+    id: "world-cup.5.1954",
     title: "1954 FIFA World Cup",
     date: "16 June - 4 July",
     icon: iconWorldCup1954,
@@ -1794,9 +1665,9 @@ export const worldCupData: WorldCupData = {
     hostCountry: ["Switzerland"],
     finalStage: [
       {
-        id: "1-1954",
+        id: v1(),
         date: "16.06.1954",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Brazil", "Mexico"],
         score: [[5, 0], [], []],
         goals: [
@@ -1810,16 +1681,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Charmilles Stadium",
-          city: "Geneva",
-          country: "Switzerland",
+          ...stadiums.Switzerland.charmilles,
           attendance: "13 470",
         },
       },
       {
-        id: "2-1954",
+        id: v1(),
         date: "16.06.1954",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Yugoslavia", "France"],
         score: [[1, 0], [], []],
         goals: [
@@ -1833,16 +1702,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Olympique de la Pontaise",
-          city: "Lausanne",
-          country: "Switzerland",
+          ...stadiums.Switzerland.pontaise,
           attendance: "16 000",
         },
       },
       {
-        id: "3-1954",
+        id: v1(),
         date: "16.06.1954",
-        stage: "group 3",
+        stage: stage.group[3],
         teams: ["Uruguay", "Czechoslovakia"],
         score: [[2, 0], [], []],
         goals: [
@@ -1856,16 +1723,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Wankdorf Stadium",
-          city: "Bern",
-          country: "Switzerland",
+          ...stadiums.Switzerland.wankdorf,
           attendance: "20 500",
         },
       },
       {
-        id: "4-1954",
+        id: v1(),
         date: "16.06.1954",
-        stage: "group 3",
+        stage: stage.group[3],
         teams: ["Austria", "Scotland"],
         score: [[1, 0], [], []],
         goals: [
@@ -1879,16 +1744,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Hardturm Stadium",
-          city: "Zürich",
-          country: "Switzerland",
+          ...stadiums.Switzerland.hardturm,
           attendance: "25 000",
         },
       },
       {
-        id: "5-1954",
+        id: v1(),
         date: "17.06.1954",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["Germany", "Turkey"],
         score: [[4, 1], [], []],
         goals: [
@@ -1902,16 +1765,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Wankdorf Stadium",
-          city: "Bern",
-          country: "Switzerland",
+          ...stadiums.Switzerland.wankdorf,
           attendance: "28 000",
         },
       },
       {
-        id: "6-1954",
+        id: v1(),
         date: "17.06.1954",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["Hungary", "Korea Republic"],
         score: [[9, 0], [], []],
         goals: [
@@ -1931,16 +1792,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Hardturm Stadium",
-          city: "Zürich",
-          country: "Switzerland",
+          ...stadiums.Switzerland.hardturm,
           attendance: "13 000",
         },
       },
       {
-        id: "7-1954",
+        id: v1(),
         date: "17.06.1954",
-        stage: "group 4",
+        stage: stage.group[4],
         teams: ["Switzerland", "Italy"],
         score: [[2, 1], [], []],
         goals: [
@@ -1954,16 +1813,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Olympique de la Pontaise",
-          city: "Lausanne",
-          country: "Switzerland",
+          ...stadiums.Switzerland.pontaise,
           attendance: "40 749",
         },
       },
       {
-        id: "8-1954",
+        id: v1(),
         date: "17.06.1954",
-        stage: "group 4",
+        stage: stage.group[4],
         teams: ["England", "Belgium"],
         score: [[3, 3], [1, 1], []],
         goals: [
@@ -1977,16 +1834,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "St. Jakob Stadium",
-          city: "Basel",
-          country: "Switzerland",
+          ...stadiums.Switzerland.jakob,
           attendance: "14 000",
         },
       },
       {
-        id: "9-1954",
+        id: v1(),
         date: "19.06.1954",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Brazil", "Yugoslavia"],
         score: [[1, 1], [], []],
         goals: [
@@ -2000,16 +1855,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Olympique de la Pontaise",
-          city: "Lausanne",
-          country: "Switzerland",
+          ...stadiums.Switzerland.pontaise,
           attendance: "24 637",
         },
       },
       {
-        id: "10-1954",
+        id: v1(),
         date: "19.06.1954",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["France", "Mexico"],
         score: [[3, 2], [], []],
         goals: [
@@ -2023,16 +1876,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Charmilles Stadium",
-          city: "Geneva",
-          country: "Switzerland",
+          ...stadiums.Switzerland.charmilles,
           attendance: "19 000",
         },
       },
       {
-        id: "11-1954",
+        id: v1(),
         date: "19.06.1954",
-        stage: "group 3",
+        stage: stage.group[3],
         teams: ["Uruguay", "Scotland"],
         score: [[7, 0], [], []],
         goals: [
@@ -2046,16 +1897,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "St. Jakob Stadium",
-          city: "Basel",
-          country: "Switzerland",
+          ...stadiums.Switzerland.jakob,
           attendance: "34 000",
         },
       },
       {
-        id: "12-1954",
+        id: v1(),
         date: "19.06.1954",
-        stage: "group 3",
+        stage: stage.group[3],
         teams: ["Austria", "Czechoslovakia"],
         score: [[5, 0], [], []],
         goals: [
@@ -2069,16 +1918,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Hardturm Stadium",
-          city: "Zürich",
-          country: "Switzerland",
+          ...stadiums.Switzerland.hardturm,
           attendance: "26 000",
         },
       },
       {
-        id: "13-1954",
+        id: v1(),
         date: "20.06.1954",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["Hungary", "Germany"],
         score: [[8, 3], [], []],
         goals: [
@@ -2092,16 +1939,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "St. Jakob Stadium",
-          city: "Basel",
-          country: "Switzerland",
+          ...stadiums.Switzerland.jakob,
           attendance: "56 000",
         },
       },
       {
-        id: "14-1954",
+        id: v1(),
         date: "20.06.1954",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["Turkey", "Korea Republic"],
         score: [[7, 0], [], []],
         goals: [
@@ -2115,16 +1960,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Charmilles Stadium",
-          city: "Geneva",
-          country: "Switzerland",
+          ...stadiums.Switzerland.charmilles,
           attendance: "3 541",
         },
       },
       {
-        id: "15-1954",
+        id: v1(),
         date: "20.06.1954",
-        stage: "group 4",
+        stage: stage.group[4],
         teams: ["Italy", "Belgium"],
         score: [[4, 1], [], []],
         goals: [
@@ -2138,16 +1981,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Cornaredo Stadium",
-          city: "Lugano",
-          country: "Switzerland",
+          ...stadiums.Switzerland.cornaredo,
           attendance: "24 000",
         },
       },
       {
-        id: "16-1954",
+        id: v1(),
         date: "20.06.1954",
-        stage: "group 4",
+        stage: stage.group[4],
         teams: ["England", "Switzerland"],
         score: [[2, 0], [], []],
         goals: [
@@ -2161,16 +2002,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Wankdorf Stadium",
-          city: "Bern",
-          country: "Switzerland",
+          ...stadiums.Switzerland.wankdorf,
           attendance: "43 119",
         },
       },
       {
-        id: "17-1954",
+        id: v1(),
         date: "23.06.1954",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["Germany", "Turkey"],
         score: [[7, 2], [], []],
         goals: [
@@ -2184,16 +2023,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Hardturm Stadium",
-          city: "Zürich",
-          country: "Switzerland",
+          ...stadiums.Switzerland.hardturm,
           attendance: "17 000",
         },
       },
       {
-        id: "18-1954",
+        id: v1(),
         date: "23.06.1954",
-        stage: "group 4",
+        stage: stage.group[4],
         teams: ["Switzerland", "Italy"],
         score: [[4, 1], [], []],
         goals: [
@@ -2207,16 +2044,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "St. Jakob Stadium",
-          city: "Basel",
-          country: "Switzerland",
+          ...stadiums.Switzerland.jakob,
           attendance: "28 655",
         },
       },
       {
-        id: "19-1954",
+        id: v1(),
         date: "26.06.1954",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Austria", "Switzerland"],
         score: [[7, 5], [], []],
         goals: [
@@ -2230,16 +2065,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stade Olympique de la Pontaise",
-          city: "Lausanne",
-          country: "Switzerland",
+          ...stadiums.Switzerland.pontaise,
           attendance: "30 340",
         },
       },
       {
-        id: "20-1954",
+        id: v1(),
         date: "26.06.1954",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Uruguay", "England"],
         score: [[4, 2], [], []],
         goals: [
@@ -2253,16 +2086,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "St. Jakob Stadium",
-          city: "Basel",
-          country: "Switzerland",
+          ...stadiums.Switzerland.jakob,
           attendance: "28 000",
         },
       },
       {
-        id: "21-1954",
+        id: v1(),
         date: "27.06.1954",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Germany", "Yugoslavia"],
         score: [[2, 0], [], []],
         goals: [
@@ -2276,16 +2107,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Charmilles Stadium",
-          city: "Geneva",
-          country: "Switzerland",
+          ...stadiums.Switzerland.charmilles,
           attendance: "17 000",
         },
       },
       {
-        id: "22-1954",
+        id: v1(),
         date: "27.06.1954",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Hungary", "Brazil"],
         score: [[4, 2], [], []],
         goals: [
@@ -2299,16 +2128,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Wankdorf Stadium",
-          city: "Bern",
-          country: "Switzerland",
+          ...stadiums.Switzerland.wankdorf,
           attendance: "40 000",
         },
       },
       {
-        id: "23-1954",
+        id: v1(),
         date: "30.06.1954",
-        stage: "3:1/2 semi-finals",
+        stage: stage[1_2],
         teams: ["Germany", "Austria"],
         score: [[6, 1], [], []],
         goals: [
@@ -2322,16 +2149,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "St. Jakob Stadium",
-          city: "Basel",
-          country: "Switzerland",
+          ...stadiums.Switzerland.jakob,
           attendance: "58 000",
         },
       },
       {
-        id: "24-1954",
+        id: v1(),
         date: "30.06.1954",
-        stage: "3:1/2 semi-finals",
+        stage: stage[1_2],
         teams: ["Hungary", "Uruguay"],
         score: [[2, 2], [2, 0], []],
         goals: [
@@ -2345,16 +2170,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Stade Olympique de la Pontaise",
-          city: "Lausanne",
-          country: "Switzerland",
+          ...stadiums.Switzerland.pontaise,
           attendance: "45 000",
         },
       },
       {
-        id: "25-1954",
+        id: v1(),
         date: "03.07.1954",
-        stage: "2:third place play-off",
+        stage: stage.place3,
         teams: ["Austria", "Uruguay"],
         score: [[3, 1], [], []],
         goals: [
@@ -2368,16 +2191,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Hardturm Stadium",
-          city: "Zürich",
-          country: "Switzerland",
+          ...stadiums.Switzerland.hardturm,
           attendance: "32 000",
         },
       },
       {
-        id: "26-1954",
+        id: v1(),
         date: "03.07.1954",
-        stage: "1:final",
+        stage: stage.final,
         teams: ["Germany", "Hungary"],
         score: [[3, 2], [], []],
         goals: [
@@ -2391,9 +2212,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Wankdorf Stadium",
-          city: "Bern",
-          country: "Switzerland",
+          ...stadiums.Switzerland.wankdorf,
           attendance: "62 500",
         },
       },
@@ -2401,7 +2220,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1958: {
-    id: "6-1958-FWC",
+    id: "world-cup.6.1958",
     title: "1958 FIFA World Cup",
     date: "8-29 June",
     icon: iconWorldCup1958,
@@ -2409,9 +2228,9 @@ export const worldCupData: WorldCupData = {
     hostCountry: ["Sweden"],
     finalStage: [
       {
-        id: "1-1958",
+        id: v1(),
         date: "08.06.1958",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Germany", "Argentina"],
         score: [[3, 1], [], []],
         goals: [
@@ -2425,16 +2244,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Malmö Stadion",
-          city: "Malmö",
-          country: "Sweden",
+          ...stadiums.Sweden.malmo,
           attendance: "31 156",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "08.06.1958",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["North. Ireland", "Czechoslovakia"],
         score: [[1, 0], [], []],
         goals: [
@@ -2448,16 +2265,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Örjans Vall",
-          city: "Halmstad",
-          country: "Sweden",
+          ...stadiums.Sweden.orjansVall,
           attendance: "10 647",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "11.06.1958",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Germany", "Czechoslovakia"],
         score: [[2, 2], [], []],
         goals: [
@@ -2471,16 +2286,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Olympiastadion",
-          city: "Helsingborg",
-          country: "Sweden",
+          ...stadiums.Sweden.olympiastadion,
           attendance: "25 000",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "11.06.1958",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Argentina", "North. Ireland"],
         score: [[3, 1], [], []],
         goals: [
@@ -2494,16 +2307,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Örjans Vall",
-          city: "Halmstad",
-          country: "Sweden",
+          ...stadiums.Sweden.orjansVall,
           attendance: "14 174",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "15.06.1958",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Germany", "North. Ireland"],
         score: [[2, 2], [], []],
         goals: [
@@ -2517,16 +2328,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Malmö Stadion",
-          city: "Malmö",
-          country: "Sweden",
+          ...stadiums.Sweden.malmo,
           attendance: "21 990",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "15.06.1958",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["Czechoslovakia", "Argentina"],
         score: [[6, 1], [], []],
         goals: [
@@ -2540,16 +2349,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Olympiastadion",
-          city: "Helsingborg",
-          country: "Sweden",
+          ...stadiums.Sweden.olympiastadion,
           attendance: "16 418",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "17.06.1958",
-        stage: "group 1",
+        stage: stage.group[1],
         teams: ["North. Ireland", "Czechoslovakia"],
         score: [[1, 1], [1, 0], []],
         goals: [
@@ -2563,17 +2370,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Malmö Stadion",
-          city: "Malmö",
-          country: "Sweden",
+          ...stadiums.Sweden.malmo,
           attendance: "6 196",
         },
       },
-
       {
-        id: "1-1958",
+        id: v1(),
         date: "08.06.1958",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["France", "Paraguay"],
         score: [[7, 3], [], []],
         goals: [
@@ -2593,16 +2397,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Idrottsparken",
-          city: "Norrköping",
-          country: "Sweden",
+          ...stadiums.Sweden.idrottsparken,
           attendance: "16 518",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "08.06.1958",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["Yugoslavia", "Scotland"],
         score: [[1, 1], [], []],
         goals: [
@@ -2616,16 +2418,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Arosvallen",
-          city: "Västerås",
-          country: "Sweden",
+          ...stadiums.Sweden.arosvallen,
           attendance: "9 591",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "11.06.1958",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["Yugoslavia", "France"],
         score: [[3, 2], [], []],
         goals: [
@@ -2639,16 +2439,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Arosvallen",
-          city: "Västerås",
-          country: "Sweden",
+          ...stadiums.Sweden.arosvallen,
           attendance: "12 217",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "11.06.1958",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["Paraguay", "Scotland"],
         score: [[3, 2], [], []],
         goals: [
@@ -2662,16 +2460,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Idrottsparken",
-          city: "Norrköping",
-          country: "Sweden",
+          ...stadiums.Sweden.idrottsparken,
           attendance: "11 665",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "15.06.1958",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["France", "Scotland"],
         score: [[2, 1], [], []],
         goals: [
@@ -2685,16 +2481,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Eyravallen",
-          city: "Örebro",
-          country: "Sweden",
+          ...stadiums.Sweden.eyravallen,
           attendance: "13 554",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "15.06.1958",
-        stage: "group 2",
+        stage: stage.group[2],
         teams: ["Paraguay", "Yugoslavia"],
         score: [[3, 3], [], []],
         goals: [
@@ -2708,17 +2502,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Tunavallen",
-          city: "Eskilstuna",
-          country: "Sweden",
+          ...stadiums.Sweden.tunavallen,
           attendance: "13 103",
         },
       },
-
       {
-        id: "1-1958",
+        id: v1(),
         date: "08.06.1958",
-        stage: "group 3",
+        stage: stage.group[3],
         teams: ["Sweden", "Mexico"],
         score: [[3, 0], [], []],
         goals: [
@@ -2732,16 +2523,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Råsunda Stadium",
-          city: "Solna",
-          country: "Sweden",
+          ...stadiums.Sweden.rasunda,
           attendance: "34 107",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "08.06.1958",
-        stage: "group 3",
+        stage: stage.group[3],
         teams: ["Hungary", "Wales"],
         score: [[1, 1], [], []],
         goals: [
@@ -2755,16 +2544,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Jernvallen",
-          city: "Sandviken",
-          country: "Sweden",
+          ...stadiums.Sweden.eyravallen,
           attendance: "15 343",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "11.06.1958",
-        stage: "group 3",
+        stage: stage.group[3],
         teams: ["Mexico", "Wales"],
         score: [[1, 1], [], []],
         goals: [
@@ -2778,16 +2565,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Råsunda Stadium",
-          city: "Solna",
-          country: "Sweden",
+          ...stadiums.Sweden.rasunda,
           attendance: "15 150",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "12.06.1958",
-        stage: "group 3",
+        stage: stage.group[3],
         teams: ["Sweden", "Hungary"],
         score: [[2, 1], [], []],
         goals: [
@@ -2801,16 +2586,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Råsunda Stadium",
-          city: "Solna",
-          country: "Sweden",
+          ...stadiums.Sweden.rasunda,
           attendance: "38 850",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "15.06.1958",
-        stage: "group 3",
+        stage: stage.group[3],
         teams: ["Sweden", "Wales"],
         score: [[0, 0], [], []],
         goals: [
@@ -2824,16 +2607,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Råsunda Stadium",
-          city: "Solna",
-          country: "Sweden",
+          ...stadiums.Sweden.rasunda,
           attendance: "30 287",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "15.06.1958",
-        stage: "group 3",
+        stage: stage.group[3],
         teams: ["Hungary", "Mexico"],
         score: [[4, 0], [], []],
         goals: [
@@ -2847,16 +2628,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Jernvallen",
-          city: "Sandviken",
-          country: "Sweden",
+          ...stadiums.Sweden.jernvallen,
           attendance: "13 300",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "17.06.1958",
-        stage: "group 3",
+        stage: stage.group[3],
         teams: ["Wales", "Hungary"],
         score: [[2, 1], [], []],
         goals: [
@@ -2870,17 +2649,15 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Råsunda Stadium",
-          city: "Solna",
-          country: "Sweden",
+          ...stadiums.Sweden.rasunda,
           attendance: "2 823",
         },
       },
 
       {
-        id: "1-1958",
+        id: v1(),
         date: "08.06.1958",
-        stage: "group 4",
+        stage: stage.group[4],
         teams: ["Brazil", "Austria"],
         score: [[3, 0], [], []],
         goals: [
@@ -2894,16 +2671,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Rimnersvallen",
-          city: "Uddevalla",
-          country: "Sweden",
+          ...stadiums.Sweden.rimnersvallen,
           attendance: "17 778",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "08.06.1958",
-        stage: "group 4",
+        stage: stage.group[4],
         teams: ["Soviet Union", "England"],
         score: [[2, 2], [], []],
         goals: [
@@ -2917,16 +2692,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Ullevi",
-          city: "Gothenburg",
-          country: "Sweden",
+          ...stadiums.Sweden.ullevi,
           attendance: "49 348",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "11.06.1958",
-        stage: "group 4",
+        stage: stage.group[4],
         teams: ["Brazil", "England"],
         score: [[0, 0], [], []],
         goals: [
@@ -2940,16 +2713,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Ullevi",
-          city: "Gothenburg",
-          country: "Sweden",
+          ...stadiums.Sweden.ullevi,
           attendance: "40 895",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "11.06.1958",
-        stage: "group 4",
+        stage: stage.group[4],
         teams: ["Soviet Union", "Austria"],
         score: [[2, 0], [], []],
         goals: [
@@ -2963,16 +2734,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Ryavallen",
-          city: "Borås",
-          country: "Sweden",
+          ...stadiums.Sweden.ryavallen,
           attendance: "21 239",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "15.06.1958",
-        stage: "group 4",
+        stage: stage.group[4],
         teams: ["England", "Austria"],
         score: [[2, 2], [], []],
         goals: [
@@ -2986,16 +2755,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Ryavallen",
-          city: "Borås",
-          country: "Sweden",
+          ...stadiums.Sweden.ryavallen,
           attendance: "15 872",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "15.06.1958",
-        stage: "group 4",
+        stage: stage.group[4],
         teams: ["Brazil", "Soviet Union"],
         score: [[2, 0], [], []],
         goals: [
@@ -3009,16 +2776,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Ullevi",
-          city: "Gothenburg",
-          country: "Sweden",
+          ...stadiums.Sweden.ullevi,
           attendance: "50 928",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "17.06.1958",
-        stage: "group 4",
+        stage: stage.group[4],
         teams: ["Soviet Union", "England"],
         score: [[1, 0], [], []],
         goals: [
@@ -3032,17 +2797,15 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Ullevi",
-          city: "Gothenburg",
-          country: "Sweden",
+          ...stadiums.Sweden.ullevi,
           attendance: "23 182",
         },
       },
 
       {
-        id: "1-1958",
+        id: v1(),
         date: "19.06.1958",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Brazil", "Wales"],
         score: [[1, 0], [], []],
         goals: [
@@ -3056,16 +2819,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Ullevi",
-          city: "Gothenburg",
-          country: "Sweden",
+          ...stadiums.Sweden.ullevi,
           attendance: "25 923",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "19.06.1958",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["France", "North. Ireland"],
         score: [[4, 0], [], []],
         goals: [
@@ -3079,16 +2840,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Idrottsparken",
-          city: "Norrköping",
-          country: "Sweden",
+          ...stadiums.Sweden.idrottsparken,
           attendance: "11 800",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "19.06.1958",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Sweden", "Soviet Union"],
         score: [[2, 0], [], []],
         goals: [
@@ -3102,16 +2861,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Råsunda Stadium",
-          city: "Solna",
-          country: "Sweden",
+          ...stadiums.Sweden.rasunda,
           attendance: "31 900",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "19.06.1958",
-        stage: "4:1/4 quarter-finals",
+        stage: stage[1_4],
         teams: ["Germany", "Yugoslavia"],
         score: [[1, 0], [], []],
         goals: [
@@ -3125,17 +2882,15 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Malmö Stadion",
-          city: "Malmö",
-          country: "Sweden",
+          ...stadiums.Sweden.malmo,
           attendance: "20 055",
         },
       },
 
       {
-        id: "1-1958",
+        id: v1(),
         date: "24.06.1958",
-        stage: "3:1/2 semi-finals",
+        stage: stage[1_2],
         teams: ["Brazil", "France"],
         score: [[5, 2], [], []],
         goals: [
@@ -3149,16 +2904,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Råsunda Stadium",
-          city: "Solna",
-          country: "Sweden",
+          ...stadiums.Sweden.rasunda,
           attendance: "27 100",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "24.06.1958",
-        stage: "3:1/2 semi-finals",
+        stage: stage[1_2],
         teams: ["Sweden", "Germany"],
         score: [[3, 1], [], []],
         goals: [
@@ -3172,17 +2925,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Ullevi",
-          city: "Gothenburg",
-          country: "Sweden",
+          ...stadiums.Sweden.ullevi,
           attendance: "49 471",
         },
       },
-
       {
-        id: "1-1958",
+        id: v1(),
         date: "28.06.1958",
-        stage: "2:third place play-off",
+        stage: stage.place3,
         teams: ["France", "Germany"],
         score: [[6, 3], [], []],
         goals: [
@@ -3196,16 +2946,14 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Ullevi",
-          city: "Gothenburg",
-          country: "Sweden",
+          ...stadiums.Sweden.ullevi,
           attendance: "32 483",
         },
       },
       {
-        id: "1-1958",
+        id: v1(),
         date: "29.06.1958",
-        stage: "1:final",
+        stage: stage.final,
         teams: ["Brazil", "Sweden"],
         score: [[5, 2], [], []],
         goals: [
@@ -3219,9 +2967,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          title: "Råsunda Stadium",
-          city: "Solna",
-          country: "Sweden",
+          ...stadiums.Sweden.rasunda,
           attendance: "49 737",
         },
       },
@@ -3229,7 +2975,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1962: {
-    id: "7-1962-FWC",
+    id: "world-cup.7.1962",
     title: "1962 FIFA World Cup",
     date: "30 May - 17 June",
     icon: iconWorldCup1962,
@@ -3239,7 +2985,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1966: {
-    id: "8-1966-FWC",
+    id: "world-cup.8.1966",
     title: "1966 FIFA World Cup",
     date: "11-30 July",
     icon: iconWorldCup1966,
@@ -3249,7 +2995,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1970: {
-    id: "9-1970-FWC",
+    id: "world-cup.9.1970",
     title: "1970 FIFA World Cup",
     date: "31 May - 21 June",
     icon: iconWorldCup1970,
@@ -3259,7 +3005,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1974: {
-    id: "10-1974-FWC",
+    id: "world-cup.10.1974",
     title: "1974 FIFA World Cup",
     date: "13 June - 7 July",
     icon: iconWorldCup1974,
@@ -3269,7 +3015,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1978: {
-    id: "11-1978-FWC",
+    id: "world-cup.11.1978",
     title: "1978 FIFA World Cup",
     date: "1-25 June",
     icon: iconWorldCup1978,
@@ -3279,7 +3025,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1982: {
-    id: "12-1982-FWC",
+    id: "world-cup.12.1982",
     title: "1982 FIFA World Cup",
     date: "13 June - 11 July",
     icon: iconWorldCup1982,
@@ -3289,7 +3035,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1986: {
-    id: "13-1986-FWC",
+    id: "world-cup.13.1986",
     title: "1986 FIFA World Cup",
     date: "31 May - 29 June",
     icon: iconWorldCup1986,
@@ -3299,7 +3045,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1990: {
-    id: "14-1990-FWC",
+    id: "world-cup.14.1990",
     title: "1990 FIFA World Cup",
     date: "	8June - 8 July",
     icon: iconWorldCup1990,
@@ -3309,7 +3055,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1994: {
-    id: "15-1994-FWC",
+    id: "world-cup.15.1994",
     title: "1994 FIFA World Cup",
     date: "June 17 - July 17",
     icon: iconWorldCup1994,
@@ -3319,7 +3065,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   1998: {
-    id: "16-1998-FWC",
+    id: "world-cup.16.1998",
     title: "1998 FIFA World Cup",
     date: "10 June - 12 July",
     icon: iconWorldCup1998,
@@ -3329,7 +3075,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   2002: {
-    id: "17-2002-FWC",
+    id: "world-cup.17.2002",
     title: "2002 FIFA World Cup",
     date: "31 May - 30 June",
     icon: iconWorldCup2002,
@@ -3339,7 +3085,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   2006: {
-    id: "18-2006-FWC",
+    id: "world-cup.18.2006",
     title: "2006 FIFA World Cup",
     date: "9 June - 9 July",
     icon: iconWorldCup2006,
@@ -3349,7 +3095,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   2010: {
-    id: "19-2010-FWC",
+    id: "world-cup.19.2010",
     title: "2010 FIFA World Cup",
     date: "11 June - 11 July",
     icon: iconWorldCup2010,
@@ -3359,7 +3105,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   2014: {
-    id: "20-2014-FWC",
+    id: "world-cup.20.2014",
     title: "2014 FIFA World Cup",
     date: "12 June - 13 July",
     icon: iconWorldCup2014,
@@ -3369,7 +3115,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   2018: {
-    id: "21-2018-FWC",
+    id: "world-cup.21.2018",
     title: "2018 FIFA World Cup",
     date: "14 June - 15 July",
     icon: iconWorldCup2018,
@@ -3379,7 +3125,7 @@ export const worldCupData: WorldCupData = {
     qualification: [],
   },
   2022: {
-    id: "22-2022-FWC",
+    id: "world-cup.22.2022",
     title: "2022 FIFA World Cup",
     date: "20 November - 18 December",
     icon: iconWorldCup2022,

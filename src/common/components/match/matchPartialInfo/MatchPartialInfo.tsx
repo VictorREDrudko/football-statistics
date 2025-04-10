@@ -10,7 +10,7 @@ type Props = {
 }
 
 export const MatchPartialInfo = ({match, spanStyle}: Props) => {
-  const year = getYearTournament(match.id);
+  const year = getYearTournament(match.date);
   
   return (
     <>
