@@ -181,9 +181,11 @@ import flagUkraine from "./../assets/icon/flag/Ukraine.png";
 import coatOfArmsUkraine from "./../assets/icon/coat-of-arms/Ukraine.png";
 import iconWales from "./../assets/icon/national/Wales.png";
 import flagWales from "./../assets/icon/flag/Wales.png";
+import flagWales2 from "./../assets/icon/flag/Wales2.png";
 import coatOfArmsWales from "./../assets/icon/coat-of-arms/Wales.png";
 import flagYugoslavia from "./../assets/icon/flag/Yugoslavia.png";
 import flagYugoslavia1 from "./../assets/icon/flag/Yugoslavia1.png";
+import flagSovietUnion from "./../assets/icon/flag/SovietUnion.png";
 
 import iconAlgeria from "./../assets/icon/national/Algeria.png";
 import flagAlgeria from "./../assets/icon/flag/Algeria.png";
@@ -740,7 +742,7 @@ export const confederationTeamNames: ConfederationTeamNames = {
     "Montenegro",
     "Netherlands",
     "North Macedonia",
-    "Northern Ireland",
+    "North. Ireland",
     "Norway",
     "Poland",
     "Portugal",
@@ -1912,9 +1914,9 @@ export const nationalTeams: NationalTeams = {
       },
     },
   },
-  "Northern Ireland": {
+  "North. Ireland": {
     id: v1(),
-    names: [{ nameCountry: "Northern Ireland", period: "0000-p.t." }],
+    names: [{ nameCountry: "North. Ireland", period: "0000-p.t." }],
     flags: [{ flagCountry: flagNorthernIreland, period: "0000-p.t." }],
     coatOfArms: coatOfArmsNorthernIreland,
     associationIcon: iconNorthernIreland,
@@ -2315,7 +2317,10 @@ export const nationalTeams: NationalTeams = {
   Wales: {
     id: v1(),
     names: [{ nameCountry: "Wales", period: "0000-p.t." }],
-    flags: [{ flagCountry: flagWales, period: "0000-p.t." }],
+    flags: [
+      { flagCountry: flagWales, period: "1910-1952, 1959-p.t." },
+      { flagCountry: flagWales2, period: "1953-1958" }
+    ],
     coatOfArms: coatOfArmsWales,
     associationIcon: iconWales,
     associationDate: {
@@ -2365,12 +2370,37 @@ export const nationalTeams: NationalTeams = {
       },
     },
   },
-  "Czechoslovakia": {
+  Czechoslovakia: {
     id: v1(),
     names: [{ nameCountry: "Czechoslovakia", period: "0000-p.t." }],
     flags: [{ flagCountry: flagCzechRepublic, period: "0000-p.t." }],
-    coatOfArms: '',
-    associationIcon: '',
+    coatOfArms: "",
+    associationIcon: "",
+    associationDate: {
+      founded: 0,
+      fifaAffiliation: 0,
+      confederationAffiliation: 0,
+    },
+    rating: 0,
+    achievements: {
+      worldCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+      confederationsCup: {
+        appearances: 0,
+        champions: [],
+        secondPlace: [],
+      },
+    },
+  },
+  "Soviet Union": {
+    id: v1(),
+    names: [{ nameCountry: "Soviet Union", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSovietUnion, period: "0000-p.t." }],
+    coatOfArms: "",
+    associationIcon: "",
     associationDate: {
       founded: 0,
       fifaAffiliation: 0,
@@ -3899,11 +3929,11 @@ export const nationalTeams: NationalTeams = {
     id: v1(),
     names: [
       { nameCountry: "Indonesia", period: "1949-p.t." },
-      { nameCountry: "D.East Indies", period: "1800-1948" }
+      { nameCountry: "D.East Indies", period: "1800-1948" },
     ],
     flags: [
       { flagCountry: flagIndonesia, period: "1949-p.t." },
-      { flagCountry: flagIndonesia2, period: "1800-1948" }
+      { flagCountry: flagIndonesia2, period: "1800-1948" },
     ],
     coatOfArms: coatOfArmsIndonesia,
     associationIcon: iconIndonesia,

@@ -2407,7 +2407,825 @@ export const worldCupData: WorldCupData = {
     icon: iconWorldCup1958,
     background: [],
     hostCountry: ["Sweden"],
-    finalStage: [],
+    finalStage: [
+      {
+        id: "1-1958",
+        date: "08.06.1958",
+        stage: "group 1",
+        teams: ["Germany", "Argentina"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rahn", "Seeler"],
+            timeGoals: ["32, 79", "42"],
+          },
+          {
+            playersScoredGoal: ["Corbatta"],
+            timeGoals: ["3"],
+          },
+        ],
+        stadium: {
+          title: "Malmö Stadion",
+          city: "Malmö",
+          country: "Sweden",
+          attendance: "31 156",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "08.06.1958",
+        stage: "group 1",
+        teams: ["North. Ireland", "Czechoslovakia"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Cush"],
+            timeGoals: ["21"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Örjans Vall",
+          city: "Halmstad",
+          country: "Sweden",
+          attendance: "10 647",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "11.06.1958",
+        stage: "group 1",
+        teams: ["Germany", "Czechoslovakia"],
+        score: [[2, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Schäfer", "Rahn"],
+            timeGoals: ["60", "71"],
+          },
+          {
+            playersScoredGoal: ["Dvořák", "Zikán"],
+            timeGoals: ["24(p)", "42"],
+          },
+        ],
+        stadium: {
+          title: "Olympiastadion",
+          city: "Helsingborg",
+          country: "Sweden",
+          attendance: "25 000",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "11.06.1958",
+        stage: "group 1",
+        teams: ["Argentina", "North. Ireland"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Corbatta", "Menéndez", "Avio"],
+            timeGoals: ["37(p)", "56", "60"],
+          },
+          {
+            playersScoredGoal: ["McParland"],
+            timeGoals: ["4"],
+          },
+        ],
+        stadium: {
+          title: "Örjans Vall",
+          city: "Halmstad",
+          country: "Sweden",
+          attendance: "14 174",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "15.06.1958",
+        stage: "group 1",
+        teams: ["Germany", "North. Ireland"],
+        score: [[2, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rahn", "Seeler"],
+            timeGoals: ["20", "78"],
+          },
+          {
+            playersScoredGoal: ["McParland"],
+            timeGoals: ["18, 60"],
+          },
+        ],
+        stadium: {
+          title: "Malmö Stadion",
+          city: "Malmö",
+          country: "Sweden",
+          attendance: "21 990",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "15.06.1958",
+        stage: "group 1",
+        teams: ["Czechoslovakia", "Argentina"],
+        score: [[6, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Dvořák", "Zikán", "Feureisl", "Hovorka"],
+            timeGoals: ["8", "17, 40", "69", "82, 89"],
+          },
+          {
+            playersScoredGoal: ["Corbatta"],
+            timeGoals: ["65(p)"],
+          },
+        ],
+        stadium: {
+          title: "Olympiastadion",
+          city: "Helsingborg",
+          country: "Sweden",
+          attendance: "16 418",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "17.06.1958",
+        stage: "group 1",
+        teams: ["North. Ireland", "Czechoslovakia"],
+        score: [[1, 1], [1, 0], []],
+        goals: [
+          {
+            playersScoredGoal: ["McParland"],
+            timeGoals: ["44", "97"],
+          },
+          {
+            playersScoredGoal: ["Zikán"],
+            timeGoals: ["18"],
+          },
+        ],
+        stadium: {
+          title: "Malmö Stadion",
+          city: "Malmö",
+          country: "Sweden",
+          attendance: "6 196",
+        },
+      },
+
+      {
+        id: "1-1958",
+        date: "08.06.1958",
+        stage: "group 2",
+        teams: ["France", "Paraguay"],
+        score: [[7, 3], [], []],
+        goals: [
+          {
+            playersScoredGoal: [
+              "Fontaine",
+              "Piantoni",
+              "Wisnieski",
+              "Kopa",
+              "Vincent",
+            ],
+            timeGoals: ["24, 30, 67", "52", "61", "70", "83"],
+          },
+          {
+            playersScoredGoal: ["Amarilla", "Romero"],
+            timeGoals: ["20, 44(p)", "50"],
+          },
+        ],
+        stadium: {
+          title: "Idrottsparken",
+          city: "Norrköping",
+          country: "Sweden",
+          attendance: "16 518",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "08.06.1958",
+        stage: "group 2",
+        teams: ["Yugoslavia", "Scotland"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Petaković"],
+            timeGoals: ["6"],
+          },
+          {
+            playersScoredGoal: ["Murray"],
+            timeGoals: ["49"],
+          },
+        ],
+        stadium: {
+          title: "Arosvallen",
+          city: "Västerås",
+          country: "Sweden",
+          attendance: "9 591",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "11.06.1958",
+        stage: "group 2",
+        teams: ["Yugoslavia", "France"],
+        score: [[3, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Petaković", "Veselinović"],
+            timeGoals: ["16", "63, 88"],
+          },
+          {
+            playersScoredGoal: ["Fontaine"],
+            timeGoals: ["4, 85"],
+          },
+        ],
+        stadium: {
+          title: "Arosvallen",
+          city: "Västerås",
+          country: "Sweden",
+          attendance: "12 217",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "11.06.1958",
+        stage: "group 2",
+        teams: ["Paraguay", "Scotland"],
+        score: [[3, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Agüero", "Ré", "Parodi"],
+            timeGoals: ["4", "45", "73"],
+          },
+          {
+            playersScoredGoal: ["Mudie", "Collins"],
+            timeGoals: ["24", "74"],
+          },
+        ],
+        stadium: {
+          title: "Idrottsparken",
+          city: "Norrköping",
+          country: "Sweden",
+          attendance: "11 665",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "15.06.1958",
+        stage: "group 2",
+        teams: ["France", "Scotland"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Kopa", "Fontaine"],
+            timeGoals: ["22", "44"],
+          },
+          {
+            playersScoredGoal: ["Baird"],
+            timeGoals: ["58"],
+          },
+        ],
+        stadium: {
+          title: "Eyravallen",
+          city: "Örebro",
+          country: "Sweden",
+          attendance: "13 554",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "15.06.1958",
+        stage: "group 2",
+        teams: ["Paraguay", "Yugoslavia"],
+        score: [[3, 3], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Parodi", "Agüero", "Romero"],
+            timeGoals: ["20", "52", "80"],
+          },
+          {
+            playersScoredGoal: ["Ognjanović", "Veselinović", "Rajkov"],
+            timeGoals: ["18", "21", "73"],
+          },
+        ],
+        stadium: {
+          title: "Tunavallen",
+          city: "Eskilstuna",
+          country: "Sweden",
+          attendance: "13 103",
+        },
+      },
+
+      {
+        id: "1-1958",
+        date: "08.06.1958",
+        stage: "group 3",
+        teams: ["Sweden", "Mexico"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Simonsson", "Liedholm"],
+            timeGoals: ["17, 64", "57(p)"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Råsunda Stadium",
+          city: "Solna",
+          country: "Sweden",
+          attendance: "34 107",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "08.06.1958",
+        stage: "group 3",
+        teams: ["Hungary", "Wales"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Bozsik"],
+            timeGoals: ["5"],
+          },
+          {
+            playersScoredGoal: ["J.Charles"],
+            timeGoals: ["27"],
+          },
+        ],
+        stadium: {
+          title: "Jernvallen",
+          city: "Sandviken",
+          country: "Sweden",
+          attendance: "15 343",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "11.06.1958",
+        stage: "group 3",
+        teams: ["Mexico", "Wales"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Belmonte"],
+            timeGoals: ["89"],
+          },
+          {
+            playersScoredGoal: ["I.Allchurch"],
+            timeGoals: ["32"],
+          },
+        ],
+        stadium: {
+          title: "Råsunda Stadium",
+          city: "Solna",
+          country: "Sweden",
+          attendance: "15 150",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "12.06.1958",
+        stage: "group 3",
+        teams: ["Sweden", "Hungary"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Hamrin"],
+            timeGoals: ["34, 55"],
+          },
+          {
+            playersScoredGoal: ["Tichy"],
+            timeGoals: ["77"],
+          },
+        ],
+        stadium: {
+          title: "Råsunda Stadium",
+          city: "Solna",
+          country: "Sweden",
+          attendance: "38 850",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "15.06.1958",
+        stage: "group 3",
+        teams: ["Sweden", "Wales"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Råsunda Stadium",
+          city: "Solna",
+          country: "Sweden",
+          attendance: "30 287",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "15.06.1958",
+        stage: "group 3",
+        teams: ["Hungary", "Mexico"],
+        score: [[4, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Tichy", "Sándor", "Bencsics"],
+            timeGoals: ["19, 46", "54", "69"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Jernvallen",
+          city: "Sandviken",
+          country: "Sweden",
+          attendance: "13 300",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "17.06.1958",
+        stage: "group 3",
+        teams: ["Wales", "Hungary"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["I.Allchurch", "Medwin"],
+            timeGoals: ["55", "76"],
+          },
+          {
+            playersScoredGoal: ["Tichy"],
+            timeGoals: ["33"],
+          },
+        ],
+        stadium: {
+          title: "Råsunda Stadium",
+          city: "Solna",
+          country: "Sweden",
+          attendance: "2 823",
+        },
+      },
+
+      {
+        id: "1-1958",
+        date: "08.06.1958",
+        stage: "group 4",
+        teams: ["Brazil", "Austria"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Altafini", "Nílton Santos"],
+            timeGoals: ["37, 85", "50"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Rimnersvallen",
+          city: "Uddevalla",
+          country: "Sweden",
+          attendance: "17 778",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "08.06.1958",
+        stage: "group 4",
+        teams: ["Soviet Union", "England"],
+        score: [[2, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Simonyan", "A.Ivanov"],
+            timeGoals: ["13", "56"],
+          },
+          {
+            playersScoredGoal: ["Kevan", "Finney"],
+            timeGoals: ["66", "85(p)"],
+          },
+        ],
+        stadium: {
+          title: "Ullevi",
+          city: "Gothenburg",
+          country: "Sweden",
+          attendance: "49 348",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "11.06.1958",
+        stage: "group 4",
+        teams: ["Brazil", "England"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Ullevi",
+          city: "Gothenburg",
+          country: "Sweden",
+          attendance: "40 895",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "11.06.1958",
+        stage: "group 4",
+        teams: ["Soviet Union", "Austria"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Ilyin", "V.Ivanov"],
+            timeGoals: ["15", "62"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Ryavallen",
+          city: "Borås",
+          country: "Sweden",
+          attendance: "21 239",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "15.06.1958",
+        stage: "group 4",
+        teams: ["England", "Austria"],
+        score: [[2, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Haynes", "Kevan"],
+            timeGoals: ["56", "74"],
+          },
+          {
+            playersScoredGoal: ["Koller", "Körner"],
+            timeGoals: ["15", "71"],
+          },
+        ],
+        stadium: {
+          title: "Ryavallen",
+          city: "Borås",
+          country: "Sweden",
+          attendance: "15 872",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "15.06.1958",
+        stage: "group 4",
+        teams: ["Brazil", "Soviet Union"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Vavá"],
+            timeGoals: ["3, 77"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Ullevi",
+          city: "Gothenburg",
+          country: "Sweden",
+          attendance: "50 928",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "17.06.1958",
+        stage: "group 4",
+        teams: ["Soviet Union", "England"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Ilyin"],
+            timeGoals: ["69"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Ullevi",
+          city: "Gothenburg",
+          country: "Sweden",
+          attendance: "23 182",
+        },
+      },
+
+      {
+        id: "1-1958",
+        date: "19.06.1958",
+        stage: "4:1/4 quarter-finals",
+        teams: ["Brazil", "Wales"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Pelé"],
+            timeGoals: ["66"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Ullevi",
+          city: "Gothenburg",
+          country: "Sweden",
+          attendance: "25 923",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "19.06.1958",
+        stage: "4:1/4 quarter-finals",
+        teams: ["France", "North. Ireland"],
+        score: [[4, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Wisnieski", "Fontaine", "Piantoni"],
+            timeGoals: ["44", "55, 63", "68"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Idrottsparken",
+          city: "Norrköping",
+          country: "Sweden",
+          attendance: "11 800",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "19.06.1958",
+        stage: "4:1/4 quarter-finals",
+        teams: ["Sweden", "Soviet Union"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Hamrin", "Simonsson"],
+            timeGoals: ["49", "88"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Råsunda Stadium",
+          city: "Solna",
+          country: "Sweden",
+          attendance: "31 900",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "19.06.1958",
+        stage: "4:1/4 quarter-finals",
+        teams: ["Germany", "Yugoslavia"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rahn"],
+            timeGoals: ["12"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          title: "Malmö Stadion",
+          city: "Malmö",
+          country: "Sweden",
+          attendance: "20 055",
+        },
+      },
+
+      {
+        id: "1-1958",
+        date: "24.06.1958",
+        stage: "3:1/2 semi-finals",
+        teams: ["Brazil", "France"],
+        score: [[5, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Vavá", "Didi", "Pelé"],
+            timeGoals: ["2", "39", "52, 64, 75"],
+          },
+          {
+            playersScoredGoal: ["Fontaine", "Piantoni"],
+            timeGoals: ["9", "83"],
+          },
+        ],
+        stadium: {
+          title: "Råsunda Stadium",
+          city: "Solna",
+          country: "Sweden",
+          attendance: "27 100",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "24.06.1958",
+        stage: "3:1/2 semi-finals",
+        teams: ["Sweden", "Germany"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Skoglund", "Gren", "Hamrin"],
+            timeGoals: ["32", "81", "88"],
+          },
+          {
+            playersScoredGoal: ["Schäfer"],
+            timeGoals: ["24"],
+          },
+        ],
+        stadium: {
+          title: "Ullevi",
+          city: "Gothenburg",
+          country: "Sweden",
+          attendance: "49 471",
+        },
+      },
+
+      {
+        id: "1-1958",
+        date: "28.06.1958",
+        stage: "2:third place play-off",
+        teams: ["France", "Germany"],
+        score: [[6, 3], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Fontaine", "Kopa", "Douis"],
+            timeGoals: ["16, 36, 78, 89", "27(p)", "50"],
+          },
+          {
+            playersScoredGoal: ["Cieslarczyk", "Rahn", "Schäfer"],
+            timeGoals: ["18", "52", "84"],
+          },
+        ],
+        stadium: {
+          title: "Ullevi",
+          city: "Gothenburg",
+          country: "Sweden",
+          attendance: "32 483",
+        },
+      },
+      {
+        id: "1-1958",
+        date: "29.06.1958",
+        stage: "1:final",
+        teams: ["Brazil", "Sweden"],
+        score: [[5, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Vavá", "Pelé", "Zagallo"],
+            timeGoals: ["9, 32", "55, 90", "68"],
+          },
+          {
+            playersScoredGoal: ["Liedholm", "Simonsson"],
+            timeGoals: ["4", "80"],
+          },
+        ],
+        stadium: {
+          title: "Råsunda Stadium",
+          city: "Solna",
+          country: "Sweden",
+          attendance: "49 737",
+        },
+      },
+    ],
     qualification: [],
   },
   1962: {
