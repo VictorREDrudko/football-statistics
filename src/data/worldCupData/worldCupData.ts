@@ -2981,7 +2981,680 @@ export const worldCupData: WorldCupData = {
     icon: iconWorldCup1962,
     background: [],
     hostCountry: ["Chile"],
-    finalStage: [],
+    finalStage: [
+      {
+        id: v1(),
+        date: "30.05.1962",
+        stage: stage.group[1],
+        teams: ["Uruguay", "Colombia"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Cubilla", "Sasía"],
+            timeGoals: ["56", "75"],
+          },
+          {
+            playersScoredGoal: ["Zuluaga"],
+            timeGoals: ["19(p)"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.dittborn,
+          attendance: "7 908",
+        },
+      },
+      {
+        id: v1(),
+        date: "31.05.1962",
+        stage: stage.group[1],
+        teams: ["Soviet Union", "Yugoslavia"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Ivanov", "Ponedelnik"],
+            timeGoals: ["51", "83"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.dittborn,
+          attendance: "9 622",
+        },
+      },
+      {
+        id: v1(),
+        date: "02.06.1962",
+        stage: stage.group[1],
+        teams: ["Yugoslavia", "Uruguay"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Skoblar", "Galić", "Jerković"],
+            timeGoals: ["25(p)", "29", "49"],
+          },
+          {
+            playersScoredGoal: ["Cabrera"],
+            timeGoals: ["19"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.dittborn,
+          attendance: "8 829",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.06.1962",
+        stage: stage.group[1],
+        teams: ["Soviet Union", "Colombia"],
+        score: [[4, 4], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Ivanov", "Chislenko", "Ponedelnik"],
+            timeGoals: ["8, 11", "10", "56"],
+          },
+          {
+            playersScoredGoal: ["Aceros", "Coll", "Rada", "Klinger"],
+            timeGoals: ["21", "68", "72", "86" ],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.dittborn,
+          attendance: "8 040",
+        },
+      },
+      {
+        id: v1(),
+        date: "06.06.1962",
+        stage: stage.group[1],
+        teams: ["Soviet Union", "Uruguay"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Mamykin", "Ivanov"],
+            timeGoals: ["38", "89"],
+          },
+          {
+            playersScoredGoal: ["Sasía"],
+            timeGoals: ["54" ],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.dittborn,
+          attendance: "9 973",
+        },
+      },
+      {
+        id: v1(),
+        date: "02.06.1962",
+        stage: stage.group[1],
+        teams: ["Yugoslavia", "Colombia"],
+        score: [[5, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Galić", "Jerković", "Melić"],
+            timeGoals: ["20, 61", "25, 87", "82"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.dittborn,
+          attendance: "7 167",
+        },
+      },
+      {
+        id: v1(),
+        date: "30.05.1962",
+        stage: stage.group[2],
+        teams: ["Chile", "Switzerland"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["L.Sánchez", "Ramírez"],
+            timeGoals: ["44, 55", "51"],
+          },
+          {
+            playersScoredGoal: ["Wüthrich"],
+            timeGoals: ["6"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.nacional,
+          attendance: "65 006",
+        },
+      },
+      {
+        id: v1(),
+        date: "31.05.1962",
+        stage: stage.group[2],
+        teams: ["Germany", "Italy"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.nacional,
+          attendance: "65 440",
+        },
+      },
+      {
+        id: v1(),
+        date: "02.06.1962",
+        stage: stage.group[2],
+        teams: ["Chile", "Italy"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Ramírez", "Toro"],
+            timeGoals: ["73", "87"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.nacional,
+          attendance: "66 057",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.06.1962",
+        stage: stage.group[2],
+        teams: ["Germany", "Switzerland"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Brülls", "Seeler"],
+            timeGoals: ["45", "59"],
+          },
+          {
+            playersScoredGoal: ["Schneiter"],
+            timeGoals: ["73"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.nacional,
+          attendance: "64 922",
+        },
+      },
+      {
+        id: v1(),
+        date: "06.06.1962",
+        stage: stage.group[2],
+        teams: ["Germany", "Chile"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Szymaniak", "Seeler"],
+            timeGoals: ["21(p)", "82"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.nacional,
+          attendance: "67 224",
+        },
+      },
+      {
+        id: v1(),
+        date: "06.06.1962",
+        stage: stage.group[2],
+        teams: ["Italy", "Switzerland"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Mora", "Bulgarelli"],
+            timeGoals: ["2", "65, 67"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.nacional,
+          attendance: "59 828",
+        },
+      },
+      {
+        id: v1(),
+        date: "30.05.1962",
+        stage: stage.group[3],
+        teams: ["Brazil", "Mexico"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Zagallo", "Pelé"],
+            timeGoals: ["56", "73"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.sausalito,
+          attendance: "10 484",
+        },
+      },
+      {
+        id: v1(),
+        date: "31.05.1962",
+        stage: stage.group[3],
+        teams: ["Czechoslovakia", "Spain"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Štibrányi"],
+            timeGoals: ["80"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.sausalito,
+          attendance: "12 700",
+        },
+      },
+      {
+        id: v1(),
+        date: "02.06.1962",
+        stage: stage.group[3],
+        teams: ["Brazil", "Czechoslovakia"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.sausalito,
+          attendance: "14 903",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.06.1962",
+        stage: stage.group[3],
+        teams: ["Spain", "Mexico"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Peiró"],
+            timeGoals: ["90"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.sausalito,
+          attendance: "11 875",
+        },
+      },
+      {
+        id: v1(),
+        date: "06.06.1962",
+        stage: stage.group[3],
+        teams: ["Brazil", "Spain"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Amarildo"],
+            timeGoals: ["72, 86"],
+          },
+          {
+            playersScoredGoal: ["Adelardo"],
+            timeGoals: ["35"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.sausalito,
+          attendance: "18 715",
+        },
+      },
+      {
+        id: v1(),
+        date: "07.06.1962",
+        stage: stage.group[3],
+        teams: ["Mexico", "Czechoslovakia"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Díaz", "Del Águila", "Hernández"],
+            timeGoals: ["12", "29", "90(p)"],
+          },
+          {
+            playersScoredGoal: ["Mašek"],
+            timeGoals: ["1"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.sausalito,
+          attendance: "10 648",
+        },
+      },
+      {
+        id: v1(),
+        date: "30.05.1962",
+        stage: stage.group[4],
+        teams: ["Argentina", "Bulgaria"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Facundo"],
+            timeGoals: ["4"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.teniente,
+          attendance: "7 134",
+        },
+      },
+      {
+        id: v1(),
+        date: "31.05.1962",
+        stage: stage.group[4],
+        teams: ["Hungary", "England"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Tichy", "Albert"],
+            timeGoals: ["17", "71"],
+          },
+          {
+            playersScoredGoal: ["Flowers"],
+            timeGoals: ["60(p)"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.teniente,
+          attendance: "7 938",
+        },
+      },
+      {
+        id: v1(),
+        date: "02.06.1962",
+        stage: stage.group[4],
+        teams: ["England", "Argentina"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Flowers", "Charlton", "Greaves"],
+            timeGoals: ["17(p)", "42", "67"],
+          },
+          {
+            playersScoredGoal: ["Sanfilippo"],
+            timeGoals: ["81"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.teniente,
+          attendance: "9 794",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.06.1962",
+        stage: stage.group[4],
+        teams: ["Hungary", "Bulgaria"],
+        score: [[6, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Albert", "Tichy", "Solymosi"],
+            timeGoals: ["1, 6, 53", "8, 70", "12"],
+          },
+          {
+            playersScoredGoal: ["Sokolov"],
+            timeGoals: ["64"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.teniente,
+          attendance: "7 442",
+        },
+      },
+      {
+        id: v1(),
+        date: "06.06.1962",
+        stage: stage.group[4],
+        teams: ["Hungary", "Argentina"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.teniente,
+          attendance: "7 945",
+        },
+      },
+      {
+        id: v1(),
+        date: "07.06.1962",
+        stage: stage.group[4],
+        teams: ["England", "Bulgaria"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.teniente,
+          attendance: "5 700",
+        },
+      },
+      {
+        id: v1(),
+        date: "10.06.1962",
+        stage: stage[1_4],
+        teams: ["Chile", "Soviet Union"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["L.Sánchez", "Rojas"],
+            timeGoals: ["11", "29"],
+          },
+          {
+            playersScoredGoal: ["Chislenko"],
+            timeGoals: ["26"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.dittborn,
+          attendance: "17 268",
+        },
+      },
+      {
+        id: v1(),
+        date: "10.06.1962",
+        stage: stage[1_4],
+        teams: ["Czechoslovakia", "Hungary"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Scherer"],
+            timeGoals: ["13"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.teniente,
+          attendance: "11 690",
+        },
+      },
+      {
+        id: v1(),
+        date: "10.06.1962",
+        stage: stage[1_4],
+        teams: ["Brazil", "England"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Garrincha", "Vavá"],
+            timeGoals: ["31, 59", "53"],
+          },
+          {
+            playersScoredGoal: ["Hitchens"],
+            timeGoals: ["38"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.sausalito,
+          attendance: "17 736",
+        },
+      },
+      {
+        id: v1(),
+        date: "10.06.1962",
+        stage: stage[1_4],
+        teams: ["Yugoslavia", "Germany"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Radaković"],
+            timeGoals: ["85"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.nacional,
+          attendance: "63 324",
+        },
+      },
+      {
+        id: v1(),
+        date: "13.06.1962",
+        stage: stage[1_2],
+        teams: ["Czechoslovakia", "Yugoslavia"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Kadraba", "Scherer"],
+            timeGoals: ["48", "80, 84(p)"],
+          },
+          {
+            playersScoredGoal: ["Jerković"],
+            timeGoals: ["69"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.sausalito,
+          attendance: "5 890",
+        },
+      },
+      {
+        id: v1(),
+        date: "13.06.1962",
+        stage: stage[1_2],
+        teams: ["Brazil", "Chile"],
+        score: [[4, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Garrincha", "Vavá"],
+            timeGoals: ["9, 32", "47, 78"],
+          },
+          {
+            playersScoredGoal: ["Toro", "L.Sánchez"],
+            timeGoals: ["42", "61(p)"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.nacional,
+          attendance: "76 594",
+        },
+      },
+      {
+        id: v1(),
+        date: "16.06.1962",
+        stage: stage.place3,
+        teams: ["Chile", "Yugoslavia"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rojas"],
+            timeGoals: ["90"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.nacional,
+          attendance: "66 697",
+        },
+      },
+      {
+        id: v1(),
+        date: "17.06.1962",
+        stage: stage.final,
+        teams: ["Brazil", "Czechoslovakia"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Amarildo", "Zito", "Vavá"],
+            timeGoals: ["17", "69", "78"],
+          },
+          {
+            playersScoredGoal: ["Masopust"],
+            timeGoals: ["15"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Chile.nacional,
+          attendance: "68 679",
+        },
+      },
+    ],
     qualification: [],
   },
   1966: {

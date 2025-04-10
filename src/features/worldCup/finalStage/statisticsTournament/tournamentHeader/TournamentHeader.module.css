@@ -27,7 +27,7 @@
 
 .image {
   border-radius: 3rem 0;
-  max-width: 20rem;
+  max-width: 18rem;
   width: 100%;
   box-shadow: 2px 2px 5px var(--bg-second), 
               5px 4px 10px var(--bg-second-transparent50);

@@ -251,8 +251,29 @@ export const stadiums: Stadiums = {
       city: "Halmstad",
       country: "Sweden"
     }
-  }
-
+  },
+  Chile: {
+    nacional: {
+      title: "Estadio Nacional",
+      city: "Santiago",
+      country: "Chile",
+    },
+    sausalito: {
+      title: "Estadio Sausalito",
+      city: "Viña del Mar",
+      country: "Chile",
+    },
+    teniente: {
+      title: "Estadio El Teniente",
+      city: "Rancagua",
+      country: "Chile",
+    },
+    dittborn: {
+      title: "Estadio Carlos Dittborn",
+      city: "Arica",
+      country: "Chile",
+    }
+  },
 }
 
 
