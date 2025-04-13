@@ -1,0 +1,31 @@
+@import url('./../../../../data/theme/theme.css');
+
+.container {
+  position: relative;
+}
+
+.icon {
+  width: 85px;
+}
+
+.year {
+  color: var(--bg-main-transparent70);
+  position: absolute;
+  top: 40px;
+  left: 15px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .icon {
+    width: 60px;
+  }
+
+  .year {
+    top: 27px;
+    left: 12px;
+    font-size: 1.0rem;
+    font-weight: 600;
+  }
+}

@@ -1,7 +1,7 @@
 import { choiseCountryName } from 'utils/choiseCountryFlagAndName'
 import { Flag } from '../flag/Flag'
 import s from './CountryTeam.module.css'
-import { nationalTeams } from 'data/nationalTeams'
+import { nationalTeams } from 'data/nationalTeamsData/nationalTeams'
 
 type Props = {
   countryName: string

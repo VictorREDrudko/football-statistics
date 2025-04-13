@@ -34,19 +34,20 @@
   border-radius: 2rem 0;
   border: 1px solid var(--bg-second-transparent50);
   box-shadow: 0 2px 5px var(--bg-second-transparent50), 0 4px 6px var(--bg-second-transparent50);
+  z-index: 1;
 }
 
 .containerGroup::before {
   content: '';
   position: absolute;
-  top: -700px;
-  bottom: 0;
-  left: 0;
-  right: -350px;
+  top: -1.5rem;
+  bottom: 35rem;
+  left: 25rem;
+  right: 5rem;
   background-image: url('./../../../../assets/icon-cup/world.png'); /* путь к изображению */
-  background-size: 5%; /* Чтобы изображение сохраняло свои пропорции */
-  background-position: center;
+  background-size: 50%; /* Чтобы изображение сохраняло свои пропорции */
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 

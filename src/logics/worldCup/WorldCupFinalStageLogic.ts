@@ -1,5 +1,5 @@
 import { worldCupData } from "data/worldCupData/worldCupData";
-import { NodesItem, WorldCupInfo, WorldCupMatch } from "data/worldCupData/type-worldCupData";
+import { WorldCupInfo, WorldCupMatch } from "data/worldCupData/type-worldCupData";
 
 export const worldCupYears: string[] = Object.keys(worldCupData);
 
@@ -10,6 +10,10 @@ export const getQualifiedTeamsForPlayoff = ( matches: WorldCupMatch[] ) => {
 };
 
 export const getSortGroupNames = (matches: WorldCupMatch[]) => {
+  if (matches[0].stage.split(":")[0].trim() === "group Final round") {
+    return Array.from(new Set(matches.map((match) => match.stage.split(":")[0].trim()))).sort();
+  }
+
   return Array.from(new Set(matches.map((match) => match.stage))).sort();
 };
 

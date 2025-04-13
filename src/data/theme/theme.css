@@ -9,8 +9,11 @@
   --bg-second-transparent20: rgba(255, 255, 255, 0.2);
   --bg-second-transparent50: rgba(255, 255, 255, 0.5);
   --bg-second-transparent70: rgba(255, 255, 255, 0.7);
+  --bg-second-transparent80: rgba(255, 255, 255, 0.8);
+  --bg-second-transparent90: rgba(255, 255, 255, 0.9);
 
   --accent-main:  rgb(125, 250, 55);
+  --accent-main-transparent80: rgba(125, 250, 55, 0.8);
   --accent-main-transparent50: rgba(125, 250, 55, 0.5);
   --accent-main-transparent30: rgba(125, 250, 55, 0.3);
   --accent-main-transparent20: rgba(125, 250, 55, 0.2);
@@ -25,4 +28,8 @@
   --no-accent-transparent50: rgba(128, 128, 128, 0.5);
   --no-accent-transparent80: rgba(128, 128, 128, 0.8);
   /* --text-main: rgb(255, 255, 255); */
+
+  --first-place: rgb(247, 208, 0);
+  --second-place: rgb(192, 192, 192);
+  --third-place: rgb(205, 127, 50);
 }

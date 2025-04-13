@@ -64,7 +64,11 @@ export const stage: Stage = {
     6: "group 6",
     7: "group 7",
     8: "group 8",
-    final: "group Final round",
+    finalGroup: {
+      group: "group Final round",
+      groupFinal: "group Final round: final",
+      groupPlace3: "group Final round: third place",
+    },
   },
 };
 
@@ -1534,7 +1538,7 @@ export const worldCupData: WorldCupData = {
       {
         id: v1(),
         date: "09.07.1950",
-        stage: stage.group.final,
+        stage: stage.group.finalGroup.group,
         teams: ["Uruguay", "Spain"],
         score: [[2, 2], [], []],
         goals: [
@@ -1555,7 +1559,7 @@ export const worldCupData: WorldCupData = {
       {
         id: v1(),
         date: "09.07.1950",
-        stage: stage.group.final,
+        stage: stage.group.finalGroup.group,
         teams: ["Brazil", "Sweden"],
         score: [[7, 1], [], []],
         goals: [
@@ -1576,7 +1580,7 @@ export const worldCupData: WorldCupData = {
       {
         id: v1(),
         date: "13.07.1950",
-        stage: stage.group.final,
+        stage: stage.group.finalGroup.group,
         teams: ["Brazil", "Spain"],
         score: [[6, 1], [], []],
         goals: [
@@ -1597,7 +1601,7 @@ export const worldCupData: WorldCupData = {
       {
         id: v1(),
         date: "13.07.1950",
-        stage: stage.group.final,
+        stage: stage.group.finalGroup.group,
         teams: ["Uruguay", "Sweden"],
         score: [[3, 2], [], []],
         goals: [
@@ -1618,7 +1622,7 @@ export const worldCupData: WorldCupData = {
       {
         id: v1(),
         date: "16.07.1950",
-        stage: stage.group.final,
+        stage: stage.group.finalGroup.groupPlace3,
         teams: ["Sweden", "Spain"],
         score: [[3, 1], [], []],
         goals: [
@@ -1639,7 +1643,7 @@ export const worldCupData: WorldCupData = {
       {
         id: v1(),
         date: "16.07.1950",
-        stage: stage.group.final,
+        stage: stage.group.finalGroup.groupFinal,
         teams: ["Uruguay", "Brazil"],
         score: [[2, 1], [], []],
         goals: [

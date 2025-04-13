@@ -25,18 +25,12 @@ import iconconcacafcup from "./../assets/icon-cup/concacaf.png";
 import iconofcCup from "./../assets/icon-cup/ofc.png";
 
 import iconMedal from "./../assets/icon/icon-medal.png";
-import { CountryFlag, CountryName } from "./type-nationalTeams";
+import {
+  CountryFlag,
+  CountryName,
+} from "./nationalTeamsData/type-nationalTeams";
 
 // DATA
-export const getCurrentCountryAttribut = (
-  attributes: CountryName[] | CountryFlag[]
-) => {
-  const currentAttribut = attributes.filter((attribut) =>
-    attribut.period.includes("p.t.")
-  );
-  return currentAttribut[0].period;
-};
-
 export const aboutProject: AboutProject = {
   image: logoProject,
   title: "football is life",
@@ -146,8 +140,6 @@ export const nationalTournaments: NationalTournaments = {
 export const nationalTournamentsKeys: NameTournament[] = Object.keys(
   nationalTournaments
 ) as NameTournament[];
-
-
 
 export const tournamentsWorldCup: number[] = [
   1930, 1934, 1938, 1950, 1954, 1958, 1962, 1966, 1970, 1974, 1978, 1982, 1986,

@@ -1,0 +1,22 @@
+@import url('./../../../../data/theme/theme.css');
+
+.title {
+  text-transform: uppercase;
+  color: var(--bg-second-transparent70);
+  background: linear-gradient(to right, transparent, var(--bg-main-transparent70), transparent);
+  border-radius: 10px;
+  font-size: 0.8rem;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 0.7rem;
+    padding: 5px;
+  }
+}
+

@@ -13,9 +13,11 @@ export const FinalStage = () => {
   const tournamentData = getTournamentData(year)
   const matches = tournamentData.finalStage
 
-  const groupStageMatches = matches.filter(match => match.stage.slice(0, 5) === "group" && match.stage !== "group Final round")
+  const groupStageMatches = matches.filter(match => {
+    return match.stage.slice(0, 5) === "group" && match.stage.split(":")[0].trim() !== "group Final round"
+  })
   const playOffStageMatches = matches.filter(match => match.stage.slice(0, 5) !== "group")
-  const groupFinalRoundMatches = matches.filter(match => match.stage === "group Final round")
+  const groupFinalRoundMatches = matches.filter(match => match.stage.split(":")[0].trim() === "group Final round")
 
   const hasMatchesGroupStage = groupStageMatches.length === 0 ? false : true
   const hasMatchesPlayoffStage = playOffStageMatches.length === 0 ? false : true
@@ -34,7 +36,6 @@ export const FinalStage = () => {
                                             year={year}/>}
       {hasMatchesPlayoffStage && <PlayOffStage year={year} playOffStageMatches={playOffStageMatches}/>}
       {hasMatchesGroupFinalRound && <GroupFinalStage  groupStageMatches={groupFinalRoundMatches} 
-                                                      qualifiedTeamsForPlayoff={qualifiedTeams} 
                                                       year={year}/>}
     </div>
   )

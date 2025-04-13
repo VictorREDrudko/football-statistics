@@ -1,4 +1,4 @@
-import { nationalTeams } from 'data/nationalTeams'
+import { nationalTeams } from 'data/nationalTeamsData/nationalTeams'
 import s from './Flag.module.css'
 import { choiseCountryFlag } from 'utils/choiseCountryFlagAndName'
 

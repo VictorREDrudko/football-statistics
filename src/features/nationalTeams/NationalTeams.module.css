@@ -1,40 +1,31 @@
+@import url('./../../data/theme/theme.css');
+
 .container {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  padding: 80px 10px 10px 10px;
+  padding-top: 5rem;
+  background-color: var(--bg-second-transparent90);
+  background-image: url("./../../assets/background-stadion.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.wrapper {
+.containerPartialTeamsInfo {
+  padding-top: 2rem;
+  padding-bottom: 10rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-}
-
-.containerNumber {
-  border: 1px solid rgba(1, 131, 1, 0.8);
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  width: 100px;
-  height: 100px;
-}
-
-.number {
-  font-size: 2.5rem;
-  font-weight: 600;
-  padding: 5px;
-  margin-bottom: 5px;
-}
-
-.title {
-  font-size: 0.8rem;
+  gap: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 33rem;
+  width: 100%;
 }
