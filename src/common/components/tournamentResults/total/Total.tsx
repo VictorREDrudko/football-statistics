@@ -3,30 +3,55 @@ import iconGoldMedal from '../../../../assets/icon/card/gold-medal.png'
 import iconSilverMedal from '../../../../assets/icon/card/silver-medal.png'
 import iconBronzeMedal from '../../../../assets/icon/card/bronze-medal.png'
 import iconCounter from '../../../../assets/icon/card/icon-counter.png'
+import { useState } from 'react'
+import { ModalResults } from 'features/nationalTeams/nationTeamCard/achievements/modalResults/ModalResults'
 
 type Props = {
-  value: number
+  title: string
+  count: number
+  years: string[][]
+  iconPath: string  
   classContainer: string
-  description: string
-  openModal: () => void
+  titleCompetition: string
+  countryName: string
 } 
 
-export const Total = ({value, classContainer, description, openModal}: Props) => {
-  const pathIconGoldMedal = description === 'champion' && value !== 0 ? iconGoldMedal : 
-    description === 'runner-up' && value !== 0 ? iconSilverMedal :
-    description === 'third-place' && value !== 0 ? iconBronzeMedal : 
-    description === 'appearances' && value !== 0 ? iconCounter :
-    description === 'matches' && value !== 0 ? iconCounter : ''
+export const Total = ({title, count, years, iconPath, classContainer, titleCompetition, countryName}: Props) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const pathIconGoldMedal = title === 'champion' && count !== 0 ? iconGoldMedal : 
+    title === 'runner-up' && count !== 0 ? iconSilverMedal :
+    title === 'third-place' && count !== 0 ? iconBronzeMedal : 
+    title === 'appearances' && count !== 0 ? iconCounter :
+    title === 'matches' && count !== 0 ? iconCounter : ''
   
-  const fullClass = value === 0 ? 'zeroValue' : classContainer
-  const iconClass = value === 0 ? 'noIcon' : ''
-  
+  const fullClass = count === 0 ? 'zeroValue' : classContainer
+  const iconClass = count === 0 ? 'noIcon' : ''
+
   return (
-    <div className={`${s.container} ${s[classContainer]} ${s[fullClass]}`} onClick={openModal}>
-      <span className={s.text}>{value}</span>
-      <img src={pathIconGoldMedal} alt={`icon medal ${description}`} className={`${s.icon} ${s[iconClass]}`}/>
-      <span className={s.description}>{description}</span>
-    </div>
+    <>
+      {isModalOpen && <ModalResults onClose={closeModal} 
+                                    title={title} 
+                                    count={count}
+                                    years={years}
+                                    iconPath={iconPath}
+                                    titleCompetition={titleCompetition}
+                                    countryName={countryName}
+                                    />}
+      <div className={`${s.container} ${s[classContainer]} ${s[fullClass]}`} onClick={openModal}>
+        <span className={s.text}>{count}</span>
+        <img src={pathIconGoldMedal} alt={`icon medal ${title}`} className={`${s.icon} ${s[iconClass]}`}/>
+        <span className={s.description}>{title}</span>
+      </div>
+    </>
   )
 }
 

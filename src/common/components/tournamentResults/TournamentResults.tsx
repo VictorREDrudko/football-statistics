@@ -1,75 +1,92 @@
 import { TeamWorldCupAchievements } from 'logics/worldCup/createTeamWorldCupAchievements'
 import s from './TournamentResults.module.css'
 import { TotalGroup } from './totalGroup/TotalGroup'
-import { createWorldCupPosition, WorldCupPosition } from 'logics/worldCup/createWorldCupPosition'
-import { createDataMatchesWorldCup } from 'logics/worldCup/createDataMatchesWorldCup'
 import { classNameResult } from 'data/nationalTeamsData/classNameResult'
 import { TitleItem } from 'features/nationalTeams/nationTeamCard/titleItem/TitleItem'
+import { Confederation } from 'data/nationalTeamsData/type-nationalTeams'
+import { structuringResultChampionships } from 'logics/structuringResultChampionships/structuringResultChampionships'
+import { BaseResult } from 'logics/structuringResultChampionships/structuringResultChampionships-type'
 
 type Props = {
   resultsData: TeamWorldCupAchievements
-  title: string
-  openModal: () => void
+  titleCompetition: string
+  countryName: string
+  confeder:Confederation
 }
 
-export const TournamentResults = ({resultsData, title, openModal}: Props) => {
-  const worldCupPosition: WorldCupPosition[] = createWorldCupPosition(resultsData)
-  const worldCupMatches: WorldCupPosition[] = createDataMatchesWorldCup(resultsData)
+export const TournamentResults = ({resultsData, titleCompetition, countryName, confeder}: Props) => {
+  const resultWorldCup: BaseResult[] = structuringResultChampionships(resultsData, confeder)
 
-  const plugPosition = [
+  const medalResult = resultWorldCup.filter(el => el.title !== 'appearances' && el.title !== 'matches')
+  const appearancesAndMatches = resultWorldCup.filter(el => el.title === 'appearances' || el.title === 'matches')
+
+  // Заглушка
+  const plugResult = [
     {
-      value: 0,
+      title: "champion",
+      count: 0,
+      years: [[]],
+      iconPath: '',
       typeTotal: classNameResult.circleLarge,
-      years: [],
-      description: "champion"
-    }, 
+    },
     {
-      value: 0,
+      title: "runner-up",
+      count: 0,
+      years: [[]],
+      iconPath: '',
       typeTotal: classNameResult.circleMedium,
-      years: [],
-      description: "runner-up"
     },
     {
-      value: 0,
-      typeTotal: classNameResult.circleSmall,
-      years: [],
-      description: "third-place"
+      title: "third-place",
+      count: 0,
+      years: [[]],
+      iconPath: '',
+      typeTotal: classNameResult.circleMedium,
     },
-  ]
-
-  const plugMatches =[
     {
-      value: 0,
+      title: 'appearances',
+      count: 0,
+      years: [[]],
+      iconPath: '',
       typeTotal: classNameResult.squareLarge,
-      years: [],
-      description: "appearances"
     }, 
     {
-      value: 0,
+      title: 'matches',
+      count: 0,
+      years: [[]],
+      iconPath: '',
       typeTotal: classNameResult.squareSmall,
-      years: [],
-      description: "matches"
-    },
+    }
   ]
 
-  const rendering = title === 'FIFA World Cup' ? (
+  const medalResultPlug = plugResult.filter(el => el.title !== 'appearances' && el.title !== 'matches')
+  const appearancesAndMatchesPlug = plugResult.filter(el => el.title === 'appearances' || el.title === 'matches')
+
+  const rendering = titleCompetition === 'FIFA World Cup' ? (
     <>
-      <TitleItem title={title}/>
+      <TitleItem title={titleCompetition}/>
       <div className={s.containerTotalGroup}>
-        <TotalGroup openModal={openModal} data={worldCupPosition}/>
-        <TotalGroup openModal={openModal} data={worldCupMatches}/>
+        <TotalGroup titleCompetition={titleCompetition}
+                    countryName={countryName}
+                    data={medalResult}/>
+        <TotalGroup titleCompetition={titleCompetition}
+                    countryName={countryName}
+                    data={appearancesAndMatches}/>
       </div>
     </>
   ) : (
     <>
-      <TitleItem title={title}/>
+      <TitleItem title={titleCompetition}/>
       <div className={s.containerTotalGroup}>
-        <TotalGroup openModal={openModal} data={plugPosition}/>
-        <TotalGroup openModal={openModal} data={plugMatches}/>
+        <TotalGroup titleCompetition={titleCompetition}
+                    countryName={countryName}
+                    data={medalResultPlug}/>
+        <TotalGroup titleCompetition={titleCompetition}
+                    countryName={countryName}
+                    data={appearancesAndMatchesPlug}/>
       </div>
-  </>
+    </>
   )
-
 
   return (
     <div className={s.container}>

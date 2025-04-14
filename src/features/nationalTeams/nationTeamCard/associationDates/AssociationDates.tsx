@@ -1,10 +1,10 @@
 import { AssociationDate } from 'data/nationalTeamsData/type-nationalTeams'
 import s from './AssociationDates.module.css'
-import iconDateFounded from './../../../assets/icon/card/date-founded.png'
-import iconDateFifa from './../../../assets/icon/card/date-FIFA.png'
-import iconDateConfeder from './../../../assets/icon/card/date-confeder.png'
+import iconDateFounded from './../../../../assets/icon/card/date-founded.png'
+import iconDateFifa from './../../../../assets/icon/card/date-FIFA.png'
+import iconDateConfeder from './../../../../assets/icon/card/date-confeder.png'
 import { DateAffiliation } from './dateAffiliation/DateAffiliation'
-import { TitleItem } from '../nationTeamCard/titleItem/TitleItem'
+import { TitleItem } from '../titleItem/TitleItem'
 
 type Props = {
   associationDate: AssociationDate

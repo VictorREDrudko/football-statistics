@@ -1,28 +1,31 @@
+import { BaseResult } from 'logics/structuringResultChampionships/structuringResultChampionships-type'
 import { Total } from '../total/Total'
 import s from './TotalGroup.module.css'
-import { WorldCupPosition } from 'logics/worldCup/createWorldCupPosition'
 
 type Props = {
-  data: WorldCupPosition[]
-  openModal: () => void
+  data: BaseResult[]
+  titleCompetition: string
+  countryName: string
 } 
 
-export const TotalGroup = ({ data, openModal }: Props) => {
-  const createResults = data.map((totalData, index) => {
+export const TotalGroup = ({ data, titleCompetition, countryName }: Props) => {
+  const totals = data.map((total, index) => {
     return (
-      <Total  value={totalData.value} 
-              classContainer={totalData.typeTotal} 
-              openModal={openModal} 
-              description={totalData.description}
+      <Total  title={total.title}
+              count={total.count}
+              years={total.years}
+              classContainer={total.typeTotal}
+              iconPath={total.iconPath}
+              titleCompetition={titleCompetition}
+              countryName={countryName}
               key={index}
-        />
+      />
     )
   })
-
+  
   return (
     <div className={s.container}>
-      {createResults}
+      {totals}
     </div>
   )
 }
-

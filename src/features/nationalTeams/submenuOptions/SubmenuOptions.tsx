@@ -1,7 +1,7 @@
 import { Confederation } from 'data/nationalTeamsData/type-nationalTeams'
 import { Select } from './select/Select'
 import s from './SubmenuOptions.module.css'
-import { IconConfederation } from './iconConfederation/IconConfederation'
+import { IconConfederation } from '../iconConfederation/IconConfederation'
 import { NumberTeams } from './numberTeams/NumberTeams'
 import { confederationIcon } from 'data/nationalTeamsData/nationalTeams'
 
