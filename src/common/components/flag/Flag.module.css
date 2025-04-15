@@ -1,18 +1,27 @@
-.image {
+.image,
+.imageNoReal {
   display: inline-block;
   margin-right: 5px;
   width: 40px;
   border-radius: 5px;
 }
 
+
+.imageNoReal {
+  opacity: 0.4;
+}
+
+
 @media (max-width: 605px) {
-  .image {
+  .image,
+  .imageNoReal {
     width: 30px;
   }
 }
 
 @media (max-width: 480px) {
-  .image {
+  .image,
+  .imageNoReal {
     width: 0;
   }
 }

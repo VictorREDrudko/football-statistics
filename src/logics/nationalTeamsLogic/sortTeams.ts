@@ -8,7 +8,7 @@ export const sortTeams = (teams: NationalTeam[], sortType: string) => {
   } 
 
   // сортировка по рейтингу
-  if (sortType === 'rating') teams.sort((a, b) => b.rating - a.rating);
+  if (sortType === 'rating') teams.sort((a, b) => b.rating.points - a.rating.points);
 
   return teams;
 };

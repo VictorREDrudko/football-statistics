@@ -9,6 +9,15 @@ export type Confederation =
   | "concacaf"
   | "conmebol"
   | "ofc"
+  | "uefa"
+  | "all";
+
+  export type Confeder =
+  | "afc"
+  | "caf"
+  | "concacaf"
+  | "conmebol"
+  | "ofc"
   | "uefa";
 
 // type national teams
@@ -23,7 +32,11 @@ export type NationalTeam = {
   flags: CountryFlag[];
   coatOfArms: string;
   associationDate: AssociationDate;
-  rating: number;
+  rating: {
+    points: number
+    place: number
+  },
+  isCountryReal: boolean
 };
 
 export type CountryName = {

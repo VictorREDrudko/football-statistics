@@ -25,10 +25,10 @@ export const structuringResultChampionships = (resultsData: TeamWorldCupAchievem
     },
     {
       title: "third-place",
-      count: resultsData.countSecondPlace,
-      years: [resultsData.yearsSecondPlace],
+      count: resultsData.countThirdPlace,
+      years: [resultsData.yearsThirdPlace],
       iconPath: icon3Place,
-      typeTotal: classNameResult.circleMedium,
+      typeTotal: classNameResult.circleSmall,
     },
     {
       title: 'appearances',

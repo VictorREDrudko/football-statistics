@@ -4,7 +4,7 @@ import { worldCupData } from 'data/worldCupData/worldCupData'
 import { TournamentResults } from 'common/components/tournamentResults/TournamentResults'
 import { nationalTournaments } from 'data/data'
 import { findTeamsByConfederation } from 'logics/nationalTeamsLogic/findTeamsByConfederation'
-import { Confederation } from 'data/nationalTeamsData/type-nationalTeams'
+import { Confeder, Confederation } from 'data/nationalTeamsData/type-nationalTeams'
 import { confederationIcon } from 'data/nationalTeamsData/nationalTeams'
 import { TitleItem } from '../titleItem/TitleItem'
 import { IconConfederation } from 'features/nationalTeams/iconConfederation/IconConfederation'
@@ -17,7 +17,7 @@ export const Achievements = ({nameTeam}: Props) => {
   const achievements: TeamWorldCupAchievements = createTeamWorldCupAchievements(worldCupData, nameTeam);
 
   // определяем чемпионат конфедерации
-  const nameConfederation: Confederation = findTeamsByConfederation(nameTeam)
+  const nameConfederation: Confeder = findTeamsByConfederation(nameTeam)
   const nameContinentalCompetitions = nationalTournaments[nameConfederation].title
 
   return (

@@ -27,7 +27,7 @@ export const NationalTeamsCard = ({data, closeInfoCard}: Props) => {
       <AssociationDates associationDate={data.associationDate}/>
       <Achievements nameTeam={name}/>
       <button className={s.button} onClick={closeInfoCard}>X</button>
-      <TeamRating value={data.rating}/>
+      <TeamRating place={data.rating.place} points={data.rating.points}/>
   </div>
   )
 }

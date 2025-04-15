@@ -17,6 +17,7 @@ export type TeamWorldCupAchievements = {
 }
 
 export const createTeamWorldCupAchievements = (championshipData: WorldCupData, countryName: string) : TeamWorldCupAchievements => {
+
   let countFirstPlace = 0
   const yearsFirstPlace: string[] = []
 
@@ -154,7 +155,7 @@ export const createTeamWorldCupAchievements = (championshipData: WorldCupData, c
       }
     })
   })
-
+  
   return {
     countFirstPlace,
     yearsFirstPlace,

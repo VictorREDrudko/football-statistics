@@ -6,39 +6,41 @@ import { useEffect } from 'react'
 
 type Props = {
   setConfeder: (confeder: Confederation) => void
-  changeSortType: (sortType: string) => void
-  sortType: string
 }
 
-export const Select = ({setConfeder, changeSortType, sortType}: Props) => {
+export const Select = ({setConfeder}: Props) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
+  // При монтировании устанавливаем sort=alphabet, если параметра нет
   useEffect(() => {
-    // Проверяем, установлен ли параметр sort
     if (!searchParams.has('sort')) {
-      setSearchParams({ sort: 'alphabet' }); // Устанавливаем значение по умолчанию
+      setSearchParams({ sort: 'alphabet' })
     }
-  }, [searchParams, setSearchParams]);
-  
+  }, []) 
+
   const confederationLinks = confederation.map((confeder, index) => {
+    const currentSort = searchParams.get('sort') || 'alphabet';
     return (
       <li className={s.item} key={index} onClick={() => setConfeder(confeder)}>
-        <NavLink to={`/teams/${confeder}`} className={({isActive}) => isActive ? s.active : s.link}>{confeder}</NavLink>
+        <NavLink 
+          to={`/teams/${confeder}?sort=${currentSort}`}  // Сохраняем параметр сортировки
+          className={({isActive}) => isActive ? s.active : s.link}
+        >
+          {confeder}
+        </NavLink>
       </li>
     )
   })
 
-  const onClickSortAlphabet= () => {
-    setSearchParams({ sort: 'alphabet' })
-    changeSortType('alphabet')
-  }
+  const onClickSortAlphabet = () => {
+    setSearchParams({ sort: 'alphabet' });
+  };
 
-  const onClickSortRating= () => {
+  const onClickSortRating = () => {
     setSearchParams({ sort: 'rating' });
-    changeSortType('rating')
-  }
+  };
 
-  const currentSort = searchParams.get('sort');
+  const currentSort = searchParams.get('sort') || 'alphabet';
 
   const classButtonAlphabet = `${s.btn} ${currentSort === 'alphabet' ? s.active : ''}`;
   const classButtonRating = `${s.btn} ${currentSort === 'rating' ? s.active : ''}`;
@@ -46,10 +48,10 @@ export const Select = ({setConfeder, changeSortType, sortType}: Props) => {
 
   return (
     <div className={s.wrapper}>
-      <div className={s.container}>
+      <ul className={s.container}>
         <span className={s.title}>Select:</span>
         {confederationLinks}
-      </div>
+      </ul>
       <div className={s.container}>
         <span className={s.title}>Sorting:</span>
         <button className={classButtonAlphabet} onClick={onClickSortAlphabet}>alphabetical</button>

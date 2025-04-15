@@ -34,6 +34,9 @@ import backgroundFWC1962_1 from "./../../assets/backgroundWC/1962-1.png";
 import backgroundFWC1962_2 from "./../../assets/backgroundWC/1962-2.png";
 import backgroundFWC1966_1 from "./../../assets/backgroundWC/1966-1.png";
 import backgroundFWC1966_2 from "./../../assets/backgroundWC/1966-2.png";
+import backgroundFWC1970_1 from "./../../assets/backgroundWC/1970-1.png";
+import backgroundFWC1970_2 from "./../../assets/backgroundWC/1970-2.png";
+
 import { stadiums } from "./stadiums";
 import { v1 } from "uuid";
 
@@ -4353,9 +4356,682 @@ export const worldCupData: WorldCupData = {
     title: "1970 FIFA World Cup",
     date: "31 May - 21 June",
     icon: iconWorldCup1970,
-    background: [],
+    background: [backgroundFWC1970_2, backgroundFWC1970_1],
     hostCountry: ["Mexico"],
-    finalStage: [],
+    finalStage: [
+      {
+        id: v1(),
+        date: "31.05.1970",
+        stage: stage.group[1],
+        teams: ["Mexico", "Soviet Union"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.azteca,
+          attendance: "107 160",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.06.1970",
+        stage: stage.group[1],
+        teams: ["Belgium", "El Salvador"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Van Moer", "Lambert"],
+            timeGoals: ["12, 54", "79(p)"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.azteca,
+          attendance: "92 205",
+        },
+      },
+      {
+        id: v1(),
+        date: "06.06.1970",
+        stage: stage.group[1],
+        teams: ["Soviet Union", "Belgium"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Byshovets", "Asatiani", "Khmelnytskyi"],
+            timeGoals: ["14, 63", "57", "76"],
+          },
+          {
+            playersScoredGoal: ["Lambert"],
+            timeGoals: ["86"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.azteca,
+          attendance: "95 261",
+        },
+      },
+      {
+        id: v1(),
+        date: "07.06.1970",
+        stage: stage.group[1],
+        teams: ["Mexico", "El Salvador"],
+        score: [[4, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Valdivia", "Fragoso", "Basaguren"],
+            timeGoals: ["45, 46", "58", "83"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.azteca,
+          attendance: "103 058",
+        },
+      },
+      {
+        id: v1(),
+        date: "10.06.1970",
+        stage: stage.group[1],
+        teams: ["Soviet Union", "El Salvador"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Byshovets"],
+            timeGoals: ["51, 74"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.azteca,
+          attendance: "89 979",
+        },
+      },
+      {
+        id: v1(),
+        date: "11.06.1970",
+        stage: stage.group[1],
+        teams: ["Mexico", "Belgium"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Peña"],
+            timeGoals: ["14(p)"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.azteca,
+          attendance: "108 192",
+        },
+      },
+      {
+        id: v1(),
+        date: "02.06.1970",
+        stage: stage.group[2],
+        teams: ["Uruguay", "Israel"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Maneiro", "Mujica"],
+            timeGoals: ["23", "50"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.cuauhtemoc,
+          attendance: "20 654",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.06.1970",
+        stage: stage.group[2],
+        teams: ["Italy", "Sweden"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Domenghini"],
+            timeGoals: ["10"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.dosal,
+          attendance: "13 433",
+        },
+      },
+      {
+        id: v1(),
+        date: "06.06.1970",
+        stage: stage.group[2],
+        teams: ["Uruguay", "Italy"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.cuauhtemoc,
+          attendance: "29 968",
+        },
+      },
+      {
+        id: v1(),
+        date: "07.06.1970",
+        stage: stage.group[2],
+        teams: ["Sweden", "Israel"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Turesson"],
+            timeGoals: ["53"],
+          },
+          {
+            playersScoredGoal: ["Spiegler"],
+            timeGoals: ["56"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.dosal,
+          attendance: "9 624",
+        },
+      },
+      {
+        id: v1(),
+        date: "10.06.1970",
+        stage: stage.group[2],
+        teams: ["Sweden", "Uruguay"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Grahn"],
+            timeGoals: ["90"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.cuauhtemoc,
+          attendance: "18 163",
+        },
+      },
+      {
+        id: v1(),
+        date: "11.06.1970",
+        stage: stage.group[2],
+        teams: ["Italy", "Israel"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.dosal,
+          attendance: "9 890",
+        },
+      },
+      {
+        id: v1(),
+        date: "02.06.1970",
+        stage: stage.group[3],
+        teams: ["England", "Romania"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Hurst"],
+            timeGoals: ["65"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.jalisco,
+          attendance: "50 560",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.06.1970",
+        stage: stage.group[3],
+        teams: ["Brazil", "Czechoslovakia"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rivellino", "Pelé", "Jairzinho"],
+            timeGoals: ["24", "59", "61, 83"],
+          },
+          {
+            playersScoredGoal: ["Petráš"],
+            timeGoals: ["11"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.jalisco,
+          attendance: "52 897",
+        },
+      },
+      {
+        id: v1(),
+        date: "06.06.1970",
+        stage: stage.group[3],
+        teams: ["Romania", "Czechoslovakia"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Neagu", "Dumitrache"],
+            timeGoals: ["52", "75(p)"],
+          },
+          {
+            playersScoredGoal: ["Petráš"],
+            timeGoals: ["5"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.jalisco,
+          attendance: "56 818",
+        },
+      },
+      {
+        id: v1(),
+        date: "07.06.1970",
+        stage: stage.group[3],
+        teams: ["Brazil", "England"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Jairzinho"],
+            timeGoals: ["59"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.jalisco,
+          attendance: "66 843",
+        },
+      },
+      {
+        id: v1(),
+        date: "10.06.1970",
+        stage: stage.group[3],
+        teams: ["Brazil", "Romania"],
+        score: [[3, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Pelé", "Jairzinho"],
+            timeGoals: ["19, 67", "22"],
+          },
+          {
+            playersScoredGoal: ["Dumitrache", "Dembrovschi"],
+            timeGoals: ["34", "84"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.jalisco,
+          attendance: "50 804",
+        },
+      },
+      {
+        id: v1(),
+        date: "11.06.1970",
+        stage: stage.group[3],
+        teams: ["England", "Czechoslovakia"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Clarke"],
+            timeGoals: ["50(p)"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.jalisco,
+          attendance: "49 292",
+        },
+      },
+      {
+        id: v1(),
+        date: "02.06.1970",
+        stage: stage.group[4],
+        teams: ["Peru", "Bulgaria"],
+        score: [[3, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Gallardo", "Chumpitaz", "Cubillas"],
+            timeGoals: ["50", "55", "73"],
+          },
+          {
+            playersScoredGoal: ["Dermendzhiev", "Bonev"],
+            timeGoals: ["13", "49"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.nouCamp,
+          attendance: "13 765",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.06.1970",
+        stage: stage.group[4],
+        teams: ["Germany", "Morocco"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Seeler", "Müller"],
+            timeGoals: ["56", "80"],
+          },
+          {
+            playersScoredGoal: ["Jarir"],
+            timeGoals: ["21"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.nouCamp,
+          attendance: "12 942",
+        },
+      },
+      {
+        id: v1(),
+        date: "06.06.1970",
+        stage: stage.group[4],
+        teams: ["Peru", "Morocco"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Cubillas", "Challe"],
+            timeGoals: ["65, 75", "67"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.nouCamp,
+          attendance: "13 537",
+        },
+      },
+      {
+        id: v1(),
+        date: "07.06.1970",
+        stage: stage.group[4],
+        teams: ["Germany", "Bulgaria"],
+        score: [[5, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Libuda", "Müller", "Seeler"],
+            timeGoals: ["20", "27, 52(p), 88", "67"],
+          },
+          {
+            playersScoredGoal: ["Nikodimov", "Kolev"],
+            timeGoals: ["12", "89"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.nouCamp,
+          attendance: "17 710",
+        },
+      },
+      {
+        id: v1(),
+        date: "10.06.1970",
+        stage: stage.group[4],
+        teams: ["Germany", "Peru"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Müller"],
+            timeGoals: ["19, 26, 39"],
+          },
+          {
+            playersScoredGoal: ["Cubillas"],
+            timeGoals: ["44"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.nouCamp,
+          attendance: "17 875",
+        },
+      },
+      {
+        id: v1(),
+        date: "11.06.1970",
+        stage: stage.group[4],
+        teams: ["Bulgaria", "Morocco"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Zhechev"],
+            timeGoals: ["40"],
+          },
+          {
+            playersScoredGoal: ["Ghazouani"],
+            timeGoals: ["61"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.nouCamp,
+          attendance: "12 299",
+        },
+      },
+      {
+        id: v1(),
+        date: "14.06.1970",
+        stage: stage[1_4],
+        teams: ["Uruguay", "Soviet Union"],
+        score: [[0, 0], [1, 0], []],
+        goals: [
+          {
+            playersScoredGoal: ["Espárrago"],
+            timeGoals: ["117"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.azteca,
+          attendance: "26 085",
+        },
+      },
+      {
+        id: v1(),
+        date: "14.06.1970",
+        stage: stage[1_4],
+        teams: ["Italy", "Mexico"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Guzmán", "Riva", "Rivera"],
+            timeGoals: ["25(o.g.)", "63, 76", "70"],
+          },
+          {
+            playersScoredGoal: ["González"],
+            timeGoals: ["13"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.dosal,
+          attendance: "26 851",
+        },
+      },
+      {
+        id: v1(),
+        date: "14.06.1970",
+        stage: stage[1_4],
+        teams: ["Brazil", "Peru"],
+        score: [[4, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rivellino", "Tostão", "Jairzinho"],
+            timeGoals: ["11", "15, 52", "75"],
+          },
+          {
+            playersScoredGoal: ["Gallardo", "Cubillas"],
+            timeGoals: ["28", "70"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.jalisco,
+          attendance: "54 233",
+        },
+      },
+      {
+        id: v1(),
+        date: "14.06.1970",
+        stage: stage[1_4],
+        teams: ["Germany", "England"],
+        score: [[2, 2], [1, 0], []],
+        goals: [
+          {
+            playersScoredGoal: ["Beckenbauer", "Seeler", "Müller"],
+            timeGoals: ["68", "82", "108"],
+          },
+          {
+            playersScoredGoal: ["Mullery", "Peters"],
+            timeGoals: ["31", "49"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.nouCamp,
+          attendance: "23 357",
+        },
+      },
+      {
+        id: v1(),
+        date: "17.06.1970",
+        stage: stage[1_2],
+        teams: ["Brazil", "Uruguay"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Clodoaldo", "Jairzinho", "Rivellino"],
+            timeGoals: ["44", "76", "89"],
+          },
+          {
+            playersScoredGoal: ["Cubilla"],
+            timeGoals: ["19"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.jalisco,
+          attendance: "51 261",
+        },
+      },
+      {
+        id: v1(),
+        date: "17.06.1970",
+        stage: stage[1_2],
+        teams: ["Italy", "Germany"],
+        score: [[1, 1], [3, 2], []],
+        goals: [
+          {
+            playersScoredGoal: ["Boninsegna", "Burgnich", "Riva", "Rivera"],
+            timeGoals: ["8", "98", "104", "111"],
+          },
+          {
+            playersScoredGoal: ["Schnellinger", "Müller"],
+            timeGoals: ["90", "95, 110"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.jalisco,
+          attendance: "102 444",
+        },
+      },
+      {
+        id: v1(),
+        date: "20.06.1970",
+        stage: stage.place3,
+        teams: ["Germany", "Uruguay"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Overath"],
+            timeGoals: ["26"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.azteca,
+          attendance: "104 403",
+        },
+      },
+      {
+        id: v1(),
+        date: "21.06.1970",
+        stage: stage.final,
+        teams: ["Brazil", "Italy"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Pelé", "Gérson", "Jairzinho", "Carlos Alberto"],
+            timeGoals: ["18", "65", "71", "86"],
+          },
+          {
+            playersScoredGoal: ["Boninsegna"],
+            timeGoals: ["37"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Mexico.azteca,
+          attendance: "107 412",
+        },
+      },
+    ],
     qualification: [],
   },
   1974: {

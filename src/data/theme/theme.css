@@ -32,4 +32,7 @@
   --first-place: rgb(247, 208, 0);
   --second-place: rgb(192, 192, 192);
   --third-place: rgb(205, 127, 50);
+
+  --no: rgb(175, 108, 108);
+  --no-transparent50: rgba(175, 108, 108, 0.5);
 }

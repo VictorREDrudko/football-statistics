@@ -1,16 +1,17 @@
 import { teamsByConfederation } from "data/nationalTeamsData/nationalTeams"
-import { Confederation } from "data/nationalTeamsData/type-nationalTeams"
+import { Confeder, Confederation } from "data/nationalTeamsData/type-nationalTeams"
 
-export const findTeamsByConfederation = (coutryName: string): Confederation => {
+export const findTeamsByConfederation = (coutryName: string): Confeder => {
   const confederationList: Confederation[] = Object.keys(teamsByConfederation) as Confederation[];
+  const filterConfederationList = confederationList.filter(confeder => confeder !== 'all')
   let nameConfederation: Confederation = 'uefa';
 
-  confederationList.forEach(confeder => {
+  filterConfederationList.forEach(confeder => {
     if(teamsByConfederation[confeder].includes(coutryName)) {
       nameConfederation = confeder
       return
     } 
   })
 
-  return nameConfederation
+  return nameConfederation as Confeder
 }

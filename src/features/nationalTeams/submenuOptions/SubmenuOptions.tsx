@@ -6,20 +6,18 @@ import { NumberTeams } from './numberTeams/NumberTeams'
 import { confederationIcon } from 'data/nationalTeamsData/nationalTeams'
 
 type Props = {
-  sortType: string
   numberTeams: number
   confeder: Confederation
-  changeSortType: (sortType: string) => void
   setConfeder: (confeder: Confederation) => void
 }
 
-export const SubmenuOptions = ({sortType, numberTeams, confeder, changeSortType, setConfeder} : Props) => {
+export const SubmenuOptions = ({numberTeams, confeder, setConfeder} : Props) => {
   const icon = confederationIcon[confeder]
 
   return (
     <div className={s.container}>
       <NumberTeams numberTeams={numberTeams}/>
-      <Select setConfeder={setConfeder} changeSortType={changeSortType} sortType={sortType} />
+      <Select setConfeder={setConfeder} />
       <IconConfederation icon={icon} confeder={confeder}/>
     </div>
   )

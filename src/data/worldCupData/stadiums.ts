@@ -316,6 +316,33 @@ export const stadiums: Stadiums = {
       country: "England",
     }
   },
+  Mexico: {
+    azteca: {
+      title: "Estadio Azteca",
+      city: "Mexico City",
+      country: "Mexico",
+    },
+    jalisco: {
+      title: "Estadio Jalisco",
+      city: "Guadalajara",
+      country: "Mexico",
+    },
+    cuauhtemoc: {
+      title: "Estadio Cuauhtémoc",
+      city: "Puebla City",
+      country: "Mexico",
+    },
+    dosal: {
+      title: "Estadio Luis Dosal",
+      city: "Toluca",
+      country: "Mexico",
+    },
+    nouCamp: {
+      title: "Estadio Nou Camp",
+      city: "León",
+      country: "Mexico",
+    }
+  },
 }
 
 

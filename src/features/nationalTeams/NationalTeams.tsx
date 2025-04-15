@@ -1,22 +1,21 @@
 import s from './NationalTeams.module.css'
 import { NationalTeamsCard } from './nationTeamCard/NationTeamCard'
 import { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { urlWithHyphen, urlWithoutHyphen } from 'common/utils/urlWithHyphen'
 import { Confederation, NationalTeam } from 'data/nationalTeamsData/type-nationalTeams'
 import { confederation, confederationBackground, nationalTeams, teamsByConfederation } from 'data/nationalTeamsData/nationalTeams'
 import { TeamPartiallInfo } from './teamPartiallInfo/TeamPartiallInfo'
-import { getCurrentCountryName } from 'logics/nationalTeamsLogic/getCurrentCountryName'
 import { SubmenuOptions } from './submenuOptions/SubmenuOptions'
 import { sortTeams } from 'logics/nationalTeamsLogic/sortTeams'
 
 export const NationalTeams = () => {
   const [team, setTeam] = useState<string>('')
   const [confeder, setConfeder] = useState<Confederation>('uefa');
-  const [sortType, setSortType] = useState<string>('alphabet')
+  const [searchParams, setSearchParams] = useSearchParams(); // Только чтение параметров
 
+  // Навигация
   const navigate = useNavigate();
-
   const { confederationRoute, teamRoute } = useParams<{ confederationRoute: string, teamRoute: string }>();
 
   useEffect(() => {
@@ -31,28 +30,28 @@ export const NationalTeams = () => {
   }, [confederationRoute, teamRoute]);
 
   const navigateToTeam = (team: string) => {
-    navigate(`/teams/${confederationRoute}/${urlWithHyphen(team)}`)
+    const currentSort = searchParams.get('sort') || 'alphabet';
+    navigate(`/teams/${confederationRoute}/${urlWithHyphen(team)}?sort=${currentSort}`);
   };
 
-  const closeInfoCard = () => {
-    setTeam('');
-    navigate(`/teams/${confederationRoute}`);
-  };
+  // Сортировка! Берём `sortType` из URL или устанавливаем 'alphabet' по умолчанию
+    const sortType = searchParams.get('sort') || 'alphabet'
 
-  // Сортировка
-  // массив объектов (с информацией о команде) определенной конфедерации
+  // массив команд определенной конфедерации
   const confederationTeamsData: NationalTeam[] = teamsByConfederation[confeder].map(teamName => {
     return nationalTeams[teamName]
   })
 
-  // Количество команд
+  // Количество команд в конфедерации
   const numberTeams = confederationTeamsData.length
 
   const sortedTeams = sortTeams([...confederationTeamsData], sortType);
 
-  const changeSortType = (sortType: string) => {
-    setSortType(sortType)
-  }
+  const closeInfoCard = () => {
+    const currentSort = searchParams.get('sort') || 'alphabet';
+    setTeam('');
+    navigate(`/teams/${confederationRoute}?sort=${currentSort}`);
+  };
 
   // Отрисовка команд
   const renderTeamPartiallInfo = sortedTeams.map(el => {
@@ -67,9 +66,7 @@ export const NationalTeams = () => {
     <NationalTeamsCard data={nationalTeams[team]} closeInfoCard={closeInfoCard}/>
     : 
     <>
-      <SubmenuOptions sortType={sortType} 
-                      changeSortType={changeSortType} 
-                      setConfeder={setConfeder} 
+      <SubmenuOptions setConfeder={setConfeder} 
                       numberTeams={numberTeams}
                       confeder={confeder}
       />

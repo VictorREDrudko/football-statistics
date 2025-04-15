@@ -10,9 +10,10 @@ type Props = {
 
 export const Flag = ({countryName, year, style}: Props) => {
   const srcFlag = countryName !== '' ? choiseCountryFlag(nationalTeams[countryName].flags, year) : ''
-  const noCoutryName = countryName !== '' ? true : false
+
+  const classNameIsReal = nationalTeams[countryName].isCountryReal ? `${s.image}` : `${s.imageNoReal}`
 
   return (
-    noCoutryName && <img src={srcFlag} alt={`flag ${countryName}`} className={s.image} style={style}/>
+    countryName && <img src={srcFlag} alt={`flag ${countryName}`} className={classNameIsReal} style={style}/>
   )
 }

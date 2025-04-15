@@ -7,9 +7,16 @@ import { NationalTeams } from 'features/nationalTeams/NationalTeams';
 import { NationaleTournaments } from 'features/nationalTournaments/NationalTournaments';
 import { WorldCup } from 'features/worldCup/WorldCup';
 import { FinalStage } from 'features/worldCup/finalStage/FinalStage';
+import { useEffect } from 'react';
+import { ratingCalculation } from 'logics/ratingCalculation/ratingCalculation';
 
 
 function App() {
+  // Добавление рейтинга
+  useEffect(() => {
+    ratingCalculation();
+  }, [])
+
 	return (
     <>
       <Header/>

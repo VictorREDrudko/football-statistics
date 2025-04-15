@@ -176,9 +176,16 @@ import iconWales from "./../../assets/icon/national/Wales.png";
 import flagWales from "./../../assets/icon/flag/Wales.png";
 import flagWales2 from "./../../assets/icon/flag/Wales2.png";
 import coatOfArmsWales from "./../../assets/icon/coat-of-arms/Wales.png";
+import iconYugoslavia from "./../../assets/icon/national/Yugoslavia.png";
 import flagYugoslavia from "./../../assets/icon/flag/Yugoslavia.png";
 import flagYugoslavia1 from "./../../assets/icon/flag/Yugoslavia1.png";
-import flagSovietUnion from "./../../assets/icon/flag/SovietUnion.png";
+import coatOfArmsYugoslavia from "./../../assets/icon/coat-of-arms/Yugoslavia.png";
+import iconSovietUnion from "./../../assets/icon/national/Soviet-Union.png";
+import flagSovietUnion from "./../../assets/icon/flag/Soviet-Union.png";
+import coatOfArmsSovietUnion from "./../../assets/icon/coat-of-arms/Soviet-Union.png";
+import iconCzechoslovakia from "./../../assets/icon/national/Czechoslovakia.png";
+import flagCzechoslovakia from "./../../assets/icon/flag/Czechoslovakia.png";
+import coatOfArmsCzechoslovakia from "./../../assets/icon/coat-of-arms/Czechoslovakia.png";
 
 import iconAlgeria from "./../../assets/icon/national/Algeria.png";
 import flagAlgeria from "./../../assets/icon/flag/Algeria.png";
@@ -701,6 +708,7 @@ import backgroundAfc from "./../../assets/backgroundConfeder/afc.png";
 import backgroundConcacaf from "./../../assets/backgroundConfeder/concacaf.png";
 import backgroundConmebol from "./../../assets/backgroundConfeder/conmebol.png";
 import backgroundOfc from "./../../assets/backgroundConfeder/ofc.png";
+import backgroundFifa from "./../../assets/backgroundConfeder/fifa.png";
 
 import iconUefa from "./../../assets/icon/iconConfeder/uefa.png";
 import iconCaf from "./../../assets/icon/iconConfeder/caf.png";
@@ -708,6 +716,8 @@ import iconAfc from "./../../assets/icon/iconConfeder/afc.png";
 import iconConcacaf from "./../../assets/icon/iconConfeder/concacaf.png";
 import iconConmebol from "./../../assets/icon/iconConfeder/conmebol.png";
 import iconOfc from "./../../assets/icon/iconConfeder/ofc.png";
+import iconFifa from "./../../assets/icon/iconConfeder/fifa.png";
+
 
 export const confederationBackground: ConfederationImage = {
   uefa: backgroundUefa,
@@ -716,6 +726,7 @@ export const confederationBackground: ConfederationImage = {
   afc: backgroundAfc,
   conmebol: backgroundConmebol,
   ofc: backgroundOfc,
+  all: backgroundFifa,
 };
 
 type ConfederationImage = {
@@ -729,6 +740,7 @@ export const confederationIcon: ConfederationImage = {
   afc: iconAfc,
   conmebol: iconConmebol,
   ofc: iconOfc,
+  all: iconFifa,
 };
 
 export const teamsByConfederation: TeamsByConfederation = {
@@ -788,6 +800,9 @@ export const teamsByConfederation: TeamsByConfederation = {
     "Turkey",
     "Ukraine",
     "Wales",
+    "Soviet Union",
+    "Yugoslavia",
+    "Czechoslovakia"
   ],
   caf: [
     "Algeria",
@@ -966,7 +981,17 @@ export const teamsByConfederation: TeamsByConfederation = {
     "Uruguay",
     "Venezuela",
   ],
+  all: [],
 };
+
+teamsByConfederation.all = [
+  ...teamsByConfederation.uefa,
+  ...teamsByConfederation.caf,
+  ...teamsByConfederation.afc,
+  ...teamsByConfederation.concacaf,
+  ...teamsByConfederation.ofc,
+  ...teamsByConfederation.conmebol,
+];
 
 export const nationalTeams: NationalTeams = {
   Germany: {
@@ -988,7 +1013,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1904,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   England: {
     id: v1(),
@@ -1001,7 +1030,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1905,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Italy: {
     id: v1(),
@@ -1017,7 +1050,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1905,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Spain: {
     id: v1(),
@@ -1038,7 +1075,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1914,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   France: {
     id: v1(),
@@ -1051,7 +1092,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1919,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Albania: {
     id: v1(),
@@ -1064,7 +1109,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1932,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Andorra: {
     id: v1(),
@@ -1077,7 +1126,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1996,
       confederationAffiliation: 1996,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Armenia: {
     id: v1(),
@@ -1090,7 +1143,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1992,
       confederationAffiliation: 1992,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Austria: {
     id: v1(),
@@ -1103,7 +1160,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1905,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Azerbaijan: {
     id: v1(),
@@ -1116,7 +1177,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1994,
       confederationAffiliation: 1994,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Belarus: {
     id: v1(),
@@ -1129,7 +1194,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1992,
       confederationAffiliation: 1993,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Belgium: {
     id: v1(),
@@ -1142,7 +1211,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1904,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Bosnia and Herzegovina": {
     id: v1(),
@@ -1155,7 +1228,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1996,
       confederationAffiliation: 1998,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Bulgaria: {
     id: v1(),
@@ -1168,7 +1245,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1924,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Croatia: {
     id: v1(),
@@ -1181,7 +1262,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1941,
       confederationAffiliation: 1993,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Cyprus: {
     id: v1(),
@@ -1194,7 +1279,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1948,
       confederationAffiliation: 1962,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Czech Republic": {
     id: v1(),
@@ -1204,10 +1293,14 @@ export const nationalTeams: NationalTeams = {
     associationIcon: iconCzechRepublic,
     associationDate: {
       founded: 1901,
-      fifaAffiliation: 1907,
-      confederationAffiliation: 1954,
+      fifaAffiliation: 1994,
+      confederationAffiliation: 1993,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Denmark: {
     id: v1(),
@@ -1220,7 +1313,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1904,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Estonia: {
     id: v1(),
@@ -1233,7 +1330,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1923,
       confederationAffiliation: 1992,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Faroe Islands": {
     id: v1(),
@@ -1246,7 +1347,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1988,
       confederationAffiliation: 1990,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Finland: {
     id: v1(),
@@ -1259,7 +1364,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1908,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Greece: {
     id: v1(),
@@ -1272,7 +1381,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1927,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Gibraltar: {
     id: v1(),
@@ -1285,7 +1398,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 2016,
       confederationAffiliation: 2013,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Georgia: {
     id: v1(),
@@ -1298,7 +1415,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1992,
       confederationAffiliation: 1992,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Hungary: {
     id: v1(),
@@ -1316,7 +1437,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1906,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Iceland: {
     id: v1(),
@@ -1329,7 +1454,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1947,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Israel: {
     id: v1(),
@@ -1342,7 +1471,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1929,
       confederationAffiliation: 1994,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Kazakhstan: {
     id: v1(),
@@ -1355,7 +1488,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1994,
       confederationAffiliation: 2002,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Kosovo: {
     id: v1(),
@@ -1368,7 +1505,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 2016,
       confederationAffiliation: 2016,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Latvia: {
     id: v1(),
@@ -1381,7 +1522,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1922,
       confederationAffiliation: 1992,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Liechtenstein: {
     id: v1(),
@@ -1394,7 +1539,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1974,
       confederationAffiliation: 1974,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Lithuania: {
     id: v1(),
@@ -1407,7 +1556,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1923,
       confederationAffiliation: 1992,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Luxembourg: {
     id: v1(),
@@ -1420,7 +1573,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1910,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Malta: {
     id: v1(),
@@ -1433,7 +1590,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1959,
       confederationAffiliation: 1960,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Moldova: {
     id: v1(),
@@ -1446,7 +1607,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1994,
       confederationAffiliation: 1993,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Montenegro: {
     id: v1(),
@@ -1459,7 +1624,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 2007,
       confederationAffiliation: 2007,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Netherlands: {
     id: v1(),
@@ -1472,7 +1641,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1904,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "North Macedonia": {
     id: v1(),
@@ -1485,7 +1658,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1994,
       confederationAffiliation: 1994,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "North. Ireland": {
     id: v1(),
@@ -1498,7 +1675,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1911,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Norway: {
     id: v1(),
@@ -1511,7 +1692,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1908,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Poland: {
     id: v1(),
@@ -1524,7 +1709,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1923,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Portugal: {
     id: v1(),
@@ -1537,7 +1726,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1923,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Republic of Ireland": {
     id: v1(),
@@ -1550,7 +1743,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1923,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Romania: {
     id: v1(),
@@ -1563,7 +1760,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1923,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Russia: {
     id: v1(),
@@ -1576,7 +1777,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1912,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "San Marino": {
     id: v1(),
@@ -1589,7 +1794,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1988,
       confederationAffiliation: 1988,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Scotland: {
     id: v1(),
@@ -1602,7 +1811,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1910,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Serbia: {
     id: v1(),
@@ -1615,7 +1828,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1921,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Slovakia: {
     id: v1(),
@@ -1628,7 +1845,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1994,
       confederationAffiliation: 1993,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Slovenia: {
     id: v1(),
@@ -1641,7 +1862,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1992,
       confederationAffiliation: 1992,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Sweden: {
     id: v1(),
@@ -1654,7 +1879,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1904,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Switzerland: {
     id: v1(),
@@ -1667,7 +1896,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1904,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Turkey: {
     id: v1(),
@@ -1680,7 +1913,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1923,
       confederationAffiliation: 1962,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Ukraine: {
     id: v1(),
@@ -1693,7 +1930,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1992,
       confederationAffiliation: 1992,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Wales: {
     id: v1(),
@@ -1709,49 +1950,65 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1910,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Yugoslavia: {
     id: v1(),
     names: [{ nameCountry: "Yugoslavia", period: "1918-1992" }],
     flags: [
-      { flagCountry: flagYugoslavia, period: "1918-1944, 1992-2006" },
+      { flagCountry: flagYugoslavia, period: "1918-1944, 1992-2006, 2006-p.t." },
       { flagCountry: flagYugoslavia1, period: "1945-1992" },
     ],
-    coatOfArms: "",
-    associationIcon: "",
+    coatOfArms: coatOfArmsYugoslavia,
+    associationIcon: iconYugoslavia,
     associationDate: {
-      founded: 0,
-      fifaAffiliation: 0,
-      confederationAffiliation: 0,
+      founded: 1919,
+      fifaAffiliation: 1923,
+      confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: false,
   },
   Czechoslovakia: {
     id: v1(),
-    names: [{ nameCountry: "Czechoslovakia", period: "0000-p.t." }],
-    flags: [{ flagCountry: flagCzechRepublic, period: "0000-p.t." }],
-    coatOfArms: "",
-    associationIcon: "",
+    names: [{ nameCountry: "Czechoslovakia", period: "0000-1992" }],
+    flags: [{ flagCountry: flagCzechoslovakia, period: "0000-1992, 2006-p.t." }],
+    coatOfArms: coatOfArmsCzechoslovakia,
+    associationIcon: iconCzechoslovakia,
     associationDate: {
-      founded: 0,
-      fifaAffiliation: 0,
-      confederationAffiliation: 0,
+      founded: 1901,
+      fifaAffiliation: 1907,
+      confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: false,
   },
   "Soviet Union": {
     id: v1(),
-    names: [{ nameCountry: "Soviet Union", period: "0000-p.t." }],
-    flags: [{ flagCountry: flagSovietUnion, period: "0000-p.t." }],
-    coatOfArms: "",
-    associationIcon: "",
+    names: [{ nameCountry: "Soviet Union", period: "0000-1991" }],
+    flags: [{ flagCountry: flagSovietUnion, period: "0000-1991, 2006-p.t." }],
+    coatOfArms: coatOfArmsSovietUnion,
+    associationIcon: iconSovietUnion,
     associationDate: {
       founded: 0,
       fifaAffiliation: 0,
       confederationAffiliation: 0,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: false,
   },
   Algeria: {
     id: v1(),
@@ -1764,7 +2021,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1963,
       confederationAffiliation: 1964,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Egypt: {
     id: v1(),
@@ -1782,7 +2043,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1923,
       confederationAffiliation: 1957,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Libya: {
     id: v1(),
@@ -1795,7 +2060,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1965,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Morocco: {
     id: v1(),
@@ -1808,7 +2077,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1960,
       confederationAffiliation: 1959,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Tunisia: {
     id: v1(),
@@ -1821,7 +2094,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1960,
       confederationAffiliation: 1960,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Benin: {
     id: v1(),
@@ -1834,7 +2111,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1962,
       confederationAffiliation: 1962,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Burkina Faso": {
     id: v1(),
@@ -1847,7 +2128,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1964,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Cape Verde": {
     id: v1(),
@@ -1860,7 +2145,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1986,
       confederationAffiliation: 2000,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Gambia: {
     id: v1(),
@@ -1873,7 +2162,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1968,
       confederationAffiliation: 1966,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Ghana: {
     id: v1(),
@@ -1886,7 +2179,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1958,
       confederationAffiliation: 1958,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Guinea: {
     id: v1(),
@@ -1899,7 +2196,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1962,
       confederationAffiliation: 1963,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Guinea-Bissau": {
     id: v1(),
@@ -1912,7 +2213,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1986,
       confederationAffiliation: 1986,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Ivory Coast": {
     id: v1(),
@@ -1925,7 +2230,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1960,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Liberia: {
     id: v1(),
@@ -1938,7 +2247,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1962,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Mali: {
     id: v1(),
@@ -1951,7 +2264,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1963,
       confederationAffiliation: 1963,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Mauritania: {
     id: v1(),
@@ -1964,7 +2281,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1970,
       confederationAffiliation: 1968,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Niger: {
     id: v1(),
@@ -1977,7 +2298,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1967,
       confederationAffiliation: 1967,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Nigeria: {
     id: v1(),
@@ -1990,7 +2315,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1960,
       confederationAffiliation: 1960,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Senegal: {
     id: v1(),
@@ -2003,7 +2332,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1964,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Sierra Leone": {
     id: v1(),
@@ -2016,7 +2349,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1960,
       confederationAffiliation: 1960,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Togo: {
     id: v1(),
@@ -2029,7 +2366,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1962,
       confederationAffiliation: 1964,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Cameroon: {
     id: v1(),
@@ -2042,7 +2383,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1962,
       confederationAffiliation: 1963,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Central African Republic": {
     id: v1(),
@@ -2055,7 +2400,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1965,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Chad: {
     id: v1(),
@@ -2068,7 +2417,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1964,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Congo: {
     id: v1(),
@@ -2081,7 +2434,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1966,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "DR Congo": {
     id: v1(),
@@ -2094,7 +2451,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1964,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Equatorial Guinea": {
     id: v1(),
@@ -2107,7 +2468,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1986,
       confederationAffiliation: 1986,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Gabon: {
     id: v1(),
@@ -2120,7 +2485,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1966,
       confederationAffiliation: 1967,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "São Tomé and Príncipe": {
     id: v1(),
@@ -2133,7 +2502,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1986,
       confederationAffiliation: 1986,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Burundi: {
     id: v1(),
@@ -2146,7 +2519,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1972,
       confederationAffiliation: 1972,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Djibouti: {
     id: v1(),
@@ -2159,7 +2536,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1994,
       confederationAffiliation: 1994,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Eritrea: {
     id: v1(),
@@ -2172,7 +2553,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1998,
       confederationAffiliation: 1998,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Ethiopia: {
     id: v1(),
@@ -2185,7 +2570,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1952,
       confederationAffiliation: 1957,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Kenya: {
     id: v1(),
@@ -2198,7 +2587,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1960,
       confederationAffiliation: 1968,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Rwanda: {
     id: v1(),
@@ -2211,7 +2604,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1978,
       confederationAffiliation: 1978,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Somalia: {
     id: v1(),
@@ -2224,7 +2621,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1962,
       confederationAffiliation: 1968,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "South Sudan": {
     id: v1(),
@@ -2237,7 +2638,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 2012,
       confederationAffiliation: 2012,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Sudan: {
     id: v1(),
@@ -2250,7 +2655,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1948,
       confederationAffiliation: 1957,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Tanzania: {
     id: v1(),
@@ -2263,7 +2672,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1964,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Uganda: {
     id: v1(),
@@ -2276,7 +2689,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1960,
       confederationAffiliation: 1960,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Zanzibar: {
     id: v1(),
@@ -2289,7 +2706,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: "-",
       confederationAffiliation: 1980,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Angola: {
     id: v1(),
@@ -2302,7 +2723,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1980,
       confederationAffiliation: 1980,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Botswana: {
     id: v1(),
@@ -2315,7 +2740,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1978,
       confederationAffiliation: 1976,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Comoros: {
     id: v1(),
@@ -2328,7 +2757,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 2005,
       confederationAffiliation: 2005,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Eswatini: {
     id: v1(),
@@ -2341,7 +2774,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1978,
       confederationAffiliation: 1978,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Lesotho: {
     id: v1(),
@@ -2354,7 +2791,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1964,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Madagascar: {
     id: v1(),
@@ -2367,7 +2808,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1963,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Malawi: {
     id: v1(),
@@ -2380,7 +2825,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1968,
       confederationAffiliation: 1968,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Mauritius: {
     id: v1(),
@@ -2393,7 +2842,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1963,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Mozambique: {
     id: v1(),
@@ -2406,7 +2859,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1980,
       confederationAffiliation: 1980,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Namibia: {
     id: v1(),
@@ -2419,7 +2876,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1992,
       confederationAffiliation: 1992,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Seychelles: {
     id: v1(),
@@ -2432,7 +2893,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1986,
       confederationAffiliation: 1986,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "South Africa": {
     id: v1(),
@@ -2445,7 +2910,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1992,
       confederationAffiliation: 1992,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Zambia: {
     id: v1(),
@@ -2458,7 +2927,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1964,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Zimbabwe: {
     id: v1(),
@@ -2471,7 +2944,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1965,
       confederationAffiliation: 1980,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Reunion: {
     id: v1(),
@@ -2484,7 +2961,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: "-",
       confederationAffiliation: 1992,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Australia: {
     id: v1(),
@@ -2497,7 +2978,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1963,
       confederationAffiliation: 2006,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Brunei: {
     id: v1(),
@@ -2510,7 +2995,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1972,
       confederationAffiliation: 1969,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Cambodia: {
     id: v1(),
@@ -2523,7 +3012,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1954,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Timor-Leste": {
     id: v1(),
@@ -2536,7 +3029,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 2005,
       confederationAffiliation: 2002,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Indonesia: {
     id: v1(),
@@ -2555,7 +3052,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1952,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Laos: {
     id: v1(),
@@ -2568,7 +3069,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1952,
       confederationAffiliation: 1968,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Malaysia: {
     id: v1(),
@@ -2581,7 +3086,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1954,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Myanmar: {
     id: v1(),
@@ -2594,7 +3103,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1948,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Philippines: {
     id: v1(),
@@ -2607,7 +3120,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1930,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Singapore: {
     id: v1(),
@@ -2620,7 +3137,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1952,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Thailand: {
     id: v1(),
@@ -2633,7 +3154,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1925,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Vietnam: {
     id: v1(),
@@ -2646,7 +3171,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1952,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Afghanistan: {
     id: v1(),
@@ -2659,7 +3188,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1948,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Iran: {
     id: v1(),
@@ -2672,7 +3205,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1948,
       confederationAffiliation: 1958,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Kyrgyz Republic": {
     id: v1(),
@@ -2685,7 +3222,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1994,
       confederationAffiliation: 1993,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Tajikistan: {
     id: v1(),
@@ -2698,7 +3239,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1994,
       confederationAffiliation: 1993,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Turkmenistan: {
     id: v1(),
@@ -2711,7 +3256,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1994,
       confederationAffiliation: 1993,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Uzbekistan: {
     id: v1(),
@@ -2724,7 +3273,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1994,
       confederationAffiliation: 1993,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   China: {
     id: v1(),
@@ -2737,7 +3290,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1931,
       confederationAffiliation: 1974,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Taiwan: {
     id: v1(),
@@ -2750,7 +3307,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1954,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "DPR Korea": {
     id: v1(),
@@ -2763,7 +3324,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1958,
       confederationAffiliation: 1974,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Guam: {
     id: v1(),
@@ -2776,7 +3341,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1996,
       confederationAffiliation: 1991,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Hong Kong": {
     id: v1(),
@@ -2789,7 +3358,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1954,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Japan: {
     id: v1(),
@@ -2802,7 +3375,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1921,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Korea Republic": {
     id: v1(),
@@ -2815,7 +3392,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1948,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Macau: {
     id: v1(),
@@ -2828,7 +3409,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1978,
       confederationAffiliation: 1978,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Mongolia: {
     id: v1(),
@@ -2841,7 +3426,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1998,
       confederationAffiliation: 1993,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Northern Mariana Islands": {
     id: v1(),
@@ -2854,7 +3443,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: "-",
       confederationAffiliation: 2020,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Bangladesh: {
     id: v1(),
@@ -2867,7 +3460,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1976,
       confederationAffiliation: 1974,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Bhutan: {
     id: v1(),
@@ -2880,7 +3477,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 2000,
       confederationAffiliation: 1993,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   India: {
     id: v1(),
@@ -2893,7 +3494,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1948,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Maldives: {
     id: v1(),
@@ -2906,7 +3511,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1986,
       confederationAffiliation: 1984,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Nepal: {
     id: v1(),
@@ -2919,7 +3528,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1972,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Pakistan: {
     id: v1(),
@@ -2932,7 +3545,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1948,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Sri Lanka": {
     id: v1(),
@@ -2945,7 +3562,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1952,
       confederationAffiliation: 1954,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Bahrain: {
     id: v1(),
@@ -2958,7 +3579,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1968,
       confederationAffiliation: 1969,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Iraq: {
     id: v1(),
@@ -2971,7 +3596,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1950,
       confederationAffiliation: 1970,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Jordan: {
     id: v1(),
@@ -2984,7 +3613,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1956,
       confederationAffiliation: 1970,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Kuwait: {
     id: v1(),
@@ -2997,7 +3630,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1964,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Lebanon: {
     id: v1(),
@@ -3010,7 +3647,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1936,
       confederationAffiliation: 1964,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Oman: {
     id: v1(),
@@ -3023,7 +3664,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1980,
       confederationAffiliation: 1980,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Palestine: {
     id: v1(),
@@ -3036,7 +3681,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1998,
       confederationAffiliation: 1998,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Qatar: {
     id: v1(),
@@ -3049,7 +3698,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1972,
       confederationAffiliation: 1974,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Saudi Arabia": {
     id: v1(),
@@ -3062,7 +3715,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1956,
       confederationAffiliation: 1972,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Syria: {
     id: v1(),
@@ -3075,7 +3732,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1937,
       confederationAffiliation: 1970,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "United Arab Emirates": {
     id: v1(),
@@ -3088,7 +3749,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1974,
       confederationAffiliation: 1974,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Yemen: {
     id: v1(),
@@ -3101,7 +3766,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1980,
       confederationAffiliation: 1980,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Canada: {
     id: v1(),
@@ -3114,7 +3783,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1913,
       confederationAffiliation: 1961,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Mexico: {
     id: v1(),
@@ -3127,7 +3800,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1929,
       confederationAffiliation: 1961,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "United States": {
     id: v1(),
@@ -3140,7 +3817,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1914,
       confederationAffiliation: 1961,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Belize: {
     id: v1(),
@@ -3153,7 +3834,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1986,
       confederationAffiliation: 1986,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Costa Rica": {
     id: v1(),
@@ -3166,7 +3851,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1927,
       confederationAffiliation: 1961,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "El Salvador": {
     id: v1(),
@@ -3179,7 +3868,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1938,
       confederationAffiliation: 1961,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Guatemala: {
     id: v1(),
@@ -3192,7 +3885,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1946,
       confederationAffiliation: 1961,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Honduras: {
     id: v1(),
@@ -3205,7 +3902,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1946,
       confederationAffiliation: 1961,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Nicaragua: {
     id: v1(),
@@ -3218,7 +3919,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1950,
       confederationAffiliation: 1961,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Panama: {
     id: v1(),
@@ -3231,7 +3936,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1938,
       confederationAffiliation: 1961,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Anguilla: {
     id: v1(),
@@ -3244,7 +3953,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1996,
       confederationAffiliation: 1996,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Antigua and Barbuda": {
     id: v1(),
@@ -3257,7 +3970,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1972,
       confederationAffiliation: 1961,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Aruba: {
     id: v1(),
@@ -3270,7 +3987,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1988,
       confederationAffiliation: 1986,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Bahamas: {
     id: v1(),
@@ -3283,7 +4004,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1968,
       confederationAffiliation: 1961,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Barbados: {
     id: v1(),
@@ -3296,7 +4021,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1968,
       confederationAffiliation: 1967,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Bermuda: {
     id: v1(),
@@ -3309,7 +4038,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1962,
       confederationAffiliation: 1967,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Bonaire: {
     id: v1(),
@@ -3322,7 +4055,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: "-",
       confederationAffiliation: 2014,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "British Virgin Islands": {
     id: v1(),
@@ -3335,7 +4072,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1996,
       confederationAffiliation: 1996,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Cayman Islands": {
     id: v1(),
@@ -3348,7 +4089,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1992,
       confederationAffiliation: 1990,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Cuba: {
     id: v1(),
@@ -3361,7 +4106,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1929,
       confederationAffiliation: 1961,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Curaçao: {
     id: v1(),
@@ -3374,7 +4123,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1996,
       confederationAffiliation: 1996,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Dominica: {
     id: v1(),
@@ -3387,7 +4140,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1994,
       confederationAffiliation: 1994,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Dominican Republic": {
     id: v1(),
@@ -3400,7 +4157,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1958,
       confederationAffiliation: 1964,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "French Guiana": {
     id: v1(),
@@ -3413,7 +4174,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: "-",
       confederationAffiliation: 2013,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Grenada: {
     id: v1(),
@@ -3426,7 +4191,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1978,
       confederationAffiliation: 1978,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Guadeloupe: {
     id: v1(),
@@ -3439,7 +4208,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: "-",
       confederationAffiliation: 2013,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Guyana: {
     id: v1(),
@@ -3452,7 +4225,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1970,
       confederationAffiliation: 1969,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Haiti: {
     id: v1(),
@@ -3465,7 +4242,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1934,
       confederationAffiliation: 1961,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Jamaica: {
     id: v1(),
@@ -3478,7 +4259,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1962,
       confederationAffiliation: 1963,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Martinique: {
     id: v1(),
@@ -3491,7 +4276,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: "-",
       confederationAffiliation: 2013,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Montserrat: {
     id: v1(),
@@ -3504,7 +4293,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1996,
       confederationAffiliation: 1996,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Puerto Rico": {
     id: v1(),
@@ -3517,7 +4310,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1960,
       confederationAffiliation: 1964,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Saint Kitts and Nevis": {
     id: v1(),
@@ -3530,7 +4327,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1992,
       confederationAffiliation: 1992,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Saint Lucia": {
     id: v1(),
@@ -3543,7 +4344,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1988,
       confederationAffiliation: 1986,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Saint Martin": {
     id: v1(),
@@ -3556,7 +4361,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: "-",
       confederationAffiliation: 2013,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Saint Vincent and the Grenadines": {
     id: v1(),
@@ -3573,7 +4382,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1988,
       confederationAffiliation: 1986,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Sint Maarten": {
     id: v1(),
@@ -3586,7 +4399,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: "-",
       confederationAffiliation: 2013,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Suriname: {
     id: v1(),
@@ -3599,7 +4416,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1929,
       confederationAffiliation: 1961,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Trinidad and Tobago": {
     id: v1(),
@@ -3612,7 +4433,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1964,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Turks and Caicos Islands": {
     id: v1(),
@@ -3625,7 +4450,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1998,
       confederationAffiliation: 1996,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "U.S. Virgin Islands": {
     id: v1(),
@@ -3638,7 +4467,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1998,
       confederationAffiliation: 1987,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "American Samoa": {
     id: v1(),
@@ -3651,7 +4484,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1998,
       confederationAffiliation: 1998,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Cook Islands": {
     id: v1(),
@@ -3664,7 +4501,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1994,
       confederationAffiliation: 1994,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Fiji: {
     id: v1(),
@@ -3678,7 +4519,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1964,
       confederationAffiliation: 1966,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Kiribati: {
     id: v1(),
@@ -3691,7 +4536,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: "-",
       confederationAffiliation: 2007,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "New Caledonia": {
     id: v1(),
@@ -3704,7 +4553,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 2004,
       confederationAffiliation: 1999,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "New Zealand": {
     id: v1(),
@@ -3717,7 +4570,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1948,
       confederationAffiliation: 1966,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Papua New Guinea": {
     id: v1(),
@@ -3730,7 +4587,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1966,
       confederationAffiliation: 1966,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Samoa: {
     id: v1(),
@@ -3743,7 +4604,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1986,
       confederationAffiliation: 1986,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   "Solomon Islands": {
     id: v1(),
@@ -3756,7 +4621,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1988,
       confederationAffiliation: 1988,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Tahiti: {
     id: v1(),
@@ -3769,7 +4638,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1990,
       confederationAffiliation: 1990,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Tonga: {
     id: v1(),
@@ -3782,7 +4655,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1994,
       confederationAffiliation: 1994,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Tuvalu: {
     id: v1(),
@@ -3795,7 +4672,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: "-",
       confederationAffiliation: 2006,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Vanuatu: {
     id: v1(),
@@ -3808,7 +4689,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1988,
       confederationAffiliation: 1988,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Argentina: {
     id: v1(),
@@ -3821,7 +4706,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1912,
       confederationAffiliation: 1916,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Bolivia: {
     id: v1(),
@@ -3834,7 +4723,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1926,
       confederationAffiliation: 1926,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Brazil: {
     id: v1(),
@@ -3847,7 +4740,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1923,
       confederationAffiliation: 1916,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Chile: {
     id: v1(),
@@ -3860,7 +4757,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1913,
       confederationAffiliation: 1916,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Colombia: {
     id: v1(),
@@ -3873,7 +4774,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1936,
       confederationAffiliation: 1936,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Ecuador: {
     id: v1(),
@@ -3886,7 +4791,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1926,
       confederationAffiliation: 1927,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Paraguay: {
     id: v1(),
@@ -3899,7 +4808,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1925,
       confederationAffiliation: 1921,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Peru: {
     id: v1(),
@@ -3912,7 +4825,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1924,
       confederationAffiliation: 1925,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Uruguay: {
     id: v1(),
@@ -3925,7 +4842,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1923,
       confederationAffiliation: 1916,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
   Venezuela: {
     id: v1(),
@@ -3938,7 +4859,11 @@ export const nationalTeams: NationalTeams = {
       fifaAffiliation: 1952,
       confederationAffiliation: 1953,
     },
-    rating: 0,
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: true,
   },
 };
 
