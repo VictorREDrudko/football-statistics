@@ -390,8 +390,36 @@ export const stadiums: Stadiums = {
       country: "Germany",
     }
   },
+  Argentina: {
+    riverPlate: {
+      title: "River Plate Stadium",
+      city: "Buenos Aires",
+      country: "Argentina",
+    },
+    amalfitani: {
+      title: "José Amalfitani Stadium",
+      city: "Buenos Aires",
+      country: "Argentina",
+    },
+    olympic: {
+      title: "Olympic Stadium",
+      city: "Córdoba",
+      country: "Argentina",
+    },
+    worldCup: {
+      title: "World Cup Stadium",
+      city: "Aires Province",
+      country: "Argentina",
+    },
+    rosario: {
+      title: "Rosario Central Stadium",
+      city: "Rosario",
+      country: "Argentina",
+    },
+    mendoza: {
+      title: "Mendoza City Stadium",
+      city: "Mendoza",
+      country: "Argentina",
+    },
+  }
 }
-
-
-
-

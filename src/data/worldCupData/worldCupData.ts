@@ -39,6 +39,9 @@ import backgroundFWC1970_2 from "./../../assets/backgroundWC/1970-2.png";
 import backgroundFWC1974_1 from "./../../assets/backgroundWC/1974-1.png";
 import backgroundFWC1974_2 from "./../../assets/backgroundWC/1974-2.png";
 import backgroundFWC1974_3 from "./../../assets/backgroundWC/1974-3.png";
+import backgroundFWC1978_1 from "./../../assets/backgroundWC/1978-1.png";
+import backgroundFWC1978_2 from "./../../assets/backgroundWC/1978-2.png";
+import backgroundFWC1978_3 from "./../../assets/backgroundWC/1978-3.png";
 
 import { stadiums } from "./stadiums";
 import { v1 } from "uuid";
@@ -5853,9 +5856,808 @@ export const worldCupData: WorldCupData = {
     title: "1978 FIFA World Cup",
     date: "1-25 June",
     icon: iconWorldCup1978,
-    background: [],
+    background: [backgroundFWC1978_2, backgroundFWC1978_1, backgroundFWC1978_3],
     hostCountry: ["Argentina"],
-    finalStage: [],
+    finalStage: [
+      {
+        id: v1(),
+        date: "02.06.1974",
+        stage: stage.group[1],
+        teams: ["Italy", "France"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rossi", "Zaccarelli"],
+            timeGoals: ["29", "54"],
+          },
+          {
+            playersScoredGoal: ["Lacombe"],
+            timeGoals: ["1"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.worldCup,
+          attendance: "38 100",
+        },
+      },
+      {
+        id: v1(),
+        date: "02.06.1974",
+        stage: stage.group[1],
+        teams: ["Argentina", "Hungary"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Luque", "Bertoni"],
+            timeGoals: ["14", "83"],
+          },
+          {
+            playersScoredGoal: ["Csapó"],
+            timeGoals: ["9"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.riverPlate,
+          attendance: "71 615",
+        },
+      },
+      {
+        id: v1(),
+        date: "06.06.1974",
+        stage: stage.group[1],
+        teams: ["Italy", "Hungary"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rossi", "Bettega", "Benetti"],
+            timeGoals: ["34", "35", "61"],
+          },
+          {
+            playersScoredGoal: ["A.Tóth"],
+            timeGoals: ["81(p)"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.worldCup,
+          attendance: "26 533",
+        },
+      },
+      {
+        id: v1(),
+        date: "06.06.1974",
+        stage: stage.group[1],
+        teams: ["Argentina", "France"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Passarella", "Luque"],
+            timeGoals: ["45(p)", "73"],
+          },
+          {
+            playersScoredGoal: ["Platini"],
+            timeGoals: ["60"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.riverPlate,
+          attendance: "71 666",
+        },
+      },
+      {
+        id: v1(),
+        date: "10.06.1974",
+        stage: stage.group[1],
+        teams: ["France", "Hungary"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Lopez", "Berdoll", "Rocheteau"],
+            timeGoals: ["23", "38", "42"],
+          },
+          {
+            playersScoredGoal: ["Zombori"],
+            timeGoals: ["41"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.worldCup,
+          attendance: "23 127",
+        },
+      },
+      {
+        id: v1(),
+        date: "10.06.1974",
+        stage: stage.group[1],
+        teams: ["Italy", "Argentina"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Bettega"],
+            timeGoals: ["67"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.riverPlate,
+          attendance: "71 712",
+        },
+      },
+      {
+        id: v1(),
+        date: "01.06.1974",
+        stage: stage.group[2],
+        teams: ["Germany", "Poland"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.riverPlate,
+          attendance: "67 579",
+        },
+      },
+      {
+        id: v1(),
+        date: "02.06.1974",
+        stage: stage.group[2],
+        teams: ["Tunisia", "Mexico"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Kaabi", "Ghommidh", "Dhouieb"],
+            timeGoals: ["55", "79", "87"],
+          },
+          {
+            playersScoredGoal: ["Vázquez Ayala"],
+            timeGoals: ["45(p)"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.rosario,
+          attendance: "17 396",
+        },
+      },
+      {
+        id: v1(),
+        date: "06.06.1974",
+        stage: stage.group[2],
+        teams: ["Germany", "Mexico"],
+        score: [[6, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["D.Müller", "H.Müller", "Rummenigge", "Flohe"],
+            timeGoals: ["15", "30", "38, 73", "44, 89"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.olympic,
+          attendance: "35 258",
+        },
+      },
+      {
+        id: v1(),
+        date: "06.06.1974",
+        stage: stage.group[2],
+        teams: ["Poland", "Tunisia"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Lato"],
+            timeGoals: ["43"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.rosario,
+          attendance: "9 624",
+        },
+      },
+      {
+        id: v1(),
+        date: "10.06.1974",
+        stage: stage.group[2],
+        teams: ["Germany", "Tunisia"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.olympic,
+          attendance: "30 667",
+        },
+      },
+      {
+        id: v1(),
+        date: "10.06.1974",
+        stage: stage.group[2],
+        teams: ["Poland", "Mexico"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Boniek", "Deyna"],
+            timeGoals: ["43, 84", "56"],
+          },
+          {
+            playersScoredGoal: ["Rangel"],
+            timeGoals: ["52"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.rosario,
+          attendance: "22 651",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.06.1974",
+        stage: stage.group[3],
+        teams: ["Austria", "Spain"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Schachner", "Krankl"],
+            timeGoals: ["10", "76"],
+          },
+          {
+            playersScoredGoal: ["Dani"],
+            timeGoals: ["21"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.amalfitani,
+          attendance: "40 841",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.06.1974",
+        stage: stage.group[3],
+        teams: ["Brazil", "Sweden"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Reinaldo"],
+            timeGoals: ["45"],
+          },
+          {
+            playersScoredGoal: ["Sjöberg"],
+            timeGoals: ["37"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.worldCup,
+          attendance: "32 569",
+        },
+      },
+      {
+        id: v1(),
+        date: "07.06.1974",
+        stage: stage.group[3],
+        teams: ["Austria", "Sweden"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Krankl"],
+            timeGoals: ["42(p)"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.amalfitani,
+          attendance: "41 424",
+        },
+      },
+      {
+        id: v1(),
+        date: "07.06.1974",
+        stage: stage.group[3],
+        teams: ["Brazil", "Spain"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.worldCup,
+          attendance: "34 771",
+        },
+      },
+      {
+        id: v1(),
+        date: "11.06.1974",
+        stage: stage.group[3],
+        teams: ["Spain", "Sweden"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Asensi"],
+            timeGoals: ["75"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.amalfitani,
+          attendance: "42 132",
+        },
+      },
+      {
+        id: v1(),
+        date: "11.06.1974",
+        stage: stage.group[3],
+        teams: ["Brazil", "Spain"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Roberto Dinamite"],
+            timeGoals: ["40"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.worldCup,
+          attendance: "35 221",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.06.1974",
+        stage: stage.group[4],
+        teams: ["Peru", "Scotland"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Cueto", "Cubillas"],
+            timeGoals: ["43", "71, 77"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.olympic,
+          attendance: "37 927",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.06.1974",
+        stage: stage.group[4],
+        teams: ["Netherlands", "Iran"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rensenbrink"],
+            timeGoals: ["40(p), 62, 78(p)"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.mendoza,
+          attendance: "33 431",
+        },
+      },
+      {
+        id: v1(),
+        date: "07.06.1974",
+        stage: stage.group[4],
+        teams: ["Scotland", "Iran"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Eskandarian"],
+            timeGoals: ["43(o.g.)"],
+          },
+          {
+            playersScoredGoal: ["Danaeifard"],
+            timeGoals: ["60"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.olympic,
+          attendance: "7 938",
+        },
+      },
+      {
+        id: v1(),
+        date: "07.06.1974",
+        stage: stage.group[4],
+        teams: ["Netherlands", "Peru"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.mendoza,
+          attendance: "28 125",
+        },
+      },
+      {
+        id: v1(),
+        date: "11.06.1974",
+        stage: stage.group[4],
+        teams: ["Peru", "Iran"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Velásquez", "Cubillas"],
+            timeGoals: ["2", "36(p), 39(p), 79"],
+          },
+          {
+            playersScoredGoal: ["Rowshan"],
+            timeGoals: ["41"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.olympic,
+          attendance: "21 262",
+        },
+      },
+      {
+        id: v1(),
+        date: "11.06.1974",
+        stage: stage.group[4],
+        teams: ["Scotland", "Netherlands"],
+        score: [[3, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Dalglish", "A.Gemmill"],
+            timeGoals: ["45", "46(p), 68"],
+          },
+          {
+            playersScoredGoal: ["Rensenbrink", "Rep"],
+            timeGoals: ["34(p)", "71"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.mendoza,
+          attendance: "35 130",
+        },
+      },
+      {
+        id: v1(),
+        date: "14.06.1974",
+        stage: stage.group.finalGroup.a,
+        teams: ["Netherlands", "Austria"],
+        score: [[5, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Brandts", "Rensenbrink", "Rep", "W. van de Kerkhof"],
+            timeGoals: ["6", "35(p)", "36, 53", "82"],
+          },
+          {
+            playersScoredGoal: ["Obermayer"],
+            timeGoals: ["80"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.olympic,
+          attendance: "25 050",
+        },
+      },
+      {
+        id: v1(),
+        date: "14.06.1974",
+        stage: stage.group.finalGroup.a,
+        teams: ["Italy", "Germany"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.riverPlate,
+          attendance: "67 547",
+        },
+      },
+      {
+        id: v1(),
+        date: "18.06.1974",
+        stage: stage.group.finalGroup.a,
+        teams: ["Netherlands", "Germany"],
+        score: [[2, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Haan", "R. van de Kerkhof"],
+            timeGoals: ["27", "82"],
+          },
+          {
+            playersScoredGoal: ["Abramczik", "D.Müller"],
+            timeGoals: ["3", "70"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.olympic,
+          attendance: "40 750",
+        },
+      },
+      {
+        id: v1(),
+        date: "18.06.1974",
+        stage: stage.group.finalGroup.a,
+        teams: ["Italy", "Germany"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rossi"],
+            timeGoals: ["13"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.riverPlate,
+          attendance: "66 695",
+        },
+      },
+      {
+        id: v1(),
+        date: "21.06.1974",
+        stage: stage.group.finalGroup.a,
+        teams: ["Austria", "Germany"],
+        score: [[3, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Vogts", "Krankl"],
+            timeGoals: ["59(o.g.)", "66, 87"],
+          },
+          {
+            playersScoredGoal: ["Rummenigge", "Hölzenbein"],
+            timeGoals: ["19", "68"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.olympic,
+          attendance: "38 318",
+        },
+      },
+      {
+        id: v1(),
+        date: "21.06.1974",
+        stage: stage.group.finalGroup.a,
+        teams: ["Netherlands", "Italy"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Brandts", "Haan"],
+            timeGoals: ["49", "76"],
+          },
+          {
+            playersScoredGoal: ["Brandts"],
+            timeGoals: ["19(o.g.)"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.riverPlate,
+          attendance: "67 433",
+        },
+      },
+      {
+        id: v1(),
+        date: "14.06.1974",
+        stage: stage.group.finalGroup.b,
+        teams: ["Brazil", "Peru"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Dirceu", "Zico"],
+            timeGoals: ["15, 27", "72"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.mendoza,
+          attendance: "31 278",
+        },
+      },
+      {
+        id: v1(),
+        date: "14.06.1974",
+        stage: stage.group.finalGroup.b,
+        teams: ["Argentina", "Poland"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Kempes"],
+            timeGoals: ["16, 71"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.rosario,
+          attendance: "37 091",
+        },
+      },
+      {
+        id: v1(),
+        date: "18.06.1974",
+        stage: stage.group.finalGroup.b,
+        teams: ["Poland", "Peru"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Szarmach"],
+            timeGoals: ["65"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.mendoza,
+          attendance: "35 288",
+        },
+      },
+      {
+        id: v1(),
+        date: "18.06.1974",
+        stage: stage.group.finalGroup.b,
+        teams: ["Argentina", "Brazil"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.rosario,
+          attendance: "37 326",
+        },
+      },
+      {
+        id: v1(),
+        date: "21.06.1974",
+        stage: stage.group.finalGroup.b,
+        teams: ["Brazil", "Poland"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Nelinho", "Roberto Dinamite"],
+            timeGoals: ["13", "58, 63"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.mendoza,
+          attendance: "39 586",
+        },
+      },
+      {
+        id: v1(),
+        date: "21.06.1974",
+        stage: stage.group.finalGroup.b,
+        teams: ["Argentina", "Peru"],
+        score: [[6, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Kempes", "Tarantini", "Luque", "Houseman"],
+            timeGoals: ["21, 49", "43", "50, 72", "67"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.rosario,
+          attendance: "37 315",
+        },
+      },
+      {
+        id: v1(),
+        date: "24.06.1974",
+        stage: stage.place3,
+        teams: ["Brazil", "Italy"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Nelinho", "Dirceu"],
+            timeGoals: ["64", "71"],
+          },
+          {
+            playersScoredGoal: ["Causio"],
+            timeGoals: ["38"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.riverPlate,
+          attendance: "69 659",
+        },
+      },
+      {
+        id: v1(),
+        date: "25.06.1974",
+        stage: stage.final,
+        teams: ["Argentina", "Netherlands"],
+        score: [[1, 1], [2, 0], []],
+        goals: [
+          {
+            playersScoredGoal: ["Kempes", "Bertoni"],
+            timeGoals: ["38, 105", "115"],
+          },
+          {
+            playersScoredGoal: ["Nanninga"],
+            timeGoals: ["82"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Argentina.riverPlate,
+          attendance: "71 483",
+        },
+      },
+    ],
     qualification: [],
   },
   1982: {
