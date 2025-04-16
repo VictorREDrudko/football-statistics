@@ -16,8 +16,16 @@ export const generatePlayoffGrid = (matchesByStage: WorldCupMatch[][]) => {
   const playoffGrid: WorldCupMatch[][] = [];
   const matches = matchesByStage.flat();
 
+  // вариант 0: play-off включает только финал и матч за 3 место (2 стадии)
+  if(matchesByStage.length === 2 && matchesByStage[0][0].stage === stage.place3) {
+    const finalMatch = matches.filter(match => match.stage === '1:final')
+    const thirdPlaceMatches = matches.filter(match => match.stage === stage.place3)
+  
+    playoffGrid.push(finalMatch, thirdPlaceMatches)
+  }
+
   // вариант 1: play-off включает только финал и полуфинал (2 стадии)
-  if(matchesByStage.length === 2) {
+  if(matchesByStage.length === 2 && matchesByStage[0][0].stage !== stage.place3) {
     const finalMatch = matches.filter(match => match.stage === '1:final')
     const semiFinalsMatches = matches.filter(match => match.stage === '3:1/2 semi-finals')
   

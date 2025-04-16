@@ -29,7 +29,6 @@ export const ratingCalculation = () => {
   
   newTeams.forEach((team, index) => {
     const nameCountry = team.names[0].nameCountry
-    console.log(nameCountry, index + 1)
     nationalTeams[nameCountry].rating.points !== 0 
       ? nationalTeams[nameCountry].rating.place = index + 1
        : nationalTeams[nameCountry].rating.place = 0

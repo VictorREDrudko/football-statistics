@@ -2,6 +2,7 @@ import { NodesItem, WorldCupMatch } from "data/worldCupData/type-worldCupData";
 import { generateMatchesByStage, generatePlayoffGrid } from "./playoffGridLogic";
 import { Position } from "@xyflow/react";
 import s from "./../../features/worldCup/finalStage/playOffStage/flowchartPlayOffStage/FlowchartPlayOffStage.module.css";
+import { stage } from "data/worldCupData/worldCupData";
 
 export const createNodes = (playOffStages: string[], matches: WorldCupMatch[]) => {
   const matchesByStage = generateMatchesByStage(playOffStages, matches)
@@ -9,8 +10,25 @@ export const createNodes = (playOffStages: string[], matches: WorldCupMatch[]) =
   
   let nodes: NodesItem[] = [];
 
+  // вариант 0: создание nodes когда play-off включает финал и матч за 3 место (2 стадии)
+  if (matchesByStage.length === 2 && matchesByStage[0][0].stage === stage.place3) {
+    nodes = matches.map((match, index) => {
+      return {
+        id: String(index + 1),
+        type: "customNode",
+        data: { label: match.stage, match: match },
+        position: {
+          x: 0,
+          y: index === 0 ? 110 : 0,
+        },
+        sourcePosition: index + 1 === 3 ? Position.Left : Position.Right,
+        className: index === matches.length - 1 ? s.lastNode : s.node,
+      };
+    });
+  }
+
   // вариант 1: создание nodes когда play-off включает финал и полуфинал (2 стадии)
-  if (matchesByStage.length === 2) {
+  if (matchesByStage.length === 2 && matchesByStage[0][0].stage !== stage.place3) {
     nodes = matches.map((match, index) => {
       return {
         id: String(index + 1),

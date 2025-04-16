@@ -186,6 +186,9 @@ import coatOfArmsSovietUnion from "./../../assets/icon/coat-of-arms/Soviet-Union
 import iconCzechoslovakia from "./../../assets/icon/national/Czechoslovakia.png";
 import flagCzechoslovakia from "./../../assets/icon/flag/Czechoslovakia.png";
 import coatOfArmsCzechoslovakia from "./../../assets/icon/coat-of-arms/Czechoslovakia.png";
+import iconEastGermany from "./../../assets/icon/national/East-Germany.png";
+import flagEastGermany from "./../../assets/icon/flag/East-Germany.png";
+import coatOfArmsEastGermany from "./../../assets/icon/coat-of-arms/East-Germany.png";
 
 import iconAlgeria from "./../../assets/icon/national/Algeria.png";
 import flagAlgeria from "./../../assets/icon/flag/Algeria.png";
@@ -267,6 +270,7 @@ import flagCongo from "./../../assets/icon/flag/Congo.png";
 import coatOfArmsCongo from "./../../assets/icon/coat-of-arms/Congo.png";
 import iconDRCongo from "./../../assets/icon/national/DR-Congo.png";
 import flagDRCongo from "./../../assets/icon/flag/DR-Congo.png";
+import flagDRCongo2 from "./../../assets/icon/flag/DR-Congo2.png";
 import coatOfArmsDRCongo from "./../../assets/icon/coat-of-arms/DR-Congo.png";
 import iconEquatorialGuinea from "./../../assets/icon/national/Equatorial-Guinea.png";
 import flagEquatorialGuinea from "./../../assets/icon/flag/Equatorial-Guinea.png";
@@ -802,7 +806,8 @@ export const teamsByConfederation: TeamsByConfederation = {
     "Wales",
     "Soviet Union",
     "Yugoslavia",
-    "Czechoslovakia"
+    "Czechoslovakia",
+    "East Germany"
   ],
   caf: [
     "Algeria",
@@ -1996,13 +2001,30 @@ export const nationalTeams: NationalTeams = {
   "Soviet Union": {
     id: v1(),
     names: [{ nameCountry: "Soviet Union", period: "0000-1991" }],
-    flags: [{ flagCountry: flagSovietUnion, period: "0000-1991, 2006-p.t." }],
+    flags: [{ flagCountry: flagSovietUnion, period: "0000-1991, 1991-p.t." }],
     coatOfArms: coatOfArmsSovietUnion,
     associationIcon: iconSovietUnion,
     associationDate: {
-      founded: 0,
-      fifaAffiliation: 0,
-      confederationAffiliation: 0,
+      founded: 1934,
+      fifaAffiliation: 1946,
+      confederationAffiliation: 1954,
+    },
+    rating: {
+      points: 0,
+      place: 0,
+    },
+    isCountryReal: false,
+  },
+  "East Germany": {
+    id: v1(),
+    names: [{ nameCountry: "East Germany", period: "1950-1990" }],
+    flags: [{ flagCountry: flagEastGermany, period: "1950-1990, 1990-p.t." }],
+    coatOfArms: coatOfArmsEastGermany,
+    associationIcon: iconEastGermany,
+    associationDate: {
+      founded: 1950,
+      fifaAffiliation: 1952,
+      confederationAffiliation: 1954,
     },
     rating: {
       points: 0,
@@ -2442,8 +2464,14 @@ export const nationalTeams: NationalTeams = {
   },
   "DR Congo": {
     id: v1(),
-    names: [{ nameCountry: "DR Congo", period: "0000-p.t." }],
-    flags: [{ flagCountry: flagDRCongo, period: "0000-p.t." }],
+    names: [
+      { nameCountry: "DR Congo", period: "0000-p.t." },
+      { nameCountry: "Zaire", period: "1971-1997" },
+    ],
+    flags: [
+      { flagCountry: flagDRCongo, period: "0000-p.t." },
+      { flagCountry: flagDRCongo2, period: "1971-1997" }
+    ],
     coatOfArms: coatOfArmsDRCongo,
     associationIcon: iconDRCongo,
     associationDate: {

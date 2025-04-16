@@ -36,6 +36,9 @@ import backgroundFWC1966_1 from "./../../assets/backgroundWC/1966-1.png";
 import backgroundFWC1966_2 from "./../../assets/backgroundWC/1966-2.png";
 import backgroundFWC1970_1 from "./../../assets/backgroundWC/1970-1.png";
 import backgroundFWC1970_2 from "./../../assets/backgroundWC/1970-2.png";
+import backgroundFWC1974_1 from "./../../assets/backgroundWC/1974-1.png";
+import backgroundFWC1974_2 from "./../../assets/backgroundWC/1974-2.png";
+import backgroundFWC1974_3 from "./../../assets/backgroundWC/1974-3.png";
 
 import { stadiums } from "./stadiums";
 import { v1 } from "uuid";
@@ -71,6 +74,8 @@ export const stage: Stage = {
       group: "group Final round",
       groupFinal: "group Final round: final",
       groupPlace3: "group Final round: third place",
+      a: "group A (second round)",
+      b: "group B (second round)",
     },
   },
 };
@@ -5039,9 +5044,808 @@ export const worldCupData: WorldCupData = {
     title: "1974 FIFA World Cup",
     date: "13 June - 7 July",
     icon: iconWorldCup1974,
-    background: [],
+    background: [backgroundFWC1974_2, backgroundFWC1974_1, backgroundFWC1974_3],
     hostCountry: ["Germany"],
-    finalStage: [],
+    finalStage: [
+      {
+        id: v1(),
+        date: "14.06.1974",
+        stage: stage.group[1],
+        teams: ["Germany", "Chile"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Breitner"],
+            timeGoals: ["18"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.olympiaB,
+          attendance: "81 100",
+        },
+      },
+      {
+        id: v1(),
+        date: "14.06.1974",
+        stage: stage.group[1],
+        teams: ["East Germany", "Australia"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Curran", "Streich"],
+            timeGoals: ["58(o.g.)", "72"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.volkspark,
+          attendance: "17 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "18.06.1974",
+        stage: stage.group[1],
+        teams: ["Germany", "Australia"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Overath", "Cullmann", "Müller"],
+            timeGoals: ["12", "34", "53"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.volkspark,
+          attendance: "53 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "18.06.1974",
+        stage: stage.group[1],
+        teams: ["East Germany", "Chile"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Hoffmann"],
+            timeGoals: ["55"],
+          },
+          {
+            playersScoredGoal: ["Ahumada"],
+            timeGoals: ["69"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.olympiaB,
+          attendance: "28 300",
+        },
+      },
+      {
+        id: v1(),
+        date: "22.06.1974",
+        stage: stage.group[1],
+        teams: ["Australia", "Chile"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.volkspark,
+          attendance: "17 400",
+        },
+      },
+      {
+        id: v1(),
+        date: "22.06.1974",
+        stage: stage.group[1],
+        teams: ["East Germany", "Germany"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Sparwasser"],
+            timeGoals: ["77"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.volkspark,
+          attendance: "60 200",
+        },
+      },
+      {
+        id: v1(),
+        date: "13.06.1974",
+        stage: stage.group[2],
+        teams: ["Brazil", "Yugoslavia"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.wald,
+          attendance: "62 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "14.06.1974",
+        stage: stage.group[2],
+        teams: ["Scotland", "DR Congo"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Lorimer", "Jordan"],
+            timeGoals: ["26", "34"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.westfalen,
+          attendance: "25 800",
+        },
+      },
+      {
+        id: v1(),
+        date: "18.06.1974",
+        stage: stage.group[2],
+        teams: ["Yugoslavia", "DR Congo"],
+        score: [[9, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Lorimer", "Jordan"],
+            timeGoals: ["8, 30, 81", "14", "18", "22", "35", "61", "65"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.parkGelsenk,
+          attendance: "31 700",
+        },
+      },
+      {
+        id: v1(),
+        date: "18.06.1974",
+        stage: stage.group[2],
+        teams: ["Scotland", "Brazil"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.wald,
+          attendance: "62 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "22.06.1974",
+        stage: stage.group[2],
+        teams: ["Scotland", "Yugoslavia"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Jordan"],
+            timeGoals: ["88"],
+          },
+          {
+            playersScoredGoal: ["Karasi"],
+            timeGoals: ["81"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.wald,
+          attendance: "56 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "22.06.1974",
+        stage: stage.group[2],
+        teams: ["Brazil", "DR Congo"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Jairzinho", "Rivellino", "Valdomiro"],
+            timeGoals: ["12", "66", "79"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.parkGelsenk,
+          attendance: "36 200",
+        },
+      },
+      {
+        id: v1(),
+        date: "15.06.1974",
+        stage: stage.group[3],
+        teams: ["Netherlands", "Uruguay"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rep"],
+            timeGoals: ["7, 86"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.niedersachsen,
+          attendance: "55 100",
+        },
+      },
+      {
+        id: v1(),
+        date: "15.06.1974",
+        stage: stage.group[3],
+        teams: ["Sweden", "Bulgaria"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.rhein,
+          attendance: "23 800",
+        },
+      },
+      {
+        id: v1(),
+        date: "19.06.1974",
+        stage: stage.group[3],
+        teams: ["Bulgaria", "Uruguay"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Bonev"],
+            timeGoals: ["75"],
+          },
+          {
+            playersScoredGoal: ["Pavoni"],
+            timeGoals: ["87"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.niedersachsen,
+          attendance: "13 400",
+        },
+      },
+      {
+        id: v1(),
+        date: "19.06.1974",
+        stage: stage.group[3],
+        teams: ["Netherlands", "Sweden"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.westfalen,
+          attendance: "53 700",
+        },
+      },
+      {
+        id: v1(),
+        date: "23.06.1974",
+        stage: stage.group[3],
+        teams: ["Netherlands", "Bulgaria"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Neeskens", "Rep", "de Jong"],
+            timeGoals: ["5(p), 44(p)", "71", "88"],
+          },
+          {
+            playersScoredGoal: ["Krol"],
+            timeGoals: ["78(o.g.)"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.westfalen,
+          attendance: "53 300",
+        },
+      },
+      {
+        id: v1(),
+        date: "23.06.1974",
+        stage: stage.group[3],
+        teams: ["Sweden", "Uruguay"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Edström", "Sandberg"],
+            timeGoals: ["46, 77", "74"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.rhein,
+          attendance: "28 300",
+        },
+      },
+      {
+        id: v1(),
+        date: "15.06.1974",
+        stage: stage.group[4],
+        teams: ["Italy", "Haiti"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rivera", "Benetti", "Anastasi"],
+            timeGoals: ["52", "66", "79"],
+          },
+          {
+            playersScoredGoal: ["Sanon"],
+            timeGoals: ["46"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.olympiaM,
+          attendance: "53 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "15.06.1974",
+        stage: stage.group[4],
+        teams: ["Poland", "Argentina"],
+        score: [[3, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Lato", "Szarmach"],
+            timeGoals: ["7, 62", "8"],
+          },
+          {
+            playersScoredGoal: ["Heredia", "Babington"],
+            timeGoals: ["60", "66"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.neckar,
+          attendance: "32 700",
+        },
+      },
+      {
+        id: v1(),
+        date: "19.06.1974",
+        stage: stage.group[4],
+        teams: ["Argentina", "Italy"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Houseman"],
+            timeGoals: ["20"],
+          },
+          {
+            playersScoredGoal: ["Perfumo"],
+            timeGoals: ["35(o.g.)"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.neckar,
+          attendance: "70 100",
+        },
+      },
+      {
+        id: v1(),
+        date: "19.06.1974",
+        stage: stage.group[4],
+        teams: ["Poland", "Haiti"],
+        score: [[7, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Lato", "Deyna", "Szarmach", "Gorgoń"],
+            timeGoals: ["17, 87", "18", "30, 34, 50", "31"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.olympiaM,
+          attendance: "25 300",
+        },
+      },
+      {
+        id: v1(),
+        date: "23.06.1974",
+        stage: stage.group[4],
+        teams: ["Argentina", "Haiti"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Yazalde", "Houseman", "Ayala"],
+            timeGoals: ["15, 68", "18", "55"],
+          },
+          {
+            playersScoredGoal: ["Sanon"],
+            timeGoals: ["63"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.olympiaM,
+          attendance: "25 900",
+        },
+      },
+      {
+        id: v1(),
+        date: "23.06.1974",
+        stage: stage.group[4],
+        teams: ["Poland", "Italy"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Szarmach", "Deyna"],
+            timeGoals: ["38", "44"],
+          },
+          {
+            playersScoredGoal: ["Capello"],
+            timeGoals: ["85"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.neckar,
+          attendance: "70 100",
+        },
+      },
+      {
+        id: v1(),
+        date: "26.06.1974",
+        stage: stage.group.finalGroup.a,
+        teams: ["Netherlands", "Argentina"],
+        score: [[4, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Cruyff", "Krol", "Rep"],
+            timeGoals: ["11, 90", "25", "73"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.parkGelsenk,
+          attendance: "56 548",
+        },
+      },
+      {
+        id: v1(),
+        date: "26.06.1974",
+        stage: stage.group.finalGroup.a,
+        teams: ["Brazil", "East Germany"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rivellino"],
+            timeGoals: ["60"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.niedersachsen,
+          attendance: "59 863",
+        },
+      },
+      {
+        id: v1(),
+        date: "30.06.1974",
+        stage: stage.group.finalGroup.a,
+        teams: ["Brazil", "Argentina"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rivellino", "Jairzinho"],
+            timeGoals: ["32", "49"],
+          },
+          {
+            playersScoredGoal: ["Brindisi"],
+            timeGoals: ["35"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.niedersachsen,
+          attendance: "39 400",
+        },
+      },
+      {
+        id: v1(),
+        date: "30.06.1974",
+        stage: stage.group.finalGroup.a,
+        teams: ["Netherlands", "East Germany"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Neeskens", "Rensenbrink"],
+            timeGoals: ["7", "59"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.parkGelsenk,
+          attendance: "68 348",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.07.1974",
+        stage: stage.group.finalGroup.a,
+        teams: ["Argentina", "East Germany"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Houseman"],
+            timeGoals: ["20"],
+          },
+          {
+            playersScoredGoal: ["Streich"],
+            timeGoals: ["14"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.parkGelsenk,
+          attendance: "54 254",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.07.1974",
+        stage: stage.group.finalGroup.a,
+        teams: ["Netherlands", "Brazil"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Neeskens", "Cruyff"],
+            timeGoals: ["50", "65"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.westfalen,
+          attendance: "53 700",
+        },
+      },
+      {
+        id: v1(),
+        date: "26.06.1974",
+        stage: stage.group.finalGroup.b,
+        teams: ["Germany", "Yugoslavia"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Breitner", "Müller"],
+            timeGoals: ["39", "82"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.rhein,
+          attendance: "67 385",
+        },
+      },
+      {
+        id: v1(),
+        date: "26.06.1974",
+        stage: stage.group.finalGroup.b,
+        teams: ["Poland", "Sweden"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Lato"],
+            timeGoals: ["43"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.neckar,
+          attendance: "44 955",
+        },
+      },
+      {
+        id: v1(),
+        date: "30.06.1974",
+        stage: stage.group.finalGroup.b,
+        teams: ["Poland", "Yugoslavia"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Deyna", "Lato"],
+            timeGoals: ["24(p)", "62"],
+          },
+          {
+            playersScoredGoal: ["Karasi"],
+            timeGoals: ["43"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.neckar,
+          attendance: "58 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "30.06.1974",
+        stage: stage.group.finalGroup.b,
+        teams: ["Germany", "Sweden"],
+        score: [[4, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Overath", "Bonhof", "Grabowski", "Hoeneß"],
+            timeGoals: ["51", "52", "76", "89(p)"],
+          },
+          {
+            playersScoredGoal: ["Edström", "Sandberg"],
+            timeGoals: ["24", "53"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.rhein,
+          attendance: "67 800",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.07.1974",
+        stage: stage.group.finalGroup.b,
+        teams: ["Germany", "Poland"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Müller"],
+            timeGoals: ["76"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.wald,
+          attendance: "62 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "03.07.1974",
+        stage: stage.group.finalGroup.b,
+        teams: ["Sweden", "Yugoslavia"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Edström", "Torstensson"],
+            timeGoals: ["29", "85"],
+          },
+          {
+            playersScoredGoal: ["Šurjak"],
+            timeGoals: ["27"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.rhein,
+          attendance: "41 300",
+        },
+      },
+      {
+        id: v1(),
+        date: "06.07.1974",
+        stage: stage.place3,
+        teams: ["Poland", "Brazil"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Lato"],
+            timeGoals: ["76"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.olympiaM,
+          attendance: "77 100",
+        },
+      },
+      {
+        id: v1(),
+        date: "07.07.1974",
+        stage: stage.final,
+        teams: ["Germany", "Netherlands"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Breitner", "Müller"],
+            timeGoals: ["25(p)", "43"],
+          },
+          {
+            playersScoredGoal: ["Neeskens"],
+            timeGoals: ["2(p)"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Germany.olympiaM,
+          attendance: "75 200",
+        },
+      },
+    ],
     qualification: [],
   },
   1978: {

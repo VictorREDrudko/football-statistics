@@ -22,12 +22,13 @@
 .lastNode::before {
   content: '';
   position: absolute;
-  top: -200px;
-  bottom: 0;
+  top: 0;
+  bottom: -100px;
   left: 0;
-  right: 0;
+  right: -400px;
   background-image: url('./../../../../../assets/icon-cup/world.png'); /* путь к изображению */
-  background-size: 15%; /* Чтобы изображение сохраняло свои пропорции */
+  background-size: 10%; /* Чтобы изображение сохраняло свои пропорции */
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 1000;
 }

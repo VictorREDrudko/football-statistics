@@ -25,11 +25,9 @@ export const PlayOffStage = ({year, playOffStageMatches} : Props) => {
 
   const title = finalAnd3PlaceTitle.trim().replace(/\b(and)\b\s*$/, '')
 
-
-
-
   const playOffMatches = playOffStages.map((nameStage, index) => {
-    if(nameStage === '1:final' || nameStage === '2:third place play-off') return;
+    if(nameStage === '1:final' && playOffStages.length > 2 || nameStage === '2:third place play-off' && playOffStages.length > 2) return
+    
     const matchesPlayoffStage = playoffMatches.filter(match => match.stage === nameStage);
 
     return(
@@ -40,15 +38,20 @@ export const PlayOffStage = ({year, playOffStageMatches} : Props) => {
     )
   })
 
+
+  const multiMatchPlayoffStage = playOffStages.length !== 2 ? (
+    <div className={s.containerMatchesFinalStage}>
+      <SubStageTitle title={title}/>
+      <MatchesByStage matches={playOffStageMatches.length === 2 ? playOffStageMatches : finalAnd3PlaceMatches}/>
+    </div>
+  ) : ''
+
   return (
     <div className={s.container} style={ {backgroundImage: `url(${worldCupData[year].background[0]})`} }>
       <StageTitle title={'Knockout stage'}/>
       <div className={s.containerMatchesPlayOff}>
         {playOffMatches}
-        <div className={s.containerMatchesFinalStage}>
-          <SubStageTitle title={title}/>
-          <MatchesByStage matches={finalAnd3PlaceMatches}/>
-        </div>
+        {multiMatchPlayoffStage}
       </div>
       <div className={s.containerFlowchart}>
         <FlowchartPlayOffStage matches={playOffStageMatches} playOffStages={playOffStages}/>

@@ -1,0 +1,56 @@
+@import url('./../../../../data/theme/theme.css');
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 4rem 0;
+}
+
+.containerGroups {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.containerGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 35rem;
+  width: 100%;
+  padding: 1.2rem 0.8rem;
+  margin: 0.8rem;
+  background-color: var(--bg-main-transparent50);
+  border-radius: 2rem 0;
+  border: 1px solid var(--bg-second-transparent50);
+  box-shadow: 0 2px 5px var(--bg-second-transparent50), 0 4px 6px var(--bg-second-transparent50);
+}
+
+@media (max-width: 605px) {
+  .containerGroup {
+    width: 27rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerGroups {
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  .containerGroup {
+    width: 100%;
+    padding: 0.8rem 0.4rem;
+    gap: 0.8rem;
+  }
+}

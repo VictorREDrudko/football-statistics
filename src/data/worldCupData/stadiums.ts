@@ -343,6 +343,53 @@ export const stadiums: Stadiums = {
       country: "Mexico",
     }
   },
+  Germany: {
+    olympiaB: {
+      title: "Olympiastadion",
+      city: "Berlin",
+      country: "Germany",
+    },
+    olympiaM: {
+      title: "Olympiastadion",
+      city: "Munich",
+      country: "Germany",
+    },
+    neckar: {
+      title: "Neckarstadion",
+      city: "Stuttgart",
+      country: "Germany",
+    },
+    parkGelsenk: {
+      title: "Parkstadion",
+      city: "Gelsenkirchen",
+      country: "Germany",
+    },
+    rhein: {
+      title: "Rheinstadion",
+      city: "Düsseldorf",
+      country: "Germany",
+    },
+    wald: {
+      title: "Waldstadion",
+      city: "Frankfurt",
+      country: "Germany",
+    },
+    volkspark: {
+      title: "Volksparkstadion",
+      city: "Hamburg",
+      country: "Germany",
+    },
+    niedersachsen: {
+      title: "Niedersachsenstadion",
+      city: "Hanover",
+      country: "Germany",
+    },
+    westfalen: {
+      title: "Westfalenstadion",
+      city: "Dortmund",
+      country: "Germany",
+    }
+  },
 }
 
 

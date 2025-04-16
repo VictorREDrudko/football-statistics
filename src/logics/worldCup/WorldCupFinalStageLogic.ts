@@ -70,6 +70,12 @@ export const createGroupTableData = (qualifiedTeamsForPlayoff: string[], groupMa
   })
   
   teamTableData.sort((a, b) => {
+    if (a.points === b.points) {
+      if (a.played !== b.played) {
+        return a.played < b.played ? -1 : 1; // Чем меньше сыграно матчей, тем выше позиция
+      }
+      return a.goalsDifference > b.goalsDifference ? -1 : 1;
+    }
     return a.points > b.points ? -1 : 1;
   });
 
@@ -222,5 +228,5 @@ export const filterFinalAnd3PlaceMatches = (matches: WorldCupMatch[]) => {
 }
 
 export const filterMatchesPlayoff = (matches: WorldCupMatch[]) => {
-  return matches.filter(match => match.stage !== '1:final' && match.stage !== '2:third place play-off');
+  return matches.filter(match => matches.length === 2 ? match : match.stage !== '1:final' && match.stage !== '2:third place play-off');
 }

@@ -5,6 +5,7 @@ import { GroupStage } from "./groupStage/GroupStage";
 import { getQualifiedTeamsForPlayoff, getTournamentData, worldCupYears } from "logics/worldCup/worldCupFinalStageLogic";
 import { PlayOffStage } from "./playOffStage/PlayOffStage";
 import { GroupFinalStage } from "./groupFinalStage/GroupFinalStage";
+import { GroupSecondStage } from "./groupSecondStage/GroupSecondStage";
 
 export const FinalStage = () => {
   const { urlYear } = useParams<{ urlYear: string}>();
@@ -14,26 +15,35 @@ export const FinalStage = () => {
   const matches = tournamentData.finalStage
 
   const groupStageMatches = matches.filter(match => {
-    return match.stage.slice(0, 5) === "group" && match.stage.split(":")[0].trim() !== "group Final round"
+    return match.stage.slice(0, 5) === "group" && match.stage.split(":")[0].trim() !== "group Final round" && match.stage.split("(")[1] !== "second round)"
   })
   const playOffStageMatches = matches.filter(match => match.stage.slice(0, 5) !== "group")
   const groupFinalRoundMatches = matches.filter(match => match.stage.split(":")[0].trim() === "group Final round")
+  const groupSecondGroupRoundMatches = matches.filter(match => match.stage.split("(")[1] === "second round)")
 
-  const hasMatchesGroupStage = groupStageMatches.length === 0 ? false : true
-  const hasMatchesPlayoffStage = playOffStageMatches.length === 0 ? false : true
-  const hasMatchesGroupFinalRound = groupFinalRoundMatches.length === 0 ? false : true
+  const hasMatchesGroupStage = groupStageMatches.length
+  const hasMatchesPlayoffStage = playOffStageMatches.length
+  const hasMatchesGroupFinalRound = groupFinalRoundMatches.length
+  const hasMatchesGroupSecondRound = groupSecondGroupRoundMatches.length
 
   const qualifiedTeamsForPlayoff = getQualifiedTeamsForPlayoff(playOffStageMatches)
   const qualifiedTeamsForGroupFinalRound = getQualifiedTeamsForPlayoff(groupFinalRoundMatches)
+  const qualifiedTeamsForSecondGroupRound = getQualifiedTeamsForPlayoff(groupSecondGroupRoundMatches)
 
-  const qualifiedTeams = hasMatchesGroupFinalRound ? qualifiedTeamsForGroupFinalRound : qualifiedTeamsForPlayoff
+  const qualifiedTeamsPlayoff = hasMatchesGroupFinalRound ? qualifiedTeamsForGroupFinalRound
+                         : hasMatchesGroupSecondRound ? qualifiedTeamsForSecondGroupRound : qualifiedTeamsForPlayoff
+
+  const qualifiedTeamsSecondRound = qualifiedTeamsForPlayoff
 
   return (
     <div className={s.container}>
       <StatisticsTournament tournamentData={tournamentData}/>
       {hasMatchesGroupStage && <GroupStage  groupStageMatches={groupStageMatches} 
-                                            qualifiedTeamsForPlayoff={qualifiedTeams} 
+                                            qualifiedTeamsForPlayoff={qualifiedTeamsPlayoff} 
                                             year={year}/>}
+      {hasMatchesGroupSecondRound && <GroupSecondStage  groupStageMatches={groupSecondGroupRoundMatches} 
+                                                        qualifiedTeamsForPlayoff={qualifiedTeamsSecondRound} 
+                                                        year={year}/>}
       {hasMatchesPlayoffStage && <PlayOffStage year={year} playOffStageMatches={playOffStageMatches}/>}
       {hasMatchesGroupFinalRound && <GroupFinalStage  groupStageMatches={groupFinalRoundMatches} 
                                                       year={year}/>}

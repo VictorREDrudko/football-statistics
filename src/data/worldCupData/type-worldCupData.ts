@@ -73,6 +73,8 @@ export type Stage = {
       group: string
       groupFinal: string
       groupPlace3: string
+      a: string,
+      b: string,
     },
   }
 }
