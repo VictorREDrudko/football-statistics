@@ -75,6 +75,8 @@ export type Stage = {
       groupPlace3: string
       a: string,
       b: string,
+      c: string,
+      d: string,
     },
   }
 }

@@ -20,7 +20,7 @@ import iconWorldCup2010 from "./../../assets/icon/worldCup/2010.png";
 import iconWorldCup2014 from "./../../assets/icon/worldCup/2014.png";
 import iconWorldCup2018 from "./../../assets/icon/worldCup/2018.png";
 import iconWorldCup2022 from "./../../assets/icon/worldCup/2022.png";
-import { Stage, WorldCupData } from "./type-worldCupData";
+import { GoalsInfo, StadiumInfo, Stage, WorldCupData, WorldCupMatch } from "./type-worldCupData";
 
 import backgroundFWC1930_1 from "./../../assets/backgroundWC/1930-1.png";
 import backgroundFWC1930_2 from "./../../assets/backgroundWC/1930-2.png";
@@ -42,9 +42,50 @@ import backgroundFWC1974_3 from "./../../assets/backgroundWC/1974-3.png";
 import backgroundFWC1978_1 from "./../../assets/backgroundWC/1978-1.png";
 import backgroundFWC1978_2 from "./../../assets/backgroundWC/1978-2.png";
 import backgroundFWC1978_3 from "./../../assets/backgroundWC/1978-3.png";
+import backgroundFWC1982_1 from "./../../assets/backgroundWC/1982-1.png";
+import backgroundFWC1982_2 from "./../../assets/backgroundWC/1982-2.png";
+import backgroundFWC1982_3 from "./../../assets/backgroundWC/1982-3.png";
 
 import { stadiums } from "./stadiums";
 import { v1 } from "uuid";
+
+class Match {
+  id: string;
+  date: string;
+  stage: string;
+  teams: string[];
+  score: number[][];
+  goals: { playersScoredGoal: string[]; timeGoals: string[] }[];
+  stadium: StadiumInfo;
+  attendance!: string;
+
+  constructor(
+    date: string,
+    stage: string,
+    teams: string[],
+    score: number[][],
+    playersScoredGoal1: string[],
+    timeGoals1: string[],
+    playersScoredGoal2: string[],
+    timeGoals2: string[],
+    stadium: any,
+    attendance: string
+  ) {
+    this.id = v1(); 
+    this.date = date;
+    this.stage = stage;
+    this.teams = teams;
+    this.score = score;
+    this.goals = [
+      { playersScoredGoal: playersScoredGoal1, timeGoals: timeGoals1 },
+      { playersScoredGoal: playersScoredGoal2, timeGoals: timeGoals2 },
+    ];
+    this.stadium = {
+      ...stadium,
+      attendance: attendance,
+    };
+  }
+}
 
 export const worldCupCharacteristic: string[] = [
   "Host country",
@@ -79,6 +120,8 @@ export const stage: Stage = {
       groupPlace3: "group Final round: third place",
       a: "group A (second round)",
       b: "group B (second round)",
+      c: "group C (second round)",
+      d: "group D (second round)",
     },
   },
 };
@@ -92,24 +135,18 @@ export const worldCupData: WorldCupData = {
     background: [backgroundFWC1930_1, backgroundFWC1930_2],
     hostCountry: ["Uruguay"],
     finalStage: [
-      {
-        id: v1(),
-        date: "13.07.1930",
-        stage: stage.group[1],
-        teams: ["France", "Mexico"],
-        score: [[4, 1], [], []],
-        goals: [
-          {
-            playersScoredGoal: ["L. Laurent", "Langiller", "Maschinot"],
-            timeGoals: ["19", "40", "43, 87"],
-          },
-          { playersScoredGoal: ["Carreño"], timeGoals: ["80"] },
-        ],
-        stadium: {
-          ...stadiums.Uruguay.pocitos,
-          attendance: "4 444",
-        },
-      },
+      new Match(
+        "13.07.1930",
+        stage.group[1],
+        ["France", "Mexico"],
+        [[4, 1], [], []],
+        ["L. Laurent", "Langiller", "Maschinot"],
+        ["19", "40", "43, 87"],
+        ["Carreño"],
+        ["80"],
+        stadiums.Uruguay.pocitos,
+        "4 444"
+      ),
       {
         id: v1(),
         date: "15.07.1930",
@@ -2998,7 +3035,7 @@ export const worldCupData: WorldCupData = {
     title: "1962 FIFA World Cup",
     date: "30 May - 17 June",
     icon: iconWorldCup1962,
-    background: [backgroundFWC1962_2, backgroundFWC1962_1, ],
+    background: [backgroundFWC1962_2, backgroundFWC1962_1],
     hostCountry: ["Chile"],
     finalStage: [
       {
@@ -3077,7 +3114,7 @@ export const worldCupData: WorldCupData = {
           },
           {
             playersScoredGoal: ["Aceros", "Coll", "Rada", "Klinger"],
-            timeGoals: ["21", "68", "72", "86" ],
+            timeGoals: ["21", "68", "72", "86"],
           },
         ],
         stadium: {
@@ -3098,7 +3135,7 @@ export const worldCupData: WorldCupData = {
           },
           {
             playersScoredGoal: ["Sasía"],
-            timeGoals: ["54" ],
+            timeGoals: ["54"],
           },
         ],
         stadium: {
@@ -4263,7 +4300,11 @@ export const worldCupData: WorldCupData = {
             timeGoals: ["27, 43(p), 56, 59(p)", "80"],
           },
           {
-            playersScoredGoal: ["Pak Seung-zin", "Li Dong-woon", "Yang Seung-kook"],
+            playersScoredGoal: [
+              "Pak Seung-zin",
+              "Li Dong-woon",
+              "Yang Seung-kook",
+            ],
             timeGoals: ["1", "22", "25"],
           },
         ],
@@ -5026,7 +5067,12 @@ export const worldCupData: WorldCupData = {
         score: [[4, 1], [], []],
         goals: [
           {
-            playersScoredGoal: ["Pelé", "Gérson", "Jairzinho", "Carlos Alberto"],
+            playersScoredGoal: [
+              "Pelé",
+              "Gérson",
+              "Jairzinho",
+              "Carlos Alberto",
+            ],
             timeGoals: ["18", "65", "71", "86"],
           },
           {
@@ -5861,7 +5907,7 @@ export const worldCupData: WorldCupData = {
     finalStage: [
       {
         id: v1(),
-        date: "02.06.1974",
+        date: "02.06.1978",
         stage: stage.group[1],
         teams: ["Italy", "France"],
         score: [[2, 1], [], []],
@@ -5882,7 +5928,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "02.06.1974",
+        date: "02.06.1978",
         stage: stage.group[1],
         teams: ["Argentina", "Hungary"],
         score: [[2, 1], [], []],
@@ -5903,7 +5949,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "06.06.1974",
+        date: "06.06.1978",
         stage: stage.group[1],
         teams: ["Italy", "Hungary"],
         score: [[3, 1], [], []],
@@ -5924,7 +5970,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "06.06.1974",
+        date: "06.06.1978",
         stage: stage.group[1],
         teams: ["Argentina", "France"],
         score: [[2, 1], [], []],
@@ -5945,7 +5991,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "10.06.1974",
+        date: "10.06.1978",
         stage: stage.group[1],
         teams: ["France", "Hungary"],
         score: [[3, 1], [], []],
@@ -5966,7 +6012,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "10.06.1974",
+        date: "10.06.1978",
         stage: stage.group[1],
         teams: ["Italy", "Argentina"],
         score: [[1, 0], [], []],
@@ -5987,7 +6033,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "01.06.1974",
+        date: "01.06.1978",
         stage: stage.group[2],
         teams: ["Germany", "Poland"],
         score: [[0, 0], [], []],
@@ -6008,7 +6054,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "02.06.1974",
+        date: "02.06.1978",
         stage: stage.group[2],
         teams: ["Tunisia", "Mexico"],
         score: [[3, 1], [], []],
@@ -6029,7 +6075,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "06.06.1974",
+        date: "06.06.1978",
         stage: stage.group[2],
         teams: ["Germany", "Mexico"],
         score: [[6, 0], [], []],
@@ -6050,7 +6096,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "06.06.1974",
+        date: "06.06.1978",
         stage: stage.group[2],
         teams: ["Poland", "Tunisia"],
         score: [[1, 0], [], []],
@@ -6071,7 +6117,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "10.06.1974",
+        date: "10.06.1978",
         stage: stage.group[2],
         teams: ["Germany", "Tunisia"],
         score: [[0, 0], [], []],
@@ -6092,7 +6138,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "10.06.1974",
+        date: "10.06.1978",
         stage: stage.group[2],
         teams: ["Poland", "Mexico"],
         score: [[3, 1], [], []],
@@ -6113,7 +6159,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "03.06.1974",
+        date: "03.06.1978",
         stage: stage.group[3],
         teams: ["Austria", "Spain"],
         score: [[2, 1], [], []],
@@ -6134,7 +6180,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "03.06.1974",
+        date: "03.06.1978",
         stage: stage.group[3],
         teams: ["Brazil", "Sweden"],
         score: [[1, 1], [], []],
@@ -6155,7 +6201,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "07.06.1974",
+        date: "07.06.1978",
         stage: stage.group[3],
         teams: ["Austria", "Sweden"],
         score: [[1, 0], [], []],
@@ -6176,7 +6222,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "07.06.1974",
+        date: "07.06.1978",
         stage: stage.group[3],
         teams: ["Brazil", "Spain"],
         score: [[0, 0], [], []],
@@ -6197,7 +6243,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "11.06.1974",
+        date: "11.06.1978",
         stage: stage.group[3],
         teams: ["Spain", "Sweden"],
         score: [[1, 0], [], []],
@@ -6218,7 +6264,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "11.06.1974",
+        date: "11.06.1978",
         stage: stage.group[3],
         teams: ["Brazil", "Spain"],
         score: [[1, 0], [], []],
@@ -6239,7 +6285,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "03.06.1974",
+        date: "03.06.1978",
         stage: stage.group[4],
         teams: ["Peru", "Scotland"],
         score: [[3, 1], [], []],
@@ -6260,7 +6306,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "03.06.1974",
+        date: "03.06.1978",
         stage: stage.group[4],
         teams: ["Netherlands", "Iran"],
         score: [[3, 0], [], []],
@@ -6281,7 +6327,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "07.06.1974",
+        date: "07.06.1978",
         stage: stage.group[4],
         teams: ["Scotland", "Iran"],
         score: [[1, 1], [], []],
@@ -6302,7 +6348,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "07.06.1974",
+        date: "07.06.1978",
         stage: stage.group[4],
         teams: ["Netherlands", "Peru"],
         score: [[0, 0], [], []],
@@ -6323,7 +6369,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "11.06.1974",
+        date: "11.06.1978",
         stage: stage.group[4],
         teams: ["Peru", "Iran"],
         score: [[4, 1], [], []],
@@ -6344,7 +6390,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "11.06.1974",
+        date: "11.06.1978",
         stage: stage.group[4],
         teams: ["Scotland", "Netherlands"],
         score: [[3, 2], [], []],
@@ -6365,13 +6411,18 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "14.06.1974",
+        date: "14.06.1978",
         stage: stage.group.finalGroup.a,
         teams: ["Netherlands", "Austria"],
         score: [[5, 1], [], []],
         goals: [
           {
-            playersScoredGoal: ["Brandts", "Rensenbrink", "Rep", "W. van de Kerkhof"],
+            playersScoredGoal: [
+              "Brandts",
+              "Rensenbrink",
+              "Rep",
+              "W. van de Kerkhof",
+            ],
             timeGoals: ["6", "35(p)", "36, 53", "82"],
           },
           {
@@ -6386,7 +6437,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "14.06.1974",
+        date: "14.06.1978",
         stage: stage.group.finalGroup.a,
         teams: ["Italy", "Germany"],
         score: [[0, 0], [], []],
@@ -6407,7 +6458,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "18.06.1974",
+        date: "18.06.1978",
         stage: stage.group.finalGroup.a,
         teams: ["Netherlands", "Germany"],
         score: [[2, 2], [], []],
@@ -6428,7 +6479,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "18.06.1974",
+        date: "18.06.1978",
         stage: stage.group.finalGroup.a,
         teams: ["Italy", "Germany"],
         score: [[1, 0], [], []],
@@ -6449,7 +6500,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "21.06.1974",
+        date: "21.06.1978",
         stage: stage.group.finalGroup.a,
         teams: ["Austria", "Germany"],
         score: [[3, 2], [], []],
@@ -6470,7 +6521,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "21.06.1974",
+        date: "21.06.1978",
         stage: stage.group.finalGroup.a,
         teams: ["Netherlands", "Italy"],
         score: [[2, 1], [], []],
@@ -6491,7 +6542,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "14.06.1974",
+        date: "14.06.1978",
         stage: stage.group.finalGroup.b,
         teams: ["Brazil", "Peru"],
         score: [[3, 0], [], []],
@@ -6512,7 +6563,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "14.06.1974",
+        date: "14.06.1978",
         stage: stage.group.finalGroup.b,
         teams: ["Argentina", "Poland"],
         score: [[2, 0], [], []],
@@ -6533,7 +6584,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "18.06.1974",
+        date: "18.06.1978",
         stage: stage.group.finalGroup.b,
         teams: ["Poland", "Peru"],
         score: [[1, 0], [], []],
@@ -6554,7 +6605,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "18.06.1974",
+        date: "18.06.1978",
         stage: stage.group.finalGroup.b,
         teams: ["Argentina", "Brazil"],
         score: [[0, 0], [], []],
@@ -6575,7 +6626,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "21.06.1974",
+        date: "21.06.1978",
         stage: stage.group.finalGroup.b,
         teams: ["Brazil", "Poland"],
         score: [[3, 1], [], []],
@@ -6596,7 +6647,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "21.06.1974",
+        date: "21.06.1978",
         stage: stage.group.finalGroup.b,
         teams: ["Argentina", "Peru"],
         score: [[6, 0], [], []],
@@ -6617,7 +6668,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "24.06.1974",
+        date: "24.06.1978",
         stage: stage.place3,
         teams: ["Brazil", "Italy"],
         score: [[2, 1], [], []],
@@ -6638,7 +6689,7 @@ export const worldCupData: WorldCupData = {
       },
       {
         id: v1(),
-        date: "25.06.1974",
+        date: "25.06.1978",
         stage: stage.final,
         teams: ["Argentina", "Netherlands"],
         score: [[1, 1], [2, 0], []],
@@ -6665,9 +6716,1119 @@ export const worldCupData: WorldCupData = {
     title: "1982 FIFA World Cup",
     date: "13 June - 11 July",
     icon: iconWorldCup1982,
-    background: [],
+    background: [backgroundFWC1982_2, backgroundFWC1982_1, backgroundFWC1982_3],
     hostCountry: ["Spain"],
-    finalStage: [],
+    finalStage: [
+      {
+        id: v1(),
+        date: "14.06.1982",
+        stage: stage.group[1],
+        teams: ["Italy", "Poland"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.balaidos,
+          attendance: "33 040",
+        },
+      },
+      {
+        id: v1(),
+        date: "15.06.1982",
+        stage: stage.group[1],
+        teams: ["Peru", "Cameroon"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.riazor,
+          attendance: "11 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "18.06.1982",
+        stage: stage.group[1],
+        teams: ["Italy", "Peru"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Conti"],
+            timeGoals: ["18"],
+          },
+          {
+            playersScoredGoal: ["Díaz"],
+            timeGoals: ["83"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.balaidos,
+          attendance: "25 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "19.06.1982",
+        stage: stage.group[1],
+        teams: ["Poland", "Cameroon"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.riazor,
+          attendance: "19 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "22.06.1982",
+        stage: stage.group[1],
+        teams: ["Poland", "Peru"],
+        score: [[5, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: [
+              "Smolarek",
+              "Lato",
+              "Boniek",
+              "Buncol",
+              "Ciołek",
+            ],
+            timeGoals: ["55", "58", "61", "68", "76"],
+          },
+          {
+            playersScoredGoal: ["La Rosa"],
+            timeGoals: ["83"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.riazor,
+          attendance: "25 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "23.06.1982",
+        stage: stage.group[1],
+        teams: ["Italy", "Cameroon"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Graziani"],
+            timeGoals: ["60"],
+          },
+          {
+            playersScoredGoal: ["M'Bida"],
+            timeGoals: ["61"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.balaidos,
+          attendance: "20 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "16.06.1982",
+        stage: stage.group[2],
+        teams: ["Algeria", "Germany"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Madjer", "Belloumi"],
+            timeGoals: ["54", "68"],
+          },
+          {
+            playersScoredGoal: ["Rummenigge"],
+            timeGoals: ["67"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.molinon,
+          attendance: "42 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "17.06.1982",
+        stage: stage.group[2],
+        teams: ["Austria", "Chile"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Schachner"],
+            timeGoals: ["22"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.tartiere,
+          attendance: "22 500",
+        },
+      },
+      {
+        id: v1(),
+        date: "20.06.1982",
+        stage: stage.group[2],
+        teams: ["Germany", "Chile"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rummenigge", "Reinders"],
+            timeGoals: ["9, 57, 66", "83"],
+          },
+          {
+            playersScoredGoal: ["Moscoso"],
+            timeGoals: ["90"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.molinon,
+          attendance: "42 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "21.06.1982",
+        stage: stage.group[2],
+        teams: ["Austria", "Algeria"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Schachner", "Krankl"],
+            timeGoals: ["55", "67"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.tartiere,
+          attendance: "22 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "24.06.1982",
+        stage: stage.group[2],
+        teams: ["Algeria", "Chile"],
+        score: [[3, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Assad", "Bensaoula"],
+            timeGoals: ["7, 31", "35"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.tartiere,
+          attendance: "16 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "25.06.1982",
+        stage: stage.group[2],
+        teams: ["Germany", "Austria"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Hrubesch"],
+            timeGoals: ["10"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.molinon,
+          attendance: "41 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "13.06.1982",
+        stage: stage.group[3],
+        teams: ["Belgium", "Argentina"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Vandenbergh"],
+            timeGoals: ["62"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.nouCamp,
+          attendance: "95 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "15.06.1982",
+        stage: stage.group[3],
+        teams: ["Hungary", "El Salvador"],
+        score: [[10, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: [
+              "Nyilasi",
+              "Pölöskei",
+              "Fazekas",
+              "Tóth",
+              "L.Kiss",
+              "Szentes",
+            ],
+            timeGoals: ["4, 83", "11", "23, 54", "50", "69, 72, 76", "70"],
+          },
+          {
+            playersScoredGoal: ["Ramírez Zapata"],
+            timeGoals: ["64"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.nuevo,
+          attendance: "23 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "18.06.1982",
+        stage: stage.group[3],
+        teams: ["Argentina", "Hungary"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Bertoni", "Maradona", "Ardiles"],
+            timeGoals: ["26", "28, 57", "60"],
+          },
+          {
+            playersScoredGoal: ["Pölöskei"],
+            timeGoals: ["76"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.perez,
+          attendance: "32 093",
+        },
+      },
+      {
+        id: v1(),
+        date: "19.06.1982",
+        stage: stage.group[3],
+        teams: ["Belgium", "El Salvador"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Coeck"],
+            timeGoals: ["19"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.nuevo,
+          attendance: "15 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "22.06.1982",
+        stage: stage.group[3],
+        teams: ["Belgium", "Hungary"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Czerniatynski"],
+            timeGoals: ["76"],
+          },
+          {
+            playersScoredGoal: ["Varga"],
+            timeGoals: ["27"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.nuevo,
+          attendance: "37 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "23.06.1982",
+        stage: stage.group[3],
+        teams: ["Argentina", "El Salvador"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Passarella", "Bertoni"],
+            timeGoals: ["22(p)", "54"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.perez,
+          attendance: "32 500",
+        },
+      },
+      {
+        id: v1(),
+        date: "16.06.1982",
+        stage: stage.group[4],
+        teams: ["England", "France"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Robson", "Mariner"],
+            timeGoals: ["1, 67", "83"],
+          },
+          {
+            playersScoredGoal: ["Soler"],
+            timeGoals: ["24"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.mames,
+          attendance: "44 172",
+        },
+      },
+      {
+        id: v1(),
+        date: "17.06.1982",
+        stage: stage.group[4],
+        teams: ["Czechoslovakia", "Kuwait"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Panenka"],
+            timeGoals: ["21(p)"],
+          },
+          {
+            playersScoredGoal: ["Al-Dakhil"],
+            timeGoals: ["57"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.zorrilla,
+          attendance: "25 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "20.06.1982",
+        stage: stage.group[4],
+        teams: ["England", "Czechoslovakia"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Francis", "Barmoš"],
+            timeGoals: ["62", "66(o.g.)"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.mames,
+          attendance: "41 123",
+        },
+      },
+      {
+        id: v1(),
+        date: "21.06.1982",
+        stage: stage.group[4],
+        teams: ["France", "Kuwait"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Genghini", "Platini", "Six", "Bossis"],
+            timeGoals: ["31", "43", "48", "89"],
+          },
+          {
+            playersScoredGoal: ["Al-Buloushi"],
+            timeGoals: ["75"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.zorrilla,
+          attendance: "30 043",
+        },
+      },
+      {
+        id: v1(),
+        date: "24.06.1982",
+        stage: stage.group[4],
+        teams: ["France", "Czechoslovakia"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Six"],
+            timeGoals: ["66"],
+          },
+          {
+            playersScoredGoal: ["Panenka"],
+            timeGoals: ["84(p)"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.zorrilla,
+          attendance: "28 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "25.06.1982",
+        stage: stage.group[4],
+        teams: ["England", "Kuwait"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Francis"],
+            timeGoals: ["27"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.mames,
+          attendance: "39 700",
+        },
+      },
+      {
+        id: v1(),
+        date: "16.06.1982",
+        stage: stage.group[5],
+        teams: ["Spain", "Honduras"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["López Ufarte"],
+            timeGoals: ["65(p)"],
+          },
+          {
+            playersScoredGoal: ["Zelaya"],
+            timeGoals: ["8"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.casanova,
+          attendance: "49 562",
+        },
+      },
+      {
+        id: v1(),
+        date: "17.06.1982",
+        stage: stage.group[5],
+        teams: ["Yugoslavia", "North. Ireland"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.romareda,
+          attendance: "25 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "20.06.1982",
+        stage: stage.group[5],
+        teams: ["Spain", "Yugoslavia"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Juanito", "Saura"],
+            timeGoals: ["14(p)", "66"],
+          },
+          {
+            playersScoredGoal: ["Gudelj"],
+            timeGoals: ["10"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.casanova,
+          attendance: "48 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "21.06.1982",
+        stage: stage.group[5],
+        teams: ["North. Ireland", "Honduras"],
+        score: [[1, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Armstrong"],
+            timeGoals: ["10"],
+          },
+          {
+            playersScoredGoal: ["Laing"],
+            timeGoals: ["60"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.romareda,
+          attendance: "15 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "24.06.1982",
+        stage: stage.group[5],
+        teams: ["Yugoslavia", "Honduras"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Petrović"],
+            timeGoals: ["88(p)"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.romareda,
+          attendance: "25 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "25.06.1982",
+        stage: stage.group[5],
+        teams: ["North. Ireland", "Spain"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Armstrong"],
+            timeGoals: ["47"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.casanova,
+          attendance: "49 562",
+        },
+      },
+      {
+        id: v1(),
+        date: "14.06.1982",
+        stage: stage.group[6],
+        teams: ["Brazil", "Soviet Union"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Sócrates", "Éder"],
+            timeGoals: ["75", "88"],
+          },
+          {
+            playersScoredGoal: ["Bal"],
+            timeGoals: ["34"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.pizjuan,
+          attendance: "68 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "15.06.1982",
+        stage: stage.group[6],
+        teams: ["Scotland", "New Zealand"],
+        score: [[5, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Dalglish", "Wark", "Robertson", "Archibald"],
+            timeGoals: ["18", "29, 32", "73", "79"],
+          },
+          {
+            playersScoredGoal: ["Sumner", "Wooddin"],
+            timeGoals: ["54", "64"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.rosaleda,
+          attendance: "36 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "18.06.1982",
+        stage: stage.group[6],
+        teams: ["Brazil", "Scotland"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Zico", "Oscar", "Éder", "Falcão"],
+            timeGoals: ["33", "48", "63", "87"],
+          },
+          {
+            playersScoredGoal: ["Narey"],
+            timeGoals: ["18"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.villamarin,
+          attendance: "47 379",
+        },
+      },
+      {
+        id: v1(),
+        date: "19.06.1982",
+        stage: stage.group[6],
+        teams: ["Soviet Union", "New Zealand"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Gavrilov", "Blokhin", "Baltacha"],
+            timeGoals: ["24", "48", "68"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.rosaleda,
+          attendance: "19 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "22.06.1982",
+        stage: stage.group[6],
+        teams: ["Soviet Union", "Scotland"],
+        score: [[2, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Chivadze", "Shengelia"],
+            timeGoals: ["59", "84"],
+          },
+          {
+            playersScoredGoal: ["Jordan", "Souness"],
+            timeGoals: ["15", "86"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.rosaleda,
+          attendance: "45 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "23.06.1982",
+        stage: stage.group[6],
+        teams: ["Brazil", "New Zealand"],
+        score: [[4, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Zico", "Falcão", "Serginho"],
+            timeGoals: ["28, 31", "64", "70"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.villamarin,
+          attendance: "43 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "28.06.1982",
+        stage: stage.group.finalGroup.a,
+        teams: ["Poland", "Belgium"],
+        score: [[3, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Boniek"],
+            timeGoals: ["4, 26, 53"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.nouCamp,
+          attendance: "65 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "01.07.1982",
+        stage: stage.group.finalGroup.a,
+        teams: ["Soviet Union", "Belgium"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Oganesian"],
+            timeGoals: ["48"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.nouCamp,
+          attendance: "45 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "04.07.1982",
+        stage: stage.group.finalGroup.a,
+        teams: ["Soviet Union", "Poland"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.nouCamp,
+          attendance: "65 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "29.06.1982",
+        stage: stage.group.finalGroup.b,
+        teams: ["Germany", "England"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.bernabeu,
+          attendance: "75 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "02.07.1982",
+        stage: stage.group.finalGroup.b,
+        teams: ["Germany", "Spain"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Littbarski", "Fischer"],
+            timeGoals: ["50", "75"],
+          },
+          {
+            playersScoredGoal: ["Zamora"],
+            timeGoals: ["82"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.bernabeu,
+          attendance: "90 089",
+        },
+      },
+      {
+        id: v1(),
+        date: "05.07.1982",
+        stage: stage.group.finalGroup.b,
+        teams: ["Spain", "England"],
+        score: [[0, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.bernabeu,
+          attendance: "75 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "29.06.1982",
+        stage: stage.group.finalGroup.c,
+        teams: ["Italy", "Argentina"],
+        score: [[2, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Tardelli", "Cabrini"],
+            timeGoals: ["57", "67"],
+          },
+          {
+            playersScoredGoal: ["Passarella"],
+            timeGoals: ["83"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.sarria,
+          attendance: "43 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "02.07.1982",
+        stage: stage.group.finalGroup.c,
+        teams: ["Brazil", "Argentina"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Zico", "Serginho", "Júnior"],
+            timeGoals: ["11", "66", "75"],
+          },
+          {
+            playersScoredGoal: ["Díaz"],
+            timeGoals: ["89"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.sarria,
+          attendance: "44 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "05.07.1982",
+        stage: stage.group.finalGroup.c,
+        teams: ["Italy", "Brazil"],
+        score: [[3, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rossi"],
+            timeGoals: ["5, 24, 74"],
+          },
+          {
+            playersScoredGoal: ["Sócrates", "Falcão"],
+            timeGoals: ["12", "68"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.sarria,
+          attendance: "44 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "28.06.1982",
+        stage: stage.group.finalGroup.d,
+        teams: ["France", "Austria"],
+        score: [[1, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Genghini"],
+            timeGoals: ["39"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.calderon,
+          attendance: "37 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "01.07.1982",
+        stage: stage.group.finalGroup.d,
+        teams: ["Austria", "North. Ireland"],
+        score: [[2, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Pezzey", "Hintermaier"],
+            timeGoals: ["50", "68"],
+          },
+          {
+            playersScoredGoal: ["Hamilton"],
+            timeGoals: ["27, 75"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.calderon,
+          attendance: "20 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "04.07.1982",
+        stage: stage.group.finalGroup.d,
+        teams: ["France", "North. Ireland"],
+        score: [[4, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Giresse"],
+            timeGoals: ["33, 80", "46, 68"],
+          },
+          {
+            playersScoredGoal: ["Armstrong"],
+            timeGoals: ["75"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.calderon,
+          attendance: "37 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "08.07.1982",
+        stage: stage[1_2],
+        teams: ["Italy", "Poland"],
+        score: [[2, 0], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rossi"],
+            timeGoals: ["22, 73"],
+          },
+          {
+            playersScoredGoal: [],
+            timeGoals: [],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.nouCamp,
+          attendance: "50 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "08.07.1982",
+        stage: stage[1_2],
+        teams: ["Germany", "France"],
+        score: [
+          [1, 1],
+          [2, 2],
+          [5, 4],
+        ],
+        goals: [
+          {
+            playersScoredGoal: ["Littbarski", "Rummenigge", "Fischer"],
+            timeGoals: ["17", "102", "108"],
+          },
+          {
+            playersScoredGoal: ["Platini", "Trésor", "Giresse"],
+            timeGoals: ["26(p)", "92", "98"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.pizjuan,
+          attendance: "70 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "10.07.1982",
+        stage: stage.place3,
+        teams: ["Poland", "France"],
+        score: [[3, 2], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Szarmach", "Majewski", "Kupcewicz"],
+            timeGoals: ["40", "44", "46"],
+          },
+          {
+            playersScoredGoal: ["Girard", "Couriol"],
+            timeGoals: ["13", "72"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.perez,
+          attendance: "28 000",
+        },
+      },
+      {
+        id: v1(),
+        date: "11.07.1982",
+        stage: stage.final,
+        teams: ["Italy", "Germany"],
+        score: [[3, 1], [], []],
+        goals: [
+          {
+            playersScoredGoal: ["Rossi", "Tardelli", "Altobelli"],
+            timeGoals: ["57", "69", "81"],
+          },
+          {
+            playersScoredGoal: ["Breitner"],
+            timeGoals: ["83"],
+          },
+        ],
+        stadium: {
+          ...stadiums.Spain.bernabeu,
+          attendance: "90 000",
+        },
+      },
+    ],
     qualification: [],
   },
   1986: {
@@ -6677,7 +7838,20 @@ export const worldCupData: WorldCupData = {
     icon: iconWorldCup1986,
     background: [],
     hostCountry: ["Mexico"],
-    finalStage: [],
+    finalStage: [
+      new Match(
+        "13.07.1930",
+        stage.group[1],
+        ["France", "Mexico"],
+        [[4, 1], [], []],
+        ["L. Laurent", "Langiller", "Maschinot"],
+        ["19", "40", "43, 87"],
+        ["Carreño"],
+        ["80"],
+        stadiums.Uruguay.pocitos,
+        "4 444"
+      ),
+    ],
     qualification: [],
   },
   1990: {

@@ -44,8 +44,25 @@ export const createNodes = (playOffStages: string[], matches: WorldCupMatch[]) =
     });
   }
 
-  // вариант 2: создание nodes когда play-off включает: финал, матч за 3 место, 1/2, 1/4, 1,8 (5 стадий)
-  // вариант 3: создание nodes когда play-off включает: финал, матч за 3 место, 1/2, 1/4 (4 стадии)
+    // вариант 2: создание nodes когда play-off включает финал, матч за 3 место и полуфинал (3 стадии)
+    if (matchesByStage.length === 3) {
+      nodes = matches.map((match, index) => {
+        return {
+          id: String(index + 1),
+          type: "customNode",
+          data: { label: match.stage, match: match },
+          position: {
+            x: index === 0 || index === 1 ? 0 : 320,
+            y: index === 0 ? 0 : index === 1 ? 180 : index === 2 ? 180 : 90,
+          },
+          sourcePosition: index + 1 === 3 ? Position.Left : Position.Right,
+          className: index === matches.length - 1 ? s.lastNode : s.node,
+        };
+      });
+    }
+
+  // вариант 3: создание nodes когда play-off включает: финал, матч за 3 место, 1/2, 1/4, 1,8 (5 стадий)
+  // вариант 4: создание nodes когда play-off включает: финал, матч за 3 место, 1/2, 1/4 (4 стадии)
   if (matchesByStage.length === 5 || matchesByStage.length === 4) {
     // создание id node
     let countId = 0
@@ -188,6 +205,29 @@ export const createEdges = (playOffStages: string[]) => {
           type: "step",
           source: "2",
           target: "3",
+          animated: true,
+          style: { stroke: "white", strokeWidth: 1 },
+        },
+      ]
+    )
+  }
+
+  if(playOffStages.length === 3) {
+    return (
+      [
+        {
+          id: "1->4",
+          type: "step",
+          source: "1",
+          target: "4",
+          animated: true,
+          style: { stroke: "white", strokeWidth: 1 },
+        },
+        {
+          id: "2->4",
+          type: "step",
+          source: "2",
+          target: "4",
           animated: true,
           style: { stroke: "white", strokeWidth: 1 },
         },

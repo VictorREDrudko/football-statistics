@@ -421,5 +421,94 @@ export const stadiums: Stadiums = {
       city: "Mendoza",
       country: "Argentina",
     },
+  },
+  Spain: {
+    campNou: {
+      title: "Camp Nou",
+      city: "Barcelona",
+      country: "Spain",
+    },
+    sarria: {
+      title: "Sarrià",
+      city: "Barcelona",
+      country: "Spain",
+    },
+    bernabeu: {
+      title: "Santiago Bernabéu",
+      city: "Madrid",
+      country: "Spain",
+    },
+    calderon: {
+      title: "Vicente Calderón",
+      city: "Madrid",
+      country: "Spain",
+    },
+    pizjuan: {
+      title: "Ramón Sánchez Pizjuán",
+      city: "Seville",
+      country: "Spain",
+    },
+    villamarin: {
+      title: "Benito Villamarín",
+      city: "Seville",
+      country: "Spain",
+    },
+    nuevo: {
+      title: "Nuevo Estadio",
+      city: "Elche",
+      country: "Spain",
+    },
+    casanova: {
+      title: "Luis Casanova",
+      city: "Valencia",
+      country: "Spain",
+    },
+    mames: {
+      title: "San Mamés",
+      city: "Bilbao",
+      country: "Spain",
+    },
+    molinon: {
+      title: "El Molinón",
+      city: "Gijón",
+      country: "Spain",
+    },
+    rosaleda: {
+      title: "La Rosaleda",
+      city: "Málaga",
+      country: "Spain",
+    },
+    romareda: {
+      title: "La Romareda",
+      city: "Zaragoza",
+      country: "Spain",
+    },
+
+
+    riazor: {
+      title: "Riazor",
+      city: "A Coruña",
+      country: "Spain",
+    },
+    balaidos: {
+      title: "Balaídos",
+      city: "Vigo",
+      country: "Spain",
+    },
+    tartiere: {
+      title: "Carlos Tartiere",
+      city: "Oviedo",
+      country: "Spain",
+    },
+    perez: {
+      title: "José Rico Pérez",
+      city: "Alicante",
+      country: "Spain",
+    },
+    zorrilla: {
+      title: "José Zorrilla",
+      city: "Valladolid",
+      country: "Spain",
+    },
   }
 }

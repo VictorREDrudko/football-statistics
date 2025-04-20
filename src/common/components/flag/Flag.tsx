@@ -9,8 +9,9 @@ type Props = {
 }
 
 export const Flag = ({countryName, year, style}: Props) => {
+  if(!countryName) return
+  
   const srcFlag = countryName !== '' ? choiseCountryFlag(nationalTeams[countryName].flags, year) : ''
-
   const classNameIsReal = nationalTeams[countryName].isCountryReal ? `${s.image}` : `${s.imageNoReal}`
 
   return (
