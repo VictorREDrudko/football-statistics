@@ -43,8 +43,18 @@ export const stadiums: Stadiums = {
       city: "Genoa",
       country: "Italy",
     },
+    nicola: {
+      title: "Stadio San Nicola",
+      city: "Bari",
+      country: "Italy",
+    },
     ascarelli: {
       title: "Stadio Giorgio Ascarelli",
+      city: "Naples",
+      country: "Italy",
+    },
+    paolo: {
+      title: "Stadio San Paolo",
       city: "Naples",
       country: "Italy",
     },
@@ -58,9 +68,24 @@ export const stadiums: Stadiums = {
       city: "Rome",
       country: "Italy",
     },
+    olimpico: {
+      title: "Stadio Olimpico",
+      city: "Rome",
+      country: "Italy",
+    },
     littorio: {
       title: "Stadio Littorio",
       city: "Trieste",
+      country: "Italy",
+    },
+    santElia: {
+      title: "Stadio Sant'Elia",
+      city: "Cagliari",
+      country: "Italy",
+    },
+    favorita: {
+      title: "Stadio La Favorita",
+      city: "Palermo",
       country: "Italy",
     },
     littoriale: {
@@ -68,14 +93,39 @@ export const stadiums: Stadiums = {
       city: "Bologna",
       country: "Italy",
     },
+    dallAra: {
+      title: "Stadio Renato Dall'Ara",
+      city: "Bologna",
+      country: "Italy",
+    },
+    friuli: {
+      title: "Stadio Friuli",
+      city: "Udine",
+      country: "Italy",
+    },
     mussolini: {
       title: "Stadio Benito Mussolini",
+      city: "Turin",
+      country: "Italy",
+    },
+    alpi: {
+      title: "Stadio delle Alpi",
       city: "Turin",
       country: "Italy",
     },
     berta: {
       title: "Stadio Giovanni Berta",
       city: "Florence",
+      country: "Italy",
+    },
+    comunale: {
+      title: "Stadio Comunale",
+      city: "Florence",
+      country: "Italy",
+    },
+    bentegodi: {
+      title: "Stadio Marc'Antonio Bentegodi",
+      city: "Verona",
       country: "Italy",
     }
   },
@@ -322,6 +372,11 @@ export const stadiums: Stadiums = {
       city: "Mexico City",
       country: "Mexico",
     },
+    olimpico: {
+      title: "Estadio Olímpico Universitario",
+      city: "Mexico City",
+      country: "Mexico",
+    },
     jalisco: {
       title: "Estadio Jalisco",
       city: "Guadalajara",
@@ -333,7 +388,7 @@ export const stadiums: Stadiums = {
       country: "Mexico",
     },
     dosal: {
-      title: "Estadio Luis Dosal",
+      title: "Estadio Nemesio Díez",
       city: "Toluca",
       country: "Mexico",
     },
@@ -341,7 +396,37 @@ export const stadiums: Stadiums = {
       title: "Estadio Nou Camp",
       city: "León",
       country: "Mexico",
-    }
+    },
+    universitario: {
+      title: "Estadio Universitario",
+      city: "San Nicolás de los Garza",
+      country: "Mexico",
+    },
+    neza86: {
+      title: "Estadio Neza 86",
+      city: "Nezahualcóyotl",
+      country: "Mexico",
+    },
+    corregidora: {
+      title: "Estadio La Corregidora",
+      city: "Querétaro",
+      country: "Mexico",
+    },
+    tecnologico: {
+      title: "Estadio Tecnológico",
+      city: "Monterrey",
+      country: "Mexico",
+    },
+    chavez: {
+      title: "Estadio Sergio León Chávez",
+      city: "Irapuato",
+      country: "Mexico",
+    },
+    marzo: {
+      title: "Estadio Tres de Marzo",
+      city: "Zapopan",
+      country: "Mexico",
+    },
   },
   Germany: {
     olympiaB: {
@@ -483,8 +568,6 @@ export const stadiums: Stadiums = {
       city: "Zaragoza",
       country: "Spain",
     },
-
-
     riazor: {
       title: "Riazor",
       city: "A Coruña",

@@ -722,7 +722,6 @@ import iconConmebol from "./../../assets/icon/iconConfeder/conmebol.png";
 import iconOfc from "./../../assets/icon/iconConfeder/ofc.png";
 import iconFifa from "./../../assets/icon/iconConfeder/fifa.png";
 
-
 export const confederationBackground: ConfederationImage = {
   uefa: backgroundUefa,
   caf: backgroundCaf,
@@ -791,7 +790,7 @@ export const teamsByConfederation: TeamsByConfederation = {
     "Norway",
     "Poland",
     "Portugal",
-    "Republic of Ireland",
+    "Ireland",
     "Romania",
     "Russia",
     "San Marino",
@@ -807,7 +806,7 @@ export const teamsByConfederation: TeamsByConfederation = {
     "Soviet Union",
     "Yugoslavia",
     "Czechoslovakia",
-    "East Germany"
+    "East Germany",
   ],
   caf: [
     "Algeria",
@@ -913,7 +912,7 @@ export const teamsByConfederation: TeamsByConfederation = {
     "Qatar",
     "Saudi Arabia",
     "Syria",
-    "United Arab Emirates",
+    "U. A. Emirates",
     "Yemen",
   ],
   concacaf: [
@@ -1737,9 +1736,9 @@ export const nationalTeams: NationalTeams = {
     },
     isCountryReal: true,
   },
-  "Republic of Ireland": {
+  Ireland: {
     id: v1(),
-    names: [{ nameCountry: "Republic of Ireland", period: "0000-p.t." }],
+    names: [{ nameCountry: "Ireland", period: "0000-p.t." }],
     flags: [{ flagCountry: flagRepublicOfIreland, period: "0000-p.t." }],
     coatOfArms: coatOfArmsRepublicOfIreland,
     associationIcon: iconRepublicOfIreland,
@@ -1965,7 +1964,10 @@ export const nationalTeams: NationalTeams = {
     id: v1(),
     names: [{ nameCountry: "Yugoslavia", period: "1918-1992" }],
     flags: [
-      { flagCountry: flagYugoslavia, period: "1918-1944, 1992-2006, 2006-p.t." },
+      {
+        flagCountry: flagYugoslavia,
+        period: "1918-1944, 1992-2006, 2006-p.t.",
+      },
       { flagCountry: flagYugoslavia1, period: "1945-1992" },
     ],
     coatOfArms: coatOfArmsYugoslavia,
@@ -1984,7 +1986,9 @@ export const nationalTeams: NationalTeams = {
   Czechoslovakia: {
     id: v1(),
     names: [{ nameCountry: "Czechoslovakia", period: "0000-1992" }],
-    flags: [{ flagCountry: flagCzechoslovakia, period: "0000-1992, 2006-p.t." }],
+    flags: [
+      { flagCountry: flagCzechoslovakia, period: "0000-1992, 2006-p.t." },
+    ],
     coatOfArms: coatOfArmsCzechoslovakia,
     associationIcon: iconCzechoslovakia,
     associationDate: {
@@ -2470,7 +2474,7 @@ export const nationalTeams: NationalTeams = {
     ],
     flags: [
       { flagCountry: flagDRCongo, period: "0000-p.t." },
-      { flagCountry: flagDRCongo2, period: "1971-1997" }
+      { flagCountry: flagDRCongo2, period: "1971-1997" },
     ],
     coatOfArms: coatOfArmsDRCongo,
     associationIcon: iconDRCongo,
@@ -3766,9 +3770,9 @@ export const nationalTeams: NationalTeams = {
     },
     isCountryReal: true,
   },
-  "United Arab Emirates": {
+  "U. A. Emirates": {
     id: v1(),
-    names: [{ nameCountry: "United Arab Emirates", period: "0000-p.t." }],
+    names: [{ nameCountry: "U. A. Emirates", period: "0000-p.t." }],
     flags: [{ flagCountry: flagUnitedArabEmirates, period: "0000-p.t." }],
     coatOfArms: coatOfArmsUnitedArabEmirates,
     associationIcon: iconUnitedArabEmirates,

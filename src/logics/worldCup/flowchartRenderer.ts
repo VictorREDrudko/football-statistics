@@ -103,7 +103,7 @@ export const createNodes = (playOffStages: string[], matches: WorldCupMatch[]) =
             type: "customNode",
             data: { label: match.stage, match: match },
             position: {
-              x: 320,
+              x: 330,
               y: index === 0 ? posY : posY += stepY,
             },
             sourcePosition: Position.Right,
@@ -125,7 +125,7 @@ export const createNodes = (playOffStages: string[], matches: WorldCupMatch[]) =
             type: "customNode",
             data: { label: match.stage, match: match },
             position: {
-              x: 640,
+              x: 660,
               y: index === 0 ? posY : posY += stepY,
             },
             sourcePosition: Position.Right,
@@ -144,7 +144,7 @@ export const createNodes = (playOffStages: string[], matches: WorldCupMatch[]) =
             type: "customNode",
             data: { label: match.stage, match: match },
             position: {
-              x: 960,
+              x: 990,
               y: 405,
             },
             sourcePosition: Position.Right,
@@ -163,7 +163,7 @@ export const createNodes = (playOffStages: string[], matches: WorldCupMatch[]) =
             type: "customNode",
             data: { label: match.stage, match: match },
             position: {
-              x: 960,
+              x: 990,
               y: 315,
             },
             sourcePosition: Position.Right,
