@@ -74,6 +74,10 @@ export const createGroupTableData = (qualifiedTeamsForPlayoff: string[], groupMa
       if (a.played !== b.played) {
         return a.played < b.played ? -1 : 1; // Чем меньше сыграно матчей, тем выше позиция
       }
+
+      if (a.goalsDifference === b.goalsDifference) {
+        return a.goalsFor > b.goalsFor ? -1 : 1; 
+      }
       return a.goalsDifference > b.goalsDifference ? -1 : 1;
     }
     return a.points > b.points ? -1 : 1;

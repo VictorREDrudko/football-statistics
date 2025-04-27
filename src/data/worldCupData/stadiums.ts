@@ -593,5 +593,52 @@ export const stadiums: Stadiums = {
       city: "Valladolid",
       country: "Spain",
     },
-  }
+  },
+  USA: {
+    rose: {
+      title: "Rose Bowl",
+      city: "Los Angeles",
+      country: "United States",
+    },
+    stanford: {
+      title: "Stanford Stadium",
+      city: "San Francisco",
+      country: "United States",
+    },
+    pontiac: {
+      title: "Pontiac Silverdome",
+      city: "Detroit",
+      country: "United States",
+    },
+    giants: {
+      title: "Giants Stadium",
+      city: "New York",
+      country: "United States",
+    },
+    cotton: {
+      title: "Cotton Bowl",
+      city: "Dallas",
+      country: "United States",
+    },
+    soldier: {
+      title: "Soldier Field",
+      city: "Chicago",
+      country: "United States",
+    },
+    citrus: {
+      title: "Citrus Bowl",
+      city: "Orlando",
+      country: "United States",
+    },
+    foxboro: {
+      title: "Foxboro Stadium",
+      city: "Boston",
+      country: "United States",
+    },
+    kennedy: {
+      title: "Robert F. Kennedy Memorial Stadium",
+      city: "Washington",
+      country: "United States",
+    },
+  },
 }
