@@ -20,11 +20,7 @@ import iconWorldCup2010 from "./../../assets/icon/worldCup/2010.png";
 import iconWorldCup2014 from "./../../assets/icon/worldCup/2014.png";
 import iconWorldCup2018 from "./../../assets/icon/worldCup/2018.png";
 import iconWorldCup2022 from "./../../assets/icon/worldCup/2022.png";
-import {
-  StadiumInfo,
-  Stage,
-  WorldCupData,
-} from "./type-worldCupData";
+import { StadiumInfo, Stage, WorldCupData } from "./type-worldCupData";
 
 import backgroundFWC1930_1 from "./../../assets/backgroundWC/1930-1.png";
 import backgroundFWC1930_2 from "./../../assets/backgroundWC/1930-2.png";
@@ -56,6 +52,8 @@ import backgroundFWC1990_1 from "./../../assets/backgroundWC/1990-1.png";
 import backgroundFWC1990_2 from "./../../assets/backgroundWC/1990-2.png";
 import backgroundFWC1994_1 from "./../../assets/backgroundWC/1994-1.png";
 import backgroundFWC1994_2 from "./../../assets/backgroundWC/1994-2.png";
+import backgroundFWC1998_1 from "./../../assets/backgroundWC/1998-1.png";
+import backgroundFWC1998_2 from "./../../assets/backgroundWC/1998-2.png";
 
 import { stadiums } from "./stadiums";
 import { v1 } from "uuid";
@@ -878,7 +876,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.velodrome,
+          ...stadiums.France.velodromeReims,
           attendance: "9 000",
         },
       },
@@ -1135,7 +1133,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.parcLescure,
+          ...stadiums.France.lescure,
           attendance: "22 021",
         },
       },
@@ -1156,7 +1154,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.parcLescure,
+          ...stadiums.France.lescure,
           attendance: "18 141",
         },
       },
@@ -1224,7 +1222,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.parcLescure,
+          ...stadiums.France.lescure,
           attendance: "12 000",
         },
       },
@@ -9157,7 +9155,7 @@ export const worldCupData: WorldCupData = {
     hostCountry: ["United States"],
     finalStage: [
       new Match(
-        "18.06.1990",
+        "18.06.1994",
         stage.group.a,
         ["United States", "Switzerland"],
         [[1, 1], [], []],
@@ -9169,7 +9167,7 @@ export const worldCupData: WorldCupData = {
         "73 425"
       ),
       new Match(
-        "18.06.1990",
+        "18.06.1994",
         stage.group.a,
         ["Romania", "Colombia"],
         [[3, 1], [], []],
@@ -9181,7 +9179,7 @@ export const worldCupData: WorldCupData = {
         "91 856"
       ),
       new Match(
-        "22.06.1990",
+        "22.06.1994",
         stage.group.a,
         ["Switzerland", "Romania"],
         [[4, 1], [], []],
@@ -9193,7 +9191,7 @@ export const worldCupData: WorldCupData = {
         "61 428"
       ),
       new Match(
-        "22.06.1990",
+        "22.06.1994",
         stage.group.a,
         ["United States", "Colombia"],
         [[2, 1], [], []],
@@ -9205,7 +9203,7 @@ export const worldCupData: WorldCupData = {
         "93 869"
       ),
       new Match(
-        "26.06.1990",
+        "26.06.1994",
         stage.group.a,
         ["Colombia", "Switzerland"],
         [[2, 0], [], []],
@@ -9217,7 +9215,7 @@ export const worldCupData: WorldCupData = {
         "83 401"
       ),
       new Match(
-        "26.06.1990",
+        "26.06.1994",
         stage.group.a,
         ["Romania", "United States"],
         [[1, 0], [], []],
@@ -9229,7 +9227,7 @@ export const worldCupData: WorldCupData = {
         "93 869"
       ),
       new Match(
-        "19.06.1990",
+        "19.06.1994",
         stage.group.b,
         ["Cameroon", "Sweden"],
         [[2, 2], [], []],
@@ -9241,7 +9239,7 @@ export const worldCupData: WorldCupData = {
         "93 194"
       ),
       new Match(
-        "20.06.1990",
+        "20.06.1994",
         stage.group.b,
         ["Brazil", "Russia"],
         [[2, 0], [], []],
@@ -9253,7 +9251,7 @@ export const worldCupData: WorldCupData = {
         "81 061"
       ),
       new Match(
-        "24.06.1990",
+        "24.06.1994",
         stage.group.b,
         ["Brazil", "Cameroon"],
         [[3, 0], [], []],
@@ -9265,7 +9263,7 @@ export const worldCupData: WorldCupData = {
         "83 401"
       ),
       new Match(
-        "24.06.1990",
+        "24.06.1994",
         stage.group.b,
         ["Sweden", "Russia"],
         [[3, 1], [], []],
@@ -9277,7 +9275,7 @@ export const worldCupData: WorldCupData = {
         "71 528"
       ),
       new Match(
-        "28.06.1990",
+        "28.06.1994",
         stage.group.b,
         ["Russia", "Cameroon"],
         [[6, 1], [], []],
@@ -9289,7 +9287,7 @@ export const worldCupData: WorldCupData = {
         "74 914"
       ),
       new Match(
-        "28.06.1990",
+        "28.06.1994",
         stage.group.b,
         ["Brazil", "Sweden"],
         [[1, 1], [], []],
@@ -9301,7 +9299,7 @@ export const worldCupData: WorldCupData = {
         "77 217"
       ),
       new Match(
-        "17.06.1990",
+        "17.06.1994",
         stage.group.c,
         ["Germany", "Bolivia"],
         [[1, 0], [], []],
@@ -9313,19 +9311,19 @@ export const worldCupData: WorldCupData = {
         "63 117"
       ),
       new Match(
-        "17.06.1990",
+        "17.06.1994",
         stage.group.c,
         ["Spain", "Korea Republic"],
         [[2, 2], [], []],
         ["J.alinas", "A.Goikoetxea"],
         ["51", "56"],
         ["Hong Myung-bo", "Seo Jung-won"],
-        ["85", '90'],
+        ["85", "90"],
         stadiums.USA.cotton,
         "56 247"
       ),
       new Match(
-        "21.06.1990",
+        "21.06.1994",
         stage.group.c,
         ["Germany", "Spain"],
         [[1, 1], [], []],
@@ -9337,7 +9335,7 @@ export const worldCupData: WorldCupData = {
         "63 113"
       ),
       new Match(
-        "23.06.1990",
+        "23.06.1994",
         stage.group.c,
         ["Korea Republic", "Bolivia"],
         [[0, 0], [], []],
@@ -9349,7 +9347,7 @@ export const worldCupData: WorldCupData = {
         "54 453"
       ),
       new Match(
-        "27.06.1990",
+        "27.06.1994",
         stage.group.c,
         ["Spain", "Bolivia"],
         [[3, 1], [], []],
@@ -9361,7 +9359,7 @@ export const worldCupData: WorldCupData = {
         "63 089"
       ),
       new Match(
-        "27.06.1990",
+        "27.06.1994",
         stage.group.c,
         ["Germany", "Korea Republic"],
         [[3, 2], [], []],
@@ -9373,7 +9371,7 @@ export const worldCupData: WorldCupData = {
         "63 998"
       ),
       new Match(
-        "21.06.1990",
+        "21.06.1994",
         stage.group.d,
         ["Argentina", "Greece"],
         [[4, 0], [], []],
@@ -9385,7 +9383,7 @@ export const worldCupData: WorldCupData = {
         "54 456"
       ),
       new Match(
-        "21.06.1990",
+        "21.06.1994",
         stage.group.d,
         ["Nigeria", "Bulgaria"],
         [[3, 0], [], []],
@@ -9397,7 +9395,7 @@ export const worldCupData: WorldCupData = {
         "44 132"
       ),
       new Match(
-        "25.06.1990",
+        "25.06.1994",
         stage.group.d,
         ["Argentina", "Nigeria"],
         [[2, 1], [], []],
@@ -9409,7 +9407,7 @@ export const worldCupData: WorldCupData = {
         "54 453"
       ),
       new Match(
-        "26.06.1990",
+        "26.06.1994",
         stage.group.d,
         ["Bulgaria", "Greece"],
         [[4, 0], [], []],
@@ -9421,7 +9419,7 @@ export const worldCupData: WorldCupData = {
         "63 160"
       ),
       new Match(
-        "30.06.1990",
+        "30.06.1994",
         stage.group.d,
         ["Bulgaria", "Argentina"],
         [[2, 0], [], []],
@@ -9433,7 +9431,7 @@ export const worldCupData: WorldCupData = {
         "63 998"
       ),
       new Match(
-        "30.06.1990",
+        "30.06.1994",
         stage.group.d,
         ["Nigeria", "Greece"],
         [[2, 0], [], []],
@@ -9445,7 +9443,7 @@ export const worldCupData: WorldCupData = {
         "53 001"
       ),
       new Match(
-        "18.06.1990",
+        "18.06.1994",
         stage.group.e,
         ["Ireland", "Italy"],
         [[1, 0], [], []],
@@ -9457,7 +9455,7 @@ export const worldCupData: WorldCupData = {
         "75 338"
       ),
       new Match(
-        "19.06.1990",
+        "19.06.1994",
         stage.group.e,
         ["Norway", "Mexico"],
         [[1, 0], [], []],
@@ -9469,7 +9467,7 @@ export const worldCupData: WorldCupData = {
         "52 395"
       ),
       new Match(
-        "23.06.1990",
+        "23.06.1994",
         stage.group.e,
         ["Italy", "Norway"],
         [[1, 0], [], []],
@@ -9481,7 +9479,7 @@ export const worldCupData: WorldCupData = {
         "74 624"
       ),
       new Match(
-        "24.06.1990",
+        "24.06.1994",
         stage.group.e,
         ["Mexico", "Ireland"],
         [[2, 1], [], []],
@@ -9493,7 +9491,7 @@ export const worldCupData: WorldCupData = {
         "60 790"
       ),
       new Match(
-        "28.06.1990",
+        "28.06.1994",
         stage.group.e,
         ["Italy", "Mexico"],
         [[1, 1], [], []],
@@ -9505,7 +9503,7 @@ export const worldCupData: WorldCupData = {
         "52 535"
       ),
       new Match(
-        "28.06.1990",
+        "28.06.1994",
         stage.group.e,
         ["Ireland", "Norway"],
         [[0, 0], [], []],
@@ -9517,7 +9515,7 @@ export const worldCupData: WorldCupData = {
         "72 404"
       ),
       new Match(
-        "19.06.1990",
+        "19.06.1994",
         stage.group.f,
         ["Belgium", "Morocco"],
         [[1, 0], [], []],
@@ -9529,7 +9527,7 @@ export const worldCupData: WorldCupData = {
         "61 219"
       ),
       new Match(
-        "20.06.1990",
+        "20.06.1994",
         stage.group.f,
         ["Netherlands", "Saudi Arabia"],
         [[2, 1], [], []],
@@ -9541,7 +9539,7 @@ export const worldCupData: WorldCupData = {
         "50 535"
       ),
       new Match(
-        "25.06.1990",
+        "25.06.1994",
         stage.group.f,
         ["Belgium", "Netherlands"],
         [[1, 0], [], []],
@@ -9553,7 +9551,7 @@ export const worldCupData: WorldCupData = {
         "62 387"
       ),
       new Match(
-        "25.06.1990",
+        "25.06.1994",
         stage.group.f,
         ["Saudi Arabia", "Morocco"],
         [[2, 1], [], []],
@@ -9577,7 +9575,7 @@ export const worldCupData: WorldCupData = {
         "52 959"
       ),
       new Match(
-        "29.06.1990",
+        "29.06.1994",
         stage.group.f,
         ["Netherlands", "Morocco"],
         [[2, 1], [], []],
@@ -9589,7 +9587,7 @@ export const worldCupData: WorldCupData = {
         "60 578"
       ),
       new Match(
-        "02.07.1990",
+        "02.07.1994",
         stage[1_8],
         ["Germany", "Belgium"],
         [[3, 2], [], []],
@@ -9601,7 +9599,7 @@ export const worldCupData: WorldCupData = {
         "60 246"
       ),
       new Match(
-        "02.07.1990",
+        "02.07.1994",
         stage[1_8],
         ["Spain", "Switzerland"],
         [[3, 0], [], []],
@@ -9613,7 +9611,7 @@ export const worldCupData: WorldCupData = {
         "53 121"
       ),
       new Match(
-        "03.07.1990",
+        "03.07.1994",
         stage[1_8],
         ["Sweden", "Saudi Arabia"],
         [[3, 1], [], []],
@@ -9625,7 +9623,7 @@ export const worldCupData: WorldCupData = {
         "60 277"
       ),
       new Match(
-        "03.07.1990",
+        "03.07.1994",
         stage[1_8],
         ["Romania", "Argentina"],
         [[3, 2], [], []],
@@ -9637,7 +9635,7 @@ export const worldCupData: WorldCupData = {
         "90 469"
       ),
       new Match(
-        "04.07.1990",
+        "04.07.1994",
         stage[1_8],
         ["Netherlands", "Ireland"],
         [[2, 0], [], []],
@@ -9649,7 +9647,7 @@ export const worldCupData: WorldCupData = {
         "61 355"
       ),
       new Match(
-        "04.07.1990",
+        "04.07.1994",
         stage[1_8],
         ["Brazil", "United States"],
         [[1, 0], [], []],
@@ -9661,7 +9659,7 @@ export const worldCupData: WorldCupData = {
         "84 147"
       ),
       new Match(
-        "05.07.1990",
+        "05.07.1994",
         stage[1_8],
         ["Italy", "Nigeria"],
         [[1, 1], [1, 0], []],
@@ -9673,10 +9671,14 @@ export const worldCupData: WorldCupData = {
         "54 367"
       ),
       new Match(
-        "05.07.1990",
+        "05.07.1994",
         stage[1_8],
         ["Bulgaria", "Mexico"],
-        [[1, 1], [0, 0], [3, 1]],
+        [
+          [1, 1],
+          [0, 0],
+          [3, 1],
+        ],
         ["H.Stoichkov"],
         ["6"],
         ["García Aspe"],
@@ -9685,7 +9687,7 @@ export const worldCupData: WorldCupData = {
         "71 030"
       ),
       new Match(
-        "09.07.1990",
+        "09.07.1994",
         stage[1_4],
         ["Italy", "Spain"],
         [[2, 1], [], []],
@@ -9697,7 +9699,7 @@ export const worldCupData: WorldCupData = {
         "53 400"
       ),
       new Match(
-        "09.07.1990",
+        "09.07.1994",
         stage[1_4],
         ["Brazil", "Netherlands"],
         [[3, 2], [], []],
@@ -9709,7 +9711,7 @@ export const worldCupData: WorldCupData = {
         "63 500"
       ),
       new Match(
-        "10.07.1990",
+        "10.07.1994",
         stage[1_4],
         ["Bulgaria", "Germany"],
         [[2, 1], [], []],
@@ -9721,10 +9723,14 @@ export const worldCupData: WorldCupData = {
         "72 416"
       ),
       new Match(
-        "10.07.1990",
+        "10.07.1994",
         stage[1_4],
         ["Sweden", "Romania"],
-        [[1, 1], [1, 1], [5, 4]],
+        [
+          [1, 1],
+          [1, 1],
+          [5, 4],
+        ],
         ["T.Brolin", "K.Andersson"],
         ["78", "115"],
         ["F.Răducioiu"],
@@ -9733,7 +9739,7 @@ export const worldCupData: WorldCupData = {
         "83 500"
       ),
       new Match(
-        "13.07.1990",
+        "13.07.1994",
         stage[1_2],
         ["Italy", "Bulgaria"],
         [[2, 1], [], []],
@@ -9745,7 +9751,7 @@ export const worldCupData: WorldCupData = {
         "74 110"
       ),
       new Match(
-        "13.07.1990",
+        "13.07.1994",
         stage[1_2],
         ["Brazil", "Sweden"],
         [[1, 0], [], []],
@@ -9757,7 +9763,7 @@ export const worldCupData: WorldCupData = {
         "91 856"
       ),
       new Match(
-        "16.07.1990",
+        "16.07.1994",
         stage.place3,
         ["Sweden", "Bulgaria"],
         [[4, 0], [], []],
@@ -9769,10 +9775,14 @@ export const worldCupData: WorldCupData = {
         "91 500"
       ),
       new Match(
-        "17.07.1990",
+        "17.07.1994",
         stage.final,
         ["Brazil", "Italy"],
-        [[0, 0], [0, 0], [3, 2]],
+        [
+          [0, 0],
+          [0, 0],
+          [3, 2],
+        ],
         [],
         [],
         [],
@@ -9788,9 +9798,784 @@ export const worldCupData: WorldCupData = {
     title: "1998 FIFA World Cup",
     date: "10 June - 12 July",
     icon: iconWorldCup1998,
-    background: [],
+    background: [backgroundFWC1998_1, backgroundFWC1998_2],
     hostCountry: ["France"],
-    finalStage: [],
+    finalStage: [
+      new Match(
+        "10.06.1998",
+        stage.group.a,
+        ["Brazil", "Scotland"],
+        [[2, 1], [], []],
+        ["César Sampaio", "T.Boyd"],
+        ["5", "74(o.g.)"],
+        ["J.Collins"],
+        ["38(p)"],
+        stadiums.France.france,
+        "80 000"
+      ),
+      new Match(
+        "10.06.1998",
+        stage.group.a,
+        ["Morocco", "Norway"],
+        [[2, 2], [], []],
+        ["M.Hadji", "A.Hadda"],
+        ["37", "60"],
+        ["Y.Chippo", "D.Eggen"],
+        ["45+1(o.g.)", "61"],
+        stadiums.France.mosson,
+        "29 800"
+      ),
+      new Match(
+        "16.06.1998",
+        stage.group.a,
+        ["Scotland", "Norway"],
+        [[1, 1], [], []],
+        ["C.Burley", "A.Hadda"],
+        ["66"],
+        ["H.Flo"],
+        ["46"],
+        stadiums.France.lescure,
+        "31 800"
+      ),
+      new Match(
+        "16.06.1998",
+        stage.group.a,
+        ["Brazil", "Morocco"],
+        [[3, 0], [], []],
+        ["Ronaldo", "Rivaldo", "Bebeto"],
+        ["9", "45+2", "50"],
+        [],
+        [],
+        stadiums.France.beaujoire,
+        "35 500"
+      ),
+      new Match(
+        "23.06.1998",
+        stage.group.a,
+        ["Morocco", "Scotland"],
+        [[3, 0], [], []],
+        ["S.Bassir", "A.Hadda"],
+        ["23, 85", "46"],
+        [],
+        [],
+        stadiums.France.geoffroyGuichard,
+        "30 600"
+      ),
+      new Match(
+        "23.06.1998",
+        stage.group.a,
+        ["Norway", "Brazil"],
+        [[2, 1], [], []],
+        ["T.A.Flo", "K.Rekdal"],
+        ["83", "89(p)"],
+        ["Bebeto"],
+        ["78"],
+        stadiums.France.velodrome,
+        "57 000"
+      ),
+      new Match(
+        "11.06.1998",
+        stage.group.b,
+        ["Italy", "Chile"],
+        [[2, 2], [], []],
+        ["C.Vieri", "R.Baggio"],
+        ["10", "84(p)"],
+        ["Marcelo Salas"],
+        ["45+3, 50"],
+        stadiums.France.lescure,
+        "31 800"
+      ),
+      new Match(
+        "11.06.1998",
+        stage.group.b,
+        ["Cameroon", "Austria"],
+        [[1, 1], [], []],
+        ["P.Njanka"],
+        ["77"],
+        ["T.Polster"],
+        ["90+1"],
+        stadiums.France.toulouse,
+        "33 500"
+      ),
+      new Match(
+        "17.06.1998",
+        stage.group.b,
+        ["Chile", "Austria"],
+        [[1, 1], [], []],
+        ["Marcelo Salas"],
+        ["70"],
+        ["I.Vastić"],
+        ["90+2"],
+        stadiums.France.geoffroyGuichard,
+        "30 600"
+      ),
+      new Match(
+        "17.06.1998",
+        stage.group.b,
+        ["Italy", "Cameroon"],
+        [[3, 0], [], []],
+        ["L.Di Biagio", "C.Vieri"],
+        ["7", "75, 89"],
+        [],
+        [],
+        stadiums.France.mosson,
+        "29 800"
+      ),
+      new Match(
+        "23.06.1998",
+        stage.group.b,
+        ["Italy", "Austria"],
+        [[2, 1], [], []],
+        ["C.Vieri", "R.Baggio"],
+        ["48", "90"],
+        ["A.Herzog"],
+        ["90+2"],
+        stadiums.France.france,
+        "80 000"
+      ),
+      new Match(
+        "23.06.1998",
+        stage.group.b,
+        ["Chile", "Cameroon"],
+        [[1, 1], [], []],
+        ["J.Sierra"],
+        ["20"],
+        ["H.P.Mboma"],
+        ["56"],
+        stadiums.France.beaujoire,
+        "35 500"
+      ),
+      new Match(
+        "12.06.1998",
+        stage.group.c,
+        ["Denmark", "Saudi Arabia"],
+        [[1, 0], [], []],
+        ["M.Rieper"],
+        ["69"],
+        [],
+        [],
+        stadiums.France.felixBollaert,
+        "38 100"
+      ),
+      new Match(
+        "12.06.1998",
+        stage.group.c,
+        ["France", "South Africa"],
+        [[3, 0], [], []],
+        ["C.Dugarry", "P.Issa", "T.Henry"],
+        ["36", "77(o.g.)", "90+2"],
+        [],
+        [],
+        stadiums.France.velodrome,
+        "55 000"
+      ),
+      new Match(
+        "18.06.1998",
+        stage.group.c,
+        ["South Africa", "Denmark"],
+        [[1, 1], [], []],
+        ["B.McCarthy"],
+        ["51"],
+        ["A.Nielsen"],
+        ["12"],
+        stadiums.France.toulouse,
+        "33 500"
+      ),
+      new Match(
+        "18.06.1998",
+        stage.group.c,
+        ["France", "Saudi Arabia"],
+        [[4, 0], [], []],
+        ["T.Henry", "D.Trezeguet", "B.Lizarazu"],
+        ["37, 78", "68", "85"],
+        [],
+        [],
+        stadiums.France.france,
+        "80 000"
+      ),
+      new Match(
+        "24.06.1998",
+        stage.group.c,
+        ["France", "Denmark"],
+        [[2, 1], [], []],
+        ["Y.Djorkaeff", "E.Petit"],
+        ["12(p)", "56"],
+        ["M.Laudrup"],
+        ["42(p)"],
+        stadiums.France.gerland,
+        "39 100"
+      ),
+      new Match(
+        "24.06.1998",
+        stage.group.c,
+        ["South Africa", "Saudi Arabia"],
+        [[2, 2], [], []],
+        ["S.Bartlett"],
+        ["18, 90+3(p)"],
+        ["Sami Al Jaber", "Youssef Al Tunayan"],
+        ["45+2(p)", "74(p)"],
+        stadiums.France.lescure,
+        "31 800"
+      ),
+      new Match(
+        "12.06.1998",
+        stage.group.d,
+        ["Paraguay", "Bulgaria"],
+        [[0, 0], [], []],
+        [],
+        [],
+        [],
+        [],
+        stadiums.France.mosson,
+        "29 800"
+      ),
+      new Match(
+        "13.06.1998",
+        stage.group.d,
+        ["Nigeria", "Spain"],
+        [[3, 2], [], []],
+        ["F.Hierro", "Raúl"],
+        ["21", "47"],
+        ["M.Adepoju", "A.Zubizarreta", "S.Oliseh"],
+        ["24", "73(o.g.)", "78"],
+        stadiums.France.beaujoire,
+        "35 500"
+      ),
+      new Match(
+        "19.06.1998",
+        stage.group.d,
+        ["Nigeria", "Bulgaria"],
+        [[1, 0], [], []],
+        ["V.Ikpeba"],
+        ["28"],
+        [],
+        [],
+        stadiums.France.parcDesPrinces,
+        "45 500"
+      ),
+      new Match(
+        "19.06.1998",
+        stage.group.d,
+        ["Spain", "Paraguay"],
+        [[0, 0], [], []],
+        [],
+        [],
+        [],
+        [],
+        stadiums.France.geoffroyGuichard,
+        "30 600"
+      ),
+      new Match(
+        "24.06.1998",
+        stage.group.d,
+        ["Paraguay", "Nigeria"],
+        [[3, 1], [], []],
+        ["C.Ayala", "M.Benitez", "J.Cardozo"],
+        ["1", "58", "86"],
+        ["W.Oruma"],
+        ["11"],
+        stadiums.France.toulouse,
+        "33 500"
+      ),
+      new Match(
+        "24.06.1998",
+        stage.group.d,
+        ["Spain", "Bulgaria"],
+        [[6, 1], [], []],
+        ["F.Hierro", "Luis Enrique", "F.Morientes", "G.Bachev", "Kiko"],
+        ["6(p)", "18", "55, 81", "88(o.g.)", "90+4"],
+        ["E.Kostadinov"],
+        ["58"],
+        stadiums.France.felixBollaert,
+        "38 100"
+      ),
+      new Match(
+        "13.06.1998",
+        stage.group.e,
+        ["Mexico", "Korea Republic"],
+        [[3, 1], [], []],
+        ["R.Pelaez", "Luis Hernandez"],
+        ["50", "75, 84"],
+        ["Ha Seok-ju"],
+        ["27"],
+        stadiums.France.gerland,
+        "39 100"
+      ),
+      new Match(
+        "13.06.1998",
+        stage.group.e,
+        ["Netherlands", "Belgium"],
+        [[0, 0], [], []],
+        [],
+        [],
+        [],
+        [],
+        stadiums.France.france,
+        "77 000"
+      ),
+      new Match(
+        "20.06.1998",
+        stage.group.e,
+        ["Belgium", "Mexico"],
+        [[2, 2], [], []],
+        ["M.Wilmots"],
+        ["42, 47"],
+        ["García Aspe", "C.Blanco"],
+        ["55(p)", "62"],
+        stadiums.France.lescure,
+        "31 800"
+      ),
+      new Match(
+        "20.06.1998",
+        stage.group.e,
+        ["Netherlands", "Korea Republic"],
+        [[5, 0], [], []],
+        [
+          "P.Cocu",
+          "M.Overmars",
+          "D.Bergkamp",
+          "P. van Hooijdonk",
+          "R. de Boer",
+        ],
+        ["37", "41", "71", "80", "83"],
+        [],
+        [],
+        stadiums.France.velodrome,
+        "55 000"
+      ),
+      new Match(
+        "25.06.1998",
+        stage.group.e,
+        ["Netherlands", "Mexico"],
+        [[2, 2], [], []],
+        ["P.Cocu", "R. de Boer"],
+        ["4", "18"],
+        ["R.Pelaez", "Luis Hernandez"],
+        ["75", "90+4"],
+        stadiums.France.geoffroyGuichard,
+        "30 600"
+      ),
+      new Match(
+        "25.06.1998",
+        stage.group.e,
+        ["Belgium", "Korea Republic"],
+        [[1, 1], [], []],
+        ["L.Nilis"],
+        ["7"],
+        ["Yoo Sang-chul"],
+        ["72"],
+        stadiums.France.parcDesPrinces,
+        "45 500"
+      ),
+      new Match(
+        "14.06.1998",
+        stage.group.f,
+        ["Serbia", "Iran"],
+        [[1, 0], [], []],
+        ["S.Mihajlović"],
+        ["73"],
+        [],
+        [],
+        stadiums.France.geoffroyGuichard,
+        "30 600"
+      ),
+      new Match(
+        "15.06.1998",
+        stage.group.f,
+        ["Germany", "United States"],
+        [[2, 0], [], []],
+        ["A.Möller", "J.Klinsmann"],
+        ["9", "65"],
+        [],
+        [],
+        stadiums.France.parcDesPrinces,
+        "45 500"
+      ),
+      new Match(
+        "21.06.1998",
+        stage.group.f,
+        ["Germany", "Serbia"],
+        [[2, 2], [], []],
+        ["S.Mihajlović", "O.Bierhoff"],
+        ["72(o.g.)", "78"],
+        ["P.Mijatović", "D.Stojković"],
+        ["13", "52"],
+        stadiums.France.felixBollaert,
+        "38 100"
+      ),
+      new Match(
+        "21.06.1998",
+        stage.group.f,
+        ["Iran", "United States"],
+        [[2, 1], [], []],
+        ["H.Estili", "M.Mahdavikia"],
+        ["40", "84"],
+        ["B.McBride"],
+        ["87"],
+        stadiums.France.gerland,
+        "39 100"
+      ),
+      new Match(
+        "25.06.1998",
+        stage.group.f,
+        ["Germany", "Iran"],
+        [[2, 0], [], []],
+        ["O.Bierhoff", "J.Klinsmann"],
+        ["50", "57"],
+        [],
+        [],
+        stadiums.France.mosson,
+        "29 800"
+      ),
+      new Match(
+        "25.06.1998",
+        stage.group.f,
+        ["Serbia", "United States"],
+        [[1, 0], [], []],
+        ["S.Komljenović"],
+        ["4"],
+        [],
+        [],
+        stadiums.France.beaujoire,
+        "35 500"
+      ),
+      new Match(
+        "15.06.1998",
+        stage.group.g,
+        ["England", "Tunisia"],
+        [[2, 0], [], []],
+        ["A.Shearer", "P.Scholes"],
+        ["42", "89"],
+        [],
+        [],
+        stadiums.France.velodrome,
+        "54 587"
+      ),
+      new Match(
+        "15.06.1998",
+        stage.group.g,
+        ["Romania", "Colombia"],
+        [[1, 0], [], []],
+        ["B.Ilie"],
+        ["45+1"],
+        [],
+        [],
+        stadiums.France.gerland,
+        "39 100"
+      ),
+      new Match(
+        "22.06.1998",
+        stage.group.g,
+        ["Colombia", "Tunisia"],
+        [[1, 0], [], []],
+        ["L.Preciado"],
+        ["83"],
+        [],
+        [],
+        stadiums.France.mosson,
+        "29 800"
+      ),
+      new Match(
+        "22.06.1998",
+        stage.group.g,
+        ["Romania", "England"],
+        [[2, 1], [], []],
+        ["V.Moldovan", "D.Petrescu"],
+        ["46", "90"],
+        ["M.Owen"],
+        ["81"],
+        stadiums.France.toulouse,
+        "33 500"
+      ),
+      new Match(
+        "26.06.1998",
+        stage.group.g,
+        ["England", "Colombia"],
+        [[2, 0], [], []],
+        ["D.Anderton", "D.Beckham"],
+        ["20", "29"],
+        [],
+        [],
+        stadiums.France.felixBollaert,
+        "38 100"
+      ),
+      new Match(
+        "26.06.1998",
+        stage.group.g,
+        ["Romania", "Tunisia"],
+        [[1, 1], [], []],
+        ["V.Moldovan"],
+        ["20", "29"],
+        ["S.Souayah"],
+        ["12(p)"],
+        stadiums.France.france,
+        "77 000"
+      ),
+      new Match(
+        "14.06.1998",
+        stage.group.h,
+        ["Argentina", "Japan"],
+        [[1, 0], [], []],
+        ["G.Batistuta"],
+        ["28"],
+        [],
+        [],
+        stadiums.France.toulouse,
+        "33 500"
+      ),
+      new Match(
+        "14.06.1998",
+        stage.group.h,
+        ["Croatia", "Jamaica"],
+        [[3, 1], [], []],
+        ["M.Stanić", "R.Prosinečki", "D.Šuker"],
+        ["27", "53", "69"],
+        ["R.Earle"],
+        ["45"],
+        stadiums.France.felixBollaert,
+        "38 100"
+      ),
+      new Match(
+        "20.06.1998",
+        stage.group.h,
+        ["Croatia", "Japan"],
+        [[1, 0], [], []],
+        ["D.Šuker"],
+        ["77"],
+        [],
+        [],
+        stadiums.France.beaujoire,
+        "35 500"
+      ),
+      new Match(
+        "21.06.1998",
+        stage.group.h,
+        ["Argentina", "Jamaica"],
+        [[5, 0], [], []],
+        ["A.Ortega", "G.Batistuta"],
+        ["32, 55", "73, 78, 83(p)"],
+        [],
+        [],
+        stadiums.France.parcDesPrinces,
+        "45 500"
+      ),
+      new Match(
+        "26.06.1998",
+        stage.group.h,
+        ["Argentina", "Croatia"],
+        [[1, 0], [], []],
+        ["M.Pineda"],
+        ["36"],
+        [],
+        [],
+        stadiums.France.lescure,
+        "31 800"
+      ),
+      new Match(
+        "26.06.1998",
+        stage.group.h,
+        ["Jamaica", "Japan"],
+        [[2, 1], [], []],
+        ["T.Whitmore"],
+        ["39, 54"],
+        ["M.Nakayama"],
+        ["74"],
+        stadiums.France.gerland,
+        "39 100"
+      ),
+      new Match(
+        "27.06.1998",
+        stage[1_8],
+        ["Italy", "Norway"],
+        [[1, 0], [], []],
+        ["C.Vieri"],
+        ["18"],
+        [],
+        [],
+        stadiums.France.velodrome,
+        "55 000"
+      ),
+      new Match(
+        "27.06.1998",
+        stage[1_8],
+        ["Brazil", "Chile"],
+        [[4, 1], [], []],
+        ["Cesar Sampaio", "Ronaldo"],
+        ["11, 26", "45+3(p), 72"],
+        ["Marcelo Salas"],
+        ["70"],
+        stadiums.France.parcDesPrinces,
+        "45 500"
+      ),
+      new Match(
+        "28.06.1998",
+        stage[1_8],
+        ["France", "Paraguay"],
+        [[0, 0], [1, 0], []],
+        ["L.Blanc"],
+        ["114"],
+        [],
+        [],
+        stadiums.France.felixBollaert,
+        "31 800"
+      ),
+      new Match(
+        "28.06.1998",
+        stage[1_8],
+        ["Denmark", "Nigeria"],
+        [[4, 1], [], []],
+        ["P.Møller", "B.Laudrup", "E.Sand", "T.Helveg"],
+        ["3", "12", "58", "76"],
+        ["T.Babangida"],
+        ["77"],
+        stadiums.France.france,
+        "77 000"
+      ),
+      new Match(
+        "29.06.1998",
+        stage[1_8],
+        ["Germany", "Mexico"],
+        [[2, 1], [], []],
+        ["J.Klinsmann", "O.Bierhoff"],
+        ["74", "86"],
+        ["Luis Hernandez"],
+        ["47"],
+        stadiums.France.mosson,
+        "29 800"
+      ),
+      new Match(
+        "29.06.1998",
+        stage[1_8],
+        ["Netherlands", "Serbia"],
+        [[2, 1], [], []],
+        ["D.Bergkamp", "E.Davids"],
+        ["38", "90+2"],
+        ["S.Komljenović"],
+        ["48"],
+        stadiums.France.toulouse,
+        "33 500"
+      ),
+      new Match(
+        "30.06.1998",
+        stage[1_8],
+        ["Croatia", "Romania"],
+        [[1, 0], [], []],
+        ["D.Šuker"],
+        ["45+2(p)"],
+        [],
+        [],
+        stadiums.France.lescure,
+        "31 800"
+      ),
+      new Match(
+        "30.06.1998",
+        stage[1_8],
+        ["Argentina", "England"],
+        [[2, 2], [0, 0], [4, 3]],
+        ["G.Batistuta", "J.Zanetti"],
+        ["5(p)", "45+1"],
+        ["A.Shearer", "M.Owen"],
+        ["9(p)", "16"],
+        stadiums.France.geoffroyGuichard,
+        "30 600"
+      ),
+      new Match(
+        "03.07.1998",
+        stage[1_4],
+        ["France", "Italy"],
+        [[0, 0], [0, 0], [4, 3]],
+        [],
+        [],
+        [],
+        [],
+        stadiums.France.france,
+        "77 000"
+      ),
+      new Match(
+        "03.07.1998",
+        stage[1_4],
+        ["Brazil", "Denmark"],
+        [[3, 2], [], []],
+        ["Bebeto", "Rivaldo"],
+        ["10", "25, 59"],
+        ["M.Jørgensen", "B.Laudrup"],
+        ["2", "50"],
+        stadiums.France.beaujoire,
+        "35 500"
+      ),
+      new Match(
+        "04.07.1998",
+        stage[1_4],
+        ["Netherlands", "Argentina"],
+        [[2, 1], [], []],
+        ["P.Kluivert", "D.Bergkamp"],
+        ["12", "90"],
+        ["Claudio López"],
+        ["17"],
+        stadiums.France.velodrome,
+        "55 000"
+      ),
+      new Match(
+        "04.07.1998",
+        stage[1_4],
+        ["Croatia", "Germany"],
+        [[3, 0], [], []],
+        ["R.Jarni", "G.Vlaović", "D.Šuker"],
+        ["45+3", "80", "85"],
+        [],
+        [],
+        stadiums.France.gerland,
+        "39 100"
+      ),
+      new Match(
+        "07.07.1998",
+        stage[1_2],
+        ["Brazil", "Netherlands"],
+        [[1, 1], [0, 0], [4, 2]],
+        ["Ronaldo"],
+        ["46"],
+        ["P.Kluivert"],
+        ["87"],
+        stadiums.France.velodrome,
+        "54 000"
+      ),
+      new Match(
+        "08.07.1998",
+        stage[1_2],
+        ["France", "Croatia"],
+        [[2, 1], [], []],
+        ["L.Thuram"],
+        ["47, 70"],
+        ["D.Šuker"],
+        ["46"],
+        stadiums.France.france,
+        "76 000"
+      ),
+      new Match(
+        "11.07.1998",
+        stage.place3,
+        ["Croatia", "Netherlands"],
+        [[2, 1], [], []],
+        ["R.Prosinečki", "D.Šuker"],
+        ["14", "36"],
+        ["B.Zenden"],
+        ["22"],
+        stadiums.France.parcDesPrinces,
+        "45 500"
+      ),
+      new Match(
+        "12.07.1998",
+        stage.final,
+        ["France", "Brazil"],
+        [[3, 0], [], []],
+        ["Z.Zidane", "E.Petit"],
+        ["27, 45+1", "90+3"],
+        [],
+        [],
+        stadiums.France.france,
+        "75 000"
+      ),
+    ],
     qualification: [],
   },
   2002: {

@@ -153,6 +153,7 @@ import flagScotland from "./../../assets/icon/flag/Scotland.png";
 import coatOfArmsScotland from "./../../assets/icon/coat-of-arms/Scotland.png";
 import iconSerbia from "./../../assets/icon/national/Serbia.png";
 import flagSerbia from "./../../assets/icon/flag/Serbia.png";
+import flagSerbia1 from "./../../assets/icon/flag/Serbia1.png";
 import coatOfArmsSerbia from "./../../assets/icon/coat-of-arms/Serbia.png";
 import iconSlovakia from "./../../assets/icon/national/Slovakia.png";
 import flagSlovakia from "./../../assets/icon/flag/Slovakia.png";
@@ -1823,8 +1824,15 @@ export const nationalTeams: NationalTeams = {
   },
   Serbia: {
     id: v1(),
-    names: [{ nameCountry: "Serbia", period: "0000-p.t." }],
-    flags: [{ flagCountry: flagSerbia, period: "0000-p.t." }],
+    names: [
+      { nameCountry: "Serbia", period: "2006-p.t." },
+      { nameCountry: "FR Yugoslavia", period: "1992-2002" },
+      { nameCountry: "Serbia & Mont.", period: "2003-2005" },
+    ],
+    flags: [
+      { flagCountry: flagSerbia, period: "2006-p.t." },
+      { flagCountry: flagSerbia1, period: "1992-2005" },
+    ],
     coatOfArms: coatOfArmsSerbia,
     associationIcon: iconSerbia,
     associationDate: {

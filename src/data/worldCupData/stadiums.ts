@@ -2,15 +2,15 @@ type Stadium = {
   title: string;
   city: string;
   country: string;
-}
+};
 
 type CountryStadiums = {
   [stadiumKey: string]: Stadium;
-}
+};
 
 type Stadiums = {
   [countryKey: string]: CountryStadiums;
-}
+};
 
 export const stadiums: Stadiums = {
   noMatch: {
@@ -18,7 +18,7 @@ export const stadiums: Stadiums = {
       title: "",
       city: "",
       country: "",
-    }
+    },
   },
   Uruguay: {
     pocitos: {
@@ -35,7 +35,7 @@ export const stadiums: Stadiums = {
       title: "Estadio Centenario",
       city: "Montevideo",
       country: "Uruguay",
-    }
+    },
   },
   Italy: {
     ferraris: {
@@ -127,180 +127,220 @@ export const stadiums: Stadiums = {
       title: "Stadio Marc'Antonio Bentegodi",
       city: "Verona",
       country: "Italy",
-    }
+    },
   },
   France: {
+    france: {
+      title: "Stade de France",
+      city: "Paris",
+      country: "France",
+    },
     parcDesPrinces: {
       title: "Parc des Princes",
       city: "Paris",
       country: "France",
     },
     velodrome: {
+      title: "Stade Vélodrome",
+      city: "Marseille",
+      country: "France",
+    },
+    gerland: {
+      title: "Stade de Gerland",
+      city: "Lyon",
+      country: "France",
+    },
+    felixBollaert: {
+      title: "Stade Félix-Bollaert",
+      city: "Lens",
+      country: "France",
+    },
+    beaujoire: {
+      title: "Stade de la Beaujoire",
+      city: "Nantes",
+      country: "France",
+    },
+    velodromeReims: {
       title: "Vélodrome Municipal",
       city: "Reims",
-      country: "France"
+      country: "France",
     },
     toec: {
       title: "Stade du T.O.E.C.",
       city: "Toulouse",
-      country: "France"
+      country: "France",
+    },
+    geoffroyGuichard: {
+      title: "Stade Geoffroy-Guichard",
+      city: "Saint-Étienne",
+      country: "France",
+    },
+    toulouse: {
+      title: "Stadium de Toulouse",
+      city: "Toulouse",
+      country: "France",
+    },
+    mosson: {
+      title: "Stade de la Mosson",
+      city: "Montpellier",
+      country: "France",
     },
     colombes: {
       title: "Stade Olympique de Colombes",
       city: "Paris",
-      country: "France"
+      country: "France",
     },
     meinau: {
       title: "Stade de la Meinau",
       city: "Strasbourg",
-      country: "France"
+      country: "France",
     },
     municipalHavre: {
       title: "Stade municipal",
       city: "Le Havre",
-      country: "France"
+      country: "France",
     },
-    parcLescure: {
+    lescure: {
       title: "Parc Lescure",
       city: "Bordeaux",
-      country: "France"
+      country: "France",
     },
     boucquey: {
       title: "Stade Victor Boucquey",
       city: "Lille",
-      country: "France"
+      country: "France",
     },
     fortCarre: {
       title: "Stade du Fort Carré",
       city: "Antibes",
-      country: "France"
-    }
+      country: "France",
+    },
   },
   Brazil: {
     maracana: {
       title: "Estádio do Maracanã",
       city: "Rio de Janeiro",
-      country: "Brazil"
+      country: "Brazil",
     },
     independencia: {
       title: "Estádio Independência",
       city: "Belo Horizonte",
-      country: "Brazil"
+      country: "Brazil",
     },
     britto: {
       title: "Estádio Durival de Britto",
       city: "Curitiba",
-      country: "Brazil"
-    }, 
+      country: "Brazil",
+    },
     pacaembu: {
       title: "Estádio do Pacaembu",
       city: "São Paulo",
-      country: "Brazil"
+      country: "Brazil",
     },
     eucaliptos: {
       title: "Estádio dos Eucaliptos",
       city: "Porto Alegre",
-      country: "Brazil"
+      country: "Brazil",
     },
     retiro: {
       title: "Estádio Ilha do Retiro",
       city: "Recife",
-      country: "Brazil"
-    }
+      country: "Brazil",
+    },
   },
   Switzerland: {
     wankdorf: {
       title: "Wankdorf Stadium",
       city: "Bern",
-      country: "Switzerland"
+      country: "Switzerland",
     },
     hardturm: {
       title: "Hardturm Stadium",
       city: "Zürich",
-      country: "Switzerland"
+      country: "Switzerland",
     },
     pontaise: {
       title: "Stade Olympique de la Pontaise",
       city: "Lausanne",
-      country: "Switzerland"
+      country: "Switzerland",
     },
     jakob: {
       title: "St. Jakob Stadium",
       city: "Basel",
-      country: "Switzerland"
+      country: "Switzerland",
     },
     charmilles: {
       title: "Charmilles Stadium",
       city: "Geneva",
-      country: "Switzerland"
+      country: "Switzerland",
     },
     cornaredo: {
       title: "Cornaredo Stadium",
       city: "Lugano",
-      country: "Switzerland"
-    }
+      country: "Switzerland",
+    },
   },
   Sweden: {
     rasunda: {
       title: "Råsunda Stadium",
       city: "Solna",
-      country: "Sweden"
+      country: "Sweden",
     },
     ullevi: {
       title: "Ullevi",
       city: "Gothenburg",
-      country: "Sweden"
+      country: "Sweden",
     },
     malmo: {
       title: "Malmö Stadion",
       city: "Malmö",
-      country: "Sweden"
+      country: "Sweden",
     },
     idrottsparken: {
       title: "Idrottsparken",
       city: "Norrköping",
-      country: "Sweden"
+      country: "Sweden",
     },
     ryavallen: {
       title: "Ryavallen",
       city: "Borås",
-      country: "Sweden"
+      country: "Sweden",
     },
     rimnersvallen: {
       title: "Rimnersvallen",
       city: "Uddevalla",
-      country: "Sweden"
+      country: "Sweden",
     },
     jernvallen: {
       title: "Jernvallen",
       city: "Sandviken",
-      country: "Sweden"
+      country: "Sweden",
     },
     tunavallen: {
       title: "Tunavallen",
       city: "Eskilstuna",
-      country: "Sweden"
+      country: "Sweden",
     },
     eyravallen: {
       title: "Eyravallen",
       city: "Örebro",
-      country: "Sweden"
+      country: "Sweden",
     },
     arosvallen: {
       title: "Arosvallen",
       city: "Västerås",
-      country: "Sweden"
+      country: "Sweden",
     },
     olympiastadion: {
       title: "Olympiastadion",
       city: "Helsingborg",
-      country: "Sweden"
+      country: "Sweden",
     },
     orjansVall: {
       title: "Örjans Vall",
       city: "Halmstad",
-      country: "Sweden"
-    }
+      country: "Sweden",
+    },
   },
   Chile: {
     nacional: {
@@ -322,7 +362,7 @@ export const stadiums: Stadiums = {
       title: "Estadio Carlos Dittborn",
       city: "Arica",
       country: "Chile",
-    }
+    },
   },
   England: {
     wembley: {
@@ -364,7 +404,7 @@ export const stadiums: Stadiums = {
       title: "Ayresome Park",
       city: "Middlesbrough",
       country: "England",
-    }
+    },
   },
   Mexico: {
     azteca: {
@@ -473,7 +513,7 @@ export const stadiums: Stadiums = {
       title: "Westfalenstadion",
       city: "Dortmund",
       country: "Germany",
-    }
+    },
   },
   Argentina: {
     riverPlate: {
@@ -641,4 +681,4 @@ export const stadiums: Stadiums = {
       country: "United States",
     },
   },
-}
+};
