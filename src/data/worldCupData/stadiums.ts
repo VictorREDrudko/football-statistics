@@ -681,4 +681,108 @@ export const stadiums: Stadiums = {
       country: "United States",
     },
   },
+  SouthKorea: {
+    daegu: {
+      title: "Daegu World Cup Stadium",
+      city: "Daegu",
+      country: "Korea Republic",
+    },
+    seoul: {
+      title: "Seoul World Cup Stadium",
+      city: "Seoul",
+      country: "Korea Republic",
+    },
+    busan: {
+      title: "Busan Asiad Stadium",
+      city: "Busan",
+      country: "Korea Republic",
+    },
+    incheon: {
+      title: "Incheon World Cup Stadium",
+      city: "Incheon",
+      country: "Korea Republic",
+    },
+    ulsan: {
+      title: "Ulsan Munsu Football Stadium",
+      city: "Ulsan",
+      country: "Korea Republic",
+    },
+    suwon: {
+      title: "Suwon World Cup Stadium",
+      city: "Suwon",
+      country: "Korea Republic",
+    },
+    gwangju: {
+      title: "Gwangju World Cup Stadium",
+      city: "Gwangju",
+      country: "Korea Republic",
+    },
+    jeonju: {
+      title: "Jeonju World Cup Stadium",
+      city: "Jeonju",
+      country: "Korea Republic",
+    },
+    jeju: {
+      title: "Jeju World Cup Stadium",
+      city: "Seogwipo",
+      country: "Korea Republic",
+    },
+    daejeon: {
+      title: "Daejeon World Cup Stadium",
+      city: "Daejeon",
+      country: "Korea Republic",
+    },
+  },
+  Japan: {
+    yokohama: {
+      title: "International Stadium Yokohama",
+      city: "Yokohama",
+      country: "Japan",
+    },
+    saitama: {
+      title: "Saitama Stadium",
+      city: "Saitama",
+      country: "Japan",
+    },
+    shizuoka: {
+      title: "Shizuoka Stadium ECOPA",
+      city: "Shizuoka",
+      country: "Japan",
+    },
+    nagai: {
+      title: "Nagai Stadium",
+      city: "Osaka",
+      country: "Japan",
+    },
+    miyagi: {
+      title: "Miyagi Stadium",
+      city: "Miyagi",
+      country: "Japan",
+    },
+    oita: {
+      title: "Ōita Stadium",
+      city: "Ōita",
+      country: "Japan",
+    },
+    niigata: {
+      title: "Niigata Stadium",
+      city: "Niigata",
+      country: "Japan",
+    },
+    kashima: {
+      title: "Kashima Stadium",
+      city: "Kashima",
+      country: "Japan",
+    },
+    kobe: {
+      title: "Kobe Wing Stadium",
+      city: "Kobe",
+      country: "Japan",
+    },
+    sapporo: {
+      title: "Sapporo Dome",
+      city: "Sapporo",
+      country: "Japan",
+    },
+  }
 };
