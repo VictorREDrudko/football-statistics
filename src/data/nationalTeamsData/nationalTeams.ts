@@ -955,7 +955,7 @@ export const teamsByConfederation: TeamsByConfederation = {
     "Saint Vincent and the Grenadines",
     "Sint Maarten",
     "Suriname",
-    "Trinidad and Tobago",
+    "Trinidad & Tobago",
     "Turks and Caicos Islands",
     "U.S. Virgin Islands",
   ],
@@ -1825,9 +1825,9 @@ export const nationalTeams: NationalTeams = {
   Serbia: {
     id: v1(),
     names: [
-      { nameCountry: "Serbia", period: "2006-p.t." },
+      { nameCountry: "Serbia", period: "2007-p.t." },
       { nameCountry: "FR Yugoslavia", period: "1992-2002" },
-      { nameCountry: "Serbia & Mont.", period: "2003-2005" },
+      { nameCountry: "Serbia & Monteneg.", period: "2003-2006" },
     ],
     flags: [
       { flagCountry: flagSerbia, period: "2006-p.t." },
@@ -4462,9 +4462,9 @@ export const nationalTeams: NationalTeams = {
     },
     isCountryReal: true,
   },
-  "Trinidad and Tobago": {
+  "Trinidad & Tobago": {
     id: v1(),
-    names: [{ nameCountry: "Trinidad and Tobago", period: "0000-p.t." }],
+    names: [{ nameCountry: "Trinidad & Tobago", period: "0000-p.t." }],
     flags: [{ flagCountry: flagTrinidadAndTobago, period: "0000-p.t." }],
     coatOfArms: coatOfArmsTrinidadAndTobago,
     associationIcon: iconTrinidadAndTobago,

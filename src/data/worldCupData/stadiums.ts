@@ -474,6 +474,11 @@ export const stadiums: Stadiums = {
       city: "Berlin",
       country: "Germany",
     },
+    allianz: {
+      title: "Allianz Arena",
+      city: "Munich",
+      country: "Germany",
+    },
     olympiaM: {
       title: "Olympiastadion",
       city: "Munich",
@@ -484,8 +489,18 @@ export const stadiums: Stadiums = {
       city: "Stuttgart",
       country: "Germany",
     },
+    daimler: {
+      title: "Gottlieb-Daimler-Stadion",
+      city: "Stuttgart",
+      country: "Germany",
+    },
     parkGelsenk: {
       title: "Parkstadion",
+      city: "Gelsenkirchen",
+      country: "Germany",
+    },
+    aufSchalke: {
+      title: "Arena AufSchalke",
       city: "Gelsenkirchen",
       country: "Germany",
     },
@@ -499,8 +514,18 @@ export const stadiums: Stadiums = {
       city: "Frankfurt",
       country: "Germany",
     },
+    commerzbank: {
+      title: "Commerzbank-Arena",
+      city: "Frankfurt",
+      country: "Germany",
+    },
     volkspark: {
       title: "Volksparkstadion",
+      city: "Hamburg",
+      country: "Germany",
+    },
+    aol: {
+      title: "AOL Arena",
       city: "Hamburg",
       country: "Germany",
     },
@@ -509,8 +534,38 @@ export const stadiums: Stadiums = {
       city: "Hanover",
       country: "Germany",
     },
+    zentral: {
+      title: "Zentralstadion",
+      city: "Leipzig",
+      country: "Germany",
+    },
+    awd: {
+      title: "AWD-Arena",
+      city: "Hanover",
+      country: "Germany",
+    },
     westfalen: {
       title: "Westfalenstadion",
+      city: "Dortmund",
+      country: "Germany",
+    },
+    easyCredit: {
+      title: "easyCredit-Stadion",
+      city: "Nuremberg",
+      country: "Germany",
+    },
+    rheinEnergie: {
+      title: "RheinEnergieStadion",
+      city: "Cologne",
+      country: "Germany",
+    },
+    fritzWalter: {
+      title: "Fritz-Walter-Stadion",
+      city: "Kaiserslautern",
+      country: "Germany",
+    },
+    signal: {
+      title: "Signal Iduna Park",
       city: "Dortmund",
       country: "Germany",
     },
