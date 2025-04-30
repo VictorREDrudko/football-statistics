@@ -35,7 +35,7 @@ export const HeaderCard = ({flag, name, icon, year}: TitleCardProps) => {
   return (
     <div className={s.container}>
       <div className={s.containerHeader}>
-        <Flag year={year} countryName={name} style={style}/>
+        <Flag year={year} countryName={name}/>
         <div>
           <h3 className={s.title}>{name}</h3>
           <span className={s.text}>Football Association</span>

@@ -21,7 +21,9 @@ export const GroupStage = ({groupStageMatches, qualifiedTeamsForPlayoff, year}: 
     
     return (
       <div key={index} className={s.containerGroup}>
-        <TableGroup tableBodyData={tableBodyData} year={year} nameGroup={nameGroup}/> 
+        <div className={s.tableWrapper}>
+          <TableGroup tableBodyData={tableBodyData} year={year} nameGroup={nameGroup}/> 
+        </div>
         <MatchesByStage matches={groupMatches}/>
       </div>
     )

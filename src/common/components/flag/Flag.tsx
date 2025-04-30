@@ -1,20 +1,19 @@
-import { nationalTeams } from 'data/nationalTeamsData/nationalTeams'
 import s from './Flag.module.css'
-import { choiseCountryFlag } from 'utils/choiseCountryFlagAndName'
+import { choiseCurrentFlag } from 'utils/choiseCurrentFlag'
+import { isCountryActive } from 'logics/nationalTeamsLogic/utils/isCountryActive'
 
 type Props = {
   countryName: string
   year: string
-  style?: React.CSSProperties;
 }
 
-export const Flag = ({countryName, year, style}: Props) => {
-  if(!countryName) return
-  
-  const srcFlag = countryName !== '' ? choiseCountryFlag(nationalTeams[countryName].flags, year) : ''
-  const classNameIsReal = nationalTeams[countryName].isCountryReal ? `${s.image}` : `${s.imageNoReal}`
+export const Flag = ({countryName, year}: Props) => {
+  const srcFlag = choiseCurrentFlag({name: countryName, year});
+
+  // Sets styles for existing and non-existing countries
+  const classNameIsReal = isCountryActive(countryName) ? `${s.image}` : `${s.imageNoReal}`
 
   return (
-    countryName && <img src={srcFlag} alt={`flag ${countryName}`} className={classNameIsReal} style={style}/>
+    <img src={srcFlag} alt={`flag ${countryName}`} className={classNameIsReal}/>
   )
 }

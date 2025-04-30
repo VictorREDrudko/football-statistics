@@ -15,9 +15,12 @@ export const MatchAllInfo = ({match}: Match) => {
     <div className={s.container}>
       <MatchDateAndLocation date={match.date} stadiumInfo={match.stadium}/>
       <div className={s.containerMatch}>
-        <MatchPartialInfo match={match} spanStyle={{fontSize: '1.0rem', width: '150px'}}/>
+        <div className={s.containerMatch1}>
+          <MatchPartialInfo match={match} />
+        </div>
+        <InfoGoals infoGoals={match.goals}/>
       </div>
-      <InfoGoals infoGoals={match.goals}/>
+      {/* <InfoGoals infoGoals={match.goals}/> */}
     </div>
   )
 }

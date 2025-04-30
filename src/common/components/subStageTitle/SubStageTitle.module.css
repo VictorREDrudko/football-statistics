@@ -12,3 +12,11 @@
 .title::first-letter {
   text-transform: uppercase;
 }
+
+@media (max-width: 480px) {
+  .title {
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}

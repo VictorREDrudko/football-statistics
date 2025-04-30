@@ -1,36 +1,81 @@
 .container {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  padding: 0.4rem 0.4rem 0.8rem 0.8rem;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  /* background-color: #8fec92; */
 }
 
 .containerTeamsGoals {
+  width: 100%;
   display: flex;
-  gap: 1rem;
-  justify-content: space-between;
+  gap: 10px;
+  justify-content: center;
+  /* background-color: #8fb4ec; */
+}
+
+.containerPlayerScoredGoal,
+.containerPlayerScoredGoalReverse {
+  display: flex;
+  gap: 10px;
+  /* background-color: #f4f747; */
 }
 
 .containerPlayerScoredGoal {
-  display: flex;
-  gap: 0.5rem;
+  justify-content: end;
+  flex-direction: row;
+}
+
+.containerPlayerScoredGoalReverse {
+  flex-direction: row-reverse;
+  justify-content: start;
 }
 
 .containerTeamGoals {
   display: flex;
   flex-direction: column;
-  width: 12.5rem;
+  gap: 5px;
+  /* background-color: #c829ae; */
+  min-width: 250px;
+  border-bottom: 1px solid var(--bg-main-transparent50);
+  border-top: 1px solid var(--bg-main-transparent50);
+  /* box-shadow: 0 0 5px var(--bg-second-transparent50); */
+  padding: 5px;
+  border-radius: 10px;
 }
 
-.containerPlayerScoredGoal span:first-child {
+.containerPlayerScoredGoal span:first-child,
+.containerPlayerScoredGoalReverse span:first-child {
   font-weight: 600;
   font-size: 0.8rem;
   text-transform: uppercase;
+  color: var(--bg-main-transparent70);
 }
 
-.containerPlayerScoredGoal span:last-child {
+.containerPlayerScoredGoal span:last-child,
+.containerPlayerScoredGoalReverse span:last-child {
   font-size: 0.8rem;
+  min-width: 70px;
+  color: var(--bg-main-transparent70);
+  /* background-color: #d58787; */
+  /* text-align: right; */
 }
+
+/* .containerPlayerScoredGoalReverse span:first-child {
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+} */
+
+.containerPlayerScoredGoalReverse span:last-child {
+  text-align: right;
+}
+
+
+
+
 
 @media (max-width: 605px) {
   .container {

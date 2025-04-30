@@ -4,8 +4,9 @@
   width: 100%;
   border-collapse: collapse;
   box-shadow: 0 0 10px 0px var(--bg-second-transparent70);
-  height: 100%;
   margin-bottom: 0.5rem;
+  overflow-x: auto;
+  table-layout: auto;
 }
 
 .tableHeader {
@@ -42,9 +43,11 @@
   border: 1px solid var(--bg-second-transparent50);
   background-color: var(--no-accent-transparent50);
   color: var(--bg-second-transparent70);
-  padding: 0.5rem 0.5rem;
+  padding: 5px;
   font-size: 1rem;
 }
+
+
 
 
 @media (max-width: 605px) {
@@ -72,17 +75,17 @@
   }
 
   .titleTable {
-    margin-bottom: 1rem;
-    font-size: 1rem;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
   }
 
   .tableHeader {
-    padding: 0.3rem;
-    font-size: 0.65rem;
+    padding: 5px;
+    font-size: 0.6rem;
   }
 
   .bodyTable th {
-    padding: 0.3rem;
-    font-size: 0.65rem;
+    padding: 5px;
+    font-size: 0.6rem;
   }
 }

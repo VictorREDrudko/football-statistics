@@ -1,13 +1,15 @@
 .container {
+  padding: 5px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 0.8rem;
+  justify-content: center;
+  gap: 10px;
   cursor: pointer;
+  width: 100%;
 }
 
 @media (max-width: 480px) {
   .container {
-    gap: 0.2rem;
+    gap: 5px;
   }
 }

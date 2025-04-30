@@ -1827,7 +1827,7 @@ export const nationalTeams: NationalTeams = {
     names: [
       { nameCountry: "Serbia", period: "2007-p.t." },
       { nameCountry: "FR Yugoslavia", period: "1992-2002" },
-      { nameCountry: "Serbia & Monteneg.", period: "2003-2006" },
+      { nameCountry: "Serbia and Montenegro", period: "2003-2006" },
     ],
     flags: [
       { flagCountry: flagSerbia, period: "2006-p.t." },

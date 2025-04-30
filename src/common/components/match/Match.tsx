@@ -17,7 +17,7 @@ export const Match = ({match}: Props) => {
 
   const matchInfo = mode ? 
     <div className={s.container} onClick={onClickHundler}>
-      <MatchPartialInfo match={match} spanStyle={{fontSize: '1.0rem', width: '150px'}}/>
+      <MatchPartialInfo match={match}/>
     </div> : 
     <div onClick={onClickHundler}>
       <MatchAllInfo match={match}/>

@@ -1,12 +1,16 @@
-.wrapperIcon {
+.icon {
   transition: all 0.5s;
   cursor: pointer;
+  max-width: 90px;
+  width: 100%;
 }
 
-.wrapperIcon:hover {
+.icon:hover {
   scale: 1.1;
 }
 
-.wrapperIcon img {
-  height: 40px;
+@media (max-width: 480px) {
+  .icon {
+    max-width: 70px;
+  }
 }

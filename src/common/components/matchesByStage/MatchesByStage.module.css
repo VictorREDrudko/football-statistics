@@ -8,7 +8,7 @@
 
 .containerMatch {
   background-color: var(--bg-second-transparent50);
-  border-radius: 0.8rem 0;
+  border-radius: 15px 0;
   cursor: pointer;
   box-shadow: 0px 1px 2px 0px var(--bg-main-transparent70),
               1px 2px 4px 0px var(--bg-main-transparent70),
@@ -24,6 +24,12 @@
 
 @media (max-width: 480px) {
   .container {
-    gap: 0.8rem;
+    gap: 10px;
+  }
+
+  .containerMatch {
+    border-radius: 10px 0;
+    box-shadow: 0px 1px 2px 0px var(--bg-second-transparent70),
+                1px 2px 4px 0px var(--bg-second-transparent50);
   }
 }

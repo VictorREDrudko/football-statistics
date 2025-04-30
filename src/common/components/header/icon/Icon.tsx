@@ -4,15 +4,14 @@ import s from './Icon.module.css'
 type IconType = {
   image: string
   path: string
-  height: string
 }
 
-export const Icon = ({image, path, height}: IconType) => {
+export const Icon = ({image, path}: IconType) => {
   return (
-    <div className={s.wrapperIcon}>
+    <>
       <NavLink to={path}>
-        <img src={image} alt="icon-football" style={{height: height}}/>
+        <img className={s.icon} src={image} alt="icon-football"/>
       </NavLink>
-  </div>
+    </>
   )
 }

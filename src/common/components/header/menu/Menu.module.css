@@ -1,6 +1,6 @@
 .wrapperItems {
   display: flex;
-  gap: 2rem;
+  gap: 20px;
 }
 
 .item {
@@ -22,9 +22,6 @@
 .item a.active {
   color: rgb(125, 250, 55);
 }
-
-
-
 
 
 @media (max-width: 1000px) {

@@ -11,7 +11,6 @@ type MenuType = {
 }
 
 export const Menu = ({isOpen, onClickHundler, menuRef}:MenuType) => {
-  
   const mappedFootballOrganizations = menu.map((el, index) => {
     return (
       <li key={index} className={s.item} onClick={onClickHundler}>

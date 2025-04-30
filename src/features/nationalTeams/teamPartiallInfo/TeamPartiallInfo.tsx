@@ -48,7 +48,7 @@ export const TeamPartiallInfo = ({data, setTeam, navigateToTeam}: Props) => {
     <li className={s.container} onClick={showInfoTeam}>
       <div className={s.containerIcon}>
         <div className={s.containerFlag}>
-          <Flag countryName={name} year={currentYear} style={style}/>
+          <Flag countryName={name} year={currentYear} />
         </div>
         <img className={styleNoRealCountryIcon} src={data.associationIcon} alt={`${data.names} football association icon`} />
       </div>

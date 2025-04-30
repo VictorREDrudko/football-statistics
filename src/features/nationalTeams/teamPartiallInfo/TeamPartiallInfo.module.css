@@ -32,7 +32,7 @@
   position: relative;
 }
 
-.containerFlag::after {
+/* .containerFlag::after {
   content: '';
   position: absolute;
   left: 0;
@@ -43,7 +43,7 @@
   border-radius: 5px;
   width: 95%;
   height: 95%;
-}
+} */
 
 .icon,
 .iconNoReal {

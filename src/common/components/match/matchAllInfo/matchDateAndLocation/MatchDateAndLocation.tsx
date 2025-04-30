@@ -7,8 +7,6 @@ type Props = {
 }
 
 export const MatchDateAndLocation = ({date, stadiumInfo}: Props) => {
-  // матч не состоялся
-  const noMatch = stadiumInfo.title === '' ? false : true
 
   return (
     <div className={s.container}>
@@ -16,17 +14,17 @@ export const MatchDateAndLocation = ({date, stadiumInfo}: Props) => {
         {date}
       </span>
       <div className={s.containerStadium}>
-        <span>
-          {noMatch && `"${stadiumInfo.title}"`}
+        <span className={s.stadiumTitle}>
+          {stadiumInfo.title},
         </span>
         <span>
-          {noMatch && `${stadiumInfo.city}, `}
+          {stadiumInfo.city},
         </span>
         <span>
           {stadiumInfo.country}
         </span>
-        <span>
-          {noMatch && `(${stadiumInfo.attendance})`}
+        <span className={s.attendance}>
+          ({stadiumInfo.attendance})
         </span>
       </div>
     </div>

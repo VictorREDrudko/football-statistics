@@ -1,0 +1,22 @@
+.title,
+.titleNoReal {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 175px;
+}
+
+.titleNoReal {
+  opacity: 0.4;
+}
+
+
+@media (max-width: 480px) {
+  .title,
+  .titleNoReal {
+    max-width: 75px;
+  }
+}

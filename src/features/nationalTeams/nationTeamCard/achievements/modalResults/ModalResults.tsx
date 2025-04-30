@@ -38,7 +38,7 @@ export const ModalResults = ({ title, count, titleCompetition, countryName, year
         <h2 className={s.titleCompetition}>{titleCompetition}</h2>
         <div className={s.containerContent}>
           <div className={s.containerResult}>
-            <Flag countryName={countryName} year={year} style={{width: '70px', borderRadius: '10px'}}/>
+            <Flag countryName={countryName} year={year} />
             <ul className={s.containerYears}>
               {mappedYears}
             </ul>

@@ -1,17 +1,32 @@
-.container {
+.container,
+.containerRevers {
   display: flex;
+  gap: 5px;
   align-items: center;
-  gap: 0.2rem;
-  width: 230px;
+  max-width: 220px;
+  width: 100%;
 }
 
-.title {
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
+.containerRevers {
+  flex-direction: row;
+  justify-content: start;
 }
 
-@media (max-width: 605px) {
+.container {
+  flex-direction: row-reverse;
+  justify-content: end;
+}
+
+.container span,
+.containerRevers span {
+  font-size: 0.9rem;
+}
+
+.containerFlag {
+  width: 45px;
+}
+
+/* @media (max-width: 605px) {
   .container {
     width: 9rem;
   }
@@ -19,15 +34,20 @@
   .title {
     font-size: 0.8rem;
   }
-}
+} */
 
 @media (max-width: 480px) {
-  .container {
-    width: 100%;
-    gap: 0.05rem;
+  .container,
+  .containerRevers {
+    max-width: 100px;
   }
 
-  .title {
-    font-size: 0.6rem;
+  .containerFlag {
+    width: 20px;
   }
+
+.container span,
+.containerRevers span {
+  font-size: 0.6rem;
+}
 }

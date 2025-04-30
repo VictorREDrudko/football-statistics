@@ -21,15 +21,13 @@ export const Header = () => {
     setIsOpen(!isOpen)
   }
 
-  const classMenu = isOpen ? `${s.wrapper1} ${s.active}` : s.wrapper1
-
   return (
     <div className={s.wrapper}>
-      <Icon image={icons.project} path={'/'} height={'40px'}/>
+      <Icon image={icons.project} path={'/'}/>
       <div ref={menuRef}>
         <Menu isOpen={isOpen} onClickHundler={onClickHundler} menuRef={menuRef}/>
       </div>
-      <Icon image={icons.raiting} path={'/rating'} height={'50px'}/>
+      <Icon image={icons.raiting} path={'/rating'}/>
       <button onClick={onClickHundler} className={s.menuButton}>
         {isOpen ? <AiOutlineClose size={30} color='white'/> : <AiOutlineMenu size={30} color='white'/>}
       </button>

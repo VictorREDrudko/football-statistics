@@ -1,25 +1,22 @@
-import { choiseCountryName } from 'utils/choiseCountryFlagAndName'
+import { CountryName } from '../counrtyName/CountryName'
 import { Flag } from '../flag/Flag'
 import s from './CountryTeam.module.css'
-import { nationalTeams } from 'data/nationalTeamsData/nationalTeams'
 
 type Props = {
   countryName: string
   year: string
-  style?: React.CSSProperties;
-  styleFlag?: React.CSSProperties;
+  reverse: boolean
 }
 
-export const CountryTeam = ({countryName, year, style, styleFlag}: Props) => {
-
-  const name = countryName !== '' ? choiseCountryName(nationalTeams[countryName].names, year) : '';
+export const CountryTeam = ({countryName, year, reverse}: Props) => {
+  const classNameContainer = reverse ? `${s.container}` : `${s.containerRevers}`
 
   return (
-    <div className={s.container}>
-      <Flag countryName={countryName} year={year} style={styleFlag}/>
-      <span className={s.title} style={style}>
-        {name}
-      </span>
+    <div className={classNameContainer}>
+      <div className={s.containerFlag}>
+        <Flag countryName={countryName} year={year}/>
+      </div>
+      <CountryName countryName={countryName} year={year}/>
     </div>
   )
 }

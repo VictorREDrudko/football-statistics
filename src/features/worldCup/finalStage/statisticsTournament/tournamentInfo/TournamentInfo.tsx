@@ -17,7 +17,7 @@ export const TournamentInfo = ({dataTournament} : Props) => {
   const tournamentDetails = worldCupStatsData.map((characteristic, index) => {
     let value;
     if(index === 0 && Array.isArray(characteristic) && characteristic.every((item) => typeof item === "string")) {
-      value = characteristic.map((countryName, key) => <CountryTeam key={key} countryName={countryName} year={year}/>)
+      value = characteristic.map((countryName, key) => <CountryTeam key={key} countryName={countryName} year={year} reverse={false}/>)
     }
 
     if(index === worldCupStatsData.length - 1 && Array.isArray(characteristic) && characteristic.every((item) => typeof item === 'object')) {

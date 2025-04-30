@@ -16,8 +16,7 @@ export const WorldCupCard = ({tournament} : Props) => {
   const HostCountries = tournament.hostCountry.map((countryName, index) => {
     return <CountryTeam   countryName={countryName} 
                           year={yearTournament} 
-                          style={{fontSize: '1rem'}}
-                          styleFlag={{width: '2.5rem'}}
+                          reverse={false}
                           key={index + 1}/>
   })
 

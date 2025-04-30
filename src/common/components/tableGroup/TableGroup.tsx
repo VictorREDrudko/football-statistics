@@ -22,7 +22,7 @@ export const TableGroup = ({tableBodyData, year, nameGroup}: Props) => {
     return (
       <tr key={index} className={s.bodyTable} style={styleQualificationTeam}>
         <th>{item.position}</th>
-        <th> <CountryTeam countryName={item.team} year={year}/></th>
+        <th> <CountryTeam countryName={item.team} year={year} reverse={false}/></th>
         <th>{item.played}</th>
         <th>{item.won}</th>
         <th>{item.drawn}</th>

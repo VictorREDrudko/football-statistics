@@ -1,11 +1,10 @@
 .container {
   position: relative;
-  top: 3rem;
-  padding: 1rem 0;
+  top: 50px;
 }
 
 @media (max-width: 480px) {
   .container {
-    top: 2rem;
+    top: 30px;
   }
 }

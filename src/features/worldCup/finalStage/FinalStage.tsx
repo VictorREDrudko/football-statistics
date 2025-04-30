@@ -24,7 +24,7 @@ export const FinalStage = () => {
   const hasMatchesGroupStage = groupStageMatches.length
   const hasMatchesPlayoffStage = playOffStageMatches.length
   const hasMatchesGroupFinalRound = groupFinalRoundMatches.length
-  const hasMatchesGroupSecondRound = groupSecondGroupRoundMatches.length
+  const hasMatchesGroupSecondRound = groupSecondGroupRoundMatches.length === 0 ? false : groupSecondGroupRoundMatches.length
 
   const qualifiedTeamsForPlayoff = getQualifiedTeamsForPlayoff(playOffStageMatches)
   const qualifiedTeamsForGroupFinalRound = getQualifiedTeamsForPlayoff(groupFinalRoundMatches)

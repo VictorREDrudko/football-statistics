@@ -1,15 +1,71 @@
-import { CountryTeam } from 'common/components/countryTeam/CountryTeam'
-import s from './ScoreMatchFlowchart.module.css'
-import { convertMatchScore } from 'logics/score/convertMatchScore'
-
-type Props = {
-  score: Array<number[]>
+export type MatchScore = {
+  firstTeamGoals: string
+  extraDataTeamGoals: string
+  secondTeamGoals: string
 }
 
-export const ScoreMatchFlowchart = ({score}: Props) => {
-  // const matchScore: number[] | Array<number[]> = convertMatchScore(score);
+export const convertMatchScore = (score: Array<number[]>): MatchScore => {
+  // The match did not take place
+  if(score[0].length === 0) {
+    return {
+      firstTeamGoals: "",
+      extraDataTeamGoals: "",
+      secondTeamGoals: "",
+    }
+  }
 
-  let resultScore: any[] = []
+  // The match went into extra time, but there were no penalties
+  if (score[1].length > 0 && score[2].length === 0) {
+    const goalsTeam1 = String(score[0][0] + score[1][0]);
+    const goalsTeam2 = String(score[0][1] + score[1][1]);
+
+    return {
+      firstTeamGoals: goalsTeam1,
+      extraDataTeamGoals: "e.t.",
+      secondTeamGoals: goalsTeam2,
+    }
+  }
+
+  // The match ended with a penalty shootout.
+  if (score[2].length > 0) {
+    const goalsTeam1 = String(score[0][0] + score[1][0]);
+    const goalsTeam2 = String(score[0][1] + score[1][1]);
+
+    return {
+      firstTeamGoals: goalsTeam1,
+      extraDataTeamGoals: `pen ${score[2][0]}:${score[2][1]}`,
+      secondTeamGoals: goalsTeam2,
+    }
+  }
+
+  // if(score.length > 3) {
+  //   //  [1, 1] [0, 0] [] [1, 0] [] []
+  //   if (score[4].length === 0) {
+  //     return [
+  //       [score[0][0] + score[1][0], score[0][1] + score[1][1]],
+  //       [score[3][0], score[3][1]],
+  //       [],
+  //     ]
+  //   }
+  //   //  [1, 1] [0, 0] [] [1, 0] [2, 1] []
+  //   if (score[4].length > 0 && score[5].length === 0) {
+  //     return [
+  //       [score[0][0] + score[1][0], score[0][1] + score[1][1]],
+  //       [score[3][0], score[3][1]],
+  //       [score[4][0], score[4][1]],
+  //       [],
+  //     ]
+  //   }
+  //   //  [1, 1] [0, 0] [] [1, 0] [2, 1] [5, 4]
+  //   if (score[5].length > 0) {
+  //     return [
+  //       [score[0][0] + score[1][0], score[0][1] + score[1][1]],
+  //       [score[3][0], score[3][1]],
+  //       [score[4][0], score[4][1]],
+  //       [score[5][0], score[5][1]],
+  //     ]
+  //   }
+  // }
 
   // // вариант 1: без доп. времени и пенальти
   // if (typeof(matchScore[0]) === 'number' && score.length <= 3) {
@@ -47,10 +103,9 @@ export const ScoreMatchFlowchart = ({score}: Props) => {
   //   resultScore = [matchScore[0][0] + `(${resTeam1}) ${matchScore[3][0]}p`, matchScore[0][1] + `(${resTeam2}) ${matchScore[3][1]}p`] 
   // }
 
-  return (
-    <>
-      <span className={s.score}>{resultScore[0]}</span>
-      <span className={s.score}>{resultScore[1]}</span>
-    </>
-  )
-}
+  return {
+    firstTeamGoals: String(score[0][0]),
+    extraDataTeamGoals: ":",
+    secondTeamGoals: String(score[0][1]),
+  }
+};

@@ -173,58 +173,6 @@ export const getUniqueStagePlayOff = (matches: WorldCupMatch[]) => {
   return Array.from(new Set(matches.map((match) => match.stage))).sort().reverse();
 };
 
-export const convertMatchScore = (score: Array<number[]>) => {
-  // Вариант когда матч не состоялся
-  if(score[0].length === 0) return []
-
-  if (score[1].length > 0 && score[2].length === 0 && score.length === 3) {
-    const goalsTeam1 = score[0][0] + score[1][0];
-    const goalsTeam2 = score[0][1] + score[1][1];
-    return [[goalsTeam1, goalsTeam2]];
-  }
-
-  if (score[2].length > 0 && score.length === 3) {
-    const goalsTeam1 = score[0][0] + score[1][0];
-    const goalsTeam2 = score[0][1] + score[1][1];
-    return [
-      [goalsTeam1, goalsTeam2],
-      [score[2][0], score[2][1]],
-    ];
-  }
-
-  if(score.length > 3) {
-    //  [1, 1] [0, 0] [] [1, 0] [] []
-    if (score[4].length === 0) {
-      return [
-        [score[0][0] + score[1][0], score[0][1] + score[1][1]],
-        [score[3][0], score[3][1]],
-        [],
-      ]
-    }
-    //  [1, 1] [0, 0] [] [1, 0] [2, 1] []
-    if (score[4].length > 0 && score[5].length === 0) {
-      return [
-        [score[0][0] + score[1][0], score[0][1] + score[1][1]],
-        [score[3][0], score[3][1]],
-        [score[4][0], score[4][1]],
-        [],
-      ]
-    }
-    //  [1, 1] [0, 0] [] [1, 0] [2, 1] [5, 4]
-    if (score[5].length > 0) {
-      return [
-        [score[0][0] + score[1][0], score[0][1] + score[1][1]],
-        [score[3][0], score[3][1]],
-        [score[4][0], score[4][1]],
-        [score[5][0], score[5][1]],
-      ]
-    }
-  }
-
-  return [score[0][0], score[0][1]];
-};
-
-
 export const filterFinalAnd3PlaceMatches = (matches: WorldCupMatch[]) => {
   const filterMatches = matches.filter(match => match.stage === '1:final' || match.stage === '2:third place play-off');
 
