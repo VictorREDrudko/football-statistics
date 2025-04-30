@@ -1,4 +1,5 @@
-import { StartProject } from 'features/start-project/StartProject';
+// import { StartProject } from '@features/start-project';
+import { StartProject } from '@features/start-project/StartProject';
 import './App.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { About } from 'features/about/About';
