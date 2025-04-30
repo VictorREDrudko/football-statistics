@@ -1,0 +1,1875 @@
+import { flagAfghanistan, flagAlbania, flagAlgeria, flagAmericanSamoa, flagAndorra, flagAngola, flagAnguilla, flagAntiguaAndBarbuda, flagArgentina, flagArmenia, flagAruba, flagAustralia, flagAustria, flagAzerbaijan, flagBahamas, flagBahrain, flagBangladesh, flagBarbados, flagBelarus, flagBelgium, flagBelize, flagBenin, flagBermuda, flagBhutan, flagBolivia, flagBonaire, flagBosniaAndHerzegovina, flagBotswana, flagBrazil, flagBritishVirginIslands, flagBrunei, flagBulgaria, flagBurkinaFaso, flagBurundi, flagCambodia, flagCameroon, flagCanada, flagCapeVerde, flagCaymanIslands, flagCentralAfricanRepublic, flagChad, flagChile, flagChina, flagColombia, flagComoros, flagCongo, flagCookIslands, flagCostaRica, flagCroatia, flagCuba, flagCuracao, flagCyprus, flagCzechoslovakia, flagCzechRepublic, flagDenmark, flagDjibouti, flagDominica, flagDominicanRepublic, flagDPRKorea, flagDRCongo, flagDRCongo2, flagEastGermany, flagEcuador, flagEgypt, flagEgypt1, flagEgypt2, flagEgypt3, flagElSalvador, flagEngland, flagEquatorialGuinea, flagEritrea, flagEstonia, flagEswatini, flagEthiopia, flagFaroeIslands, flagFiji, flagFinland, flagFrance, flagFrenchGuiana, flagGabon, flagGambia, flagGeorgia, flagGermany, flagGhana, flagGibraltar, flagGreece, flagGrenada, flagGuadeloupe, flagGuam, flagGuatemala, flagGuinea, flagGuineaBissau, flagGuyana, flagHaiti, flagHonduras, flagHongKong, flagHungary, flagHungary1, flagHungary2, flagHungary3, flagIceland, flagIndia, flagIndonesia, flagIndonesia2, flagIran, flagIraq, flagIsrael, flagItaly, flagItaly1, flagIvoryCoast, flagJamaica, flagJapan, flagJordan, flagKazakhstan, flagKenya, flagKiribati, flagKoreaRepublic, flagKosovo, flagKuwait, flagKyrgyzRepublic, flagLaos, flagLatvia, flagLebanon, flagLesotho, flagLiberia, flagLibya, flagLiechtenstein, flagLithuania, flagLuxembourg, flagMacau, flagMadagascar, flagMalawi, flagMalaysia, flagMaldives, flagMali, flagMalta, flagMartinique, flagMauritania, flagMauritius, flagMexico, flagMoldova, flagMongolia, flagMontenegro, flagMontserrat, flagMorocco, flagMozambique, flagMyanmar, flagNamibia, flagNepal, flagNetherlands, flagNewCaledonia, flagNewZealand, flagNicaragua, flagNiger, flagNigeria, flagNorthernIreland, flagNorthernMarianaIslands, flagNorthMacedonia, flagNorway, flagOman, flagPakistan, flagPalestine, flagPanama, flagPapuaNewGuinea, flagParaguay, flagPeru, flagPhilippines, flagPoland, flagPortugal, flagPuertoRico, flagQatar, flagRepublicOfIreland, flagReunion, flagRomania, flagRussia, flagRwanda, flagSaintKittsAndNevis, flagSaintLucia, flagSaintMartin, flagSaintVincentAndTheGrenadines, flagSamoa, flagSanMarino, flagSaudiArabia, flagScotland, flagSenegal, flagSerbia, flagSerbia1, flagSeychelles, flagSierraLeone, flagSingapore, flagSintMaarten, flagSlovakia, flagSlovenia, flagSolomonIslands, flagSomalia, flagSouthAfrica, flagSouthSudan, flagSovietUnion, flagSpain, flagSpain1, flagSpain2, flagSpain3, flagSpain4, flagSpain5, flagSpain6, flagSriLanka, flagSudan, flagSuriname, flagSweden, flagSwitzerland, flagSyria, flagSãoToméAndPríncipe, flagTahiti, flagTaiwan, flagTajikistan, flagTanzania, flagThailand, flagTimorLeste, flagTogo, flagTonga, flagTrinidadAndTobago, flagTunisia, flagTurkey, flagTurkmenistan, flagTurksAndCaicosIslands, flagTuvalu, flagUganda, flagUkraine, flagUnitedArabEmirates, flagUnitedStates, flagUruguay, flagUSVirginIslands, flagUzbekistan, flagVanuatu, flagVenezuela, flagVietnam, flagWales, flagWales2, flagYemen, flagYugoslavia, flagYugoslavia1, flagZambia, flagZanzibar, flagZimbabwe } from "@shared/assets/flags";
+import { NationalTeam } from "./NationalTeam";
+import { coatOfArmsAfghanistan, coatOfArmsAlbania, coatOfArmsAlgeria, coatOfArmsAmericanSamoa, coatOfArmsAndorra, coatOfArmsAngola, coatOfArmsAnguilla, coatOfArmsAntiguaAndBarbuda, coatOfArmsArgentina, coatOfArmsArmenia, coatOfArmsAruba, coatOfArmsAustralia, coatOfArmsAustria, coatOfArmsAzerbaijan, coatOfArmsBahamas, coatOfArmsBahrain, coatOfArmsBangladesh, coatOfArmsBarbados, coatOfArmsBelarus, coatOfArmsBelgium, coatOfArmsBelize, coatOfArmsBenin, coatOfArmsBermuda, coatOfArmsBhutan, coatOfArmsBolivia, coatOfArmsBonaire, coatOfArmsBosniaAndHerzegovina, coatOfArmsBotswana, coatOfArmsBrazil, coatOfArmsBritishVirginIslands, coatOfArmsBrunei, coatOfArmsBulgaria, coatOfArmsBurkinaFaso, coatOfArmsBurundi, coatOfArmsCambodia, coatOfArmsCameroon, coatOfArmsCanada, coatOfArmsCapeVerde, coatOfArmsCaymanIslands, coatOfArmsCentralAfricanRepublic, coatOfArmsChad, coatOfArmsChile, coatOfArmsChina, coatOfArmsColombia, coatOfArmsComoros, coatOfArmsCongo, coatOfArmsCookIslands, coatOfArmsCostaRica, coatOfArmsCroatia, coatOfArmsCuba, coatOfArmsCuracao, coatOfArmsCyprus, coatOfArmsCzechoslovakia, coatOfArmsCzechRepublic, coatOfArmsDenmark, coatOfArmsDjibouti, coatOfArmsDominica, coatOfArmsDominicanRepublic, coatOfArmsDPRKorea, coatOfArmsDRCongo, coatOfArmsEastGermany, coatOfArmsEcuador, coatOfArmsEgypt, coatOfArmsElSalvador, coatOfArmsEngland, coatOfArmsEquatorialGuinea, coatOfArmsEritrea, coatOfArmsEstonia, coatOfArmsEswatini, coatOfArmsEthiopia, coatOfArmsFaroeIslands, coatOfArmsFiji, coatOfArmsFinland, coatOfArmsFrance, coatOfArmsFrenchGuiana, coatOfArmsGabon, coatOfArmsGambia, coatOfArmsGeorgia, coatOfArmsGermany, coatOfArmsGhana, coatOfArmsGibraltar, coatOfArmsGreece, coatOfArmsGrenada, coatOfArmsGuadeloupe, coatOfArmsGuam, coatOfArmsGuatemala, coatOfArmsGuinea, coatOfArmsGuineaBissau, coatOfArmsGuyana, coatOfArmsHaiti, coatOfArmsHonduras, coatOfArmsHongKong, coatOfArmsHungary, coatOfArmsIceland, coatOfArmsIndia, coatOfArmsIndonesia, coatOfArmsIran, coatOfArmsIraq, coatOfArmsIsrael, coatOfArmsItaly, coatOfArmsIvoryCoast, coatOfArmsJamaica, coatOfArmsJapan, coatOfArmsJordan, coatOfArmsKazakhstan, coatOfArmsKenya, coatOfArmsKiribati, coatOfArmsKoreaRepublic, coatOfArmsKosovo, coatOfArmsKuwait, coatOfArmsKyrgyzRepublic, coatOfArmsLaos, coatOfArmsLatvia, coatOfArmsLebanon, coatOfArmsLesotho, coatOfArmsLiberia, coatOfArmsLibya, coatOfArmsLiechtenstein, coatOfArmsLithuania, coatOfArmsLuxembourg, coatOfArmsMacau, coatOfArmsMadagascar, coatOfArmsMalawi, coatOfArmsMalaysia, coatOfArmsMaldives, coatOfArmsMali, coatOfArmsMalta, coatOfArmsMartinique, coatOfArmsMauritania, coatOfArmsMauritius, coatOfArmsMexico, coatOfArmsMoldova, coatOfArmsMongolia, coatOfArmsMontenegro, coatOfArmsMontserrat, coatOfArmsMorocco, coatOfArmsMozambique, coatOfArmsMyanmar, coatOfArmsNamibia, coatOfArmsNepal, coatOfArmsNetherlands, coatOfArmsNewCaledonia, coatOfArmsNewZealand, coatOfArmsNicaragua, coatOfArmsNiger, coatOfArmsNigeria, coatOfArmsNorthernIreland, coatOfArmsNorthernMarianaIslands, coatOfArmsNorthMacedonia, coatOfArmsNorway, coatOfArmsOman, coatOfArmsPakistan, coatOfArmsPalestine, coatOfArmsPanama, coatOfArmsPapuaNewGuinea, coatOfArmsParaguay, coatOfArmsPeru, coatOfArmsPhilippines, coatOfArmsPoland, coatOfArmsPortugal, coatOfArmsPuertoRico, coatOfArmsQatar, coatOfArmsRepublicOfIreland, coatOfArmsReunion, coatOfArmsRomania, coatOfArmsRussia, coatOfArmsRwanda, coatOfArmsSaintKittsAndNevis, coatOfArmsSaintLucia, coatOfArmsSaintMartin, coatOfArmsSaintVincentAndTheGrenadines, coatOfArmsSamoa, coatOfArmsSanMarino, coatOfArmsSaudiArabia, coatOfArmsScotland, coatOfArmsSenegal, coatOfArmsSerbia, coatOfArmsSeychelles, coatOfArmsSierraLeone, coatOfArmsSingapore, coatOfArmsSintMaarten, coatOfArmsSlovakia, coatOfArmsSlovenia, coatOfArmsSolomonIslands, coatOfArmsSomalia, coatOfArmsSouthAfrica, coatOfArmsSouthSudan, coatOfArmsSovietUnion, coatOfArmsSpain, coatOfArmsSriLanka, coatOfArmsSudan, coatOfArmsSuriname, coatOfArmsSweden, coatOfArmsSwitzerland, coatOfArmsSyria, coatOfArmsSãoToméAndPríncipe, coatOfArmsTahiti, coatOfArmsTaiwan, coatOfArmsTajikistan, coatOfArmsTanzania, coatOfArmsThailand, coatOfArmsTimorLeste, coatOfArmsTogo, coatOfArmsTonga, coatOfArmsTrinidadAndTobago, coatOfArmsTunisia, coatOfArmsTurkey, coatOfArmsTurkmenistan, coatOfArmsTurksAndCaicosIslands, coatOfArmsTuvalu, coatOfArmsUganda, coatOfArmsUkraine, coatOfArmsUnitedArabEmirates, coatOfArmsUnitedStates, coatOfArmsUruguay, coatOfArmsUSVirginIslands, coatOfArmsUzbekistan, coatOfArmsVanuatu, coatOfArmsVenezuela, coatOfArmsVietnam, coatOfArmsWales, coatOfArmsYemen, coatOfArmsYugoslavia, coatOfArmsZambia, coatOfArmsZanzibar, coatOfArmsZimbabwe } from "@shared/assets/coat-of-arms";
+import { iconAfghanistan, iconAlbania, iconAlgeria, iconAmericanSamoa, iconAndorra, iconAngola, iconAnguilla, iconAntiguaAndBarbuda, iconArgentina, iconArmenia, iconAruba, iconAustralia, iconAustria, iconAzerbaijan, iconBahamas, iconBahrain, iconBangladesh, iconBarbados, iconBelarus, iconBelgium, iconBelize, iconBenin, iconBermuda, iconBhutan, iconBolivia, iconBonaire, iconBosniaAndHerzegovina, iconBotswana, iconBrazil, iconBritishVirginIslands, iconBrunei, iconBulgaria, iconBurkinaFaso, iconBurundi, iconCambodia, iconCameroon, iconCanada, iconCapeVerde, iconCaymanIslands, iconCentralAfricanRepublic, iconChad, iconChile, iconChina, iconColombia, iconComoros, iconCongo, iconCookIslands, iconCostaRica, iconCroatia, iconCuba, iconCuracao, iconCyprus, iconCzechoslovakia, iconCzechRepublic, iconDenmark, iconDjibouti, iconDominica, iconDominicanRepublic, iconDPRKorea, iconDRCongo, iconEastGermany, iconEcuador, iconEgypt, iconElSalvador, iconEngland, iconEquatorialGuinea, iconEritrea, iconEstonia, iconEswatini, iconEthiopia, iconFaroeIslands, iconFiji, iconFinland, iconFrance, iconFrenchGuiana, iconGabon, iconGambia, iconGeorgia, iconGermany, iconGhana, iconGibraltar, iconGreece, iconGrenada, iconGuadeloupe, iconGuam, iconGuatemala, iconGuinea, iconGuineaBissau, iconGuyana, iconHaiti, iconHonduras, iconHongKong, iconHungary, iconIceland, iconIndia, iconIndonesia, iconIran, iconIraq, iconIsrael, iconItaly, iconIvoryCoast, iconJamaica, iconJapan, iconJordan, iconKazakhstan, iconKenya, iconKiribati, iconKoreaRepublic, iconKosovo, iconKuwait, iconKyrgyzRepublic, iconLaos, iconLatvia, iconLebanon, iconLesotho, iconLiberia, iconLibya, iconLiechtenstein, iconLithuania, iconLuxembourg, iconMacau, iconMadagascar, iconMalawi, iconMalaysia, iconMaldives, iconMali, iconMalta, iconMartinique, iconMauritania, iconMauritius, iconMexico, iconMoldova, iconMongolia, iconMontenegro, iconMontserrat, iconMorocco, iconMozambique, iconMyanmar, iconNamibia, iconNepal, iconNetherlands, iconNewCaledonia, iconNewZealand, iconNicaragua, iconNiger, iconNigeria, iconNorthernIreland, iconNorthernMarianaIslands, iconNorthMacedonia, iconNorway, iconOman, iconPakistan, iconPalestine, iconPanama, iconPapuaNewGuinea, iconParaguay, iconPeru, iconPhilippines, iconPoland, iconPortugal, iconPuertoRico, iconQatar, iconRepublicOfIreland, iconReunion, iconRomania, iconRussia, iconRwanda, iconSaintKittsAndNevis, iconSaintLucia, iconSaintMartin, iconSaintVincentAndTheGrenadines, iconSamoa, iconSanMarino, iconSaudiArabia, iconScotland, iconSenegal, iconSerbia, iconSeychelles, iconSierraLeone, iconSingapore, iconSintMaarten, iconSlovakia, iconSlovenia, iconSolomonIslands, iconSomalia, iconSouthAfrica, iconSouthSudan, iconSovietUnion, iconSpain, iconSriLanka, iconSudan, iconSuriname, iconSweden, iconSwitzerland, iconSyria, iconSãoToméAndPríncipe, iconTahiti, iconTaiwan, iconTajikistan, iconTanzania, iconThailand, iconTimorLeste, iconTogo, iconTonga, iconTrinidadAndTobago, iconTunisia, iconTurkey, iconTurkmenistan, iconTurksAndCaicosIslands, iconTuvalu, iconUganda, iconUkraine, iconUnitedArabEmirates, iconUnitedStates, iconUruguay, iconUSVirginIslands, iconUzbekistan, iconVanuatu, iconVenezuela, iconVietnam, iconWales, iconYemen, iconYugoslavia, iconZambia, iconZanzibar, iconZimbabwe } from "@shared/assets/iconFootballAssociation";
+
+export const nationalTeamsData: Record<string, NationalTeam> = {
+  Germany: new NationalTeam({
+    names: [
+      { nameCountry: "Germany", period: "1990-p.t." },
+      { nameCountry: "German Reich", period: "1919-1945" },
+      { nameCountry: "West Germany", period: "1946-1989" },
+    ],
+    flags: [{ flagCountry: flagGermany, period: "1919-1932, 1946-p.t." }],
+    coatOfArms: coatOfArmsGermany,
+    associationIcon: iconGermany,
+    associationDate: {founded: "1900", fifaAffiliation: "1904", confederationAffiliation: "1954" },
+  }),
+
+  England: new NationalTeam({
+    names: [{ nameCountry: "England", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagEngland, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsEngland,
+    associationIcon: iconEngland,
+    associationDate: { founded: "1863", fifaAffiliation: "1905", confederationAffiliation: "1954" },
+  }),
+
+  Italy: new NationalTeam({
+    names: [{ nameCountry: "Italy", period: "0000-p.t." }],
+    flags: [
+      { flagCountry: flagItaly, period: "1946-p.t." },
+      { flagCountry: flagItaly1, period: "1925-1945" },
+    ],
+    coatOfArms: coatOfArmsItaly,
+    associationIcon: iconItaly,
+    associationDate: {founded: "1898", fifaAffiliation: "1905", confederationAffiliation: "1954" },
+  }),
+
+  Spain: new NationalTeam({
+    names: [{ nameCountry: "Spain", period: "0000-p.t." }],
+    flags: [
+      { flagCountry: flagSpain, period: "1981-p.t." },
+      { flagCountry: flagSpain1, period: "1931-1935" },
+      { flagCountry: flagSpain2, period: "1936-1936, 1978-1978" },
+      { flagCountry: flagSpain3, period: "1937-1937" },
+      { flagCountry: flagSpain4, period: "1938-1945" },
+      { flagCountry: flagSpain5, period: "1946-1976" },
+      { flagCountry: flagSpain6, period: "1977-1980" },
+    ],
+    coatOfArms: coatOfArmsSpain,
+    associationIcon: iconSpain,
+    associationDate: { founded: "1913", fifaAffiliation: "1914", confederationAffiliation: "1954" },
+  }),
+
+  France: new NationalTeam({
+    names: [{ nameCountry: "France", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagFrance, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsFrance,
+    associationIcon: iconFrance,
+    associationDate: { founded: "1919", fifaAffiliation: "1919", confederationAffiliation: "1954" },
+  }),
+
+  Albania: new NationalTeam({
+    names: [{ nameCountry: "Albania", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagAlbania, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsAlbania,
+    associationIcon: iconAlbania,
+    associationDate: { founded: "1930", fifaAffiliation: "1932", confederationAffiliation: "1954" },
+  }),
+
+  Andorra: new NationalTeam({
+    names: [{ nameCountry: "Andorra", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagAndorra, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsAndorra,
+    associationIcon: iconAndorra,
+    associationDate: { founded: "1994", fifaAffiliation: "1996", confederationAffiliation: "1996" },
+  }),
+
+  Armenia: new NationalTeam({
+    names: [{ nameCountry: "Armenia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagArmenia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsArmenia,
+    associationIcon: iconArmenia,
+    associationDate: { founded: "1992", fifaAffiliation: "1992", confederationAffiliation: "1992" },
+  }),
+
+  Austria: new NationalTeam({
+    names: [{ nameCountry: "Austria", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagAustria, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsAustria,
+    associationIcon: iconAustria,
+    associationDate: { founded: "1904", fifaAffiliation: "1905", confederationAffiliation: "1954" },
+  }),
+
+  Azerbaijan: new NationalTeam({
+    names: [{ nameCountry: "Azerbaijan", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagAzerbaijan, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsAzerbaijan,
+    associationIcon: iconAzerbaijan,
+    associationDate: { founded: "1992", fifaAffiliation: "1994", confederationAffiliation: "1994" },
+  }),
+
+  Belarus: new NationalTeam({
+    names: [{ nameCountry: "Belarus", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBelarus, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBelarus,
+    associationIcon: iconBelarus,
+    associationDate: { founded: "1989", fifaAffiliation: "1992", confederationAffiliation: "1993"},
+  }),
+
+  Belgium: new NationalTeam({
+    names: [{ nameCountry: "Belgium", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBelgium, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBelgium,
+    associationIcon: iconBelgium,
+    associationDate: { founded: "1895", fifaAffiliation: "1904", confederationAffiliation: "1954"},
+  }),
+
+  "Bosnia and Herzegovina": new NationalTeam({
+    names: [{ nameCountry: "Bosnia and Herzegovina", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBosniaAndHerzegovina, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBosniaAndHerzegovina,
+    associationIcon: iconBosniaAndHerzegovina,
+    associationDate: {founded: "1920", fifaAffiliation: "1996", confederationAffiliation: "1998" },
+  }),
+
+  Bulgaria: new NationalTeam({
+    names: [{ nameCountry: "Bulgaria", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBulgaria, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBulgaria,
+    associationIcon: iconBulgaria,
+    associationDate: {founded: "1923", fifaAffiliation: "1924",confederationAffiliation: "1954" },
+  }),
+
+  Croatia: new NationalTeam({
+    names: [{ nameCountry: "Croatia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagCroatia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsCroatia,
+    associationIcon: iconCroatia,
+    associationDate: {founded: "1912", fifaAffiliation: "1941", confederationAffiliation: "1993" },
+  }),
+
+  Cyprus: new NationalTeam({
+    names: [{ nameCountry: "Cyprus", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagCyprus, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsCyprus,
+    associationIcon: iconCyprus,
+    associationDate: { founded: "1934", fifaAffiliation: "1948", confederationAffiliation: "1962" },
+  }),
+
+  "Czech Republic": new NationalTeam({
+    names: [{ nameCountry: "Czech Republic", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagCzechRepublic, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsCzechRepublic,
+    associationIcon: iconCzechRepublic,
+    associationDate: { founded: "1901", fifaAffiliation: "1994", confederationAffiliation: "1993" },
+  }),
+
+  Denmark: new NationalTeam({
+    names: [{ nameCountry: "Denmark", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagDenmark, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsDenmark,
+    associationIcon: iconDenmark,
+    associationDate: { founded: "1889", fifaAffiliation: "1904", confederationAffiliation: "1954" },
+  }),
+
+  Estonia: new NationalTeam({
+    names: [{ nameCountry: "Estonia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagEstonia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsEstonia,
+    associationIcon: iconEstonia,
+    associationDate: { founded: "1921", fifaAffiliation: "1923", confederationAffiliation: "1992" },
+  }),
+
+  "Faroe Islands": new NationalTeam({
+    names: [{ nameCountry: "Faroe Islands", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagFaroeIslands, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsFaroeIslands,
+    associationIcon: iconFaroeIslands,
+    associationDate: { founded: "1979", fifaAffiliation: "1988", confederationAffiliation: "1990" },
+  }),
+
+  Finland: new NationalTeam({
+    names: [{ nameCountry: "Finland", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagFinland, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsFinland,
+    associationIcon: iconFinland,
+    associationDate: { founded: "1907", fifaAffiliation: "1908", confederationAffiliation: "1954" },
+  }),
+
+  Greece: new NationalTeam({
+    names: [{ nameCountry: "Greece", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagGreece, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsGreece,
+    associationIcon: iconGreece,
+    associationDate: { founded: "1926", fifaAffiliation: "1927", confederationAffiliation: "1954" },
+  }),
+
+  Gibraltar: new NationalTeam({
+    names: [{ nameCountry: "Gibraltar", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagGibraltar, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsGibraltar,
+    associationIcon: iconGibraltar,
+    associationDate: { founded: "1895", fifaAffiliation: "2016", confederationAffiliation: "2013" },
+  }),
+
+  Georgia: new NationalTeam({
+    names: [{ nameCountry: "Georgia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagGeorgia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsGeorgia,
+    associationIcon: iconGeorgia,
+    associationDate: { founded: "1990", fifaAffiliation: "1992", confederationAffiliation: "1992" },
+  }),
+
+  Hungary: new NationalTeam({
+    names: [{ nameCountry: "Hungary", period: "0000-p.t." }],
+    flags: [
+      { flagCountry: flagHungary, period: "1957-p.t." },
+      { flagCountry: flagHungary1, period: "1919-1945" },
+      { flagCountry: flagHungary2, period: "1946-1948" },
+      { flagCountry: flagHungary3, period: "1949-1956" },
+    ],
+    coatOfArms: coatOfArmsHungary,
+    associationIcon: iconHungary,
+    associationDate: { founded: "1901", fifaAffiliation: "1906", confederationAffiliation: "1954" },
+  }),
+
+  Iceland: new NationalTeam({
+    names: [{ nameCountry: "Iceland", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagIceland, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsIceland,
+    associationIcon: iconIceland,
+    associationDate: { founded: "1947", fifaAffiliation: "1947", confederationAffiliation: "1954" },
+  }),
+
+  Israel: new NationalTeam({
+    names: [{ nameCountry: "Israel", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagIsrael, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsIsrael,
+    associationIcon: iconIsrael,
+    associationDate: { founded: "1928", fifaAffiliation: "1929", confederationAffiliation: "1994" },
+  }),
+
+  Kazakhstan: new NationalTeam({
+    names: [{ nameCountry: "Kazakhstan", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagKazakhstan, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsKazakhstan,
+    associationIcon: iconKazakhstan,
+    associationDate: { founded: "1994", fifaAffiliation: "1994", confederationAffiliation: "2002" },
+  }),
+
+  Kosovo: new NationalTeam({
+    names: [{ nameCountry: "Kosovo", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagKosovo, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsKosovo,
+    associationIcon: iconKosovo,
+    associationDate: { founded: "2008", fifaAffiliation: "2016", confederationAffiliation: "2016" },
+  }),
+
+  Latvia: new NationalTeam({
+    names: [{ nameCountry: "Latvia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagLatvia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsLatvia,
+    associationIcon: iconLatvia,
+    associationDate: { founded: "1921", fifaAffiliation: "1922", confederationAffiliation: "1992" },
+  }),
+
+  Liechtenstein: new NationalTeam({
+    names: [{ nameCountry: "Liechtenstein", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagLiechtenstein, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsLiechtenstein,
+    associationIcon: iconLiechtenstein,
+    associationDate: { founded: "1934", fifaAffiliation: "1974", confederationAffiliation: "1974" },
+  }),
+
+  Lithuania: new NationalTeam({
+    names: [{ nameCountry: "Lithuania", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagLithuania, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsLithuania,
+    associationIcon: iconLithuania,
+    associationDate: { founded: "1922", fifaAffiliation: "1923", confederationAffiliation: "1992" },
+  }),
+
+  Luxembourg: new NationalTeam({
+    names: [{ nameCountry: "Luxembourg", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagLuxembourg, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsLuxembourg,
+    associationIcon: iconLuxembourg,
+    associationDate: { founded: "1908", fifaAffiliation: "1910", confederationAffiliation: "1954" },
+  }),
+
+  Malta: new NationalTeam({
+    names: [{ nameCountry: "Malta", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMalta, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMalta,
+    associationIcon: iconMalta,
+    associationDate: { founded: "1900", fifaAffiliation: "1959", confederationAffiliation: "1960" },
+  }),
+
+  Moldova: new NationalTeam({
+    names: [{ nameCountry: "Moldova", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMoldova, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMoldova,
+    associationIcon: iconMoldova,
+    associationDate: { founded: "1990", fifaAffiliation: "1994", confederationAffiliation: "1993" },
+  }),
+
+  Montenegro: new NationalTeam({
+    names: [{ nameCountry: "Montenegro", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMontenegro, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMontenegro,
+    associationIcon: iconMontenegro,
+    associationDate: { founded: "1931", fifaAffiliation: "2007", confederationAffiliation: "2007" },
+  }),
+
+  Netherlands: new NationalTeam({
+    names: [{ nameCountry: "Netherlands", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagNetherlands, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsNetherlands,
+    associationIcon: iconNetherlands,
+    associationDate: { founded: "1889", fifaAffiliation: "1904", confederationAffiliation: "1954" },
+  }),
+
+  "North Macedonia": new NationalTeam({
+    names: [{ nameCountry: "North Macedonia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagNorthMacedonia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsNorthMacedonia,
+    associationIcon: iconNorthMacedonia,
+    associationDate: { founded: "1926", fifaAffiliation: "1994", confederationAffiliation: "1994" },
+  }),
+
+  "North. Ireland": new NationalTeam({
+    names: [{ nameCountry: "North. Ireland", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagNorthernIreland, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsNorthernIreland,
+    associationIcon: iconNorthernIreland,
+    associationDate: { founded: "1880", fifaAffiliation: "1911", confederationAffiliation: "1954" },
+  }),
+
+  Norway: new NationalTeam({
+    names: [{ nameCountry: "Norway", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagNorway, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsNorway,
+    associationIcon: iconNorway,
+    associationDate: { founded: "1902", fifaAffiliation: "1908", confederationAffiliation: "1954" },
+  }),
+
+  Poland: new NationalTeam({
+    names: [{ nameCountry: "Poland", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagPoland, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsPoland,
+    associationIcon: iconPoland,
+    associationDate: { founded: "1919", fifaAffiliation: "1923", confederationAffiliation: "1954" },
+  }),
+
+  Portugal: new NationalTeam({
+    names: [{ nameCountry: "Portugal", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagPortugal, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsPortugal,
+    associationIcon: iconPortugal,
+    associationDate: { founded: "1914", fifaAffiliation: "1923", confederationAffiliation: "1954" },
+  }),
+
+  Ireland: new NationalTeam({
+    names: [{ nameCountry: "Ireland", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagRepublicOfIreland, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsRepublicOfIreland,
+    associationIcon: iconRepublicOfIreland,
+    associationDate: { founded: "1921", fifaAffiliation: "1923", confederationAffiliation: "1954" },
+  }),
+
+  Romania: new NationalTeam({
+    names: [{ nameCountry: "Romania", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagRomania, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsRomania,
+    associationIcon: iconRomania,
+    associationDate: { founded: "1909", fifaAffiliation: "1923", confederationAffiliation: "1954" },
+  }),
+
+  Russia: new NationalTeam({
+    names: [{ nameCountry: "Russia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagRussia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsRussia,
+    associationIcon: iconRussia,
+    associationDate: { founded: "1912", fifaAffiliation: "1912", confederationAffiliation: "1954" },
+  }),
+
+  "San Marino": new NationalTeam({
+    names: [{ nameCountry: "San Marino", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSanMarino, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSanMarino,
+    associationIcon: iconSanMarino,
+    associationDate: { founded: "1931", fifaAffiliation: "1988", confederationAffiliation: "1988" },
+  }),
+
+  Scotland: new NationalTeam({
+    names: [{ nameCountry: "Scotland", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagScotland, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsScotland,
+    associationIcon: iconScotland,
+    associationDate: { founded: "1873", fifaAffiliation: "1910", confederationAffiliation: "1954" },
+  }),
+
+  Serbia: new NationalTeam({
+    names: [
+      { nameCountry: "Serbia", period: "2007-p.t." },
+      { nameCountry: "FR Yugoslavia", period: "1992-2002" },
+      { nameCountry: "Serbia and Montenegro", period: "2003-2006" },
+    ],
+    flags: [
+      { flagCountry: flagSerbia, period: "2006-p.t." },
+      { flagCountry: flagSerbia1, period: "1992-2005" },
+    ],
+    coatOfArms: coatOfArmsSerbia,
+    associationIcon: iconSerbia,
+    associationDate: { founded: "1919", fifaAffiliation: "1921", confederationAffiliation: "1954" },
+  }),
+
+  Slovakia: new NationalTeam({
+    names: [{ nameCountry: "Slovakia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSlovakia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSlovakia,
+    associationIcon: iconSlovakia,
+    associationDate: { founded: "1938", fifaAffiliation: "1994", confederationAffiliation: "1993" },
+  }),
+
+  Slovenia: new NationalTeam({
+    names: [{ nameCountry: "Slovenia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSlovenia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSlovenia,
+    associationIcon: iconSlovenia,
+    associationDate: { founded: "1920", fifaAffiliation: "1992", confederationAffiliation: "1992" },
+  }),
+
+  Sweden: new NationalTeam({
+    names: [{ nameCountry: "Sweden", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSweden, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSweden,
+    associationIcon: iconSweden,
+    associationDate: { founded: "1904", fifaAffiliation: "1904", confederationAffiliation: "1954" },
+  }),
+
+  Switzerland: new NationalTeam({
+    names: [{ nameCountry: "Switzerland", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSwitzerland, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSwitzerland,
+    associationIcon: iconSwitzerland,
+    associationDate: { founded: "1895", fifaAffiliation: "1904", confederationAffiliation: "1954" },
+  }),
+
+  Turkey: new NationalTeam({
+    names: [{ nameCountry: "Turkey", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagTurkey, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsTurkey,
+    associationIcon: iconTurkey,
+    associationDate: { founded: "1923", fifaAffiliation: "1923", confederationAffiliation: "1962" },
+  }),
+
+  Ukraine: new NationalTeam({
+    names: [{ nameCountry: "Ukraine", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagUkraine, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsUkraine,
+    associationIcon: iconUkraine,
+    associationDate: { founded: "1991", fifaAffiliation: "1992", confederationAffiliation: "1992" },
+  }),
+
+  Wales: new NationalTeam({
+    names: [{ nameCountry: "Wales", period: "0000-p.t." }],
+    flags: [
+      { flagCountry: flagWales, period: "1910-1952, 1959-p.t." },
+      { flagCountry: flagWales2, period: "1953-1958" },
+    ],
+    coatOfArms: coatOfArmsWales,
+    associationIcon: iconWales,
+    associationDate: { founded: "1876", fifaAffiliation: "1910", confederationAffiliation: "1954" },
+  }),
+
+  Yugoslavia: new NationalTeam({
+    names: [{ nameCountry: "Yugoslavia", period: "1918-1992" }],
+    flags: [
+      { flagCountry: flagYugoslavia, period: "1918-1944, 1992-2006, 2006-p.t." },
+      { flagCountry: flagYugoslavia1, period: "1945-1992" },
+    ],
+    coatOfArms: coatOfArmsYugoslavia,
+    associationIcon: iconYugoslavia,
+    associationDate: { founded: "1919", fifaAffiliation: "1923", confederationAffiliation: "1954" },
+    rating: { points: 0, place: 0 },
+    isCountryReal: false,
+  }),
+
+  Czechoslovakia: new NationalTeam({
+    names: [{ nameCountry: "Czechoslovakia", period: "0000-1992" }],
+    flags: [{ flagCountry: flagCzechoslovakia, period: "0000-1992, 2006-p.t." }],
+    coatOfArms: coatOfArmsCzechoslovakia,
+    associationIcon: iconCzechoslovakia,
+    associationDate: { founded: "1901", fifaAffiliation: "1907", confederationAffiliation: "1954" },
+    rating: { points: 0, place: 0 },
+    isCountryReal: false,
+  }),
+
+  "Soviet Union": new NationalTeam({
+    names: [{ nameCountry: "Soviet Union", period: "0000-1991" }],
+    flags: [{ flagCountry: flagSovietUnion, period: "0000-1991, 1991-p.t." }],
+    coatOfArms: coatOfArmsSovietUnion,
+    associationIcon: iconSovietUnion,
+    associationDate: { founded: "1934", fifaAffiliation: "1946", confederationAffiliation: "1954" },
+    rating: { points: 0, place: 0 },
+    isCountryReal: false,
+  }),
+
+  "East Germany": new NationalTeam({
+    names: [{ nameCountry: "East Germany", period: "1950-1990" }],
+    flags: [{ flagCountry: flagEastGermany, period: "1950-1990, 1990-p.t." }],
+    coatOfArms: coatOfArmsEastGermany,
+    associationIcon: iconEastGermany,
+    associationDate: { founded: "1950", fifaAffiliation: "1952", confederationAffiliation: "1954" },
+    rating: { points: 0, place: 0 },
+    isCountryReal: false,
+  }),
+
+  Algeria: new NationalTeam({
+    names: [{ nameCountry: "Algeria", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagAlgeria, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsAlgeria,
+    associationIcon: iconAlgeria,
+    associationDate: { founded: "1962", fifaAffiliation: "1963", confederationAffiliation: "1964" },
+  }),
+
+  Egypt: new NationalTeam({
+    names: [{ nameCountry: "Egypt", period: "0000-p.t." }],
+    flags: [
+      { flagCountry: flagEgypt, period: "1984-p.t." },
+      { flagCountry: flagEgypt1, period: "1923-1957" },
+      { flagCountry: flagEgypt2, period: "1958-1971" },
+      { flagCountry: flagEgypt3, period: "1972-1983" },
+    ],
+    coatOfArms: coatOfArmsEgypt,
+    associationIcon: iconEgypt,
+    associationDate: { founded: "1921", fifaAffiliation: "1923", confederationAffiliation: "1957" },
+  }),
+
+  Libya: new NationalTeam({
+    names: [{ nameCountry: "Libya", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagLibya, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsLibya,
+    associationIcon: iconLibya,
+    associationDate: { founded: "1962", fifaAffiliation: "1964", confederationAffiliation: "1965" },
+  }),
+
+  Morocco: new NationalTeam({
+    names: [{ nameCountry: "Morocco", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMorocco, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMorocco,
+    associationIcon: iconMorocco,
+    associationDate: { founded: "1955", fifaAffiliation: "1960", confederationAffiliation: "1959" },
+  }),
+
+  Tunisia: new NationalTeam({
+    names: [{ nameCountry: "Tunisia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagTunisia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsTunisia,
+    associationIcon: iconTunisia,
+    associationDate: { founded: "1957", fifaAffiliation: "1960", confederationAffiliation: "1960" },
+  }),
+
+  Benin: new NationalTeam({
+    names: [{ nameCountry: "Benin", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBenin, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBenin,
+    associationIcon: iconBenin,
+    associationDate: { founded: "1962", fifaAffiliation: "1962", confederationAffiliation: "1962" },
+  }),
+
+  "Burkina Faso": new NationalTeam({
+    names: [{ nameCountry: "Burkina Faso", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBurkinaFaso, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBurkinaFaso,
+    associationIcon: iconBurkinaFaso,
+    associationDate: { founded: "1960", fifaAffiliation: "1964", confederationAffiliation: "1964" },
+  }),
+
+  "Cape Verde": new NationalTeam({
+    names: [{ nameCountry: "Cape Verde", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagCapeVerde, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsCapeVerde,
+    associationIcon: iconCapeVerde,
+    associationDate: { founded: "1982", fifaAffiliation: "1986", confederationAffiliation: "2000" },
+  }),
+
+  Gambia: new NationalTeam({
+    names: [{ nameCountry: "Gambia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagGambia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsGambia,
+    associationIcon: iconGambia,
+    associationDate: { founded: "1952", fifaAffiliation: "1968", confederationAffiliation: "1966" },
+  }),
+
+  Ghana: new NationalTeam({
+    names: [{ nameCountry: "Ghana", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagGhana, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsGhana,
+    associationIcon: iconGhana,
+    associationDate: { founded: "1957", fifaAffiliation: "1958", confederationAffiliation: "1958" },
+  }),
+
+  Guinea: new NationalTeam({
+    names: [{ nameCountry: "Guinea", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagGuinea, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsGuinea,
+    associationIcon: iconGuinea,
+    associationDate: { founded: "1960", fifaAffiliation: "1962", confederationAffiliation: "1963" },
+  }),
+
+  "Guinea-Bissau": new NationalTeam({
+    names: [{ nameCountry: "Guinea-Bissau", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagGuineaBissau, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsGuineaBissau,
+    associationIcon: iconGuineaBissau,
+    associationDate: { founded: "1974", fifaAffiliation: "1986", confederationAffiliation: "1986" },
+  }),
+
+  "Ivory Coast": new NationalTeam({
+    names: [{ nameCountry: "Ivory Coast", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagIvoryCoast, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsIvoryCoast,
+    associationIcon: iconIvoryCoast,
+    associationDate: { founded: "1960", fifaAffiliation: "1964", confederationAffiliation: "1960" },
+  }),
+
+  Liberia: new NationalTeam({
+    names: [{ nameCountry: "Liberia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagLiberia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsLiberia,
+    associationIcon: iconLiberia,
+    associationDate: { founded: "1936", fifaAffiliation: "1964", confederationAffiliation: "1962" },
+  }),
+
+  Mali: new NationalTeam({
+    names: [{ nameCountry: "Mali", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMali, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMali,
+    associationIcon: iconMali,
+    associationDate: { founded: "1960", fifaAffiliation: "1963", confederationAffiliation: "1963" },
+  }),
+
+  Mauritania: new NationalTeam({
+    names: [{ nameCountry: "Mauritania", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMauritania, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMauritania,
+    associationIcon: iconMauritania,
+    associationDate: { founded: "1961", fifaAffiliation: "1970", confederationAffiliation: "1968" },
+  }),
+
+  Niger: new NationalTeam({
+    names: [{ nameCountry: "Niger", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagNiger, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsNiger,
+    associationIcon: iconNiger,
+    associationDate: { founded: "1962", fifaAffiliation: "1967", confederationAffiliation: "1967" },
+  }),
+
+  Nigeria: new NationalTeam({
+    names: [{ nameCountry: "Nigeria", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagNigeria, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsNigeria,
+    associationIcon: iconNigeria,
+    associationDate: { founded: "1945", fifaAffiliation: "1960", confederationAffiliation: "1960" },
+  }),
+
+  Senegal: new NationalTeam({
+    names: [{ nameCountry: "Senegal", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSenegal, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSenegal,
+    associationIcon: iconSenegal,
+    associationDate: { founded: "1960", fifaAffiliation: "1964", confederationAffiliation: "1964" },
+  }),
+
+  "Sierra Leone": new NationalTeam({
+    names: [{ nameCountry: "Sierra Leone", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSierraLeone, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSierraLeone,
+    associationIcon: iconSierraLeone,
+    associationDate: { founded: "1960", fifaAffiliation: "1960", confederationAffiliation: "1960" },
+  }),
+
+  Togo: new NationalTeam({
+    names: [{ nameCountry: "Togo", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagTogo, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsTogo,
+    associationIcon: iconTogo,
+    associationDate: { founded: "1960", fifaAffiliation: "1962", confederationAffiliation: "1964" },
+  }),
+
+  Cameroon: new NationalTeam({
+    names: [{ nameCountry: "Cameroon", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagCameroon, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsCameroon,
+    associationIcon: iconCameroon,
+    associationDate: { founded: "1959", fifaAffiliation: "1962", confederationAffiliation: "1963" },
+  }),
+
+  "Central African Republic": new NationalTeam({
+    names: [{ nameCountry: "Central African Republic", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagCentralAfricanRepublic, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsCentralAfricanRepublic,
+    associationIcon: iconCentralAfricanRepublic,
+    associationDate: { founded: "1961", fifaAffiliation: "1964", confederationAffiliation: "1965" },
+  }),
+
+  Chad: new NationalTeam({
+    names: [{ nameCountry: "Chad", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagChad, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsChad,
+    associationIcon: iconChad,
+    associationDate: { founded: "1962", fifaAffiliation: "1964", confederationAffiliation: "1964" },
+  }),
+
+  Congo: new NationalTeam({
+    names: [{ nameCountry: "Congo", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagCongo, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsCongo,
+    associationIcon: iconCongo,
+    associationDate: { founded: "1962", fifaAffiliation: "1964", confederationAffiliation: "1966" },
+  }),
+
+  "DR Congo": new NationalTeam({
+    names: [
+      { nameCountry: "DR Congo", period: "0000-p.t." },
+      { nameCountry: "Zaire", period: "1971-1997" },
+    ],
+    flags: [
+      { flagCountry: flagDRCongo, period: "0000-p.t." },
+      { flagCountry: flagDRCongo2, period: "1971-1997" },
+    ],
+    coatOfArms: coatOfArmsDRCongo,
+    associationIcon: iconDRCongo,
+    associationDate: { founded: "1919", fifaAffiliation: "1964", confederationAffiliation: "1964" },
+  }),
+
+  "Equatorial Guinea": new NationalTeam({
+    names: [{ nameCountry: "Equatorial Guinea", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagEquatorialGuinea, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsEquatorialGuinea,
+    associationIcon: iconEquatorialGuinea,
+    associationDate: { founded: "1957", fifaAffiliation: "1986", confederationAffiliation: "1986" },
+  }),
+
+  Gabon: new NationalTeam({
+    names: [{ nameCountry: "Gabon", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagGabon, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsGabon,
+    associationIcon: iconGabon,
+    associationDate: { founded: "1962", fifaAffiliation: "1966", confederationAffiliation: "1967" },
+  }),
+
+  "São Tomé and Príncipe": new NationalTeam({
+    names: [{ nameCountry: "São Tomé and Príncipe", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSãoToméAndPríncipe, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSãoToméAndPríncipe,
+    associationIcon: iconSãoToméAndPríncipe,
+    associationDate: { founded: "1975", fifaAffiliation: "1986", confederationAffiliation: "1986" },
+  }),
+  Burundi: new NationalTeam({
+    names: [{ nameCountry: "Burundi", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBurundi, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBurundi,
+    associationIcon: iconBurundi,
+    associationDate: {
+      founded: "1948",
+      fifaAffiliation: "1972",
+      confederationAffiliation: "1972",
+    },
+  }),
+
+  Djibouti: new NationalTeam({
+    names: [{ nameCountry: "Djibouti", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagDjibouti, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsDjibouti,
+    associationIcon: iconDjibouti,
+    associationDate: { founded: "1979", fifaAffiliation: "1994", confederationAffiliation: "1994" },
+  }),
+
+  Eritrea: new NationalTeam({
+    names: [{ nameCountry: "Eritrea", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagEritrea, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsEritrea,
+    associationIcon: iconEritrea,
+    associationDate: { founded: "1996", fifaAffiliation: "1998", confederationAffiliation: "1998" },
+  }),
+
+  Ethiopia: new NationalTeam({
+    names: [{ nameCountry: "Ethiopia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagEthiopia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsEthiopia,
+    associationIcon: iconEthiopia,
+    associationDate: { founded: "1943", fifaAffiliation: "1952", confederationAffiliation: "1957" },
+  }),
+
+  Kenya: new NationalTeam({
+    names: [{ nameCountry: "Kenya", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagKenya, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsKenya,
+    associationIcon: iconKenya,
+    associationDate: { founded: "1960", fifaAffiliation: "1960", confederationAffiliation: "1968" },
+  }),
+
+  Rwanda: new NationalTeam({
+    names: [{ nameCountry: "Rwanda", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagRwanda, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsRwanda,
+    associationIcon: iconRwanda,
+    associationDate: { founded: "1972", fifaAffiliation: "1978", confederationAffiliation: "1978" },
+  }),
+
+  Somalia: new NationalTeam({
+    names: [{ nameCountry: "Somalia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSomalia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSomalia,
+    associationIcon: iconSomalia,
+    associationDate: { founded: "1951", fifaAffiliation: "1962", confederationAffiliation: "1968" },
+  }),
+
+  "South Sudan": new NationalTeam({
+    names: [{ nameCountry: "South Sudan", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSouthSudan, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSouthSudan,
+    associationIcon: iconSouthSudan,
+    associationDate: { founded: "2011", fifaAffiliation: "2012", confederationAffiliation: "2012" },
+  }),
+
+  Sudan: new NationalTeam({
+    names: [{ nameCountry: "Sudan", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSudan, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSudan,
+    associationIcon: iconSudan,
+    associationDate: { founded: "1936", fifaAffiliation: "1948", confederationAffiliation: "1957" },
+  }),
+
+  Tanzania: new NationalTeam({
+    names: [{ nameCountry: "Tanzania", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagTanzania, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsTanzania,
+    associationIcon: iconTanzania,
+    associationDate: { founded: "1930", fifaAffiliation: "1964", confederationAffiliation: "1964" },
+  }),
+
+  Uganda: new NationalTeam({
+    names: [{ nameCountry: "Uganda", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagUganda, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsUganda,
+    associationIcon: iconUganda,
+    associationDate: { founded: "1924", fifaAffiliation: "1960", confederationAffiliation: "1960" },
+  }),
+
+  Zanzibar: new NationalTeam({
+    names: [{ nameCountry: "Zanzibar", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagZanzibar, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsZanzibar,
+    associationIcon: iconZanzibar,
+    associationDate: { founded: "1965", fifaAffiliation: "-", confederationAffiliation: "1980" },
+  }),
+
+  Angola: new NationalTeam({
+    names: [{ nameCountry: "Angola", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagAngola, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsAngola,
+    associationIcon: iconAngola,
+    associationDate: { founded: "1979", fifaAffiliation: "1980", confederationAffiliation: "1980" },
+  }),
+
+  Botswana: new NationalTeam({
+    names: [{ nameCountry: "Botswana", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBotswana, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBotswana,
+    associationIcon: iconBotswana,
+    associationDate: { founded: "1970", fifaAffiliation: "1978", confederationAffiliation: "1976" },
+  }),
+
+  Comoros: new NationalTeam({
+    names: [{ nameCountry: "Comoros", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagComoros, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsComoros,
+    associationIcon: iconComoros,
+    associationDate: { founded: "1979", fifaAffiliation: "2005", confederationAffiliation: "2005" },
+  }),
+
+  Eswatini: new NationalTeam({
+    names: [{ nameCountry: "Eswatini", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagEswatini, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsEswatini,
+    associationIcon: iconEswatini,
+    associationDate: { founded: "1968", fifaAffiliation: "1978", confederationAffiliation: "1978" },
+  }),
+
+  Lesotho: new NationalTeam({
+    names: [{ nameCountry: "Lesotho", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagLesotho, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsLesotho,
+    associationIcon: iconLesotho,
+    associationDate: { founded: "1932", fifaAffiliation: "1964", confederationAffiliation: "1964" },
+  }),
+
+  Madagascar: new NationalTeam({
+    names: [{ nameCountry: "Madagascar", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMadagascar, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMadagascar,
+    associationIcon: iconMadagascar,
+    associationDate: { founded: "1961", fifaAffiliation: "1964", confederationAffiliation: "1963" },
+  }),
+
+  Malawi: new NationalTeam({
+    names: [{ nameCountry: "Malawi", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMalawi, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMalawi,
+    associationIcon: iconMalawi,
+    associationDate: { founded: "1966", fifaAffiliation: "1968", confederationAffiliation: "1968" },
+  }),
+
+  Mauritius: new NationalTeam({
+    names: [{ nameCountry: "Mauritius", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMauritius, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMauritius,
+    associationIcon: iconMauritius,
+    associationDate: { founded: "1952", fifaAffiliation: "1964", confederationAffiliation: "1963" },
+  }),
+
+  Mozambique: new NationalTeam({
+    names: [{ nameCountry: "Mozambique", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMozambique, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMozambique,
+    associationIcon: iconMozambique,
+    associationDate: { founded: "1976", fifaAffiliation: "1980", confederationAffiliation: "1980" },
+  }),
+
+  Namibia: new NationalTeam({
+    names: [{ nameCountry: "Namibia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagNamibia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsNamibia,
+    associationIcon: iconNamibia,
+    associationDate: { founded: "1990", fifaAffiliation: "1992", confederationAffiliation: "1992" },
+  }),
+
+  Seychelles: new NationalTeam({
+    names: [{ nameCountry: "Seychelles", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSeychelles, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSeychelles,
+    associationIcon: iconSeychelles,
+    associationDate: { founded: "1979", fifaAffiliation: "1986", confederationAffiliation: "1986" },
+  }),
+
+  "South Africa": new NationalTeam({
+    names: [{ nameCountry: "South Africa", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSouthAfrica, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSouthAfrica,
+    associationIcon: iconSouthAfrica,
+    associationDate: { founded: "1991", fifaAffiliation: "1992", confederationAffiliation: "1992" },
+  }),
+
+  Zambia: new NationalTeam({
+    names: [{ nameCountry: "Zambia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagZambia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsZambia,
+    associationIcon: iconZambia,
+    associationDate: { founded: "1929", fifaAffiliation: "1964", confederationAffiliation: "1964" },
+  }),
+
+  Zimbabwe: new NationalTeam({
+    names: [{ nameCountry: "Zimbabwe", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagZimbabwe, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsZimbabwe,
+    associationIcon: iconZimbabwe,
+    associationDate: { founded: "1965", fifaAffiliation: "1965", confederationAffiliation: "1980" },
+  }),
+
+  Reunion: new NationalTeam({
+    names: [{ nameCountry: "Reunion", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagReunion, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsReunion,
+    associationIcon: iconReunion,
+    associationDate: { founded: "1956", fifaAffiliation: "-", confederationAffiliation: "1992" },
+  }),
+
+  Australia: new NationalTeam({
+    names: [{ nameCountry: "Australia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagAustralia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsAustralia,
+    associationIcon: iconAustralia,
+    associationDate: { founded: "1961", fifaAffiliation: "1963", confederationAffiliation: "2006" },
+  }),
+
+  Brunei: new NationalTeam({
+    names: [{ nameCountry: "Brunei", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBrunei, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBrunei,
+    associationIcon: iconBrunei,
+    associationDate: { founded: "1952", fifaAffiliation: "1972", confederationAffiliation: "1969" },
+  }),
+
+  Cambodia: new NationalTeam({
+    names: [{ nameCountry: "Cambodia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagCambodia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsCambodia,
+    associationIcon: iconCambodia,
+    associationDate: { founded: "1933", fifaAffiliation: "1954", confederationAffiliation: "1954" },
+  }),
+
+  "Timor-Leste": new NationalTeam({
+    names: [{ nameCountry: "Timor-Leste", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagTimorLeste, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsTimorLeste,
+    associationIcon: iconTimorLeste,
+    associationDate: { founded: "2002", fifaAffiliation: "2005", confederationAffiliation: "2002" },
+  }),
+
+  Indonesia: new NationalTeam({
+    names: [
+      { nameCountry: "Indonesia", period: "1949-p.t." },
+      { nameCountry: "D.East Indies", period: "1800-1948" },
+    ],
+    flags: [
+      { flagCountry: flagIndonesia, period: "1949-p.t." },
+      { flagCountry: flagIndonesia2, period: "1800-1948" },
+    ],
+    coatOfArms: coatOfArmsIndonesia,
+    associationIcon: iconIndonesia,
+    associationDate: { founded: "1930", fifaAffiliation: "1952", confederationAffiliation: "1954" },
+  }),
+
+  Laos: new NationalTeam({
+    names: [{ nameCountry: "Laos", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagLaos, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsLaos,
+    associationIcon: iconLaos,
+    associationDate: { founded: "1951", fifaAffiliation: "1952", confederationAffiliation: "1968" },
+  }),
+
+  Malaysia: new NationalTeam({
+    names: [{ nameCountry: "Malaysia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMalaysia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMalaysia,
+    associationIcon: iconMalaysia,
+    associationDate: { founded: "1933", fifaAffiliation: "1954", confederationAffiliation: "1954" },
+  }),
+
+  Myanmar: new NationalTeam({
+    names: [{ nameCountry: "Myanmar", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMyanmar, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMyanmar,
+    associationIcon: iconMyanmar,
+    associationDate: { founded: "1947", fifaAffiliation: "1948", confederationAffiliation: "1954" },
+  }),
+
+  Philippines: new NationalTeam({
+    names: [{ nameCountry: "Philippines", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagPhilippines, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsPhilippines,
+    associationIcon: iconPhilippines,
+    associationDate: { founded: "1907", fifaAffiliation: "1930", confederationAffiliation: "1954" },
+  }),
+
+  Singapore: new NationalTeam({
+    names: [{ nameCountry: "Singapore", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSingapore, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSingapore,
+    associationIcon: iconSingapore,
+    associationDate: { founded: "1892", fifaAffiliation: "1952", confederationAffiliation: "1954" },
+  }),
+
+  Thailand: new NationalTeam({
+    names: [{ nameCountry: "Thailand", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagThailand, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsThailand,
+    associationIcon: iconThailand,
+    associationDate: { founded: "1916", fifaAffiliation: "1925", confederationAffiliation: "1954" },
+  }),
+
+  Vietnam: new NationalTeam({
+    names: [{ nameCountry: "Vietnam", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagVietnam, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsVietnam,
+    associationIcon: iconVietnam,
+    associationDate: { founded: "1952", fifaAffiliation: "1952", confederationAffiliation: "1954" },
+  }),
+
+  Afghanistan: new NationalTeam({
+    names: [{ nameCountry: "Afghanistan", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagAfghanistan, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsAfghanistan,
+    associationIcon: iconAfghanistan,
+    associationDate: { founded: "1933", fifaAffiliation: "1948", confederationAffiliation: "1954" },
+  }),
+
+  Iran: new NationalTeam({
+    names: [{ nameCountry: "Iran", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagIran, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsIran,
+    associationIcon: iconIran,
+    associationDate: { founded: "1920", fifaAffiliation: "1948", confederationAffiliation: "1958" },
+  }),
+
+  "Kyrgyz Republic": new NationalTeam({
+    names: [{ nameCountry: "Kyrgyz Republic", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagKyrgyzRepublic, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsKyrgyzRepublic,
+    associationIcon: iconKyrgyzRepublic,
+    associationDate: { founded: "1992", fifaAffiliation: "1994", confederationAffiliation: "1993" },
+  }),
+
+  Tajikistan: new NationalTeam({
+    names: [{ nameCountry: "Tajikistan", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagTajikistan, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsTajikistan,
+    associationIcon: iconTajikistan,
+    associationDate: { founded: "1936", fifaAffiliation: "1994", confederationAffiliation: "1993" },
+  }),
+
+  Turkmenistan: new NationalTeam({
+    names: [{ nameCountry: "Turkmenistan", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagTurkmenistan, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsTurkmenistan,
+    associationIcon: iconTurkmenistan,
+    associationDate: { founded: "1992", fifaAffiliation: "1994", confederationAffiliation: "1993" },
+  }),
+
+  Uzbekistan: new NationalTeam({
+    names: [{ nameCountry: "Uzbekistan", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagUzbekistan, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsUzbekistan,
+    associationIcon: iconUzbekistan,
+    associationDate: { founded: "1946", fifaAffiliation: "1994", confederationAffiliation: "1993" },
+  }),
+
+  China: new NationalTeam({
+    names: [{ nameCountry: "China", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagChina, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsChina,
+    associationIcon: iconChina,
+    associationDate: { founded: "1924", fifaAffiliation: "1931", confederationAffiliation: "1974" },
+  }),
+
+  Taiwan: new NationalTeam({
+    names: [{ nameCountry: "Taiwan", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagTaiwan, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsTaiwan,
+    associationIcon: iconTaiwan,
+    associationDate: { founded: "1936", fifaAffiliation: "1954", confederationAffiliation: "1954" },
+  }),
+
+  "DPR Korea": new NationalTeam({
+    names: [{ nameCountry: "DPR Korea", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagDPRKorea, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsDPRKorea,
+    associationIcon: iconDPRKorea,
+    associationDate: { founded: "1945", fifaAffiliation: "1958", confederationAffiliation: "1974" },
+  }),
+
+  Guam: new NationalTeam({
+    names: [{ nameCountry: "Guam", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagGuam, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsGuam,
+    associationIcon: iconGuam,
+    associationDate: { founded: "1975", fifaAffiliation: "1996", confederationAffiliation: "1991" },
+  }),
+
+  "Hong Kong": new NationalTeam({
+    names: [{ nameCountry: "Hong Kong", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagHongKong, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsHongKong,
+    associationIcon: iconHongKong,
+    associationDate: { founded: "1914", fifaAffiliation: "1954", confederationAffiliation: "1954" },
+  }),
+
+  Japan: new NationalTeam({
+    names: [{ nameCountry: "Japan", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagJapan, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsJapan,
+    associationIcon: iconJapan,
+    associationDate: { founded: "1921", fifaAffiliation: "1921", confederationAffiliation: "1954" },
+  }),
+
+  "Korea Republic": new NationalTeam({
+    names: [{ nameCountry: "Korea Republic", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagKoreaRepublic, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsKoreaRepublic,
+    associationIcon: iconKoreaRepublic,
+    associationDate: { founded: "1928", fifaAffiliation: "1948", confederationAffiliation: "1954" },
+  }),
+
+  Macau: new NationalTeam({
+    names: [{ nameCountry: "Macau", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMacau, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMacau,
+    associationIcon: iconMacau,
+    associationDate: { founded: "1939", fifaAffiliation: "1978", confederationAffiliation: "1978" },
+  }),
+
+  Mongolia: new NationalTeam({
+    names: [{ nameCountry: "Mongolia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMongolia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMongolia,
+    associationIcon: iconMongolia,
+    associationDate: { founded: "1959", fifaAffiliation: "1998", confederationAffiliation: "1993" },
+  }),
+
+  "Northern Mariana Islands": new NationalTeam({
+    names: [{ nameCountry: "Northern Mariana Islands", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagNorthernMarianaIslands, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsNorthernMarianaIslands,
+    associationIcon: iconNorthernMarianaIslands,
+    associationDate: { founded: "2005", fifaAffiliation: "-", confederationAffiliation: "2020" },
+  }),
+
+  Bangladesh: new NationalTeam({
+    names: [{ nameCountry: "Bangladesh", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBangladesh, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBangladesh,
+    associationIcon: iconBangladesh,
+    associationDate: { founded: "1972", fifaAffiliation: "1976", confederationAffiliation: "1974" },
+  }),
+
+  Bhutan: new NationalTeam({
+    names: [{ nameCountry: "Bhutan", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBhutan, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBhutan,
+    associationIcon: iconBhutan,
+    associationDate: { founded: "1983", fifaAffiliation: "2000", confederationAffiliation: "1993" },
+  }),
+
+  India: new NationalTeam({
+    names: [{ nameCountry: "India", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagIndia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsIndia,
+    associationIcon: iconIndia,
+    associationDate: { founded: "1937", fifaAffiliation: "1948", confederationAffiliation: "1954" },
+  }),
+
+  Maldives: new NationalTeam({
+    names: [{ nameCountry: "Maldives", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMaldives, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMaldives,
+    associationIcon: iconMaldives,
+    associationDate: { founded: "1982", fifaAffiliation: "1986", confederationAffiliation: "1984" },
+  }),
+
+  Nepal: new NationalTeam({
+    names: [{ nameCountry: "Nepal", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagNepal, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsNepal,
+    associationIcon: iconNepal,
+    associationDate: { founded: "1951", fifaAffiliation: "1972", confederationAffiliation: "1954" },
+  }),
+
+  Pakistan: new NationalTeam({
+    names: [{ nameCountry: "Pakistan", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagPakistan, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsPakistan,
+    associationIcon: iconPakistan,
+    associationDate: { founded: "1947", fifaAffiliation: "1948", confederationAffiliation: "1954" },
+  }),
+
+  "Sri Lanka": new NationalTeam({
+    names: [{ nameCountry: "Sri Lanka", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSriLanka, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSriLanka,
+    associationIcon: iconSriLanka,
+    associationDate: { founded: "1939", fifaAffiliation: "1952", confederationAffiliation: "1954" },
+  }),
+
+  Bahrain: new NationalTeam({
+    names: [{ nameCountry: "Bahrain", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBahrain, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBahrain,
+    associationIcon: iconBahrain,
+    associationDate: { founded: "1957", fifaAffiliation: "1968", confederationAffiliation: "1969" },
+  }),
+
+  Iraq: new NationalTeam({
+    names: [{ nameCountry: "Iraq", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagIraq, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsIraq,
+    associationIcon: iconIraq,
+    associationDate: { founded: "1948", fifaAffiliation: "1950", confederationAffiliation: "1970" },
+  }),
+
+  Jordan: new NationalTeam({
+    names: [{ nameCountry: "Jordan", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagJordan, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsJordan,
+    associationIcon: iconJordan,
+    associationDate: { founded: "1949", fifaAffiliation: "1956", confederationAffiliation: "1970" },
+  }),
+
+  Kuwait: new NationalTeam({
+    names: [{ nameCountry: "Kuwait", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagKuwait, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsKuwait,
+    associationIcon: iconKuwait,
+    associationDate: { founded: "1952", fifaAffiliation: "1964", confederationAffiliation: "1964" },
+  }),
+
+  Lebanon: new NationalTeam({
+    names: [{ nameCountry: "Lebanon", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagLebanon, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsLebanon,
+    associationIcon: iconLebanon,
+    associationDate: { founded: "1933", fifaAffiliation: "1936", confederationAffiliation: "1964" },
+  }),
+
+  Oman: new NationalTeam({
+    names: [{ nameCountry: "Oman", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagOman, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsOman,
+    associationIcon: iconOman,
+    associationDate: { founded: "1978", fifaAffiliation: "1980", confederationAffiliation: "1980" },
+  }),
+
+  Palestine: new NationalTeam({
+    names: [{ nameCountry: "Palestine", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagPalestine, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsPalestine,
+    associationIcon: iconPalestine,
+    associationDate: { founded: "1998", fifaAffiliation: "1998", confederationAffiliation: "1998" },
+  }),
+
+  Qatar: new NationalTeam({
+    names: [{ nameCountry: "Qatar", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagQatar, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsQatar,
+    associationIcon: iconQatar,
+    associationDate: { founded: "1960", fifaAffiliation: "1972", confederationAffiliation: "1974" },
+  }),
+
+  "Saudi Arabia": new NationalTeam({
+    names: [{ nameCountry: "Saudi Arabia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSaudiArabia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSaudiArabia,
+    associationIcon: iconSaudiArabia,
+    associationDate: { founded: "1956", fifaAffiliation: "1956", confederationAffiliation: "1972" },
+  }),
+
+  Syria: new NationalTeam({
+    names: [{ nameCountry: "Syria", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSyria, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSyria,
+    associationIcon: iconSyria,
+    associationDate: { founded: "1936", fifaAffiliation: "1937", confederationAffiliation: "1970" },
+  }),
+
+  "U. A. Emirates": new NationalTeam({
+    names: [{ nameCountry: "U. A. Emirates", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagUnitedArabEmirates, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsUnitedArabEmirates,
+    associationIcon: iconUnitedArabEmirates,
+    associationDate: { founded: "1971", fifaAffiliation: "1974", confederationAffiliation: "1974" },
+  }),
+
+  Yemen: new NationalTeam({
+    names: [{ nameCountry: "Yemen", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagYemen, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsYemen,
+    associationIcon: iconYemen,
+    associationDate: { founded: "1962", fifaAffiliation: "1980", confederationAffiliation: "1980" },
+  }),
+
+  Canada: new NationalTeam({
+    names: [{ nameCountry: "Canada", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagCanada, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsCanada,
+    associationIcon: iconCanada,
+    associationDate: { founded: "1912", fifaAffiliation: "1913", confederationAffiliation: "1961" },
+  }),
+
+  Mexico: new NationalTeam({
+    names: [{ nameCountry: "Mexico", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMexico, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMexico,
+    associationIcon: iconMexico,
+    associationDate: { founded: "1922", fifaAffiliation: "1929", confederationAffiliation: "1961" },
+  }),
+
+  "United States": new NationalTeam({
+    names: [{ nameCountry: "United States", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagUnitedStates, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsUnitedStates,
+    associationIcon: iconUnitedStates,
+    associationDate: { founded: "1913", fifaAffiliation: "1914", confederationAffiliation: "1961" },
+  }),
+
+  Belize: new NationalTeam({
+    names: [{ nameCountry: "Belize", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBelize, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBelize,
+    associationIcon: iconBelize,
+    associationDate: { founded: "1980", fifaAffiliation: "1986", confederationAffiliation: "1986" },
+  }),
+
+  "Costa Rica": new NationalTeam({
+    names: [{ nameCountry: "Costa Rica", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagCostaRica, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsCostaRica,
+    associationIcon: iconCostaRica,
+    associationDate: { founded: "1921", fifaAffiliation: "1927", confederationAffiliation: "1961" },
+  }),
+
+  "El Salvador": new NationalTeam({
+    names: [{ nameCountry: "El Salvador", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagElSalvador, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsElSalvador,
+    associationIcon: iconElSalvador,
+    associationDate: { founded: "1935", fifaAffiliation: "1938", confederationAffiliation: "1961" },
+  }),
+
+  Guatemala: new NationalTeam({
+    names: [{ nameCountry: "Guatemala", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagGuatemala, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsGuatemala,
+    associationIcon: iconGuatemala,
+    associationDate: { founded: "1919", fifaAffiliation: "1946", confederationAffiliation: "1961" },
+  }),
+
+  Honduras: new NationalTeam({
+    names: [{ nameCountry: "Honduras", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagHonduras, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsHonduras,
+    associationIcon: iconHonduras,
+    associationDate: { founded: "1935", fifaAffiliation: "1946", confederationAffiliation: "1961" },
+  }),
+
+  Nicaragua: new NationalTeam({
+    names: [{ nameCountry: "Nicaragua", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagNicaragua, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsNicaragua,
+    associationIcon: iconNicaragua,
+    associationDate: { founded: "1931", fifaAffiliation: "1950", confederationAffiliation: "1961" },
+  }),
+
+  Panama: new NationalTeam({
+    names: [{ nameCountry: "Panama", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagPanama, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsPanama,
+    associationIcon: iconPanama,
+    associationDate: { founded: "1937", fifaAffiliation: "1938", confederationAffiliation: "1961" },
+  }),
+
+  Anguilla: new NationalTeam({
+    names: [{ nameCountry: "Anguilla", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagAnguilla, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsAnguilla,
+    associationIcon: iconAnguilla,
+    associationDate: { founded: "1990", fifaAffiliation: "1996", confederationAffiliation: "1996" },
+  }),
+
+  "Antigua and Barbuda": new NationalTeam({
+    names: [{ nameCountry: "Antigua and Barbuda", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagAntiguaAndBarbuda, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsAntiguaAndBarbuda,
+    associationIcon: iconAntiguaAndBarbuda,
+    associationDate: { founded: "1928", fifaAffiliation: "1972", confederationAffiliation: "1961" },
+  }),
+
+  Aruba: new NationalTeam({
+    names: [{ nameCountry: "Aruba", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagAruba, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsAruba,
+    associationIcon: iconAruba,
+    associationDate: { founded: "1932", fifaAffiliation: "1988", confederationAffiliation: "1986" },
+  }),
+
+  Bahamas: new NationalTeam({
+    names: [{ nameCountry: "Bahamas", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBahamas, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBahamas,
+    associationIcon: iconBahamas,
+    associationDate: { founded: "1967", fifaAffiliation: "1968", confederationAffiliation: "1961" },
+  }),
+
+  Barbados: new NationalTeam({
+    names: [{ nameCountry: "Barbados", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBarbados, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBarbados,
+    associationIcon: iconBarbados,
+    associationDate: { founded: "1910", fifaAffiliation: "1968", confederationAffiliation: "1967" },
+  }),
+
+  Bermuda: new NationalTeam({
+    names: [{ nameCountry: "Bermuda", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBermuda, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBermuda,
+    associationIcon: iconBermuda,
+    associationDate: { founded: "1928", fifaAffiliation: "1962", confederationAffiliation: "1967" },
+  }),
+
+  Bonaire: new NationalTeam({
+    names: [{ nameCountry: "Bonaire", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBonaire, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBonaire,
+    associationIcon: iconBonaire,
+    associationDate: { founded: "1960", fifaAffiliation: "-", confederationAffiliation: "2014" },
+  }),
+
+  "British Virgin Islands": new NationalTeam({
+    names: [{ nameCountry: "British Virgin Islands", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBritishVirginIslands, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBritishVirginIslands,
+    associationIcon: iconBritishVirginIslands,
+    associationDate: { founded: "1974", fifaAffiliation: "1996", confederationAffiliation: "1996" },
+  }),
+
+  "Cayman Islands": new NationalTeam({
+    names: [{ nameCountry: "Cayman Islands", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagCaymanIslands, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsCaymanIslands,
+    associationIcon: iconCaymanIslands,
+    associationDate: { founded: "1966", fifaAffiliation: "1992", confederationAffiliation: "1990" },
+  }),
+
+  Cuba: new NationalTeam({
+    names: [{ nameCountry: "Cuba", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagCuba, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsCuba,
+    associationIcon: iconCuba,
+    associationDate: { founded: "1924", fifaAffiliation: "1929", confederationAffiliation: "1961" },
+  }),
+
+  Curaçao: new NationalTeam({
+    names: [{ nameCountry: "Curaçao", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagCuracao, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsCuracao,
+    associationIcon: iconCuracao,
+    associationDate: { founded: "1990", fifaAffiliation: "1996", confederationAffiliation: "1996" },
+  }),
+
+  Dominica: new NationalTeam({
+    names: [{ nameCountry: "Dominica", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagDominica, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsDominica,
+    associationIcon: iconDominica,
+    associationDate: { founded: "1970", fifaAffiliation: "1994", confederationAffiliation: "1994" },
+  }),
+
+  "Dominican Republic": new NationalTeam({
+    names: [{ nameCountry: "Dominican Republic", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagDominicanRepublic, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsDominicanRepublic,
+    associationIcon: iconDominicanRepublic,
+    associationDate: { founded: "1953", fifaAffiliation: "1958", confederationAffiliation: "1964" },
+  }),
+
+  "French Guiana": new NationalTeam({
+    names: [{ nameCountry: "French Guiana", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagFrenchGuiana, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsFrenchGuiana,
+    associationIcon: iconFrenchGuiana,
+    associationDate: { founded: "1962", fifaAffiliation: "-", confederationAffiliation: "2013" },
+  }),
+
+  Grenada: new NationalTeam({
+    names: [{ nameCountry: "Grenada", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagGrenada, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsGrenada,
+    associationIcon: iconGrenada,
+    associationDate: { founded: "1924", fifaAffiliation: "1978", confederationAffiliation: "1978" },
+  }),
+
+  Guadeloupe: new NationalTeam({
+    names: [{ nameCountry: "Guadeloupe", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagGuadeloupe, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsGuadeloupe,
+    associationIcon: iconGuadeloupe,
+    associationDate: { founded: "1958", fifaAffiliation: "-", confederationAffiliation: "2013" },
+  }),
+
+  Guyana: new NationalTeam({
+    names: [{ nameCountry: "Guyana", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagGuyana, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsGuyana,
+    associationIcon: iconGuyana,
+    associationDate: { founded: "1902", fifaAffiliation: "1970", confederationAffiliation: "1969" },
+  }),
+
+  Haiti: new NationalTeam({
+    names: [{ nameCountry: "Haiti", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagHaiti, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsHaiti,
+    associationIcon: iconHaiti,
+    associationDate: { founded: "1904", fifaAffiliation: "1934", confederationAffiliation: "1961" },
+  }),
+
+  Jamaica: new NationalTeam({
+    names: [{ nameCountry: "Jamaica", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagJamaica, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsJamaica,
+    associationIcon: iconJamaica,
+    associationDate: { founded: "1910", fifaAffiliation: "1962", confederationAffiliation: "1963" },
+  }),
+
+  Martinique: new NationalTeam({
+    names: [{ nameCountry: "Martinique", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMartinique, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMartinique,
+    associationIcon: iconMartinique,
+    associationDate: { founded: "1953", fifaAffiliation: "-", confederationAffiliation: "2013" },
+  }),
+
+  Montserrat: new NationalTeam({
+    names: [{ nameCountry: "Montserrat", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagMontserrat, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsMontserrat,
+    associationIcon: iconMontserrat,
+    associationDate: { founded: "1994", fifaAffiliation: "1996", confederationAffiliation: "1996" },
+  }),
+
+  "Puerto Rico": new NationalTeam({
+    names: [{ nameCountry: "Puerto Rico", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagPuertoRico, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsPuertoRico,
+    associationIcon: iconPuertoRico,
+    associationDate: { founded: "1940", fifaAffiliation: "1960", confederationAffiliation: "1964" },
+  }),
+
+  "Saint Kitts and Nevis": new NationalTeam({
+    names: [{ nameCountry: "Saint Kitts and Nevis", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSaintKittsAndNevis, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSaintKittsAndNevis,
+    associationIcon: iconSaintKittsAndNevis,
+    associationDate: { founded: "1932", fifaAffiliation: "1992", confederationAffiliation: "1992" },
+  }),
+
+  "Saint Lucia": new NationalTeam({
+    names: [{ nameCountry: "Saint Lucia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSaintLucia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSaintLucia,
+    associationIcon: iconSaintLucia,
+    associationDate: { founded: "1979", fifaAffiliation: "1988", confederationAffiliation: "1986" },
+  }),
+
+  "Saint Martin": new NationalTeam({
+    names: [{ nameCountry: "Saint Martin", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSaintMartin, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSaintMartin,
+    associationIcon: iconSaintMartin,
+    associationDate: { founded: "1999", fifaAffiliation: "-", confederationAffiliation: "2013" },
+  }),
+
+  "Saint Vincent and the Grenadines": new NationalTeam({
+    names: [{ nameCountry: "Saint Vincent and the Grenadines", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSaintVincentAndTheGrenadines, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSaintVincentAndTheGrenadines,
+    associationIcon: iconSaintVincentAndTheGrenadines,
+    associationDate: { founded: "1979", fifaAffiliation: "1988", confederationAffiliation: "1986" },
+  }),
+
+  "Sint Maarten": new NationalTeam({
+    names: [{ nameCountry: "Sint Maarten", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSintMaarten, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSintMaarten,
+    associationIcon: iconSintMaarten,
+    associationDate: { founded: "1986", fifaAffiliation: "-", confederationAffiliation: "2013" },
+  }),
+
+  Suriname: new NationalTeam({
+    names: [{ nameCountry: "Suriname", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSuriname, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSuriname,
+    associationIcon: iconSuriname,
+    associationDate: { founded: "1920", fifaAffiliation: "1929", confederationAffiliation: "1961" },
+  }),
+
+  "Trinidad & Tobago": new NationalTeam({
+    names: [{ nameCountry: "Trinidad & Tobago", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagTrinidadAndTobago, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsTrinidadAndTobago,
+    associationIcon: iconTrinidadAndTobago,
+    associationDate: { founded: "1908", fifaAffiliation: "1964", confederationAffiliation: "1964" },
+  }),
+
+  "Turks and Caicos Islands": new NationalTeam({
+    names: [{ nameCountry: "Turks and Caicos Islands", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagTurksAndCaicosIslands, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsTurksAndCaicosIslands,
+    associationIcon: iconTurksAndCaicosIslands,
+    associationDate: { founded: "1996", fifaAffiliation: "1998", confederationAffiliation: "1996" },
+  }),
+
+  "U.S. Virgin Islands": new NationalTeam({
+    names: [{ nameCountry: "U.S. Virgin Islands", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagUSVirginIslands, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsUSVirginIslands,
+    associationIcon: iconUSVirginIslands,
+    associationDate: { founded: "1987", fifaAffiliation: "1998", confederationAffiliation: "1987" },
+  }),
+
+  "American Samoa": new NationalTeam({
+    names: [{ nameCountry: "American Samoa", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagAmericanSamoa, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsAmericanSamoa,
+    associationIcon: iconAmericanSamoa,
+    associationDate: { founded: "1984", fifaAffiliation: "1998", confederationAffiliation: "1998" },
+  }),
+
+  "Cook Islands": new NationalTeam({
+    names: [{ nameCountry: "Cook Islands", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagCookIslands, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsCookIslands,
+    associationIcon: iconCookIslands,
+    associationDate: { founded: "1971", fifaAffiliation: "1994", confederationAffiliation: "1994" },
+  }),
+
+  Fiji: new NationalTeam({
+    names: [{ nameCountry: "Fiji", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagFiji, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsFiji,
+    associationIcon: iconFiji,
+    associationDate: { founded: "1938", fifaAffiliation: "1964", confederationAffiliation: "1966" },
+  }),
+
+  Kiribati: new NationalTeam({
+    names: [{ nameCountry: "Kiribati", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagKiribati, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsKiribati,
+    associationIcon: iconKiribati,
+    associationDate: { founded: "1980", fifaAffiliation: "-", confederationAffiliation: "2007" },
+  }),
+
+  "New Caledonia": new NationalTeam({
+    names: [{ nameCountry: "New Caledonia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagNewCaledonia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsNewCaledonia,
+    associationIcon: iconNewCaledonia,
+    associationDate: { founded: "1928", fifaAffiliation: "2004", confederationAffiliation: "1999" },
+  }),
+
+  "New Zealand": new NationalTeam({
+    names: [{ nameCountry: "New Zealand", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagNewZealand, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsNewZealand,
+    associationIcon: iconNewZealand,
+    associationDate: { founded: "1891", fifaAffiliation: "1948", confederationAffiliation: "1966" },
+  }),
+
+  "Papua New Guinea": new NationalTeam({
+    names: [{ nameCountry: "Papua New Guinea", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagPapuaNewGuinea, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsPapuaNewGuinea,
+    associationIcon: iconPapuaNewGuinea,
+    associationDate: { founded: "1962", fifaAffiliation: "1966", confederationAffiliation: "1966" },
+  }),
+
+  Samoa: new NationalTeam({
+    names: [{ nameCountry: "Samoa", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSamoa, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSamoa,
+    associationIcon: iconSamoa,
+    associationDate: { founded: "1968", fifaAffiliation: "1986", confederationAffiliation: "1986" },
+  }),
+
+  "Solomon Islands": new NationalTeam({
+    names: [{ nameCountry: "Solomon Islands", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagSolomonIslands, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsSolomonIslands,
+    associationIcon: iconSolomonIslands,
+    associationDate: { founded: "1979", fifaAffiliation: "1988", confederationAffiliation: "1988" },
+  }),
+
+  Tahiti: new NationalTeam({
+    names: [{ nameCountry: "Tahiti", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagTahiti, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsTahiti,
+    associationIcon: iconTahiti,
+    associationDate: { founded: "1989", fifaAffiliation: "1990", confederationAffiliation: "1990" },
+  }),
+
+  Tonga: new NationalTeam({
+    names: [{ nameCountry: "Tonga", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagTonga, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsTonga,
+    associationIcon: iconTonga,
+    associationDate: { founded: "1965", fifaAffiliation: "1994", confederationAffiliation: "1994" },
+  }),
+
+  Tuvalu: new NationalTeam({
+    names: [{ nameCountry: "Tuvalu", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagTuvalu, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsTuvalu,
+    associationIcon: iconTuvalu,
+    associationDate: { founded: "1979", fifaAffiliation: "-", confederationAffiliation: "2006" },
+  }),
+
+  Vanuatu: new NationalTeam({
+    names: [{ nameCountry: "Vanuatu", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagVanuatu, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsVanuatu,
+    associationIcon: iconVanuatu,
+    associationDate: { founded: "1934", fifaAffiliation: "1988", confederationAffiliation: "1988" },
+  }),
+
+  Argentina: new NationalTeam({
+    names: [{ nameCountry: "Argentina", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagArgentina, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsArgentina,
+    associationIcon: iconArgentina,
+    associationDate: { founded: "1893", fifaAffiliation: "1912", confederationAffiliation: "1916" },
+  }),
+
+  Bolivia: new NationalTeam({
+    names: [{ nameCountry: "Bolivia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBolivia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBolivia,
+    associationIcon: iconBolivia,
+    associationDate: { founded: "1925", fifaAffiliation: "1926", confederationAffiliation: "1926" },
+  }),
+
+  Brazil: new NationalTeam({
+    names: [{ nameCountry: "Brazil", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagBrazil, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsBrazil,
+    associationIcon: iconBrazil,
+    associationDate: { founded: "1914", fifaAffiliation: "1923", confederationAffiliation: "1916" },
+  }),
+
+  Chile: new NationalTeam({
+    names: [{ nameCountry: "Chile", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagChile, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsChile,
+    associationIcon: iconChile,
+    associationDate: { founded: "1895", fifaAffiliation: "1913", confederationAffiliation: "1916" },
+  }),
+
+  Colombia: new NationalTeam({
+    names: [{ nameCountry: "Colombia", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagColombia, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsColombia,
+    associationIcon: iconColombia,
+    associationDate: { founded: "1924", fifaAffiliation: "1936", confederationAffiliation: "1936" },
+  }),
+
+  Ecuador: new NationalTeam({
+    names: [{ nameCountry: "Ecuador", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagEcuador, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsEcuador,
+    associationIcon: iconEcuador,
+    associationDate: { founded: "1925", fifaAffiliation: "1926", confederationAffiliation: "1927" },
+  }),
+
+  Paraguay: new NationalTeam({
+    names: [{ nameCountry: "Paraguay", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagParaguay, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsParaguay,
+    associationIcon: iconParaguay,
+    associationDate: { founded: "1906", fifaAffiliation: "1925", confederationAffiliation: "1921" },
+  }),
+
+  Peru: new NationalTeam({
+    names: [{ nameCountry: "Peru", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagPeru, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsPeru,
+    associationIcon: iconPeru,
+    associationDate: { founded: "1922", fifaAffiliation: "1924", confederationAffiliation: "1925" },
+  }),
+
+  Uruguay: new NationalTeam({
+    names: [{ nameCountry: "Uruguay", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagUruguay, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsUruguay,
+    associationIcon: iconUruguay,
+    associationDate: { founded: "1900", fifaAffiliation: "1923", confederationAffiliation: "1916" },
+  }),
+  
+  Venezuela: new NationalTeam({
+    names: [{ nameCountry: "Venezuela", period: "0000-p.t." }],
+    flags: [{ flagCountry: flagVenezuela, period: "0000-p.t." }],
+    coatOfArms: coatOfArmsVenezuela,
+    associationIcon: iconVenezuela,
+    associationDate: { founded: "1925", fifaAffiliation: "1952", confederationAffiliation: "1953" },
+  }),
+};

@@ -671,7 +671,7 @@ import iconVanuatu from "./../../assets/icon/national/Vanuatu.png";
 import flagVanuatu from "./../../assets/icon/flag/Vanuatu.png";
 import coatOfArmsVanuatu from "./../../assets/icon/coat-of-arms/Vanuatu.png";
 import iconArgentina from "./../../assets/icon/national/Argentina.png";
-import flagArgentina from "./../../assets/icon/flag/Argentina.png";
+// import flagArgentina from "./../../assets/icon/flag/Argentina.png";
 import coatOfArmsArgentina from "./../../assets/icon/coat-of-arms/Argentina.png";
 import iconBolivia from "./../../assets/icon/national/Bolivia.png";
 import flagBolivia from "./../../assets/icon/flag/Bolivia.png";
@@ -700,6 +700,7 @@ import coatOfArmsUruguay from "./../../assets/icon/coat-of-arms/Uruguay.png";
 import iconVenezuela from "./../../assets/icon/national/Venezuela.png";
 import flagVenezuela from "./../../assets/icon/flag/Venezuela.png";
 import coatOfArmsVenezuela from "./../../assets/icon/coat-of-arms/Venezuela.png";
+
 import { v1 } from "uuid";
 import {
   Confederation,
@@ -722,6 +723,7 @@ import iconConcacaf from "./../../assets/icon/iconConfeder/concacaf.png";
 import iconConmebol from "./../../assets/icon/iconConfeder/conmebol.png";
 import iconOfc from "./../../assets/icon/iconConfeder/ofc.png";
 import iconFifa from "./../../assets/icon/iconConfeder/fifa.png";
+import { flagArgentina } from "@shared/assets/flags";
 
 export const confederationBackground: ConfederationImage = {
   uefa: backgroundUefa,
