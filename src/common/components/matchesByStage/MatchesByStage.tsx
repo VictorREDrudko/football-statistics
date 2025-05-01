@@ -1,6 +1,6 @@
-import { WorldCupMatch } from 'data/worldCupData/type-worldCupData'
 import s from './MatchesByStage.module.css'
 import { Match } from '../match/Match'
+import { WorldCupMatch } from '../../../data/worldCupData/type-worldCupData'
 
 type Props = {
   matches: WorldCupMatch[] 

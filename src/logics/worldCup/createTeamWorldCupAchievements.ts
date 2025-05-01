@@ -1,5 +1,6 @@
-import { WorldCupData } from "data/worldCupData/type-worldCupData"
-import { stage } from "data/worldCupData/worldCupData"
+import { WorldCupData } from "../../data/worldCupData/type-worldCupData"
+import { stage } from "../../data/worldCupData/worldCupData"
+
 
 export type TeamWorldCupAchievements = {
   countFirstPlace: number 

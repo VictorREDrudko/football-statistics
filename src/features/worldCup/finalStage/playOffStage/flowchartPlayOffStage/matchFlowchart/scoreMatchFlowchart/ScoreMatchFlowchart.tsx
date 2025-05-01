@@ -1,6 +1,5 @@
-import { CountryTeam } from 'common/components/countryTeam/CountryTeam'
 import s from './ScoreMatchFlowchart.module.css'
-import { convertMatchScore } from 'logics/score/convertMatchScore'
+
 
 type Props = {
   score: Array<number[]>

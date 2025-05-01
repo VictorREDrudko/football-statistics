@@ -4,7 +4,7 @@ import iconSilverMedal from '../../../../assets/icon/card/silver-medal.png'
 import iconBronzeMedal from '../../../../assets/icon/card/bronze-medal.png'
 import iconCounter from '../../../../assets/icon/card/icon-counter.png'
 import { useState } from 'react'
-import { ModalResults } from 'features/nationalTeams/nationTeamCard/achievements/modalResults/ModalResults'
+import { ModalResults } from '../../../../features/nationalTeams/nationTeamCard/achievements/modalResults/ModalResults'
 
 type Props = {
   title: string

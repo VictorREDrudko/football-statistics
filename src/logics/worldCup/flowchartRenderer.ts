@@ -1,8 +1,9 @@
-import { NodesItem, WorldCupMatch } from "data/worldCupData/type-worldCupData";
 import { generateMatchesByStage, generatePlayoffGrid } from "./playoffGridLogic";
 import { Position } from "@xyflow/react";
 import s from "./../../features/worldCup/finalStage/playOffStage/flowchartPlayOffStage/FlowchartPlayOffStage.module.css";
-import { stage } from "data/worldCupData/worldCupData";
+import { WorldCupMatch, NodesItem } from "../../data/worldCupData/type-worldCupData";
+import { stage } from "../../data/worldCupData/worldCupData";
+
 
 export const createNodes = (playOffStages: string[], matches: WorldCupMatch[]) => {
   const matchesByStage = generateMatchesByStage(playOffStages, matches)

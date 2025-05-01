@@ -1,5 +1,6 @@
-import { worldCupData } from "data/worldCupData/worldCupData";
-import { WorldCupInfo, WorldCupMatch } from "data/worldCupData/type-worldCupData";
+import { WorldCupMatch, WorldCupInfo } from "../../data/worldCupData/type-worldCupData";
+import { worldCupData } from "../../data/worldCupData/worldCupData";
+
 
 export const worldCupYears: string[] = Object.keys(worldCupData);
 

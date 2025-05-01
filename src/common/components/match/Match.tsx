@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import s from './Match.module.css'
-import { WorldCupMatch } from 'data/worldCupData/type-worldCupData'
 import { MatchPartialInfo } from './matchPartialInfo/MatchPartialInfo'
 import { MatchAllInfo } from './matchAllInfo/MatchAllInfo'
+import { WorldCupMatch } from '../../../data/worldCupData/type-worldCupData'
 
 export type Props = {
   match: WorldCupMatch

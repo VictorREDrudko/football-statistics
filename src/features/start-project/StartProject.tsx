@@ -1,4 +1,4 @@
-import { aboutProject } from 'data/data'
+import { aboutProject } from '../../data/data'
 import s from './StartProject.module.css'
 
 export const StartProject = () => {

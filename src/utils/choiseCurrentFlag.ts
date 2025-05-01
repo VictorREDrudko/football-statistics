@@ -1,5 +1,6 @@
+import { nationalTeams } from "../data/nationalTeamsData/nationalTeams";
 import { getCurrentYear } from "./getCurrentYear";
-import { nationalTeams } from "data/nationalTeamsData/nationalTeams";
+
 
 type FlagParams = {
   name: string;

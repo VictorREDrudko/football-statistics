@@ -1,16 +1,15 @@
 // import { StartProject } from '@features/start-project';
-import { StartProject } from '@features/start-project/StartProject';
 import './App.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { About } from 'features/about/About';
-import { Header } from 'common/components/header/Header';
-import { NationalTeams } from 'features/nationalTeams/NationalTeams';
-import { NationaleTournaments } from 'features/nationalTournaments/NationalTournaments';
-import { WorldCup } from 'features/worldCup/WorldCup';
-import { FinalStage } from 'features/worldCup/finalStage/FinalStage';
 import { useEffect } from 'react';
-import { ratingCalculation } from 'logics/ratingCalculation/ratingCalculation';
-
+import { ratingCalculation } from '../logics/ratingCalculation/ratingCalculation';
+import { Header } from '../common/components/header/Header';
+import { StartProject } from '../features/start-project/StartProject';
+import { About } from '../features/about/About';
+import { NationalTeams } from '../features/nationalTeams/NationalTeams';
+import { NationaleTournaments } from '../features/nationalTournaments/NationalTournaments';
+import { FinalStage } from '../features/worldCup/finalStage/FinalStage';
+import { WorldCup } from '../features/worldCup/WorldCup';
 
 function App() {
   // Добавление рейтинга

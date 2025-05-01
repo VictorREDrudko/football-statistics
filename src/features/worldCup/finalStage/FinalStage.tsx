@@ -2,10 +2,10 @@ import { useParams } from "react-router-dom"
 import s from './FinalStage.module.css'
 import { StatisticsTournament } from "./statisticsTournament/StatisticsTournament";
 import { GroupStage } from "./groupStage/GroupStage";
-import { getQualifiedTeamsForPlayoff, getTournamentData, worldCupYears } from "logics/worldCup/worldCupFinalStageLogic";
 import { PlayOffStage } from "./playOffStage/PlayOffStage";
 import { GroupFinalStage } from "./groupFinalStage/GroupFinalStage";
 import { GroupSecondStage } from "./groupSecondStage/GroupSecondStage";
+import { getQualifiedTeamsForPlayoff, getTournamentData, worldCupYears } from "../../../logics/worldCup/worldCupFinalStageLogic";
 
 export const FinalStage = () => {
   const { urlYear } = useParams<{ urlYear: string}>();

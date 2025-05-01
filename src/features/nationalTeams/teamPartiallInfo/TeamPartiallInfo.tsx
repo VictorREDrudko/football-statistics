@@ -1,9 +1,10 @@
-import { NationalTeam } from 'data/nationalTeamsData/type-nationalTeams'
+import { Flag } from '../../../common/components/flag/Flag'
+import { NationalTeam } from '../../../data/nationalTeamsData/type-nationalTeams'
+import { getCurrentCountryName } from '../../../logics/nationalTeamsLogic/getCurrentCountryName'
+import { getCurrentYear } from '../../../utils/getCurrentYear'
 import s from './TeamPartiallInfo.module.css'
-import { getCurrentCountryName } from 'logics/nationalTeamsLogic/getCurrentCountryName'
-import { Flag } from 'common/components/flag/Flag'
 import { useEffect, useState } from 'react'
-import { getCurrentYear } from 'utils/getCurrentYear'
+
 
 type Props = {
   data: NationalTeam

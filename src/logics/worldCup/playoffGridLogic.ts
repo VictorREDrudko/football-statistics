@@ -1,5 +1,6 @@
-import { WorldCupMatch } from "data/worldCupData/type-worldCupData"
-import { stage } from "data/worldCupData/worldCupData"
+import { WorldCupMatch } from "../../data/worldCupData/type-worldCupData"
+import { stage } from "../../data/worldCupData/worldCupData"
+
 
 // распределение матчей play-off по стадиям (финал, полуфинал ...)
 export const generateMatchesByStage = (playOffStages: string[], matches: WorldCupMatch[]) : WorldCupMatch[][] => {

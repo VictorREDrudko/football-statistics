@@ -1,4 +1,4 @@
-import { WorldCupInfo } from 'data/worldCupData/type-worldCupData'
+import { WorldCupInfo } from '../../../../data/worldCupData/type-worldCupData'
 import s from './StatisticsTournament.module.css'
 import { TournamentHeader } from './tournamentHeader/TournamentHeader'
 import { TournamentInfo } from './tournamentInfo/TournamentInfo'

@@ -1,12 +1,12 @@
-import { NationalTeam } from 'data/nationalTeamsData/type-nationalTeams'
 import { HeaderCard } from './headerCard/HeaderCard'
 import s from './NationTeamCard.module.css'
-import { getCurrentCountryFlag } from 'logics/nationalTeamsLogic/getCurrentCountryFlag'
-import { getCurrentCountryName } from 'logics/nationalTeamsLogic/getCurrentCountryName'
-import { getCurrentYear } from 'utils/getCurrentYear'
 import { TeamRating } from './teamRating/TeamRating'
 import { AssociationDates } from './associationDates/AssociationDates'
 import { Achievements } from './achievements/Achievements'
+import { NationalTeam } from '../../../data/nationalTeamsData/type-nationalTeams'
+import { getCurrentCountryFlag } from '../../../logics/nationalTeamsLogic/getCurrentCountryFlag'
+import { getCurrentCountryName } from '../../../logics/nationalTeamsLogic/getCurrentCountryName'
+import { getCurrentYear } from '../../../utils/getCurrentYear'
 
 type Props = {
   data: NationalTeam

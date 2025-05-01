@@ -1,13 +1,13 @@
+import { TournamentResults } from '../../../../common/components/tournamentResults/TournamentResults';
+import { nationalTournaments } from '../../../../data/data';
+import { confederationIcon } from '../../../../data/nationalTeamsData/nationalTeams';
+import { Confeder } from '../../../../data/nationalTeamsData/type-nationalTeams';
+import { worldCupData } from '../../../../data/worldCupData/worldCupData';
+import { findTeamsByConfederation } from '../../../../logics/nationalTeamsLogic/findTeamsByConfederation';
+import { TeamWorldCupAchievements, createTeamWorldCupAchievements } from '../../../../logics/worldCup/createTeamWorldCupAchievements';
+import { IconConfederation } from '../../iconConfederation/IconConfederation';
+import { TitleItem } from '../titleItem/TitleItem';
 import s from './Achievements.module.css'
-import { createTeamWorldCupAchievements, TeamWorldCupAchievements } from 'logics/worldCup/createTeamWorldCupAchievements'
-import { worldCupData } from 'data/worldCupData/worldCupData'
-import { TournamentResults } from 'common/components/tournamentResults/TournamentResults'
-import { nationalTournaments } from 'data/data'
-import { findTeamsByConfederation } from 'logics/nationalTeamsLogic/findTeamsByConfederation'
-import { Confeder, Confederation } from 'data/nationalTeamsData/type-nationalTeams'
-import { confederationIcon } from 'data/nationalTeamsData/nationalTeams'
-import { TitleItem } from '../titleItem/TitleItem'
-import { IconConfederation } from 'features/nationalTeams/iconConfederation/IconConfederation'
 
 type Props = {
   nameTeam: string

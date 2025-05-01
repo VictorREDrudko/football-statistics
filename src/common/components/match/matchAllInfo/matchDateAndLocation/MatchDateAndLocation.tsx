@@ -1,4 +1,4 @@
-import { StadiumInfo } from 'data/worldCupData/type-worldCupData'
+import { StadiumInfo } from '../../../../../data/worldCupData/type-worldCupData'
 import s from './MatchDateAndLocation.module.css'
 
 type Props = {

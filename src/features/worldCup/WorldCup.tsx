@@ -1,7 +1,8 @@
-import { worldCupYears } from 'logics/worldCup/worldCupFinalStageLogic'
-import s from './WorldCup.module.css'
+import { worldCupData } from "../../data/worldCupData/worldCupData"
+import { worldCupYears } from "../../logics/worldCup/worldCupFinalStageLogic"
 import { WorldCupCard } from "./worldCupCard/WorldCupCard"
-import { worldCupData } from 'data/worldCupData/worldCupData'
+import s from "./WorldCup.module.css"
+
 
 export const WorldCup = () => {
   const cardsWorldCup = worldCupYears.map((year) => {

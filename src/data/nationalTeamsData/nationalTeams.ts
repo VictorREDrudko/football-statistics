@@ -723,7 +723,7 @@ import iconConcacaf from "./../../assets/icon/iconConfeder/concacaf.png";
 import iconConmebol from "./../../assets/icon/iconConfeder/conmebol.png";
 import iconOfc from "./../../assets/icon/iconConfeder/ofc.png";
 import iconFifa from "./../../assets/icon/iconConfeder/fifa.png";
-import { flagArgentina } from "@shared/assets/flags";
+import { flagArgentina } from "../../shared/assets/flags";
 
 export const confederationBackground: ConfederationImage = {
   uefa: backgroundUefa,

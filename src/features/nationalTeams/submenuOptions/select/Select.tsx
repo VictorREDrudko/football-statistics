@@ -1,8 +1,8 @@
-import { confederation } from 'data/nationalTeamsData/nationalTeams'
 import s from './Select.module.css'
 import { NavLink, useSearchParams } from 'react-router-dom'
-import { Confederation } from 'data/nationalTeamsData/type-nationalTeams'
 import { useEffect } from 'react'
+import { Confederation } from '../../../../data/nationalTeamsData/type-nationalTeams'
+import { confederation } from '../../../../data/nationalTeamsData/nationalTeams'
 
 type Props = {
   setConfeder: (confeder: Confederation) => void

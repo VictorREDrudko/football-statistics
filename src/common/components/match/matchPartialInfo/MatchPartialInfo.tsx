@@ -1,7 +1,6 @@
-import { WorldCupMatch } from "data/worldCupData/type-worldCupData"
-import s from './MatchPartialInfo.module.css'
-import { getYearTournament } from "utils/getYearTournament"
-import { CountryTeam } from "common/components/countryTeam/CountryTeam"
+import { WorldCupMatch } from "../../../../data/worldCupData/type-worldCupData";
+import { getYearTournament } from "../../../../utils/getYearTournament";
+import { CountryTeam } from "../../countryTeam/CountryTeam";
 import { Score } from "../score/Score"
 
 type Props = {

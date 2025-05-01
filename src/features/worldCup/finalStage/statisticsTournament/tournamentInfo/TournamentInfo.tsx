@@ -1,10 +1,11 @@
+import { CountryTeam } from '../../../../../common/components/countryTeam/CountryTeam'
+import { Flag } from '../../../../../common/components/flag/Flag'
+import { WorldCupInfo } from '../../../../../data/worldCupData/type-worldCupData'
+import { worldCupCharacteristic } from '../../../../../data/worldCupData/worldCupData'
+import { createWorldCupStatsData } from '../../../../../logics/worldCup/worldCupFinalStageLogic'
+import { getYearTournament } from '../../../../../utils/getYearTournament'
 import s from './TournamentInfo.module.css'
-import { Flag } from 'common/components/flag/Flag'
-import { CountryTeam } from 'common/components/countryTeam/CountryTeam'
-import { WorldCupInfo } from 'data/worldCupData/type-worldCupData'
-import { worldCupCharacteristic } from 'data/worldCupData/worldCupData'
-import { getYearTournament } from 'utils/getYearTournament'
-import { createWorldCupStatsData } from 'logics/worldCup/worldCupFinalStageLogic'
+
 
 type Props = {
   dataTournament: WorldCupInfo

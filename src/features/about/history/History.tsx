@@ -1,4 +1,4 @@
-import { startPage } from 'data/data'
+import { startPage } from '../../../data/data'
 import s from './History.module.css'
 
 export const History = () => {

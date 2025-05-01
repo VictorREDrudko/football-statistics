@@ -2,7 +2,7 @@
 import { NavLink } from 'react-router-dom'
 import s from './Menu.module.css'
 import { MutableRefObject } from 'react'
-import { menu } from 'data/data'
+import { menu } from '../../../../data/data'
 
 type MenuType = {
   isOpen: boolean

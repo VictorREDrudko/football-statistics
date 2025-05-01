@@ -1,6 +1,6 @@
+import { isCountryActive } from '../../../logics/nationalTeamsLogic/utils/isCountryActive'
+import { choiseCurrentCountryName } from '../../../utils/choiseCurrentCountryName'
 import s from './CountryName.module.css'
-import { isCountryActive } from 'logics/nationalTeamsLogic/utils/isCountryActive'
-import { choiseCurrentCountryName } from 'utils/choiseCurrentCountryName'
 
 type Props = {
   countryName: string

@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom"
 import s from './WorldCupCard.module.css'
-import { getYearTournament } from "utils/getYearTournament"
-import { getNumberTournament } from "utils/getNumberTournament"
-import { CountryTeam } from "common/components/countryTeam/CountryTeam"
-import { WorldCupInfo } from "data/worldCupData/type-worldCupData"
+import { WorldCupInfo } from "../../../data/worldCupData/type-worldCupData"
+import { CountryTeam } from "../../../common/components/countryTeam/CountryTeam"
+import { getNumberTournament } from "../../../utils/getNumberTournament"
+import { getYearTournament } from "../../../utils/getYearTournament"
 
 type Props = {
   tournament: WorldCupInfo

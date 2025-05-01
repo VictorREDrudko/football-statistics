@@ -1,8 +1,8 @@
+import { tableHeaderData } from '../../../data/tableHeaderData'
 import { CountryTeam } from '../countryTeam/CountryTeam'
 import { SubStageTitle } from '../subStageTitle/SubStageTitle'
 import s from './TableGroup.module.css'
 import { TableHeader } from './type-TableHeader'
-import { tableHeaderData } from 'data/tableHeaderData'
 
 type Props = {
   tableBodyData: Array<TableHeader> 

@@ -1,10 +1,9 @@
-import { WorldCupMatch } from "data/worldCupData/type-worldCupData"
 import s from './MatchAllInfo.module.css'
-import { getYearTournament } from "utils/getYearTournament"
 import { MatchDateAndLocation } from "./matchDateAndLocation/MatchDateAndLocation"
 import { Match } from "../Match"
 import { MatchPartialInfo } from "../matchPartialInfo/MatchPartialInfo"
 import { InfoGoals } from "./infoGoals/InfoGoals"
+import { WorldCupMatch } from '../../../../data/worldCupData/type-worldCupData'
 
 type Match = {
   match: WorldCupMatch

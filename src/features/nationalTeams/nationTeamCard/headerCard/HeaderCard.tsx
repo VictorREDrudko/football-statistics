@@ -1,4 +1,4 @@
-import { Flag } from 'common/components/flag/Flag'
+import { Flag } from '../../../../common/components/flag/Flag'
 import s from './HeaderCard.module.css'
 import { useEffect, useState } from 'react'
 

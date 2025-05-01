@@ -1,4 +1,4 @@
-import { BaseResult } from 'logics/structuringResultChampionships/structuringResultChampionships-type'
+import { BaseResult } from '../../../../logics/structuringResultChampionships/structuringResultChampionships-type'
 import { Total } from '../total/Total'
 import s from './TotalGroup.module.css'
 

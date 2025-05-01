@@ -1,6 +1,7 @@
-import { Flag } from 'common/components/flag/Flag'
+import { Flag } from '../../../../../common/components/flag/Flag'
+import { getCurrentYear } from '../../../../../utils/getCurrentYear'
 import s from './ModalResults.module.css'
-import { getCurrentYear } from 'utils/getCurrentYear'
+
 
 type Props = {
   onClose: () => void

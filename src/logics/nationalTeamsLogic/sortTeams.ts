@@ -1,4 +1,4 @@
-import { NationalTeam } from "data/nationalTeamsData/type-nationalTeams";
+import { NationalTeam } from "../../data/nationalTeamsData/type-nationalTeams";
 import { getCurrentCountryName } from "./getCurrentCountryName";
 
 export const sortTeams = (teams: NationalTeam[], sortType: string) => {

@@ -1,9 +1,10 @@
 import s from './FlowchartPlayOffStage.module.css'
 import { ReactFlow, ReactFlowProvider } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import { WorldCupMatch } from 'data/worldCupData/type-worldCupData';
 import { CustomNodeComponent } from './customNodeComponent/CustomNodeComponent';
-import { createEdges, createHeight, createNodes } from 'logics/worldCup/flowchartRenderer';
+import { WorldCupMatch } from '../../../../../data/worldCupData/type-worldCupData';
+import { createNodes, createHeight, createEdges } from '../../../../../logics/worldCup/flowchartRenderer';
+
 
 // Настройка карты типов узлов
 const nodeTypes = {

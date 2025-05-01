@@ -1,4 +1,4 @@
-import { Confederation } from 'data/nationalTeamsData/type-nationalTeams'
+import { Confederation } from '../../../data/nationalTeamsData/type-nationalTeams'
 import s from './IconConfederation.module.css'
 
 type Props = {

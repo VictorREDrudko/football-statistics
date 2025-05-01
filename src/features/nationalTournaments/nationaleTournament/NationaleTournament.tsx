@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 import s from './NationaleTournament.module.css'
-import { Tournament } from "data/type-data"
+import { Tournament } from "../../../data/type-data"
 
 type Props = {
   tournament: Tournament

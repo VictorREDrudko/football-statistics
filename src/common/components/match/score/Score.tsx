@@ -1,4 +1,4 @@
-import { convertMatchScore, MatchScore } from 'logics/score/convertMatchScore';
+import { MatchScore, convertMatchScore } from '../../../../logics/score/convertMatchScore';
 import s from './Score.module.css'
 
 export type Props = {

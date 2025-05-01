@@ -1,6 +1,6 @@
-import { nationalTournaments, nationalTournamentsKeys } from 'data/data'
+import { nationalTournamentsKeys, nationalTournaments } from '../../data/data'
+import { NameTournament } from '../../data/type-data'
 import s from './NationalTournaments.module.css'
-import { NameTournament } from 'data/type-data'
 import { NationaleTournament } from './nationaleTournament/NationaleTournament'
 
 export const NationaleTournaments = () => {

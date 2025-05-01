@@ -1,4 +1,4 @@
-import { GoalsInfo } from 'data/worldCupData/type-worldCupData'
+import { GoalsInfo } from '../../../../../data/worldCupData/type-worldCupData'
 import s from './InfoGoals.module.css'
 
 type Props = {

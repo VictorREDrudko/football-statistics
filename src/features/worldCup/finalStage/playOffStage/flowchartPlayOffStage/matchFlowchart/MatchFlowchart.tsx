@@ -1,8 +1,9 @@
-import { WorldCupMatch } from 'data/worldCupData/type-worldCupData'
+import { CountryTeam } from '../../../../../../common/components/countryTeam/CountryTeam'
+import { WorldCupMatch } from '../../../../../../data/worldCupData/type-worldCupData'
+import { getYearTournament } from '../../../../../../utils/getYearTournament'
 import s from './MatchFlowchart.module.css'
-import { CountryTeam } from 'common/components/countryTeam/CountryTeam'
 import { ScoreMatchFlowchart } from './scoreMatchFlowchart/ScoreMatchFlowchart'
-import { getYearTournament } from 'utils/getYearTournament'
+
 
 type Props = {
   match: WorldCupMatch

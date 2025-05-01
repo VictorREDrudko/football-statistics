@@ -1,10 +1,11 @@
+import { MatchesByStage } from '../../../../common/components/matchesByStage/MatchesByStage'
+import { StageTitle } from '../../../../common/components/stageTitle/StageTitle'
+import { TableGroup } from '../../../../common/components/tableGroup/TableGroup'
+import { WorldCupMatch } from '../../../../data/worldCupData/type-worldCupData'
+import { worldCupData } from '../../../../data/worldCupData/worldCupData'
+import { getSortGroupNames, createGroupTableData } from '../../../../logics/worldCup/worldCupFinalStageLogic'
 import s from './GroupSecondStage.module.css'
-import { WorldCupMatch } from 'data/worldCupData/type-worldCupData'
-import { createGroupTableData, getSortGroupNames } from 'logics/worldCup/worldCupFinalStageLogic'
-import { worldCupData } from 'data/worldCupData/worldCupData'
-import { StageTitle } from 'common/components/stageTitle/StageTitle'
-import { TableGroup } from 'common/components/tableGroup/TableGroup'
-import { MatchesByStage } from 'common/components/matchesByStage/MatchesByStage'
+
 
 type Props = {
   groupStageMatches: WorldCupMatch[]

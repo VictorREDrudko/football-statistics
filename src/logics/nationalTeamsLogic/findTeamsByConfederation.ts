@@ -1,5 +1,6 @@
-import { teamsByConfederation } from "data/nationalTeamsData/nationalTeams"
-import { Confeder, Confederation } from "data/nationalTeamsData/type-nationalTeams"
+import { teamsByConfederation } from "../../data/nationalTeamsData/nationalTeams";
+import { Confeder, Confederation } from "../../data/nationalTeamsData/type-nationalTeams";
+
 
 export const findTeamsByConfederation = (coutryName: string): Confeder => {
   const confederationList: Confederation[] = Object.keys(teamsByConfederation) as Confederation[];

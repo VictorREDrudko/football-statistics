@@ -1,11 +1,11 @@
-import { classNameResult } from "data/nationalTeamsData/classNameResult";
-import { Confederation } from "data/nationalTeamsData/type-nationalTeams";
-import { nationalTournaments } from "data/data";
 import icon2Place from './../../assets/icon/card/medal2.png'
 import icon3Place from './../../assets/icon/card/medal3.png'
 import iconMatches from './../../assets/icon/card/matches.png'
-import { TeamWorldCupAchievements } from "logics/worldCup/createTeamWorldCupAchievements";
 import { BaseResult } from "./structuringResultChampionships-type";
+import { nationalTournaments } from '../../data/data';
+import { classNameResult } from '../../data/nationalTeamsData/classNameResult';
+import { Confederation } from '../../data/nationalTeamsData/type-nationalTeams';
+import { TeamWorldCupAchievements } from '../worldCup/createTeamWorldCupAchievements';
 
 export const structuringResultChampionships = (resultsData: TeamWorldCupAchievements, confeder:Confederation): BaseResult[] => {
   return [

@@ -1,7 +1,8 @@
-import { nationalTeams } from "data/nationalTeamsData/nationalTeams"
-import { NationalTeam } from "data/nationalTeamsData/type-nationalTeams"
-import { worldCupData } from "data/worldCupData/worldCupData"
-import { createTeamWorldCupAchievements } from "logics/worldCup/createTeamWorldCupAchievements"
+import { nationalTeams } from "../../data/nationalTeamsData/nationalTeams";
+import { NationalTeam } from "../../data/nationalTeamsData/type-nationalTeams";
+import { worldCupData } from "../../data/worldCupData/worldCupData";
+import { createTeamWorldCupAchievements } from "../worldCup/createTeamWorldCupAchievements";
+
 
 const baseRatingPoints = {
   worldCup: {

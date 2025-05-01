@@ -1,6 +1,7 @@
 import s from './Info.module.css'
 import worldMapImage from './../../../assets/map-fifa.png'
-import { startPage } from 'data/data'
+import { startPage } from '../../../data/data'
+
 
 export const Info = () => {
   return (

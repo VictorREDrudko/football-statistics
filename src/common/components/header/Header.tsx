@@ -2,10 +2,9 @@ import s from './Header.module.css'
 import { Menu } from './menu/Menu'
 import { Icon } from './icon/Icon'
 import { useRef, useState } from 'react'
-import { AiOutlineClose } from "react-icons/ai";
-import { AiOutlineMenu } from "react-icons/ai";
 import { useOutsideClick } from '../../hooks/UseOutsideClick'
-import { icons } from 'data/data';
+import { icons } from '../../../data/data'
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,11 +1,11 @@
-import { TeamWorldCupAchievements } from 'logics/worldCup/createTeamWorldCupAchievements'
+import { classNameResult } from '../../../data/nationalTeamsData/classNameResult'
+import { Confederation } from '../../../data/nationalTeamsData/type-nationalTeams'
+import { TitleItem } from '../../../features/nationalTeams/nationTeamCard/titleItem/TitleItem'
+import { structuringResultChampionships } from '../../../logics/structuringResultChampionships/structuringResultChampionships'
+import { BaseResult } from '../../../logics/structuringResultChampionships/structuringResultChampionships-type'
+import { TeamWorldCupAchievements } from '../../../logics/worldCup/createTeamWorldCupAchievements'
 import s from './TournamentResults.module.css'
 import { TotalGroup } from './totalGroup/TotalGroup'
-import { classNameResult } from 'data/nationalTeamsData/classNameResult'
-import { TitleItem } from 'features/nationalTeams/nationTeamCard/titleItem/TitleItem'
-import { Confederation } from 'data/nationalTeamsData/type-nationalTeams'
-import { structuringResultChampionships } from 'logics/structuringResultChampionships/structuringResultChampionships'
-import { BaseResult } from 'logics/structuringResultChampionships/structuringResultChampionships-type'
 
 type Props = {
   resultsData: TeamWorldCupAchievements
