@@ -1,0 +1,127 @@
+.container {
+  height: 100vh;
+  background-image: url("./../assets/football-start.png");
+  background-size: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 10px;
+}
+
+.containerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+  text-shadow: 0px 0px 10px var(--bg-main-transparent50),
+              -1px 1px 1px var(--bg-main-transparent50),
+              -5px 5px 5px var(--bg-main-transparent50),
+              -7px 7px 7px var(--bg-main-transparent50);
+  color: var(--bg-second-transparent80);
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 120%;
+  position: relative;
+}
+
+.title::before {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 2px;
+  background-color: var(--accent-main-transparent50);
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.description {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: var(--bg-second-transparent80);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.image {
+  display: inline-block;
+  border-radius: 40px;
+  max-width: 480px;
+  width: 100%;
+  background-color: var(--accent-main-transparent50);
+  box-shadow: 5px 5px 10px var(--bg-main);
+}
+
+@media (max-width: 1000px) {
+  /* .container {
+    min-height: 100vh;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .containerContent {
+    padding-top: 80px;
+  } */
+
+  .title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 120%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  .title::before {
+    bottom: -10px;
+  }
+
+  .description {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+
+  .image {
+    border-radius: 20px;
+    max-width: 280px;
+    width: 100%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+  .container {
+    min-height: 100vh;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .containerContent {
+    padding-top: 80px;
+  }
+
+  .title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 120%;
+  }
+}

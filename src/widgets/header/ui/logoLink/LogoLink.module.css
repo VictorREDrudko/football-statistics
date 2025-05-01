@@ -1,0 +1,12 @@
+.icon {
+  transition: all 0.5s;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+/* "Hover effects only for desktops */
+@media (hover: hover) and (min-width: 769px) {
+  .icon:hover {
+    scale: 1.1;
+  }
+}
