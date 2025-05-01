@@ -5,9 +5,10 @@ import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { urlWithHyphen, urlWithoutHyphen } from 'common/utils/urlWithHyphen'
 import { Confederation, NationalTeam } from 'data/nationalTeamsData/type-nationalTeams'
 import { confederation, confederationBackground, nationalTeams, teamsByConfederation } from 'data/nationalTeamsData/nationalTeams'
-import { TeamPartiallInfo } from './teamPartiallInfo/TeamPartiallInfo'
+// import { TeamPartiallInfo } from './teamPartiallInfo/TeamPartiallInfo'
 import { SubmenuOptions } from './submenuOptions/SubmenuOptions'
 import { sortTeams } from 'logics/nationalTeamsLogic/sortTeams'
+import { TeamPartiallInfo } from './teamPartiallInfo/TeamPartiallInfo'
 
 export const NationalTeams = () => {
   const [team, setTeam] = useState<string>('')

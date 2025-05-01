@@ -1,6 +1,6 @@
 import { TeamsByConfederation } from "./types";
 
-export const teamsByConfederation: TeamsByConfederation = {
+export const namesTeamByConfederation: TeamsByConfederation = {
   uefa: [
     "Germany",
     "England",
