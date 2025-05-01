@@ -4,12 +4,12 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 import { ratingCalculation } from '../logics/ratingCalculation/ratingCalculation';
 import { Header } from '../common/components/header/Header';
-import { StartProject } from '../features/start-project/StartProject';
 import { About } from '../features/about/About';
 import { NationalTeams } from '../features/nationalTeams/NationalTeams';
 import { NationaleTournaments } from '../features/nationalTournaments/NationalTournaments';
 import { FinalStage } from '../features/worldCup/finalStage/FinalStage';
 import { WorldCup } from '../features/worldCup/WorldCup';
+import { StartProject } from '@/features/start-project/StartProject';
 
 function App() {
   // Добавление рейтинга
