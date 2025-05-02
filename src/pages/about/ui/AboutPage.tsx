@@ -1,12 +1,12 @@
-import s from './About.module.css'
-import { Info } from './info/Info'
+import s from './AboutPage.module.css'
+import { Description } from './description/Description'
 import { History } from './history/History'
 
-export const About = () => {
+export const AboutPage = () => {
   return (
     <div className={s.wrapper}>
       <main className={s.container}>
-        <Info/>
+        <Description/>
         <History/>
       </main>
     </div>
