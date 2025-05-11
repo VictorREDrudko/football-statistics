@@ -1,5 +1,5 @@
 import s from './NationalTeamsView.module.css'
-import { createTeamsStats, TeamsDashboard } from '@/features'
+import { createTeamsStats, ratingCalculation, TeamsDashboard } from '@/features'
 import { ConfederationCode, namesTeamByConfederation, NationalTeamsCard, nationalTeamsData, TeamPartStats, TeamsFullStats } from '@/entities'
 import { NationalTeamsList } from './national-teams-list/NationalTeamsList';
 
@@ -26,6 +26,8 @@ export const NationalTeamsView = ({
     worldCupStats: teamsFullStats.worldCupStats.teamsStats[team],
     nationalCompetitionStats: teamsFullStats.nationalCompetitionStats.teamsStats['plag'],
   }
+
+  ratingCalculation(teamsFullStats)
 
   const renderPage = team ? <NationalTeamsCard  teamData={nationalTeamsData[team]} 
                                                 closeCard={onCloseTeamCard} 

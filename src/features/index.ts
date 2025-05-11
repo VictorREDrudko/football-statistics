@@ -6,6 +6,7 @@ import { TeamsDashboard } from './national-teams/teams-dashboard/ui/TeamsDashboa
 import { createWorldCupStats } from './national-teams/teams-stats/world-cup-stats/createWorldCupStats'
 import { createNationalCompetitionTeamsStats } from './national-teams/teams-stats/national-competition-stats/createNationalCompetitionTeamsStats'
 import { createTeamsStats } from './national-teams/teams-stats/createTeamStats'
+import { ratingCalculation } from './ratingCalculation/model/ratingCalculation'
 
 export {
   useTeamNavigation,
@@ -16,4 +17,5 @@ export {
   createWorldCupStats,
   createNationalCompetitionTeamsStats,
   createTeamsStats,
+  ratingCalculation,
 }
