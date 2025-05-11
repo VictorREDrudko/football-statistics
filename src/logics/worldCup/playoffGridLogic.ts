@@ -14,7 +14,6 @@ export const generateMatchesByStage = (playOffStages: string[], matches: WorldCu
 // сортировка матчей play-off внутри стадий для формирования сетки турнира
 // чтобы корректно отрисовать в React Flow
 export const generatePlayoffGrid = (matchesByStage: WorldCupMatch[][]) => {
-  console.log(matchesByStage)
   const playoffGrid: WorldCupMatch[][] = [];
   const matches = matchesByStage.flat();
 

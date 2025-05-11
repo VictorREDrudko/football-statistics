@@ -1,0 +1,34 @@
+.container {
+  border: 1px solid var(--bg-main-transparent50);
+  box-shadow: 0 1px 2px 3px var(--bg-second-transparent50);
+  border-radius: 1.0rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--bg-main-transparent20);
+  position: relative;
+}
+
+.containerIcon {
+  position: absolute;
+  right: -200px;
+  top: -260px
+}
+
+
+@media (max-width: 768px) {
+  .containerIcon {
+    position: absolute;
+    right: -130px;
+    top: -250px
+  }
+}
+
+
+@media (max-width: 600px) {
+  .containerIcon {
+    display: none;
+  }
+}

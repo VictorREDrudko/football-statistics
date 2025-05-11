@@ -726,13 +726,13 @@ import iconFifa from "./../../assets/icon/iconConfeder/fifa.png";
 import { flagArgentina } from "../../shared/assets/flags";
 
 export const confederationBackground: ConfederationImage = {
-  uefa: backgroundUefa,
-  caf: backgroundCaf,
-  concacaf: backgroundConcacaf,
-  afc: backgroundAfc,
-  conmebol: backgroundConmebol,
-  ofc: backgroundOfc,
-  all: backgroundFifa,
+  UEFA: backgroundUefa,
+  CAF: backgroundCaf,
+  CONCACAF: backgroundConcacaf,
+  AFC: backgroundAfc,
+  CONMEBOL: backgroundConmebol,
+  OFC: backgroundOfc,
+  FIFA: backgroundFifa,
 };
 
 type ConfederationImage = {
@@ -740,17 +740,17 @@ type ConfederationImage = {
 };
 
 export const confederationIcon: ConfederationImage = {
-  uefa: iconUefa,
-  caf: iconCaf,
-  concacaf: iconConcacaf,
-  afc: iconAfc,
-  conmebol: iconConmebol,
-  ofc: iconOfc,
-  all: iconFifa,
+  UEFA: iconUefa,
+  CAF: iconCaf,
+  CONCACAF: iconConcacaf,
+  AFC: iconAfc,
+  CONMEBOL: iconConmebol,
+  OFC: iconOfc,
+  FIFA: iconFifa,
 };
 
 export const teamsByConfederation: TeamsByConfederation = {
-  uefa: [
+  UEFA: [
     "Germany",
     "England",
     "Italy",
@@ -811,7 +811,7 @@ export const teamsByConfederation: TeamsByConfederation = {
     "Czechoslovakia",
     "East Germany",
   ],
-  caf: [
+  CAF: [
     "Algeria",
     "Egypt",
     "Libya",
@@ -869,7 +869,7 @@ export const teamsByConfederation: TeamsByConfederation = {
     "Zimbabwe",
     "Reunion",
   ],
-  afc: [
+  AFC: [
     "Australia",
     "Brunei",
     "Cambodia",
@@ -918,7 +918,7 @@ export const teamsByConfederation: TeamsByConfederation = {
     "U. A. Emirates",
     "Yemen",
   ],
-  concacaf: [
+  CONCACAF: [
     "Canada",
     "Mexico",
     "United States",
@@ -961,7 +961,7 @@ export const teamsByConfederation: TeamsByConfederation = {
     "Turks and Caicos Islands",
     "U.S. Virgin Islands",
   ],
-  ofc: [
+  OFC: [
     "American Samoa",
     "Cook Islands",
     "Fiji",
@@ -976,7 +976,7 @@ export const teamsByConfederation: TeamsByConfederation = {
     "Tuvalu",
     "Vanuatu",
   ],
-  conmebol: [
+  CONMEBOL: [
     "Argentina",
     "Bolivia",
     "Brazil",
@@ -988,16 +988,16 @@ export const teamsByConfederation: TeamsByConfederation = {
     "Uruguay",
     "Venezuela",
   ],
-  all: [],
+  FIFA: [],
 };
 
-teamsByConfederation.all = [
-  ...teamsByConfederation.uefa,
-  ...teamsByConfederation.caf,
-  ...teamsByConfederation.afc,
-  ...teamsByConfederation.concacaf,
-  ...teamsByConfederation.ofc,
-  ...teamsByConfederation.conmebol,
+teamsByConfederation.FIFA = [
+  ...teamsByConfederation.UEFA,
+  ...teamsByConfederation.CAF,
+  ...teamsByConfederation.AFC,
+  ...teamsByConfederation.CONCACAF,
+  ...teamsByConfederation.OFC,
+  ...teamsByConfederation.CONMEBOL,
 ];
 
 export const nationalTeams: NationalTeams = {

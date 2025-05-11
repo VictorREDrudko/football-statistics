@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 7rem;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 6rem;
+    height: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    order: 1;
+    margin-right: 3rem;
+    align-self: flex-end;
+  }
+}

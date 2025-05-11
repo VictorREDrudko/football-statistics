@@ -1,8 +1,8 @@
-import { MatchesByStage } from '../../../../common/components/matchesByStage/MatchesByStage'
-import { StageTitle } from '../../../../common/components/stageTitle/StageTitle'
-import { TableGroup } from '../../../../common/components/tableGroup/TableGroup'
-import { WorldCupMatch } from '../../../../data/worldCupData/type-worldCupData'
-import { worldCupData } from '../../../../data/worldCupData/worldCupData'
+import { MatchesByStage } from '@/common/components/matchesByStage/MatchesByStage'
+import { StageTitle } from '@/common/components/stageTitle/StageTitle'
+import { TableGroup } from '@/common/components/tableGroup/TableGroup'
+import { WorldCupMatch } from '@/data/worldCupData/type-worldCupData'
+import { worldCupData } from '@/data/worldCupData/worldCupData'
 import { getSortGroupNames, createGroupTableData } from '../../../../logics/worldCup/worldCupFinalStageLogic'
 import s from './GroupFinalStage.module.css'
 

@@ -1,0 +1,33 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-main-transparent20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  position: relative;
+  background-color: var(--bg-second);
+  background-image: url('./../../../../assets/icon-card/bg-modal.png');
+  background-size: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 15px;
+  min-width: 310px;
+  min-height: 330px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid var(--bg-main);
+  box-shadow: 0 2px 3px 3px var(--bg-main-transparent20);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  color: red;
+}

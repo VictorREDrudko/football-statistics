@@ -1,14 +1,15 @@
+import { TitleItem } from '@/features/nationalTeams1/nationTeamCard/titleItem/TitleItem'
 import { classNameResult } from '../../../data/nationalTeamsData/classNameResult'
 import { Confederation } from '../../../data/nationalTeamsData/type-nationalTeams'
-import { TitleItem } from '../../../features/nationalTeams/nationTeamCard/titleItem/TitleItem'
 import { structuringResultChampionships } from '../../../logics/structuringResultChampionships/structuringResultChampionships'
 import { BaseResult } from '../../../logics/structuringResultChampionships/structuringResultChampionships-type'
 import { TeamWorldCupAchievements } from '../../../logics/worldCup/createTeamWorldCupAchievements'
 import s from './TournamentResults.module.css'
 import { TotalGroup } from './totalGroup/TotalGroup'
+import { TeamsStats } from '@/features'
 
 type Props = {
-  resultsData: TeamWorldCupAchievements
+  stats: TeamsStats
   titleCompetition: string
   countryName: string
   confeder:Confederation

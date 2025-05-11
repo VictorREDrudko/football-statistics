@@ -1,5 +1,5 @@
 import { isCountryActive } from '../../../logics/nationalTeamsLogic/utils/isCountryActive'
-import { choiseCurrentFlag } from '../../../utils/choiseCurrentFlag'
+import { choiseCurrentFlag } from '../../../shared/ui/flag/lib/choiseCurrentFlag'
 import s from './Flag.module.css'
 
 type Props = {

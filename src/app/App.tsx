@@ -1,20 +1,16 @@
 import './App.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { useEffect } from 'react';
-import { ratingCalculation } from '../logics/ratingCalculation/ratingCalculation';
-import { NationalTeams } from '../features/nationalTeams/NationalTeams';
 import { NationaleTournaments } from '../features/nationalTournaments/NationalTournaments';
 import { FinalStage } from '../features/worldCup/finalStage/FinalStage';
 import { WorldCup } from '../features/worldCup/WorldCup';
-import { Header } from '@/widgets/header/ui/header/Header';
 import { StartPage } from '@/pages/start';
 import { AboutPage } from '@/pages/about';
+import { ratingCalculation } from '@/features/ratingCalculation/ratingCalculation';
+import { Header } from '@/widgets';
+import { NationalTeams } from '@/pages/national-teams';
 
 function App() {
-  // Добавление рейтинга
-  useEffect(() => {
-    ratingCalculation();
-  }, [])
+  ratingCalculation()
 
 	return (
     <>
@@ -24,7 +20,7 @@ function App() {
         <Route path='/about' element={<AboutPage/>}/>
         <Route path='/national-tournaments' element={<NationaleTournaments/>}/>
         <Route path='/national-tournaments/world-cup' element={<WorldCup/>}/>
-        <Route path='/teams' element={<Navigate to='/teams/uefa'/>}/>
+        <Route path='/teams' element={<Navigate to='/teams/UEFA'/>}/>
         <Route path='/teams/:confederationRoute' element={<NationalTeams/>}/>
         <Route path='/teams/:confederationRoute/:teamRoute' element={<NationalTeams />} />
         <Route path='/national-tournaments/world-cup/final-stage/:urlYear' element={<FinalStage />} />

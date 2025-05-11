@@ -85,21 +85,21 @@ export const background: Background = {
 };
 
 export const nationalTournaments: NationalTournaments = {
-  concacaf: {
+  CONCACAF: {
     id: "5-concacaf",
     title: "concacaf Gold Cup",
     iconCup: iconconcacafcup,
     path: "concacaf-cup",
     color: "#300010",
   },
-  conmebol: {
+  CONMEBOL: {
     id: "6-conmebol",
     title: "CONMEBOL Copa América",
     iconCup: iconConmebolCup,
     path: "conmebol-cup",
     color: "#292600",
   },
-  ofc: {
+  OFC: {
     id: "7-ofc",
     title: "ofc Nations Cup",
     iconCup: iconofcCup,
@@ -114,21 +114,21 @@ export const nationalTournaments: NationalTournaments = {
     color: "#5F5C1C",
     size: "190px",
   },
-  uefa: {
+  UEFA: {
     id: "2-uefa",
     title: "European Championship",
     iconCup: iconuefaCup,
     path: "uefa-cup",
     color: "#002645",
   },
-  afc: {
+  AFC: {
     id: "3-afc",
     title: "afc Asian Cup",
     iconCup: iconafcCup,
     path: "afc-cup",
     color: "#2C003D",
   },
-  caf: {
+  CAF: {
     id: "4-caf",
     title: "Africa Cup of Nations",
     iconCup: iconcafcup,

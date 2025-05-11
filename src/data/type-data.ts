@@ -31,12 +31,12 @@ export type Tournament = {
 
 export type NameTournament =
   | "worldCup"
-  | "uefa"
-  | "afc"
-  | "caf"
-  | "concacaf"
-  | "conmebol"
-  | "ofc";
+  | "UEFA"
+  | "AFC"
+  | "CAF"
+  | "CONCACAF"
+  | "CONMEBOL"
+  | "OFC";
 
 export type NationalTournaments = {
   [key in NameTournament]: Tournament;

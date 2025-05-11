@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  background-color: var(--bg-second-transparent90);
+  background-image: url("./../assets/background-stadion.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.containerMiniCardList {
+  padding: 30px 10px;
+  padding-bottom: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 33rem;
+  width: 100%;
+}

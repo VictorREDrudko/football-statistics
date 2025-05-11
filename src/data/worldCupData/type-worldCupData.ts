@@ -1,57 +1,56 @@
-import { Position } from "@xyflow/react";
+import { Position } from '@xyflow/react'
 
 export type WorldCupInfo = {
-  id: string;
-  title: string;
-  date: string;
-  icon: string;
+  id: string
+  title: string
+  date: string
+  icon: string
   background: string[]
-  hostCountry: string[];
-  finalStage: WorldCupMatch[];
-  qualification: WorldCupMatch[] | [];
-};
+  hostCountry: string[]
+  finalStage: WorldCupMatch[]
+  qualification: WorldCupMatch[] | []
+}
 
 export type WorldCupData = {
-  [key in string]: WorldCupInfo;
-};
+  [key in string]: WorldCupInfo
+}
 
 export type WorldCupMatch = {
-  id: string;
-  date: string;
-  stage: string;
-  teams: string[];
-  score: number[][];
-  goals: GoalsInfo[];
-  stadium: StadiumInfo;
-};
+  id: string
+  date: string
+  stage: string
+  teams: string[]
+  score: number[][]
+  goals: GoalsInfo[]
+  stadium: StadiumInfo
+}
 
 export type GoalsInfo = {
-  playersScoredGoal: string[];
-  timeGoals: string[];
-};
+  playersScoredGoal: string[]
+  timeGoals: string[]
+}
 
 export type StadiumInfo = {
-  title: string;
-  city: string;
-  country: string;
-  attendance: string;
-};
+  title: string
+  city: string
+  country: string
+  attendance: string
+}
 
 export type NodesItem = {
   id: string
   type: string
   data: {
-    label: string;
-    match: WorldCupMatch;
+    label: string
+    match: WorldCupMatch
   }
   position: {
-    x: number;
-    y: number;
+    x: number
+    y: number
   }
   sourcePosition: Position
   className: string
 }
-
 
 export type Stage = {
   final: string
@@ -79,12 +78,12 @@ export type Stage = {
     h: string
     finalGroup: {
       group: string
-      groupFinal: string
-      groupPlace3: string
-      a: string,
-      b: string,
-      c: string,
-      d: string,
-    },
+      final: string
+      place3: string
+      a: string
+      b: string
+      c: string
+      d: string
+    }
   }
 }

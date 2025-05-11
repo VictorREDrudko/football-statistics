@@ -4,21 +4,21 @@ export type TeamsByConfederation = {
 };
 
 export type Confederation =
-  | "afc"
-  | "caf"
-  | "concacaf"
-  | "conmebol"
-  | "ofc"
-  | "uefa"
-  | "all";
+  | "AFC"
+  | "CAF"
+  | "CONCACAF"
+  | "CONMEBOL"
+  | "OFC"
+  | "UEFA"
+  | "FIFA";
 
   export type Confeder =
-  | "afc"
-  | "caf"
-  | "concacaf"
-  | "conmebol"
-  | "ofc"
-  | "uefa";
+  | "AFC"
+  | "CAF"
+  | "CONCACAF"
+  | "CONMEBOL"
+  | "OFC"
+  | "UEFA"
 
 // type national teams
 export type NationalTeams = {
@@ -50,9 +50,9 @@ export type CountryFlag = {
 };
 
 export type AssociationDate = {
-  founded: number;
-  fifaAffiliation: number | "-";
-  confederationAffiliation: number;
+  founded: string;
+  fifaAffiliation: string;
+  confederationAffiliation: string;
 };
 
 export type InfoCup = {
