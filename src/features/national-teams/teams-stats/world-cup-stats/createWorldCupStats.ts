@@ -1,7 +1,7 @@
 // переписать после перехода на FSD world cup
 import { stage, worldCupData } from '@/data/worldCupData/worldCupData'
 import { WorldCupMatch } from '@/data/worldCupData/type-worldCupData'
-import { TeamsStats } from '@/entities/national-team/model/types/typeStats'
+import { TeamsStats } from '@/entities'
 
 export const createWorldCupStats = (): TeamsStats => {
   const worldCupStats: TeamsStats = {

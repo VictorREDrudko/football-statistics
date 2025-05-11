@@ -5,7 +5,6 @@ import { FinalStage } from '../features/worldCup/finalStage/FinalStage';
 import { WorldCup } from '../features/worldCup/WorldCup';
 import { StartPage } from '@/pages/start';
 import { AboutPage } from '@/pages/about';
-import { ratingCalculation } from '@/features/ratingCalculation/model/ratingCalculation';
 import { Header } from '@/widgets';
 import { NationalTeams } from '@/pages/national-teams';
 

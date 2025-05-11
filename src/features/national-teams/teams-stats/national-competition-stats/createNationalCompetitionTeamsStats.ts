@@ -1,4 +1,4 @@
-import { TeamsStats } from "@/entities/national-team/model/types/typeStats"
+import { TeamsStats } from "@/entities"
 
 export const createNationalCompetitionTeamsStats = (): TeamsStats => {
   const nationalCompetitionTeamsStats: TeamsStats = {

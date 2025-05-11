@@ -1,6 +1,11 @@
 import s from './NationalTeamsView.module.css'
 import { createTeamsStats, ratingCalculation, TeamsDashboard } from '@/features'
-import { ConfederationCode, namesTeamByConfederation, NationalTeamsCard, nationalTeamsData, TeamPartStats, TeamsFullStats } from '@/entities'
+import {  ConfederationCode, 
+          namesTeamByConfederation, 
+          NationalTeamsCard, 
+          nationalTeamsData, 
+          TeamPartStats, 
+          TeamsFullStats } from '@/entities'
 import { NationalTeamsList } from './national-teams-list/NationalTeamsList';
 
 type Props = {
