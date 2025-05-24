@@ -1,0 +1,30 @@
+.container {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  transition: all 0.5s;
+  opacity: 0.8;
+}
+
+.container:hover {
+  scale: 1.1;
+  opacity: 1;
+  box-shadow: 0px 0px 20px #ffffff;
+}
+
+.containerWorldCup {
+  width: 220px;
+  height: 220px;
+}
+
+@media (max-width: 620px) {
+  .container {
+    width: 80px;
+    height: 80px;
+  }
+
+  .containerWorldCup {
+    width: 120px;
+    height: 120px;
+  }
+}

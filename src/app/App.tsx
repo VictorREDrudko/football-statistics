@@ -1,12 +1,9 @@
 import './App.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { NationaleTournaments } from '../features/nationalTournaments/NationalTournaments';
 import { FinalStage } from '../features/worldCup/finalStage/FinalStage';
 import { WorldCup } from '../features/worldCup/WorldCup';
-import { StartPage } from '@/pages/start';
-import { AboutPage } from '@/pages/about';
 import { Header } from '@/widgets';
-import { NationalTeams } from '@/pages/national-teams';
+import { AboutPage, NationaleTournaments, NationalTeams, StartPage } from '@/pages';
 
 function App() {
 

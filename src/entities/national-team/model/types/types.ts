@@ -1,9 +1,13 @@
 export type ConfederationCode = 'UEFA' | 'CAF' | 'AFC' | 'CONMEBOL' | 'CONCACAF' | 'OFC' | 'FIFA'
 
 export type ConfederationInfo = {
+  id: string
   name: ConfederationCode
-  iconPath: string
+  nameTournament: string
+  iconPathConfederation: string
+  iconPathCup: string
   backgroundConfederationPath: string
+  path: string
 }
 
 export type ConfederationsData = Record<ConfederationCode, ConfederationInfo>
