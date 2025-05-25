@@ -8,12 +8,14 @@ import { IconNationalCup } from "./ui/icon-national-cup/IconNationalCup";
 import { IconConfederation } from "./ui/iconConfederation/IconConfederation";
 import { Link } from "./ui/link/Link";
 import { ModalWindow } from "./ui/modalWindow/ModalWindow";
+import { Badge } from "./ui/number/Badge";
 import { NumberInCircle } from "./ui/numberInCircle/NumberInCircle";
 
 export {
   Button,
   Link,
   Container,
+  Badge,
   Flag, 
   IconConfederation,
   NumberInCircle,

@@ -1,4 +1,4 @@
-.container {
+.wrapper {
   border: 1px solid var(--bg-main-transparent50);
   background-color: var(--bg-second-transparent70);
   box-shadow: 0 0 3px 3px var(--bg-main-transparent20);
@@ -25,29 +25,4 @@
   font-size: 0.8rem;
   line-height: 100%;
   font-weight: 600;
-}
-
-@media (max-width: 768px) {
-  .container {
-    width: 3rem;
-    height: 3rem; 
-  }
-
-  .number {
-    font-size: 1.2rem;
-    margin-bottom: 0.2rem;
-  }
-
-  .description {
-    font-size: 0.6rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    order: 2;
-    position: absolute;
-    bottom: 1rem;
-    left: 3rem;
-  }
 }

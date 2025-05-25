@@ -1,4 +1,4 @@
-import s from './NumberInCircle.module.css'
+import s from './NumberInCircle.module.scss'
 
 type Props = {
   number: number
