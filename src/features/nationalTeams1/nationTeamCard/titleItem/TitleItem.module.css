@@ -1,5 +1,3 @@
-@import url('./../../../../data/theme/theme.css');
-
 .title {
   text-transform: uppercase;
   color: var(--bg-second-transparent70);

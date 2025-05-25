@@ -1,4 +1,4 @@
-@import url('./../../../data/theme/theme.css');
+@import url('./../../..');
 
 .container {
   display: flex;
@@ -10,10 +10,11 @@
   background-color: var(--bg-second-transparent50);
   border-radius: 15px 0;
   cursor: pointer;
-  box-shadow: 0px 1px 2px 0px var(--bg-main-transparent70),
-              1px 2px 4px 0px var(--bg-main-transparent70),
-              2px 4px 8px 0px var(--bg-main-transparent70),
-              2px 4px 16px 0px var(--bg-second-transparent70);
+  box-shadow:
+    0px 1px 2px 0px var(--bg-main-transparent70),
+    1px 2px 4px 0px var(--bg-main-transparent70),
+    2px 4px 8px 0px var(--bg-main-transparent70),
+    2px 4px 16px 0px var(--bg-second-transparent70);
   transition: all 0.3s;
 }
 
@@ -29,7 +30,8 @@
 
   .containerMatch {
     border-radius: 10px 0;
-    box-shadow: 0px 1px 2px 0px var(--bg-second-transparent70),
-                1px 2px 4px 0px var(--bg-second-transparent50);
+    box-shadow:
+      0px 1px 2px 0px var(--bg-second-transparent70),
+      1px 2px 4px 0px var(--bg-second-transparent50);
   }
 }

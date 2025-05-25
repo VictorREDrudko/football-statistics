@@ -1,5 +1,3 @@
-@import url('./../../../../../data/theme/theme.css');
-
 .container {
   display: flex;
   flex-direction: column;

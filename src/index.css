@@ -1,4 +1,4 @@
-@import url('./data/theme/theme.css');
+@import url('./app/theme/theme.scss');
 
 @font-face {
   font-family: 'Poppins';
@@ -21,7 +21,7 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--bg-main);
+  background-color: var(--color-dark-600);
   color: var(--text-main);
   font-size: 0.94em;
   height: 100%;

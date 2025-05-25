@@ -1,5 +1,3 @@
-@import url('./../../../../data/theme/theme.css');
-
 .container {
   border: 1px solid var(--bg-main-transparent50);
   box-shadow: 0 1px 2px 3px var(--bg-second-transparent50);
