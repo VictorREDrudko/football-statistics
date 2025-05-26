@@ -15,25 +15,28 @@ import iconCupConmebol from './../assets/icon-cup/conmebol.png'
 import iconCupConcacaf from './../assets/icon-cup/concacaf.png'
 import iconCupOfc from './../assets/icon-cup/ofc.png'
 import iconCupFifa from './../assets/icon-cup/world.png'
+import { worldCupData } from "@/shared";
 
 export const confederationData: ConfederationsData = {
   UEFA: {
     id: 'confederation-5',
     name: "UEFA",
-    nameTournament: 'European Championship',
+    nameTournament: 'UEFA European Championship',
     iconPathConfederation: uefaIcon,
     iconPathCup: iconCupUefa,
     backgroundConfederationPath: backgroundUefa,
-    path: "european-championship"
+    path: "uefa-european-championship",
+    tournament: worldCupData
   },
   CAF: {
     id: 'confederation-2',
     name: "CAF",
-    nameTournament: 'Africa Cup of Nations',
+    nameTournament: 'CAF Africa Cup of Nations',
     iconPathConfederation: cafIcon,
     iconPathCup: iconCupCaf,
     backgroundConfederationPath: backgroundCaf,
-    path: "africa-cup",
+    path: "caf-africa-cup",
+    tournament: worldCupData
   },
   AFC: {
     id: 'confederation-6',
@@ -42,7 +45,8 @@ export const confederationData: ConfederationsData = {
     iconPathConfederation: afcIcon,
     iconPathCup: iconCupAfc,
     backgroundConfederationPath: backgroundAfc,
-    path: "asian-cup",
+    path: "afc-asian-cup",
+    tournament: worldCupData
   },
   CONMEBOL: {
     id: 'confederation-3',
@@ -51,7 +55,8 @@ export const confederationData: ConfederationsData = {
     iconPathConfederation: conmebolIcon,
     iconPathCup: iconCupConmebol,
     backgroundConfederationPath: backgroundConmebol,
-    path: "copa-america"
+    path: "conmebol-copa-america",
+    tournament: worldCupData
   },
   CONCACAF: {
     id: 'confederation-1',
@@ -61,6 +66,7 @@ export const confederationData: ConfederationsData = {
     iconPathCup: iconCupConcacaf,
     backgroundConfederationPath: backgroundConcacaf,
     path: "concacaf-gold-cup",
+    tournament: worldCupData
   },
   OFC: {
     id: 'confederation-7',
@@ -70,6 +76,7 @@ export const confederationData: ConfederationsData = {
     iconPathCup: iconCupOfc,
     backgroundConfederationPath: backgroundOfc,
     path: "ofc-cup",
+    tournament: worldCupData
   },
   FIFA: {
     id: 'organization-4',
@@ -78,6 +85,7 @@ export const confederationData: ConfederationsData = {
     iconPathConfederation: fifaIcon,
     iconPathCup: iconCupFifa,
     backgroundConfederationPath: backgroundFifa,
-    path: "world-cup",
+    path: "fifa-world-cup",
+    tournament: worldCupData
   }
 } as const;

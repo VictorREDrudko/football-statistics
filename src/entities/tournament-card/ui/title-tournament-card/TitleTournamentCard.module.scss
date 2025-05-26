@@ -1,0 +1,22 @@
+.wrapper {
+  width: 100%;
+}
+
+.year,
+.title {
+  color: var(--color-secondary-300);
+  text-align: center;
+  line-height: 100%;
+  text-shadow: 5px 5px 5px var(--color-dark-700);
+}
+
+.year {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+}

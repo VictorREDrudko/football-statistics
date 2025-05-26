@@ -1,0 +1,37 @@
+import { Stage } from "./types";
+
+export const stage: Stage = {
+  final: '1:final',
+  place3: '2:third place play-off',
+  1_2: '3:1/2 semi-final',
+  1_4: '4:1/4 quarter-finals',
+  1_8: '5:1/8 round of 16',
+  1_16: '6:1/16 round of 32',
+  group: {
+    1: 'group 1',
+    2: 'group 2',
+    3: 'group 3',
+    4: 'group 4',
+    5: 'group 5',
+    6: 'group 6',
+    7: 'group 7',
+    8: 'group 8',
+    a: 'group A',
+    b: 'group B',
+    c: 'group C',
+    d: 'group D',
+    e: 'group E',
+    f: 'group F',
+    g: 'group G',
+    h: 'group H',
+    finalGroup: {
+      group: 'group Final round',
+      final: 'group Final round: final',
+      place3: 'group Final round: third place',
+      a: 'group A (second round)',
+      b: 'group B (second round)',
+      c: 'group C (second round)',
+      d: 'group D (second round)',
+    },
+  },
+}

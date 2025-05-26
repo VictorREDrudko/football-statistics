@@ -5,10 +5,10 @@ import s from './CountryTeam.module.css'
 type Props = {
   countryName: string
   year: string
-  reverse: boolean
+  reverse?: boolean
 }
 
-export const CountryTeam = ({countryName, year, reverse}: Props) => {
+export const CountryTeam = ({countryName, year, reverse = false}: Props) => {
   const classNameContainer = reverse ? `${s.container}` : `${s.containerRevers}`
 
   return (

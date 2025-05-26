@@ -1,6 +1,6 @@
 import { Position } from '@xyflow/react'
 
-export type WorldCupInfo = {
+export type TournamentInfo = {
   id: string
   title: string
   date: string
@@ -12,7 +12,7 @@ export type WorldCupInfo = {
 }
 
 export type WorldCupData = {
-  [key in string]: WorldCupInfo
+  [key in string]: TournamentInfo
 }
 
 export type WorldCupMatch = {

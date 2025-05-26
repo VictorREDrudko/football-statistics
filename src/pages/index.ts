@@ -1,12 +1,12 @@
 import { AboutPage } from "./about/ui/AboutPage";
 import { NationalTeams } from "./national-teams/NationalTeams";
-import { NationaleTournaments } from "./national-tourmaments/ui/NationalTournaments";
+import { NationalTournaments } from "./national-tourmaments/ui/NationalTournaments";
 import { StartPage } from "./start/ui/StartPage";
-import { WorldCupList } from "./world-cup-list/WorldCupList";
+import { TournamentChampionships } from "./tournament-сhampionships/TournamentChampionships";
 
 export {  NationalTeams, 
-          NationaleTournaments, 
+          NationalTournaments, 
           AboutPage, 
           StartPage,
-          WorldCupList
+          TournamentChampionships,
 }

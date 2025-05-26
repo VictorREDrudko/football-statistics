@@ -1,4 +1,4 @@
-import s from './Flag.module.css'
+import s from './Flag.module.scss'
 import { choiseCurrentFlag } from './lib/choiseCurrentFlag'
 
 type Props = {

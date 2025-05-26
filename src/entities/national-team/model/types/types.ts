@@ -1,3 +1,5 @@
+import { TournamentData } from "@/shared"
+
 export type ConfederationCode = 'UEFA' | 'CAF' | 'AFC' | 'CONMEBOL' | 'CONCACAF' | 'OFC' | 'FIFA'
 
 export type ConfederationInfo = {
@@ -8,6 +10,7 @@ export type ConfederationInfo = {
   iconPathCup: string
   backgroundConfederationPath: string
   path: string
+  tournament: TournamentData
 }
 
 export type ConfederationsData = Record<ConfederationCode, ConfederationInfo>

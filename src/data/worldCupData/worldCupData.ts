@@ -59,7 +59,7 @@ import backgroundFWC2002_2 from './../../assets/backgroundWC/2002-2.png'
 import backgroundFWC2006_1 from './../../assets/backgroundWC/2006-1.png'
 import backgroundFWC2006_2 from './../../assets/backgroundWC/2006-2.png'
 
-import { stadiums } from './stadiums'
+import { stadiumsData } from './stadiums'
 import { v1 } from 'uuid'
 
 class Match {
@@ -165,7 +165,7 @@ export const worldCupData: WorldCupData = {
         ['19', '40', '43, 87'],
         ['Carreño'],
         ['80'],
-        stadiums.Uruguay.pocitos,
+        stadiumsData.Uruguay.pocitos,
         '4 444'
       ),
       {
@@ -179,7 +179,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: [], timeGoals: [] },
         ],
         stadium: {
-          ...stadiums.Uruguay.parqueCentral,
+          ...stadiumsData.Uruguay.parqueCentral,
           attendance: '23 409',
         },
       },
@@ -197,7 +197,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: [], timeGoals: [] },
         ],
         stadium: {
-          ...stadiums.Uruguay.parqueCentral,
+          ...stadiumsData.Uruguay.parqueCentral,
           attendance: '9 249',
         },
       },
@@ -212,7 +212,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: [], timeGoals: [] },
         ],
         stadium: {
-          ...stadiums.Uruguay.centenario,
+          ...stadiumsData.Uruguay.centenario,
           attendance: '2 000',
         },
       },
@@ -233,7 +233,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Uruguay.centenario,
+          ...stadiumsData.Uruguay.centenario,
           attendance: '42 100',
         },
       },
@@ -251,7 +251,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: ['Subiabre'], timeGoals: ['15'] },
         ],
         stadium: {
-          ...stadiums.Uruguay.centenario,
+          ...stadiumsData.Uruguay.centenario,
           attendance: '41 459',
         },
       },
@@ -266,7 +266,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: ['Preguinho'], timeGoals: ['62'] },
         ],
         stadium: {
-          ...stadiums.Uruguay.parqueCentral,
+          ...stadiumsData.Uruguay.parqueCentral,
           attendance: '24 059',
         },
       },
@@ -284,7 +284,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: [], timeGoals: [] },
         ],
         stadium: {
-          ...stadiums.Uruguay.parqueCentral,
+          ...stadiumsData.Uruguay.parqueCentral,
           attendance: '18 306',
         },
       },
@@ -302,7 +302,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: [], timeGoals: [] },
         ],
         stadium: {
-          ...stadiums.Uruguay.centenario,
+          ...stadiumsData.Uruguay.centenario,
           attendance: '25 466',
         },
       },
@@ -320,7 +320,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: ['De Souza'], timeGoals: ['75'] },
         ],
         stadium: {
-          ...stadiums.Uruguay.pocitos,
+          ...stadiumsData.Uruguay.pocitos,
           attendance: '2 549',
         },
       },
@@ -335,7 +335,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: [], timeGoals: [] },
         ],
         stadium: {
-          ...stadiums.Uruguay.centenario,
+          ...stadiumsData.Uruguay.centenario,
           attendance: '57 735',
         },
       },
@@ -353,7 +353,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: [], timeGoals: [] },
         ],
         stadium: {
-          ...stadiums.Uruguay.centenario,
+          ...stadiumsData.Uruguay.centenario,
           attendance: '70 022',
         },
       },
@@ -372,7 +372,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: [], timeGoals: [] },
         ],
         stadium: {
-          ...stadiums.Uruguay.parqueCentral,
+          ...stadiumsData.Uruguay.parqueCentral,
           attendance: '18 346',
         },
       },
@@ -387,7 +387,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: [], timeGoals: [] },
         ],
         stadium: {
-          ...stadiums.Uruguay.parqueCentral,
+          ...stadiumsData.Uruguay.parqueCentral,
           attendance: '18 306',
         },
       },
@@ -402,7 +402,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: [], timeGoals: [] },
         ],
         stadium: {
-          ...stadiums.Uruguay.centenario,
+          ...stadiumsData.Uruguay.centenario,
           attendance: '12 000',
         },
       },
@@ -420,7 +420,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: ['Brown'], timeGoals: ['89'] },
         ],
         stadium: {
-          ...stadiums.Uruguay.centenario,
+          ...stadiumsData.Uruguay.centenario,
           attendance: '72 886',
         },
       },
@@ -438,7 +438,7 @@ export const worldCupData: WorldCupData = {
           { playersScoredGoal: ['Vujadinović'], timeGoals: ['4'] },
         ],
         stadium: {
-          ...stadiums.Uruguay.centenario,
+          ...stadiumsData.Uruguay.centenario,
           attendance: '79 867',
         },
       },
@@ -459,7 +459,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Uruguay.centenario,
+          ...stadiumsData.Uruguay.centenario,
           attendance: '68 346',
         },
       },
@@ -491,7 +491,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.ferraris,
+          ...stadiumsData.Italy.ferraris,
           attendance: '21 000',
         },
       },
@@ -512,7 +512,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.ascarelli,
+          ...stadiumsData.Italy.ascarelli,
           attendance: '9 000',
         },
       },
@@ -533,7 +533,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.sanSiro,
+          ...stadiumsData.Italy.sanSiro,
           attendance: '33 000',
         },
       },
@@ -554,7 +554,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.nazionalePNF,
+          ...stadiumsData.Italy.nazionalePNF,
           attendance: '25 000',
         },
       },
@@ -575,7 +575,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.littorio,
+          ...stadiumsData.Italy.littorio,
           attendance: '9 000',
         },
       },
@@ -596,7 +596,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.littoriale,
+          ...stadiumsData.Italy.littoriale,
           attendance: '14 000',
         },
       },
@@ -617,7 +617,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.mussolini,
+          ...stadiumsData.Italy.mussolini,
           attendance: '16 000',
         },
       },
@@ -638,7 +638,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.berta,
+          ...stadiumsData.Italy.berta,
           attendance: '8 000',
         },
       },
@@ -659,7 +659,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.littoriale,
+          ...stadiumsData.Italy.littoriale,
           attendance: '23 000',
         },
       },
@@ -680,7 +680,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.berta,
+          ...stadiumsData.Italy.berta,
           attendance: '35 000',
         },
       },
@@ -701,7 +701,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.sanSiro,
+          ...stadiumsData.Italy.sanSiro,
           attendance: '3 000',
         },
       },
@@ -722,7 +722,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.mussolini,
+          ...stadiumsData.Italy.mussolini,
           attendance: '12 000',
         },
       },
@@ -743,7 +743,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.berta,
+          ...stadiumsData.Italy.berta,
           attendance: '43 000',
         },
       },
@@ -764,7 +764,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.sanSiro,
+          ...stadiumsData.Italy.sanSiro,
           attendance: '35 000',
         },
       },
@@ -785,7 +785,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.nazionalePNF,
+          ...stadiumsData.Italy.nazionalePNF,
           attendance: '15 000',
         },
       },
@@ -806,7 +806,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.ascarelli,
+          ...stadiumsData.Italy.ascarelli,
           attendance: '7 000',
         },
       },
@@ -827,7 +827,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Italy.nazionalePNF,
+          ...stadiumsData.Italy.nazionalePNF,
           attendance: '55 000',
         },
       },
@@ -859,7 +859,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.parcDesPrinces,
+          ...stadiumsData.France.parcDesPrinces,
           attendance: '27 152',
         },
       },
@@ -880,7 +880,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.velodromeReims,
+          ...stadiumsData.France.velodromeReims,
           attendance: '9 000',
         },
       },
@@ -901,7 +901,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.noMatch.noPlace,
+          ...stadiumsData.noMatch.noPlace,
           attendance: '',
         },
       },
@@ -922,7 +922,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.toec,
+          ...stadiumsData.France.toec,
           attendance: '7 000',
         },
       },
@@ -943,7 +943,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.colombes,
+          ...stadiumsData.France.colombes,
           attendance: '30 454',
         },
       },
@@ -964,7 +964,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.velodrome,
+          ...stadiumsData.France.velodrome,
           attendance: '19 000',
         },
       },
@@ -985,7 +985,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.meinau,
+          ...stadiumsData.France.meinau,
           attendance: '13 452',
         },
       },
@@ -1006,7 +1006,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.municipalHavre,
+          ...stadiumsData.France.municipalHavre,
           attendance: '11 000',
         },
       },
@@ -1027,7 +1027,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.parcDesPrinces,
+          ...stadiumsData.France.parcDesPrinces,
           attendance: '20 025',
         },
       },
@@ -1048,7 +1048,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.toec,
+          ...stadiumsData.France.toec,
           attendance: '8 000',
         },
       },
@@ -1069,7 +1069,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.boucquey,
+          ...stadiumsData.France.boucquey,
           attendance: '15 000',
         },
       },
@@ -1090,7 +1090,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.fortCarre,
+          ...stadiumsData.France.fortCarre,
           attendance: '7 000',
         },
       },
@@ -1111,7 +1111,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.colombes,
+          ...stadiumsData.France.colombes,
           attendance: '58 455',
         },
       },
@@ -1132,7 +1132,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.lescure,
+          ...stadiumsData.France.lescure,
           attendance: '22 021',
         },
       },
@@ -1153,7 +1153,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.lescure,
+          ...stadiumsData.France.lescure,
           attendance: '18 141',
         },
       },
@@ -1174,7 +1174,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.parcDesPrinces,
+          ...stadiumsData.France.parcDesPrinces,
           attendance: '20 000',
         },
       },
@@ -1195,7 +1195,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.velodrome,
+          ...stadiumsData.France.velodrome,
           attendance: '33 000',
         },
       },
@@ -1216,7 +1216,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.lescure,
+          ...stadiumsData.France.lescure,
           attendance: '12 000',
         },
       },
@@ -1237,7 +1237,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.France.colombes,
+          ...stadiumsData.France.colombes,
           attendance: '45 000',
         },
       },
@@ -1269,7 +1269,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.maracana,
+          ...stadiumsData.Brazil.maracana,
           attendance: '81 649',
         },
       },
@@ -1290,7 +1290,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.independencia,
+          ...stadiumsData.Brazil.independencia,
           attendance: '7 336',
         },
       },
@@ -1311,7 +1311,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.maracana,
+          ...stadiumsData.Brazil.maracana,
           attendance: '29 703',
         },
       },
@@ -1332,7 +1332,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.britto,
+          ...stadiumsData.Brazil.britto,
           attendance: '9 511',
         },
       },
@@ -1353,7 +1353,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.britto,
+          ...stadiumsData.Brazil.britto,
           attendance: '36 502',
         },
       },
@@ -1374,7 +1374,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.pacaembu,
+          ...stadiumsData.Brazil.pacaembu,
           attendance: '42 032',
         },
       },
@@ -1395,7 +1395,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.eucaliptos,
+          ...stadiumsData.Brazil.eucaliptos,
           attendance: '11 078',
         },
       },
@@ -1416,7 +1416,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.maracana,
+          ...stadiumsData.Brazil.maracana,
           attendance: '19 790',
         },
       },
@@ -1437,7 +1437,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.independencia,
+          ...stadiumsData.Brazil.independencia,
           attendance: '10 151',
         },
       },
@@ -1458,7 +1458,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.britto,
+          ...stadiumsData.Brazil.britto,
           attendance: '7 903',
         },
       },
@@ -1479,7 +1479,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.maracana,
+          ...stadiumsData.Brazil.maracana,
           attendance: '142 429',
         },
       },
@@ -1500,7 +1500,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.eucaliptos,
+          ...stadiumsData.Brazil.eucaliptos,
           attendance: '3 580',
         },
       },
@@ -1521,7 +1521,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.maracana,
+          ...stadiumsData.Brazil.maracana,
           attendance: '74 462',
         },
       },
@@ -1542,7 +1542,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.retiro,
+          ...stadiumsData.Brazil.retiro,
           attendance: '8 501',
         },
       },
@@ -1563,7 +1563,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.pacaembu,
+          ...stadiumsData.Brazil.pacaembu,
           attendance: '25 811',
         },
       },
@@ -1584,7 +1584,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.independencia,
+          ...stadiumsData.Brazil.independencia,
           attendance: '5 284',
         },
       },
@@ -1605,7 +1605,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.pacaembu,
+          ...stadiumsData.Brazil.pacaembu,
           attendance: '44 802',
         },
       },
@@ -1626,7 +1626,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.maracana,
+          ...stadiumsData.Brazil.maracana,
           attendance: '138 886',
         },
       },
@@ -1647,7 +1647,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.maracana,
+          ...stadiumsData.Brazil.maracana,
           attendance: '152 772',
         },
       },
@@ -1668,7 +1668,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.pacaembu,
+          ...stadiumsData.Brazil.pacaembu,
           attendance: '7 987',
         },
       },
@@ -1689,7 +1689,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.pacaembu,
+          ...stadiumsData.Brazil.pacaembu,
           attendance: '11 227',
         },
       },
@@ -1710,7 +1710,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Brazil.maracana,
+          ...stadiumsData.Brazil.maracana,
           attendance: '173 850',
         },
       },
@@ -1742,7 +1742,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.charmilles,
+          ...stadiumsData.Switzerland.charmilles,
           attendance: '13 470',
         },
       },
@@ -1763,7 +1763,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.pontaise,
+          ...stadiumsData.Switzerland.pontaise,
           attendance: '16 000',
         },
       },
@@ -1784,7 +1784,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.wankdorf,
+          ...stadiumsData.Switzerland.wankdorf,
           attendance: '20 500',
         },
       },
@@ -1805,7 +1805,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.hardturm,
+          ...stadiumsData.Switzerland.hardturm,
           attendance: '25 000',
         },
       },
@@ -1826,7 +1826,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.wankdorf,
+          ...stadiumsData.Switzerland.wankdorf,
           attendance: '28 000',
         },
       },
@@ -1847,7 +1847,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.hardturm,
+          ...stadiumsData.Switzerland.hardturm,
           attendance: '13 000',
         },
       },
@@ -1868,7 +1868,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.pontaise,
+          ...stadiumsData.Switzerland.pontaise,
           attendance: '40 749',
         },
       },
@@ -1889,7 +1889,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.jakob,
+          ...stadiumsData.Switzerland.jakob,
           attendance: '14 000',
         },
       },
@@ -1910,7 +1910,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.pontaise,
+          ...stadiumsData.Switzerland.pontaise,
           attendance: '24 637',
         },
       },
@@ -1931,7 +1931,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.charmilles,
+          ...stadiumsData.Switzerland.charmilles,
           attendance: '19 000',
         },
       },
@@ -1952,7 +1952,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.jakob,
+          ...stadiumsData.Switzerland.jakob,
           attendance: '34 000',
         },
       },
@@ -1973,7 +1973,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.hardturm,
+          ...stadiumsData.Switzerland.hardturm,
           attendance: '26 000',
         },
       },
@@ -1994,7 +1994,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.jakob,
+          ...stadiumsData.Switzerland.jakob,
           attendance: '56 000',
         },
       },
@@ -2015,7 +2015,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.charmilles,
+          ...stadiumsData.Switzerland.charmilles,
           attendance: '3 541',
         },
       },
@@ -2036,7 +2036,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.cornaredo,
+          ...stadiumsData.Switzerland.cornaredo,
           attendance: '24 000',
         },
       },
@@ -2057,7 +2057,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.wankdorf,
+          ...stadiumsData.Switzerland.wankdorf,
           attendance: '43 119',
         },
       },
@@ -2078,7 +2078,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.hardturm,
+          ...stadiumsData.Switzerland.hardturm,
           attendance: '17 000',
         },
       },
@@ -2099,7 +2099,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.jakob,
+          ...stadiumsData.Switzerland.jakob,
           attendance: '28 655',
         },
       },
@@ -2120,7 +2120,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.pontaise,
+          ...stadiumsData.Switzerland.pontaise,
           attendance: '30 340',
         },
       },
@@ -2141,7 +2141,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.jakob,
+          ...stadiumsData.Switzerland.jakob,
           attendance: '28 000',
         },
       },
@@ -2162,7 +2162,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.charmilles,
+          ...stadiumsData.Switzerland.charmilles,
           attendance: '17 000',
         },
       },
@@ -2183,7 +2183,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.wankdorf,
+          ...stadiumsData.Switzerland.wankdorf,
           attendance: '40 000',
         },
       },
@@ -2204,7 +2204,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.jakob,
+          ...stadiumsData.Switzerland.jakob,
           attendance: '58 000',
         },
       },
@@ -2225,7 +2225,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.pontaise,
+          ...stadiumsData.Switzerland.pontaise,
           attendance: '45 000',
         },
       },
@@ -2246,7 +2246,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.hardturm,
+          ...stadiumsData.Switzerland.hardturm,
           attendance: '32 000',
         },
       },
@@ -2267,7 +2267,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Switzerland.wankdorf,
+          ...stadiumsData.Switzerland.wankdorf,
           attendance: '62 500',
         },
       },
@@ -2299,7 +2299,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.malmo,
+          ...stadiumsData.Sweden.malmo,
           attendance: '31 156',
         },
       },
@@ -2320,7 +2320,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.orjansVall,
+          ...stadiumsData.Sweden.orjansVall,
           attendance: '10 647',
         },
       },
@@ -2341,7 +2341,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.olympiastadion,
+          ...stadiumsData.Sweden.olympiastadion,
           attendance: '25 000',
         },
       },
@@ -2362,7 +2362,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.orjansVall,
+          ...stadiumsData.Sweden.orjansVall,
           attendance: '14 174',
         },
       },
@@ -2383,7 +2383,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.malmo,
+          ...stadiumsData.Sweden.malmo,
           attendance: '21 990',
         },
       },
@@ -2404,7 +2404,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.olympiastadion,
+          ...stadiumsData.Sweden.olympiastadion,
           attendance: '16 418',
         },
       },
@@ -2425,7 +2425,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.malmo,
+          ...stadiumsData.Sweden.malmo,
           attendance: '6 196',
         },
       },
@@ -2446,7 +2446,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.idrottsparken,
+          ...stadiumsData.Sweden.idrottsparken,
           attendance: '16 518',
         },
       },
@@ -2467,7 +2467,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.arosvallen,
+          ...stadiumsData.Sweden.arosvallen,
           attendance: '9 591',
         },
       },
@@ -2488,7 +2488,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.arosvallen,
+          ...stadiumsData.Sweden.arosvallen,
           attendance: '12 217',
         },
       },
@@ -2509,7 +2509,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.idrottsparken,
+          ...stadiumsData.Sweden.idrottsparken,
           attendance: '11 665',
         },
       },
@@ -2530,7 +2530,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.eyravallen,
+          ...stadiumsData.Sweden.eyravallen,
           attendance: '13 554',
         },
       },
@@ -2551,7 +2551,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.tunavallen,
+          ...stadiumsData.Sweden.tunavallen,
           attendance: '13 103',
         },
       },
@@ -2572,7 +2572,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.rasunda,
+          ...stadiumsData.Sweden.rasunda,
           attendance: '34 107',
         },
       },
@@ -2593,7 +2593,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.eyravallen,
+          ...stadiumsData.Sweden.eyravallen,
           attendance: '15 343',
         },
       },
@@ -2614,7 +2614,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.rasunda,
+          ...stadiumsData.Sweden.rasunda,
           attendance: '15 150',
         },
       },
@@ -2635,7 +2635,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.rasunda,
+          ...stadiumsData.Sweden.rasunda,
           attendance: '38 850',
         },
       },
@@ -2656,7 +2656,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.rasunda,
+          ...stadiumsData.Sweden.rasunda,
           attendance: '30 287',
         },
       },
@@ -2677,7 +2677,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.jernvallen,
+          ...stadiumsData.Sweden.jernvallen,
           attendance: '13 300',
         },
       },
@@ -2698,7 +2698,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.rasunda,
+          ...stadiumsData.Sweden.rasunda,
           attendance: '2 823',
         },
       },
@@ -2720,7 +2720,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.rimnersvallen,
+          ...stadiumsData.Sweden.rimnersvallen,
           attendance: '17 778',
         },
       },
@@ -2741,7 +2741,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.ullevi,
+          ...stadiumsData.Sweden.ullevi,
           attendance: '49 348',
         },
       },
@@ -2762,7 +2762,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.ullevi,
+          ...stadiumsData.Sweden.ullevi,
           attendance: '40 895',
         },
       },
@@ -2783,7 +2783,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.ryavallen,
+          ...stadiumsData.Sweden.ryavallen,
           attendance: '21 239',
         },
       },
@@ -2804,7 +2804,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.ryavallen,
+          ...stadiumsData.Sweden.ryavallen,
           attendance: '15 872',
         },
       },
@@ -2825,7 +2825,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.ullevi,
+          ...stadiumsData.Sweden.ullevi,
           attendance: '50 928',
         },
       },
@@ -2846,7 +2846,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.ullevi,
+          ...stadiumsData.Sweden.ullevi,
           attendance: '23 182',
         },
       },
@@ -2868,7 +2868,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.ullevi,
+          ...stadiumsData.Sweden.ullevi,
           attendance: '25 923',
         },
       },
@@ -2889,7 +2889,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.idrottsparken,
+          ...stadiumsData.Sweden.idrottsparken,
           attendance: '11 800',
         },
       },
@@ -2910,7 +2910,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.rasunda,
+          ...stadiumsData.Sweden.rasunda,
           attendance: '31 900',
         },
       },
@@ -2931,7 +2931,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.malmo,
+          ...stadiumsData.Sweden.malmo,
           attendance: '20 055',
         },
       },
@@ -2953,7 +2953,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.rasunda,
+          ...stadiumsData.Sweden.rasunda,
           attendance: '27 100',
         },
       },
@@ -2974,7 +2974,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.ullevi,
+          ...stadiumsData.Sweden.ullevi,
           attendance: '49 471',
         },
       },
@@ -2995,7 +2995,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.ullevi,
+          ...stadiumsData.Sweden.ullevi,
           attendance: '32 483',
         },
       },
@@ -3016,7 +3016,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Sweden.rasunda,
+          ...stadiumsData.Sweden.rasunda,
           attendance: '49 737',
         },
       },
@@ -3048,7 +3048,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.dittborn,
+          ...stadiumsData.Chile.dittborn,
           attendance: '7 908',
         },
       },
@@ -3069,7 +3069,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.dittborn,
+          ...stadiumsData.Chile.dittborn,
           attendance: '9 622',
         },
       },
@@ -3090,7 +3090,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.dittborn,
+          ...stadiumsData.Chile.dittborn,
           attendance: '8 829',
         },
       },
@@ -3111,7 +3111,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.dittborn,
+          ...stadiumsData.Chile.dittborn,
           attendance: '8 040',
         },
       },
@@ -3132,7 +3132,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.dittborn,
+          ...stadiumsData.Chile.dittborn,
           attendance: '9 973',
         },
       },
@@ -3153,7 +3153,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.dittborn,
+          ...stadiumsData.Chile.dittborn,
           attendance: '7 167',
         },
       },
@@ -3174,7 +3174,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.nacional,
+          ...stadiumsData.Chile.nacional,
           attendance: '65 006',
         },
       },
@@ -3195,7 +3195,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.nacional,
+          ...stadiumsData.Chile.nacional,
           attendance: '65 440',
         },
       },
@@ -3216,7 +3216,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.nacional,
+          ...stadiumsData.Chile.nacional,
           attendance: '66 057',
         },
       },
@@ -3237,7 +3237,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.nacional,
+          ...stadiumsData.Chile.nacional,
           attendance: '64 922',
         },
       },
@@ -3258,7 +3258,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.nacional,
+          ...stadiumsData.Chile.nacional,
           attendance: '67 224',
         },
       },
@@ -3279,7 +3279,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.nacional,
+          ...stadiumsData.Chile.nacional,
           attendance: '59 828',
         },
       },
@@ -3300,7 +3300,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.sausalito,
+          ...stadiumsData.Chile.sausalito,
           attendance: '10 484',
         },
       },
@@ -3321,7 +3321,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.sausalito,
+          ...stadiumsData.Chile.sausalito,
           attendance: '12 700',
         },
       },
@@ -3342,7 +3342,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.sausalito,
+          ...stadiumsData.Chile.sausalito,
           attendance: '14 903',
         },
       },
@@ -3363,7 +3363,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.sausalito,
+          ...stadiumsData.Chile.sausalito,
           attendance: '11 875',
         },
       },
@@ -3384,7 +3384,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.sausalito,
+          ...stadiumsData.Chile.sausalito,
           attendance: '18 715',
         },
       },
@@ -3405,7 +3405,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.sausalito,
+          ...stadiumsData.Chile.sausalito,
           attendance: '10 648',
         },
       },
@@ -3426,7 +3426,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.teniente,
+          ...stadiumsData.Chile.teniente,
           attendance: '7 134',
         },
       },
@@ -3447,7 +3447,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.teniente,
+          ...stadiumsData.Chile.teniente,
           attendance: '7 938',
         },
       },
@@ -3468,7 +3468,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.teniente,
+          ...stadiumsData.Chile.teniente,
           attendance: '9 794',
         },
       },
@@ -3489,7 +3489,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.teniente,
+          ...stadiumsData.Chile.teniente,
           attendance: '7 442',
         },
       },
@@ -3510,7 +3510,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.teniente,
+          ...stadiumsData.Chile.teniente,
           attendance: '7 945',
         },
       },
@@ -3531,7 +3531,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.teniente,
+          ...stadiumsData.Chile.teniente,
           attendance: '5 700',
         },
       },
@@ -3552,7 +3552,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.dittborn,
+          ...stadiumsData.Chile.dittborn,
           attendance: '17 268',
         },
       },
@@ -3573,7 +3573,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.teniente,
+          ...stadiumsData.Chile.teniente,
           attendance: '11 690',
         },
       },
@@ -3594,7 +3594,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.sausalito,
+          ...stadiumsData.Chile.sausalito,
           attendance: '17 736',
         },
       },
@@ -3615,7 +3615,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.nacional,
+          ...stadiumsData.Chile.nacional,
           attendance: '63 324',
         },
       },
@@ -3636,7 +3636,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.sausalito,
+          ...stadiumsData.Chile.sausalito,
           attendance: '5 890',
         },
       },
@@ -3657,7 +3657,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.nacional,
+          ...stadiumsData.Chile.nacional,
           attendance: '76 594',
         },
       },
@@ -3678,7 +3678,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.nacional,
+          ...stadiumsData.Chile.nacional,
           attendance: '66 697',
         },
       },
@@ -3699,7 +3699,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Chile.nacional,
+          ...stadiumsData.Chile.nacional,
           attendance: '68 679',
         },
       },
@@ -3731,7 +3731,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.wembley,
+          ...stadiumsData.England.wembley,
           attendance: '87 148',
         },
       },
@@ -3752,7 +3752,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.wembley,
+          ...stadiumsData.England.wembley,
           attendance: '69 237',
         },
       },
@@ -3773,7 +3773,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.city,
+          ...stadiumsData.England.city,
           attendance: '45 662',
         },
       },
@@ -3794,7 +3794,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.wembley,
+          ...stadiumsData.England.wembley,
           attendance: '92 570',
         },
       },
@@ -3815,7 +3815,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.wembley,
+          ...stadiumsData.England.wembley,
           attendance: '61 112',
         },
       },
@@ -3836,7 +3836,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.wembley,
+          ...stadiumsData.England.wembley,
           attendance: '98 270',
         },
       },
@@ -3857,7 +3857,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.hillsborough,
+          ...stadiumsData.England.hillsborough,
           attendance: '36 127',
         },
       },
@@ -3878,7 +3878,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.villa,
+          ...stadiumsData.England.villa,
           attendance: '42 738',
         },
       },
@@ -3899,7 +3899,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.hillsborough,
+          ...stadiumsData.England.hillsborough,
           attendance: '32 028',
         },
       },
@@ -3920,7 +3920,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.villa,
+          ...stadiumsData.England.villa,
           attendance: '46 587',
         },
       },
@@ -3941,7 +3941,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.hillsborough,
+          ...stadiumsData.England.hillsborough,
           attendance: '32 127',
         },
       },
@@ -3962,7 +3962,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.villa,
+          ...stadiumsData.England.villa,
           attendance: '42 187',
         },
       },
@@ -3983,7 +3983,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.goodison,
+          ...stadiumsData.England.goodison,
           attendance: '47 308',
         },
       },
@@ -4004,7 +4004,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.oldTrafford,
+          ...stadiumsData.England.oldTrafford,
           attendance: '29 886',
         },
       },
@@ -4025,7 +4025,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.goodison,
+          ...stadiumsData.England.goodison,
           attendance: '51 387',
         },
       },
@@ -4046,7 +4046,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.oldTrafford,
+          ...stadiumsData.England.oldTrafford,
           attendance: '25 438',
         },
       },
@@ -4067,7 +4067,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.goodison,
+          ...stadiumsData.England.goodison,
           attendance: '58 479',
         },
       },
@@ -4088,7 +4088,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.oldTrafford,
+          ...stadiumsData.England.oldTrafford,
           attendance: '24 129',
         },
       },
@@ -4109,7 +4109,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.ayresome,
+          ...stadiumsData.England.ayresome,
           attendance: '23 006',
         },
       },
@@ -4130,7 +4130,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.roker,
+          ...stadiumsData.England.roker,
           attendance: '27 199',
         },
       },
@@ -4151,7 +4151,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.ayresome,
+          ...stadiumsData.England.ayresome,
           attendance: '13 792',
         },
       },
@@ -4172,7 +4172,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.roker,
+          ...stadiumsData.England.roker,
           attendance: '27 793',
         },
       },
@@ -4193,7 +4193,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.ayresome,
+          ...stadiumsData.England.ayresome,
           attendance: '17 829',
         },
       },
@@ -4214,7 +4214,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.roker,
+          ...stadiumsData.England.roker,
           attendance: '16 027',
         },
       },
@@ -4235,7 +4235,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.wembley,
+          ...stadiumsData.England.wembley,
           attendance: '90 584',
         },
       },
@@ -4256,7 +4256,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.hillsborough,
+          ...stadiumsData.England.hillsborough,
           attendance: '40 007',
         },
       },
@@ -4277,7 +4277,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.roker,
+          ...stadiumsData.England.roker,
           attendance: '26 844',
         },
       },
@@ -4298,7 +4298,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.goodison,
+          ...stadiumsData.England.goodison,
           attendance: '40 248',
         },
       },
@@ -4319,7 +4319,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.goodison,
+          ...stadiumsData.England.goodison,
           attendance: '38 273',
         },
       },
@@ -4340,7 +4340,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.wembley,
+          ...stadiumsData.England.wembley,
           attendance: '94 493',
         },
       },
@@ -4361,7 +4361,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.wembley,
+          ...stadiumsData.England.wembley,
           attendance: '87 696',
         },
       },
@@ -4382,7 +4382,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.England.wembley,
+          ...stadiumsData.England.wembley,
           attendance: '96 924',
         },
       },
@@ -4414,7 +4414,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.azteca,
+          ...stadiumsData.Mexico.azteca,
           attendance: '107 160',
         },
       },
@@ -4435,7 +4435,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.azteca,
+          ...stadiumsData.Mexico.azteca,
           attendance: '92 205',
         },
       },
@@ -4456,7 +4456,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.azteca,
+          ...stadiumsData.Mexico.azteca,
           attendance: '95 261',
         },
       },
@@ -4477,7 +4477,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.azteca,
+          ...stadiumsData.Mexico.azteca,
           attendance: '103 058',
         },
       },
@@ -4498,7 +4498,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.azteca,
+          ...stadiumsData.Mexico.azteca,
           attendance: '89 979',
         },
       },
@@ -4519,7 +4519,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.azteca,
+          ...stadiumsData.Mexico.azteca,
           attendance: '108 192',
         },
       },
@@ -4540,7 +4540,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.cuauhtemoc,
+          ...stadiumsData.Mexico.cuauhtemoc,
           attendance: '20 654',
         },
       },
@@ -4561,7 +4561,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.dosal,
+          ...stadiumsData.Mexico.dosal,
           attendance: '13 433',
         },
       },
@@ -4582,7 +4582,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.cuauhtemoc,
+          ...stadiumsData.Mexico.cuauhtemoc,
           attendance: '29 968',
         },
       },
@@ -4603,7 +4603,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.dosal,
+          ...stadiumsData.Mexico.dosal,
           attendance: '9 624',
         },
       },
@@ -4624,7 +4624,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.cuauhtemoc,
+          ...stadiumsData.Mexico.cuauhtemoc,
           attendance: '18 163',
         },
       },
@@ -4645,7 +4645,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.dosal,
+          ...stadiumsData.Mexico.dosal,
           attendance: '9 890',
         },
       },
@@ -4666,7 +4666,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.jalisco,
+          ...stadiumsData.Mexico.jalisco,
           attendance: '50 560',
         },
       },
@@ -4687,7 +4687,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.jalisco,
+          ...stadiumsData.Mexico.jalisco,
           attendance: '52 897',
         },
       },
@@ -4708,7 +4708,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.jalisco,
+          ...stadiumsData.Mexico.jalisco,
           attendance: '56 818',
         },
       },
@@ -4729,7 +4729,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.jalisco,
+          ...stadiumsData.Mexico.jalisco,
           attendance: '66 843',
         },
       },
@@ -4750,7 +4750,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.jalisco,
+          ...stadiumsData.Mexico.jalisco,
           attendance: '50 804',
         },
       },
@@ -4771,7 +4771,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.jalisco,
+          ...stadiumsData.Mexico.jalisco,
           attendance: '49 292',
         },
       },
@@ -4792,7 +4792,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.nouCamp,
+          ...stadiumsData.Mexico.nouCamp,
           attendance: '13 765',
         },
       },
@@ -4813,7 +4813,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.nouCamp,
+          ...stadiumsData.Mexico.nouCamp,
           attendance: '12 942',
         },
       },
@@ -4834,7 +4834,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.nouCamp,
+          ...stadiumsData.Mexico.nouCamp,
           attendance: '13 537',
         },
       },
@@ -4855,7 +4855,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.nouCamp,
+          ...stadiumsData.Mexico.nouCamp,
           attendance: '17 710',
         },
       },
@@ -4876,7 +4876,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.nouCamp,
+          ...stadiumsData.Mexico.nouCamp,
           attendance: '17 875',
         },
       },
@@ -4897,7 +4897,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.nouCamp,
+          ...stadiumsData.Mexico.nouCamp,
           attendance: '12 299',
         },
       },
@@ -4918,7 +4918,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.azteca,
+          ...stadiumsData.Mexico.azteca,
           attendance: '26 085',
         },
       },
@@ -4939,7 +4939,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.dosal,
+          ...stadiumsData.Mexico.dosal,
           attendance: '26 851',
         },
       },
@@ -4960,7 +4960,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.jalisco,
+          ...stadiumsData.Mexico.jalisco,
           attendance: '54 233',
         },
       },
@@ -4981,7 +4981,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.nouCamp,
+          ...stadiumsData.Mexico.nouCamp,
           attendance: '23 357',
         },
       },
@@ -5002,7 +5002,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.jalisco,
+          ...stadiumsData.Mexico.jalisco,
           attendance: '51 261',
         },
       },
@@ -5023,7 +5023,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.jalisco,
+          ...stadiumsData.Mexico.jalisco,
           attendance: '102 444',
         },
       },
@@ -5044,7 +5044,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.azteca,
+          ...stadiumsData.Mexico.azteca,
           attendance: '104 403',
         },
       },
@@ -5065,7 +5065,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Mexico.azteca,
+          ...stadiumsData.Mexico.azteca,
           attendance: '107 412',
         },
       },
@@ -5097,7 +5097,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.olympiaB,
+          ...stadiumsData.Germany.olympiaB,
           attendance: '81 100',
         },
       },
@@ -5118,7 +5118,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.volkspark,
+          ...stadiumsData.Germany.volkspark,
           attendance: '17 000',
         },
       },
@@ -5139,7 +5139,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.volkspark,
+          ...stadiumsData.Germany.volkspark,
           attendance: '53 000',
         },
       },
@@ -5160,7 +5160,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.olympiaB,
+          ...stadiumsData.Germany.olympiaB,
           attendance: '28 300',
         },
       },
@@ -5181,7 +5181,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.volkspark,
+          ...stadiumsData.Germany.volkspark,
           attendance: '17 400',
         },
       },
@@ -5202,7 +5202,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.volkspark,
+          ...stadiumsData.Germany.volkspark,
           attendance: '60 200',
         },
       },
@@ -5223,7 +5223,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.wald,
+          ...stadiumsData.Germany.wald,
           attendance: '62 000',
         },
       },
@@ -5244,7 +5244,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.westfalen,
+          ...stadiumsData.Germany.westfalen,
           attendance: '25 800',
         },
       },
@@ -5265,7 +5265,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.parkGelsenk,
+          ...stadiumsData.Germany.parkGelsenk,
           attendance: '31 700',
         },
       },
@@ -5286,7 +5286,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.wald,
+          ...stadiumsData.Germany.wald,
           attendance: '62 000',
         },
       },
@@ -5307,7 +5307,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.wald,
+          ...stadiumsData.Germany.wald,
           attendance: '56 000',
         },
       },
@@ -5328,7 +5328,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.parkGelsenk,
+          ...stadiumsData.Germany.parkGelsenk,
           attendance: '36 200',
         },
       },
@@ -5349,7 +5349,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.niedersachsen,
+          ...stadiumsData.Germany.niedersachsen,
           attendance: '55 100',
         },
       },
@@ -5370,7 +5370,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.rhein,
+          ...stadiumsData.Germany.rhein,
           attendance: '23 800',
         },
       },
@@ -5391,7 +5391,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.niedersachsen,
+          ...stadiumsData.Germany.niedersachsen,
           attendance: '13 400',
         },
       },
@@ -5412,7 +5412,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.westfalen,
+          ...stadiumsData.Germany.westfalen,
           attendance: '53 700',
         },
       },
@@ -5433,7 +5433,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.westfalen,
+          ...stadiumsData.Germany.westfalen,
           attendance: '53 300',
         },
       },
@@ -5454,7 +5454,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.rhein,
+          ...stadiumsData.Germany.rhein,
           attendance: '28 300',
         },
       },
@@ -5475,7 +5475,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.olympiaM,
+          ...stadiumsData.Germany.olympiaM,
           attendance: '53 000',
         },
       },
@@ -5496,7 +5496,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.neckar,
+          ...stadiumsData.Germany.neckar,
           attendance: '32 700',
         },
       },
@@ -5517,7 +5517,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.neckar,
+          ...stadiumsData.Germany.neckar,
           attendance: '70 100',
         },
       },
@@ -5538,7 +5538,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.olympiaM,
+          ...stadiumsData.Germany.olympiaM,
           attendance: '25 300',
         },
       },
@@ -5559,7 +5559,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.olympiaM,
+          ...stadiumsData.Germany.olympiaM,
           attendance: '25 900',
         },
       },
@@ -5580,7 +5580,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.neckar,
+          ...stadiumsData.Germany.neckar,
           attendance: '70 100',
         },
       },
@@ -5601,7 +5601,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.parkGelsenk,
+          ...stadiumsData.Germany.parkGelsenk,
           attendance: '56 548',
         },
       },
@@ -5622,7 +5622,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.niedersachsen,
+          ...stadiumsData.Germany.niedersachsen,
           attendance: '59 863',
         },
       },
@@ -5643,7 +5643,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.niedersachsen,
+          ...stadiumsData.Germany.niedersachsen,
           attendance: '39 400',
         },
       },
@@ -5664,7 +5664,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.parkGelsenk,
+          ...stadiumsData.Germany.parkGelsenk,
           attendance: '68 348',
         },
       },
@@ -5685,7 +5685,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.parkGelsenk,
+          ...stadiumsData.Germany.parkGelsenk,
           attendance: '54 254',
         },
       },
@@ -5706,7 +5706,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.westfalen,
+          ...stadiumsData.Germany.westfalen,
           attendance: '53 700',
         },
       },
@@ -5727,7 +5727,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.rhein,
+          ...stadiumsData.Germany.rhein,
           attendance: '67 385',
         },
       },
@@ -5748,7 +5748,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.neckar,
+          ...stadiumsData.Germany.neckar,
           attendance: '44 955',
         },
       },
@@ -5769,7 +5769,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.neckar,
+          ...stadiumsData.Germany.neckar,
           attendance: '58 000',
         },
       },
@@ -5790,7 +5790,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.rhein,
+          ...stadiumsData.Germany.rhein,
           attendance: '67 800',
         },
       },
@@ -5811,7 +5811,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.wald,
+          ...stadiumsData.Germany.wald,
           attendance: '62 000',
         },
       },
@@ -5832,7 +5832,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.rhein,
+          ...stadiumsData.Germany.rhein,
           attendance: '41 300',
         },
       },
@@ -5853,7 +5853,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.olympiaM,
+          ...stadiumsData.Germany.olympiaM,
           attendance: '77 100',
         },
       },
@@ -5874,7 +5874,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Germany.olympiaM,
+          ...stadiumsData.Germany.olympiaM,
           attendance: '75 200',
         },
       },
@@ -5906,7 +5906,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.worldCup,
+          ...stadiumsData.Argentina.worldCup,
           attendance: '38 100',
         },
       },
@@ -5927,7 +5927,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.riverPlate,
+          ...stadiumsData.Argentina.riverPlate,
           attendance: '71 615',
         },
       },
@@ -5948,7 +5948,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.worldCup,
+          ...stadiumsData.Argentina.worldCup,
           attendance: '26 533',
         },
       },
@@ -5969,7 +5969,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.riverPlate,
+          ...stadiumsData.Argentina.riverPlate,
           attendance: '71 666',
         },
       },
@@ -5990,7 +5990,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.worldCup,
+          ...stadiumsData.Argentina.worldCup,
           attendance: '23 127',
         },
       },
@@ -6011,7 +6011,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.riverPlate,
+          ...stadiumsData.Argentina.riverPlate,
           attendance: '71 712',
         },
       },
@@ -6032,7 +6032,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.riverPlate,
+          ...stadiumsData.Argentina.riverPlate,
           attendance: '67 579',
         },
       },
@@ -6053,7 +6053,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.rosario,
+          ...stadiumsData.Argentina.rosario,
           attendance: '17 396',
         },
       },
@@ -6074,7 +6074,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.olympic,
+          ...stadiumsData.Argentina.olympic,
           attendance: '35 258',
         },
       },
@@ -6095,7 +6095,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.rosario,
+          ...stadiumsData.Argentina.rosario,
           attendance: '9 624',
         },
       },
@@ -6116,7 +6116,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.olympic,
+          ...stadiumsData.Argentina.olympic,
           attendance: '30 667',
         },
       },
@@ -6137,7 +6137,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.rosario,
+          ...stadiumsData.Argentina.rosario,
           attendance: '22 651',
         },
       },
@@ -6158,7 +6158,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.amalfitani,
+          ...stadiumsData.Argentina.amalfitani,
           attendance: '40 841',
         },
       },
@@ -6179,7 +6179,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.worldCup,
+          ...stadiumsData.Argentina.worldCup,
           attendance: '32 569',
         },
       },
@@ -6200,7 +6200,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.amalfitani,
+          ...stadiumsData.Argentina.amalfitani,
           attendance: '41 424',
         },
       },
@@ -6221,7 +6221,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.worldCup,
+          ...stadiumsData.Argentina.worldCup,
           attendance: '34 771',
         },
       },
@@ -6242,7 +6242,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.amalfitani,
+          ...stadiumsData.Argentina.amalfitani,
           attendance: '42 132',
         },
       },
@@ -6263,7 +6263,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.worldCup,
+          ...stadiumsData.Argentina.worldCup,
           attendance: '35 221',
         },
       },
@@ -6284,7 +6284,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.olympic,
+          ...stadiumsData.Argentina.olympic,
           attendance: '37 927',
         },
       },
@@ -6305,7 +6305,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.mendoza,
+          ...stadiumsData.Argentina.mendoza,
           attendance: '33 431',
         },
       },
@@ -6326,7 +6326,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.olympic,
+          ...stadiumsData.Argentina.olympic,
           attendance: '7 938',
         },
       },
@@ -6347,7 +6347,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.mendoza,
+          ...stadiumsData.Argentina.mendoza,
           attendance: '28 125',
         },
       },
@@ -6368,7 +6368,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.olympic,
+          ...stadiumsData.Argentina.olympic,
           attendance: '21 262',
         },
       },
@@ -6389,7 +6389,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.mendoza,
+          ...stadiumsData.Argentina.mendoza,
           attendance: '35 130',
         },
       },
@@ -6410,7 +6410,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.olympic,
+          ...stadiumsData.Argentina.olympic,
           attendance: '25 050',
         },
       },
@@ -6431,7 +6431,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.riverPlate,
+          ...stadiumsData.Argentina.riverPlate,
           attendance: '67 547',
         },
       },
@@ -6452,7 +6452,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.olympic,
+          ...stadiumsData.Argentina.olympic,
           attendance: '40 750',
         },
       },
@@ -6473,7 +6473,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.riverPlate,
+          ...stadiumsData.Argentina.riverPlate,
           attendance: '66 695',
         },
       },
@@ -6494,7 +6494,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.olympic,
+          ...stadiumsData.Argentina.olympic,
           attendance: '38 318',
         },
       },
@@ -6515,7 +6515,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.riverPlate,
+          ...stadiumsData.Argentina.riverPlate,
           attendance: '67 433',
         },
       },
@@ -6536,7 +6536,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.mendoza,
+          ...stadiumsData.Argentina.mendoza,
           attendance: '31 278',
         },
       },
@@ -6557,7 +6557,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.rosario,
+          ...stadiumsData.Argentina.rosario,
           attendance: '37 091',
         },
       },
@@ -6578,7 +6578,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.mendoza,
+          ...stadiumsData.Argentina.mendoza,
           attendance: '35 288',
         },
       },
@@ -6599,7 +6599,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.rosario,
+          ...stadiumsData.Argentina.rosario,
           attendance: '37 326',
         },
       },
@@ -6620,7 +6620,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.mendoza,
+          ...stadiumsData.Argentina.mendoza,
           attendance: '39 586',
         },
       },
@@ -6641,7 +6641,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.rosario,
+          ...stadiumsData.Argentina.rosario,
           attendance: '37 315',
         },
       },
@@ -6662,7 +6662,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.riverPlate,
+          ...stadiumsData.Argentina.riverPlate,
           attendance: '69 659',
         },
       },
@@ -6683,7 +6683,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Argentina.riverPlate,
+          ...stadiumsData.Argentina.riverPlate,
           attendance: '71 483',
         },
       },
@@ -6715,7 +6715,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.balaidos,
+          ...stadiumsData.Spain.balaidos,
           attendance: '33 040',
         },
       },
@@ -6736,7 +6736,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.riazor,
+          ...stadiumsData.Spain.riazor,
           attendance: '11 000',
         },
       },
@@ -6757,7 +6757,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.balaidos,
+          ...stadiumsData.Spain.balaidos,
           attendance: '25 000',
         },
       },
@@ -6778,7 +6778,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.riazor,
+          ...stadiumsData.Spain.riazor,
           attendance: '19 000',
         },
       },
@@ -6799,7 +6799,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.riazor,
+          ...stadiumsData.Spain.riazor,
           attendance: '25 000',
         },
       },
@@ -6820,7 +6820,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.balaidos,
+          ...stadiumsData.Spain.balaidos,
           attendance: '20 000',
         },
       },
@@ -6841,7 +6841,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.molinon,
+          ...stadiumsData.Spain.molinon,
           attendance: '42 000',
         },
       },
@@ -6862,7 +6862,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.tartiere,
+          ...stadiumsData.Spain.tartiere,
           attendance: '22 500',
         },
       },
@@ -6883,7 +6883,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.molinon,
+          ...stadiumsData.Spain.molinon,
           attendance: '42 000',
         },
       },
@@ -6904,7 +6904,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.tartiere,
+          ...stadiumsData.Spain.tartiere,
           attendance: '22 000',
         },
       },
@@ -6925,7 +6925,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.tartiere,
+          ...stadiumsData.Spain.tartiere,
           attendance: '16 000',
         },
       },
@@ -6946,7 +6946,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.molinon,
+          ...stadiumsData.Spain.molinon,
           attendance: '41 000',
         },
       },
@@ -6967,7 +6967,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.nouCamp,
+          ...stadiumsData.Spain.nouCamp,
           attendance: '95 000',
         },
       },
@@ -6988,7 +6988,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.nuevo,
+          ...stadiumsData.Spain.nuevo,
           attendance: '23 000',
         },
       },
@@ -7009,7 +7009,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.perez,
+          ...stadiumsData.Spain.perez,
           attendance: '32 093',
         },
       },
@@ -7030,7 +7030,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.nuevo,
+          ...stadiumsData.Spain.nuevo,
           attendance: '15 000',
         },
       },
@@ -7051,7 +7051,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.nuevo,
+          ...stadiumsData.Spain.nuevo,
           attendance: '37 000',
         },
       },
@@ -7072,7 +7072,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.perez,
+          ...stadiumsData.Spain.perez,
           attendance: '32 500',
         },
       },
@@ -7093,7 +7093,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.mames,
+          ...stadiumsData.Spain.mames,
           attendance: '44 172',
         },
       },
@@ -7114,7 +7114,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.zorrilla,
+          ...stadiumsData.Spain.zorrilla,
           attendance: '25 000',
         },
       },
@@ -7135,7 +7135,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.mames,
+          ...stadiumsData.Spain.mames,
           attendance: '41 123',
         },
       },
@@ -7156,7 +7156,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.zorrilla,
+          ...stadiumsData.Spain.zorrilla,
           attendance: '30 043',
         },
       },
@@ -7177,7 +7177,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.zorrilla,
+          ...stadiumsData.Spain.zorrilla,
           attendance: '28 000',
         },
       },
@@ -7198,7 +7198,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.mames,
+          ...stadiumsData.Spain.mames,
           attendance: '39 700',
         },
       },
@@ -7219,7 +7219,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.casanova,
+          ...stadiumsData.Spain.casanova,
           attendance: '49 562',
         },
       },
@@ -7240,7 +7240,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.romareda,
+          ...stadiumsData.Spain.romareda,
           attendance: '25 000',
         },
       },
@@ -7261,7 +7261,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.casanova,
+          ...stadiumsData.Spain.casanova,
           attendance: '48 000',
         },
       },
@@ -7282,7 +7282,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.romareda,
+          ...stadiumsData.Spain.romareda,
           attendance: '15 000',
         },
       },
@@ -7303,7 +7303,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.romareda,
+          ...stadiumsData.Spain.romareda,
           attendance: '25 000',
         },
       },
@@ -7324,7 +7324,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.casanova,
+          ...stadiumsData.Spain.casanova,
           attendance: '49 562',
         },
       },
@@ -7345,7 +7345,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.pizjuan,
+          ...stadiumsData.Spain.pizjuan,
           attendance: '68 000',
         },
       },
@@ -7366,7 +7366,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.rosaleda,
+          ...stadiumsData.Spain.rosaleda,
           attendance: '36 000',
         },
       },
@@ -7387,7 +7387,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.villamarin,
+          ...stadiumsData.Spain.villamarin,
           attendance: '47 379',
         },
       },
@@ -7408,7 +7408,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.rosaleda,
+          ...stadiumsData.Spain.rosaleda,
           attendance: '19 000',
         },
       },
@@ -7429,7 +7429,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.rosaleda,
+          ...stadiumsData.Spain.rosaleda,
           attendance: '45 000',
         },
       },
@@ -7450,7 +7450,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.villamarin,
+          ...stadiumsData.Spain.villamarin,
           attendance: '43 000',
         },
       },
@@ -7471,7 +7471,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.nouCamp,
+          ...stadiumsData.Spain.nouCamp,
           attendance: '65 000',
         },
       },
@@ -7492,7 +7492,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.nouCamp,
+          ...stadiumsData.Spain.nouCamp,
           attendance: '45 000',
         },
       },
@@ -7513,7 +7513,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.nouCamp,
+          ...stadiumsData.Spain.nouCamp,
           attendance: '65 000',
         },
       },
@@ -7534,7 +7534,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.bernabeu,
+          ...stadiumsData.Spain.bernabeu,
           attendance: '75 000',
         },
       },
@@ -7555,7 +7555,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.bernabeu,
+          ...stadiumsData.Spain.bernabeu,
           attendance: '90 089',
         },
       },
@@ -7576,7 +7576,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.bernabeu,
+          ...stadiumsData.Spain.bernabeu,
           attendance: '75 000',
         },
       },
@@ -7597,7 +7597,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.sarria,
+          ...stadiumsData.Spain.sarria,
           attendance: '43 000',
         },
       },
@@ -7618,7 +7618,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.sarria,
+          ...stadiumsData.Spain.sarria,
           attendance: '44 000',
         },
       },
@@ -7639,7 +7639,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.sarria,
+          ...stadiumsData.Spain.sarria,
           attendance: '44 000',
         },
       },
@@ -7660,7 +7660,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.calderon,
+          ...stadiumsData.Spain.calderon,
           attendance: '37 000',
         },
       },
@@ -7681,7 +7681,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.calderon,
+          ...stadiumsData.Spain.calderon,
           attendance: '20 000',
         },
       },
@@ -7702,7 +7702,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.calderon,
+          ...stadiumsData.Spain.calderon,
           attendance: '37 000',
         },
       },
@@ -7723,7 +7723,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.nouCamp,
+          ...stadiumsData.Spain.nouCamp,
           attendance: '50 000',
         },
       },
@@ -7748,7 +7748,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.pizjuan,
+          ...stadiumsData.Spain.pizjuan,
           attendance: '70 000',
         },
       },
@@ -7769,7 +7769,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.perez,
+          ...stadiumsData.Spain.perez,
           attendance: '28 000',
         },
       },
@@ -7790,7 +7790,7 @@ export const worldCupData: WorldCupData = {
           },
         ],
         stadium: {
-          ...stadiums.Spain.bernabeu,
+          ...stadiumsData.Spain.bernabeu,
           attendance: '90 000',
         },
       },
@@ -7814,7 +7814,7 @@ export const worldCupData: WorldCupData = {
         ['85'],
         ['Altobelli'],
         ['44'],
-        stadiums.Mexico.azteca,
+        stadiumsData.Mexico.azteca,
         '96 000'
       ),
       new Match(
@@ -7826,7 +7826,7 @@ export const worldCupData: WorldCupData = {
         ['6, 46', '18'],
         ['Park Chang-Sun'],
         ['73'],
-        stadiums.Mexico.olimpico,
+        stadiumsData.Mexico.olimpico,
         '60 000'
       ),
       new Match(
@@ -7838,7 +7838,7 @@ export const worldCupData: WorldCupData = {
         ['34'],
         ['Altobelli'],
         ['6(p)'],
-        stadiums.Mexico.cuauhtemoc,
+        stadiumsData.Mexico.cuauhtemoc,
         '32 000'
       ),
       new Match(
@@ -7850,7 +7850,7 @@ export const worldCupData: WorldCupData = {
         ['70'],
         ['Getov'],
         ['11'],
-        stadiums.Mexico.olimpico,
+        stadiumsData.Mexico.olimpico,
         '45 000'
       ),
       new Match(
@@ -7862,7 +7862,7 @@ export const worldCupData: WorldCupData = {
         ['17, 73', '82(o.g.)'],
         ['Choi Soon-Ho', 'Huh Jung-Moo'],
         ['62', '89'],
-        stadiums.Mexico.cuauhtemoc,
+        stadiumsData.Mexico.cuauhtemoc,
         '20 000'
       ),
       new Match(
@@ -7874,7 +7874,7 @@ export const worldCupData: WorldCupData = {
         ['4', '77'],
         [],
         [],
-        stadiums.Mexico.olimpico,
+        stadiumsData.Mexico.olimpico,
         '65 000'
       ),
       new Match(
@@ -7886,7 +7886,7 @@ export const worldCupData: WorldCupData = {
         ['23', '39'],
         ['Vandenbergh'],
         ['45'],
-        stadiums.Mexico.azteca,
+        stadiumsData.Mexico.azteca,
         '110 000'
       ),
       new Match(
@@ -7898,7 +7898,7 @@ export const worldCupData: WorldCupData = {
         ['35'],
         [],
         [],
-        stadiums.Mexico.dosal,
+        stadiumsData.Mexico.dosal,
         '24 000'
       ),
       new Match(
@@ -7910,7 +7910,7 @@ export const worldCupData: WorldCupData = {
         ['3'],
         ['Romero'],
         ['85'],
-        stadiums.Mexico.azteca,
+        stadiumsData.Mexico.azteca,
         '114 600'
       ),
       new Match(
@@ -7922,7 +7922,7 @@ export const worldCupData: WorldCupData = {
         ['16', '21(p)'],
         ['Radhi'],
         ['59'],
-        stadiums.Mexico.dosal,
+        stadiumsData.Mexico.dosal,
         '20 000'
       ),
       new Match(
@@ -7934,7 +7934,7 @@ export const worldCupData: WorldCupData = {
         ['50', '76'],
         ['Vercauteren', 'Veyt'],
         ['30', '59'],
-        stadiums.Mexico.dosal,
+        stadiumsData.Mexico.dosal,
         '16 000'
       ),
       new Match(
@@ -7946,7 +7946,7 @@ export const worldCupData: WorldCupData = {
         ['54'],
         [],
         [],
-        stadiums.Mexico.azteca,
+        stadiumsData.Mexico.azteca,
         '103 763'
       ),
       new Match(
@@ -7958,7 +7958,7 @@ export const worldCupData: WorldCupData = {
         ['79'],
         [],
         [],
-        stadiums.Mexico.nouCamp,
+        stadiumsData.Mexico.nouCamp,
         '36 000'
       ),
       new Match(
@@ -7970,7 +7970,7 @@ export const worldCupData: WorldCupData = {
         ['2', '4', '24(p)', '66', '73(o.g.)', '80'],
         [],
         [],
-        stadiums.Mexico.chavez,
+        stadiumsData.Mexico.chavez,
         '16 500'
       ),
       new Match(
@@ -7982,7 +7982,7 @@ export const worldCupData: WorldCupData = {
         ['62'],
         ['Rats'],
         ['53'],
-        stadiums.Mexico.nouCamp,
+        stadiumsData.Mexico.nouCamp,
         '36 540'
       ),
       new Match(
@@ -7994,7 +7994,7 @@ export const worldCupData: WorldCupData = {
         ['2', '75'],
         [],
         [],
-        stadiums.Mexico.chavez,
+        stadiumsData.Mexico.chavez,
         '13 800'
       ),
       new Match(
@@ -8006,7 +8006,7 @@ export const worldCupData: WorldCupData = {
         ['29', '62', '84'],
         [],
         [],
-        stadiums.Mexico.nouCamp,
+        stadiumsData.Mexico.nouCamp,
         '31 420'
       ),
       new Match(
@@ -8018,7 +8018,7 @@ export const worldCupData: WorldCupData = {
         ['58', '74'],
         [],
         [],
-        stadiums.Mexico.chavez,
+        stadiumsData.Mexico.chavez,
         '14 200'
       ),
       new Match(
@@ -8030,7 +8030,7 @@ export const worldCupData: WorldCupData = {
         ['62'],
         [],
         [],
-        stadiums.Mexico.jalisco,
+        stadiumsData.Mexico.jalisco,
         '35 748'
       ),
       new Match(
@@ -8042,7 +8042,7 @@ export const worldCupData: WorldCupData = {
         ['59'],
         ['Whiteside'],
         ['6'],
-        stadiums.Mexico.marzo,
+        stadiumsData.Mexico.marzo,
         '22 000'
       ),
       new Match(
@@ -8054,7 +8054,7 @@ export const worldCupData: WorldCupData = {
         ['66'],
         [],
         [],
-        stadiums.Mexico.jalisco,
+        stadiumsData.Mexico.jalisco,
         '48 000'
       ),
       new Match(
@@ -8066,7 +8066,7 @@ export const worldCupData: WorldCupData = {
         ['1', '18'],
         ['Clarke'],
         ['46'],
-        stadiums.Mexico.marzo,
+        stadiumsData.Mexico.marzo,
         '28 000'
       ),
       new Match(
@@ -8078,7 +8078,7 @@ export const worldCupData: WorldCupData = {
         ['15, 87', '42'],
         [],
         [],
-        stadiums.Mexico.jalisco,
+        stadiumsData.Mexico.jalisco,
         '51 000'
       ),
       new Match(
@@ -8090,7 +8090,7 @@ export const worldCupData: WorldCupData = {
         ['15, 68', '70'],
         [],
         [],
-        stadiums.Mexico.tecnologico,
+        stadiumsData.Mexico.tecnologico,
         '23 980'
       ),
       new Match(
@@ -8102,7 +8102,7 @@ export const worldCupData: WorldCupData = {
         ['4'],
         ['Allofs'],
         ['84'],
-        stadiums.Mexico.corregidora,
+        stadiumsData.Mexico.corregidora,
         '30 500'
       ),
       new Match(
@@ -8114,7 +8114,7 @@ export const worldCupData: WorldCupData = {
         ['57'],
         [],
         [],
-        stadiums.Mexico.neza86,
+        stadiumsData.Mexico.neza86,
         '18 000'
       ),
       new Match(
@@ -8126,7 +8126,7 @@ export const worldCupData: WorldCupData = {
         ['23', '49'],
         ['Strachan'],
         ['18'],
-        stadiums.Mexico.corregidora,
+        stadiumsData.Mexico.corregidora,
         '30 000'
       ),
       new Match(
@@ -8138,7 +8138,7 @@ export const worldCupData: WorldCupData = {
         ['11, 76, 80', '41', '52', '88'],
         ['Francescoli'],
         ['45(p)'],
-        stadiums.Mexico.neza86,
+        stadiumsData.Mexico.neza86,
         '26 500'
       ),
       new Match(
@@ -8150,7 +8150,7 @@ export const worldCupData: WorldCupData = {
         ['43(p)', '62'],
         [],
         [],
-        stadiums.Mexico.corregidora,
+        stadiumsData.Mexico.corregidora,
         '36 000'
       ),
       new Match(
@@ -8162,7 +8162,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Mexico.neza86,
+        stadiumsData.Mexico.neza86,
         '20 000'
       ),
       new Match(
@@ -8174,7 +8174,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Mexico.universitario,
+        stadiumsData.Mexico.universitario,
         '19 900'
       ),
       new Match(
@@ -8186,7 +8186,7 @@ export const worldCupData: WorldCupData = {
         ['75'],
         [],
         [],
-        stadiums.Mexico.tecnologico,
+        stadiumsData.Mexico.tecnologico,
         '23 000'
       ),
       new Match(
@@ -8198,7 +8198,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Mexico.tecnologico,
+        stadiumsData.Mexico.tecnologico,
         '20 200'
       ),
       new Match(
@@ -8210,7 +8210,7 @@ export const worldCupData: WorldCupData = {
         ['68'],
         [],
         [],
-        stadiums.Mexico.universitario,
+        stadiumsData.Mexico.universitario,
         '19 915'
       ),
       new Match(
@@ -8222,7 +8222,7 @@ export const worldCupData: WorldCupData = {
         ['8, 14, 36'],
         [],
         [],
-        stadiums.Mexico.universitario,
+        stadiumsData.Mexico.universitario,
         '22 700'
       ),
       new Match(
@@ -8234,7 +8234,7 @@ export const worldCupData: WorldCupData = {
         ['19, 27', '62'],
         ['Diamantino'],
         ['80'],
-        stadiums.Mexico.marzo,
+        stadiumsData.Mexico.marzo,
         '28 000'
       ),
       new Match(
@@ -8246,7 +8246,7 @@ export const worldCupData: WorldCupData = {
         ['34', '61'],
         [],
         [],
-        stadiums.Mexico.azteca,
+        stadiumsData.Mexico.azteca,
         '114 580'
       ),
       new Match(
@@ -8258,7 +8258,7 @@ export const worldCupData: WorldCupData = {
         ['56', '77', '102', '110'],
         ['Belanov'],
         ['27, 70, 111(p)'],
-        stadiums.Mexico.nouCamp,
+        stadiumsData.Mexico.nouCamp,
         '32 277'
       ),
       new Match(
@@ -8270,7 +8270,7 @@ export const worldCupData: WorldCupData = {
         ['30(p)', '55', '79', '83(p)'],
         [],
         [],
-        stadiums.Mexico.jalisco,
+        stadiumsData.Mexico.jalisco,
         '45 000'
       ),
       new Match(
@@ -8282,7 +8282,7 @@ export const worldCupData: WorldCupData = {
         ['42'],
         [],
         [],
-        stadiums.Mexico.cuauhtemoc,
+        stadiumsData.Mexico.cuauhtemoc,
         '26 000'
       ),
       new Match(
@@ -8294,7 +8294,7 @@ export const worldCupData: WorldCupData = {
         ['15', '57'],
         [],
         [],
-        stadiums.Mexico.olimpico,
+        stadiumsData.Mexico.olimpico,
         '70 000'
       ),
       new Match(
@@ -8306,7 +8306,7 @@ export const worldCupData: WorldCupData = {
         ['88'],
         [],
         [],
-        stadiums.Mexico.universitario,
+        stadiumsData.Mexico.universitario,
         '19 800'
       ),
       new Match(
@@ -8318,7 +8318,7 @@ export const worldCupData: WorldCupData = {
         ['31, 73', '56'],
         [],
         [],
-        stadiums.Mexico.azteca,
+        stadiumsData.Mexico.azteca,
         '98 728'
       ),
       new Match(
@@ -8330,7 +8330,7 @@ export const worldCupData: WorldCupData = {
         ['43, 56, 80, 88(p)', '68(p)'],
         ['J.Olsen'],
         ['33(p)'],
-        stadiums.Mexico.corregidora,
+        stadiumsData.Mexico.corregidora,
         '38 500'
       ),
       new Match(
@@ -8346,7 +8346,7 @@ export const worldCupData: WorldCupData = {
         ['40'],
         ['Careca'],
         ['17'],
-        stadiums.Mexico.jalisco,
+        stadiumsData.Mexico.jalisco,
         '65 000'
       ),
       new Match(
@@ -8362,7 +8362,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Mexico.universitario,
+        stadiumsData.Mexico.universitario,
         '41 700'
       ),
       new Match(
@@ -8374,7 +8374,7 @@ export const worldCupData: WorldCupData = {
         ['51, 55'],
         ['Lineker'],
         ['81'],
-        stadiums.Mexico.azteca,
+        stadiumsData.Mexico.azteca,
         '114 580'
       ),
       new Match(
@@ -8390,7 +8390,7 @@ export const worldCupData: WorldCupData = {
         ['35'],
         ['Señor'],
         ['85'],
-        stadiums.Mexico.cuauhtemoc,
+        stadiumsData.Mexico.cuauhtemoc,
         '45 000'
       ),
       new Match(
@@ -8402,7 +8402,7 @@ export const worldCupData: WorldCupData = {
         ['9', '89'],
         [],
         [],
-        stadiums.Mexico.jalisco,
+        stadiumsData.Mexico.jalisco,
         '45 000'
       ),
       new Match(
@@ -8414,7 +8414,7 @@ export const worldCupData: WorldCupData = {
         ['51, 63'],
         [],
         [],
-        stadiums.Mexico.azteca,
+        stadiumsData.Mexico.azteca,
         '114 500'
       ),
       new Match(
@@ -8426,7 +8426,7 @@ export const worldCupData: WorldCupData = {
         ['27', '43', '104', '111(p)'],
         ['Ceulemans', 'Claesen'],
         ['11', '73'],
-        stadiums.Mexico.cuauhtemoc,
+        stadiumsData.Mexico.cuauhtemoc,
         '21 000'
       ),
       new Match(
@@ -8438,7 +8438,7 @@ export const worldCupData: WorldCupData = {
         ['23', '55', '83'],
         ['Rummenigge', 'Völler'],
         ['74', '80'],
-        stadiums.Mexico.azteca,
+        stadiumsData.Mexico.azteca,
         '114 600'
       ),
     ],
@@ -8461,7 +8461,7 @@ export const worldCupData: WorldCupData = {
         ['78'],
         [],
         [],
-        stadiums.Italy.olimpico,
+        stadiumsData.Italy.olimpico,
         '73 303'
       ),
       new Match(
@@ -8473,7 +8473,7 @@ export const worldCupData: WorldCupData = {
         ['25, 78', '39', '50', '90'],
         ['P.Caligiuri'],
         ['61'],
-        stadiums.Italy.comunale,
+        stadiumsData.Italy.comunale,
         '33 266'
       ),
       new Match(
@@ -8485,7 +8485,7 @@ export const worldCupData: WorldCupData = {
         ['11'],
         [],
         [],
-        stadiums.Italy.olimpico,
+        stadiumsData.Italy.olimpico,
         '73 423'
       ),
       new Match(
@@ -8497,7 +8497,7 @@ export const worldCupData: WorldCupData = {
         ['30'],
         [],
         [],
-        stadiums.Italy.comunale,
+        stadiumsData.Italy.comunale,
         '38 962'
       ),
       new Match(
@@ -8509,7 +8509,7 @@ export const worldCupData: WorldCupData = {
         ['10', '78'],
         [],
         [],
-        stadiums.Italy.olimpico,
+        stadiumsData.Italy.olimpico,
         '73 303'
       ),
       new Match(
@@ -8521,7 +8521,7 @@ export const worldCupData: WorldCupData = {
         ['52', '65'],
         ['B.Murray'],
         ['85'],
-        stadiums.Italy.comunale,
+        stadiumsData.Italy.comunale,
         '34 857'
       ),
       new Match(
@@ -8533,7 +8533,7 @@ export const worldCupData: WorldCupData = {
         ['65'],
         [],
         [],
-        stadiums.Italy.sanSiro,
+        stadiumsData.Italy.sanSiro,
         '73 780'
       ),
       new Match(
@@ -8545,7 +8545,7 @@ export const worldCupData: WorldCupData = {
         ['41, 54(p)'],
         [],
         [],
-        stadiums.Italy.nicola,
+        stadiumsData.Italy.nicola,
         '42 960'
       ),
       new Match(
@@ -8557,7 +8557,7 @@ export const worldCupData: WorldCupData = {
         ['27', '79'],
         [],
         [],
-        stadiums.Italy.paolo,
+        stadiumsData.Italy.paolo,
         '55 759'
       ),
       new Match(
@@ -8569,7 +8569,7 @@ export const worldCupData: WorldCupData = {
         ['76, 86'],
         ['G.Balint'],
         ['88'],
-        stadiums.Italy.nicola,
+        stadiumsData.Italy.nicola,
         '38 687'
       ),
       new Match(
@@ -8581,7 +8581,7 @@ export const worldCupData: WorldCupData = {
         ['62'],
         ['G.Balint'],
         ['68'],
-        stadiums.Italy.paolo,
+        stadiumsData.Italy.paolo,
         '52 733'
       ),
       new Match(
@@ -8593,7 +8593,7 @@ export const worldCupData: WorldCupData = {
         ['20', '29', '52', '63'],
         [],
         [],
-        stadiums.Italy.nicola,
+        stadiumsData.Italy.nicola,
         '37 307'
       ),
       new Match(
@@ -8605,7 +8605,7 @@ export const worldCupData: WorldCupData = {
         ['40, 63'],
         ['T.Brolin'],
         ['79'],
-        stadiums.Italy.alpi,
+        stadiumsData.Italy.alpi,
         '62 628'
       ),
       new Match(
@@ -8617,7 +8617,7 @@ export const worldCupData: WorldCupData = {
         ['49'],
         [],
         [],
-        stadiums.Italy.ferraris,
+        stadiumsData.Italy.ferraris,
         '30 867'
       ),
       new Match(
@@ -8629,7 +8629,7 @@ export const worldCupData: WorldCupData = {
         ['33'],
         [],
         [],
-        stadiums.Italy.alpi,
+        stadiumsData.Italy.alpi,
         '58 007'
       ),
       new Match(
@@ -8641,7 +8641,7 @@ export const worldCupData: WorldCupData = {
         ['11', '80(p)'],
         ['G.Strömberg'],
         ['86'],
-        stadiums.Italy.ferraris,
+        stadiumsData.Italy.ferraris,
         '31 823'
       ),
       new Match(
@@ -8653,7 +8653,7 @@ export const worldCupData: WorldCupData = {
         ['82'],
         [],
         [],
-        stadiums.Italy.alpi,
+        stadiumsData.Italy.alpi,
         '62 502'
       ),
       new Match(
@@ -8665,7 +8665,7 @@ export const worldCupData: WorldCupData = {
         ['75', '87'],
         ['J.Ekstrom'],
         ['32'],
-        stadiums.Italy.ferraris,
+        stadiumsData.Italy.ferraris,
         '20 223'
       ),
       new Match(
@@ -8677,7 +8677,7 @@ export const worldCupData: WorldCupData = {
         ['50', '85'],
         [],
         [],
-        stadiums.Italy.dallAra,
+        stadiumsData.Italy.dallAra,
         '30 791'
       ),
       new Match(
@@ -8689,7 +8689,7 @@ export const worldCupData: WorldCupData = {
         ['28, 64', '39', '70'],
         ['D.Jozić'],
         ['55'],
-        stadiums.Italy.sanSiro,
+        stadiumsData.Italy.sanSiro,
         '74 765'
       ),
       new Match(
@@ -8701,7 +8701,7 @@ export const worldCupData: WorldCupData = {
         ['73'],
         [],
         [],
-        stadiums.Italy.dallAra,
+        stadiumsData.Italy.dallAra,
         '32 257'
       ),
       new Match(
@@ -8713,7 +8713,7 @@ export const worldCupData: WorldCupData = {
         ['35, 75', '36', '47', '59'],
         ['K.Ismaïl'],
         ['46'],
-        stadiums.Italy.sanSiro,
+        stadiumsData.Italy.sanSiro,
         '71 167'
       ),
       new Match(
@@ -8725,7 +8725,7 @@ export const worldCupData: WorldCupData = {
         ['88'],
         ['F.Rincón'],
         ['90+3'],
-        stadiums.Italy.sanSiro,
+        stadiumsData.Italy.sanSiro,
         '72 510'
       ),
       new Match(
@@ -8737,7 +8737,7 @@ export const worldCupData: WorldCupData = {
         ['5', '9, 46', '90'],
         ["A.T.Juma'a"],
         ['22'],
-        stadiums.Italy.dallAra,
+        stadiumsData.Italy.dallAra,
         '27 833'
       ),
       new Match(
@@ -8749,7 +8749,7 @@ export const worldCupData: WorldCupData = {
         ['53', '64'],
         [],
         [],
-        stadiums.Italy.bentegodi,
+        stadiumsData.Italy.bentegodi,
         '32 486'
       ),
       new Match(
@@ -8761,7 +8761,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Italy.friuli,
+        stadiumsData.Italy.friuli,
         '35 713'
       ),
       new Match(
@@ -8773,7 +8773,7 @@ export const worldCupData: WorldCupData = {
         ['15', '22', '47'],
         ['P.J.Bengoechea'],
         ['73'],
-        stadiums.Italy.bentegodi,
+        stadiumsData.Italy.bentegodi,
         '33 759'
       ),
       new Match(
@@ -8785,7 +8785,7 @@ export const worldCupData: WorldCupData = {
         ['23, 61, 81'],
         ['Hwang-Bo Kwan'],
         ['43'],
-        stadiums.Italy.friuli,
+        stadiumsData.Italy.friuli,
         '32 733'
       ),
       new Match(
@@ -8797,7 +8797,7 @@ export const worldCupData: WorldCupData = {
         ['27(p)', '38'],
         ['P.Vervoort'],
         ['29'],
-        stadiums.Italy.bentegodi,
+        stadiumsData.Italy.bentegodi,
         '35 950'
       ),
       new Match(
@@ -8809,7 +8809,7 @@ export const worldCupData: WorldCupData = {
         ['90'],
         [],
         [],
-        stadiums.Italy.friuli,
+        stadiumsData.Italy.friuli,
         '29 039'
       ),
       new Match(
@@ -8821,7 +8821,7 @@ export const worldCupData: WorldCupData = {
         ['9'],
         ['K.Sheedy'],
         ['73'],
-        stadiums.Italy.santElia,
+        stadiumsData.Italy.santElia,
         '35 238'
       ),
       new Match(
@@ -8833,7 +8833,7 @@ export const worldCupData: WorldCupData = {
         ['58'],
         ['M.Abdelghany'],
         ['83(p)'],
-        stadiums.Italy.favorita,
+        stadiumsData.Italy.favorita,
         '33 421'
       ),
       new Match(
@@ -8845,7 +8845,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Italy.santElia,
+        stadiumsData.Italy.santElia,
         '35 267'
       ),
       new Match(
@@ -8857,7 +8857,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Italy.favorita,
+        stadiumsData.Italy.favorita,
         '33 288'
       ),
       new Match(
@@ -8869,7 +8869,7 @@ export const worldCupData: WorldCupData = {
         ['58'],
         [],
         [],
-        stadiums.Italy.santElia,
+        stadiumsData.Italy.santElia,
         '34 959'
       ),
       new Match(
@@ -8881,7 +8881,7 @@ export const worldCupData: WorldCupData = {
         ['71'],
         ['R.Gullit'],
         ['11'],
-        stadiums.Italy.favorita,
+        stadiumsData.Italy.favorita,
         '33 288'
       ),
       new Match(
@@ -8893,7 +8893,7 @@ export const worldCupData: WorldCupData = {
         ['106, 108'],
         ['B.Redín'],
         ['115'],
-        stadiums.Italy.paolo,
+        stadiumsData.Italy.paolo,
         '50 026'
       ),
       new Match(
@@ -8905,7 +8905,7 @@ export const worldCupData: WorldCupData = {
         ['12, 63, 82', '76'],
         ['R.González'],
         ['55'],
-        stadiums.Italy.nicola,
+        stadiumsData.Italy.nicola,
         '47 673'
       ),
       new Match(
@@ -8917,7 +8917,7 @@ export const worldCupData: WorldCupData = {
         ['81'],
         [],
         [],
-        stadiums.Italy.alpi,
+        stadiumsData.Italy.alpi,
         '61 381'
       ),
       new Match(
@@ -8929,7 +8929,7 @@ export const worldCupData: WorldCupData = {
         ['51', '85'],
         ['R.Koeman'],
         ['89(p)'],
-        stadiums.Italy.sanSiro,
+        stadiumsData.Italy.sanSiro,
         '74 559'
       ),
       new Match(
@@ -8945,7 +8945,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Italy.ferraris,
+        stadiumsData.Italy.ferraris,
         '31 818'
       ),
       new Match(
@@ -8957,7 +8957,7 @@ export const worldCupData: WorldCupData = {
         ['65', '85'],
         [],
         [],
-        stadiums.Italy.olimpico,
+        stadiumsData.Italy.olimpico,
         '73 303'
       ),
       new Match(
@@ -8969,7 +8969,7 @@ export const worldCupData: WorldCupData = {
         ['78', '92'],
         ['J.Salinas'],
         ['83'],
-        stadiums.Italy.bentegodi,
+        stadiumsData.Italy.bentegodi,
         '35 500'
       ),
       new Match(
@@ -8981,7 +8981,7 @@ export const worldCupData: WorldCupData = {
         ['119'],
         [],
         [],
-        stadiums.Italy.dallAra,
+        stadiumsData.Italy.dallAra,
         '34 520'
       ),
       new Match(
@@ -8997,7 +8997,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Italy.comunale,
+        stadiumsData.Italy.comunale,
         '38 971'
       ),
       new Match(
@@ -9009,7 +9009,7 @@ export const worldCupData: WorldCupData = {
         ['38'],
         [],
         [],
-        stadiums.Italy.olimpico,
+        stadiumsData.Italy.olimpico,
         '73 303'
       ),
       new Match(
@@ -9021,7 +9021,7 @@ export const worldCupData: WorldCupData = {
         ['25(p)'],
         [],
         [],
-        stadiums.Italy.sanSiro,
+        stadiumsData.Italy.sanSiro,
         '73 347'
       ),
       new Match(
@@ -9033,7 +9033,7 @@ export const worldCupData: WorldCupData = {
         ['25', '83(p), 105(p)'],
         ['E.Kundé', 'E.Ekéké'],
         ['61(p)', '65'],
-        stadiums.Italy.paolo,
+        stadiumsData.Italy.paolo,
         '55 205'
       ),
       new Match(
@@ -9049,7 +9049,7 @@ export const worldCupData: WorldCupData = {
         ['67'],
         ['S.Schillaci'],
         ['17'],
-        stadiums.Italy.paolo,
+        stadiumsData.Italy.paolo,
         '59 978'
       ),
       new Match(
@@ -9065,7 +9065,7 @@ export const worldCupData: WorldCupData = {
         ['60'],
         ['G.Lineker'],
         ['80'],
-        stadiums.Italy.alpi,
+        stadiumsData.Italy.alpi,
         '62 628'
       ),
       new Match(
@@ -9077,7 +9077,7 @@ export const worldCupData: WorldCupData = {
         ['71', '86(p)'],
         ['D.Platt'],
         ['81'],
-        stadiums.Italy.nicola,
+        stadiumsData.Italy.nicola,
         '51 426'
       ),
       new Match(
@@ -9089,7 +9089,7 @@ export const worldCupData: WorldCupData = {
         ['85(p)'],
         [],
         [],
-        stadiums.Italy.olimpico,
+        stadiumsData.Italy.olimpico,
         '73 603'
       ),
     ],
@@ -9112,7 +9112,7 @@ export const worldCupData: WorldCupData = {
         ['45'],
         ['G.Bregy'],
         ['39'],
-        stadiums.USA.pontiac,
+        stadiumsData.USA.pontiac,
         '73 425'
       ),
       new Match(
@@ -9124,7 +9124,7 @@ export const worldCupData: WorldCupData = {
         ['16, 89', '34'],
         ['A.Valencia'],
         ['43'],
-        stadiums.USA.rose,
+        stadiumsData.USA.rose,
         '91 856'
       ),
       new Match(
@@ -9136,7 +9136,7 @@ export const worldCupData: WorldCupData = {
         ['16', '52', '66, 72'],
         ['G.Hagi'],
         ['35'],
-        stadiums.USA.pontiac,
+        stadiumsData.USA.pontiac,
         '61 428'
       ),
       new Match(
@@ -9148,7 +9148,7 @@ export const worldCupData: WorldCupData = {
         ['35(o.g.)', '52'],
         ['A.Valencia'],
         ['90'],
-        stadiums.USA.rose,
+        stadiumsData.USA.rose,
         '93 869'
       ),
       new Match(
@@ -9160,7 +9160,7 @@ export const worldCupData: WorldCupData = {
         ['44', '90+1'],
         [],
         [],
-        stadiums.USA.stanford,
+        stadiumsData.USA.stanford,
         '83 401'
       ),
       new Match(
@@ -9172,7 +9172,7 @@ export const worldCupData: WorldCupData = {
         ['18'],
         [],
         [],
-        stadiums.USA.rose,
+        stadiumsData.USA.rose,
         '93 869'
       ),
       new Match(
@@ -9184,7 +9184,7 @@ export const worldCupData: WorldCupData = {
         ['31', '47'],
         ['R.Ljung', 'M.Dahlin'],
         ['8', '75'],
-        stadiums.USA.rose,
+        stadiumsData.USA.rose,
         '93 194'
       ),
       new Match(
@@ -9196,7 +9196,7 @@ export const worldCupData: WorldCupData = {
         ['26', '52(p)'],
         [],
         [],
-        stadiums.USA.stanford,
+        stadiumsData.USA.stanford,
         '81 061'
       ),
       new Match(
@@ -9208,7 +9208,7 @@ export const worldCupData: WorldCupData = {
         ['39', '66', '73'],
         [],
         [],
-        stadiums.USA.stanford,
+        stadiumsData.USA.stanford,
         '83 401'
       ),
       new Match(
@@ -9220,7 +9220,7 @@ export const worldCupData: WorldCupData = {
         ['37(p)', '59, 81'],
         ['O.Salenko'],
         ['4(p)'],
-        stadiums.USA.pontiac,
+        stadiumsData.USA.pontiac,
         '71 528'
       ),
       new Match(
@@ -9232,7 +9232,7 @@ export const worldCupData: WorldCupData = {
         ['15, 41, 44(p), 72, 75', '81'],
         ['R.Milla'],
         ['46'],
-        stadiums.USA.stanford,
+        stadiumsData.USA.stanford,
         '74 914'
       ),
       new Match(
@@ -9244,7 +9244,7 @@ export const worldCupData: WorldCupData = {
         ['47'],
         ['K.Andersson'],
         ['23'],
-        stadiums.USA.pontiac,
+        stadiumsData.USA.pontiac,
         '77 217'
       ),
       new Match(
@@ -9256,7 +9256,7 @@ export const worldCupData: WorldCupData = {
         ['61'],
         [],
         [],
-        stadiums.USA.soldier,
+        stadiumsData.USA.soldier,
         '63 117'
       ),
       new Match(
@@ -9268,7 +9268,7 @@ export const worldCupData: WorldCupData = {
         ['51', '56'],
         ['Hong Myung-bo', 'Seo Jung-won'],
         ['85', '90'],
-        stadiums.USA.cotton,
+        stadiumsData.USA.cotton,
         '56 247'
       ),
       new Match(
@@ -9280,7 +9280,7 @@ export const worldCupData: WorldCupData = {
         ['48'],
         ['A.Goikoetxea'],
         ['14'],
-        stadiums.USA.soldier,
+        stadiumsData.USA.soldier,
         '63 113'
       ),
       new Match(
@@ -9292,7 +9292,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.USA.foxboro,
+        stadiumsData.USA.foxboro,
         '54 453'
       ),
       new Match(
@@ -9304,7 +9304,7 @@ export const worldCupData: WorldCupData = {
         ['19(p)', '66, 70'],
         ['E.Sanchez'],
         ['67'],
-        stadiums.USA.soldier,
+        stadiumsData.USA.soldier,
         '63 089'
       ),
       new Match(
@@ -9316,7 +9316,7 @@ export const worldCupData: WorldCupData = {
         ['12, 37', '20'],
         ['Hwang Sun-hong', 'Hong Myung-bo'],
         ['52', '63'],
-        stadiums.USA.cotton,
+        stadiumsData.USA.cotton,
         '63 998'
       ),
       new Match(
@@ -9328,7 +9328,7 @@ export const worldCupData: WorldCupData = {
         ['2, 44, 90(p)', '60'],
         [],
         [],
-        stadiums.USA.foxboro,
+        stadiumsData.USA.foxboro,
         '54 456'
       ),
       new Match(
@@ -9340,7 +9340,7 @@ export const worldCupData: WorldCupData = {
         ['21', '43', '55'],
         [],
         [],
-        stadiums.USA.cotton,
+        stadiumsData.USA.cotton,
         '44 132'
       ),
       new Match(
@@ -9352,7 +9352,7 @@ export const worldCupData: WorldCupData = {
         ['21, 28'],
         ['S.Siasia'],
         ['8'],
-        stadiums.USA.foxboro,
+        stadiumsData.USA.foxboro,
         '54 453'
       ),
       new Match(
@@ -9364,7 +9364,7 @@ export const worldCupData: WorldCupData = {
         ['5(p), 55', '66', '90'],
         [],
         [],
-        stadiums.USA.soldier,
+        stadiumsData.USA.soldier,
         '63 160'
       ),
       new Match(
@@ -9376,7 +9376,7 @@ export const worldCupData: WorldCupData = {
         ['61', '90+3'],
         [],
         [],
-        stadiums.USA.cotton,
+        stadiumsData.USA.cotton,
         '63 998'
       ),
       new Match(
@@ -9388,7 +9388,7 @@ export const worldCupData: WorldCupData = {
         ['45+2', '90+5'],
         [],
         [],
-        stadiums.USA.foxboro,
+        stadiumsData.USA.foxboro,
         '53 001'
       ),
       new Match(
@@ -9400,7 +9400,7 @@ export const worldCupData: WorldCupData = {
         ['12'],
         [],
         [],
-        stadiums.USA.giants,
+        stadiumsData.USA.giants,
         '75 338'
       ),
       new Match(
@@ -9412,7 +9412,7 @@ export const worldCupData: WorldCupData = {
         ['85'],
         [],
         [],
-        stadiums.USA.kennedy,
+        stadiumsData.USA.kennedy,
         '52 395'
       ),
       new Match(
@@ -9424,7 +9424,7 @@ export const worldCupData: WorldCupData = {
         ['69'],
         [],
         [],
-        stadiums.USA.giants,
+        stadiumsData.USA.giants,
         '74 624'
       ),
       new Match(
@@ -9436,7 +9436,7 @@ export const worldCupData: WorldCupData = {
         ['42, 65'],
         ['J.Aldridge'],
         ['84'],
-        stadiums.USA.citrus,
+        stadiumsData.USA.citrus,
         '60 790'
       ),
       new Match(
@@ -9448,7 +9448,7 @@ export const worldCupData: WorldCupData = {
         ['48'],
         ['M.Bernal'],
         ['57'],
-        stadiums.USA.kennedy,
+        stadiumsData.USA.kennedy,
         '52 535'
       ),
       new Match(
@@ -9460,7 +9460,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.USA.giants,
+        stadiumsData.USA.giants,
         '72 404'
       ),
       new Match(
@@ -9472,7 +9472,7 @@ export const worldCupData: WorldCupData = {
         ['11'],
         [],
         [],
-        stadiums.USA.citrus,
+        stadiumsData.USA.citrus,
         '61 219'
       ),
       new Match(
@@ -9484,7 +9484,7 @@ export const worldCupData: WorldCupData = {
         ['50', '86'],
         ['F.Amin'],
         ['18'],
-        stadiums.USA.kennedy,
+        stadiumsData.USA.kennedy,
         '50 535'
       ),
       new Match(
@@ -9496,7 +9496,7 @@ export const worldCupData: WorldCupData = {
         ['65'],
         [],
         [],
-        stadiums.USA.citrus,
+        stadiumsData.USA.citrus,
         '62 387'
       ),
       new Match(
@@ -9508,7 +9508,7 @@ export const worldCupData: WorldCupData = {
         ['7(p)', '45'],
         ['M.Chaouch'],
         ['26'],
-        stadiums.USA.giants,
+        stadiumsData.USA.giants,
         '76 322'
       ),
       new Match(
@@ -9520,7 +9520,7 @@ export const worldCupData: WorldCupData = {
         ['5'],
         [],
         [],
-        stadiums.USA.kennedy,
+        stadiumsData.USA.kennedy,
         '52 959'
       ),
       new Match(
@@ -9532,7 +9532,7 @@ export const worldCupData: WorldCupData = {
         ['43', '77'],
         ['H.Nader'],
         ['47'],
-        stadiums.USA.citrus,
+        stadiumsData.USA.citrus,
         '60 578'
       ),
       new Match(
@@ -9544,7 +9544,7 @@ export const worldCupData: WorldCupData = {
         ['6, 38', '11'],
         ['G.Grün', 'P.Albert'],
         ['8', '90'],
-        stadiums.USA.soldier,
+        stadiumsData.USA.soldier,
         '60 246'
       ),
       new Match(
@@ -9556,7 +9556,7 @@ export const worldCupData: WorldCupData = {
         ['15', '74', '86(p)'],
         [],
         [],
-        stadiums.USA.kennedy,
+        stadiumsData.USA.kennedy,
         '53 121'
       ),
       new Match(
@@ -9568,7 +9568,7 @@ export const worldCupData: WorldCupData = {
         ['6', '51, 88'],
         ['Fahad Al Ghesheyan'],
         ['85'],
-        stadiums.USA.cotton,
+        stadiumsData.USA.cotton,
         '60 277'
       ),
       new Match(
@@ -9580,7 +9580,7 @@ export const worldCupData: WorldCupData = {
         ['11, 18', '58'],
         ['G.Batistuta', 'A.Balbo'],
         ['16(p)', '75'],
-        stadiums.USA.rose,
+        stadiumsData.USA.rose,
         '90 469'
       ),
       new Match(
@@ -9592,7 +9592,7 @@ export const worldCupData: WorldCupData = {
         ['11', '41'],
         [],
         [],
-        stadiums.USA.citrus,
+        stadiumsData.USA.citrus,
         '61 355'
       ),
       new Match(
@@ -9604,7 +9604,7 @@ export const worldCupData: WorldCupData = {
         ['72'],
         [],
         [],
-        stadiums.USA.stanford,
+        stadiumsData.USA.stanford,
         '84 147'
       ),
       new Match(
@@ -9616,7 +9616,7 @@ export const worldCupData: WorldCupData = {
         ['88', '102'],
         ['E.Amunike'],
         ['25'],
-        stadiums.USA.foxboro,
+        stadiumsData.USA.foxboro,
         '54 367'
       ),
       new Match(
@@ -9632,7 +9632,7 @@ export const worldCupData: WorldCupData = {
         ['6'],
         ['García Aspe'],
         ['18(p)'],
-        stadiums.USA.giants,
+        stadiumsData.USA.giants,
         '71 030'
       ),
       new Match(
@@ -9644,7 +9644,7 @@ export const worldCupData: WorldCupData = {
         ['25', '88'],
         ['J.L.Caminero'],
         ['58'],
-        stadiums.USA.foxboro,
+        stadiumsData.USA.foxboro,
         '53 400'
       ),
       new Match(
@@ -9656,7 +9656,7 @@ export const worldCupData: WorldCupData = {
         ['53', '63', '81'],
         ['D.Bergkamp', 'A.Winter'],
         ['64', '76'],
-        stadiums.USA.cotton,
+        stadiumsData.USA.cotton,
         '63 500'
       ),
       new Match(
@@ -9668,7 +9668,7 @@ export const worldCupData: WorldCupData = {
         ['75', '78'],
         ['L.Matthäus'],
         ['47(p)'],
-        stadiums.USA.giants,
+        stadiumsData.USA.giants,
         '72 416'
       ),
       new Match(
@@ -9684,7 +9684,7 @@ export const worldCupData: WorldCupData = {
         ['78', '115'],
         ['F.Răducioiu'],
         ['88, 101'],
-        stadiums.USA.stanford,
+        stadiumsData.USA.stanford,
         '83 500'
       ),
       new Match(
@@ -9696,7 +9696,7 @@ export const worldCupData: WorldCupData = {
         ['21, 25'],
         ['H.Stoichkov'],
         ['44(p)'],
-        stadiums.USA.giants,
+        stadiumsData.USA.giants,
         '74 110'
       ),
       new Match(
@@ -9708,7 +9708,7 @@ export const worldCupData: WorldCupData = {
         ['80'],
         [],
         [],
-        stadiums.USA.rose,
+        stadiumsData.USA.rose,
         '91 856'
       ),
       new Match(
@@ -9720,7 +9720,7 @@ export const worldCupData: WorldCupData = {
         ['8', '30', '37', '39'],
         [],
         [],
-        stadiums.USA.rose,
+        stadiumsData.USA.rose,
         '91 500'
       ),
       new Match(
@@ -9736,7 +9736,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.USA.rose,
+        stadiumsData.USA.rose,
         '94 194'
       ),
     ],
@@ -9759,7 +9759,7 @@ export const worldCupData: WorldCupData = {
         ['5', '74(o.g.)'],
         ['J.Collins'],
         ['38(p)'],
-        stadiums.France.france,
+        stadiumsData.France.france,
         '80 000'
       ),
       new Match(
@@ -9771,7 +9771,7 @@ export const worldCupData: WorldCupData = {
         ['37', '60'],
         ['Y.Chippo', 'D.Eggen'],
         ['45+1(o.g.)', '61'],
-        stadiums.France.mosson,
+        stadiumsData.France.mosson,
         '29 800'
       ),
       new Match(
@@ -9783,7 +9783,7 @@ export const worldCupData: WorldCupData = {
         ['66'],
         ['H.Flo'],
         ['46'],
-        stadiums.France.lescure,
+        stadiumsData.France.lescure,
         '31 800'
       ),
       new Match(
@@ -9795,7 +9795,7 @@ export const worldCupData: WorldCupData = {
         ['9', '45+2', '50'],
         [],
         [],
-        stadiums.France.beaujoire,
+        stadiumsData.France.beaujoire,
         '35 500'
       ),
       new Match(
@@ -9807,7 +9807,7 @@ export const worldCupData: WorldCupData = {
         ['23, 85', '46'],
         [],
         [],
-        stadiums.France.geoffroyGuichard,
+        stadiumsData.France.geoffroyGuichard,
         '30 600'
       ),
       new Match(
@@ -9819,7 +9819,7 @@ export const worldCupData: WorldCupData = {
         ['83', '89(p)'],
         ['Bebeto'],
         ['78'],
-        stadiums.France.velodrome,
+        stadiumsData.France.velodrome,
         '57 000'
       ),
       new Match(
@@ -9831,7 +9831,7 @@ export const worldCupData: WorldCupData = {
         ['10', '84(p)'],
         ['Marcelo Salas'],
         ['45+3, 50'],
-        stadiums.France.lescure,
+        stadiumsData.France.lescure,
         '31 800'
       ),
       new Match(
@@ -9843,7 +9843,7 @@ export const worldCupData: WorldCupData = {
         ['77'],
         ['T.Polster'],
         ['90+1'],
-        stadiums.France.toulouse,
+        stadiumsData.France.toulouse,
         '33 500'
       ),
       new Match(
@@ -9855,7 +9855,7 @@ export const worldCupData: WorldCupData = {
         ['70'],
         ['I.Vastić'],
         ['90+2'],
-        stadiums.France.geoffroyGuichard,
+        stadiumsData.France.geoffroyGuichard,
         '30 600'
       ),
       new Match(
@@ -9867,7 +9867,7 @@ export const worldCupData: WorldCupData = {
         ['7', '75, 89'],
         [],
         [],
-        stadiums.France.mosson,
+        stadiumsData.France.mosson,
         '29 800'
       ),
       new Match(
@@ -9879,7 +9879,7 @@ export const worldCupData: WorldCupData = {
         ['48', '90'],
         ['A.Herzog'],
         ['90+2'],
-        stadiums.France.france,
+        stadiumsData.France.france,
         '80 000'
       ),
       new Match(
@@ -9891,7 +9891,7 @@ export const worldCupData: WorldCupData = {
         ['20'],
         ['H.P.Mboma'],
         ['56'],
-        stadiums.France.beaujoire,
+        stadiumsData.France.beaujoire,
         '35 500'
       ),
       new Match(
@@ -9903,7 +9903,7 @@ export const worldCupData: WorldCupData = {
         ['69'],
         [],
         [],
-        stadiums.France.felixBollaert,
+        stadiumsData.France.felixBollaert,
         '38 100'
       ),
       new Match(
@@ -9915,7 +9915,7 @@ export const worldCupData: WorldCupData = {
         ['36', '77(o.g.)', '90+2'],
         [],
         [],
-        stadiums.France.velodrome,
+        stadiumsData.France.velodrome,
         '55 000'
       ),
       new Match(
@@ -9927,7 +9927,7 @@ export const worldCupData: WorldCupData = {
         ['51'],
         ['A.Nielsen'],
         ['12'],
-        stadiums.France.toulouse,
+        stadiumsData.France.toulouse,
         '33 500'
       ),
       new Match(
@@ -9939,7 +9939,7 @@ export const worldCupData: WorldCupData = {
         ['37, 78', '68', '85'],
         [],
         [],
-        stadiums.France.france,
+        stadiumsData.France.france,
         '80 000'
       ),
       new Match(
@@ -9951,7 +9951,7 @@ export const worldCupData: WorldCupData = {
         ['12(p)', '56'],
         ['M.Laudrup'],
         ['42(p)'],
-        stadiums.France.gerland,
+        stadiumsData.France.gerland,
         '39 100'
       ),
       new Match(
@@ -9963,7 +9963,7 @@ export const worldCupData: WorldCupData = {
         ['18, 90+3(p)'],
         ['Sami Al Jaber', 'Youssef Al Tunayan'],
         ['45+2(p)', '74(p)'],
-        stadiums.France.lescure,
+        stadiumsData.France.lescure,
         '31 800'
       ),
       new Match(
@@ -9975,7 +9975,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.France.mosson,
+        stadiumsData.France.mosson,
         '29 800'
       ),
       new Match(
@@ -9987,7 +9987,7 @@ export const worldCupData: WorldCupData = {
         ['21', '47'],
         ['M.Adepoju', 'A.Zubizarreta', 'S.Oliseh'],
         ['24', '73(o.g.)', '78'],
-        stadiums.France.beaujoire,
+        stadiumsData.France.beaujoire,
         '35 500'
       ),
       new Match(
@@ -9999,7 +9999,7 @@ export const worldCupData: WorldCupData = {
         ['28'],
         [],
         [],
-        stadiums.France.parcDesPrinces,
+        stadiumsData.France.parcDesPrinces,
         '45 500'
       ),
       new Match(
@@ -10011,7 +10011,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.France.geoffroyGuichard,
+        stadiumsData.France.geoffroyGuichard,
         '30 600'
       ),
       new Match(
@@ -10023,7 +10023,7 @@ export const worldCupData: WorldCupData = {
         ['1', '58', '86'],
         ['W.Oruma'],
         ['11'],
-        stadiums.France.toulouse,
+        stadiumsData.France.toulouse,
         '33 500'
       ),
       new Match(
@@ -10035,7 +10035,7 @@ export const worldCupData: WorldCupData = {
         ['6(p)', '18', '55, 81', '88(o.g.)', '90+4'],
         ['E.Kostadinov'],
         ['58'],
-        stadiums.France.felixBollaert,
+        stadiumsData.France.felixBollaert,
         '38 100'
       ),
       new Match(
@@ -10047,7 +10047,7 @@ export const worldCupData: WorldCupData = {
         ['50', '75, 84'],
         ['Ha Seok-ju'],
         ['27'],
-        stadiums.France.gerland,
+        stadiumsData.France.gerland,
         '39 100'
       ),
       new Match(
@@ -10059,7 +10059,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.France.france,
+        stadiumsData.France.france,
         '77 000'
       ),
       new Match(
@@ -10071,7 +10071,7 @@ export const worldCupData: WorldCupData = {
         ['42, 47'],
         ['García Aspe', 'C.Blanco'],
         ['55(p)', '62'],
-        stadiums.France.lescure,
+        stadiumsData.France.lescure,
         '31 800'
       ),
       new Match(
@@ -10083,7 +10083,7 @@ export const worldCupData: WorldCupData = {
         ['37', '41', '71', '80', '83'],
         [],
         [],
-        stadiums.France.velodrome,
+        stadiumsData.France.velodrome,
         '55 000'
       ),
       new Match(
@@ -10095,7 +10095,7 @@ export const worldCupData: WorldCupData = {
         ['4', '18'],
         ['R.Pelaez', 'Luis Hernandez'],
         ['75', '90+4'],
-        stadiums.France.geoffroyGuichard,
+        stadiumsData.France.geoffroyGuichard,
         '30 600'
       ),
       new Match(
@@ -10107,7 +10107,7 @@ export const worldCupData: WorldCupData = {
         ['7'],
         ['Yoo Sang-chul'],
         ['72'],
-        stadiums.France.parcDesPrinces,
+        stadiumsData.France.parcDesPrinces,
         '45 500'
       ),
       new Match(
@@ -10119,7 +10119,7 @@ export const worldCupData: WorldCupData = {
         ['73'],
         [],
         [],
-        stadiums.France.geoffroyGuichard,
+        stadiumsData.France.geoffroyGuichard,
         '30 600'
       ),
       new Match(
@@ -10131,7 +10131,7 @@ export const worldCupData: WorldCupData = {
         ['9', '65'],
         [],
         [],
-        stadiums.France.parcDesPrinces,
+        stadiumsData.France.parcDesPrinces,
         '45 500'
       ),
       new Match(
@@ -10143,7 +10143,7 @@ export const worldCupData: WorldCupData = {
         ['72(o.g.)', '78'],
         ['P.Mijatović', 'D.Stojković'],
         ['13', '52'],
-        stadiums.France.felixBollaert,
+        stadiumsData.France.felixBollaert,
         '38 100'
       ),
       new Match(
@@ -10155,7 +10155,7 @@ export const worldCupData: WorldCupData = {
         ['40', '84'],
         ['B.McBride'],
         ['87'],
-        stadiums.France.gerland,
+        stadiumsData.France.gerland,
         '39 100'
       ),
       new Match(
@@ -10167,7 +10167,7 @@ export const worldCupData: WorldCupData = {
         ['50', '57'],
         [],
         [],
-        stadiums.France.mosson,
+        stadiumsData.France.mosson,
         '29 800'
       ),
       new Match(
@@ -10179,7 +10179,7 @@ export const worldCupData: WorldCupData = {
         ['4'],
         [],
         [],
-        stadiums.France.beaujoire,
+        stadiumsData.France.beaujoire,
         '35 500'
       ),
       new Match(
@@ -10191,7 +10191,7 @@ export const worldCupData: WorldCupData = {
         ['42', '89'],
         [],
         [],
-        stadiums.France.velodrome,
+        stadiumsData.France.velodrome,
         '54 587'
       ),
       new Match(
@@ -10203,7 +10203,7 @@ export const worldCupData: WorldCupData = {
         ['45+1'],
         [],
         [],
-        stadiums.France.gerland,
+        stadiumsData.France.gerland,
         '39 100'
       ),
       new Match(
@@ -10215,7 +10215,7 @@ export const worldCupData: WorldCupData = {
         ['83'],
         [],
         [],
-        stadiums.France.mosson,
+        stadiumsData.France.mosson,
         '29 800'
       ),
       new Match(
@@ -10227,7 +10227,7 @@ export const worldCupData: WorldCupData = {
         ['46', '90'],
         ['M.Owen'],
         ['81'],
-        stadiums.France.toulouse,
+        stadiumsData.France.toulouse,
         '33 500'
       ),
       new Match(
@@ -10239,7 +10239,7 @@ export const worldCupData: WorldCupData = {
         ['20', '29'],
         [],
         [],
-        stadiums.France.felixBollaert,
+        stadiumsData.France.felixBollaert,
         '38 100'
       ),
       new Match(
@@ -10251,7 +10251,7 @@ export const worldCupData: WorldCupData = {
         ['20', '29'],
         ['S.Souayah'],
         ['12(p)'],
-        stadiums.France.france,
+        stadiumsData.France.france,
         '77 000'
       ),
       new Match(
@@ -10263,7 +10263,7 @@ export const worldCupData: WorldCupData = {
         ['28'],
         [],
         [],
-        stadiums.France.toulouse,
+        stadiumsData.France.toulouse,
         '33 500'
       ),
       new Match(
@@ -10275,7 +10275,7 @@ export const worldCupData: WorldCupData = {
         ['27', '53', '69'],
         ['R.Earle'],
         ['45'],
-        stadiums.France.felixBollaert,
+        stadiumsData.France.felixBollaert,
         '38 100'
       ),
       new Match(
@@ -10287,7 +10287,7 @@ export const worldCupData: WorldCupData = {
         ['77'],
         [],
         [],
-        stadiums.France.beaujoire,
+        stadiumsData.France.beaujoire,
         '35 500'
       ),
       new Match(
@@ -10299,7 +10299,7 @@ export const worldCupData: WorldCupData = {
         ['32, 55', '73, 78, 83(p)'],
         [],
         [],
-        stadiums.France.parcDesPrinces,
+        stadiumsData.France.parcDesPrinces,
         '45 500'
       ),
       new Match(
@@ -10311,7 +10311,7 @@ export const worldCupData: WorldCupData = {
         ['36'],
         [],
         [],
-        stadiums.France.lescure,
+        stadiumsData.France.lescure,
         '31 800'
       ),
       new Match(
@@ -10323,7 +10323,7 @@ export const worldCupData: WorldCupData = {
         ['39, 54'],
         ['M.Nakayama'],
         ['74'],
-        stadiums.France.gerland,
+        stadiumsData.France.gerland,
         '39 100'
       ),
       new Match(
@@ -10335,7 +10335,7 @@ export const worldCupData: WorldCupData = {
         ['18'],
         [],
         [],
-        stadiums.France.velodrome,
+        stadiumsData.France.velodrome,
         '55 000'
       ),
       new Match(
@@ -10347,7 +10347,7 @@ export const worldCupData: WorldCupData = {
         ['11, 26', '45+3(p), 72'],
         ['Marcelo Salas'],
         ['70'],
-        stadiums.France.parcDesPrinces,
+        stadiumsData.France.parcDesPrinces,
         '45 500'
       ),
       new Match(
@@ -10359,7 +10359,7 @@ export const worldCupData: WorldCupData = {
         ['114'],
         [],
         [],
-        stadiums.France.felixBollaert,
+        stadiumsData.France.felixBollaert,
         '31 800'
       ),
       new Match(
@@ -10371,7 +10371,7 @@ export const worldCupData: WorldCupData = {
         ['3', '12', '58', '76'],
         ['T.Babangida'],
         ['77'],
-        stadiums.France.france,
+        stadiumsData.France.france,
         '77 000'
       ),
       new Match(
@@ -10383,7 +10383,7 @@ export const worldCupData: WorldCupData = {
         ['74', '86'],
         ['Luis Hernandez'],
         ['47'],
-        stadiums.France.mosson,
+        stadiumsData.France.mosson,
         '29 800'
       ),
       new Match(
@@ -10395,7 +10395,7 @@ export const worldCupData: WorldCupData = {
         ['38', '90+2'],
         ['S.Komljenović'],
         ['48'],
-        stadiums.France.toulouse,
+        stadiumsData.France.toulouse,
         '33 500'
       ),
       new Match(
@@ -10407,7 +10407,7 @@ export const worldCupData: WorldCupData = {
         ['45+2(p)'],
         [],
         [],
-        stadiums.France.lescure,
+        stadiumsData.France.lescure,
         '31 800'
       ),
       new Match(
@@ -10423,7 +10423,7 @@ export const worldCupData: WorldCupData = {
         ['5(p)', '45+1'],
         ['A.Shearer', 'M.Owen'],
         ['9(p)', '16'],
-        stadiums.France.geoffroyGuichard,
+        stadiumsData.France.geoffroyGuichard,
         '30 600'
       ),
       new Match(
@@ -10439,7 +10439,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.France.france,
+        stadiumsData.France.france,
         '77 000'
       ),
       new Match(
@@ -10451,7 +10451,7 @@ export const worldCupData: WorldCupData = {
         ['10', '25, 59'],
         ['M.Jørgensen', 'B.Laudrup'],
         ['2', '50'],
-        stadiums.France.beaujoire,
+        stadiumsData.France.beaujoire,
         '35 500'
       ),
       new Match(
@@ -10463,7 +10463,7 @@ export const worldCupData: WorldCupData = {
         ['12', '90'],
         ['Claudio López'],
         ['17'],
-        stadiums.France.velodrome,
+        stadiumsData.France.velodrome,
         '55 000'
       ),
       new Match(
@@ -10475,7 +10475,7 @@ export const worldCupData: WorldCupData = {
         ['45+3', '80', '85'],
         [],
         [],
-        stadiums.France.gerland,
+        stadiumsData.France.gerland,
         '39 100'
       ),
       new Match(
@@ -10491,7 +10491,7 @@ export const worldCupData: WorldCupData = {
         ['46'],
         ['P.Kluivert'],
         ['87'],
-        stadiums.France.velodrome,
+        stadiumsData.France.velodrome,
         '54 000'
       ),
       new Match(
@@ -10503,7 +10503,7 @@ export const worldCupData: WorldCupData = {
         ['47, 70'],
         ['D.Šuker'],
         ['46'],
-        stadiums.France.france,
+        stadiumsData.France.france,
         '76 000'
       ),
       new Match(
@@ -10515,7 +10515,7 @@ export const worldCupData: WorldCupData = {
         ['14', '36'],
         ['B.Zenden'],
         ['22'],
-        stadiums.France.parcDesPrinces,
+        stadiumsData.France.parcDesPrinces,
         '45 500'
       ),
       new Match(
@@ -10527,7 +10527,7 @@ export const worldCupData: WorldCupData = {
         ['27, 45+1', '90+3'],
         [],
         [],
-        stadiums.France.france,
+        stadiumsData.France.france,
         '75 000'
       ),
     ],
@@ -10550,7 +10550,7 @@ export const worldCupData: WorldCupData = {
         ['30'],
         [],
         [],
-        stadiums.SouthKorea.seoul,
+        stadiumsData.SouthKorea.seoul,
         '62 561'
       ),
       new Match(
@@ -10562,7 +10562,7 @@ export const worldCupData: WorldCupData = {
         ['45, 83'],
         ['D.Rodríguez'],
         ['47'],
-        stadiums.SouthKorea.ulsan,
+        stadiumsData.SouthKorea.ulsan,
         '30 157'
       ),
       new Match(
@@ -10574,7 +10574,7 @@ export const worldCupData: WorldCupData = {
         ['16(p)'],
         ['S.Diao'],
         ['52'],
-        stadiums.SouthKorea.daegu,
+        stadiumsData.SouthKorea.daegu,
         '43 500'
       ),
       new Match(
@@ -10586,7 +10586,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.SouthKorea.busan,
+        stadiumsData.SouthKorea.busan,
         '38 289'
       ),
       new Match(
@@ -10598,7 +10598,7 @@ export const worldCupData: WorldCupData = {
         ['22', '67'],
         [],
         [],
-        stadiums.SouthKorea.incheon,
+        stadiumsData.SouthKorea.incheon,
         '48 100'
       ),
       new Match(
@@ -10610,7 +10610,7 @@ export const worldCupData: WorldCupData = {
         ['20(p)', '26, 38'],
         ['R.Morales', 'D.Forlán', 'A.Recoba'],
         ['46', '69', '88(p)'],
-        stadiums.SouthKorea.suwon,
+        stadiumsData.SouthKorea.suwon,
         '33 681'
       ),
       new Match(
@@ -10622,7 +10622,7 @@ export const worldCupData: WorldCupData = {
         ['39', '55'],
         ['T.Mokoena', 'Q.Fortune'],
         ['63', '90+1(p)'],
-        stadiums.SouthKorea.busan,
+        stadiumsData.SouthKorea.busan,
         '25 186'
       ),
       new Match(
@@ -10634,7 +10634,7 @@ export const worldCupData: WorldCupData = {
         ['44', '74', '87(p)'],
         ['S.Cimirotič'],
         ['82'],
-        stadiums.SouthKorea.gwangju,
+        stadiumsData.SouthKorea.gwangju,
         '28 598'
       ),
       new Match(
@@ -10646,7 +10646,7 @@ export const worldCupData: WorldCupData = {
         ['53, 69', '83(p)'],
         ['C.Puyol'],
         ['10(o.g.)'],
-        stadiums.SouthKorea.jeonju,
+        stadiumsData.SouthKorea.jeonju,
         '24 000'
       ),
       new Match(
@@ -10658,7 +10658,7 @@ export const worldCupData: WorldCupData = {
         ['4'],
         [],
         [],
-        stadiums.SouthKorea.daegu,
+        stadiumsData.SouthKorea.daegu,
         '47 226'
       ),
       new Match(
@@ -10670,7 +10670,7 @@ export const worldCupData: WorldCupData = {
         ['4, 56', '45+1'],
         ['B.McCarthy', 'L.Radebe'],
         ['31', '53'],
-        stadiums.SouthKorea.daejeon,
+        stadiumsData.SouthKorea.daejeon,
         '31 024'
       ),
       new Match(
@@ -10682,7 +10682,7 @@ export const worldCupData: WorldCupData = {
         ['65, 84', '73'],
         ['M.Ačimovič'],
         ['45+1'],
-        stadiums.SouthKorea.jeju,
+        stadiumsData.SouthKorea.jeju,
         '30 176'
       ),
       new Match(
@@ -10694,7 +10694,7 @@ export const worldCupData: WorldCupData = {
         ['50', '87(p)'],
         ['Hasan Şaş'],
         ['45+2'],
-        stadiums.SouthKorea.ulsan,
+        stadiumsData.SouthKorea.ulsan,
         '33 842'
       ),
       new Match(
@@ -10706,7 +10706,7 @@ export const worldCupData: WorldCupData = {
         ['61', '65'],
         [],
         [],
-        stadiums.SouthKorea.gwangju,
+        stadiumsData.SouthKorea.gwangju,
         '27 217'
       ),
       new Match(
@@ -10718,7 +10718,7 @@ export const worldCupData: WorldCupData = {
         ['15', '32', '45(p)', '55'],
         [],
         [],
-        stadiums.SouthKorea.jeju,
+        stadiumsData.SouthKorea.jeju,
         '36 750'
       ),
       new Match(
@@ -10730,7 +10730,7 @@ export const worldCupData: WorldCupData = {
         ['86'],
         ['Emre Belözoglu'],
         ['56'],
-        stadiums.SouthKorea.incheon,
+        stadiumsData.SouthKorea.incheon,
         '42 299'
       ),
       new Match(
@@ -10742,7 +10742,7 @@ export const worldCupData: WorldCupData = {
         ['10, 13', '38', '62', '64'],
         ['P.Wanchope', 'R.Gómez'],
         ['39', '56'],
-        stadiums.SouthKorea.suwon,
+        stadiumsData.SouthKorea.suwon,
         '38 524'
       ),
       new Match(
@@ -10754,7 +10754,7 @@ export const worldCupData: WorldCupData = {
         ['6', '9', '62', '85'],
         [],
         [],
-        stadiums.SouthKorea.seoul,
+        stadiumsData.SouthKorea.seoul,
         '43 605'
       ),
       new Match(
@@ -10766,7 +10766,7 @@ export const worldCupData: WorldCupData = {
         ['26', '53'],
         [],
         [],
-        stadiums.SouthKorea.busan,
+        stadiumsData.SouthKorea.busan,
         '48 760'
       ),
       new Match(
@@ -10778,7 +10778,7 @@ export const worldCupData: WorldCupData = {
         ['4', '29(o.g.)', '36'],
         ['Beto', 'J.Agoos'],
         ['39', '71(o.g.)'],
-        stadiums.SouthKorea.suwon,
+        stadiumsData.SouthKorea.suwon,
         '37 306'
       ),
       new Match(
@@ -10790,7 +10790,7 @@ export const worldCupData: WorldCupData = {
         ['78'],
         ['C.Mathis'],
         ['24'],
-        stadiums.SouthKorea.daegu,
+        stadiumsData.SouthKorea.daegu,
         '60 778'
       ),
       new Match(
@@ -10802,7 +10802,7 @@ export const worldCupData: WorldCupData = {
         ['14, 65, 77', '88'],
         [],
         [],
-        stadiums.SouthKorea.jeonju,
+        stadiumsData.SouthKorea.jeonju,
         '31 000'
       ),
       new Match(
@@ -10814,7 +10814,7 @@ export const worldCupData: WorldCupData = {
         ['70'],
         [],
         [],
-        stadiums.SouthKorea.incheon,
+        stadiumsData.SouthKorea.incheon,
         '50 239'
       ),
       new Match(
@@ -10826,7 +10826,7 @@ export const worldCupData: WorldCupData = {
         ['3', '5', '66'],
         ['L.Donovan'],
         ['83'],
-        stadiums.SouthKorea.daejeon,
+        stadiumsData.SouthKorea.daejeon,
         '26 482'
       ),
       new Match(
@@ -10838,7 +10838,7 @@ export const worldCupData: WorldCupData = {
         ['52'],
         ["H.M'Boma"],
         ['39'],
-        stadiums.Japan.niigata,
+        stadiumsData.Japan.niigata,
         '33 679'
       ),
       new Match(
@@ -10850,7 +10850,7 @@ export const worldCupData: WorldCupData = {
         ['20, 25, 70', '40', '45+1', '73', '84', '90+1'],
         [],
         [],
-        stadiums.Japan.sapporo,
+        stadiumsData.Japan.sapporo,
         '32 218'
       ),
       new Match(
@@ -10862,7 +10862,7 @@ export const worldCupData: WorldCupData = {
         ['19'],
         ['Robbie Keane'],
         ['90+2'],
-        stadiums.Japan.kashima,
+        stadiumsData.Japan.kashima,
         '35 854'
       ),
       new Match(
@@ -10874,7 +10874,7 @@ export const worldCupData: WorldCupData = {
         ['66'],
         [],
         [],
-        stadiums.Japan.saitama,
+        stadiumsData.Japan.saitama,
         '52 328'
       ),
       new Match(
@@ -10886,7 +10886,7 @@ export const worldCupData: WorldCupData = {
         ['50', '79'],
         [],
         [],
-        stadiums.Japan.shizuoka,
+        stadiumsData.Japan.shizuoka,
         '47 085'
       ),
       new Match(
@@ -10898,7 +10898,7 @@ export const worldCupData: WorldCupData = {
         ['7', '61', '87'],
         [],
         [],
-        stadiums.Japan.yokohama,
+        stadiumsData.Japan.yokohama,
         '65 320'
       ),
       new Match(
@@ -10910,7 +10910,7 @@ export const worldCupData: WorldCupData = {
         ['63'],
         [],
         [],
-        stadiums.Japan.kashima,
+        stadiumsData.Japan.kashima,
         '34 050'
       ),
       new Match(
@@ -10922,7 +10922,7 @@ export const worldCupData: WorldCupData = {
         ['63'],
         ['N.Alexandersson'],
         ['59'],
-        stadiums.Japan.saitama,
+        stadiumsData.Japan.saitama,
         '52 721'
       ),
       new Match(
@@ -10934,7 +10934,7 @@ export const worldCupData: WorldCupData = {
         ['35, 63(p)'],
         ['J.Aghahowa'],
         ['27'],
-        stadiums.Japan.kobe,
+        stadiumsData.Japan.kobe,
         '36 194'
       ),
       new Match(
@@ -10946,7 +10946,7 @@ export const worldCupData: WorldCupData = {
         ['44(p)'],
         [],
         [],
-        stadiums.Japan.sapporo,
+        stadiumsData.Japan.sapporo,
         '35 927'
       ),
       new Match(
@@ -10958,7 +10958,7 @@ export const worldCupData: WorldCupData = {
         ['59'],
         ['H.Crespo'],
         ['88'],
-        stadiums.Japan.miyagi,
+        stadiumsData.Japan.miyagi,
         '45 777'
       ),
       new Match(
@@ -10970,7 +10970,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Japan.nagai,
+        stadiumsData.Japan.nagai,
         '44 864'
       ),
       new Match(
@@ -10982,7 +10982,7 @@ export const worldCupData: WorldCupData = {
         ['60(p)'],
         [],
         [],
-        stadiums.Japan.niigata,
+        stadiumsData.Japan.niigata,
         '32 239'
       ),
       new Match(
@@ -10994,7 +10994,7 @@ export const worldCupData: WorldCupData = {
         ['7, 27'],
         [],
         [],
-        stadiums.Japan.sapporo,
+        stadiumsData.Japan.sapporo,
         '31 081'
       ),
       new Match(
@@ -11006,7 +11006,7 @@ export const worldCupData: WorldCupData = {
         ['73', '76'],
         ['C.Vieri'],
         ['55'],
-        stadiums.Japan.kashima,
+        stadiumsData.Japan.kashima,
         '36 472'
       ),
       new Match(
@@ -11018,7 +11018,7 @@ export const worldCupData: WorldCupData = {
         ['28', '57'],
         ['A.Delgado'],
         ['5'],
-        stadiums.Japan.miyagi,
+        stadiumsData.Japan.miyagi,
         '45 610'
       ),
       new Match(
@@ -11030,7 +11030,7 @@ export const worldCupData: WorldCupData = {
         ['34'],
         ['A.Del Piero'],
         ['85'],
-        stadiums.Japan.oita,
+        stadiumsData.Japan.oita,
         '39 291'
       ),
       new Match(
@@ -11042,7 +11042,7 @@ export const worldCupData: WorldCupData = {
         ['48'],
         [],
         [],
-        stadiums.Japan.yokohama,
+        stadiumsData.Japan.yokohama,
         '65 862'
       ),
       new Match(
@@ -11054,7 +11054,7 @@ export const worldCupData: WorldCupData = {
         ['59', '67'],
         ['M.Wilmots', 'P.Van der Heyden'],
         ['57', '75'],
-        stadiums.Japan.saitama,
+        stadiumsData.Japan.saitama,
         '55 256'
       ),
       new Match(
@@ -11066,7 +11066,7 @@ export const worldCupData: WorldCupData = {
         ['59', '64(p)'],
         [],
         [],
-        stadiums.Japan.kobe,
+        stadiumsData.Japan.kobe,
         '30 957'
       ),
       new Match(
@@ -11078,7 +11078,7 @@ export const worldCupData: WorldCupData = {
         ['51'],
         [],
         [],
-        stadiums.Japan.yokohama,
+        stadiumsData.Japan.yokohama,
         '66 108'
       ),
       new Match(
@@ -11090,7 +11090,7 @@ export const worldCupData: WorldCupData = {
         ['17'],
         ['M.Wilmots'],
         ['13'],
-        stadiums.Japan.oita,
+        stadiumsData.Japan.oita,
         '39 700'
       ),
       new Match(
@@ -11102,7 +11102,7 @@ export const worldCupData: WorldCupData = {
         ['48', '75'],
         [],
         [],
-        stadiums.Japan.nagai,
+        stadiumsData.Japan.nagai,
         '45 213'
       ),
       new Match(
@@ -11114,7 +11114,7 @@ export const worldCupData: WorldCupData = {
         ['7', '78', '82'],
         ['V.Beschastnykh', 'D.Sychev'],
         ['52', '88'],
-        stadiums.Japan.shizuoka,
+        stadiumsData.Japan.shizuoka,
         '46 640'
       ),
       new Match(
@@ -11126,7 +11126,7 @@ export const worldCupData: WorldCupData = {
         ['88'],
         [],
         [],
-        stadiums.SouthKorea.jeju,
+        stadiumsData.SouthKorea.jeju,
         '25 176'
       ),
       new Match(
@@ -11138,7 +11138,7 @@ export const worldCupData: WorldCupData = {
         ['5', '22', '44'],
         [],
         [],
-        stadiums.Japan.niigata,
+        stadiumsData.Japan.niigata,
         '40 582'
       ),
       new Match(
@@ -11150,7 +11150,7 @@ export const worldCupData: WorldCupData = {
         ['37', '104'],
         ['H.Larsson'],
         ['11'],
-        stadiums.Japan.oita,
+        stadiumsData.Japan.oita,
         '39 747'
       ),
       new Match(
@@ -11166,7 +11166,7 @@ export const worldCupData: WorldCupData = {
         ['8'],
         ['Robbie Keane'],
         ['90(pen)'],
-        stadiums.SouthKorea.suwon,
+        stadiumsData.SouthKorea.suwon,
         '38 926'
       ),
       new Match(
@@ -11178,7 +11178,7 @@ export const worldCupData: WorldCupData = {
         ['8', '65'],
         [],
         [],
-        stadiums.SouthKorea.jeonju,
+        stadiumsData.SouthKorea.jeonju,
         '36 380'
       ),
       new Match(
@@ -11190,7 +11190,7 @@ export const worldCupData: WorldCupData = {
         ['67', '87'],
         [],
         [],
-        stadiums.Japan.kobe,
+        stadiumsData.Japan.kobe,
         '40 440'
       ),
       new Match(
@@ -11202,7 +11202,7 @@ export const worldCupData: WorldCupData = {
         ['12'],
         [],
         [],
-        stadiums.Japan.miyagi,
+        stadiumsData.Japan.miyagi,
         '45 666'
       ),
       new Match(
@@ -11214,7 +11214,7 @@ export const worldCupData: WorldCupData = {
         ['88', '117'],
         ['C.Vieri'],
         ['18'],
-        stadiums.SouthKorea.daejeon,
+        stadiumsData.SouthKorea.daejeon,
         '38 588'
       ),
       new Match(
@@ -11226,7 +11226,7 @@ export const worldCupData: WorldCupData = {
         ['45+2', '50'],
         ['M.Owen'],
         ['23'],
-        stadiums.Japan.shizuoka,
+        stadiumsData.Japan.shizuoka,
         '47 436'
       ),
       new Match(
@@ -11238,7 +11238,7 @@ export const worldCupData: WorldCupData = {
         ['39'],
         [],
         [],
-        stadiums.SouthKorea.ulsan,
+        stadiumsData.SouthKorea.ulsan,
         '37 337'
       ),
       new Match(
@@ -11254,7 +11254,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.SouthKorea.gwangju,
+        stadiumsData.SouthKorea.gwangju,
         '42 114'
       ),
       new Match(
@@ -11266,7 +11266,7 @@ export const worldCupData: WorldCupData = {
         ['94'],
         [],
         [],
-        stadiums.Japan.nagai,
+        stadiumsData.Japan.nagai,
         '44 233'
       ),
       new Match(
@@ -11278,7 +11278,7 @@ export const worldCupData: WorldCupData = {
         ['75'],
         [],
         [],
-        stadiums.SouthKorea.seoul,
+        stadiumsData.SouthKorea.seoul,
         '65 256'
       ),
       new Match(
@@ -11290,7 +11290,7 @@ export const worldCupData: WorldCupData = {
         ['49'],
         [],
         [],
-        stadiums.Japan.saitama,
+        stadiumsData.Japan.saitama,
         '61 058'
       ),
       new Match(
@@ -11302,7 +11302,7 @@ export const worldCupData: WorldCupData = {
         ['1', '13, 32'],
         ['Lee Eul-yong', 'Song Chong-gug'],
         ['9', '90+3'],
-        stadiums.SouthKorea.daegu,
+        stadiumsData.SouthKorea.daegu,
         '63 483'
       ),
       new Match(
@@ -11314,7 +11314,7 @@ export const worldCupData: WorldCupData = {
         ['67, 79'],
         [],
         [],
-        stadiums.Japan.yokohama,
+        stadiumsData.Japan.yokohama,
         '69 029'
       ),
     ],
@@ -11337,7 +11337,7 @@ export const worldCupData: WorldCupData = {
         ['6', '17, 61', '87'],
         ['Paulo Wanchope'],
         ['12, 73'],
-        stadiums.Germany.allianz,
+        stadiumsData.Germany.allianz,
         '66 000'
       ),
       new Match(
@@ -11349,7 +11349,7 @@ export const worldCupData: WorldCupData = {
         ['24', '80'],
         [],
         [],
-        stadiums.Germany.aufSchalke,
+        stadiumsData.Germany.aufSchalke,
         '52 000'
       ),
       new Match(
@@ -11361,7 +11361,7 @@ export const worldCupData: WorldCupData = {
         ['90+1'],
         [],
         [],
-        stadiums.Germany.westfalen,
+        stadiumsData.Germany.westfalen,
         '65 000'
       ),
       new Match(
@@ -11373,7 +11373,7 @@ export const worldCupData: WorldCupData = {
         ['8', '54', '90+2'],
         [],
         [],
-        stadiums.Germany.volkspark,
+        stadiumsData.Germany.volkspark,
         '50 000'
       ),
       new Match(
@@ -11385,7 +11385,7 @@ export const worldCupData: WorldCupData = {
         ['4, 44', '57'],
         [],
         [],
-        stadiums.Germany.olympiaB,
+        stadiumsData.Germany.olympiaB,
         '72 000'
       ),
       new Match(
@@ -11397,7 +11397,7 @@ export const worldCupData: WorldCupData = {
         ['33, 65'],
         ['R.Gomez'],
         ['25'],
-        stadiums.Germany.niedersachsen,
+        stadiumsData.Germany.niedersachsen,
         '43 000'
       ),
       new Match(
@@ -11409,7 +11409,7 @@ export const worldCupData: WorldCupData = {
         ['4(o.g.)'],
         [],
         [],
-        stadiums.Germany.wald,
+        stadiumsData.Germany.wald,
         '48 000'
       ),
       new Match(
@@ -11421,7 +11421,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Germany.westfalen,
+        stadiumsData.Germany.westfalen,
         '62 959'
       ),
       new Match(
@@ -11433,7 +11433,7 @@ export const worldCupData: WorldCupData = {
         ['83', '90+1'],
         [],
         [],
-        stadiums.Germany.easyCredit,
+        stadiumsData.Germany.easyCredit,
         '41 000'
       ),
       new Match(
@@ -11445,7 +11445,7 @@ export const worldCupData: WorldCupData = {
         ['89'],
         [],
         [],
-        stadiums.Germany.olympiaB,
+        stadiumsData.Germany.olympiaB,
         '72 000'
       ),
       new Match(
@@ -11457,7 +11457,7 @@ export const worldCupData: WorldCupData = {
         ['51', '90'],
         ['J.Cole', 'S.Gerrard'],
         ['34', '85'],
-        stadiums.Germany.rheinEnergie,
+        stadiumsData.Germany.rheinEnergie,
         '45 000'
       ),
       new Match(
@@ -11469,7 +11469,7 @@ export const worldCupData: WorldCupData = {
         ['25(o.g.)', '86'],
         [],
         [],
-        stadiums.Germany.fritzWalter,
+        stadiumsData.Germany.fritzWalter,
         '46 000'
       ),
       new Match(
@@ -11481,7 +11481,7 @@ export const worldCupData: WorldCupData = {
         ['24', '38'],
         ['D.Drogba'],
         ['82'],
-        stadiums.Germany.volkspark,
+        stadiumsData.Germany.volkspark,
         '49 480'
       ),
       new Match(
@@ -11493,7 +11493,7 @@ export const worldCupData: WorldCupData = {
         ['18'],
         [],
         [],
-        stadiums.Germany.zentral,
+        stadiumsData.Germany.zentral,
         '43 000'
       ),
       new Match(
@@ -11505,7 +11505,7 @@ export const worldCupData: WorldCupData = {
         ['6, 41', '31', '78', '84', '88'],
         [],
         [],
-        stadiums.Germany.aufSchalke,
+        stadiumsData.Germany.aufSchalke,
         '52 000'
       ),
       new Match(
@@ -11517,7 +11517,7 @@ export const worldCupData: WorldCupData = {
         ['24', '27'],
         ['B.Koné'],
         ['38'],
-        stadiums.Germany.daimler,
+        stadiumsData.Germany.daimler,
         '52 000'
       ),
       new Match(
@@ -11529,7 +11529,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Germany.wald,
+        stadiumsData.Germany.wald,
         '48 000'
       ),
       new Match(
@@ -11541,7 +11541,7 @@ export const worldCupData: WorldCupData = {
         ['37(p), 67', '86(p)'],
         ['N.Žigić', 'S.Ilić'],
         ['10', '20'],
-        stadiums.Germany.allianz,
+        stadiumsData.Germany.allianz,
         '66 000'
       ),
       new Match(
@@ -11553,7 +11553,7 @@ export const worldCupData: WorldCupData = {
         ['28, 76', '79'],
         ['Y.Golmohammadi'],
         ['36'],
-        stadiums.Germany.easyCredit,
+        stadiumsData.Germany.easyCredit,
         '41 000'
       ),
       new Match(
@@ -11565,7 +11565,7 @@ export const worldCupData: WorldCupData = {
         ['4'],
         [],
         [],
-        stadiums.Germany.rheinEnergie,
+        stadiumsData.Germany.rheinEnergie,
         '45 000'
       ),
       new Match(
@@ -11577,7 +11577,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Germany.niedersachsen,
+        stadiumsData.Germany.niedersachsen,
         '43 000'
       ),
       new Match(
@@ -11589,7 +11589,7 @@ export const worldCupData: WorldCupData = {
         ['63', '80(pen)'],
         [],
         [],
-        stadiums.Germany.wald,
+        stadiumsData.Germany.wald,
         '48 000'
       ),
       new Match(
@@ -11601,7 +11601,7 @@ export const worldCupData: WorldCupData = {
         ['6', '24(pen)'],
         ['J.Fonseca'],
         ['29'],
-        stadiums.Germany.aufSchalke,
+        stadiumsData.Germany.aufSchalke,
         '52 000'
       ),
       new Match(
@@ -11613,7 +11613,7 @@ export const worldCupData: WorldCupData = {
         ['75'],
         ['Flávio Amado'],
         ['60'],
-        stadiums.Germany.zentral,
+        stadiumsData.Germany.zentral,
         '38 000'
       ),
       new Match(
@@ -11625,7 +11625,7 @@ export const worldCupData: WorldCupData = {
         ['5', '36, 76'],
         [],
         [],
-        stadiums.Germany.aufSchalke,
+        stadiumsData.Germany.aufSchalke,
         '52 000'
       ),
       new Match(
@@ -11637,7 +11637,7 @@ export const worldCupData: WorldCupData = {
         ['40', '83'],
         [],
         [],
-        stadiums.Germany.niedersachsen,
+        stadiumsData.Germany.niedersachsen,
         '43 000'
       ),
       new Match(
@@ -11649,7 +11649,7 @@ export const worldCupData: WorldCupData = {
         ['2', '82'],
         [],
         [],
-        stadiums.Germany.rheinEnergie,
+        stadiumsData.Germany.rheinEnergie,
         '45 000'
       ),
       new Match(
@@ -11661,7 +11661,7 @@ export const worldCupData: WorldCupData = {
         ['22'],
         ['C.Zaccardo'],
         ['27(o.g.)'],
-        stadiums.Germany.fritzWalter,
+        stadiumsData.Germany.fritzWalter,
         '46 000'
       ),
       new Match(
@@ -11673,7 +11673,7 @@ export const worldCupData: WorldCupData = {
         ['26', '87'],
         [],
         [],
-        stadiums.Germany.volkspark,
+        stadiumsData.Germany.volkspark,
         '50 000'
       ),
       new Match(
@@ -11685,7 +11685,7 @@ export const worldCupData: WorldCupData = {
         ['22', '45+2(p)'],
         ['C.Dempsey'],
         ['43'],
-        stadiums.Germany.easyCredit,
+        stadiumsData.Germany.easyCredit,
         '41 000'
       ),
       new Match(
@@ -11697,7 +11697,7 @@ export const worldCupData: WorldCupData = {
         ['84, 89', '90+2'],
         ['S.Nakamura'],
         ['26'],
-        stadiums.Germany.fritzWalter,
+        stadiumsData.Germany.fritzWalter,
         '46 000'
       ),
       new Match(
@@ -11709,7 +11709,7 @@ export const worldCupData: WorldCupData = {
         ['44'],
         [],
         [],
-        stadiums.Germany.olympiaM,
+        stadiumsData.Germany.olympiaM,
         '72 000'
       ),
       new Match(
@@ -11721,7 +11721,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Germany.easyCredit,
+        stadiumsData.Germany.easyCredit,
         '41 000'
       ),
       new Match(
@@ -11733,7 +11733,7 @@ export const worldCupData: WorldCupData = {
         ['49', '90'],
         [],
         [],
-        stadiums.Germany.allianz,
+        stadiumsData.Germany.allianz,
         '66 000'
       ),
       new Match(
@@ -11745,7 +11745,7 @@ export const worldCupData: WorldCupData = {
         ['45+1, 81', '53', '59'],
         ['K.Tamada'],
         ['34'],
-        stadiums.Germany.westfalen,
+        stadiumsData.Germany.westfalen,
         '65 000'
       ),
       new Match(
@@ -11757,7 +11757,7 @@ export const worldCupData: WorldCupData = {
         ['2', '56'],
         ['C.Moore', 'H.Kewell'],
         ['38(p)', '79'],
-        stadiums.Germany.daimler,
+        stadiumsData.Germany.daimler,
         '52 000'
       ),
       new Match(
@@ -11769,7 +11769,7 @@ export const worldCupData: WorldCupData = {
         ['54', '72'],
         ['M.Kader Touré'],
         ['31'],
-        stadiums.Germany.wald,
+        stadiumsData.Germany.wald,
         '48 000'
       ),
       new Match(
@@ -11781,7 +11781,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Germany.daimler,
+        stadiumsData.Germany.daimler,
         '52 000'
       ),
       new Match(
@@ -11793,7 +11793,7 @@ export const worldCupData: WorldCupData = {
         ['9'],
         ['Park Ji-sung'],
         ['81'],
-        stadiums.Germany.zentral,
+        stadiumsData.Germany.zentral,
         '43 000'
       ),
       new Match(
@@ -11805,7 +11805,7 @@ export const worldCupData: WorldCupData = {
         ['16', '88'],
         [],
         [],
-        stadiums.Germany.westfalen,
+        stadiumsData.Germany.westfalen,
         '65 000'
       ),
       new Match(
@@ -11817,7 +11817,7 @@ export const worldCupData: WorldCupData = {
         ['55', '61'],
         [],
         [],
-        stadiums.Germany.rheinEnergie,
+        stadiumsData.Germany.rheinEnergie,
         '45 000'
       ),
       new Match(
@@ -11829,7 +11829,7 @@ export const worldCupData: WorldCupData = {
         ['23', '77'],
         [],
         [],
-        stadiums.Germany.niedersachsen,
+        stadiumsData.Germany.niedersachsen,
         '43 000'
       ),
       new Match(
@@ -11841,7 +11841,7 @@ export const worldCupData: WorldCupData = {
         ['13', '17, 48(p)', '81'],
         [],
         [],
-        stadiums.Germany.zentral,
+        stadiumsData.Germany.zentral,
         '43 000'
       ),
       new Match(
@@ -11853,7 +11853,7 @@ export const worldCupData: WorldCupData = {
         ['23', '90+2'],
         ['Yasser Al Qahtani', 'Sami Al Jaber'],
         ['57', '84'],
-        stadiums.Germany.allianz,
+        stadiumsData.Germany.allianz,
         '66 000'
       ),
       new Match(
@@ -11865,7 +11865,7 @@ export const worldCupData: WorldCupData = {
         ['4', '36', '46', '84'],
         [],
         [],
-        stadiums.Germany.volkspark,
+        stadiumsData.Germany.volkspark,
         '50 000'
       ),
       new Match(
@@ -11877,7 +11877,7 @@ export const worldCupData: WorldCupData = {
         ['71', '76, 90+1(p)'],
         ['J.Mnari'],
         ['8'],
-        stadiums.Germany.daimler,
+        stadiumsData.Germany.daimler,
         '52 000'
       ),
       new Match(
@@ -11889,7 +11889,7 @@ export const worldCupData: WorldCupData = {
         ['36'],
         [],
         [],
-        stadiums.Germany.fritzWalter,
+        stadiumsData.Germany.fritzWalter,
         '46 000'
       ),
       new Match(
@@ -11901,7 +11901,7 @@ export const worldCupData: WorldCupData = {
         ['70(p)'],
         [],
         [],
-        stadiums.Germany.olympiaB,
+        stadiumsData.Germany.olympiaB,
         '72 000'
       ),
       new Match(
@@ -11913,7 +11913,7 @@ export const worldCupData: WorldCupData = {
         ['4, 12'],
         [],
         [],
-        stadiums.Germany.allianz,
+        stadiumsData.Germany.allianz,
         '66 000'
       ),
       new Match(
@@ -11925,7 +11925,7 @@ export const worldCupData: WorldCupData = {
         ['10', '98'],
         ['R.Márquez'],
         ['6'],
-        stadiums.Germany.zentral,
+        stadiumsData.Germany.zentral,
         '43 000'
       ),
       new Match(
@@ -11937,7 +11937,7 @@ export const worldCupData: WorldCupData = {
         ['60'],
         [],
         [],
-        stadiums.Germany.daimler,
+        stadiumsData.Germany.daimler,
         '52 000'
       ),
       new Match(
@@ -11949,7 +11949,7 @@ export const worldCupData: WorldCupData = {
         ['23'],
         [],
         [],
-        stadiums.Germany.easyCredit,
+        stadiumsData.Germany.easyCredit,
         '41 000'
       ),
       new Match(
@@ -11961,7 +11961,7 @@ export const worldCupData: WorldCupData = {
         ['90+5(p)'],
         [],
         [],
-        stadiums.Germany.fritzWalter,
+        stadiumsData.Germany.fritzWalter,
         '46 000'
       ),
       new Match(
@@ -11977,7 +11977,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Germany.rheinEnergie,
+        stadiumsData.Germany.rheinEnergie,
         '45 000'
       ),
       new Match(
@@ -11989,7 +11989,7 @@ export const worldCupData: WorldCupData = {
         ['5', '45+1', '84'],
         [],
         [],
-        stadiums.Germany.westfalen,
+        stadiumsData.Germany.westfalen,
         '65 000'
       ),
       new Match(
@@ -12001,7 +12001,7 @@ export const worldCupData: WorldCupData = {
         ['41', '83', '90+2'],
         ['D.Villa'],
         ['28(p)'],
-        stadiums.Germany.niedersachsen,
+        stadiumsData.Germany.niedersachsen,
         '43 000'
       ),
       new Match(
@@ -12017,7 +12017,7 @@ export const worldCupData: WorldCupData = {
         ['80'],
         ['R.F.Ayala'],
         ['49'],
-        stadiums.Germany.olympiaB,
+        stadiumsData.Germany.olympiaB,
         '72 000'
       ),
       new Match(
@@ -12029,7 +12029,7 @@ export const worldCupData: WorldCupData = {
         ['6', '59, 69'],
         [],
         [],
-        stadiums.Germany.volkspark,
+        stadiumsData.Germany.volkspark,
         '50 000'
       ),
       new Match(
@@ -12045,7 +12045,7 @@ export const worldCupData: WorldCupData = {
         [],
         [],
         [],
-        stadiums.Germany.aufSchalke,
+        stadiumsData.Germany.aufSchalke,
         '52 000'
       ),
       new Match(
@@ -12057,7 +12057,7 @@ export const worldCupData: WorldCupData = {
         ['57'],
         [],
         [],
-        stadiums.Germany.wald,
+        stadiumsData.Germany.wald,
         '48 000'
       ),
       new Match(
@@ -12069,7 +12069,7 @@ export const worldCupData: WorldCupData = {
         ['119', '120+1'],
         [],
         [],
-        stadiums.Germany.westfalen,
+        stadiumsData.Germany.westfalen,
         '65 000'
       ),
       new Match(
@@ -12081,7 +12081,7 @@ export const worldCupData: WorldCupData = {
         ['33(p)'],
         [],
         [],
-        stadiums.Germany.allianz,
+        stadiumsData.Germany.allianz,
         '66 000'
       ),
       new Match(
@@ -12093,7 +12093,7 @@ export const worldCupData: WorldCupData = {
         ['56, 78', '60(o.g.)'],
         ['Nuno Gomes'],
         ['88'],
-        stadiums.Germany.daimler,
+        stadiumsData.Germany.daimler,
         '52 000'
       ),
       new Match(
@@ -12109,7 +12109,7 @@ export const worldCupData: WorldCupData = {
         ['19'],
         ['Z.Zidane'],
         ['7(p)'],
-        stadiums.Germany.olympiaB,
+        stadiumsData.Germany.olympiaB,
         '69 000'
       ),
     ],

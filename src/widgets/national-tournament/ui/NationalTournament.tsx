@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import s from './NationalTournament.module.scss'
 import { ConfederationInfo } from "@/entities"
-import { IconConfederation, IconNationalCup } from "@/shared"
+import { IconNationalCup } from "@/shared"
 
 type Props = {
   tournamentData: ConfederationInfo

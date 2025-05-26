@@ -12,7 +12,7 @@ type Stadiums = {
   [countryKey: string]: CountryStadiums;
 };
 
-export const stadiums: Stadiums = {
+export const stadiumsData: Stadiums = {
   noMatch: {
     noPlace: {
       title: "",

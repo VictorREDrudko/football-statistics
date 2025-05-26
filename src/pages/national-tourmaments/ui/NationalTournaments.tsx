@@ -1,8 +1,8 @@
-import { ConfederationCode, confederationData } from '@/entities'
 import s from './NationalTournaments.module.scss'
 import { NationalTournament } from '@/widgets'
+import { ConfederationCode, confederationData } from '@/entities'
 
-export const NationaleTournaments = () => {
+export const NationalTournaments = () => {
   const tournaments = Object.keys(confederationData).map((confederationCode) => {
     return <NationalTournament  tournamentData={confederationData[confederationCode as ConfederationCode]} 
                                 key={confederationData[confederationCode as ConfederationCode].id}

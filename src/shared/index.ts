@@ -1,5 +1,11 @@
 import { getCurrentCountryName } from "./lib/getCurrentCountryName";
 import { getCurrentYear } from "./lib/getCurrentYear";
+import { getTournamentNumber } from "./lib/getTournamentNumber";
+import { getTournamentTitle } from "./lib/getTournamentTitle";
+import { getTournamentYear } from "./lib/getTournamentYear";
+import { TournamentData, TournamentInfo } from "./model/national-tournament/types";
+import { worldCupData } from "./model/national-tournament/worldCupData";
+import { BackgroundImage } from "./ui/background-image/BackgroundImage";
 import { ButtonClose } from "./ui/button-close/ButtonClose";
 import { Button } from "./ui/button/Button";
 import { Container } from "./ui/container/Container";
@@ -16,6 +22,7 @@ export {
   Link,
   Container,
   Badge,
+  BackgroundImage,
   Flag, 
   IconConfederation,
   NumberInCircle,
@@ -23,5 +30,16 @@ export {
   ModalWindow,
   getCurrentYear,
   getCurrentCountryName,
-  IconNationalCup
+  IconNationalCup,
+
+  getTournamentYear,
+  getTournamentTitle,
+  getTournamentNumber,
+
+  worldCupData
+}
+
+export type {
+  TournamentInfo,
+  TournamentData
 }
