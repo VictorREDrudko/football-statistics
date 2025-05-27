@@ -1,18 +1,19 @@
-import { useParams } from "react-router-dom"
-import s from './FinalStage.module.css'
-import { StatisticsTournament } from "./statisticsTournament/StatisticsTournament";
-import { GroupStage } from "./groupStage/GroupStage";
-import { PlayOffStage } from "./playOffStage/PlayOffStage";
-import { GroupSecondStage } from "./groupSecondStage/GroupSecondStage";
-import { getQualifiedTeamsForPlayoff, getTournamentData, worldCupYears } from "../../../logics/worldCup/worldCupFinalStageLogic";
-import { GroupFinalStage } from "./groupFinalStage/GroupFinalStage";
-import { TournamentFinalStage } from "@/pages";
+import { ConfederationCode, confederationData } from "@/entities"
+import s from './TournamentDetails.module.scss'
+import { getQualifiedTeamsForPlayoff } from "@/logics/worldCup/worldCupFinalStageLogic"
+import { GroupFinalStage } from "@/features/worldCup/finalStage/groupFinalStage/GroupFinalStage"
+import { GroupSecondStage } from "@/features/worldCup/finalStage/groupSecondStage/GroupSecondStage"
+import { GroupStage } from "@/features/worldCup/finalStage/groupStage/GroupStage"
+import { PlayOffStage } from "@/features/worldCup/finalStage/playOffStage/PlayOffStage"
+import { StatisticsTournament } from "@/features/worldCup/finalStage/statisticsTournament/StatisticsTournament"
 
-export const FinalStage = () => {
-  const { urlYear } = useParams<{ urlYear: string}>();
-  const year = urlYear && worldCupYears.includes(urlYear) ? urlYear : '1930';
+type Props = {
+  organizationCode: ConfederationCode 
+  year: string
+}
 
-  const tournamentData = getTournamentData(year)
+export const TournamentDetails = ({organizationCode, year}: Props) => {
+  const tournamentData = confederationData[organizationCode].tournament[year]
   const matches = tournamentData.finalStage
 
   const groupStageMatches = matches.filter(match => {
@@ -35,7 +36,6 @@ export const FinalStage = () => {
                          : hasMatchesGroupSecondRound ? qualifiedTeamsForSecondGroupRound : qualifiedTeamsForPlayoff
 
   const qualifiedTeamsSecondRound = qualifiedTeamsForPlayoff
-
   return (
     <div className={s.container}>
       <StatisticsTournament tournamentData={tournamentData}/>
@@ -48,7 +48,6 @@ export const FinalStage = () => {
       {hasMatchesPlayoffStage && <PlayOffStage year={year} playOffStageMatches={playOffStageMatches}/>}
       {hasMatchesGroupFinalRound && <GroupFinalStage  groupStageMatches={finalRoundMatches} 
                                                       year={year}/>}
-      <TournamentFinalStage></TournamentFinalStage>
     </div>
   )
 }

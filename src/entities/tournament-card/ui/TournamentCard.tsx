@@ -21,11 +21,9 @@ export const TournamentCard = ({tournament} : Props) => {
                   key={index + 1}/>
   })
 
-  let championCountryName = 'Albania'
-
-  if(tournament.finalStage.length > 0){
-    championCountryName = tournament.finalStage[tournament.finalStage.length - 1].teams[0]
-  }
+  let championCountryName = tournament.finalStage.length > 0 
+    ? tournament.finalStage[tournament.finalStage.length - 1].teams[0] 
+      : ''
 
   let isDisabledFinalStage
   let isDisabledQualification
@@ -51,11 +49,12 @@ export const TournamentCard = ({tournament} : Props) => {
         <div className={s.containerFlags}>
           {hostCountryFlags}
         </div>
-        <ChampionTournament countryName={championCountryName} 
-                            year={tournamentYear}
-                            iconPathCup={iconCup}
-                            tournamentTitle={tournamentTitle}
-        />
+        {!championCountryName && <div style={{height: '60px'}}></div>}
+        {championCountryName && <ChampionTournament countryName={championCountryName} 
+                                                    year={tournamentYear}
+                                                    iconPathCup={iconCup}
+                                                    tournamentTitle={tournamentTitle}
+        />}
         <div className={s.containerLink}>
           <Link to={`final-stage/${tournamentYear}`} variant="secondary" disabled={isDisabledFinalStage}>
             {'Final stage'}

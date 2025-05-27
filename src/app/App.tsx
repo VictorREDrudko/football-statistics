@@ -2,12 +2,12 @@ import './App.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { FinalStage } from '../features/worldCup/finalStage/FinalStage';
 import { Header } from '@/widgets';
-import { AboutPage, NationalTeams, NationalTournaments, StartPage, TournamentChampionships } from '@/pages';
+import { AboutPage, NationalTeams, NationalTournaments, StartPage, TournamentChampionships, TournamentFinalStage } from '@/pages';
 
 function App() {
 	return (
     <>
-      <Header/>      
+      <Header/>
       <Routes>
         <Route path='/' element={<StartPage/>}/>
         <Route path='/about' element={<AboutPage/>}/>
@@ -16,7 +16,7 @@ function App() {
         <Route path='/teams' element={<Navigate to='/teams/UEFA'/>}/>
         <Route path='/teams/:confederationRoute' element={<NationalTeams/>}/>
         <Route path='/teams/:confederationRoute/:teamRoute' element={<NationalTeams />} />
-        <Route path='/national-tournaments/world-cup/final-stage/:urlYear' element={<FinalStage />} />
+        <Route path='/national-tournaments/:tournament/final-stage/:urlYear' element={<TournamentFinalStage/>} />
       </Routes>
     </>
 	);
