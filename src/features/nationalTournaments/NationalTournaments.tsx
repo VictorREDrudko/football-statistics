@@ -1,4 +1,4 @@
-import { nationalTournamentsKeys, nationalTournaments } from '../../data/data'
+import { nationalTournaments, nationalTournamentsKeys } from '../../data/data'
 import { NameTournament } from '../../data/type-data'
 import s from './NationalTournaments.module.css'
 import { NationaleTournament } from './nationaleTournament/NationaleTournament'

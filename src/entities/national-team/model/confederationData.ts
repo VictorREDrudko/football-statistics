@@ -26,7 +26,7 @@ export const confederationData: ConfederationsData = {
     iconPathCup: iconCupUefa,
     backgroundConfederationPath: backgroundUefa,
     path: "uefa-european-championship",
-    tournament: worldCupData
+    tournament: {}
   },
   CAF: {
     id: 'confederation-2',
@@ -36,7 +36,7 @@ export const confederationData: ConfederationsData = {
     iconPathCup: iconCupCaf,
     backgroundConfederationPath: backgroundCaf,
     path: "caf-africa-cup",
-    tournament: worldCupData
+    tournament: {}
   },
   AFC: {
     id: 'confederation-6',
@@ -46,7 +46,7 @@ export const confederationData: ConfederationsData = {
     iconPathCup: iconCupAfc,
     backgroundConfederationPath: backgroundAfc,
     path: "afc-asian-cup",
-    tournament: worldCupData
+    tournament: {}
   },
   CONMEBOL: {
     id: 'confederation-3',
@@ -56,7 +56,7 @@ export const confederationData: ConfederationsData = {
     iconPathCup: iconCupConmebol,
     backgroundConfederationPath: backgroundConmebol,
     path: "conmebol-copa-america",
-    tournament: worldCupData
+    tournament: {}
   },
   CONCACAF: {
     id: 'confederation-1',
@@ -66,7 +66,7 @@ export const confederationData: ConfederationsData = {
     iconPathCup: iconCupConcacaf,
     backgroundConfederationPath: backgroundConcacaf,
     path: "concacaf-gold-cup",
-    tournament: worldCupData
+    tournament: {}
   },
   OFC: {
     id: 'confederation-7',
@@ -76,7 +76,7 @@ export const confederationData: ConfederationsData = {
     iconPathCup: iconCupOfc,
     backgroundConfederationPath: backgroundOfc,
     path: "ofc-cup",
-    tournament: worldCupData
+    tournament: {}
   },
   FIFA: {
     id: 'organization-4',

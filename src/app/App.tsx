@@ -1,6 +1,5 @@
 import './App.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { FinalStage } from '../features/worldCup/finalStage/FinalStage';
 import { Header } from '@/widgets';
 import { AboutPage, NationalTeams, NationalTournaments, StartPage, TournamentChampionships, TournamentFinalStage } from '@/pages';
 

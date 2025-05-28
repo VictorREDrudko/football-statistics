@@ -8,7 +8,7 @@ export type Match = {
   stadium: StadiumInfo
 }
 
-type GoalsInfo = {
+export type GoalsInfo = {
   playersScoredGoal: string[]
   timeGoals: string[]
 }

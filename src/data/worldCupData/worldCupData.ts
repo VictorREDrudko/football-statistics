@@ -9779,7 +9779,7 @@ export const worldCupData: WorldCupData = {
         stage.group.a,
         ['Scotland', 'Norway'],
         [[1, 1], [], []],
-        ['C.Burley', 'A.Hadda'],
+        ['C.Burley'],
         ['66'],
         ['H.Flo'],
         ['46'],
