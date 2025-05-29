@@ -7,8 +7,10 @@ export const createStats = (): Stats => {
 
   (Object.keys(confederationData) as ConfederationCode[]).forEach((confederationCode) => {
     stats[confederationCode] = {
-      qualificationStats: "", 
-      finalStageStats: createTournamentFinalStageStats(confederationCode)
+      [confederationData[confederationCode].nameTournament]: {
+        qualificationStats: "", 
+        finalStageStats: createTournamentFinalStageStats(confederationCode)
+      }
     };
   });
 

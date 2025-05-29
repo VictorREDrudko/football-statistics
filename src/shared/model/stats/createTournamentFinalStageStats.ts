@@ -1,91 +1,63 @@
 import { ConfederationCode, confederationData } from '@/entities'
 import { updateTopScorers } from './utils/updateTopScorers'
+import { createInitialTeamStats } from './utils/createInitialTeamStats'
 import { StatsScorers, StatsTeams, TournamentStats } from './types'
+import { updateTeamStats } from './utils/updateTeamStats'
+import { stage } from '../national-tournament/stage'
 
-export const createTournamentFinalStageStats = (confederationCode: ConfederationCode) : TournamentStats => {
+export const createTournamentFinalStageStats = (confederationCode: ConfederationCode): TournamentStats => {
   const tournamentStats: TournamentStats = {}
 
   Object.keys(confederationData[confederationCode].tournament).forEach((year) => {
     const statsTeams: StatsTeams = {}
     const statsScorers: StatsScorers = {}
-
     let matchesCount = 0
     let goalsCount = 0
     let attendanceCount = 0
+    const stages: string[] = []
 
     confederationData[confederationCode].tournament[year].finalStage.forEach((match) => {
       const [team1, team2] = match.teams
       const [goalsTeam1, goalsTeam2] = match.score[0]
       const [goalsTeam1et, goalsTeam2et] = match.score[1]
-      const totalGoalsTeam1 = goalsTeam1 + goalsTeam1et;
-      const totalGoalsTeam2 = goalsTeam2 + goalsTeam2et;
+      const [goalsTeam1pen, goalsTeam2pen] = match.score[2]
+      const totalGoalsTeam1 = goalsTeam1 + goalsTeam1et
+      const totalGoalsTeam2 = goalsTeam2 + goalsTeam2et
       const [goalScorerDataTeam1, goalScorerDataTeam2] = match.goals
 
-      let matchesTeam1Count = statsTeams[team1]?.matches || 0
-      let matchesTeam2Count = statsTeams[team2]?.matches || 0
+      if(!stages.includes(match.stage)) {
+        stages.push(match.stage)
+      }
 
-      let matchesWinsTeam1Count = statsTeams[team1]?.matchesWins || 0
-      let matchesDrawnTeam1Count = statsTeams[team1]?.matchesDrawn || 0
-      let matchesWinsTeam2Count = statsTeams[team2]?.matchesWins || 0
-      let matchesDrawnTeam2Count = statsTeams[team2]?.matchesDrawn || 0
+      // Initialize team stats if not exists
+      if (!statsTeams[team1]) {
+        statsTeams[team1] = createInitialTeamStats(team1)
+      }
+      if (!statsTeams[team2]) {
+        statsTeams[team2] = createInitialTeamStats(team2)
+      }
 
-      let goalsForTeam1Count = statsTeams[team1]?.goalsFor || 0
-      let goalsAgainstTeam1Count = statsTeams[team1]?.goalsAgainst || 0
-      let goalsForTeam2Count = statsTeams[team2]?.goalsFor || 0
-      let goalsAgainstTeam2Count = statsTeams[team2]?.goalsAgainst || 0
+      const team1Stats = statsTeams[team1]
+      const team2Stats = statsTeams[team2]
 
       // Did the match take place?
       if (match.score[0].length > 0) {
         matchesCount++
-        matchesTeam1Count++
-        matchesTeam2Count++
+        team1Stats.matches++
+        team2Stats.matches++
 
         attendanceCount += Number(match.stadium.attendance.replace(/\s/g, ''))
         goalsCount += goalsTeam1 + goalsTeam2
 
-        // The match ended in regular time
-        if (match.score[1].length === 0) {
-          goalsForTeam1Count += goalsTeam1
-          goalsForTeam2Count += goalsTeam2
-          goalsAgainstTeam1Count += goalsTeam2
-          goalsAgainstTeam2Count += goalsTeam1
+        const isExtraTime = match.score[1].length > 0
+        const finalGoalsTeam1 = isExtraTime ? totalGoalsTeam1 : goalsTeam1
+        const finalGoalsTeam2 = isExtraTime ? totalGoalsTeam2 : goalsTeam2
 
-          if (goalsTeam1 > goalsTeam2) {
-            matchesWinsTeam1Count++
-          }
+        // Update team stats
+        updateTeamStats(team1Stats, finalGoalsTeam1, finalGoalsTeam2)
+        updateTeamStats(team2Stats, finalGoalsTeam2, finalGoalsTeam1)
 
-          if (goalsTeam1 < goalsTeam2) {
-            matchesWinsTeam2Count++
-          }
-
-          if (goalsTeam1 === goalsTeam2) {
-            matchesDrawnTeam1Count++
-            matchesDrawnTeam2Count++
-          }
-        }
-
-        // The match ended in extra time
-        if (match.score[1].length > 0) {
-          goalsForTeam1Count += totalGoalsTeam1;
-          goalsAgainstTeam1Count += totalGoalsTeam2;
-          goalsForTeam2Count += totalGoalsTeam2;
-          goalsAgainstTeam2Count += totalGoalsTeam1;
-
-          if (totalGoalsTeam1 > totalGoalsTeam2) {
-            matchesWinsTeam1Count++
-          }
-
-          if (totalGoalsTeam1 < totalGoalsTeam2) {
-            matchesWinsTeam2Count++
-          }
-
-          if (totalGoalsTeam1 === totalGoalsTeam2) {
-            matchesDrawnTeam1Count++
-            matchesDrawnTeam2Count++
-          }
-        }
-
-        // Create players stats:
+        // Update scorers:
         if (goalScorerDataTeam1.playersScoredGoal.length > 0) {
           updateTopScorers(goalScorerDataTeam1, statsScorers, team1)
         }
@@ -94,41 +66,132 @@ export const createTournamentFinalStageStats = (confederationCode: Confederation
           updateTopScorers(goalScorerDataTeam2, statsScorers, team2)
         }
 
-        if (match.score[1].length > 0) {
+        if (isExtraTime) {
           goalsCount += goalsTeam1et + goalsTeam2et
         }
       }
 
-      statsTeams[team1] = {
-        countryName: team1,
-        matches: matchesTeam1Count,
-        matchesWins: matchesWinsTeam1Count,
-        matchesDrawn: matchesDrawnTeam1Count,
-        goalsFor: goalsForTeam1Count,
-        goalsAgainst: goalsAgainstTeam1Count,
+      // update result
+      // Final (champion / second place)
+      if (match.stage === stage.final || match.stage === stage.group.finalGroup.final) {
+        if (match.score[1].length === 0) {
+          if (goalsTeam1 > goalsTeam2) {
+            team1Stats.result.champion = true
+            team2Stats.result.secondPlace = true
+          }
+
+          if (goalsTeam1 < goalsTeam2) {
+            team2Stats.result.champion = true
+            team1Stats.result.secondPlace = true
+          }
+        }
+
+        if (match.score[1].length > 0) {
+          if (totalGoalsTeam1 > totalGoalsTeam2) {
+            team1Stats.result.champion = true
+            team2Stats.result.secondPlace = true
+          }
+
+          if (totalGoalsTeam1 < totalGoalsTeam2) {
+            team2Stats.result.champion = true
+            team1Stats.result.secondPlace = true
+          }
+
+          if (totalGoalsTeam1 === totalGoalsTeam2 && goalsTeam1pen > goalsTeam2pen) {
+            team1Stats.result.champion = true
+            team2Stats.result.secondPlace = true
+          }
+
+          if (totalGoalsTeam1 === totalGoalsTeam2 && goalsTeam1pen < goalsTeam2pen) {
+            team2Stats.result.champion = true
+            team1Stats.result.secondPlace = true
+          }
+        }
+      }
+      
+      // Third-place match (third-place / fourth-place)
+      if (match.stage === stage.place3 || match.stage === stage.group.finalGroup.place3) {
+        if (match.score[1].length === 0) {
+          if (goalsTeam1 > goalsTeam2) {
+            team1Stats.result.thirdPlace = true
+            team2Stats.result.fourthPlace = true
+          }
+
+          if (goalsTeam1 < goalsTeam2) {
+            team2Stats.result.thirdPlace = true
+            team1Stats.result.fourthPlace = true
+          }
+        }
+
+        if (match.score[1].length > 0) {
+          if (totalGoalsTeam1 > totalGoalsTeam2) {
+            team1Stats.result.thirdPlace = true
+            team2Stats.result.fourthPlace = true
+          }
+
+          if (totalGoalsTeam1 < totalGoalsTeam2) {
+            team2Stats.result.thirdPlace = true
+            team1Stats.result.fourthPlace = true
+          }
+
+          if (totalGoalsTeam1 === totalGoalsTeam2 && goalsTeam1pen > goalsTeam2pen) {
+            team1Stats.result.thirdPlace = true
+            team2Stats.result.fourthPlace = true
+          }
+
+          if (totalGoalsTeam1 === totalGoalsTeam2 && goalsTeam1pen < goalsTeam2pen) {
+            team2Stats.result.thirdPlace = true
+            team1Stats.result.fourthPlace = true
+          }
+        }
+      }
+      
+      // Semi-finals
+      if (match.stage === stage[1_2]) {
+        team2Stats.result.semiFinal = true
+        team1Stats.result.semiFinal = true
       }
 
-      statsTeams[team2] = {
-        countryName: team2,
-        matches: matchesTeam2Count,
-        matchesWins: matchesWinsTeam2Count,
-        matchesDrawn: matchesDrawnTeam2Count,
-        goalsFor: goalsForTeam2Count,
-        goalsAgainst: goalsAgainstTeam2Count,
+      // Quarter-finals
+      if (match.stage === stage[1_4]) {
+        team2Stats.result.quarterFinal = true
+        team1Stats.result.quarterFinal = true
+      }
+
+      // Round of 16 (1/8 finals)
+      if (match.stage === stage[1_8]) {
+        team2Stats.result.round16 = true
+        team1Stats.result.round16 = true
+      }
+
+      // Round of 32 (1/16 finals)
+      if (match.stage === stage[1_16]) {
+        team2Stats.result.round32 = true
+        team1Stats.result.round32 = true
+      }
+
+      // Second group round
+      if (
+        match.stage === stage.group.finalGroup.a ||
+        match.stage === stage.group.finalGroup.b ||
+        match.stage === stage.group.finalGroup.c ||
+        match.stage === stage.group.finalGroup.d
+      ) {
+        team2Stats.result.secondGroupStage = true
+        team1Stats.result.secondGroupStage = true
       }
     })
 
-    return (
-      tournamentStats[year] = {
-        statsTeams: statsTeams,
-        statsGeneral: {
-          matches: matchesCount,
-          goals: goalsCount,
-          attendance: attendanceCount,
-        },
-        statsScorers: statsScorers,
-      }
-    )
+    return (tournamentStats[year] = {
+      statsTeams,
+      statsGeneral: {
+        matches: matchesCount,
+        goals: goalsCount,
+        attendance: attendanceCount,
+        stages: stages
+      },
+      statsScorers,
+    })
   })
 
   return tournamentStats

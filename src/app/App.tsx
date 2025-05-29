@@ -2,8 +2,10 @@ import './App.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Header } from '@/widgets';
 import { AboutPage, NationalTeams, NationalTournaments, StartPage, TournamentChampionships, TournamentFinalStage } from '@/pages';
+import { createStats } from '@/shared/model/stats/createStats';
 
 function App() {
+  console.log(createStats())
 	return (
     <>
       <Header/>
