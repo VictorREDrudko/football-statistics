@@ -41,12 +41,12 @@ type StatsGeneral = {
   stages: string[]
 }
 
-export type StatsScorers = {
-  [key: string]: {
+export type StatsScorers = StatsScorer []
+
+type StatsScorer = {
     name: string
     goals: number
     country: string
-  }
 }
 
 type Result = {

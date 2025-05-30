@@ -36,7 +36,7 @@ export {
   getTournamentTitle,
   getTournamentNumber,
 
-  worldCupData
+  worldCupData,
 }
 
 export type {

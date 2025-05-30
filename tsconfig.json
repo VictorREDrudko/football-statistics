@@ -27,6 +27,6 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "src/widgets/tournament-details/ui/statisticsTournament/tournament-main-info/matches-championship/MatchesChampionship.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

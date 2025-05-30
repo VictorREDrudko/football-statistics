@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.containerItem img {
+  width: 60px;
+}
+
+.player,
+.goals {
+  margin-top: 10px;
+  line-height: 100%;
+  text-align: center;
+  font-weight: 400;
+}
+
+.goals {
+  font-size: 0.9rem;
+  color: var(--color-light-300);
+}
+
+.player {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--color-light-100);
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 10px;
+  }
+
+  .containerItem img {
+    width: 40px;
+  }
+
+  .player {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 0.75rem;
+  }
+
+  .goals {
+    font-size: 0.75rem;
+    margin-top: 0;
+  }
+}

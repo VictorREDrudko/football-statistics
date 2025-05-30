@@ -5,7 +5,8 @@ import { GroupFinalStage } from "@/features/worldCup/finalStage/groupFinalStage/
 import { GroupSecondStage } from "@/features/worldCup/finalStage/groupSecondStage/GroupSecondStage"
 import { GroupStage } from "@/features/worldCup/finalStage/groupStage/GroupStage"
 import { PlayOffStage } from "@/features/worldCup/finalStage/playOffStage/PlayOffStage"
-import { StatisticsTournament } from "@/features/worldCup/finalStage/statisticsTournament/StatisticsTournament"
+import { TournamentInfo } from "@/shared"
+import { StatisticsTournament } from "./statisticsTournament/StatisticsTournament"
 
 type Props = {
   organizationCode: ConfederationCode 
@@ -13,7 +14,7 @@ type Props = {
 }
 
 export const TournamentDetails = ({organizationCode, year}: Props) => {
-  const tournamentData = confederationData[organizationCode].tournament[year]
+  const tournamentData: TournamentInfo = confederationData[organizationCode].tournament[year]
   const matches = tournamentData.finalStage
 
   const groupStageMatches = matches.filter(match => {
@@ -38,7 +39,7 @@ export const TournamentDetails = ({organizationCode, year}: Props) => {
   const qualifiedTeamsSecondRound = qualifiedTeamsForPlayoff
   return (
     <div className={s.container}>
-      <StatisticsTournament tournamentData={tournamentData}/>
+      <StatisticsTournament tournamentData={tournamentData} organizationCode={organizationCode} year={year}/>
       {hasMatchesGroupStage && <GroupStage  groupStageMatches={groupStageMatches} 
                                             qualifiedTeamsForPlayoff={qualifiedTeamsPlayoff} 
                                             year={year}/>}

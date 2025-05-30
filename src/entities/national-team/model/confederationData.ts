@@ -16,6 +16,7 @@ import iconCupConcacaf from './../assets/icon-cup/concacaf.png'
 import iconCupOfc from './../assets/icon-cup/ofc.png'
 import iconCupFifa from './../assets/icon-cup/world.png'
 import { worldCupData } from "@/shared";
+import { createStats } from "@/shared/model/stats/createStats";
 
 export const confederationData: ConfederationsData = {
   UEFA: {
@@ -89,3 +90,6 @@ export const confederationData: ConfederationsData = {
     tournament: worldCupData
   }
 } as const;
+
+export const stats = createStats()
+

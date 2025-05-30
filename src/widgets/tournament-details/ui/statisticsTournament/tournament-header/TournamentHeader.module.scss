@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  height: 100%;
+}
+
+.year,
+.title {
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-secondary-300);
+  text-align: center;
+}
+
+.year {
+  font-size: 6.0rem;
+}
+
+.title {
+  font-size: 1.8rem;
+}
+
+.logo {
+  display: inline-block;
+  max-height: 350px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .year {
+    font-size: 3.0rem;
+    line-height: 100%;
+  }
+
+  .logo {
+    max-width: 14rem;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid var(--color-dark-300);
+  padding: 10px 0;
+}
+
+.value,
+.prompt {
+  color: var(--color-light-100);
+  line-height: 100%;
+  font-weight: 400;
+}
+
+.value {
+  display: inline-block;
+  width: 20px;
+  font-size: 1rem;
+}
+
+.prompt {
+  font-size: 1rem;
+  color: var(--color-light-300);
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 10px;
+  }
+
+  .value,
+  .prompt {
+    font-size: 0.8rem;
+  }
+}

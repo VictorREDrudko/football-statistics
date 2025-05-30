@@ -10,7 +10,7 @@ export const createTournamentFinalStageStats = (confederationCode: Confederation
 
   Object.keys(confederationData[confederationCode].tournament).forEach((year) => {
     const statsTeams: StatsTeams = {}
-    const statsScorers: StatsScorers = {}
+    const statsScorers: StatsScorers = []
     let matchesCount = 0
     let goalsCount = 0
     let attendanceCount = 0
@@ -190,7 +190,7 @@ export const createTournamentFinalStageStats = (confederationCode: Confederation
         attendance: attendanceCount,
         stages: stages
       },
-      statsScorers,
+      statsScorers: statsScorers.sort((a, b) => b.goals - a.goals),
     })
   })
 
