@@ -16,12 +16,16 @@ import { Link } from "./ui/link/Link";
 import { ModalWindow } from "./ui/modalWindow/ModalWindow";
 import { Badge } from "./ui/number/Badge";
 import { NumberInCircle } from "./ui/numberInCircle/NumberInCircle";
+import { Score } from "./ui/score/Score";
+import { Title } from "./ui/title/Title";
 
 export {
   Button,
   Link,
   Container,
   Badge,
+  Title,
+  Score,
   BackgroundImage,
   Flag, 
   IconConfederation,

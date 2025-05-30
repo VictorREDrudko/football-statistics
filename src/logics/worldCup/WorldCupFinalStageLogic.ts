@@ -1,4 +1,5 @@
-import { WorldCupMatch, WorldCupInfo } from "../../data/worldCupData/type-worldCupData";
+import { TournamentInfo } from "@/shared";
+import { WorldCupMatch } from "../../data/worldCupData/type-worldCupData";
 import { worldCupData } from "../../data/worldCupData/worldCupData";
 
 
@@ -87,7 +88,7 @@ export const createGroupTableData = (qualifiedTeamsForPlayoff: string[], groupMa
   return teamTableData;
 }
 
-export const createWorldCupStatsData = (dataTournament: WorldCupInfo) => {
+export const createWorldCupStatsData = (dataTournament: TournamentInfo) => {
   const matches = dataTournament.finalStage;
   const numberOfTeams = Array.from(new Set(matches.map((match) => match.teams).flat())).filter(name => name !== '').length
 

@@ -1,0 +1,127 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  /* background-color: #8fec92; */
+}
+
+.containerTeamsGoals {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /* background-color: #8fb4ec; */
+}
+
+.containerPlayerScoredGoal,
+.containerPlayerScoredGoalReverse {
+  display: flex;
+  gap: 10px;
+  /* background-color: #f4f747; */
+}
+
+.containerPlayerScoredGoal {
+  justify-content: end;
+  flex-direction: row;
+}
+
+.containerPlayerScoredGoalReverse {
+  flex-direction: row-reverse;
+  justify-content: start;
+}
+
+.containerTeamGoals {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* background-color: #c829ae; */
+  min-width: 250px;
+  border-bottom: 1px solid var(--bg-main-transparent50);
+  border-top: 1px solid var(--bg-main-transparent50);
+  /* box-shadow: 0 0 5px var(--bg-second-transparent50); */
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.containerPlayerScoredGoal span:first-child,
+.containerPlayerScoredGoalReverse span:first-child {
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--bg-main-transparent70);
+}
+
+.containerPlayerScoredGoal span:last-child,
+.containerPlayerScoredGoalReverse span:last-child {
+  font-size: 0.8rem;
+  min-width: 70px;
+  color: var(--bg-main-transparent70);
+  /* background-color: #d58787; */
+  /* text-align: right; */
+}
+
+/* .containerPlayerScoredGoalReverse span:first-child {
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+} */
+
+.containerPlayerScoredGoalReverse span:last-child {
+  text-align: right;
+}
+
+
+
+
+
+@media (max-width: 605px) {
+  .container {
+    padding-top: 0;
+    padding-left: 0.5rem;
+  }
+
+  .containerTeamsGoals {
+    gap: 1.5rem;
+  }
+
+  .containerTeamGoals {
+    width: 9rem;
+  }
+
+  .containerPlayerScoredGoal span:first-child {
+    font-weight: 600;
+    font-size: 0.75rem;
+  }
+  
+  .containerPlayerScoredGoal span:last-child {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.2rem 0.5rem 0.3rem;
+  }
+
+  .containerTeamsGoals {
+    gap: 0.4rem;
+  }
+
+  .containerTeamGoals {
+    width: 6rem;
+  }
+
+  .containerPlayerScoredGoal span:first-child {
+    font-size: 0.55rem;
+    line-height: 120%;
+  }
+  
+  .containerPlayerScoredGoal span:last-child {
+    font-size: 0.6rem;
+    line-height: 120%;
+  }
+}
+

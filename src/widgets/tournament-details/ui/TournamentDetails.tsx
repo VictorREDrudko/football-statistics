@@ -1,4 +1,4 @@
-import { ConfederationCode, confederationData } from "@/entities"
+import { ConfederationCode, confederationData, MatchProps } from "@/entities"
 import s from './TournamentDetails.module.scss'
 import { getQualifiedTeamsForPlayoff } from "@/logics/worldCup/worldCupFinalStageLogic"
 import { GroupFinalStage } from "@/features/worldCup/finalStage/groupFinalStage/GroupFinalStage"
@@ -7,6 +7,8 @@ import { GroupStage } from "@/features/worldCup/finalStage/groupStage/GroupStage
 import { PlayOffStage } from "@/features/worldCup/finalStage/playOffStage/PlayOffStage"
 import { TournamentInfo } from "@/shared"
 import { StatisticsTournament } from "./statisticsTournament/StatisticsTournament"
+import { GroupRound } from "./group-round/GroupRound"
+import { uniqueTeamsFromMatches } from "../model/lib/uniqueTeamsFromMatches"
 
 type Props = {
   organizationCode: ConfederationCode 
@@ -16,6 +18,11 @@ type Props = {
 export const TournamentDetails = ({organizationCode, year}: Props) => {
   const tournamentData: TournamentInfo = confederationData[organizationCode].tournament[year]
   const matches = tournamentData.finalStage
+  const groupRoundMatches = matches.filter(match => match.stage.slice(0, 5) === "group")
+  const hasGroupRoundMatches = groupRoundMatches.length
+  
+  const knockoutStageMatches: MatchProps[] = matches.filter(match => match.stage.slice(0, 5) !== "group")
+  const qualifiedTeams: string[] = uniqueTeamsFromMatches(knockoutStageMatches)
 
   const groupStageMatches = matches.filter(match => {
     return match.stage.slice(0, 5) === "group" && match.stage.split(":")[0].trim() !== "group Final round" && match.stage.split("(")[1] !== "second round)"
@@ -40,6 +47,12 @@ export const TournamentDetails = ({organizationCode, year}: Props) => {
   return (
     <div className={s.container}>
       <StatisticsTournament tournamentData={tournamentData} organizationCode={organizationCode} year={year}/>
+      {hasGroupRoundMatches && <GroupRound  background={tournamentData.background}
+                                            matches={groupRoundMatches} 
+                                            qualifiedTeams={qualifiedTeams} 
+                                            year={year}/>
+      }
+
       {hasMatchesGroupStage && <GroupStage  groupStageMatches={groupStageMatches} 
                                             qualifiedTeamsForPlayoff={qualifiedTeamsPlayoff} 
                                             year={year}/>}

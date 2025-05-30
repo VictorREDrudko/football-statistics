@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  background-image: url('./../../../../assets/bg-match-info.png');
+  background-size: cover; /* или 'contain', в зависимости от нужного эффекта */
+  background-position: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  border-radius: 20px 0;
+}
+
+.containerMatch {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.containerMatch1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .containerMatch {
+    gap: 0.3rem;
+  }
+}

@@ -1,4 +1,4 @@
-import { Match } from "../match/types"
+import { Match } from '../../../entities/match/model/types'
 
 export type TournamentInfo = {
   id: string
@@ -14,8 +14,6 @@ export type TournamentInfo = {
 export type TournamentData = {
   [key in string]: TournamentInfo
 }
-
-
 
 // export type NodesItem = {
 //   id: string

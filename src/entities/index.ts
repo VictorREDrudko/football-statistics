@@ -1,4 +1,6 @@
 import { CountryTeam } from "./countryTeam/ui/CountryTeam"
+import { GroupTable } from "./group-table/ui/GroupTable"
+import { GoalsInfo, MatchProps, StadiumInfo } from "./match/model/types"
 import { confederationData } from "./national-team/model/confederationData"
 import { namesTeamByConfederation } from "./national-team/model/namesTeamByConfederation"
 import { nationalTeamsData } from "./national-team/model/nationalTeamsData"
@@ -15,7 +17,8 @@ export {
   MiniCard,
   NationalTeamsCard,
   CountryTeam,
-  TournamentCard
+  TournamentCard,
+  GroupTable
 }
 
 export type {
@@ -26,6 +29,9 @@ export type {
   TeamsFullStats,
   TeamPartStats,
   TeamsStats,
-  TeamStats
+  TeamStats,
+  MatchProps,
+  GoalsInfo,
+  StadiumInfo
 }
 
