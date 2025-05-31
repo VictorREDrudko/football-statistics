@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import s from './Match.module.scss'
-import { MatchProps } from '../model/types'
 import { MatchPartialInfo } from './matchPartialInfo/MatchPartialInfo'
 import { MatchAllInfo } from './matchAllInfo/MatchAllInfo'
+import { MatchInfo } from '@/shared'
 
 export type Props = {
-  match: MatchProps
+  match: MatchInfo
 }
 
 export const Match = ({match}: Props) => {

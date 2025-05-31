@@ -1,4 +1,4 @@
-import { GoalsInfo } from '@/entities'
+import { GoalsInfo } from '@/shared/model/match/types'
 import s from './InfoGoals.module.scss'
 
 type Props = {

@@ -1,8 +1,7 @@
 import { TeamTableData } from '@/widgets/tournament-details/model/types'
 import s from './GroupTable.module.scss'
 import { tableHeaderData } from '../model/tableHeaderData'
-import { CountryTeam } from '@/entities'
-import { Title } from '@/shared'
+import { CountryTeam, Title } from '@/shared'
 
 type Props = {
   tableData: TeamTableData[]
@@ -21,7 +20,7 @@ export const GroupTable = ({tableData, year, groupName}: Props) => {
 
   const tableBody = tableData.map((teamData, index) => {
     const styleQualification = teamData.qualification === '+' 
-      ? {backgroundColor: 'var(--accent-main-transparent50)'} 
+      ? {backgroundColor: 'var(--color-primary-400)'} 
       : {}
 
     return (

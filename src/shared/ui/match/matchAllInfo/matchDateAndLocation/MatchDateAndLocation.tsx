@@ -1,4 +1,4 @@
-import { StadiumInfo } from '@/entities'
+import { StadiumInfo } from '@/shared/model/match/types'
 import s from './MatchDateAndLocation.module.scss'
 
 type Props = {

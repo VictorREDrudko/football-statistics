@@ -1,9 +1,8 @@
-import { MatchProps } from '../match/model/types'
-import { Match } from '../match/ui/Match'
+import { Match, MatchInfo } from '@/shared'
 import s from './MatchesByStage.module.scss'
 
 type Props = {
-  matches: MatchProps[] 
+  matches: MatchInfo[] 
 }
 
 export const MatchesByStage = ({matches}: Props) => {

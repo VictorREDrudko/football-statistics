@@ -6,10 +6,9 @@
   gap: 10px;
   cursor: pointer;
   width: 100%;
-}
 
-@media (max-width: 480px) {
-  .container {
+  @media (max-width: 480px) {
     gap: 5px;
   }
 }
+

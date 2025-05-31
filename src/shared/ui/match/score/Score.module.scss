@@ -1,0 +1,57 @@
+.container {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  border-top: 1px solid var(--color-light-100-transparent-50);
+  border-bottom: 2px solid var(--color-dark-700-transparent-50);
+  box-shadow: 0 0 3px 2px var(--color-light-100-transparent-30);
+  border-radius: 5px;
+
+  @media (max-width: 480px) {
+    width: 50px;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+.teamGoals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  border-top: 1px solid var(--color-light-100-transparent-50);
+  border-bottom: 1px solid var(--color-dark-700-transparent-50);
+  box-shadow: 0 0 2px var(--color-light-100-transparent-30);
+  border-radius: 10%;
+  padding: 2px 5px;
+  font-size: 1rem;
+  font-weight: 700;
+
+  @media (max-width: 480px) {
+    font-size: 0.6rem;
+    font-weight: 600;
+    width: 15px;
+    padding: 0;
+  }
+}
+
+.extra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  border-radius: 10%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  margin: -3px 0;
+
+  @media (max-width: 480px) {
+    width: 15px;
+    font-size: 0.45rem;
+  }
+}

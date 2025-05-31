@@ -1,7 +1,7 @@
 import { Flag } from '@/shared'
 import s from './CountryTeam.module.scss'
-import { isCountryActive } from '../utils/isCountryActive'
-import { choiseCurrentCountryName } from '../utils/choiseCurrentCountryName'
+import { getCountryNameByYear } from '@/shared/lib/helpers/getCountryNameByYear'
+import { isCountryActive } from '@/shared/lib/helpers/isCountryActive'
 
 type Props = {
   countryName: string
@@ -10,9 +10,8 @@ type Props = {
 }
 
 export const CountryTeam = ({countryName, year, reverse = false}: Props) => {
-  // const classNameContainer = reverse ? `${s.container}` : `${s.containerRevers}`
   const classNameContainer = reverse ? `${s.container}` : `${s.containerRevers}`
-  const currentCountryName = choiseCurrentCountryName({name: countryName, year});
+  const countryNameByYear = getCountryNameByYear({countryName, year});
 
   // Sets styles for existing and non-existing countries
   const classNameIsReal = isCountryActive(countryName) ? `${s.title}` : `${s.titleNoReal}`
@@ -23,7 +22,7 @@ export const CountryTeam = ({countryName, year, reverse = false}: Props) => {
         <Flag countryName={countryName} year={year}/>
       </div>
       <span className={classNameIsReal}>
-        {currentCountryName}
+        {countryNameByYear}
       </span>
     </div>
   )

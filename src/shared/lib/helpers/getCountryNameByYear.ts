@@ -1,20 +1,21 @@
 import { nationalTeamsData } from "@/entities"
-import { getCurrentYear } from "@/shared"
+import { getCurrentYear } from "../getCurrentYear"
 
-type CountryNameParams = {
-  name: string
+type Params = {
+  countryName: string
   year: string
 }
 
-export const choiseCurrentCountryName = ({ name, year }: CountryNameParams) => {
+export const getCountryNameByYear = ({ countryName, year }: Params) => {
   const currentYear = getCurrentYear()
+  const countryNames = nationalTeamsData[countryName].names
 
-  const names = nationalTeamsData[name].names
-
-  for (let name of names) {
+  for (let name of countryNames) {
+    // "1919-1932, 1946-p.t."
     let periods = name.period.split(', ')
 
     for (let period of periods) {
+      // "1919-1932"
       let [start, end] = period.split('-')
       end = end === 'p.t.' ? currentYear.toString() : end
 
@@ -23,5 +24,5 @@ export const choiseCurrentCountryName = ({ name, year }: CountryNameParams) => {
       }
     }
   }
-  return ''
+  return countryName
 }

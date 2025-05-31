@@ -1,13 +1,13 @@
 import s from './GroupRound.module.scss'
 import { sortGroupNames } from '../../model/lib/sortGroupNames'
 import { createGroupTableData } from '../../model/lib/createGroupTableData'
-import { GroupTable, MatchProps } from '@/entities'
-import { Title } from '@/shared'
+import { GroupTable } from '@/entities'
+import { MatchInfo, Title } from '@/shared'
 import { MatchesByStage } from '@/entities/matchesByStage/MatchesByStage'
 
 type Props = {
   background: string[]
-  matches: MatchProps[]
+  matches: MatchInfo[]
   qualifiedTeams: string[]
   year: string
 }

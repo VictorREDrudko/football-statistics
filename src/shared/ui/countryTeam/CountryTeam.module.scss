@@ -5,6 +5,10 @@
   align-items: center;
   max-width: 220px;
   width: 100%;
+
+  @media (max-width: 480px) {
+    max-width: 100px;
+  }
 }
 
 .containerRevers {
@@ -20,10 +24,18 @@
 .container span,
 .containerRevers span {
   font-size: 0.9rem;
+
+  @media (max-width: 480px) {
+   font-size: 0.6rem;
+  }
 }
 
 .containerFlag {
   width: 45px;
+
+  @media (max-width: 480px) {
+    max-width: 20px;
+  }
 }
 
 .title,
@@ -35,39 +47,12 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 175px;
+
+  @media (max-width: 480px) {
+    max-width: 75px;
+  }
 }
 
 .titleNoReal {
-  opacity: 0.4;
-}
-
-/* @media (max-width: 605px) {
-  .container {
-    width: 9rem;
-  }
-
-  .title {
-    font-size: 0.8rem;
-  }
-} */
-
-@media (max-width: 480px) {
-  .container,
-  .containerRevers {
-    max-width: 100px;
-  }
-
-  .containerFlag {
-    width: 20px;
-  }
-
-  .container span,
-  .containerRevers span {
-    font-size: 0.6rem;
-  }
-
-  .title,
-  .titleNoReal {
-    max-width: 75px;
-  }
+  opacity: 0.5;
 }

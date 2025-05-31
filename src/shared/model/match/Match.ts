@@ -1,13 +1,13 @@
 import { v1 } from 'uuid'
-import { StadiumInfo } from './types'
+import { GoalsInfo, MatchInfo, StadiumInfo } from './types'
 
-export class Match {
+export class Match implements MatchInfo {
   id: string
   date: string
   stage: string
   teams: string[]
   score: number[][]
-  goals: { playersScoredGoal: string[]; timeGoals: string[] }[]
+  goals: GoalsInfo[]
   stadium: StadiumInfo
   attendance!: string
 

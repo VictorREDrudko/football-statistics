@@ -1,4 +1,4 @@
-import { CountryTeam } from '@/entities'
+import { CountryTeam } from '@/shared'
 import s from './ChampionTournament.module.scss'
 
 type Props = {

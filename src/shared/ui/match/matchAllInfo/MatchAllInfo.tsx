@@ -1,11 +1,11 @@
-import { MatchProps } from '../../model/types'
+import { MatchInfo } from '@/shared/model/match/types'
 import { MatchPartialInfo } from '../matchPartialInfo/MatchPartialInfo'
 import { InfoGoals } from './infoGoals/InfoGoals'
 import s from './MatchAllInfo.module.scss'
 import { MatchDateAndLocation } from './matchDateAndLocation/MatchDateAndLocation'
 
 type Props = {
-  match: MatchProps
+  match: MatchInfo
 }
 
 export const MatchAllInfo = ({match}: Props) => {

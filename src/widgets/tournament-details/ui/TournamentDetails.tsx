@@ -1,11 +1,10 @@
-import { ConfederationCode, confederationData, MatchProps } from "@/entities"
+import { ConfederationCode, confederationData } from "@/entities"
 import s from './TournamentDetails.module.scss'
 import { getQualifiedTeamsForPlayoff } from "@/logics/worldCup/worldCupFinalStageLogic"
 import { GroupFinalStage } from "@/features/worldCup/finalStage/groupFinalStage/GroupFinalStage"
 import { GroupSecondStage } from "@/features/worldCup/finalStage/groupSecondStage/GroupSecondStage"
-import { GroupStage } from "@/features/worldCup/finalStage/groupStage/GroupStage"
 import { PlayOffStage } from "@/features/worldCup/finalStage/playOffStage/PlayOffStage"
-import { TournamentInfo } from "@/shared"
+import { MatchInfo, TournamentInfo } from "@/shared"
 import { StatisticsTournament } from "./statisticsTournament/StatisticsTournament"
 import { GroupRound } from "./group-round/GroupRound"
 import { uniqueTeamsFromMatches } from "../model/lib/uniqueTeamsFromMatches"
@@ -21,9 +20,10 @@ export const TournamentDetails = ({organizationCode, year}: Props) => {
   const groupRoundMatches = matches.filter(match => match.stage.slice(0, 5) === "group")
   const hasGroupRoundMatches = groupRoundMatches.length
   
-  const knockoutStageMatches: MatchProps[] = matches.filter(match => match.stage.slice(0, 5) !== "group")
+  const knockoutStageMatches: MatchInfo[] = matches.filter(match => match.stage.slice(0, 5) !== "group")
   const qualifiedTeams: string[] = uniqueTeamsFromMatches(knockoutStageMatches)
 
+  // -- - - - -  - - - - - - -  - -
   const groupStageMatches = matches.filter(match => {
     return match.stage.slice(0, 5) === "group" && match.stage.split(":")[0].trim() !== "group Final round" && match.stage.split("(")[1] !== "second round)"
   })
@@ -46,22 +46,25 @@ export const TournamentDetails = ({organizationCode, year}: Props) => {
   const qualifiedTeamsSecondRound = qualifiedTeamsForPlayoff
   return (
     <div className={s.container}>
-      <StatisticsTournament tournamentData={tournamentData} organizationCode={organizationCode} year={year}/>
+      <StatisticsTournament tournamentData={tournamentData} 
+                            organizationCode={organizationCode} 
+                            year={year}
+      />
       {hasGroupRoundMatches && <GroupRound  background={tournamentData.background}
                                             matches={groupRoundMatches} 
                                             qualifiedTeams={qualifiedTeams} 
                                             year={year}/>
       }
 
-      {hasMatchesGroupStage && <GroupStage  groupStageMatches={groupStageMatches} 
+      {/* {hasMatchesGroupStage && <GroupStage  groupStageMatches={groupStageMatches} 
                                             qualifiedTeamsForPlayoff={qualifiedTeamsPlayoff} 
-                                            year={year}/>}
-      {hasMatchesGroupSecondRound && <GroupSecondStage  groupStageMatches={groupSecondGroupRoundMatches} 
+                                            year={year}/>} */}
+      {/* {hasMatchesGroupSecondRound && <GroupSecondStage  groupStageMatches={groupSecondGroupRoundMatches} 
                                                         qualifiedTeamsForPlayoff={qualifiedTeamsSecondRound} 
-                                                        year={year}/>}
+                                                        year={year}/>} */}
       {hasMatchesPlayoffStage && <PlayOffStage year={year} playOffStageMatches={playOffStageMatches}/>}
-      {hasMatchesGroupFinalRound && <GroupFinalStage  groupStageMatches={finalRoundMatches} 
-                                                      year={year}/>}
+      {/* {hasMatchesGroupFinalRound && <GroupFinalStage  groupStageMatches={finalRoundMatches} 
+                                                      year={year}/>} */}
     </div>
   )
 }
