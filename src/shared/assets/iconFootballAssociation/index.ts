@@ -88,7 +88,7 @@ import iconCongo from "./Congo.png";
 import iconDRCongo from "./DR-Congo.png";
 import iconEquatorialGuinea from "./Equatorial-Guinea.png";
 import iconGabon from "./Gabon.png";
-import iconSãoToméAndPríncipe from "./São-Tomé-and-Príncipe.png";
+import iconSaoTomeAndPrincipe from "./Sao-Tome-and-Principe.png";
 import iconBurundi from "./Burundi.png";
 import iconDjibouti from "./Djibouti.png";
 import iconEritrea from "./Eritrea.png";
@@ -324,7 +324,7 @@ export {
   iconDRCongo,
   iconEquatorialGuinea,
   iconGabon,
-  iconSãoToméAndPríncipe,
+  iconSaoTomeAndPrincipe,
   iconBurundi,
   iconDjibouti,
   iconEritrea,

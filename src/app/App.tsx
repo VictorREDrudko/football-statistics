@@ -2,9 +2,10 @@ import './App.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Header } from '@/widgets';
 import { AboutPage, NationalTeams, NationalTournaments, StartPage, TournamentChampionships, TournamentFinalStage } from '@/pages';
-
+import { teamsStore } from '@/shared/model/nationalTeamsStore.ts/teamsStore';
 
 function App() {
+  console.log(teamsStore)
 	return (
     <>
       <Header/>

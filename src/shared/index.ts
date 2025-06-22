@@ -1,3 +1,4 @@
+import { baseApi } from "./api/baseApi";
 import { getCurrentCountryName } from "./lib/getCurrentCountryName";
 import { getCurrentYear } from "./lib/getCurrentYear";
 import { getTournamentNumber } from "./lib/getTournamentNumber";
@@ -44,6 +45,7 @@ export {
   getTournamentNumber,
 
   worldCupData,
+  baseApi
 }
 
 export type {

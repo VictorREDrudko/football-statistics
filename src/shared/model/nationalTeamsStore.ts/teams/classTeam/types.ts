@@ -1,0 +1,258 @@
+export type CountryNames = {
+  nameCountry: string
+  period: string
+}
+
+export type CountryFlags = {
+  countryFlag: string
+  period: string
+}
+
+export type AssociationDate = {
+  founded: string
+  fifaAffiliation: string
+  confederationAffiliation: string
+}
+
+export type TeamConstructor = {
+  names: CountryNames[]
+  associationLogo: string
+  flags: CountryFlags[]
+  coatOfArms: string
+  associationDate: AssociationDate
+  confederation: ConfederationCode
+  rating?: {
+    points: number
+    place: number
+  }
+  isCountryReal?: boolean
+}
+
+export type ConfederationCode = 'UEFA' | 'CAF' | 'AFC' | 'CONMEBOL' | 'CONCACAF' | 'OFC'
+
+export type Country =  "Germany" |
+  "England" |
+  "Italy" |
+  "Spain" |
+  "France" |
+  "Albania" |
+  "Andorra" |
+  "Armenia" |
+  "Austria" |
+  "Azerbaijan" |
+  "Belarus" |
+  "Belgium" |
+  "Bosnia and Herzegovina" |
+  "Bulgaria" |
+  "Croatia" |
+  "Cyprus" | 
+  "Czech Republic" |
+  "Denmark" |
+  "Estonia" |
+ "Faroe Islands" |
+  "Finland" |
+  "Georgia" |
+  "Gibraltar" |
+  "Greece" |
+  "Hungary" |
+  "Iceland" |
+  "Israel" |
+  "Kazakhstan" |
+   "Kosovo" |
+   "Latvia" |
+  "Liechtenstein" |
+  "Lithuania" |
+  "Luxembourg" |
+  "Malta" |
+  "Moldova" |
+  "Montenegro" |
+  "Netherlands" |
+  "North Macedonia" |
+  "North. Ireland" |
+  "Norway" |
+  "Poland" |
+  "Portugal" |
+  "Ireland" |
+  "Romania" |
+  "Russia" |
+  "San Marino" |
+  "Scotland" |
+  "Serbia"  |
+  "Slovakia" |
+  "Slovenia" |
+  "Sweden" |
+  "Switzerland" |
+  "Turkey" |
+  "Ukraine" |
+  "Wales" |
+  "Soviet Union" |
+  "Yugoslavia" |
+  "Czechoslovakia" |
+  "East Germany" |
+  "Algeria" |
+  "Egypt" |
+  "Libya" |
+  "Morocco" |
+  "Tunisia" |
+  "Benin" |
+  "Burkina Faso"  |
+  "Cape Verde"  |
+  "Gambia"  |
+  "Ghana" |
+  "Guinea" |
+  "Guinea-Bissau" |
+  "Ivory Coast" |
+  "Liberia" |
+  "Mali" |
+  "Mauritania" |
+  "Niger" |
+  "Nigeria" |
+  "Senegal" |
+  "Sierra Leone" |
+  "Togo" |
+  "Cameroon" |
+  "Central African Republic" |
+  "Chad" |
+  "Congo" |
+  "DR Congo" |
+  "Equatorial Guinea" |
+  "Gabon" |
+  "São Tomé and Príncipe" |
+  "Burundi" |
+  "Djibouti" |
+  "Eritrea" |
+  "Ethiopia" |
+  "Kenya" |
+  "Rwanda" |
+  "Somalia" |
+  "South Sudan" |
+  "Sudan" |
+  "Tanzania" |
+  "Uganda" |
+  "Zanzibar" |
+  "Angola" |
+  "Botswana" |
+  "Comoros" |
+  "Eswatini" |
+  "Lesotho" |
+  "Madagascar" |
+  "Malawi" |
+  "Mauritius" |
+  "Mozambique" |
+  "Namibia" |
+  "Seychelles" |
+  "South Africa" |
+  "Zambia" |
+  "Zimbabwe" |
+  "Reunion" |
+  "Australia" |
+  "Brunei" |
+  "Cambodia" |
+  "Timor-Leste" |
+  "Indonesia" |
+  "Laos" |
+  "Malaysia" |
+  "Myanmar" |
+  "Philippines" |
+  "Singapore" |
+  "Thailand" |
+  "Vietnam" |
+  "Afghanistan" |
+  "Iran" |
+  "Kyrgyz Republic" |
+  "Tajikistan" |
+  "Turkmenistan" |
+  "Uzbekistan" |
+  "China" |
+  "Taiwan" |
+  "DPR Korea" |
+  "Guam" |
+  "Hong Kong" |
+  "Japan" |
+  "Korea Republic" |
+  "Macau" |
+  "Mongolia" |
+  "Northern Mariana Islands" |
+  "Bangladesh" |
+  "Bhutan" |
+  "India" |
+  "Maldives" |
+  "Nepal" |
+  "Pakistan" |
+  "Sri Lanka" |
+  "Bahrain" |
+  "Iraq" |
+  "Jordan" |
+  "Kuwait" |
+  "Lebanon" |
+  "Oman" |
+  "Palestine" |
+  "Qatar" |
+  "Saudi Arabia" |
+  "Syria" |
+  "U. A. Emirates" |
+  "Yemen" |
+  "Canada" |
+  "Mexico" |
+  "United States" |
+  "Belize" |
+  "Costa Rica" |
+  "El Salvador" |
+  "Guatemala" |
+  "Honduras" |
+  "Nicaragua" |
+  "Panama" |
+  "Anguilla" |
+  "Antigua and Barbuda" |
+  "Aruba" |
+  "Bahamas" |
+  "Barbados" |
+  "Bermuda" |
+  "Bonaire" |
+  "British Virgin Islands" |
+  "Cayman Islands" |
+  "Cuba" |
+  "Curaçao" |
+  "Dominica" |
+  "Dominican Republic" |
+  "French Guiana" |
+  "Grenada" |
+  "Guadeloupe" |
+  "Guyana" |
+  "Haiti" |
+  "Jamaica" |
+  "Martinique" |
+  "Montserrat" |
+  "Puerto Rico" |
+  "Saint Kitts and Nevis" |
+  "Saint Lucia" |
+  "Saint Martin" |
+  "Saint Vincent and the Grenadines" |
+  "Sint Maarten" |
+  "Suriname" |
+  "Trinidad & Tobago" |
+  "Turks and Caicos Islands" |
+  "U.S. Virgin Islands" |
+  "American Samoa" |
+  "Cook Islands" |
+  "Fiji" |
+  "Kiribati" |
+  "New Caledonia" |
+  "New Zealand" |
+  "Papua New Guinea" |
+  "Samoa" |
+  "Solomon Islands" |
+  "Tahiti" |
+  "Tonga" |
+  "Tuvalu" |
+  "Vanuatu" |
+  "Argentina" |
+  "Bolivia" |
+  "Brazil" |
+  "Chile" |
+  "Colombia" |
+  "Ecuador" |
+  "Paraguay" |
+  "Peru" |
+  "Uruguay" |
+  "Venezuela"

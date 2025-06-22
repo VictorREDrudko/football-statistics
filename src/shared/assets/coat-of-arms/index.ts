@@ -88,7 +88,7 @@ import coatOfArmsCongo from "./Congo.png";
 import coatOfArmsDRCongo from "./DR-Congo.png";
 import coatOfArmsEquatorialGuinea from "./Equatorial-Guinea.png";
 import coatOfArmsGabon from "./Gabon.png";
-import coatOfArmsSãoToméAndPríncipe from "./São-Tomé-and-Príncipe.png";
+import coatOfArmsSaoTomeAndPrincipe from "./Sao-Tome-and-Principe.png";
 import coatOfArmsBurundi from "./Burundi.png";
 import coatOfArmsDjibouti from "./Djibouti.png";
 import coatOfArmsEritrea from "./Eritrea.png";
@@ -324,7 +324,7 @@ export {
   coatOfArmsDRCongo,
   coatOfArmsEquatorialGuinea,
   coatOfArmsGabon,
-  coatOfArmsSãoToméAndPríncipe,
+  coatOfArmsSaoTomeAndPrincipe,
   coatOfArmsBurundi,
   coatOfArmsDjibouti,
   coatOfArmsEritrea,
