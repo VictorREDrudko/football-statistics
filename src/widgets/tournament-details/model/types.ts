@@ -1,3 +1,6 @@
+import { MatchInfo } from "@/shared"
+import { Position } from "@xyflow/react"
+
 export type FinalPositions = {
   champions: string
   runnersUp: string
@@ -23,3 +26,18 @@ export type TeamTableData = {
   qualification: "" | "+",
   pointsByDate: boolean
 };
+
+export type NodeType = {
+  id: string
+  type: string
+  data: {
+    label: string
+    match: MatchInfo
+  }
+  position: {
+    x: number
+    y: number
+  }
+  sourcePosition: Position
+  className: string
+}

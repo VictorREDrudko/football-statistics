@@ -1,6 +1,7 @@
 import s from './TeamsChampionship.module.scss'
 import { Parameter } from '../parameter/Parameter'
 import { Container } from '@/shared'
+import teamsIcon from './../../../../../../shared/assets/iconStats/teams.png'
 
 type Props = {
   teamsFinalStage: number
@@ -10,9 +11,9 @@ type Props = {
 export const TeamsChampionship = ({teamsFinalStage, teamsQualification} : Props) => { 
   return(
     <div className={s.container}>
-      <Parameter title={'Teams:'}/>
+      <Parameter iconPath={teamsIcon} title={'Teams:'}/>
       <Container gap='2' direction='col'>
-        <Container gap='1' align='center'>
+        <Container gap='2' align='center'>
           <span className={s.value}>{teamsFinalStage}</span>
           <span className={s.prompt}>{`(${teamsQualification} qualification)`}</span>
         </Container>

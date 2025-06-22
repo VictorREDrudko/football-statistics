@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  gap: 5px;
+}
+
+.containerTeams {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 165px;
+}
+
+.containerScore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}

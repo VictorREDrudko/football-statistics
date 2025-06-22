@@ -1,0 +1,7 @@
+import { MatchInfo } from "@/shared"
+
+export const generateMatchesByStage = (stages: string[], matches: MatchInfo[]) : MatchInfo[][] => {
+  return stages.map(stage => {
+    return matches.filter(match => match.stage === stage)
+  })
+}

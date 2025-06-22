@@ -27,7 +27,7 @@ export const convertMatchScore = (score: Array<number[]>): MatchScore => {
   // The match went into extra time, but there were no penalties
   if (isExtraTime) {
     resultScore.team1Goals = totalGoalsTeam1.toString()
-    resultScore.extraData = isPenalty ? `pen ${goalsTeam1pen}:${goalsTeam2pen}` :'e.t.'
+    resultScore.extraData = isPenalty ? `pen ${goalsTeam1pen}:${goalsTeam2pen}` : 'e.t.'
     resultScore.team2Goals = totalGoalsTeam2.toString()
 
     return resultScore

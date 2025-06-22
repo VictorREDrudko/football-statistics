@@ -57,8 +57,8 @@ export const TournamentMainInfo = ({dataTournament, organizationCode, year} : Pr
       <span className={s.title}>Tournament details:</span>
       <div className={s.containerParameters}>
         <HostCountry countryNames={dataTournament.hostCountry} year={year}/>
-        <Positions positions={finalPositions} year={year}/>
         <DateChampionship date={dataTournament.date}/>
+        <Positions positions={finalPositions} year={year}/>
         <TeamsChampionship teamsQualification={teamsQualification} teamsFinalStage={teamsFinalStage}/>
         <MatchesChampionship matches={matches}/>
         <GoalsChampionship goals={goals} goalsPerMatch={goalsPerMatch}/>

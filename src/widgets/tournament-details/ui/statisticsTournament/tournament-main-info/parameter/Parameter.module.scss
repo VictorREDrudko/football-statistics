@@ -1,17 +1,18 @@
 .parameter {
   margin-top: 5px;
-  color: var(--color-secondary-300);
+  color: var(--color-secondary-400);
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   line-height: 100%;
   text-align: left;
-  width: 135px;
+  width: 155px;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 480px) {
   .parameter {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: none;
     width: 100px;
     flex-shrink: 0;
@@ -20,9 +21,13 @@
 
 @media (max-width: 390px) {
   .parameter {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: none;
     width: 70px;
     flex-shrink: 0;
   }
+}
+
+.icon {
+  width: 30px;
 }

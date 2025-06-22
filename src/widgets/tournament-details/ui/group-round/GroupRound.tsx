@@ -1,9 +1,9 @@
 import s from './GroupRound.module.scss'
-import { sortGroupNames } from '../../model/lib/sortGroupNames'
-import { createGroupTableData } from '../../model/lib/createGroupTableData'
 import { GroupTable } from '@/entities'
 import { MatchInfo, Title } from '@/shared'
 import { MatchesByStage } from '@/entities/matchesByStage/MatchesByStage'
+import { sortGroupNames } from '../../lib/sortGroupNames'
+import { createGroupTableData } from '../../lib/createGroupTableData'
 
 type Props = {
   background: string[]
