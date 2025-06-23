@@ -2,9 +2,9 @@ import { MatchInfo, Title } from '@/shared'
 import s from './KnockoutStage.module.scss'
 import { getUniqueStage } from '../../lib/getUniqueStage'
 import { MatchesByStage } from '@/entities/matchesByStage/MatchesByStage'
-import { stage } from '@/shared/model/national-tournament/stage'
 import { Flowchart } from './flowchart/Flowchart'
 import { ConfederationCode } from '@/entities'
+import { stage } from '@/shared/model/tournament-config/tournament-stages/tournamentStages'
 
 type Props = {
   background: string[]

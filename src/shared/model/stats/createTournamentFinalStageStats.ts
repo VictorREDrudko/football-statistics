@@ -3,7 +3,7 @@ import { updateTopScorers } from './utils/updateTopScorers'
 import { createInitialTeamStats } from './utils/createInitialTeamStats'
 import { StatsScorers, StatsTeams, TournamentStats } from './types'
 import { updateTeamStats } from './utils/updateTeamStats'
-import { stage } from '../national-tournament/stage'
+import { stage } from '../tournament-config/tournament-stages/tournamentStages'
 
 export const createTournamentFinalStageStats = (confederationCode: ConfederationCode): TournamentStats => {
   const tournamentStats: TournamentStats = {}
@@ -25,7 +25,7 @@ export const createTournamentFinalStageStats = (confederationCode: Confederation
       const totalGoalsTeam2 = goalsTeam2 + goalsTeam2et
       const [goalScorerDataTeam1, goalScorerDataTeam2] = match.goals
 
-      if(!stages.includes(match.stage)) {
+      if (!stages.includes(match.stage)) {
         stages.push(match.stage)
       }
 
@@ -108,7 +108,7 @@ export const createTournamentFinalStageStats = (confederationCode: Confederation
           }
         }
       }
-      
+
       // Third-place match (third-place / fourth-place)
       if (match.stage === stage.place3 || match.stage === stage.group.finalGroup.place3) {
         if (match.score[1].length === 0) {
@@ -145,7 +145,7 @@ export const createTournamentFinalStageStats = (confederationCode: Confederation
           }
         }
       }
-      
+
       // Semi-finals
       if (match.stage === stage[1_2]) {
         team2Stats.result.semiFinal = true
@@ -188,7 +188,7 @@ export const createTournamentFinalStageStats = (confederationCode: Confederation
         matches: matchesCount,
         goals: goalsCount,
         attendance: attendanceCount,
-        stages: stages
+        stages: stages,
       },
       statsScorers: statsScorers.sort((a, b) => b.goals - a.goals),
     })

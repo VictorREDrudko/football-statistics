@@ -1,4 +1,4 @@
-import { MatchScore } from '@/shared/model/match/types';
+import { MatchScore } from '@/shared/model/tournament-config/class-match/types';
 import s from './Score.module.scss'
 import { convertMatchScore } from '@/shared/lib/helpers/convertMatchScore';
 

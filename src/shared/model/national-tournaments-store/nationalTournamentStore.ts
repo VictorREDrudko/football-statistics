@@ -58,10 +58,10 @@ import backgroundFWC2002_2 from './../../assets/backgroundsWorldCup/2002-2.png'
 import backgroundFWC2006_1 from './../../assets/backgroundsWorldCup/2006-1.png'
 import backgroundFWC2006_2 from './../../assets/backgroundsWorldCup/2006-2.png'
 import { TournamentData } from './types'
-import { stage } from './stage'
+import { stage } from '../tournament-config/tournament-stages/tournamentStages'
 import { v1 } from 'uuid'
-import { stadiumsData } from '../stadiums/stadiumsData'
-import { Match } from '../match/Match'
+import { stadiumsData } from '../stadiums-store/stadiumsStore'
+import { Match } from '../tournament-config/class-match/Match'
 
 export const worldCupData: TournamentData = {
   1930: {

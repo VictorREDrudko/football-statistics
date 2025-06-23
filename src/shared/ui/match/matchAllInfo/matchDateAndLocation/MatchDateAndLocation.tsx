@@ -1,4 +1,4 @@
-import { StadiumInfo } from '@/shared/model/match/types'
+import { StadiumInfo } from '@/shared/model/tournament-config/class-match/types'
 import s from './MatchDateAndLocation.module.scss'
 
 type Props = {

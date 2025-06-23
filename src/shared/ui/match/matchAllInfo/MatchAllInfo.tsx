@@ -1,4 +1,4 @@
-import { MatchInfo } from '@/shared/model/match/types'
+import { MatchInfo } from '@/shared/model/tournament-config/class-match/types'
 import { MatchPartialInfo } from '../matchPartialInfo/MatchPartialInfo'
 import { InfoGoals } from './infoGoals/InfoGoals'
 import s from './MatchAllInfo.module.scss'

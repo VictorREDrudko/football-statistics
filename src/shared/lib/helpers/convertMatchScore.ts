@@ -1,4 +1,4 @@
-import { MatchScore } from '../../model/match/types'
+import { MatchScore } from '../../model/tournament-config/class-match/types'
 
 export const convertMatchScore = (score: Array<number[]>): MatchScore => {
   const [goalsTeam1, goalsTeam2] = score[0]

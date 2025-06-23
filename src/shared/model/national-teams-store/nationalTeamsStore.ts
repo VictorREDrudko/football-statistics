@@ -227,7 +227,7 @@ import { teamPeru } from './teams/teams/conmebolTeams/teamPeru'
 import { teamUruguay } from './teams/teams/conmebolTeams/teamUruguay'
 import { teamVenezuela } from './teams/teams/conmebolTeams/teamVenezuela'
 
-export const teamsStore: Record<Country, Team> = {
+export const nationalTeamsStore: Record<Country, Team> = {
   Germany: teamGermany,
   England: teamEngland,
   Italy: teamItaly,

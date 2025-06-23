@@ -1,4 +1,4 @@
-import { GoalsInfo } from '@/shared/model/match/types'
+import { GoalsInfo } from '@/shared/model/tournament-config/class-match/types'
 import s from './InfoGoals.module.scss'
 
 type Props = {

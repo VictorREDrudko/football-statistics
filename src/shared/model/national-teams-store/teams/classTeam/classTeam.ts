@@ -1,11 +1,11 @@
 import { v1 } from 'uuid'
-import { AssociationDate, CountryFlags, CountryNames, TeamConstructor } from './types'
+import { AssociationDate, ConfederationCode, CountryFlags, CountryNames, TeamConstructor } from './types'
 import { DEFAULT_IS_COUNTRY_REAL, DEFAULT_RATING } from './constants'
 
 export class Team {
   readonly id: string
   readonly names: CountryNames[]
-  readonly associationIcon: string
+  readonly associationLogo: string
   readonly flags: CountryFlags[]
   readonly coatOfArms: string
   readonly associationDate: AssociationDate
@@ -14,6 +14,7 @@ export class Team {
     place: number
   }
   readonly isCountryReal: boolean
+  readonly confederation: ConfederationCode
 
   constructor({
     names,
@@ -21,12 +22,14 @@ export class Team {
     flags,
     coatOfArms,
     associationDate,
+    confederation,
     rating = DEFAULT_RATING,
-    isCountryReal = DEFAULT_IS_COUNTRY_REAL
+    isCountryReal = DEFAULT_IS_COUNTRY_REAL,
   }: TeamConstructor) {
     this.id = v1()
+    this.confederation = confederation
     this.names = names
-    this.associationIcon = associationLogo
+    this.associationLogo = associationLogo
     this.flags = flags
     this.coatOfArms = coatOfArms
     this.associationDate = associationDate

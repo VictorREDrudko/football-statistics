@@ -30,7 +30,7 @@ export type TeamConstructor = {
 
 export type ConfederationCode = 'UEFA' | 'CAF' | 'AFC' | 'CONMEBOL' | 'CONCACAF' | 'OFC'
 
-export type Country =  "Germany" |
+export type Country = "Germany" |
   "England" |
   "Italy" |
   "Spain" |

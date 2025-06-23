@@ -1,12 +1,12 @@
-import { Stage } from "./types";
+import { TournamentStages } from "./types";
 
-export const stage: Stage = {
+export const tournamentStages: TournamentStages = {
   final: '1:final',
   place3: '2:third place play-off',
-  1_2: '3:1/2 semi-final',
-  1_4: '4:1/4 quarter-finals',
-  1_8: '5:1/8 round of 16',
-  1_16: '6:1/16 round of 32',
+  1_2: '3:semi-final',
+  1_4: '4:quarter-finals',
+  1_8: '5:round of 16',
+  1_16: '6:round of 32',
   group: {
     1: 'group 1',
     2: 'group 2',

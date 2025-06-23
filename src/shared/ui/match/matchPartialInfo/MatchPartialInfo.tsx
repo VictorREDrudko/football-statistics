@@ -1,4 +1,4 @@
-import { MatchInfo } from "@/shared/model/match/types";
+import { MatchInfo } from "@/shared/model/tournament-config/class-match/types";
 import { Score } from "../score/Score";
 import { getYearFromMatchDate } from "@/shared/lib/helpers/getYearFromMatchDate";
 import { CountryTeam } from "@/shared";
