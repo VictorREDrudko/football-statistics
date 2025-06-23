@@ -162,8 +162,72 @@ import { teamSaudiArabia } from './teams/teams/afcTeams/teamSaudiArabia'
 import { teamSyria } from './teams/teams/afcTeams/teamSyria'
 import { teamUnitedArabEmirates } from './teams/teams/afcTeams/teamUnitedArabEmirates'
 import { teamYemen } from './teams/teams/afcTeams/teamYemen'
+import { teamCanada } from './teams/teams/concacafTeams/teamCanada'
+import { teamMexico } from './teams/teams/concacafTeams/teamMexico'
+import { teamAnguilla } from './teams/teams/concacafTeams/teamAnguilla'
+import { teamBelize } from './teams/teams/concacafTeams/teamBelize'
+import { teamCostaRica } from './teams/teams/concacafTeams/teamCostaRica'
+import { teamElSalvador } from './teams/teams/concacafTeams/teamElSalvador'
+import { teamGuatemala } from './teams/teams/concacafTeams/teamGuatemala'
+import { teamHonduras } from './teams/teams/concacafTeams/teamHonduras'
+import { teamNicaragua } from './teams/teams/concacafTeams/teamNicaragua'
+import { teamPanama } from './teams/teams/concacafTeams/teamPanama'
+import { teamUnitedStates } from './teams/teams/concacafTeams/teamUnitedStates'
+import { teamAntiguaAndBarbuda } from './teams/teams/concacafTeams/teamAntiguaAndBarbuda'
+import { teamAruba } from './teams/teams/concacafTeams/teamAruba'
+import { teamBahamas } from './teams/teams/concacafTeams/teamBahamas'
+import { teamBarbados } from './teams/teams/concacafTeams/teamBarbados'
+import { teamBermuda } from './teams/teams/concacafTeams/teamBermuda'
+import { teamBonaire } from './teams/teams/concacafTeams/teamBonaire'
+import { teamBritishVirginIslands } from './teams/teams/concacafTeams/teamBritishVirginIslands'
+import { teamCaymanIslands } from './teams/teams/concacafTeams/teamCaymanIslands'
+import { teamCuba } from './teams/teams/concacafTeams/teamCuba'
+import { teamCuracao } from './teams/teams/concacafTeams/teamCuracao'
+import { teamDominica } from './teams/teams/concacafTeams/teamDominica'
+import { teamDominicanRepublic } from './teams/teams/concacafTeams/teamDominicanRepublic'
+import { teamFrenchGuiana } from './teams/teams/concacafTeams/teamFrenchGuiana'
+import { teamGrenada } from './teams/teams/concacafTeams/teamGrenada'
+import { teamGuadeloupe } from './teams/teams/concacafTeams/teamGuadeloupe'
+import { teamGuyana } from './teams/teams/concacafTeams/teamGuyana'
+import { teamHaiti } from './teams/teams/concacafTeams/teamHaiti'
+import { teamJamaica } from './teams/teams/concacafTeams/teamJamaica'
+import { teamMartinique } from './teams/teams/concacafTeams/teamMartinique'
+import { teamMontserrat } from './teams/teams/concacafTeams/teamMontserrat'
+import { teamPuertoRico } from './teams/teams/concacafTeams/teamPuertoRico'
+import { teamSaintKittsAndNevis } from './teams/teams/concacafTeams/teamSaintKittsAndNevis'
+import { teamSaintLucia } from './teams/teams/concacafTeams/teamSaintLucia'
+import { teamSaintMartin } from './teams/teams/concacafTeams/teamSaintMartin'
+import { teamSaintVincentAndTheGrenadines } from './teams/teams/concacafTeams/teamSaintVincentAndTheGrenadines'
+import { teamSintMaarten } from './teams/teams/concacafTeams/teamSintMaarten'
+import { teamSuriname } from './teams/teams/concacafTeams/teamSuriname'
+import { teamTrinidadAndTobago } from './teams/teams/concacafTeams/teamTrinidadAndTobago'
+import { teamTurksAndCaicosIslands } from './teams/teams/concacafTeams/teamTurksAndCaicosIslands'
+import { teamUSVirginIslands } from './teams/teams/concacafTeams/teamUSVirginIslands'
+import { teamAmericanSamoa } from './teams/teams/ofcTeams/teamAmericanSamoa'
+import { teamCookIslands } from './teams/teams/ofcTeams/teamCookIslands'
+import { teamFiji } from './teams/teams/ofcTeams/teamFiji'
+import { teamKiribati } from './teams/teams/ofcTeams/teamKiribati'
+import { teamNewCaledonia } from './teams/teams/ofcTeams/teamNewCaledonia'
+import { teamNewZealand } from './teams/teams/ofcTeams/teamNewZealand'
+import { teamPapuaNewGuinea } from './teams/teams/ofcTeams/teamPapuaNewGuinea'
+import { teamSamoa } from './teams/teams/ofcTeams/teamSamoa'
+import { teamSolomonIslands } from './teams/teams/ofcTeams/teamSolomonIslands'
+import { teamTahiti } from './teams/teams/ofcTeams/teamTahiti'
+import { teamTonga } from './teams/teams/ofcTeams/teamTonga'
+import { teamTuvalu } from './teams/teams/ofcTeams/teamTuvalu'
+import { teamVanuatu } from './teams/teams/ofcTeams/teamVanuatu'
+import { teamArgentina } from './teams/teams/conmebolTeams/teamArgentina'
+import { teamBolivia } from './teams/teams/conmebolTeams/teamBolivia'
+import { teamBrazil } from './teams/teams/conmebolTeams/teamBrazil'
+import { teamChile } from './teams/teams/conmebolTeams/teamChile'
+import { teamColombia } from './teams/teams/conmebolTeams/teamColombia'
+import { teamEcuador } from './teams/teams/conmebolTeams/teamEcuador'
+import { teamParaguay } from './teams/teams/conmebolTeams/teamParaguay'
+import { teamPeru } from './teams/teams/conmebolTeams/teamPeru'
+import { teamUruguay } from './teams/teams/conmebolTeams/teamUruguay'
+import { teamVenezuela } from './teams/teams/conmebolTeams/teamVenezuela'
 
-export const teamsStore: Partial<Record<Country, Team>> = {
+export const teamsStore: Record<Country, Team> = {
   Germany: teamGermany,
   England: teamEngland,
   Italy: teamItaly,
@@ -252,7 +316,7 @@ export const teamsStore: Partial<Record<Country, Team>> = {
   'DR Congo': teamDRCongo,
   'Equatorial Guinea': teamEquatorialGuinea,
   Gabon: teamGabon,
-  'São Tomé and Príncipe': teamSaoTomeAndPrincipe,
+  'Sao Tome and Principe': teamSaoTomeAndPrincipe,
   Burundi: teamBurundi,
   Djibouti: teamDjibouti,
   Eritrea: teamEritrea,
@@ -284,7 +348,7 @@ export const teamsStore: Partial<Record<Country, Team>> = {
   Australia: teamAustralia,
   Brunei: teamBrunei,
   Cambodia: teamCambodia,
-  "Timor-Leste": teamTimorLeste,
+  'Timor-Leste': teamTimorLeste,
   Indonesia: teamIndonesia,
   Laos: teamLaos,
   Malaysia: teamMalaysia,
@@ -295,27 +359,27 @@ export const teamsStore: Partial<Record<Country, Team>> = {
   Vietnam: teamVietnam,
   Afghanistan: teamAfghanistan,
   Iran: teamIran,
-  "Kyrgyz Republic": teamKyrgyzRepublic,
+  'Kyrgyz Republic': teamKyrgyzRepublic,
   Tajikistan: teamTajikistan,
   Turkmenistan: teamTurkmenistan,
   Uzbekistan: teamUzbekistan,
   China: teamChina,
   Taiwan: teamTaiwan,
-  "DPR Korea": teamDPRKorea,
+  'DPR Korea': teamDPRKorea,
   Guam: teamGuam,
-  "Hong Kong": teamHongKong,
+  'Hong Kong': teamHongKong,
   Japan: teamJapan,
-  "Korea Republic": teamKoreaRepublic,
+  'Korea Republic': teamKoreaRepublic,
   Macau: teamMacau,
   Mongolia: teamMongolia,
-  "Northern Mariana Islands": teamNorthernMarianaIslands,
+  'Northern Mariana Islands': teamNorthernMarianaIslands,
   Bangladesh: teamBangladesh,
   Bhutan: teamBhutan,
   India: teamIndia,
   Maldives: teamMaldives,
   Nepal: teamNepal,
   Pakistan: teamPakistan,
-  "Sri Lanka": teamSriLanka,
+  'Sri Lanka': teamSriLanka,
   Bahrain: teamBahrain,
   Iraq: teamIraq,
   Jordan: teamJordan,
@@ -324,520 +388,75 @@ export const teamsStore: Partial<Record<Country, Team>> = {
   Oman: teamOman,
   Palestine: teamPalestine,
   Qatar: teamQatar,
-  "Saudi Arabia": teamSaudiArabia,
+  'Saudi Arabia': teamSaudiArabia,
   Syria: teamSyria,
-  "U. A. Emirates": teamUnitedArabEmirates,
+  'U. A. Emirates': teamUnitedArabEmirates,
   Yemen: teamYemen,
 
-// Canada: new NationalTeam({
-//   names: [{ nameCountry: "Canada", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagCanada, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsCanada,
-//   associationLogo: iconCanada,
-//   associationDate: { founded: "1912", fifaAffiliation: "1913", confederationAffiliation: "1961" },
-// }),
+  Canada: teamCanada,
+  Mexico: teamMexico,
+  'United States': teamUnitedStates,
+  Belize: teamBelize,
+  'Costa Rica': teamCostaRica,
+  'El Salvador': teamElSalvador,
+  Guatemala: teamGuatemala,
+  Honduras: teamHonduras,
+  Nicaragua: teamNicaragua,
+  Panama: teamPanama,
+  Anguilla: teamAnguilla,
+  'Antigua and Barbuda': teamAntiguaAndBarbuda,
+  Aruba: teamAruba,
+  Bahamas: teamBahamas,
+  Barbados: teamBarbados,
+  Bermuda: teamBermuda,
+  Bonaire: teamBonaire,
+  'British Virgin Islands': teamBritishVirginIslands,
+  'Cayman Islands': teamCaymanIslands,
+  Cuba: teamCuba,
+  Curacao: teamCuracao,
+  Dominica: teamDominica,
+  'Dominican Republic': teamDominicanRepublic,
+  'French Guiana': teamFrenchGuiana,
+  Grenada: teamGrenada,
+  Guadeloupe: teamGuadeloupe,
+  Guyana: teamGuyana,
+  Haiti: teamHaiti,
+  Jamaica: teamJamaica,
+  Martinique: teamMartinique,
+  Montserrat: teamMontserrat,
+  'Puerto Rico': teamPuertoRico,
+  'Saint Kitts and Nevis': teamSaintKittsAndNevis,
+  'Saint Lucia': teamSaintLucia,
+  'Saint Martin': teamSaintMartin,
+  'Saint Vincent and the Grenadines': teamSaintVincentAndTheGrenadines,
+  'Sint Maarten': teamSintMaarten,
+  Suriname: teamSuriname,
+  'Trinidad & Tobago': teamTrinidadAndTobago,
+  'Turks and Caicos Islands': teamTurksAndCaicosIslands,
+  'U.S. Virgin Islands': teamUSVirginIslands,
 
-// Mexico: new NationalTeam({
-//   names: [{ nameCountry: "Mexico", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagMexico, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsMexico,
-//   associationLogo: iconMexico,
-//   associationDate: { founded: "1922", fifaAffiliation: "1929", confederationAffiliation: "1961" },
-// }),
+  'American Samoa': teamAmericanSamoa,
+  'Cook Islands': teamCookIslands,
+  Fiji: teamFiji,
+  Kiribati: teamKiribati,
+  'New Caledonia': teamNewCaledonia,
+  'New Zealand': teamNewZealand,
+  'Papua New Guinea': teamPapuaNewGuinea,
+  Samoa: teamSamoa,
+  'Solomon Islands': teamSolomonIslands,
+  Tahiti: teamTahiti,
+  Tonga: teamTonga,
+  Tuvalu: teamTuvalu,
+  Vanuatu: teamVanuatu,
 
-// "United States": new NationalTeam({
-//   names: [{ nameCountry: "United States", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagUnitedStates, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsUnitedStates,
-//   associationLogo: iconUnitedStates,
-//   associationDate: { founded: "1913", fifaAffiliation: "1914", confederationAffiliation: "1961" },
-// }),
-
-// Belize: new NationalTeam({
-//   names: [{ nameCountry: "Belize", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagBelize, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsBelize,
-//   associationLogo: iconBelize,
-//   associationDate: { founded: "1980", fifaAffiliation: "1986", confederationAffiliation: "1986" },
-// }),
-
-// "Costa Rica": new NationalTeam({
-//   names: [{ nameCountry: "Costa Rica", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagCostaRica, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsCostaRica,
-//   associationLogo: iconCostaRica,
-//   associationDate: { founded: "1921", fifaAffiliation: "1927", confederationAffiliation: "1961" },
-// }),
-
-// "El Salvador": new NationalTeam({
-//   names: [{ nameCountry: "El Salvador", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagElSalvador, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsElSalvador,
-//   associationLogo: iconElSalvador,
-//   associationDate: { founded: "1935", fifaAffiliation: "1938", confederationAffiliation: "1961" },
-// }),
-
-// Guatemala: new NationalTeam({
-//   names: [{ nameCountry: "Guatemala", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagGuatemala, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsGuatemala,
-//   associationLogo: iconGuatemala,
-//   associationDate: { founded: "1919", fifaAffiliation: "1946", confederationAffiliation: "1961" },
-// }),
-
-// Honduras: new NationalTeam({
-//   names: [{ nameCountry: "Honduras", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagHonduras, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsHonduras,
-//   associationLogo: iconHonduras,
-//   associationDate: { founded: "1935", fifaAffiliation: "1946", confederationAffiliation: "1961" },
-// }),
-
-// Nicaragua: new NationalTeam({
-//   names: [{ nameCountry: "Nicaragua", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagNicaragua, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsNicaragua,
-//   associationLogo: iconNicaragua,
-//   associationDate: { founded: "1931", fifaAffiliation: "1950", confederationAffiliation: "1961" },
-// }),
-
-// Panama: new NationalTeam({
-//   names: [{ nameCountry: "Panama", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagPanama, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsPanama,
-//   associationLogo: iconPanama,
-//   associationDate: { founded: "1937", fifaAffiliation: "1938", confederationAffiliation: "1961" },
-// }),
-
-// Anguilla: new NationalTeam({
-//   names: [{ nameCountry: "Anguilla", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagAnguilla, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsAnguilla,
-//   associationLogo: iconAnguilla,
-//   associationDate: { founded: "1990", fifaAffiliation: "1996", confederationAffiliation: "1996" },
-// }),
-
-// "Antigua and Barbuda": new NationalTeam({
-//   names: [{ nameCountry: "Antigua and Barbuda", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagAntiguaAndBarbuda, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsAntiguaAndBarbuda,
-//   associationLogo: iconAntiguaAndBarbuda,
-//   associationDate: { founded: "1928", fifaAffiliation: "1972", confederationAffiliation: "1961" },
-// }),
-
-// Aruba: new NationalTeam({
-//   names: [{ nameCountry: "Aruba", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagAruba, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsAruba,
-//   associationLogo: iconAruba,
-//   associationDate: { founded: "1932", fifaAffiliation: "1988", confederationAffiliation: "1986" },
-// }),
-
-// Bahamas: new NationalTeam({
-//   names: [{ nameCountry: "Bahamas", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagBahamas, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsBahamas,
-//   associationLogo: iconBahamas,
-//   associationDate: { founded: "1967", fifaAffiliation: "1968", confederationAffiliation: "1961" },
-// }),
-
-// Barbados: new NationalTeam({
-//   names: [{ nameCountry: "Barbados", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagBarbados, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsBarbados,
-//   associationLogo: iconBarbados,
-//   associationDate: { founded: "1910", fifaAffiliation: "1968", confederationAffiliation: "1967" },
-// }),
-
-// Bermuda: new NationalTeam({
-//   names: [{ nameCountry: "Bermuda", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagBermuda, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsBermuda,
-//   associationLogo: iconBermuda,
-//   associationDate: { founded: "1928", fifaAffiliation: "1962", confederationAffiliation: "1967" },
-// }),
-
-// Bonaire: new NationalTeam({
-//   names: [{ nameCountry: "Bonaire", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagBonaire, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsBonaire,
-//   associationLogo: iconBonaire,
-//   associationDate: { founded: "1960", fifaAffiliation: "-", confederationAffiliation: "2014" },
-// }),
-
-// "British Virgin Islands": new NationalTeam({
-//   names: [{ nameCountry: "British Virgin Islands", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagBritishVirginIslands, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsBritishVirginIslands,
-//   associationLogo: iconBritishVirginIslands,
-//   associationDate: { founded: "1974", fifaAffiliation: "1996", confederationAffiliation: "1996" },
-// }),
-
-// "Cayman Islands": new NationalTeam({
-//   names: [{ nameCountry: "Cayman Islands", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagCaymanIslands, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsCaymanIslands,
-//   associationLogo: iconCaymanIslands,
-//   associationDate: { founded: "1966", fifaAffiliation: "1992", confederationAffiliation: "1990" },
-// }),
-
-// Cuba: new NationalTeam({
-//   names: [{ nameCountry: "Cuba", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagCuba, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsCuba,
-//   associationLogo: iconCuba,
-//   associationDate: { founded: "1924", fifaAffiliation: "1929", confederationAffiliation: "1961" },
-// }),
-
-// Curaçao: new NationalTeam({
-//   names: [{ nameCountry: "Curaçao", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagCuracao, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsCuracao,
-//   associationLogo: iconCuracao,
-//   associationDate: { founded: "1990", fifaAffiliation: "1996", confederationAffiliation: "1996" },
-// }),
-
-// Dominica: new NationalTeam({
-//   names: [{ nameCountry: "Dominica", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagDominica, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsDominica,
-//   associationLogo: iconDominica,
-//   associationDate: { founded: "1970", fifaAffiliation: "1994", confederationAffiliation: "1994" },
-// }),
-
-// "Dominican Republic": new NationalTeam({
-//   names: [{ nameCountry: "Dominican Republic", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagDominicanRepublic, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsDominicanRepublic,
-//   associationLogo: iconDominicanRepublic,
-//   associationDate: { founded: "1953", fifaAffiliation: "1958", confederationAffiliation: "1964" },
-// }),
-
-// "French Guiana": new NationalTeam({
-//   names: [{ nameCountry: "French Guiana", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagFrenchGuiana, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsFrenchGuiana,
-//   associationLogo: iconFrenchGuiana,
-//   associationDate: { founded: "1962", fifaAffiliation: "-", confederationAffiliation: "2013" },
-// }),
-
-// Grenada: new NationalTeam({
-//   names: [{ nameCountry: "Grenada", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagGrenada, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsGrenada,
-//   associationLogo: iconGrenada,
-//   associationDate: { founded: "1924", fifaAffiliation: "1978", confederationAffiliation: "1978" },
-// }),
-
-// Guadeloupe: new NationalTeam({
-//   names: [{ nameCountry: "Guadeloupe", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagGuadeloupe, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsGuadeloupe,
-//   associationLogo: iconGuadeloupe,
-//   associationDate: { founded: "1958", fifaAffiliation: "-", confederationAffiliation: "2013" },
-// }),
-
-// Guyana: new NationalTeam({
-//   names: [{ nameCountry: "Guyana", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagGuyana, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsGuyana,
-//   associationLogo: iconGuyana,
-//   associationDate: { founded: "1902", fifaAffiliation: "1970", confederationAffiliation: "1969" },
-// }),
-
-// Haiti: new NationalTeam({
-//   names: [{ nameCountry: "Haiti", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagHaiti, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsHaiti,
-//   associationLogo: iconHaiti,
-//   associationDate: { founded: "1904", fifaAffiliation: "1934", confederationAffiliation: "1961" },
-// }),
-
-// Jamaica: new NationalTeam({
-//   names: [{ nameCountry: "Jamaica", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagJamaica, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsJamaica,
-//   associationLogo: iconJamaica,
-//   associationDate: { founded: "1910", fifaAffiliation: "1962", confederationAffiliation: "1963" },
-// }),
-
-// Martinique: new NationalTeam({
-//   names: [{ nameCountry: "Martinique", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagMartinique, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsMartinique,
-//   associationLogo: iconMartinique,
-//   associationDate: { founded: "1953", fifaAffiliation: "-", confederationAffiliation: "2013" },
-// }),
-
-// Montserrat: new NationalTeam({
-//   names: [{ nameCountry: "Montserrat", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagMontserrat, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsMontserrat,
-//   associationLogo: iconMontserrat,
-//   associationDate: { founded: "1994", fifaAffiliation: "1996", confederationAffiliation: "1996" },
-// }),
-
-// "Puerto Rico": new NationalTeam({
-//   names: [{ nameCountry: "Puerto Rico", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagPuertoRico, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsPuertoRico,
-//   associationLogo: iconPuertoRico,
-//   associationDate: { founded: "1940", fifaAffiliation: "1960", confederationAffiliation: "1964" },
-// }),
-
-// "Saint Kitts and Nevis": new NationalTeam({
-//   names: [{ nameCountry: "Saint Kitts and Nevis", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagSaintKittsAndNevis, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsSaintKittsAndNevis,
-//   associationLogo: iconSaintKittsAndNevis,
-//   associationDate: { founded: "1932", fifaAffiliation: "1992", confederationAffiliation: "1992" },
-// }),
-
-// "Saint Lucia": new NationalTeam({
-//   names: [{ nameCountry: "Saint Lucia", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagSaintLucia, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsSaintLucia,
-//   associationLogo: iconSaintLucia,
-//   associationDate: { founded: "1979", fifaAffiliation: "1988", confederationAffiliation: "1986" },
-// }),
-
-// "Saint Martin": new NationalTeam({
-//   names: [{ nameCountry: "Saint Martin", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagSaintMartin, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsSaintMartin,
-//   associationLogo: iconSaintMartin,
-//   associationDate: { founded: "1999", fifaAffiliation: "-", confederationAffiliation: "2013" },
-// }),
-
-// "Saint Vincent and the Grenadines": new NationalTeam({
-//   names: [{ nameCountry: "Saint Vincent and the Grenadines", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagSaintVincentAndTheGrenadines, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsSaintVincentAndTheGrenadines,
-//   associationLogo: iconSaintVincentAndTheGrenadines,
-//   associationDate: { founded: "1979", fifaAffiliation: "1988", confederationAffiliation: "1986" },
-// }),
-
-// "Sint Maarten": new NationalTeam({
-//   names: [{ nameCountry: "Sint Maarten", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagSintMaarten, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsSintMaarten,
-//   associationLogo: iconSintMaarten,
-//   associationDate: { founded: "1986", fifaAffiliation: "-", confederationAffiliation: "2013" },
-// }),
-
-// Suriname: new NationalTeam({
-//   names: [{ nameCountry: "Suriname", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagSuriname, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsSuriname,
-//   associationLogo: iconSuriname,
-//   associationDate: { founded: "1920", fifaAffiliation: "1929", confederationAffiliation: "1961" },
-// }),
-
-// "Trinidad & Tobago": new NationalTeam({
-//   names: [{ nameCountry: "Trinidad & Tobago", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagTrinidadAndTobago, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsTrinidadAndTobago,
-//   associationLogo: iconTrinidadAndTobago,
-//   associationDate: { founded: "1908", fifaAffiliation: "1964", confederationAffiliation: "1964" },
-// }),
-
-// "Turks and Caicos Islands": new NationalTeam({
-//   names: [{ nameCountry: "Turks and Caicos Islands", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagTurksAndCaicosIslands, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsTurksAndCaicosIslands,
-//   associationLogo: iconTurksAndCaicosIslands,
-//   associationDate: { founded: "1996", fifaAffiliation: "1998", confederationAffiliation: "1996" },
-// }),
-
-// "U.S. Virgin Islands": new NationalTeam({
-//   names: [{ nameCountry: "U.S. Virgin Islands", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagUSVirginIslands, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsUSVirginIslands,
-//   associationLogo: iconUSVirginIslands,
-//   associationDate: { founded: "1987", fifaAffiliation: "1998", confederationAffiliation: "1987" },
-// }),
-
-// "American Samoa": new NationalTeam({
-//   names: [{ nameCountry: "American Samoa", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagAmericanSamoa, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsAmericanSamoa,
-//   associationLogo: iconAmericanSamoa,
-//   associationDate: { founded: "1984", fifaAffiliation: "1998", confederationAffiliation: "1998" },
-// }),
-
-// "Cook Islands": new NationalTeam({
-//   names: [{ nameCountry: "Cook Islands", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagCookIslands, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsCookIslands,
-//   associationLogo: iconCookIslands,
-//   associationDate: { founded: "1971", fifaAffiliation: "1994", confederationAffiliation: "1994" },
-// }),
-
-// Fiji: new NationalTeam({
-//   names: [{ nameCountry: "Fiji", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagFiji, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsFiji,
-//   associationLogo: iconFiji,
-//   associationDate: { founded: "1938", fifaAffiliation: "1964", confederationAffiliation: "1966" },
-// }),
-
-// Kiribati: new NationalTeam({
-//   names: [{ nameCountry: "Kiribati", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagKiribati, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsKiribati,
-//   associationLogo: iconKiribati,
-//   associationDate: { founded: "1980", fifaAffiliation: "-", confederationAffiliation: "2007" },
-// }),
-
-// "New Caledonia": new NationalTeam({
-//   names: [{ nameCountry: "New Caledonia", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagNewCaledonia, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsNewCaledonia,
-//   associationLogo: iconNewCaledonia,
-//   associationDate: { founded: "1928", fifaAffiliation: "2004", confederationAffiliation: "1999" },
-// }),
-
-// "New Zealand": new NationalTeam({
-//   names: [{ nameCountry: "New Zealand", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagNewZealand, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsNewZealand,
-//   associationLogo: iconNewZealand,
-//   associationDate: { founded: "1891", fifaAffiliation: "1948", confederationAffiliation: "1966" },
-// }),
-
-// "Papua New Guinea": new NationalTeam({
-//   names: [{ nameCountry: "Papua New Guinea", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagPapuaNewGuinea, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsPapuaNewGuinea,
-//   associationLogo: iconPapuaNewGuinea,
-//   associationDate: { founded: "1962", fifaAffiliation: "1966", confederationAffiliation: "1966" },
-// }),
-
-// Samoa: new NationalTeam({
-//   names: [{ nameCountry: "Samoa", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagSamoa, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsSamoa,
-//   associationLogo: iconSamoa,
-//   associationDate: { founded: "1968", fifaAffiliation: "1986", confederationAffiliation: "1986" },
-// }),
-
-// "Solomon Islands": new NationalTeam({
-//   names: [{ nameCountry: "Solomon Islands", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagSolomonIslands, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsSolomonIslands,
-//   associationLogo: iconSolomonIslands,
-//   associationDate: { founded: "1979", fifaAffiliation: "1988", confederationAffiliation: "1988" },
-// }),
-
-// Tahiti: new NationalTeam({
-//   names: [{ nameCountry: "Tahiti", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagTahiti, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsTahiti,
-//   associationLogo: iconTahiti,
-//   associationDate: { founded: "1989", fifaAffiliation: "1990", confederationAffiliation: "1990" },
-// }),
-
-// Tonga: new NationalTeam({
-//   names: [{ nameCountry: "Tonga", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagTonga, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsTonga,
-//   associationLogo: iconTonga,
-//   associationDate: { founded: "1965", fifaAffiliation: "1994", confederationAffiliation: "1994" },
-// }),
-
-// Tuvalu: new NationalTeam({
-//   names: [{ nameCountry: "Tuvalu", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagTuvalu, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsTuvalu,
-//   associationLogo: iconTuvalu,
-//   associationDate: { founded: "1979", fifaAffiliation: "-", confederationAffiliation: "2006" },
-// }),
-
-// Vanuatu: new NationalTeam({
-//   names: [{ nameCountry: "Vanuatu", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagVanuatu, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsVanuatu,
-//   associationLogo: iconVanuatu,
-//   associationDate: { founded: "1934", fifaAffiliation: "1988", confederationAffiliation: "1988" },
-// }),
-
-// Argentina: new NationalTeam({
-//   names: [{ nameCountry: "Argentina", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagArgentina, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsArgentina,
-//   associationLogo: iconArgentina,
-//   associationDate: { founded: "1893", fifaAffiliation: "1912", confederationAffiliation: "1916" },
-// }),
-
-// Bolivia: new NationalTeam({
-//   names: [{ nameCountry: "Bolivia", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagBolivia, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsBolivia,
-//   associationLogo: iconBolivia,
-//   associationDate: { founded: "1925", fifaAffiliation: "1926", confederationAffiliation: "1926" },
-// }),
-
-// Brazil: new NationalTeam({
-//   names: [{ nameCountry: "Brazil", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagBrazil, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsBrazil,
-//   associationLogo: iconBrazil,
-//   associationDate: { founded: "1914", fifaAffiliation: "1923", confederationAffiliation: "1916" },
-// }),
-
-// Chile: new NationalTeam({
-//   names: [{ nameCountry: "Chile", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagChile, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsChile,
-//   associationLogo: iconChile,
-//   associationDate: { founded: "1895", fifaAffiliation: "1913", confederationAffiliation: "1916" },
-// }),
-
-// Colombia: new NationalTeam({
-//   names: [{ nameCountry: "Colombia", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagColombia, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsColombia,
-//   associationLogo: iconColombia,
-//   associationDate: { founded: "1924", fifaAffiliation: "1936", confederationAffiliation: "1936" },
-// }),
-
-// Ecuador: new NationalTeam({
-//   names: [{ nameCountry: "Ecuador", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagEcuador, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsEcuador,
-//   associationLogo: iconEcuador,
-//   associationDate: { founded: "1925", fifaAffiliation: "1926", confederationAffiliation: "1927" },
-// }),
-
-// Paraguay: new NationalTeam({
-//   names: [{ nameCountry: "Paraguay", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagParaguay, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsParaguay,
-//   associationLogo: iconParaguay,
-//   associationDate: { founded: "1906", fifaAffiliation: "1925", confederationAffiliation: "1921" },
-// }),
-
-// Peru: new NationalTeam({
-//   names: [{ nameCountry: "Peru", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagPeru, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsPeru,
-//   associationLogo: iconPeru,
-//   associationDate: { founded: "1922", fifaAffiliation: "1924", confederationAffiliation: "1925" },
-// }),
-
-// Uruguay: new NationalTeam({
-//   names: [{ nameCountry: "Uruguay", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagUruguay, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsUruguay,
-//   associationLogo: iconUruguay,
-//   associationDate: { founded: "1900", fifaAffiliation: "1923", confederationAffiliation: "1916" },
-// }),
-
-// Venezuela: new NationalTeam({
-//   names: [{ nameCountry: "Venezuela", period: "0000-p.t." }],
-//   flags: [{ countryFlag: flagVenezuela, period: "0000-p.t." }],
-//   coatOfArms: coatOfArmsVenezuela,
-//   associationLogo: iconVenezuela,
-//   associationDate: { founded: "1925", fifaAffiliation: "1952", confederationAffiliation: "1953" },
-// }),
+  Argentina: teamArgentina,
+  Bolivia: teamBolivia,
+  Brazil: teamBrazil,
+  Chile: teamChile,
+  Colombia: teamColombia,
+  Ecuador: teamEcuador,
+  Paraguay: teamParaguay,
+  Peru: teamPeru,
+  Uruguay: teamUruguay,
+  Venezuela: teamVenezuela,
 }

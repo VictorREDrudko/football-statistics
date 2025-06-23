@@ -117,7 +117,7 @@ export type Country =  "Germany" |
   "DR Congo" |
   "Equatorial Guinea" |
   "Gabon" |
-  "São Tomé and Príncipe" |
+  "Sao Tome and Principe" |
   "Burundi" |
   "Djibouti" |
   "Eritrea" |
@@ -212,7 +212,7 @@ export type Country =  "Germany" |
   "British Virgin Islands" |
   "Cayman Islands" |
   "Cuba" |
-  "Curaçao" |
+  "Curacao" |
   "Dominica" |
   "Dominican Republic" |
   "French Guiana" |
