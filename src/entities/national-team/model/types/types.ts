@@ -1,4 +1,4 @@
-import { TournamentData } from "@/shared"
+import { TournamentData } from '@/shared'
 
 export type ConfederationCode = 'UEFA' | 'CAF' | 'AFC' | 'CONMEBOL' | 'CONCACAF' | 'OFC' | 'FIFA'
 
@@ -31,7 +31,7 @@ export type AssociationDate = {
   confederationAffiliation: string
 }
 
-// type teams grouped by Confederations
+// type teams groupEd by Confederations
 export type TeamsByConfederation = {
   [name in ConfederationCode]: string[]
 }

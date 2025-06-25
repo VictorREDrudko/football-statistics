@@ -1,85 +1,91 @@
+import { StadiumsData } from '../types'
 import { Stadium } from '../class-stadium/Stadium'
-import { CountryStadiums } from '../types'
+import { Country } from '../../national-teams-store/teams/classTeam/types'
 
-export const stadiumsArgentina: CountryStadiums = {
-  country: 'Argentina',
-  stadiums: {
-    riverPlate: new Stadium(
-      [
-        { title: 'Estadio Monumental', period: '1938-p.t.' },
-        { title: 'Estadio Mâs Monumental', period: '2023-p.t.' },
+const country: Country = 'Argentina'
+
+export const stadiumsArgentina: StadiumsData = {
+  riverPlate: new Stadium(
+    {
+      location: { city: 'Buenos Aires', country },
+      names: [
+        { name: 'Estadio Monumental', period: '1938-p.t.' },
+        { name: 'Estadio Mâs Monumental', period: '2023-p.t.' },
       ],
-      'Buenos Aires',
-      '84 567',
-      ['1938', '1958', '1978', '2019', '2023'],
-      {
-        isActive: true,
-        homeTeam: ['River Plate', 'Argentina national team'],
-        imageUrl: '',
-      }
-    ),
+    },
+    true,
+    '84 567',
+    '1938',
+    ['1958', '1978', '2019', '2023'],
+    ['River Plate', 'Argentina national team'],
+    []
+  ),
 
-    amalfitani: new Stadium(
-      [{ title: 'Estadio José Amalfitani', period: '1951-p.t.' }],
-      'Buenos Aires',
-      '49 540',
-      ['1951', '1978', '2008'],
-      {
-        isActive: true,
-        homeTeam: ['Vélez Sársfield'],
-        imageUrl: '',
-      }
-    ),
+  amalfitani: new Stadium(
+    {
+      location: { city: 'Buenos Aires', country },
+      names: [{ name: 'Estadio José Amalfitani', period: '1951-p.t.' }],
+    },
+    true,
+    '49 540',
+    '1951',
+    ['1978', '2008'],
+    ['Vélez Sársfield'],
+    []
+  ),
 
-    olympic: new Stadium(
-      [{ title: 'Estadio Olímpico Chateau Carreras', period: '1978-p.t.' }],
-      'Córdoba',
-      '57 000',
-      ['1978', '2011'],
-      {
-        isActive: true,
-        homeTeam: ['Instituto', 'Talleres (occasional)'],
-        imageUrl: '',
-      }
-    ),
+  olympic: new Stadium(
+    {
+      location: { city: 'Córdoba', country },
+      names: [{ name: 'Estadio Olímpico Chateau Carreras', period: '1978-p.t.' }],
+    },
+    true,
+    '57 000',
+    '1978',
+    ['2011'],
+    ['Instituto', 'Talleres (occasional)'],
+    []
+  ),
 
-    worldCup: new Stadium(
-      [{ title: 'Estadio Ciudad de La Plata', period: '2003-p.t.' }],
-      'La Plata, Buenos Aires Province',
-      '53 000',
-      ['2003', '2011'],
-      {
-        isActive: true,
-        homeTeam: ['Estudiantes LP', 'Gimnasia LP'],
-        imageUrl: '',
-      }
-    ),
+  worldCup: new Stadium(
+    {
+      location: { city: 'La Plata, Buenos Aires Province', country },
+      names: [{ name: 'Estadio Ciudad de La Plata', period: '2003-p.t.' }],
+    },
+    true,
+    '53 000',
+    '2003',
+    ['2011'],
+    ['Estudiantes LP', 'Gimnasia LP'],
+    []
+  ),
 
-    rosario: new Stadium(
-      [
-        { title: 'Estadio Gigante de Arroyito', period: '1929-p.t.' },
-        { title: 'Estadio Dr. Lisandro de la Torre', period: '1939-p.t.' },
+  rosario: new Stadium(
+    {
+      location: { city: 'Rosario', country },
+      names: [
+        { name: 'Estadio Gigante de Arroyito', period: '1929-p.t.' },
+        { name: 'Estadio Dr. Lisandro de la Torre', period: '1939-p.t.' },
       ],
-      'Rosario',
-      '41 654',
-      ['1929', '1957', '1978', '2019'],
-      {
-        isActive: true,
-        homeTeam: ['Rosario Central'],
-        imageUrl: '',
-      }
-    ),
+    },
+    true,
+    '41 654',
+    '1929',
+    ['1957', '1978', '2019'],
+    ['Rosario Central'],
+    []
+  ),
 
-    mendoza: new Stadium(
-      [{ title: 'Estadio Malvinas Argentinas', period: '1978-p.t.' }],
-      'Mendoza',
-      '42 000',
-      ['1978', '2001', '2011'],
-      {
-        isActive: true,
-        homeTeam: ['Godoy Cruz (occasional)'],
-        imageUrl: '',
-      }
-    ),
-  },
+  mendoza: new Stadium(
+    {
+      location: { city: 'Mendoza', country },
+      names: [{ name: 'Estadio Malvinas Argentinas', period: '1978-p.t.' }],
+    },
+    true,
+    '42 000',
+    '1978',
+    ['2001', '2011'],
+    ['Godoy Cruz (occasional)'],
+    []
+  ),
 }

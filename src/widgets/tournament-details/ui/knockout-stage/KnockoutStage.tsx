@@ -4,7 +4,7 @@ import { getUniqueStage } from '../../lib/getUniqueStage'
 import { MatchesByStage } from '@/entities/matchesByStage/MatchesByStage'
 import { Flowchart } from './flowchart/Flowchart'
 import { ConfederationCode } from '@/entities'
-import { stage } from '@/shared/model/tournament-config/tournament-stages/tournamentStages'
+import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/tournamentStages'
 
 type Props = {
   background: string[]
@@ -16,11 +16,11 @@ export const KnockoutStage = ({background, matches, organizationCode} : Props) =
   const uniqueStages = getUniqueStage(matches)
   const isEvenNumberStages = uniqueStages.length % 2 === 0
 
-  const finalMatch = matches.filter(match => match.stage === stage.final)
-  const thirdPlaceMatch = matches.filter(match => match.stage === stage.place3)
+  const finalMatch = matches.filter(match => match.stage === tournamentStages.final)
+  const thirdPlaceMatch = matches.filter(match => match.stage === tournamentStages.place3)
   const regularStages = isEvenNumberStages 
     ? uniqueStages 
-    : uniqueStages.filter(stageName => ![stage.final, stage.place3].includes(stageName))
+    : uniqueStages.filter(stageName => ![tournamentStages.final, tournamentStages.place3].includes(stageName))
 
   const renderRegularStages = regularStages.map((stageName) => {
     const stageMatches = matches.filter(match => match.stage === stageName)
@@ -36,13 +36,13 @@ export const KnockoutStage = ({background, matches, organizationCode} : Props) =
     <div className={s.containerStage}>
       {finalMatch && (
         <>
-          <Title title={stage.final.split(":")[1]} variant='sub-stage'/>
+          <Title title={tournamentStages.final.split(":")[1]} variant='sub-stage'/>
           <MatchesByStage matches={finalMatch}/>
         </>
       )}
       {thirdPlaceMatch && (
         <div className={s.thirdPlaceContainer}>
-          <Title title={stage.place3.split(":")[1]} variant='sub-stage'/>
+          <Title title={tournamentStages.place3.split(":")[1]} variant='sub-stage'/>
           <MatchesByStage matches={thirdPlaceMatch}/>
         </div>
       )}

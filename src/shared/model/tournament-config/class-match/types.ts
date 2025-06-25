@@ -1,10 +1,12 @@
+import { NamesStadium } from "../../stadiums-store/types";
+
 export type GoalsInfo = {
   playersScoredGoal: string[];
   timeGoals: string[];
 };
 
 export type StadiumInfo = {
-  title: string;
+  names: NamesStadium[];
   city: string;
   country: string;
   attendance: string;

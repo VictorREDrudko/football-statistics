@@ -1,68 +1,46 @@
+import { StadiumsData } from '../types'
 import { Stadium } from '../class-stadium/Stadium'
-import { CountryStadiums } from '../types'
+import { Country } from '../../national-teams-store/teams/classTeam/types'
 
-export const stadiumsUruguay: CountryStadiums = {
-  country: 'Uruguay',
-  stadiums: {
-    centenario: new Stadium(
-      [
-        {
-          title: 'Estadio Centenario',
-          period: '1930-p.t.',
-        },
-      ],
-      'Montevideo',
-      '60 235',
-      ['1930', '1983', '2005', '2011', '2021'], 
-      {
-        isActive: true,
-        homeTeam: [
-          'Uruguay national team',
-          'Montevideo City Torque (2020-2023)',
-          'Peñarol (selected matches)'
-        ],
-        imageUrl: '',
-      }
-    ),
+const country: Country = 'Uruguay'
 
-    parqueCentral: new Stadium(
-      [
-        {
-          title: 'Estadio Gran Parque Central',
-          period: '1900-p.t.',
-        },
-      ],
-      'Montevideo',
-      '34 000', 
-      ['1900', '1911', '1944', '1974', '2005', '2022'], 
-      {
-        isActive: true,
-        homeTeam: [
-          'Club Nacional de Football (main)',
-          'Uruguay national team (occasional)'
-        ],
-        imageUrl: '',
-      }
-    ),
+export const stadiumsUruguay: StadiumsData = {
+  centenario: new Stadium(
+    {
+      location: { city: 'Montevideo', country },
+      names: [{ name: 'Estadio Centenario', period: '1930-p.t.' }],
+    },
+    true,
+    '60 235',
+    '1930',
+    ['1983', '2005', '2011', '2021'],
+    ['Uruguay national team', 'Peñarol (selected matches)'],
+    []
+  ),
 
-    pocitos: new Stadium(
-      [
-        {
-          title: 'Estadio Pocitos',
-          period: '1921-1933',
-        },
-      ],
-      'Montevideo',
-      '10 000', 
-      ['1921'],
-      {
-        isActive: false,
-        homeTeam: [
-          'CA Peñarol (1921-1933)',
-          'Uruguay national team (1920s)'
-        ],
-        imageUrl: '',
-      }
-    ),
-  },
+  parqueCentral: new Stadium(
+    {
+      location: { city: 'Montevideo', country },
+      names: [{ name: 'Estadio Gran Parque Central', period: '1900-p.t.' }],
+    },
+    true,
+    '34 000',
+    '1900',
+    ['1911', '1944', '1974', '2005', '2022'],
+    ['Club Nacional de Football (main)', 'Uruguay national team (occasional)'],
+    []
+  ),
+
+  pocitos: new Stadium(
+    {
+      location: { city: 'Montevideo', country },
+      names: [{ name: 'Estadio Pocitos', period: '1921-1933' }],
+    },
+    false,
+    '10 000',
+    '1921',
+    [],
+    ['CA Peñarol (1921-1933)', 'Uruguay national team (1920s)'],
+    []
+  ),
 }

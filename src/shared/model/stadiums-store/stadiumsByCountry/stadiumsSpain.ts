@@ -1,202 +1,237 @@
+import { Country } from '../../national-teams-store/teams/classTeam/types'
 import { Stadium } from '../class-stadium/Stadium'
-import { CountryStadiums } from '../types'
+import { StadiumsData } from '../types'
 
-export const stadiumsSpain: CountryStadiums = {
-  country: 'Spain',
-  stadiums: {
-    campNou: new Stadium(
-      [{ title: 'Camp Nou', period: '1957-p.t.' }],
-      'Barcelona',
-      '99 354',
-      ['1957', '1982', '1994', '2008', '2023'],
-      {
-        isActive: true,
-        homeTeam: ['FC Barcelona'],
-        imageUrl: '',
-      }
-    ),
+const country: Country = 'Spain'
 
-    sarria: new Stadium([{ title: 'Estadi de Sarrià', period: '1923-1997' }], 'Barcelona', '44 000', ['1923', '1982'], {
-      isActive: false,
-      homeTeam: ['RCD Espanyol (historical)'],
-      imageUrl: '',
-    }),
+export const stadiumsSpain: StadiumsData = {
+  campNou: new Stadium(
+    {
+      location: { city: 'Barcelona', country },
+      names: [{ name: 'Camp Nou', period: '1957-p.t.' }],
+    },
+    true,
+    '99 354',
+    '1957',
+    ['1982', '1994', '2008', '2023'],
+    ['FC Barcelona'],
+    []
+  ),
 
-    bernabeu: new Stadium(
-      [{ title: 'Santiago Bernabéu', period: '1947-p.t.' }],
-      'Madrid',
-      '85 000',
-      ['1947', '1982', '1994', '2006', '2023'],
-      {
-        isActive: true,
-        homeTeam: ['Real Madrid'],
-        imageUrl: '',
-      }
-    ),
+  sarria: new Stadium(
+    {
+      location: { city: 'Barcelona', country },
+      names: [{ name: 'Estadi de Sarrià', period: '1923-1997' }],
+    },
+    false,
+    '44 000',
+    '1923',
+    ['1982'],
+    ['RCD Espanyol (historical)'],
+    []
+  ),
 
-    calderon: new Stadium(
-      [{ title: 'Vicente Calderón', period: '1966-2019' }],
-      'Madrid',
-      '54 907',
-      ['1966', '1982', '2011'],
-      {
-        isActive: false,
-        homeTeam: ['Atlético Madrid (historical)'],
-        imageUrl: '',
-      }
-    ),
+  bernabeu: new Stadium(
+    {
+      location: { city: 'Madrid', country },
+      names: [{ name: 'Santiago Bernabéu', period: '1947-p.t.' }],
+    },
+    true,
+    '85 000',
+    '1947',
+    ['1982', '1994', '2006', '2023'],
+    ['Real Madrid'],
+    []
+  ),
 
-    pizjuan: new Stadium(
-      [{ title: 'Ramón Sánchez Pizjuán', period: '1958-p.t.' }],
-      'Seville',
-      '43 883',
-      ['1958', '1982', '2016'],
-      {
-        isActive: true,
-        homeTeam: ['Sevilla FC'],
-        imageUrl: '',
-      }
-    ),
+  calderon: new Stadium(
+    {
+      location: { city: 'Madrid', country },
+      names: [{ name: 'Vicente Calderón', period: '1966-2019' }],
+    },
+    false,
+    '54 907',
+    '1966',
+    ['1982', '2011'],
+    ['Atlético Madrid (historical)'],
+    []
+  ),
 
-    villamarin: new Stadium(
-      [{ title: 'Benito Villamarín', period: '1929-p.t.' }],
-      'Seville',
-      '60 721',
-      ['1929', '1982', '2017', '2020'],
-      {
-        isActive: true,
-        homeTeam: ['Real Betis'],
-        imageUrl: '',
-      }
-    ),
+  pizjuan: new Stadium(
+    {
+      location: { city: 'Seville', country },
+      names: [{ name: 'Ramón Sánchez Pizjuán', period: '1958-p.t.' }],
+    },
+    true,
+    '43 883',
+    '1958',
+    ['1982', '2016'],
+    ['Sevilla FC'],
+    []
+  ),
 
-    nuevo: new Stadium(
-      [{ title: 'Estadio Manuel Martínez Valero', period: '1976-p.t.' }],
-      'Elche',
-      '33 732',
-      ['1976', '2004'],
-      {
-        isActive: true,
-        homeTeam: ['Elche CF'],
-        imageUrl: '',
-      }
-    ),
+  villamarin: new Stadium(
+    {
+      location: { city: 'Seville', country },
+      names: [{ name: 'Benito Villamarín', period: '1929-p.t.' }],
+    },
+    true,
+    '60 721',
+    '1929',
+    ['1982', '2017', '2020'],
+    ['Real Betis'],
+    []
+  ),
 
-    casanova: new Stadium(
-      [
-        { title: 'Estadio Luis Casanova', period: '1923-1994' },
-        { title: 'Estadio Mestalla', period: '1994-p.t.' },
+  nuevo: new Stadium(
+    {
+      location: { city: 'Elche', country },
+      names: [{ name: 'Estadio Manuel Martínez Valero', period: '1976-p.t.' }],
+    },
+    true,
+    '33 732',
+    '1976',
+    ['2004'],
+    ['Elche CF'],
+    []
+  ),
+
+  casanova: new Stadium(
+    {
+      location: { city: 'Valencia', country },
+      names: [
+        { name: 'Estadio Luis Casanova', period: '1923-1994' },
+        { name: 'Estadio Mestalla', period: '1994-p.t.' },
       ],
-      'Valencia',
-      '55 000',
-      ['1923', '1957', '1982', '2001', '2013'],
-      {
-        isActive: true,
-        homeTeam: ['Valencia CF'],
-        imageUrl: '',
-      }
-    ),
+    },
+    true,
+    '55 000',
+    '1923',
+    ['1957', '1982', '2001', '2013'],
+    ['Valencia CF'],
+    []
+  ),
 
-    mames: new Stadium(
-      [
-        { title: 'San Mamés (old)', period: '1913-2013' },
-        { title: 'San Mamés (new)', period: '2013-p.t.' },
+  mames: new Stadium(
+    {
+      location: { city: 'Bilbao', country },
+      names: [
+        { name: 'San Mamés (old)', period: '1913-2013' },
+        { name: 'San Mamés (new)', period: '2013-p.t.' },
       ],
-      'Bilbao',
-      '53 331',
-      ['1913', '1952', '1982', '2013'],
-      {
-        isActive: true,
-        homeTeam: ['Athletic Bilbao'],
-        imageUrl: '',
-      }
-    ),
+    },
+    true,
+    '53 331',
+    '1913',
+    ['1952', '1982', '2013'],
+    ['Athletic Bilbao'],
+    []
+  ),
 
-    molinon: new Stadium([{ title: 'El Molinón', period: '1908-p.t.' }], 'Gijón', '30 000', ['1908', '1982', '2010'], {
-      isActive: true,
-      homeTeam: ['Sporting de Gijón'],
-      imageUrl: '',
-    }),
+  molinon: new Stadium(
+    {
+      location: { city: 'Gijón', country },
+      names: [{ name: 'El Molinón', period: '1908-p.t.' }],
+    },
+    true,
+    '30 000',
+    '1908',
+    ['1982', '2010'],
+    ['Sporting de Gijón'],
+    []
+  ),
 
-    rosaleda: new Stadium(
-      [{ title: 'La Rosaleda', period: '1941-p.t.' }],
-      'Málaga',
-      '30 044',
-      ['1941', '1982', '2000', '2011'],
-      {
-        isActive: true,
-        homeTeam: ['Málaga CF'],
-        imageUrl: '',
-      }
-    ),
+  rosaleda: new Stadium(
+    {
+      location: { city: 'Málaga', country },
+      names: [{ name: 'La Rosaleda', period: '1941-p.t.' }],
+    },
+    true,
+    '30 044',
+    '1941',
+    ['1982', '2000', '2011'],
+    ['Málaga CF'],
+    []
+  ),
 
-    romareda: new Stadium(
-      [{ title: 'La Romareda', period: '1957-p.t.' }],
-      'Zaragoza',
-      '33 608',
-      ['1957', '1982', '1994', '2013'],
-      {
-        isActive: true,
-        homeTeam: ['Real Zaragoza'],
-        imageUrl: '',
-      }
-    ),
+  romareda: new Stadium(
+    {
+      location: { city: 'Zaragoza', country },
+      names: [{ name: 'La Romareda', period: '1957-p.t.' }],
+    },
+    true,
+    '33 608',
+    '1957',
+    ['1982', '1994', '2013'],
+    ['Real Zaragoza'],
+    []
+  ),
 
-    riazor: new Stadium([{ title: 'Riazor', period: '1944-p.t.' }], 'A Coruña', '32 912', ['1944', '1982', '1995'], {
-      isActive: true,
-      homeTeam: ['Deportivo La Coruña'],
-      imageUrl: '',
-    }),
+  riazor: new Stadium(
+    {
+      location: { city: 'A Coruña', country },
+      names: [{ name: 'Riazor', period: '1944-p.t.' }],
+    },
+    true,
+    '32 912',
+    '1944',
+    ['1982', '1995'],
+    ['Deportivo La Coruña'],
+    []
+  ),
 
-    balaidos: new Stadium(
-      [{ title: 'Balaídos', period: '1928-p.t.' }],
-      'Vigo',
-      '29 000',
-      ['1928', '1982', '2004', '2018'],
-      {
-        isActive: true,
-        homeTeam: ['Celta Vigo'],
-        imageUrl: '',
-      }
-    ),
+  balaidos: new Stadium(
+    {
+      location: { city: 'Vigo', country },
+      names: [{ name: 'Balaídos', period: '1928-p.t.' }],
+    },
+    true,
+    '29 000',
+    '1928',
+    ['1982', '2004', '2018'],
+    ['Celta Vigo'],
+    []
+  ),
 
-    tartiere: new Stadium(
-      [
-        { title: 'Carlos Tartiere (old)', period: '1932-2000' },
-        { title: 'Carlos Tartiere (new)', period: '2000-p.t.' },
+  tartiere: new Stadium(
+    {
+      location: { city: 'Oviedo', country },
+      names: [
+        { name: 'Carlos Tartiere (old)', period: '1932-2000' },
+        { name: 'Carlos Tartiere (new)', period: '2000-p.t.' },
       ],
-      'Oviedo',
-      '30 500',
-      ['1932', '1982', '2000'],
-      {
-        isActive: true,
-        homeTeam: ['Real Oviedo'],
-        imageUrl: '',
-      }
-    ),
+    },
+    true,
+    '30 500',
+    '1932',
+    ['1982', '2000'],
+    ['Real Oviedo'],
+    []
+  ),
 
-    perez: new Stadium(
-      [{ title: 'José Rico Pérez', period: '1974-p.t.' }],
-      'Alicante',
-      '29 500',
-      ['1974', '1999', '2013'],
-      {
-        isActive: true,
-        homeTeam: ['Hércules CF'],
-        imageUrl: '',
-      }
-    ),
+  perez: new Stadium(
+    {
+      location: { city: 'Alicante', country },
+      names: [{ name: 'José Rico Pérez', period: '1974-p.t.' }],
+    },
+    true,
+    '29 500',
+    '1974',
+    ['1999', '2013'],
+    ['Hércules CF'],
+    []
+  ),
 
-    zorrilla: new Stadium(
-      [{ title: 'José Zorrilla', period: '1982-p.t.' }],
-      'Valladolid',
-      '27 846',
-      ['1982', '2000', '2018'],
-      {
-        isActive: true,
-        homeTeam: ['Real Valladolid'],
-        imageUrl: '',
-      }
-    ),
-  },
+  zorrilla: new Stadium(
+    {
+      location: { city: 'Valladolid', country },
+      names: [{ name: 'José Zorrilla', period: '1982-p.t.' }],
+    },
+    true,
+    '27 846',
+    '1982',
+    ['2000', '2018'],
+    ['Real Valladolid'],
+    []
+  ),
 }

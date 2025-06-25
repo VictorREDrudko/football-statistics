@@ -1,29 +1,35 @@
 import { Country } from '../national-teams-store/teams/classTeam/types'
 
 export type Stadiums = {
-  [countryKey in Country]: CountryStadiums
+  [countryKey in Country]: StadiumsData
 }
 
-export type CountryStadiums = {
-  country: Country
-  stadiums: StadiumsData
+export type StadiumsData = {
+  [stadiumKey: string]: StadiumType
 }
 
-type StadiumsData = {
-  [stadiumKey: string]: Stadium
-}
-
-type Stadium = {
-  titles: TitlesStadium[]
+type StadiumType = {
+  id: string
+  locationAndNames: LocationAndNamesStadium
   isActive: boolean
-  city: string
   capacity: string
-  builtYear: string[]
+  openedYear: string
+  renovated: string[]
   homeTeam: string[]
-  imageUrl: string
+  imageUrl: string[]
 }
 
-export type TitlesStadium = {
-  title: string
+export type LocationAndNamesStadium = {
+  names: NamesStadium[]
+  location: LocationStadium
+}
+
+export type NamesStadium = {
+  name: string
   period: string
+}
+
+type LocationStadium = {
+  city: string
+  country: Country
 }

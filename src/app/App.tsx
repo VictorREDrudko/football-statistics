@@ -2,8 +2,13 @@ import './App.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Header } from '@/widgets';
 import { AboutPage, NationalTeams, NationalTournaments, StartPage, TournamentChampionships, TournamentFinalStage } from '@/pages';
+import { stadiumsStore } from '@/shared/model/stadiums-store/stadiumsStore';
+import { worldCupStore } from '@/shared/model/national-tournaments-store/world-cup/worldCupStore';
+
 
 function App() {
+  console.log(stadiumsStore)
+  console.log(worldCupStore)
 	return (
     <>
       <Header/>

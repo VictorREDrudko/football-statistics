@@ -1,124 +1,140 @@
+import { StadiumsData } from '../types'
 import { Stadium } from '../class-stadium/Stadium'
-import { CountryStadiums } from '../types'
+import { Country } from '../../national-teams-store/teams/classTeam/types'
 
-export const stadiumsJapan: CountryStadiums = {
-  country: 'Japan',
-  stadiums: {
-    yokohama: new Stadium(
-      [{ title: 'International Stadium Yokohama', period: '1998-p.t.' }],
-      'Yokohama',
-      '72 327',
-      ['1998', '2002', '2017', '2022'],
-      {
-        isActive: true,
-        homeTeam: ['Yokohama F. Marinos', 'Japan national team'],
-        imageUrl: '',
-      }
-    ),
+const country: Country = 'Japan'
 
-    saitama: new Stadium(
-      [{ title: 'Saitama Stadium 2002', period: '2001-p.t.' }],
-      'Saitama',
-      '63 700',
-      ['2001', '2018'],
-      {
-        isActive: true,
-        homeTeam: ['Urawa Red Diamonds'],
-        imageUrl: '',
-      }
-    ),
+export const stadiumsJapan: StadiumsData = {
+  yokohama: new Stadium(
+    {
+      location: { city: 'Yokohama', country },
+      names: [{ name: 'International Stadium Yokohama', period: '1998-p.t.' }],
+    },
+    true,
+    '72 327',
+    '1998',
+    ['2002', '2017', '2022'],
+    ['Yokohama F. Marinos', 'Japan national team'],
+    []
+  ),
 
-    shizuoka: new Stadium(
-      [{ title: 'Shizuoka Stadium ECOPA', period: '2001-p.t.' }],
-      'Fukuroi, Shizuoka',
-      '50 889',
-      ['2001', '2019'],
-      {
-        isActive: true,
-        homeTeam: ['Júbilo Iwata', 'Shimizu S-Pulse'],
-        imageUrl: '',
-      }
-    ),
+  saitama: new Stadium(
+    {
+      location: { city: 'Saitama', country },
+      names: [{ name: 'Saitama Stadium 2002', period: '2001-p.t.' }],
+    },
+    true,
+    '63 700',
+    '2001',
+    ['2018'],
+    ['Urawa Red Diamonds'],
+    []
+  ),
 
-    nagai: new Stadium(
-      [
-        { title: 'Nagai Stadium (original)', period: '1964-1995' },
-        { title: 'Yanmar Stadium Nagai', period: '1996-p.t.' },
+  shizuoka: new Stadium(
+    {
+      location: { city: 'Fukuroi, Shizuoka', country },
+      names: [{ name: 'Shizuoka Stadium ECOPA', period: '2001-p.t.' }],
+    },
+    true,
+    '50 889',
+    '2001',
+    ['2019'],
+    ['Júbilo Iwata', 'Shimizu S-Pulse'],
+    []
+  ),
+
+  nagai: new Stadium(
+    {
+      location: { city: 'Osaka', country },
+      names: [
+        { name: 'Nagai Stadium (original)', period: '1964-1995' },
+        { name: 'Yanmar Stadium Nagai', period: '1996-p.t.' },
       ],
-      'Osaka',
-      '47 853',
-      ['1964', '1996', '2007', '2018'],
-      {
-        isActive: true,
-        homeTeam: ['Cerezo Osaka'],
-        imageUrl: '',
-      }
-    ),
+    },
+    true,
+    '47 853',
+    '1964',
+    ['1996', '2007', '2018'],
+    ['Cerezo Osaka'],
+    []
+  ),
 
-    miyagi: new Stadium(
-      [{ title: 'Miyagi Stadium', period: '2000-p.t.' }],
-      'Rifu, Miyagi',
-      '49 133',
-      ['2000', '2016'],
-      {
-        isActive: true,
-        homeTeam: ['Vegalta Sendai'],
-        imageUrl: '',
-      }
-    ),
+  miyagi: new Stadium(
+    {
+      location: { city: 'Rifu, Miyagi', country },
+      names: [{ name: 'Miyagi Stadium', period: '2000-p.t.' }],
+    },
+    true,
+    '49 133',
+    '2000',
+    ['2016'],
+    ['Vegalta Sendai'],
+    []
+  ),
 
-    oita: new Stadium([{ title: 'Ōita Bank Dome', period: '2001-p.t.' }], 'Ōita', '40 000', ['2001', '2014', '2020'], {
-      isActive: true,
-      homeTeam: ['Ōita Trinita'],
-      imageUrl: '',
-    }),
+  oita: new Stadium(
+    {
+      location: { city: 'Ōita', country },
+      names: [{ name: 'Ōita Bank Dome', period: '2001-p.t.' }],
+    },
+    true,
+    '40 000',
+    '2001',
+    ['2014', '2020'],
+    ['Ōita Trinita'],
+    []
+  ),
 
-    niigata: new Stadium(
-      [{ title: 'Denka Big Swan Stadium', period: '2001-p.t.' }],
-      'Niigata',
-      '42 300',
-      ['2001', '2017'],
-      {
-        isActive: true,
-        homeTeam: ['Albirex Niigata'],
-        imageUrl: '',
-      }
-    ),
+  niigata: new Stadium(
+    {
+      location: { city: 'Niigata', country },
+      names: [{ name: 'Denka Big Swan Stadium', period: '2001-p.t.' }],
+    },
+    true,
+    '42 300',
+    '2001',
+    ['2017'],
+    ['Albirex Niigata'],
+    []
+  ),
 
-    kashima: new Stadium(
-      [{ title: 'Kashima Soccer Stadium', period: '1993-p.t.' }],
-      'Kashima, Ibaraki',
-      '40 728',
-      ['1993', '2001', '2016'],
-      {
-        isActive: true,
-        homeTeam: ['Kashima Antlers'],
-        imageUrl: '',
-      }
-    ),
+  kashima: new Stadium(
+    {
+      location: { city: 'Kashima, Ibaraki', country },
+      names: [{ name: 'Kashima Soccer Stadium', period: '1993-p.t.' }],
+    },
+    true,
+    '40 728',
+    '1993',
+    ['2001', '2016'],
+    ['Kashima Antlers'],
+    []
+  ),
 
-    kobe: new Stadium(
-      [{ title: 'Noevir Stadium Kobe', period: '2001-p.t.' }],
-      'Kobe',
-      '30 132',
-      ['2001', '2013', '2021'],
-      {
-        isActive: true,
-        homeTeam: ['Vissel Kobe'],
-        imageUrl: '',
-      }
-    ),
+  kobe: new Stadium(
+    {
+      location: { city: 'Kobe', country },
+      names: [{ name: 'Noevir Stadium Kobe', period: '2001-p.t.' }],
+    },
+    true,
+    '30 132',
+    '2001',
+    ['2013', '2021'],
+    ['Vissel Kobe'],
+    []
+  ),
 
-    sapporo: new Stadium(
-      [{ title: 'Sapporo Dome', period: '2001-p.t.' }],
-      'Sapporo',
-      '41 484',
-      ['2001', '2016', '2022'],
-      {
-        isActive: true,
-        homeTeam: ['Hokkaido Consadole Sapporo'],
-        imageUrl: '',
-      }
-    ),
-  },
+  sapporo: new Stadium(
+    {
+      location: { city: 'Sapporo', country },
+      names: [{ name: 'Sapporo Dome', period: '2001-p.t.' }],
+    },
+    true,
+    '41 484',
+    '2001',
+    ['2016', '2022'],
+    ['Hokkaido Consadole Sapporo'],
+    []
+  ),
 }

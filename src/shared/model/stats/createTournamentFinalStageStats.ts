@@ -3,7 +3,7 @@ import { updateTopScorers } from './utils/updateTopScorers'
 import { createInitialTeamStats } from './utils/createInitialTeamStats'
 import { StatsScorers, StatsTeams, TournamentStats } from './types'
 import { updateTeamStats } from './utils/updateTeamStats'
-import { stage } from '../tournament-config/tournament-stages/tournamentStages'
+import { tournamentStages } from '../tournament-config/tournament-stages/tournamentStages'
 
 export const createTournamentFinalStageStats = (confederationCode: ConfederationCode): TournamentStats => {
   const tournamentStats: TournamentStats = {}
@@ -73,7 +73,7 @@ export const createTournamentFinalStageStats = (confederationCode: Confederation
 
       // update result
       // Final (champion / second place)
-      if (match.stage === stage.final || match.stage === stage.group.finalGroup.final) {
+      if (match.stage === tournamentStages.final || match.stage === tournamentStages.group.finalGroup.final) {
         if (match.score[1].length === 0) {
           if (goalsTeam1 > goalsTeam2) {
             team1Stats.result.champion = true
@@ -110,7 +110,7 @@ export const createTournamentFinalStageStats = (confederationCode: Confederation
       }
 
       // Third-place match (third-place / fourth-place)
-      if (match.stage === stage.place3 || match.stage === stage.group.finalGroup.place3) {
+      if (match.stage === tournamentStages.place3 || match.stage === tournamentStages.group.finalGroup.place3) {
         if (match.score[1].length === 0) {
           if (goalsTeam1 > goalsTeam2) {
             team1Stats.result.thirdPlace = true
@@ -147,35 +147,35 @@ export const createTournamentFinalStageStats = (confederationCode: Confederation
       }
 
       // Semi-finals
-      if (match.stage === stage[1_2]) {
+      if (match.stage === tournamentStages[1_2]) {
         team2Stats.result.semiFinal = true
         team1Stats.result.semiFinal = true
       }
 
       // Quarter-finals
-      if (match.stage === stage[1_4]) {
+      if (match.stage === tournamentStages[1_4]) {
         team2Stats.result.quarterFinal = true
         team1Stats.result.quarterFinal = true
       }
 
       // Round of 16 (1/8 finals)
-      if (match.stage === stage[1_8]) {
+      if (match.stage === tournamentStages[1_8]) {
         team2Stats.result.round16 = true
         team1Stats.result.round16 = true
       }
 
       // Round of 32 (1/16 finals)
-      if (match.stage === stage[1_16]) {
+      if (match.stage === tournamentStages[1_16]) {
         team2Stats.result.round32 = true
         team1Stats.result.round32 = true
       }
 
       // Second group round
       if (
-        match.stage === stage.group.finalGroup.a ||
-        match.stage === stage.group.finalGroup.b ||
-        match.stage === stage.group.finalGroup.c ||
-        match.stage === stage.group.finalGroup.d
+        match.stage === tournamentStages.group.finalGroup.a ||
+        match.stage === tournamentStages.group.finalGroup.b ||
+        match.stage === tournamentStages.group.finalGroup.c ||
+        match.stage === tournamentStages.group.finalGroup.d
       ) {
         team2Stats.result.secondGroupStage = true
         team1Stats.result.secondGroupStage = true

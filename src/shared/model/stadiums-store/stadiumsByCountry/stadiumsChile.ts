@@ -1,55 +1,59 @@
+import { Country } from '../../national-teams-store/teams/classTeam/types'
 import { Stadium } from '../class-stadium/Stadium'
-import { CountryStadiums } from '../types'
+import { StadiumsData } from '../types'
 
-export const stadiumsChile: CountryStadiums = {
-  country: 'Chile',
-  stadiums: {
-    nacional: new Stadium(
-      [{ title: 'Estadio Nacional', period: '1938-p.t.' }],
-      'Santiago',
-      '48 665',
-      ['1938', '1962', '2008', '2010'],
-      {
-        isActive: true,
-        homeTeam: ['Chile national team', 'Universidad de Chile', 'Colo-Colo'],
-        imageUrl: '',
-      }
-    ),
+const country: Country = 'Chile'
 
-    sausalito: new Stadium(
-      [{ title: 'Estadio Sausalito', period: '1929-p.t.' }],
-      'Viña del Mar',
-      '23 423',
-      ['1929', '1962', '2015'],
-      {
-        isActive: true,
-        homeTeam: ['Everton de Viña del Mar'],
-        imageUrl: '',
-      }
-    ),
+export const stadiumsChile: StadiumsData = {
+  nacional: new Stadium(
+    {
+      location: { city: 'Santiago', country },
+      names: [{ name: 'Estadio Nacional', period: '1938-p.t.' }],
+    },
+    true,
+    '48 665',
+    '1938',
+    ['1962', '2008', '2010'],
+    ['Chile national team', 'Universidad de Chile', 'Colo-Colo'],
+    []
+  ),
 
-    teniente: new Stadium(
-      [{ title: 'Estadio El Teniente', period: '1945-p.t.' }],
-      'Rancagua',
-      '15 252',
-      ['1945', '1962', '2014'],
-      {
-        isActive: true,
-        homeTeam: ['O’Higgins'],
-        imageUrl: '',
-      }
-    ),
+  sausalito: new Stadium(
+    {
+      location: { city: 'Viña del Mar', country },
+      names: [{ name: 'Estadio Sausalito', period: '1929-p.t.' }],
+    },
+    true,
+    '23 423',
+    '1929',
+    ['1962', '2015'],
+    ['Everton de Viña del Mar'],
+    []
+  ),
 
-    dittborn: new Stadium(
-      [{ title: 'Estadio Carlos Dittborn', period: '1962-p.t.' }],
-      'Arica',
-      '14 373',
-      ['1962', '2016'],
-      {
-        isActive: true,
-        homeTeam: ['San Marcos de Arica'],
-        imageUrl: '',
-      }
-    ),
-  },
+  teniente: new Stadium(
+    {
+      location: { city: 'Rancagua', country },
+      names: [{ name: 'Estadio El Teniente', period: '1945-p.t.' }],
+    },
+    true,
+    '15 252',
+    '1945',
+    ['1962', '2014'],
+    ["O'Higgins"],
+    []
+  ),
+
+  dittborn: new Stadium(
+    {
+      location: { city: 'Arica', country },
+      names: [{ name: 'Estadio Carlos Dittborn', period: '1962-p.t.' }],
+    },
+    true,
+    '14 373',
+    '1962',
+    ['2016'],
+    ['San Marcos de Arica'],
+    []
+  ),
 }

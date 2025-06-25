@@ -1,34 +1,31 @@
-import { TitlesStadium } from '../types'
+import { v1 } from 'uuid'
+import { LocationAndNamesStadium } from '../types'
 
 export class Stadium {
-  titles: TitlesStadium[]
+  id: string
+  locationAndNames: LocationAndNamesStadium
   isActive: boolean
-  city: string
   capacity: string
-  builtYear: string[]
+  openedYear: string
+  renovated: string[]
   homeTeam: string[]
-  imageUrl: string
+  imageUrl: string[]
 
   constructor(
-    titles: TitlesStadium[],
-    city: string,
+    locationAndNames: LocationAndNamesStadium,
+    isActive: boolean,
     capacity: string,
-    builtYear: string[],
-    {
-      isActive = true,
-      homeTeam = [''],
-      imageUrl = '',
-    }: {
-      isActive?: boolean
-      homeTeam?: string[]
-      imageUrl?: string
-    } = {} // дефолтный пустой объект
+    openedYear: string,
+    renovated: string[],
+    homeTeam: string[],
+    imageUrl: string[]
   ) {
-    this.titles = titles
+    this.id = v1()
+    this.locationAndNames = locationAndNames
     this.isActive = isActive
-    this.city = city
     this.capacity = capacity
-    this.builtYear = builtYear
+    this.openedYear = openedYear
+    this.renovated = renovated
     this.homeTeam = homeTeam
     this.imageUrl = imageUrl
   }

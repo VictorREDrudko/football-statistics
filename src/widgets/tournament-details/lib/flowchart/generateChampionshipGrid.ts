@@ -1,7 +1,7 @@
 import { MatchInfo } from '@/shared'
 import { changeScoreMatchesReplay } from './changeScoreMatchesReplay'
 import { deleteMatchesReplay } from './deleteMatchesReplay'
-import { stage } from '@/shared/model/tournament-config/tournament-stages/tournamentStages'
+import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/tournamentStages'
 
 // сортировка матчей внутри стадий (формирование сетки турнира)
 export const generateChampionshipGrid = (matchesByStage: MatchInfo[][], stages: string[]) => {
@@ -9,19 +9,19 @@ export const generateChampionshipGrid = (matchesByStage: MatchInfo[][], stages: 
   const grid: MatchInfo[][] = []
 
   const matches = matchesByStage.flat()
-  const finalMatch = matches.filter((match) => match.stage === stage.final)
-  const thirdPlaceMatch = matches.filter((match) => match.stage === stage.place3)
-  const semiFinalsMatches = matches.filter((match) => match.stage === stage[1_2])
-  const quarterFinalsMatches = matches.filter((match) => match.stage === stage[1_4])
-  const roundOf16Matches = matches.filter((match) => match.stage === stage[1_8])
+  const finalMatch = matches.filter((match) => match.stage === tournamentStages.final)
+  const thirdPlaceMatch = matches.filter((match) => match.stage === tournamentStages.place3)
+  const semiFinalsMatches = matches.filter((match) => match.stage === tournamentStages[1_2])
+  const quarterFinalsMatches = matches.filter((match) => match.stage === tournamentStages[1_4])
+  const roundOf16Matches = matches.filter((match) => match.stage === tournamentStages[1_8])
 
   // Option 1: stages includes final and the match for 3rd place (2 stages)
-  if (numberStages === 2 && stages.includes(stage.place3)) {
+  if (numberStages === 2 && stages.includes(tournamentStages.place3)) {
     grid.push(finalMatch, thirdPlaceMatch)
   }
 
   // Option 2: stages includes final and semi-final (2 stages)
-  if (numberStages === 2 && !stages.includes(stage.place3)) {
+  if (numberStages === 2 && !stages.includes(tournamentStages.place3)) {
     grid.push(finalMatch, semiFinalsMatches)
   }
 

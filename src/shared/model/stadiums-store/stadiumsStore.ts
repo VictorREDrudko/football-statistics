@@ -15,7 +15,7 @@ import { stadiumsUSA } from './stadiumsByCountry/stadiumsUnitedStates'
 import { stadiumsUruguay } from './stadiumsByCountry/stadiumsUruguay'
 import { Stadiums } from './types'
 
-export const stadiumsData: Partial<Stadiums> = {
+export const stadiumsStore: Partial<Stadiums> = {
   Uruguay: stadiumsUruguay,
   Italy: stadiumsItaly,
   France: stadiumsFrance,
@@ -32,11 +32,3 @@ export const stadiumsData: Partial<Stadiums> = {
   "Korea Republic": stadiumsSouthKorea,
   Japan: stadiumsJapan,
 }
-
-// noMatch: {
-//   noPlace: {
-//     title: '',
-//     city: '',
-//     country: '',
-//   },
-// },

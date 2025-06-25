@@ -1,100 +1,114 @@
+import { Country } from '../../national-teams-store/teams/classTeam/types'
 import { Stadium } from '../class-stadium/Stadium'
-import { CountryStadiums } from '../types'
+import { StadiumsData } from '../types'
 
-export const stadiumsEngland: CountryStadiums = {
-  country: 'England',
-  stadiums: {
-    wembley: new Stadium(
-      [
-        { title: 'Wembley Stadium (original)', period: '1923-2000' },
-        { title: 'Wembley Stadium (new)', period: '2007-p.t.' },
+const country: Country = 'England'
+
+export const stadiumsEngland: StadiumsData = {
+  wembley: new Stadium(
+    {
+      location: { city: 'London', country },
+      names: [
+        { name: 'Wembley Stadium (original)', period: '1923-2000' },
+        { name: 'Wembley Stadium (new)', period: '2007-p.t.' },
       ],
-      'London',
-      '90 000',
-      ['1923', '1963', '2007'],
-      {
-        isActive: true,
-        homeTeam: ['England national team'],
-        imageUrl: '',
-      }
-    ),
+    },
+    true,
+    '90 000',
+    '1923',
+    ['1963', '2007'],
+    ['England national team'],
+    []
+  ),
 
-    city: new Stadium([{ title: 'White City Stadium', period: '1908-1985' }], 'London', '68 000', ['1908', '1931'], {
-      isActive: false,
-      homeTeam: [],
-      imageUrl: '',
-    }),
+  city: new Stadium(
+    {
+      location: { city: 'London', country },
+      names: [{ name: 'White City Stadium', period: '1908-1985' }],
+    },
+    false,
+    '68 000',
+    '1908',
+    ['1931'],
+    [],
+    []
+  ),
 
-    oldTrafford: new Stadium(
-      [{ title: 'Old Trafford', period: '1910-p.t.' }],
-      'Manchester',
-      '74 310',
-      ['1910', '1949', '1996', '2006'],
-      {
-        isActive: true,
-        homeTeam: ['Manchester United'],
-        imageUrl: '',
-      }
-    ),
+  oldTrafford: new Stadium(
+    {
+      location: { city: 'Manchester', country },
+      names: [{ name: 'Old Trafford', period: '1910-p.t.' }],
+    },
+    true,
+    '74 310',
+    '1910',
+    ['1949', '1996', '2006'],
+    ['Manchester United'],
+    []
+  ),
 
-    goodison: new Stadium(
-      [{ title: 'Goodison Park', period: '1892-p.t.' }],
-      'Liverpool',
-      '39 414',
-      ['1892', '1926', '1961', '1994'],
-      {
-        isActive: true,
-        homeTeam: ['Everton'],
-        imageUrl: '',
-      }
-    ),
+  goodison: new Stadium(
+    {
+      location: { city: 'Liverpool', country },
+      names: [{ name: 'Goodison Park', period: '1892-p.t.' }],
+    },
+    true,
+    '39 414',
+    '1892',
+    ['1926', '1961', '1994'],
+    ['Everton'],
+    []
+  ),
 
-    villa: new Stadium(
-      [{ title: 'Villa Park', period: '1897-p.t.' }],
-      'Birmingham',
-      '42 682',
-      ['1897', '1913', '1976', '1994', '2000'],
-      {
-        isActive: true,
-        homeTeam: ['Aston Villa'],
-        imageUrl: '',
-      }
-    ),
+  villa: new Stadium(
+    {
+      location: { city: 'Birmingham', country },
+      names: [{ name: 'Villa Park', period: '1897-p.t.' }],
+    },
+    true,
+    '42 682',
+    '1897',
+    ['1913', '1976', '1994', '2000'],
+    ['Aston Villa'],
+    []
+  ),
 
-    hillsborough: new Stadium(
-      [{ title: 'Hillsborough Stadium', period: '1899-p.t.' }],
-      'Sheffield',
-      '39 732',
-      ['1899', '1913', '1966', '1989', '1996'],
-      {
-        isActive: true,
-        homeTeam: ['Sheffield Wednesday'],
-        imageUrl: '',
-      }
-    ),
+  hillsborough: new Stadium(
+    {
+      location: { city: 'Sheffield', country },
+      names: [{ name: 'Hillsborough Stadium', period: '1899-p.t.' }],
+    },
+    true,
+    '39 732',
+    '1899',
+    ['1913', '1966', '1989', '1996'],
+    ['Sheffield Wednesday'],
+    []
+  ),
 
-    roker: new Stadium(
-      [{ title: 'Roker Park', period: '1898-1997' }],
-      'Sunderland',
-      '42 000',
-      ['1898', '1929', '1952', '1980'],
-      {
-        isActive: false,
-        homeTeam: ['Sunderland (historical)'],
-        imageUrl: '',
-      }
-    ),
+  roker: new Stadium(
+    {
+      location: { city: 'Sunderland', country },
+      names: [{ name: 'Roker Park', period: '1898-1997' }],
+    },
+    false,
+    '42 000',
+    '1898',
+    ['1929', '1952', '1980'],
+    ['Sunderland (historical)'],
+    []
+  ),
 
-    ayresome: new Stadium(
-      [{ title: 'Ayresome Park', period: '1903-1995' }],
-      'Middlesbrough',
-      '40 000',
-      ['1903', '1927', '1957', '1986'],
-      {
-        isActive: false,
-        homeTeam: ['Middlesbrough (historical)'],
-        imageUrl: '',
-      }
-    ),
-  },
+  ayresome: new Stadium(
+    {
+      location: { city: 'Middlesbrough', country },
+      names: [{ name: 'Ayresome Park', period: '1903-1995' }],
+    },
+    false,
+    '40 000',
+    '1903',
+    ['1927', '1957', '1986'],
+    ['Middlesbrough (historical)'],
+    []
+  ),
 }

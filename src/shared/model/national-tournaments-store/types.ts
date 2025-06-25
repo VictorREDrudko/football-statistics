@@ -1,18 +1,23 @@
-import { Match } from '../../../entities/match/model/types'
+import { Country } from "../national-teams-store/teams/classTeam/types"
+import { MatchInfo } from "../tournament-config/class-match/types"
 
 export type TournamentInfo = {
   id: string
   title: string
   date: string
-  icon: string
+  logo: string
   background: string[]
-  hostCountry: string[]
-  finalStage: Match[]
-  qualification: Match[] | []
+  hostCountry: Country[]
+  finalStage: MatchInfo[]
+  qualification: MatchInfo[]
 }
 
 export type TournamentData = {
   [key in string]: TournamentInfo
+}
+
+export type NationalTournaments = {
+  worldCup: TournamentData
 }
 
 // export type NodesItem = {
@@ -29,39 +34,3 @@ export type TournamentData = {
 //   sourcePosition: Position
 //   className: string
 // }
-
-export type Stage = {
-  final: string
-  place3: string
-  1_2: string
-  1_4: string
-  1_8: string
-  1_16: string
-  group: {
-    1: string
-    2: string
-    3: string
-    4: string
-    5: string
-    6: string
-    7: string
-    8: string
-    a: string
-    b: string
-    c: string
-    d: string
-    e: string
-    f: string
-    g: string
-    h: string
-    finalGroup: {
-      group: string
-      final: string
-      place3: string
-      a: string
-      b: string
-      c: string
-      d: string
-    }
-  }
-}

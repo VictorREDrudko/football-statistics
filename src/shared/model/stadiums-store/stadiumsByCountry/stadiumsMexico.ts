@@ -1,151 +1,163 @@
+import { Country } from '../../national-teams-store/teams/classTeam/types'
 import { Stadium } from '../class-stadium/Stadium'
-import { CountryStadiums } from '../types'
+import { StadiumsData } from '../types'
 
-export const stadiumsMexico: CountryStadiums = {
-  country: 'Mexico',
-  stadiums: {
-    azteca: new Stadium(
-      [{ title: 'Estadio Azteca', period: '1966-p.t.' }],
-      'Mexico City',
-      '87 523',
-      ['1966', '1985', '1999', '2013', '2016'],
-      {
-        isActive: true,
-        homeTeam: ['Club América', 'Mexico national team'],
-        imageUrl: '',
-      }
-    ),
+const country: Country = 'Mexico'
 
-    olimpico: new Stadium(
-      [{ title: 'Estadio Olímpico Universitario', period: '1952-p.t.' }],
-      'Mexico City',
-      '72 000',
-      ['1952', '1968', '1990', '2010'],
-      {
-        isActive: true,
-        homeTeam: ['UNAM Pumas'],
-        imageUrl: '',
-      }
-    ),
+export const stadiumsMexico: StadiumsData = {
+  azteca: new Stadium(
+    {
+      location: { city: 'Mexico City', country },
+      names: [{ name: 'Estadio Azteca', period: '1966-p.t.' }],
+    },
+    true,
+    '87 523',
+    '1966',
+    ['1985', '1999', '2013', '2016'],
+    ['Club América', 'Mexico national team'],
+    []
+  ),
 
-    jalisco: new Stadium(
-      [{ title: 'Estadio Jalisco', period: '1960-p.t.' }],
-      'Guadalajara',
-      '56 713',
-      ['1960', '1970', '1999', '2011'],
-      {
-        isActive: true,
-        homeTeam: ['Atlas', 'Guadalajara (occasional)'],
-        imageUrl: '',
-      }
-    ),
+  olimpico: new Stadium(
+    {
+      location: { city: 'Mexico City', country },
+      names: [{ name: 'Estadio Olímpico Universitario', period: '1952-p.t.' }],
+    },
+    true,
+    '72 000',
+    '1952',
+    ['1968', '1990', '2010'],
+    ['UNAM Pumas'],
+    []
+  ),
 
-    cuauhtemoc: new Stadium(
-      [{ title: 'Estadio Cuauhtémoc', period: '1968-p.t.' }],
-      'Puebla City',
-      '51 726',
-      ['1968', '1985', '2015'],
-      {
-        isActive: true,
-        homeTeam: ['Puebla FC'],
-        imageUrl: '',
-      }
-    ),
+  jalisco: new Stadium(
+    {
+      location: { city: 'Guadalajara', country },
+      names: [{ name: 'Estadio Jalisco', period: '1960-p.t.' }],
+    },
+    true,
+    '56 713',
+    '1960',
+    ['1970', '1999', '2011'],
+    ['Atlas', 'Guadalajara (occasional)'],
+    []
+  ),
 
-    dosal: new Stadium(
-      [{ title: 'Estadio Nemesio Díez', period: '1954-p.t.' }],
-      'Toluca',
-      '31 000',
-      ['1954', '1984', '1999', '2017'],
-      {
-        isActive: true,
-        homeTeam: ['Deportivo Toluca'],
-        imageUrl: '',
-      }
-    ),
+  cuauhtemoc: new Stadium(
+    {
+      location: { city: 'Puebla City', country },
+      names: [{ name: 'Estadio Cuauhtémoc', period: '1968-p.t.' }],
+    },
+    true,
+    '51 726',
+    '1968',
+    ['1985', '2015'],
+    ['Puebla FC'],
+    []
+  ),
 
-    nouCamp: new Stadium(
-      [{ title: 'Estadio Nou Camp', period: '1967-p.t.' }],
-      'León',
-      '31 297',
-      ['1967', '1994', '2012'],
-      {
-        isActive: true,
-        homeTeam: ['Club León'],
-        imageUrl: '',
-      }
-    ),
+  dosal: new Stadium(
+    {
+      location: { city: 'Toluca', country },
+      names: [{ name: 'Estadio Nemesio Díez', period: '1954-p.t.' }],
+    },
+    true,
+    '31 000',
+    '1954',
+    ['1984', '1999', '2017'],
+    ['Deportivo Toluca'],
+    []
+  ),
 
-    universitario: new Stadium(
-      [{ title: 'Estadio Universitario', period: '1967-p.t.' }],
-      'San Nicolás de los Garza',
-      '41 886',
-      ['1967', '1996', '2015'],
-      {
-        isActive: true,
-        homeTeam: ['Tigres UANL'],
-        imageUrl: '',
-      }
-    ),
+  nouCamp: new Stadium(
+    {
+      location: { city: 'León', country },
+      names: [{ name: 'Estadio Nou Camp', period: '1967-p.t.' }],
+    },
+    true,
+    '31 297',
+    '1967',
+    ['1994', '2012'],
+    ['Club León'],
+    []
+  ),
 
-    neza86: new Stadium(
-      [{ title: 'Estadio Neza 86', period: '1981-p.t.' }],
-      'Nezahualcóyotl',
-      '28 000',
-      ['1981', '1986', '2008'],
-      {
-        isActive: true,
-        homeTeam: ['Toros Neza (historical)'],
-        imageUrl: '',
-      }
-    ),
+  universitario: new Stadium(
+    {
+      location: { city: 'San Nicolás de los Garza', country },
+      names: [{ name: 'Estadio Universitario', period: '1967-p.t.' }],
+    },
+    true,
+    '41 886',
+    '1967',
+    ['1996', '2015'],
+    ['Tigres UANL'],
+    []
+  ),
 
-    corregidora: new Stadium(
-      [{ title: 'Estadio La Corregidora', period: '1985-p.t.' }],
-      'Querétaro',
-      '34 130',
-      ['1985', '2011', '2015'],
-      {
-        isActive: true,
-        homeTeam: ['Querétaro FC'],
-        imageUrl: '',
-      }
-    ),
+  neza86: new Stadium(
+    {
+      location: { city: 'Nezahualcóyotl', country },
+      names: [{ name: 'Estadio Neza 86', period: '1981-p.t.' }],
+    },
+    true,
+    '28 000',
+    '1981',
+    ['1986', '2008'],
+    ['Toros Neza (historical)'],
+    []
+  ),
 
-    tecnologico: new Stadium(
-      [{ title: 'Estadio Tecnológico', period: '1950-2017' }],
-      'Monterrey',
-      '36 485',
-      ['1950', '1986', '1999'],
-      {
-        isActive: false,
-        homeTeam: ['CF Monterrey (historical)'],
-        imageUrl: '',
-      }
-    ),
+  corregidora: new Stadium(
+    {
+      location: { city: 'Querétaro', country },
+      names: [{ name: 'Estadio La Corregidora', period: '1985-p.t.' }],
+    },
+    true,
+    '34 130',
+    '1985',
+    ['2011', '2015'],
+    ['Querétaro FC'],
+    []
+  ),
 
-    chavez: new Stadium(
-      [{ title: 'Estadio Sergio León Chávez', period: '1960-p.t.' }],
-      'Irapuato',
-      '25 000',
-      ['1960', '1983', '2010'],
-      {
-        isActive: true,
-        homeTeam: ['Irapuato FC'],
-        imageUrl: '',
-      }
-    ),
+  tecnologico: new Stadium(
+    {
+      location: { city: 'Monterrey', country },
+      names: [{ name: 'Estadio Tecnológico', period: '1950-2017' }],
+    },
+    false,
+    '36 485',
+    '1950',
+    ['1986', '1999'],
+    ['CF Monterrey (historical)'],
+    []
+  ),
 
-    marzo: new Stadium(
-      [{ title: 'Estadio Tres de Marzo', period: '1971-p.t.' }],
-      'Zapopan',
-      '18 779',
-      ['1971', '1994', '2012'],
-      {
-        isActive: true,
-        homeTeam: ['Tecos FC'],
-        imageUrl: '',
-      }
-    ),
-  },
+  chavez: new Stadium(
+    {
+      location: { city: 'Irapuato', country },
+      names: [{ name: 'Estadio Sergio León Chávez', period: '1960-p.t.' }],
+    },
+    true,
+    '25 000',
+    '1960',
+    ['1983', '2010'],
+    ['Irapuato FC'],
+    []
+  ),
+
+  marzo: new Stadium(
+    {
+      location: { city: 'Zapopan', country },
+      names: [{ name: 'Estadio Tres de Marzo', period: '1971-p.t.' }],
+    },
+    true,
+    '18 779',
+    '1971',
+    ['1994', '2012'],
+    ['Tecos FC'],
+    []
+  ),
 }

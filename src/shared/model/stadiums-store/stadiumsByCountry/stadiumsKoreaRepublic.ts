@@ -1,127 +1,137 @@
+import { StadiumsData } from '../types'
 import { Stadium } from '../class-stadium/Stadium'
-import { CountryStadiums } from '../types'
+import { Country } from '../../national-teams-store/teams/classTeam/types'
 
-export const stadiumsSouthKorea: CountryStadiums = {
-  country: 'Korea Republic',
-  stadiums: {
-    daegu: new Stadium(
-      [{ title: 'Daegu World Cup Stadium', period: '2001-p.t.' }],
-      'Daegu',
-      '66 422',
-      ['2001', '2011', '2017'],
-      {
-        isActive: true,
-        homeTeam: ['Daegu FC'],
-        imageUrl: '',
-      }
-    ),
+const country: Country = 'Korea Republic'
 
-    seoul: new Stadium(
-      [{ title: 'Seoul World Cup Stadium', period: '2001-p.t.' }],
-      'Seoul',
-      '66 704',
-      ['2001', '2011', '2018'],
-      {
-        isActive: true,
-        homeTeam: ['FC Seoul', 'Korea Republic national team (selected matches)'],
-        imageUrl: '',
-      }
-    ),
+export const stadiumsSouthKorea: StadiumsData = {
+  daegu: new Stadium(
+    {
+      location: { city: 'Daegu', country },
+      names: [{ name: 'Daegu World Cup Stadium', period: '2001-p.t.' }],
+    },
+    true,
+    '66 422',
+    '2001',
+    ['2011', '2017'],
+    ['Daegu FC'],
+    []
+  ),
 
-    busan: new Stadium(
-      [{ title: 'Busan Asiad Main Stadium', period: '2001-p.t.' }],
-      'Busan',
-      '53 864',
-      ['2001', '2014'],
-      {
-        isActive: true,
-        homeTeam: ['Busan IPark'],
-        imageUrl: '',
-      }
-    ),
+  seoul: new Stadium(
+    {
+      location: { city: 'Seoul', country },
+      names: [{ name: 'Seoul World Cup Stadium', period: '2001-p.t.' }],
+    },
+    true,
+    '66 704',
+    '2001',
+    ['2011', '2018'],
+    ['FC Seoul', 'Korea Republic national team (selected matches)'],
+    []
+  ),
 
-    incheon: new Stadium(
-      [{ title: 'Incheon Football Stadium', period: '2001-p.t.' }],
-      'Incheon',
-      '20 891',
-      ['2001', '2013'],
-      {
-        isActive: true,
-        homeTeam: ['Incheon United'],
-        imageUrl: '',
-      }
-    ),
+  busan: new Stadium(
+    {
+      location: { city: 'Busan', country },
+      names: [{ name: 'Busan Asiad Main Stadium', period: '2001-p.t.' }],
+    },
+    true,
+    '53 864',
+    '2001',
+    ['2014'],
+    ['Busan IPark'],
+    []
+  ),
 
-    ulsan: new Stadium(
-      [{ title: 'Ulsan Munsu Football Stadium', period: '2001-p.t.' }],
-      'Ulsan',
-      '44 474',
-      ['2001', '2013'],
-      {
-        isActive: true,
-        homeTeam: ['Ulsan Hyundai'],
-        imageUrl: '',
-      }
-    ),
+  incheon: new Stadium(
+    {
+      location: { city: 'Incheon', country },
+      names: [{ name: 'Incheon Football Stadium', period: '2001-p.t.' }],
+    },
+    true,
+    '20 891',
+    '2001',
+    ['2013'],
+    ['Incheon United'],
+    []
+  ),
 
-    suwon: new Stadium(
-      [{ title: 'Suwon World Cup Stadium', period: '2001-p.t.' }],
-      'Suwon',
-      '44 031',
-      ['2001', '2014'],
-      {
-        isActive: true,
-        homeTeam: ['Suwon Samsung Bluewings'],
-        imageUrl: '',
-      }
-    ),
+  ulsan: new Stadium(
+    {
+      location: { city: 'Ulsan', country },
+      names: [{ name: 'Ulsan Munsu Football Stadium', period: '2001-p.t.' }],
+    },
+    true,
+    '44 474',
+    '2001',
+    ['2013'],
+    ['Ulsan Hyundai'],
+    []
+  ),
 
-    gwangju: new Stadium(
-      [{ title: 'Gwangju World Cup Stadium', period: '2001-p.t.' }],
-      'Gwangju',
-      '44 118',
-      ['2001', '2015'],
-      {
-        isActive: true,
-        homeTeam: ['Gwangju FC'],
-        imageUrl: '',
-      }
-    ),
+  suwon: new Stadium(
+    {
+      location: { city: 'Suwon', country },
+      names: [{ name: 'Suwon World Cup Stadium', period: '2001-p.t.' }],
+    },
+    true,
+    '44 031',
+    '2001',
+    ['2014'],
+    ['Suwon Samsung Bluewings'],
+    []
+  ),
 
-    jeonju: new Stadium(
-      [{ title: 'Jeonju World Cup Stadium', period: '2001-p.t.' }],
-      'Jeonju',
-      '42 477',
-      ['2001', '2014'],
-      {
-        isActive: true,
-        homeTeam: ['Jeonbuk Hyundai Motors'],
-        imageUrl: '',
-      }
-    ),
+  gwangju: new Stadium(
+    {
+      location: { city: 'Gwangju', country },
+      names: [{ name: 'Gwangju World Cup Stadium', period: '2001-p.t.' }],
+    },
+    true,
+    '44 118',
+    '2001',
+    ['2015'],
+    ['Gwangju FC'],
+    []
+  ),
 
-    jeju: new Stadium(
-      [{ title: 'Jeju World Cup Stadium', period: '2001-p.t.' }],
-      'Seogwipo',
-      '35 657',
-      ['2001', '2016'],
-      {
-        isActive: true,
-        homeTeam: ['Jeju United'],
-        imageUrl: '',
-      }
-    ),
+  jeonju: new Stadium(
+    {
+      location: { city: 'Jeonju', country },
+      names: [{ name: 'Jeonju World Cup Stadium', period: '2001-p.t.' }],
+    },
+    true,
+    '42 477',
+    '2001',
+    ['2014'],
+    ['Jeonbuk Hyundai Motors'],
+    []
+  ),
 
-    daejeon: new Stadium(
-      [{ title: 'Daejeon World Cup Stadium', period: '2001-p.t.' }],
-      'Daejeon',
-      '40 535',
-      ['2001', '2013'],
-      {
-        isActive: true,
-        homeTeam: ['Daejeon Hana Citizen'],
-        imageUrl: '',
-      }
-    ),
-  },
+  jeju: new Stadium(
+    {
+      location: { city: 'Seogwipo', country },
+      names: [{ name: 'Jeju World Cup Stadium', period: '2001-p.t.' }],
+    },
+    true,
+    '35 657',
+    '2001',
+    ['2016'],
+    ['Jeju United'],
+    []
+  ),
+
+  daejeon: new Stadium(
+    {
+      location: { city: 'Daejeon', country },
+      names: [{ name: 'Daejeon World Cup Stadium', period: '2001-p.t.' }],
+    },
+    true,
+    '40 535',
+    '2001',
+    ['2013'],
+    ['Daejeon Hana Citizen'],
+    []
+  ),
 }

@@ -9,7 +9,6 @@ export class Match implements MatchInfo {
   score: number[][]
   goals: GoalsInfo[]
   stadium: StadiumInfo
-  attendance!: string
 
   constructor(
     date: string,
@@ -20,7 +19,7 @@ export class Match implements MatchInfo {
     timeGoals1: string[],
     playersScoredGoal2: string[],
     timeGoals2: string[],
-    stadium: any,
+    stadium: StadiumInfo,
     attendance: string
   ) {
     this.id = v1()
@@ -34,7 +33,7 @@ export class Match implements MatchInfo {
     ]
     this.stadium = {
       ...stadium,
-      attendance: attendance,
+      attendance,
     }
   }
 }
