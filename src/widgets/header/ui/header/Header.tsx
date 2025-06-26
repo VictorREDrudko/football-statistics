@@ -1,7 +1,7 @@
 import s from './Header.module.css'
 import { useRef, useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
-import { mainLogo, ratingLogo } from '@/shared/assets'
+import { projectLogo, ratingLogo } from '@/shared/assets'
 import { LogoLink } from '@/widgets/header/ui/logoLink/LogoLink'
 import { Menu } from '@/widgets/header/ui/menu/Menu'
 import { useOutsideClick } from '@/common/hooks/UseOutsideClick'
@@ -25,7 +25,7 @@ export const Header = () => {
 
   return (
     <div className={s.wrapper}>
-      <LogoLink logoPath={mainLogo} linkPath={'/'}/>
+      <LogoLink logoPath={projectLogo} linkPath={'/'}/>
       <div ref={menuRef} className={`${s.containerNavItems} ${isOpen ? s.open : ''}`}>
         <Menu isOpen={isOpen} onClickHundler={onClickHundler} menuRef={menuRef}/>
       </div>

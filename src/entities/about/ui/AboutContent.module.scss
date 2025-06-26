@@ -1,0 +1,129 @@
+.container {
+  background-image: url("./../../assets/background-football.png");
+  background-size: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  padding-left: 80px;
+  padding-bottom: 40px;
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 150%;
+  color: var(--accent-main-transparent50);
+}
+
+.containerContent {
+  padding-bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.containerDescription {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 40px;
+  max-width: 600px;
+  width: 100%;
+  background: var(--bg-main-transparent20);
+  border-radius: 20px;
+  box-shadow: 0px 1px 2px 0px var(--bg-second-transparent50),
+  1px 2px 4px 0px var(--bg-second-transparent50),
+  2px 4px 8px 0px var(--bg-second-transparent30),
+  2px 4px 16px 0px var(--bg-second-transparent20);
+}
+
+.containerIconAndText {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+
+.containerIconAndText img {
+  max-width: 60px;
+  width: 100%;
+}
+
+.containerIconAndText span {
+  display: block;
+  font-size: 1.0rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  text-align: left;
+  color: var(--bg-second-transparent80);
+}
+
+.containerImg {
+  padding: 40px 0;
+  max-width: 700px;
+  width: 100%;
+}
+
+.imageMap {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    align-items: center;
+  }
+
+  .containerContent {
+    flex-wrap: wrap;
+  }
+
+  .title {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: 70px;
+  }
+
+  .title {
+    padding-left: 0;
+    padding-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .containerIconAndText img {
+    max-width: 50px;
+  }
+
+  .containerIconAndText span {
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+  }
+
+  .containerImg {
+    display: none;
+  }
+} 
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .containerIconAndText img {
+    max-width: 40px;
+  }
+
+  .containerIconAndText span {
+    font-size: 0.9rem;
+  }
+} 

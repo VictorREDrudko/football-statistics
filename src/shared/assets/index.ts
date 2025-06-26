@@ -1,4 +1,4 @@
-import mainLogo from './logo/main-logo-400x400.png'
+import projectLogo from './logo/main-logo-400x400.png'
 import ratingLogo from './logo/rating-logo-400x400.png'
 import mainBigLogo from './logo/main-big-logo-1000x500.png'
 
@@ -26,7 +26,7 @@ import worldCupLogo2018 from './logo/world-cup/world-cup-logo-2018.png'
 import worldCupLogo2022 from './logo/world-cup/world-cup-logo-2022.png'
 
 export {
-  mainLogo,
+  projectLogo,
   ratingLogo,
   mainBigLogo,
   worldCupLogo1930,

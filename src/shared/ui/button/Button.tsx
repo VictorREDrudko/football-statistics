@@ -2,12 +2,12 @@ import { Button as HeadlessButton } from '@headlessui/react';
 import { ForwardedRef, forwardRef } from 'react';
 import styles from './Button.module.scss';
 
-type ButtonVariant = 'primary' | 'secondary' | 'danger' | 'outline' | 'text';
-type ButtonSize = 'small' | 'medium' | 'large';
+type variant = 'primary' | 'secondary' | 'danger' | 'outline' | 'text';
+type size = 'small' | 'medium' | 'large';
 
 interface ButtonProps {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
+  variant?: variant;
+  size?: size;
   disabled?: boolean;
   loading?: boolean;
   className?: string;

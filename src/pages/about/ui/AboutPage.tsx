@@ -1,14 +1,10 @@
-import s from './AboutPage.module.css'
-import { Description } from './description/Description'
-import { History } from './history/History'
+import { AboutContent } from '@/entities'
+import s from './AboutPage.module.scss'
 
 export const AboutPage = () => {
   return (
-    <div className={s.wrapper}>
-      <main className={s.container}>
-        <Description/>
-        <History/>
-      </main>
-    </div>
+    <main className={s.container}>
+      <AboutContent/>
+    </main>
   )
 }
