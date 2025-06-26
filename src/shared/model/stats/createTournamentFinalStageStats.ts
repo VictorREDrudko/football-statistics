@@ -148,8 +148,8 @@ export const createTournamentFinalStageStats = (confederationCode: Confederation
 
       // Semi-finals
       if (match.stage === tournamentStages[1_2]) {
-        team2Stats.result.semiFinal = true
-        team1Stats.result.semiFinal = true
+        team2Stats.result.semiFinals = true
+        team1Stats.result.semiFinals = true
       }
 
       // Quarter-finals

@@ -170,4 +170,62 @@ export const stadiumsItaly: StadiumsData = {
     ['SS Lazio', 'AS Roma'],
     []
   ),
+
+  bentegodi: new Stadium(
+    {
+      location: { city: 'Verona', country },
+      names: [{ name: 'Stadio Marcantonio Bentegodi', period: '1963-p.t.' }],
+    },
+    true,
+    '39 211',
+    '1963',
+    ['1989', '2007', '2019'],
+    ['Hellas Verona', 'Chievo Verona (2001-2021)'],
+    []
+  ),
+
+  friuli: new Stadium(
+    {
+      location: { city: 'Udine', country },
+      names: [
+        { name: 'Stadio Friuli', period: '1976-2016' },
+        { name: 'Stadio Dacia Arena', period: '2016-p.t.' },
+      ],
+    },
+    true,
+    '25 144',
+    '1976',
+    ['1990', '2014-2016'],
+    ['Udinese Calcio'],
+    []
+  ),
+
+  santElia: new Stadium(
+    {
+      location: { city: 'Cagliari', country },
+      names: [{ name: "Stadio Sant'Elia", period: '1970-2017' }],
+    },
+    false, // Стадион снесен в 2017
+    '39 905',
+    '1970',
+    ['1990', '2003'],
+    ['Cagliari Calcio (1970-2017)'],
+    []
+  ),
+
+  favorita: new Stadium(
+    {
+      location: { city: 'Palermo', country },
+      names: [
+        { name: 'Stadio La Favorita', period: '1932-2002' },
+        { name: 'Stadio Renzo Barbera', period: '2002-p.t.' },
+      ],
+    },
+    true,
+    '36 349',
+    '1932',
+    ['1989', '2002', '2016'],
+    ['Palermo FC'],
+    []
+  ),
 }

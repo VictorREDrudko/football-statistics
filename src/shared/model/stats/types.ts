@@ -1,4 +1,4 @@
-import { ConfederationCode } from "@/entities"
+import { ConfederationCode } from '@/entities'
 
 export type Stats = {
   [key in ConfederationCode]: {
@@ -41,12 +41,12 @@ type StatsGeneral = {
   stages: string[]
 }
 
-export type StatsScorers = StatsScorer []
+export type StatsScorers = StatsScorer[]
 
 type StatsScorer = {
-    name: string
-    goals: number
-    country: string
+  name: string
+  goals: number
+  country: string
 }
 
 type Result = {

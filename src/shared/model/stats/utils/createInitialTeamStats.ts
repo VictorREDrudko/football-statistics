@@ -16,5 +16,5 @@ export const createInitialTeamStats = (countryName: string) => ({
     round16: false,
     round32: false,
     secondGroupStage: false,
-  }
+  },
 })

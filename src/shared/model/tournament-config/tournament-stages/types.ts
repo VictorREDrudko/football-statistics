@@ -21,8 +21,8 @@ export type TournamentStages = {
   groupD: string
   groupE: string
   groupF: string
-  groupg: string
-  grouph: string
+  groupG: string
+  groupH: string
   finalGroup: string
   secondGroupRoundA: string
   secondGroupRoundB: string
