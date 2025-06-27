@@ -1,6 +1,8 @@
+// Базовые стили
 .link {
   position: relative;
   display: inline-flex;
+  gap: 20px;
   align-items: center;
   justify-content: center;
   border: none;
@@ -8,114 +10,109 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-radius: 8px;
+  border-radius: var(--radius-2);
+  text-decoration: none;
+
+  // Добавляем Radix UI переменные
+  &:focus-visible {
+    outline: 2px solid var(--accent-8);
+    outline-offset: 2px;
+  }
 
   &.disabled {
-    background-color: var(--color-dark-100);
-    border: 1px solid var(--color-dark-400);
-    color: var(--color-dark-200);
+    background-color: var(--gray-1);
+    border: 1px solid var(--gray-7);
+    color: var(--gray-7);
     pointer-events: none;
   }
 }
 
-// variants
+// Варианты (адаптированные под Radix UI цвета)
 .variant--primary {
-  background-color: var(--color-primary-400);
-  border: 1px solid var(--color-primary-500);
-  color: var(--color-light-100);
+  background-color: var(--grass-4);
+  border: 1px solid var(--grass-11);
+  color: var(--gray-12);
 
   &:hover {
-    background-color: var(--color-primary-300);
-    scale: 1.05;
+    background-color: var(--grass-6);
   }
 
   &:active {
-    background-color: var(--color-primary-500);
-    color: var(--color-light-200);
-  }
-
-  &.focus {
-    border: 1px solid var(--color-primary-100);
-    outline: none;
-    color: var(--color-light-200);
+    background-color: var(--grass-9);
   }
 }
 
 .variant--secondary {
-  background-color: var(--color-light-200);
-  border: 1px solid var(--color-dark-400);
-  color: var(--color-dark-400);
+  background-color: var(--yellow-3);
+  border: 1px solid var(--yellow-6);
+  color: var(--gray-12);
 
   &:hover {
-    background-color: var(--color-light-100);
-    scale: 1.05;
-  }
-
-  &:active {
-    background-color: var(--color-dark-100);
-  }
-
-  &:focus {
-    border: 1px solid var(--color-light-100);
-    outline: none;
+    background-color: var(--yellow-4);
   }
 }
 
 .variant--outline {
-  background-color: var(--color-dark-600);
-  border: 1px solid var(--color-primary-300);
-  color: var(--color-primary-300);
+  background-color: var(--gray-2);
+  border: 1px solid var(--grass-6);
+  color: var(--grass-11);
 
   &:hover {
-    background-color: var(--color-dark-500);
-    border: 1px solid var(--color-primary-200);
-    color: var(--color-primary-200);
-    scale: 1.05;
-  }
-
-  &:active {
-    background-color: var(--color-dark-700);
-  }
-
-  &:focus {
-    border: 1px solid var(--color-primary-100);
-    outline: none;
+    background-color: var(--gray-4);
+    border-color: var(--grass-11);
   }
 }
 
 .variant--text {
-  background-color: var(--color-dark-600);
+  background-color: transparent;
   border: 1px solid transparent;
-  color: var(--color-primary-300);
+  color: var(--grass-10);
 
   &:hover {
-    background-color: var(--color-dark-500);
-    color: var(--color-primary-200);
-    scale: 1.05;
-  }
-
-  &:active {
-    background-color: var(--color-dark-700);
-  }
-
-  &:focus {
-    border: 1px solid var(--color-primary-100);
-    outline: none;
+    color: var(--grass-12);
   }
 }
 
-// Size
+// Размеры (адаптированные под Radix UI spacing)
 .size--small {
-  padding: 6px 12px;
-  font-size: 0.875rem;
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--font-size-2);
 }
 
 .size--medium {
-  padding: 8px 16px;
-  font-size: 1rem;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-3);
 }
 
 .size--large {
-  padding: 12px 24px;
-  font-size: 1.125rem;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-4);
+}
+
+@media (max-width: 480px) {
+  .size--small {
+    font-size: var(--font-size-1);
+  }
+
+  .size--medium {
+    font-size: var(--font-size-1);
+  }
+
+  .size--large {
+    font-size: var(--font-size-1);
+  }
+}
+
+@media (max-width: 768px) {
+  .size--small {
+    font-size: var(--font-size-2);
+  }
+
+  .size--medium {
+    font-size: var(--font-size-2);
+  }
+
+  .size--large {
+    font-size: var(--font-size-3);
+  }
 }

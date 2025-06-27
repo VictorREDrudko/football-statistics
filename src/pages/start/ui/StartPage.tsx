@@ -1,18 +1,20 @@
 import { mainBigLogo } from '@/shared/assets'
-import s from './StartPage.module.css'
+import s from './StartPage.module.scss'
+import image from '../assets/background-start.png'
+import { BackgroundWrapper, Heading, TextElement } from '@/shared'
 
 export const StartPage = () => {
   return (
-    <div className={s.container}>
+    <BackgroundWrapper imageUrl={image} className={s.wrapper}>
       <div className={s.containerContent}>
-        <h1 className={s.title}>
-          {"football is life"}
-        </h1>
-        <span className={s.description}>
-          {"This project is about football"}
-        </span>
+        <Heading className={s.title} color="primary" size="9" weight="bold" align="center">
+          {'football is life'}
+        </Heading>
+        <TextElement as="p" size="5" weight="regular" color="gray" align="center" className={s.description}>
+          {'This project is about football'}
+        </TextElement>
         <img className={s.image} src={mainBigLogo} alt="Main logo" />
       </div>
-    </div>
+    </BackgroundWrapper>
   )
 }

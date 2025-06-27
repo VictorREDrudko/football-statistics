@@ -24,12 +24,16 @@ import { NumberInCircle } from './ui/numberInCircle/NumberInCircle'
 import { Title } from './ui/title/Title'
 import { Heading } from './ui/heading/Heading'
 import Icon from './ui/icon/Icon'
+import { TextElement } from './ui/text-element/TextElement'
+import { BackgroundWrapper } from './ui/background-wrapper/BackgroundWrapper'
 
 export {
   Heading,
   Icon,
+  TextElement,
   Button,
   Link,
+  BackgroundWrapper,
   Container,
   Badge,
   Title,

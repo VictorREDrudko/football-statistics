@@ -16,7 +16,7 @@
 
   // Цвета (используем переменные Radix)
   &.color-primary {
-    color: var(--grass-11);
+    color: var(--grass-9);
   }
   &.color-secondary {
     color: var(--yellow-11);
@@ -72,5 +72,17 @@
   }
   &.weight-bold {
     font-weight: 700;
+  }
+
+  @media (max-width: 480px) {
+    &.size-9 {
+      font-size: var(--font-size-7);
+    }
+  }
+
+  @media (max-width: 768px) {
+    &.size-9 {
+      font-size: var(--font-size-8);
+    }
   }
 }

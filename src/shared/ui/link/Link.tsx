@@ -1,16 +1,17 @@
-import { LinkProps, Link as LinkRouter } from 'react-router-dom';
-import { ForwardedRef, forwardRef, ReactNode } from 'react';
+import { Link as RadixLink } from '@radix-ui/themes';
+import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
+import { forwardRef } from 'react';
 import s from './link.module.scss';
 
 type LinkVariant = 'primary' | 'secondary' | 'outline' | 'text';
-type ButtonSize = 'small' | 'medium' | 'large';
+type LinkSize = 'small' | 'medium' | 'large';
 
-type Props = LinkProps & {
+type Props = RouterLinkProps & {
   variant?: LinkVariant;
-  size?: ButtonSize;
+  size?: LinkSize;
   disabled?: boolean;
   className?: string;
-  children: ReactNode;
+  children: React.ReactNode;
 };
 
 export const Link = forwardRef<HTMLAnchorElement, Props>(
@@ -23,22 +24,33 @@ export const Link = forwardRef<HTMLAnchorElement, Props>(
       children,
       ...props
     },
-    ref: ForwardedRef<HTMLAnchorElement>
+    ref
   ) => {
     const variantClass = s[`variant--${variant}`];
     const sizeClass = s[`size--${size}`];
-    const disabledClasses = disabled ? s.disabled : '';
-    const combiningClasses =` ${s.link} 
-                              ${variantClass} 
-                              ${sizeClass} 
-                              ${disabledClasses} 
-                              ${className} 
-                            `
+    const disabledClass = disabled ? s.disabled : '';
+    
+    const combinedClasses = [
+      s.link,
+      variantClass,
+      sizeClass,
+      disabledClass,
+      className
+    ].filter(Boolean).join(' ');
 
     return (
-      <LinkRouter {...props} ref={ref} className={combiningClasses}>
-        {children}
-      </LinkRouter>
+      <RadixLink asChild>
+        <RouterLink
+          ref={ref}
+          className={combinedClasses}
+          aria-disabled={disabled}
+          {...props}
+        >
+          {children}
+        </RouterLink>
+      </RadixLink>
     );
   }
 );
+
+Link.displayName = 'Link';
