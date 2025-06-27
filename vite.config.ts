@@ -11,6 +11,6 @@ export default defineConfig({
       '@entities': resolve(__dirname, './src/entities'),
       '@shared': resolve(__dirname, './src/shared'),
       '@sharedAssets': resolve(__dirname, './src/shared/assets'),
-    }
-  }
+    },
+  },
 })

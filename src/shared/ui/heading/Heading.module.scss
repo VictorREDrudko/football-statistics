@@ -1,0 +1,76 @@
+.heading {
+  margin: 0;
+  line-height: 1.3;
+  font-family: inherit;
+
+  // Выравнивание
+  &.align-left {
+    text-align: left;
+  }
+  &.align-center {
+    text-align: center;
+  }
+  &.align-right {
+    text-align: right;
+  }
+
+  // Цвета (используем переменные Radix)
+  &.color-primary {
+    color: var(--grass-11);
+  }
+  &.color-secondary {
+    color: var(--yellow-11);
+  }
+  &.color-accent {
+    color: var(--lime-11);
+  }
+  &.color-contrast {
+    color: var(--contrast-11);
+  }
+  &.color-gray {
+    color: var(--gray-11);
+  }
+
+  // Размеры (адаптированные под Radix-шкалу)
+  &.size-1 {
+    font-size: var(--font-size-1);
+  } // 12px
+  &.size-2 {
+    font-size: var(--font-size-2);
+  } // 14px
+  &.size-3 {
+    font-size: var(--font-size-3);
+  } // 16px
+  &.size-4 {
+    font-size: var(--font-size-4);
+  } // 18px
+  &.size-5 {
+    font-size: var(--font-size-5);
+  } // 20px
+  &.size-6 {
+    font-size: var(--font-size-6);
+  } // 24px
+  &.size-7 {
+    font-size: var(--font-size-7);
+  } // 28px
+  &.size-8 {
+    font-size: var(--font-size-8);
+  } // 32px
+  &.size-9 {
+    font-size: var(--font-size-9);
+  } // 36px
+
+  // Вес шрифта
+  &.weight-light {
+    font-weight: 300;
+  }
+  &.weight-regular {
+    font-weight: 400;
+  }
+  &.weight-medium {
+    font-weight: 500;
+  }
+  &.weight-bold {
+    font-weight: 700;
+  }
+}

@@ -22,8 +22,12 @@ import { ModalWindow } from './ui/modalWindow/ModalWindow'
 import { Badge } from './ui/number/Badge'
 import { NumberInCircle } from './ui/numberInCircle/NumberInCircle'
 import { Title } from './ui/title/Title'
+import { Heading } from './ui/heading/Heading'
+import Icon from './ui/icon/Icon'
 
 export {
+  Heading,
+  Icon,
   Button,
   Link,
   Container,

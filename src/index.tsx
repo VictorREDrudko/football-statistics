@@ -1,3 +1,5 @@
+import '@radix-ui/themes/styles.css'; // <─ Глобальные стили Radix
+import { Theme } from '@radix-ui/themes';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -13,7 +15,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <App />
+        <Theme appearance="dark">
+          <App />
+        </Theme>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>

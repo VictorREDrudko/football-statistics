@@ -1,5 +1,87 @@
 /* Определение переменных в корневом селекторе */
 :root {
+  /* Gray (серые) */
+  --color-gray-1: #fcfcfc;
+  --color-gray-2: #f9f9f9;
+  --color-gray-3: #f0f0f0;
+  --color-gray-4: #e8e8e8;
+  --color-gray-5: #e0e0e0;
+  --color-gray-6: #d9d9d9;
+  --color-gray-7: #cecece;
+  --color-gray-8: #bbbbbb;
+  --color-gray-9: #8d8d8d;
+  --color-gray-10: #838383;
+  --color-gray-11: #646464;
+  --color-gray-12: #202020;
+
+  /* Tomato (красные/оранжевые) */
+  --color-tomato-1: #fffcfc;
+  --color-tomato-2: #fff8f7;
+  --color-tomato-3: #feebe7;
+  --color-tomato-4: #ffdcd3;
+  --color-tomato-5: #ffcdc2;
+  --color-tomato-6: #fdbdaf;
+  --color-tomato-7: #f5a898;
+  --color-tomato-8: #ec8e7b;
+  --color-tomato-9: #e54d2e;
+  --color-tomato-10: #dd4425;
+  --color-tomato-11: #d13415;
+  --color-tomato-12: #5c271f;
+
+  /* Grass (зелёные) */
+  --color-grass-1: #fbfefb;
+  --color-grass-2: #f3fcf3;
+  --color-grass-3: #ebf9eb;
+  --color-grass-4: #dff3df;
+  --color-grass-5: #ceebcf;
+  --color-grass-6: #b7dfba;
+  --color-grass-7: #97cf9c;
+  --color-grass-8: #65ba75;
+  --color-grass-9: #46a758;
+  --color-grass-10: #3d9a50;
+  --color-grass-11: #297c3b;
+  --color-grass-12: #1b311e;
+
+  /* Yellow (жёлтые) */
+  --color-yellow-1: #fdfdf9;
+  --color-yellow-2: #fffce8;
+  --color-yellow-3: #fffbd1;
+  --color-yellow-4: #fff8bb;
+  --color-yellow-5: #fef2a4;
+  --color-yellow-6: #f9e68c;
+  --color-yellow-7: #efd36c;
+  --color-yellow-8: #ebbc00;
+  --color-yellow-9: #f5d90a;
+  --color-yellow-10: #f7ce00;
+  --color-yellow-11: #946800;
+  --color-yellow-12: #35290f;
+
+  /* Lime (салатовые) */
+  --color-lime-1: #fcfdfa;
+  --color-lime-2: #f7fcf0;
+  --color-lime-3: #eefadc;
+  --color-lime-4: #e4f7c7;
+  --color-lime-5: #d7f2b0;
+  --color-lime-6: #c9e894;
+  --color-lime-7: #b1d16a;
+  --color-lime-8: #94ba2c;
+  --color-lime-9: #99d52a;
+  --color-lime-10: #93c926;
+  --color-lime-11: #5d770d;
+  --color-lime-12: #263209;
+
+  /* Black & White */
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+
+
+
+
+
+
+
+  
   --color-primary-100: rgb(216, 255, 176);
   --color-primary-200: rgb(181, 241, 130);
   --color-primary-300: rgb(105, 161, 68);
@@ -33,7 +115,7 @@
   --color-light-100-transparent-20: rgba(255, 255, 255, 0.2);
   --color-light-100: rgb(255, 255, 255);
   --color-light-200: rgb(215, 215, 215);
-  --color-light-300: rgb(182, 182, 182); 
+  --color-light-300: rgb(182, 182, 182);
 
   --color-danger-100: rgb(255, 214, 214);
   --color-danger-200: rgb(255, 153, 153);
@@ -42,8 +124,6 @@
   --color-danger-500: rgb(220, 0, 0);
   --color-danger-600: rgb(180, 0, 0);
   --color-danger-700: rgb(120, 0, 0);
-
-
 
   --bg-main: rgb(0, 0, 0);
   --bg-main-transparent20: rgba(0, 0, 0, 0.2);
@@ -59,7 +139,7 @@
   --bg-second-transparent80: rgba(255, 255, 255, 0.8);
   --bg-second-transparent90: rgba(255, 255, 255, 0.9);
 
-  --accent-main:  rgb(125, 250, 55);
+  --accent-main: rgb(125, 250, 55);
   --accent-main-transparent80: rgba(125, 250, 55, 0.8);
   --accent-main-transparent50: rgba(125, 250, 55, 0.5);
   --accent-main-transparent30: rgba(125, 250, 55, 0.3);
