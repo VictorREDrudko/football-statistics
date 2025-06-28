@@ -9,6 +9,7 @@ import { TeamPartStats, TeamsFullStats, TeamsStats, TeamStats } from './national
 import { MiniCard } from './national-team/ui/mini-card/miniCard'
 import { NationalTeamsCard } from './national-team/ui/nation-team-card/NationTeamCard'
 import { TournamentCard } from './tournament-card/ui/TournamentCard'
+import { History } from './history-football/ui/History'
 
 export {
   AboutContent,
@@ -20,6 +21,7 @@ export {
   NationalTeamsCard,
   TournamentCard,
   GroupTable,
+  History,
 }
 
 export type {
