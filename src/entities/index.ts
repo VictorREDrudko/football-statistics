@@ -1,4 +1,3 @@
-import aboutProjectSlice from './about/model/aboutProjectSlice'
 import { AboutContent } from './about/ui/AboutContent'
 import { GroupTable } from './group-table/ui/GroupTable'
 import { confederationData } from './national-team/model/confederationData'
@@ -13,7 +12,6 @@ import { History } from './history-football/ui/History'
 
 export {
   AboutContent,
-  aboutProjectSlice,
   nationalTeamsData,
   namesTeamByConfederation,
   confederationData,

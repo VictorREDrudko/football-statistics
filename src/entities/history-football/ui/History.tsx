@@ -1,16 +1,19 @@
 import { Heading, TextElement } from '@/shared'
-import { historyFootball } from '../model/historyFootball'
 import s from './History.module.scss'
+import { useSelector } from 'react-redux'
+import { RootState } from '@/app/store/store'
 
 export const History = () => {
-  const historyList = historyFootball.historicalData.map((el, index) => {
+  const { historicalDates } = useSelector((state: RootState) => state.historyFootball)
+
+  const historyList = historicalDates.map((historicalData, index) => {
     return (
       <li key={index} className={s.containerText}>
         <TextElement as="span" size="5" weight="bold" color="green">
-          {el.slice(0, 5)}
+          {historicalData.slice(0, 5)}
         </TextElement>
         <TextElement as="span" size="5" weight="regular" color="ligth">
-          {el.slice(5)}
+          {historicalData.slice(5)}
         </TextElement>
       </li>
     )
