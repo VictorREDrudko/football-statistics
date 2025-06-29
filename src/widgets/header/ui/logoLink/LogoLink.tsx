@@ -1,17 +1,15 @@
-import { NavLink } from 'react-router-dom'
-import s from './LogoLink.module.css'
+import s from './LogoLink.module.scss'
+import { Icon, Link } from '@/shared'
 
 type Props = {
+  path: string
   logoPath: string
-  linkPath: string
 }
 
-export const LogoLink = ({logoPath, linkPath}: Props) => {
+export const LogoLink = ({ path, logoPath }: Props) => {
   return (
-    <>
-      <NavLink to={linkPath}>
-        <img className={s.icon} src={logoPath} alt="logo project"/>
-      </NavLink>
-    </>
+    <Link to={path} variant="text" className={s.link} size='small'>
+      <Icon src={logoPath} size={45}></Icon>
+    </Link>
   )
 }

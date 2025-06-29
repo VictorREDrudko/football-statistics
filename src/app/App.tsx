@@ -19,8 +19,8 @@ function App() {
         <Route path="/" element={<StartPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/history-football" element={<HistoryFootballPage />} />
-        <Route path="/national-tournaments" element={<NationalTournaments />} />
-        <Route path="/national-tournaments/:tournament" element={<TournamentChampionships />} />
+        <Route path="/tournaments" element={<NationalTournaments />} />
+        <Route path="/tournaments/:tournament" element={<TournamentChampionships />} />
         <Route path="/teams" element={<Navigate to="/teams/UEFA" />} />
         <Route path="/teams/:confederationRoute" element={<NationalTeams />} />
         <Route path="/teams/:confederationRoute/:teamRoute" element={<NationalTeams />} />

@@ -25,6 +25,11 @@
     color: var(--gray-7);
     pointer-events: none;
   }
+
+    &.active {
+    color: #ff5722; // Оранжевый цвет для активного пункта
+    font-weight: bold;
+  }
 }
 
 // Варианты (адаптированные под Radix UI цвета)
@@ -71,6 +76,10 @@
   &:hover {
     color: var(--grass-12);
   }
+}
+
+.active {
+  color: #ff5722; // Оранжевый цвет для активного пункта
 }
 
 // Размеры (адаптированные под Radix UI spacing)

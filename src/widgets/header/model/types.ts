@@ -1,6 +1,5 @@
 type ItemMenu = {
-  title: "About" | "National tournaments" | "Club tournaments" | "National teams" | "Clubs";
-  // fix
+  title: "About" | "Tournaments" | "National teams" | "Clubs";
   path: string;
 };
 

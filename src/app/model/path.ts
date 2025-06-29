@@ -1,7 +1,8 @@
 export const PATH = {
-  about: "/about",
-  nationalTournaments: "/national-tournaments",
-  clubTournaments: "/club-tournaments",
-  teams: "/teams",
-  clubs: "/clubs"
+  home: '/',
+  about: '/about',
+  tournaments: '/tournaments',
+  teams: '/teams',
+  clubs: '/clubs',
+  rating: '/rating',
 }

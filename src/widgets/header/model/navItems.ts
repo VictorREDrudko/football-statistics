@@ -3,8 +3,7 @@ import { NavItems } from "./types";
 
 export const navItems: NavItems = [
   { title: "About", path: PATH.about },
-  { title: "National tournaments", path: PATH.nationalTournaments },
-  { title: "Club tournaments", path: PATH.clubTournaments},
+  { title: "Tournaments", path: PATH.tournaments },
   { title: "National teams", path: PATH.teams },
   { title: "Clubs", path: PATH.clubs },
 ];
