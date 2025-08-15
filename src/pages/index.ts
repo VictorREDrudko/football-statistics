@@ -5,6 +5,7 @@ import { NationalTournaments } from './national-tourmaments/ui/NationalTournamen
 import { StartPage } from './start/ui/StartPage'
 import { TournamentFinalStage } from './tournament-final-stage/ui/TournamentFinalStage'
 import { TournamentChampionships } from './tournament-сhampionships/TournamentChampionships'
+import { TournamentsPage } from './tournaments/ui/TournamentsPage'
 
 export {
   NationalTeams,
@@ -14,4 +15,5 @@ export {
   TournamentChampionships,
   TournamentFinalStage,
   HistoryFootballPage,
+  TournamentsPage
 }

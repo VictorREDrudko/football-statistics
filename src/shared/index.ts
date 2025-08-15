@@ -26,6 +26,7 @@ import { Heading } from './ui/heading/Heading'
 import Icon from './ui/icon/Icon'
 import { TextElement } from './ui/text-element/TextElement'
 import { BackgroundWrapper } from './ui/background-wrapper/BackgroundWrapper'
+import { HeaderDashboard } from './ui/header-dashboard/HeaderDashboard'
 
 export {
   Heading,
@@ -54,6 +55,7 @@ export {
   worldCupData,
   baseApi,
   nationalTeamsStore,
+  HeaderDashboard
 }
 
 export type { TournamentInfo, TournamentData, MatchInfo }

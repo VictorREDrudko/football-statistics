@@ -1,0 +1,17 @@
+.container {
+  padding: 70px 10px 10px 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 120px;
+  background-color: var(--color-gray-6);
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+}

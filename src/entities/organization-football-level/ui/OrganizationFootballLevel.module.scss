@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.title {
+  text-transform: uppercase;
+  word-spacing: 10px;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+/* Подчеркивание */
+.title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 1px;
+  background: currentColor;
+  margin: 10px auto 0; /* Отступ сверху и автоматические отступы по бокам для центровки */
+}
+
+.containerLevel {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}

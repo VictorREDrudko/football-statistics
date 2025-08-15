@@ -9,6 +9,7 @@ import {
   StartPage,
   TournamentChampionships,
   TournamentFinalStage,
+  TournamentsPage,
 } from '@/pages'
 
 function App() {
@@ -19,12 +20,21 @@ function App() {
         <Route path="/" element={<StartPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/history-football" element={<HistoryFootballPage />} />
-        <Route path="/tournaments" element={<NationalTournaments />} />
-        <Route path="/tournaments/:tournament" element={<TournamentChampionships />} />
+        <Route path="/tournaments" element={<TournamentsPage />} />
+        <Route
+          path="/tournaments/:tournament"
+          element={<TournamentChampionships />}
+        />
         <Route path="/teams" element={<Navigate to="/teams/UEFA" />} />
         <Route path="/teams/:confederationRoute" element={<NationalTeams />} />
-        <Route path="/teams/:confederationRoute/:teamRoute" element={<NationalTeams />} />
-        <Route path="/national-tournaments/:tournament/final-stage/:urlYear" element={<TournamentFinalStage />} />
+        <Route
+          path="/teams/:confederationRoute/:teamRoute"
+          element={<NationalTeams />}
+        />
+        <Route
+          path="/national-tournaments/:tournament/final-stage/:urlYear"
+          element={<TournamentFinalStage />}
+        />
       </Routes>
     </>
   )

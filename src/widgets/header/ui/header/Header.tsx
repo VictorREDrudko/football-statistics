@@ -44,13 +44,11 @@ export const Header = () => {
       <DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
         <DropdownMenu.Trigger asChild>
           <button className={s.menuButton}>
-            <button className={s.menuButton}>
-              {isOpen ? (
-                <AiOutlineClose size={30} color="white" />
-              ) : (
-                <AiOutlineMenu size={30} color="white" />
-              )}
-            </button>
+            {isOpen ? (
+              <AiOutlineClose size={30} color="white" />
+            ) : (
+              <AiOutlineMenu size={30} color="white" />
+            )}
           </button>
         </DropdownMenu.Trigger>
 
