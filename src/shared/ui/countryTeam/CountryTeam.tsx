@@ -7,14 +7,16 @@ type Props = {
   countryName: string
   year: string
   reverse?: boolean
+  classNameSpan?: string
 }
 
-export const CountryTeam = ({countryName, year, reverse = false}: Props) => {
+export const CountryTeam = ({countryName, year, reverse = false, classNameSpan = ''}: Props) => {
   const classNameContainer = reverse ? `${s.container}` : `${s.containerRevers}`
   const countryNameByYear = getCountryNameByYear({countryName, year});
 
   // Sets styles for existing and non-existing countries
   const classNameIsReal = isCountryActive(countryName) ? `${s.title}` : `${s.titleNoReal}`
+  const combineClassNameSpan = `${classNameIsReal} ${classNameSpan}`
 
   return (
     <div className={classNameContainer}>

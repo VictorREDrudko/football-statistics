@@ -43,6 +43,7 @@ import { FootballStructure } from './types'
 
 export const footballStructure: FootballStructure = {
   internationalLevel: {
+    FIFA: {
     governingBodies: {
       code: 'FIFA',
       fullName: 'Federation Internationale de Football Association',
@@ -71,7 +72,7 @@ export const footballStructure: FootballStructure = {
           path: PATH.clubWorldCup,
         },
       },
-    },
+    },}
   },
   continentalLevel: {
     UEFA: {

@@ -1,5 +1,13 @@
-import { afcIcon, cafIcon, concacafIcon, conmebolIcon, fifaIcon, ofcIcon, uefaIcon } from "@/shared/assets/iconConfederation";
-import { ConfederationsData } from "./types/types";
+import {
+  afcIcon,
+  cafIcon,
+  concacafIcon,
+  conmebolIcon,
+  fifaIcon,
+  ofcIcon,
+  uefaIcon,
+} from '@/shared/assets/iconConfederation'
+import { ConfederationsData } from './types/types'
 import backgroundUefa from './../assets/background-confederation/uefa.png'
 import backgroundAfc from './../assets/background-confederation/afc.png'
 import backgroundCaf from './../assets/background-confederation/caf.png'
@@ -15,81 +23,81 @@ import iconCupConmebol from './../assets/icon-cup/conmebol.png'
 import iconCupConcacaf from './../assets/icon-cup/concacaf.png'
 import iconCupOfc from './../assets/icon-cup/ofc.png'
 import iconCupFifa from './../assets/icon-cup/world.png'
-import { worldCupData } from "@/shared";
-import { createStats } from "@/shared/model/stats/createStats";
+import { worldCupData } from '@/shared'
+import { createStats } from '@/shared/model/stats/createStats'
+import { worldCupStore } from '@/shared/model/national-tournaments-store/world-cup/worldCupStore'
 
 export const confederationData: ConfederationsData = {
   UEFA: {
     id: 'confederation-5',
-    name: "UEFA",
+    name: 'UEFA',
     nameTournament: 'UEFA European Championship',
     iconPathConfederation: uefaIcon,
     iconPathCup: iconCupUefa,
     backgroundConfederationPath: backgroundUefa,
-    path: "uefa-european-championship",
-    tournament: {}
+    path: 'uefa-european-championship',
+    tournament: {},
   },
   CAF: {
     id: 'confederation-2',
-    name: "CAF",
+    name: 'CAF',
     nameTournament: 'CAF Africa Cup of Nations',
     iconPathConfederation: cafIcon,
     iconPathCup: iconCupCaf,
     backgroundConfederationPath: backgroundCaf,
-    path: "caf-africa-cup",
-    tournament: {}
+    path: 'caf-africa-cup',
+    tournament: {},
   },
   AFC: {
     id: 'confederation-6',
-    name: "AFC",
+    name: 'AFC',
     nameTournament: 'AFC Asian Cup',
     iconPathConfederation: afcIcon,
     iconPathCup: iconCupAfc,
     backgroundConfederationPath: backgroundAfc,
-    path: "afc-asian-cup",
-    tournament: {}
+    path: 'afc-asian-cup',
+    tournament: {},
   },
   CONMEBOL: {
     id: 'confederation-3',
-    name: "CONMEBOL",
+    name: 'CONMEBOL',
     nameTournament: 'CONMEBOL Copa América',
     iconPathConfederation: conmebolIcon,
     iconPathCup: iconCupConmebol,
     backgroundConfederationPath: backgroundConmebol,
-    path: "conmebol-copa-america",
-    tournament: {}
+    path: 'conmebol-copa-america',
+    tournament: {},
   },
   CONCACAF: {
     id: 'confederation-1',
-    name: "CONCACAF",
+    name: 'CONCACAF',
     nameTournament: 'CONCACAF Gold Cup',
     iconPathConfederation: concacafIcon,
     iconPathCup: iconCupConcacaf,
     backgroundConfederationPath: backgroundConcacaf,
-    path: "concacaf-gold-cup",
-    tournament: {}
+    path: 'concacaf-gold-cup',
+    tournament: {},
   },
   OFC: {
     id: 'confederation-7',
-    name: "OFC",
+    name: 'OFC',
     nameTournament: 'OFC Nations Cup',
     iconPathConfederation: ofcIcon,
     iconPathCup: iconCupOfc,
     backgroundConfederationPath: backgroundOfc,
-    path: "ofc-cup",
-    tournament: {}
+    path: 'ofc-cup',
+    tournament: {},
   },
-  FIFA: {
+  WORLD: {
     id: 'organization-4',
-    name: "FIFA",
+    name: 'WORLD',
     nameTournament: 'FIFA World Cup',
     iconPathConfederation: fifaIcon,
     iconPathCup: iconCupFifa,
     backgroundConfederationPath: backgroundFifa,
-    path: "fifa-world-cup",
-    tournament: worldCupData
-  }
-} as const;
+    path: 'world-cup',
+    tournament: {},
+  },
+} as const
 
 export const stats = createStats()
-

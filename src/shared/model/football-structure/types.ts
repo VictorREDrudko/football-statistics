@@ -1,5 +1,5 @@
 export type FootballStructure = {
-  internationalLevel: OrganizationData
+  internationalLevel: InternationalLevel
   continentalLevel: ContinentalLevel
   // nationalLevel: FootballLevel
 }
@@ -7,6 +7,10 @@ export type FootballStructure = {
 export type OrganizationData = {
   governingBodies: GoverningBodies
   tournaments: TournamentsData
+}
+
+type InternationalLevel = {
+  'FIFA': OrganizationData
 }
 
 type ContinentalLevel = {
@@ -38,7 +42,7 @@ export type TournamentData = {
   [key: string]: TournamentInfo
 }
 
-type TournamentInfo = {
+export type TournamentInfo = {
   name: string
   isActive: boolean
   trophyIconPath: string

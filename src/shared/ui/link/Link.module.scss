@@ -20,13 +20,13 @@
   }
 
   &.disabled {
-    background-color: var(--gray-1);
-    border: 1px solid var(--gray-7);
-    color: var(--gray-7);
+    background-color: var(--color-gray-11);
+    border: 1px solid var(--color-black);
+    color: var(--color-gray-9);
     pointer-events: none;
   }
 
-    &.active {
+  &.active {
     color: #ff5722; // Оранжевый цвет для активного пункта
     font-weight: bold;
   }
@@ -44,6 +44,20 @@
 
   &:active {
     background-color: var(--grass-9);
+  }
+}
+
+.variant--primary-light {
+  background-color: var(--color-gray-8);
+  border: 1px solid var(--color-black);
+  color: var(--color-gray-12);
+
+  &:hover {
+    background-color: var(--color-gray-4);
+  }
+
+  &:active {
+    background-color: var(--color-gray-1);
   }
 }
 

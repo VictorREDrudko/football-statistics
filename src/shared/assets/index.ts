@@ -24,6 +24,7 @@ import worldCupLogo2010 from './logo/world-cup/world-cup-logo-2010.png'
 import worldCupLogo2014 from './logo/world-cup/world-cup-logo-2014.png'
 import worldCupLogo2018 from './logo/world-cup/world-cup-logo-2018.png'
 import worldCupLogo2022 from './logo/world-cup/world-cup-logo-2022.png'
+import notFound from './notFound/notFound.png'
 
 export {
   projectLogo,
@@ -51,4 +52,5 @@ export {
   worldCupLogo2014,
   worldCupLogo2018,
   worldCupLogo2022,
+  notFound
 }

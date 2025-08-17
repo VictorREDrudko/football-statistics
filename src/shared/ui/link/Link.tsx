@@ -6,7 +6,7 @@ import {
 import { forwardRef } from 'react'
 import s from './link.module.scss'
 
-type LinkVariant = 'primary' | 'secondary' | 'outline' | 'text'
+type LinkVariant = 'primary' | 'secondary' | 'outline' | 'text' | 'primary-light'
 type LinkSize = 'small' | 'medium' | 'large'
 
 type Props = RouterLinkProps & {

@@ -15,8 +15,7 @@ export const PATH = {
   concacafGoldCup: '/tournaments/concacaf-gold-cup',
   concacafNationsLeague: '/tournaments/concacaf-nations-league',
   africaCupNations: '/tournaments/africa-cup-nations',
-  africanNationsChampionship:
-    '/tournaments/africa-nations-championship',
+  africanNationsChampionship: '/tournaments/africa-nations-championship',
   afcAsianCup: '/tournaments/afc-asian-cup',
   ofcNationsCup: '/tournaments/ofc-nations-cup',
 

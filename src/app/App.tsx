@@ -32,7 +32,7 @@ function App() {
           element={<NationalTeams />}
         />
         <Route
-          path="/national-tournaments/:tournament/final-stage/:urlYear"
+          path="/tournaments/:tournament/final-stage/:urlYear"
           element={<TournamentFinalStage />}
         />
       </Routes>

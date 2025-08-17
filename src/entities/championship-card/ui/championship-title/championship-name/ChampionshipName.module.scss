@@ -1,13 +1,13 @@
-.wrapper {
+.container {
   width: 100%;
 }
 
 .year,
 .title {
-  color: var(--color-secondary-300);
+  color: var(--color-yellow-8);
   text-align: center;
   line-height: 100%;
-  text-shadow: 5px 5px 5px var(--color-dark-700);
+  text-shadow: 5px 5px 5px var(--color-black);
 }
 
 .year {
@@ -17,6 +17,6 @@
 
 .title {
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }

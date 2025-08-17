@@ -7,9 +7,9 @@ import { ConfederationCode, ConfederationInfo, NationalTeamType } from './nation
 import { TeamPartStats, TeamsFullStats, TeamsStats, TeamStats } from './national-team/model/types/typeStats'
 import { MiniCard } from './national-team/ui/mini-card/miniCard'
 import { NationalTeamsCard } from './national-team/ui/nation-team-card/NationTeamCard'
-import { TournamentCard } from './tournament-card/ui/TournamentCard'
 import { History } from './history-football/ui/History'
 import { OrganizationFootballLevel } from './organization-football-level/ui/OrganizationFootballLevel'
+import { ChampionshipCard } from './championship-card/ui/ChampionshipCard'
 
 export {
   AboutContent,
@@ -18,7 +18,7 @@ export {
   confederationData,
   MiniCard,
   NationalTeamsCard,
-  TournamentCard,
+  ChampionshipCard,
   GroupTable,
   History,
   OrganizationFootballLevel

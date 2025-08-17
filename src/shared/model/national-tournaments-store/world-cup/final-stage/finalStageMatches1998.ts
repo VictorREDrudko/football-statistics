@@ -13,7 +13,7 @@ export const finalStageMatches1998: MatchInfo[] = [
     ['5', '74(o.g.)'],
     ['J.Collins'],
     ['38(p)'],
-    { ...stadiumsStore.France?.france.locationAndNames } as StadiumInfo,
+    { ...stadiumsStore.France?.stadeDeFrance.locationAndNames } as StadiumInfo,
     '80 000'
   ),
 
@@ -143,7 +143,7 @@ export const finalStageMatches1998: MatchInfo[] = [
     ['48', '90'],
     ['A.Herzog'],
     ['90+2'],
-    { ...stadiumsStore.France?.france.locationAndNames } as StadiumInfo,
+    { ...stadiumsStore.France?.stadeDeFrance.locationAndNames } as StadiumInfo,
     '80 000'
   ),
 
@@ -208,7 +208,7 @@ export const finalStageMatches1998: MatchInfo[] = [
     ['37, 78', '68', '85'],
     [],
     [],
-    { ...stadiumsStore.France?.france.locationAndNames } as StadiumInfo,
+    { ...stadiumsStore.France?.stadeDeFrance.locationAndNames } as StadiumInfo,
     '80 000'
   ),
 
@@ -338,7 +338,7 @@ export const finalStageMatches1998: MatchInfo[] = [
     [],
     [],
     [],
-    { ...stadiumsStore.France?.france.locationAndNames } as StadiumInfo,
+    { ...stadiumsStore.France?.stadeDeFrance.locationAndNames } as StadiumInfo,
     '77 000'
   ),
 
@@ -546,7 +546,7 @@ export const finalStageMatches1998: MatchInfo[] = [
     ['20'],
     ['S.Souayah'],
     ['12(p)'],
-    { ...stadiumsStore.France?.france.locationAndNames } as StadiumInfo,
+    { ...stadiumsStore.France?.stadeDeFrance.locationAndNames } as StadiumInfo,
     '77 000'
   ),
 
@@ -676,7 +676,7 @@ export const finalStageMatches1998: MatchInfo[] = [
     ['3', '12', '58', '76'],
     ['T.Babangida'],
     ['77'],
-    { ...stadiumsStore.France?.france.locationAndNames } as StadiumInfo,
+    { ...stadiumsStore.France?.stadeDeFrance.locationAndNames } as StadiumInfo,
     '77 000'
   ),
 
@@ -749,7 +749,7 @@ export const finalStageMatches1998: MatchInfo[] = [
     [],
     [],
     [],
-    { ...stadiumsStore.France?.france.locationAndNames } as StadiumInfo,
+    { ...stadiumsStore.France?.stadeDeFrance.locationAndNames } as StadiumInfo,
     '77 000'
   ),
 
@@ -818,7 +818,7 @@ export const finalStageMatches1998: MatchInfo[] = [
     ['47, 70'],
     ['D.Šuker'],
     ['46'],
-    { ...stadiumsStore.France?.france.locationAndNames } as StadiumInfo,
+    { ...stadiumsStore.France?.stadeDeFrance.locationAndNames } as StadiumInfo,
     '76 000'
   ),
 
@@ -844,7 +844,7 @@ export const finalStageMatches1998: MatchInfo[] = [
     ['27, 45+1', '90+3'],
     [],
     [],
-    { ...stadiumsStore.France?.france.locationAndNames } as StadiumInfo,
+    { ...stadiumsStore.France?.stadeDeFrance.locationAndNames } as StadiumInfo,
     '75 000'
   ),
 ]

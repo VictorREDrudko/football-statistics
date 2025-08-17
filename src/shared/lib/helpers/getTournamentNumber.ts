@@ -1,3 +1,3 @@
 export const getTournamentNumber = (id: string) => {
-  return +id.split('.')[1];
+  return +id.split('-')[0];
 }

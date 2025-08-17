@@ -14,6 +14,7 @@ import { worldCup1982 } from "./world-cup-data/worldCup1982";
 import { worldCup1986 } from "./world-cup-data/worldCup1986";
 import { worldCup1990 } from "./world-cup-data/worldCup1990";
 import { worldCup1994 } from "./world-cup-data/worldCup1994";
+import { worldCup1998 } from "./world-cup-data/worldCup1998";
 import { worldCup2002 } from "./world-cup-data/worldCup2002";
 import { worldCup2006 } from "./world-cup-data/worldCup2006";
 
@@ -33,7 +34,7 @@ export const worldCupStore: TournamentData = {
   1986: worldCup1986,
   1990: worldCup1990,
   1994: worldCup1994,
-  1998: worldCup1938,
+  1998: worldCup1998,
   2002: worldCup2002,
   2006: worldCup2006,
 

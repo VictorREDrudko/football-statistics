@@ -1,0 +1,12 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.container a {
+  box-shadow: 2px 2px 5px 3px var(--color-black-transparent-50);
+  text-transform: uppercase;
+  font-weight: 700;
+}

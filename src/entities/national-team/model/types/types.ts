@@ -1,6 +1,6 @@
 import { TournamentData } from '@/shared'
 
-export type ConfederationCode = 'UEFA' | 'CAF' | 'AFC' | 'CONMEBOL' | 'CONCACAF' | 'OFC' | 'FIFA'
+export type ConfederationCode = 'UEFA' | 'CAF' | 'AFC' | 'CONMEBOL' | 'CONCACAF' | 'OFC' | 'WORLD'
 
 export type ConfederationInfo = {
   id: string

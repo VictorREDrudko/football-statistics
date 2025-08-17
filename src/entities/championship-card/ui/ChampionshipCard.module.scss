@@ -1,0 +1,11 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 10px 15px 10px;
+  max-width: 260px;
+  width: 100%;
+  transition: all 0.3s;
+  border: 2px solid var(--color-gray-10);
+  border-radius: 15px;
+  background-color: var(--color-black-transparent-50);
+}

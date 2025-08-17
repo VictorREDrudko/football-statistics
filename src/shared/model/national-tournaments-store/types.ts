@@ -1,23 +1,30 @@
+import { TournamentInfo } from "../football-structure/types"
 import { Country } from "../national-teams-store/teams/classTeam/types"
 import { MatchInfo } from "../tournament-config/class-match/types"
 
-export type TournamentInfo = {
+export type ChampionshipInfo = {
   id: string
   title: string
   date: string
-  logo: string
+  logo: ChampionshipLogo
   background: string[]
   hostCountry: Country[]
   finalStage: MatchInfo[]
   qualification: MatchInfo[]
+  info: TournamentInfo
+}
+
+type ChampionshipLogo = {
+  forCard: string
+  origin: string
 }
 
 export type TournamentData = {
-  [key in string]: TournamentInfo
+  [key in string]: ChampionshipInfo
 }
 
 export type NationalTournaments = {
-  worldCup: TournamentData
+  'world-cup': TournamentData
 }
 
 // export type NodesItem = {

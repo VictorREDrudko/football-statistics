@@ -1,15 +1,26 @@
 import { worldCupLogo2002 } from '@/shared/assets'
-import { TournamentInfo } from '../../types'
-import { backgroundWorldCup2002_1, backgroundWorldCup2002_2 } from '@/shared/assets/backgrounds'
-import { finalStageMatches1982 } from '../final-stage/finalStageMatches1982'
 
-export const worldCup2002: TournamentInfo = {
-  id: '12-world-cup',
+import {
+  backgroundWorldCup2002_1,
+  backgroundWorldCup2002_2,
+} from '@/shared/assets/backgrounds'
+import { finalStageMatches2002 } from '../final-stage/finalStageMatches2002'
+import { worldCupLogoForCard2002 } from '@/shared/assets/worldCupLogo'
+import { ChampionshipInfo } from '../../types'
+import { footballStructure } from '@/shared/model'
+
+export const worldCup2002: ChampionshipInfo = {
+  id: '17-world cup',
   title: '2002 FIFA World Cup',
   date: '31 May - 30 June 2002',
-  logo: worldCupLogo2002,
+  logo: {
+    forCard: worldCupLogoForCard2002,
+    origin: worldCupLogo2002,
+  },
   background: [backgroundWorldCup2002_1, backgroundWorldCup2002_2],
   hostCountry: ['Korea Republic', 'Japan'],
-  finalStage: finalStageMatches1982,
+  finalStage: finalStageMatches2002,
   qualification: [],
+  info: footballStructure.internationalLevel.FIFA.tournaments.nationalTeamLevel
+    .worldCup,
 }

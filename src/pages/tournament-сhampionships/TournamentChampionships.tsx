@@ -1,22 +1,30 @@
-import { confederationData, TournamentCard } from "@/entities"
-import s from "./TournamentChampionships.module.scss"
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom'
+import { ChampionshipCard } from '@/entities'
+import { NoData } from '@/shared'
+import { NationalTournaments, nationalTournamentStore } from '@/shared/model'
+import s from './TournamentChampionships.module.scss'
 
 export const TournamentChampionships = () => {
-  const { tournament } = useParams();
+  const { tournament } = useParams()
 
-  const codeOrganization = tournament?.split('-')[0].toUpperCase() as keyof typeof confederationData;
-  const tournamentData = codeOrganization in confederationData ? confederationData[codeOrganization] : null;
+  const tournamentData =
+    nationalTournamentStore[tournament as keyof NationalTournaments]
 
-  const tournamentCards = tournamentData?.tournament
-    ? Object.keys(tournamentData.tournament).map((year) => {
-        return <TournamentCard tournament={tournamentData.tournament[year]} key={tournamentData.tournament[year].id} />;
-      })
-    : <p>{'Tournament data not found'}</p>;
+  const tournamentCards = tournamentData ? (
+    Object.keys(tournamentData).map((year) => {
+      return (
+        <ChampionshipCard
+          championship={tournamentData[year]}
+          key={tournamentData[year].id}
+        />
+      )
+    })
+  ) : (
+    <NoData
+      message={'No tournament data available!'}
+      textButton={'Back to tournaments list'}
+    />
+  )
 
-  return (
-    <div className={s.container}>
-      {tournamentCards}
-    </div>
-  );
-};
+  return <div className={s.container}>{tournamentCards}</div>
+}
