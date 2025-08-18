@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { ChampionshipCard } from '@/entities'
-import { NoData } from '@/shared'
+import { Heading, NoData } from '@/shared'
 import { NationalTournaments, nationalTournamentStore } from '@/shared/model'
 import s from './TournamentChampionships.module.scss'
 
@@ -10,7 +10,7 @@ export const TournamentChampionships = () => {
   const tournamentData =
     nationalTournamentStore[tournament as keyof NationalTournaments]
 
-  const tournamentCards = tournamentData ? (
+  const championshipCards = tournamentData ? (
     Object.keys(tournamentData).map((year) => {
       return (
         <ChampionshipCard
@@ -26,5 +26,17 @@ export const TournamentChampionships = () => {
     />
   )
 
-  return <div className={s.container}>{tournamentCards}</div>
+  return (
+    <div className={s.wrapper}>
+      <div>
+        <Heading size="8" align="center" color="secondary">
+          {tournament?.replace(/-/, ' ')}
+        </Heading>
+        <Heading size="3" align="center" color="gray">
+          {'The World of Football Tournaments'}
+        </Heading>
+      </div>
+      <div className={s.container}>{championshipCards}</div>
+    </div>
+  )
 }
