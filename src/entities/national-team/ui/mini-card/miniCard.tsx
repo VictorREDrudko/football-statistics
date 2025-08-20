@@ -1,5 +1,6 @@
-import { Flag, getCurrentYear } from '@/shared'
+import { getCurrentYear } from '@/shared/lib';
 import s from './miniCard.module.css'
+import { Flag } from '@/entities';
 
 type Props = {
   nameCountry: string

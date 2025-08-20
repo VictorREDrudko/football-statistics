@@ -52,5 +52,5 @@ export {
   worldCupLogo2014,
   worldCupLogo2018,
   worldCupLogo2022,
-  notFound
+  notFound,
 }

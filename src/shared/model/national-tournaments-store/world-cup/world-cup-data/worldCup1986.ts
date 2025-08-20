@@ -6,7 +6,10 @@ import {
   backgroundWorldCup1986_3,
 } from '@/shared/assets/backgrounds'
 import { finalStageMatches1986 } from '../final-stage/finalStageMatches1986'
-import { worldCupLogoForCard1986 } from '@/shared/assets/worldCupLogo'
+import {
+  worldCupLogoForCard1986,
+  worldCupLogoWithoutBackground1986,
+} from '@/shared/assets/worldCupLogo'
 import { footballStructure } from '@/shared/model/football-structure/footballStructure'
 
 export const worldCup1986: ChampionshipInfo = {
@@ -16,6 +19,7 @@ export const worldCup1986: ChampionshipInfo = {
   logo: {
     forCard: worldCupLogoForCard1986,
     origin: worldCupLogo1986,
+    withoutBackground: worldCupLogoWithoutBackground1986,
   },
   background: [
     backgroundWorldCup1986_1,

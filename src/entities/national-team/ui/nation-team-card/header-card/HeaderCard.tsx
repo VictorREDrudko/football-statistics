@@ -1,4 +1,4 @@
-import { Flag } from '@/shared'
+import { Flag } from '@/entities'
 import s from './HeaderCard.module.css'
 
 type Props = {

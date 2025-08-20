@@ -1,6 +1,7 @@
-import { Badge, Flag } from '@/shared'
+import { Badge } from '@/shared'
 import { ChampionshipName } from './championship-name/ChampionshipName'
 import s from './ChampionshipTitle.module.scss'
+import { Flag } from '@/entities/countryTeam/ui/flag/Flag'
 
 type Props = {
   title: string

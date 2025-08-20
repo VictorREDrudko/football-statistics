@@ -13,5 +13,9 @@ export const teamGermany = new Team({
   flags: [{ countryFlag: flagGermany, period: '1919-1932, 1946-p.t.' }],
   coatOfArms: coatOfArmsGermany,
   associationLogo: iconGermany,
-  associationDate: { founded: '1900', fifaAffiliation: '1904', confederationAffiliation: '1954' },
+  associationDate: {
+    founded: '1900',
+    fifaAffiliation: '1904',
+    confederationAffiliation: '1954',
+  },
 })

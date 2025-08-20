@@ -29,7 +29,7 @@ export type NamesStadium = {
   period: string
 }
 
-type LocationStadium = {
+export type LocationStadium = {
   city: string
   country: Country
 }

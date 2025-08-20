@@ -4,7 +4,10 @@ import {
   backgroundWorldCup2006_2,
 } from '@/shared/assets/backgrounds'
 import { finalStageMatches2006 } from '../final-stage/finalStageMatches2006'
-import { worldCupLogoForCard2006 } from '@/shared/assets/worldCupLogo'
+import {
+  worldCupLogoForCard2006,
+  worldCupLogoWithoutBackground2006,
+} from '@/shared/assets/worldCupLogo'
 import { footballStructure } from '@/shared/model/football-structure/footballStructure'
 import { ChampionshipInfo } from '../../types'
 
@@ -15,6 +18,7 @@ export const worldCup2006: ChampionshipInfo = {
   logo: {
     forCard: worldCupLogoForCard2006,
     origin: worldCupLogo2006,
+    withoutBackground: worldCupLogoWithoutBackground2006,
   },
   background: [backgroundWorldCup2006_1, backgroundWorldCup2006_2],
   hostCountry: ['Germany'],

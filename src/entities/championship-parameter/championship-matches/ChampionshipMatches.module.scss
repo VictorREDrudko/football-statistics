@@ -1,0 +1,10 @@
+.matches {
+  line-height: 100%;
+  font-size: 1rem;
+  color: var(--color-gray-4);
+  font-weight: 500;
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+  }
+}

@@ -5,7 +5,10 @@ import {
   backgroundWorldCup1998_2,
 } from '@/shared/assets/backgrounds'
 import { finalStageMatches1998 } from '../final-stage/finalStageMatches1998'
-import { worldCupLogoForCard1998 } from '@/shared/assets/worldCupLogo'
+import {
+  worldCupLogoForCard1998,
+  worldCupLogoWithoutBackground1998,
+} from '@/shared/assets/worldCupLogo'
 import { footballStructure } from '@/shared/model/football-structure/footballStructure'
 
 export const worldCup1998: ChampionshipInfo = {
@@ -15,6 +18,7 @@ export const worldCup1998: ChampionshipInfo = {
   logo: {
     forCard: worldCupLogoForCard1998,
     origin: worldCupLogo1998,
+    withoutBackground: worldCupLogoWithoutBackground1998,
   },
   background: [backgroundWorldCup1998_1, backgroundWorldCup1998_2],
   hostCountry: ['France'],

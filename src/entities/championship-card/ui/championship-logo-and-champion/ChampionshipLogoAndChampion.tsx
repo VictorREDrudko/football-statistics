@@ -1,5 +1,6 @@
-import { BackgroundImage, CountryTeam } from '@/shared'
+import { BackgroundImage } from '@/shared'
 import s from './ChampionshipLogoAndChampion.module.scss'
+import { CountryTeam } from '@/entities/countryTeam/ui/CountryTeam'
 
 type Props = {
   logoPath: string

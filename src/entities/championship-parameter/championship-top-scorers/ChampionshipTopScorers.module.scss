@@ -1,0 +1,44 @@
+.containerPlayer {
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.containerPlayer img {
+  width: 50px;
+
+  @media (max-width: 480px) {
+    width: 30px;
+  }
+}
+
+.player,
+.goals {
+  line-height: 100%;
+  text-align: center;
+}
+
+.player {
+  color: var(--color-gray-4);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  @media (max-width: 480px) {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 0.75rem;
+  }
+}
+
+.goals {
+  font-size: 0.9rem;
+  color: var(--color-gray-8);
+  letter-spacing: 1px;
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+  }
+}

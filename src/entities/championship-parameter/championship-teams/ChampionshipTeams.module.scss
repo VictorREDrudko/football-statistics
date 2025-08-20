@@ -1,0 +1,18 @@
+.teamsFinalStage,
+.teamsQualification {
+  line-height: 100%;
+  font-size: 1rem;
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+  }
+}
+
+.teamsFinalStage {
+  color: var(--color-gray-4);
+  font-weight: 500;
+}
+
+.teamsQualification {
+  color: var(--color-gray-8);
+}

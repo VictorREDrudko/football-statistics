@@ -1,0 +1,26 @@
+.container {
+  padding: 20px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-light-200);
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+}
+
+.containerParameters {
+  margin-top: 20px;
+  padding: 0 10px;
+}

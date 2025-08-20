@@ -1,6 +1,7 @@
-import { Flag, getCurrentYear } from '@/shared'
+import { getCurrentYear } from '@/shared/lib'
 import s from './ModalResults.module.css'
 import { BaseResult } from '@/entities/national-team/model/types/types'
+import { Flag } from '@/entities'
 
 type Props = {
   statsResult: BaseResult

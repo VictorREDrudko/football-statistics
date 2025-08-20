@@ -1,5 +1,5 @@
 import s from './NationTeamCard.module.css'
-import { ButtonClose, getCurrentCountryName, getCurrentYear, IconConfederation } from '@/shared'
+import { ButtonClose, getCurrentCountryName, IconConfederation } from '@/shared'
 import { ConfederationCode, confederationData, NationalTeamType, TeamPartStats } from '@/entities'
 import { HeaderCard } from './header-card/HeaderCard'
 import { AssociationDates } from './association-dates/AssociationDates'
@@ -7,6 +7,7 @@ import { Achievements } from './achievements/Achievements'
 import { TeamRating } from './team-rating/TeamRating'
 import { findConfederationByTeam } from '../../lib/findConfederationByTeam'
 import { nationalCompetition } from '../../model/nationalCompetitions'
+import { getCurrentYear } from '@/shared/lib'
 
 type Props = {
   teamData: NationalTeamType
@@ -33,7 +34,7 @@ export const NationalTeamsCard = ({teamData, teamStats, closeCard}: Props) => {
       <ButtonClose onClose={closeCard} zIndex={0}/>
       <TeamRating place={teamData.rating.place} points={teamData.rating.points}/>
       <div className={s.containerIcon}>
-        <IconConfederation iconPath={confederationData[nameConfederation].iconPath} confederation={nameConfederation}/>
+        <IconConfederation iconPath={confederationData[nameConfederation].path} confederation={nameConfederation}/>
       </div>
     </div>
   )

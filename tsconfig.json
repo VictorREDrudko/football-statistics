@@ -5,7 +5,7 @@
       "@/*": ["src/*"],
       "@features/*": ["src/features/*"],
       "@entities/*": ["src/entities/*"],
-      "@shared/*": ["src/shared/*"],
+      "@shared/*": ["src/shared/*"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,
@@ -27,6 +27,9 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/widgets/tournament-details/ui/statisticsTournament/tournament-main-info/matches-championship/MatchesChampionship.tsx"],
+  "include": [
+    "src",
+    "src/widgets/championship-details/ui/statisticsTournament/tournament-main-info/matches-championship/MatchesChampionship.tsx"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

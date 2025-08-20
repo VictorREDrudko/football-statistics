@@ -1,0 +1,25 @@
+.container {
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.attendance,
+.valuePerMatch {
+  line-height: 100%;
+  font-size: 1rem;
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+  }
+}
+
+.attendance {
+  color: var(--color-gray-4);
+  font-weight: 500;
+}
+
+.valuePerMatch {
+  color: var(--color-gray-8);
+}

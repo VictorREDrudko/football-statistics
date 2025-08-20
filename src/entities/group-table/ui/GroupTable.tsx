@@ -1,7 +1,8 @@
-import { TeamTableData } from '@/widgets/tournament-details/model/types'
 import s from './GroupTable.module.scss'
 import { tableHeaderData } from '../model/tableHeaderData'
-import { CountryTeam, Title } from '@/shared'
+import { Title } from '@/shared'
+import { CountryTeam } from '@/entities/countryTeam/ui/CountryTeam'
+import { TeamTableData } from '@/widgets/national-championship/model/types'
 
 type Props = {
   tableData: TeamTableData[]
@@ -9,7 +10,7 @@ type Props = {
   groupName: string
 }
 
-export const GroupTable = ({tableData, year, groupName}: Props) => {
+export const GroupTable = ({ tableData, year, groupName }: Props) => {
   const tableHeader = tableHeaderData.map((title, index) => {
     return (
       <th key={index} className={s.tableHeader} title={title.split(':')[0]}>
@@ -19,14 +20,18 @@ export const GroupTable = ({tableData, year, groupName}: Props) => {
   })
 
   const tableBody = tableData.map((teamData, index) => {
-    const styleQualification = teamData.qualification === '+' 
-      ? {backgroundColor: 'var(--color-primary-400)'} 
-      : {}
+    const styleQualification =
+      teamData.qualification === '+'
+        ? { backgroundColor: 'var(--color-primary-400)' }
+        : {}
 
     return (
       <tr key={index} className={s.bodyTable} style={styleQualification}>
         <th>{teamData.position}</th>
-        <th> <CountryTeam countryName={teamData.team} year={year}/></th>
+        <th>
+          {' '}
+          <CountryTeam countryName={teamData.team} year={year} />
+        </th>
         <th>{teamData.played}</th>
         <th>{teamData.won}</th>
         <th>{teamData.drawn}</th>
@@ -43,7 +48,7 @@ export const GroupTable = ({tableData, year, groupName}: Props) => {
   return (
     <table className={s.table}>
       <caption>
-        <Title title={groupName} variant='sub-stage'/>
+        <Title title={groupName} variant="sub-stage" />
       </caption>
       <thead>
         <tr>{tableHeader}</tr>

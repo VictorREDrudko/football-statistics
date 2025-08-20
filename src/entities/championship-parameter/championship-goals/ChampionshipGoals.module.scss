@@ -1,0 +1,18 @@
+.goals,
+.goalsPerMatch {
+  line-height: 100%;
+  font-size: 1rem;
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+  }
+}
+
+.goals {
+  color: var(--color-gray-4);
+  font-weight: 500;
+}
+
+.goalsPerMatch {
+  color: var(--color-gray-8);
+}

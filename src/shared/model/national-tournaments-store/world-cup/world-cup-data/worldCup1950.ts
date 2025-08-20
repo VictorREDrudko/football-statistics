@@ -5,7 +5,10 @@ import {
   backgroundWorldCup1950_1,
   backgroundWorldCup1950_2,
 } from '@/shared/assets/backgrounds'
-import { worldCupLogoForCard1950 } from '@/shared/assets/worldCupLogo'
+import {
+  worldCupLogoForCard1950,
+  worldCupLogoWithoutBackground1950,
+} from '@/shared/assets/worldCupLogo'
 import { footballStructure } from '@/shared/model/football-structure/footballStructure'
 
 export const worldCup1950: ChampionshipInfo = {
@@ -15,6 +18,7 @@ export const worldCup1950: ChampionshipInfo = {
   logo: {
     forCard: worldCupLogoForCard1950,
     origin: worldCupLogo1950,
+    withoutBackground: worldCupLogoWithoutBackground1950,
   },
   background: [backgroundWorldCup1950_1, backgroundWorldCup1950_2],
   hostCountry: ['Brazil'],

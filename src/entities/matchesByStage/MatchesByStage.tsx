@@ -1,22 +1,20 @@
-import { Match, MatchInfo } from '@/shared'
 import s from './MatchesByStage.module.scss'
+import { Match } from '../match/Match'
+import { MatchInfo } from '@/shared/model'
+
 
 type Props = {
-  matches: MatchInfo[] 
+  matches: MatchInfo[]
 }
 
-export const MatchesByStage = ({matches}: Props) => {
-  const groupMatches = matches.map(match => {
+export const MatchesByStage = ({ matches }: Props) => {
+  const groupMatches = matches.map((match) => {
     return (
-    <div key={match.id} className={s.containerMatch}>
-      <Match match={match} />
-    </div>
+      <div key={match.id} className={s.containerMatch}>
+        <Match match={match} />
+      </div>
     )
   })
 
-  return (
-    <div className={s.container}>
-      {groupMatches}
-    </div>
-  )
+  return <div className={s.container}>{groupMatches}</div>
 }

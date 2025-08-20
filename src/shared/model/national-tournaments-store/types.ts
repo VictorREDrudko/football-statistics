@@ -16,6 +16,7 @@ export type ChampionshipInfo = {
 
 type ChampionshipLogo = {
   forCard: string
+  withoutBackground: string
   origin: string
 }
 

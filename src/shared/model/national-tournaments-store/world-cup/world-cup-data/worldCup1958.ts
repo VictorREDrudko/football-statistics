@@ -2,7 +2,10 @@ import { worldCupLogo1958 } from '@/shared/assets'
 import { ChampionshipInfo } from '../../types'
 import { backgroundWorldCup1958_1 } from '@/shared/assets/backgrounds'
 import { finalStageMatches1958 } from '../final-stage/finalStageMatches1958'
-import { worldCupLogoForCard1958 } from '@/shared/assets/worldCupLogo'
+import {
+  worldCupLogoForCard1958,
+  worldCupLogoWithoutBackground1958,
+} from '@/shared/assets/worldCupLogo'
 import { footballStructure } from '@/shared/model/football-structure/footballStructure'
 
 export const worldCup1958: ChampionshipInfo = {
@@ -12,6 +15,7 @@ export const worldCup1958: ChampionshipInfo = {
   logo: {
     forCard: worldCupLogoForCard1958,
     origin: worldCupLogo1958,
+    withoutBackground: worldCupLogoWithoutBackground1958,
   },
   background: [backgroundWorldCup1958_1],
   hostCountry: ['Sweden'],

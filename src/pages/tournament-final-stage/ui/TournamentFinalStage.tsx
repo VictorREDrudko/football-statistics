@@ -1,29 +1,24 @@
-import { useParams } from "react-router-dom";
-import s from './TournamentFinalStage.module.scss';
-import { ConfederationCode, confederationData } from "@/entities";
-import { TournamentDetails } from "@/widgets";
+import { useParams } from 'react-router-dom'
+import { NationalChampionship } from '@/widgets'
+import { NoData } from '@/shared'
+import {
+  ChampionshipInfo,
+  NationalTournaments,
+  nationalTournamentStore,
+} from '@/shared/model'
 
 export const TournamentFinalStage = () => {
-  const { tournament, urlYear } = useParams<{ tournament: string, urlYear: string }>();
+  const { tournament, urlYear } = useParams<{
+    tournament: string
+    urlYear: string
+  }>()
 
-  const tournamentCode = tournament?.split('-')[0].toUpperCase();
-
-  const isOrganizationValid = tournamentCode && tournamentCode in confederationData;
-  const organizationCode = isOrganizationValid ? tournamentCode as ConfederationCode : undefined;
-
-  const isYearValid = organizationCode && urlYear && urlYear in confederationData[organizationCode].tournament;
-  const year = isYearValid ? urlYear : undefined;
-
-  if (!organizationCode || !year) {
-    return <div>Invalid tournament or year</div>;
+  if (!urlYear) {
+    return <NoData message={'Invalid tournament or year'} />
   }
 
-  return (
-    <div className={s.container}>
-      <TournamentDetails 
-        organizationCode={organizationCode} 
-        year={year}
-      />
-    </div>
-  );
-};
+  const championshipData: ChampionshipInfo =
+    nationalTournamentStore[tournament as keyof NationalTournaments][urlYear]
+
+  return <NationalChampionship championshipData={championshipData} />
+}

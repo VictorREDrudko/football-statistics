@@ -6,7 +6,7 @@ import {
   backgroundWorldCup1974_2,
   backgroundWorldCup1974_3,
 } from '@/shared/assets/backgrounds'
-import { worldCupLogoForCard1974 } from '@/shared/assets/worldCupLogo'
+import { worldCupLogoForCard1974, worldCupLogoWithoutBackground1974 } from '@/shared/assets/worldCupLogo'
 import { footballStructure } from '@/shared/model/football-structure/footballStructure'
 
 export const worldCup1974: ChampionshipInfo = {
@@ -16,6 +16,7 @@ export const worldCup1974: ChampionshipInfo = {
   logo: {
     forCard: worldCupLogoForCard1974,
     origin: worldCupLogo1974,
+    withoutBackground: worldCupLogoWithoutBackground1974
   },
   background: [
     backgroundWorldCup1974_1,
