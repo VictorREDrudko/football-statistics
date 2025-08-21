@@ -7,11 +7,16 @@ export type ChampionshipInfo = {
   title: string
   date: string
   logo: ChampionshipLogo
-  background: string[]
+  background: ChampionshipBackground
   hostCountry: Country[]
   finalStage: MatchInfo[]
   qualification: MatchInfo[]
   info: TournamentInfo
+}
+
+export type ChampionshipBackground = {
+  groupRound: string
+  knockoutRound: string
 }
 
 type ChampionshipLogo = {

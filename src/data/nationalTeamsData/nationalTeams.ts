@@ -702,7 +702,11 @@ import flagVenezuela from './../../assets/icon/flag/Venezuela.png'
 import coatOfArmsVenezuela from './../../assets/icon/coat-of-arms/Venezuela.png'
 
 import { v1 } from 'uuid'
-import { Confederation, NationalTeams, TeamsByConfederation } from './type-nationalTeams'
+import {
+  Confederation,
+  NationalTeams,
+  TeamsByConfederation,
+} from './type-nationalTeams'
 
 import backgroundUefa from './../../assets/backgroundConfeder/uefa.png'
 import backgroundCaf from './../../assets/backgroundConfeder/caf.png'
@@ -719,7 +723,7 @@ import iconConcacaf from './../../assets/icon/iconConfeder/concacaf.png'
 import iconConmebol from './../../assets/icon/iconConfeder/conmebol.png'
 import iconOfc from './../../assets/icon/iconConfeder/ofc.png'
 import iconFifa from './../../assets/icon/iconConfeder/fifa.png'
-import { flagArgentina } from '../../shared/assets/flags'
+import { flagArgentina } from '../../shared/assets/image/flags'
 
 export const confederationBackground: ConfederationImage = {
   UEFA: backgroundUefa,
@@ -1992,7 +1996,9 @@ export const nationalTeams: NationalTeams = {
   Czechoslovakia: {
     id: v1(),
     names: [{ nameCountry: 'Czechoslovakia', period: '0000-1992' }],
-    flags: [{ flagCountry: flagCzechoslovakia, period: '0000-1992, 2006-p.t.' }],
+    flags: [
+      { flagCountry: flagCzechoslovakia, period: '0000-1992, 2006-p.t.' },
+    ],
     coatOfArms: coatOfArmsCzechoslovakia,
     associationIcon: iconCzechoslovakia,
     associationDate: {
@@ -4405,8 +4411,12 @@ export const nationalTeams: NationalTeams = {
   },
   'Saint Vincent and the Grenadines': {
     id: v1(),
-    names: [{ nameCountry: 'Saint Vincent and the Grenadines', period: '0000-p.t.' }],
-    flags: [{ flagCountry: flagSaintVincentAndTheGrenadines, period: '0000-p.t.' }],
+    names: [
+      { nameCountry: 'Saint Vincent and the Grenadines', period: '0000-p.t.' },
+    ],
+    flags: [
+      { flagCountry: flagSaintVincentAndTheGrenadines, period: '0000-p.t.' },
+    ],
     coatOfArms: coatOfArmsSaintVincentAndTheGrenadines,
     associationIcon: iconSaintVincentAndTheGrenadines,
     associationDate: {
@@ -4899,4 +4909,6 @@ export const nationalTeams: NationalTeams = {
   },
 }
 
-export const confederation: Confederation[] = Object.keys(teamsByConfederation) as Confederation[]
+export const confederation: Confederation[] = Object.keys(
+  teamsByConfederation
+) as Confederation[]

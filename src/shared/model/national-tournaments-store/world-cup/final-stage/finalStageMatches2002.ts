@@ -1,7 +1,10 @@
 import { stadiumsStore } from '@/shared/model/stadiums-store/stadiumsStore'
 import { Match } from '@/shared/model/tournament-config/class-match/Match'
-import { MatchInfo, StadiumInfo } from '@/shared/model/tournament-config/class-match/types'
-import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/tournamentStages'
+import {
+  MatchInfo,
+  StadiumInfo,
+} from '@/shared/model/tournament-config/class-match/types'
+import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/CHAMPIONSHIP_STAGES'
 
 export const finalStageMatches2002: MatchInfo[] = [
   new Match(
@@ -13,7 +16,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['30'],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.seoul.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.seoul.locationAndNames,
+    } as StadiumInfo,
     '62 561'
   ),
 
@@ -26,7 +31,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['45, 83'],
     ['D.Rodríguez'],
     ['47'],
-    { ...stadiumsStore['Korea Republic']?.ulsan.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.ulsan.locationAndNames,
+    } as StadiumInfo,
     '30 157'
   ),
 
@@ -39,7 +46,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['16(p)'],
     ['S.Diao'],
     ['52'],
-    { ...stadiumsStore['Korea Republic']?.daegu.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.daegu.locationAndNames,
+    } as StadiumInfo,
     '43 500'
   ),
 
@@ -52,7 +61,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     [],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.busan.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.busan.locationAndNames,
+    } as StadiumInfo,
     '38 289'
   ),
 
@@ -65,7 +76,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['22', '67'],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.incheon.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.incheon.locationAndNames,
+    } as StadiumInfo,
     '48 100'
   ),
 
@@ -78,7 +91,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['20(p)', '26, 38'],
     ['R.Morales', 'D.Forlán', 'A.Recoba'],
     ['46', '69', '88(p)'],
-    { ...stadiumsStore['Korea Republic']?.suwon.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.suwon.locationAndNames,
+    } as StadiumInfo,
     '33 681'
   ),
 
@@ -91,7 +106,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['39', '55'],
     ['T.Mokoena', 'Q.Fortune'],
     ['63', '90+1(p)'],
-    { ...stadiumsStore['Korea Republic']?.busan.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.busan.locationAndNames,
+    } as StadiumInfo,
     '25 186'
   ),
 
@@ -104,7 +121,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['44', '74', '87(p)'],
     ['S.Cimirotič'],
     ['82'],
-    { ...stadiumsStore['Korea Republic']?.gwangju.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.gwangju.locationAndNames,
+    } as StadiumInfo,
     '28 598'
   ),
 
@@ -117,7 +136,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['53, 69', '83(p)'],
     ['C.Puyol'],
     ['10(o.g.)'],
-    { ...stadiumsStore['Korea Republic']?.jeonju.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.jeonju.locationAndNames,
+    } as StadiumInfo,
     '24 000'
   ),
 
@@ -130,7 +151,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['4'],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.daegu.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.daegu.locationAndNames,
+    } as StadiumInfo,
     '47 226'
   ),
 
@@ -143,7 +166,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['4, 56', '45+1'],
     ['B.McCarthy', 'L.Radebe'],
     ['31', '53'],
-    { ...stadiumsStore['Korea Republic']?.daejeon.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.daejeon.locationAndNames,
+    } as StadiumInfo,
     '31 024'
   ),
 
@@ -156,7 +181,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['65, 84', '73'],
     ['M.Ačimovič'],
     ['45+1'],
-    { ...stadiumsStore['Korea Republic']?.jeju.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.jeju.locationAndNames,
+    } as StadiumInfo,
     '30 176'
   ),
 
@@ -169,7 +196,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['50', '87(p)'],
     ['Hasan Şaş'],
     ['45+2'],
-    { ...stadiumsStore['Korea Republic']?.ulsan.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.ulsan.locationAndNames,
+    } as StadiumInfo,
     '33 842'
   ),
 
@@ -182,7 +211,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['61', '65'],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.gwangju.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.gwangju.locationAndNames,
+    } as StadiumInfo,
     '27 217'
   ),
 
@@ -195,7 +226,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['15', '32', '45(p)', '55'],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.jeju.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.jeju.locationAndNames,
+    } as StadiumInfo,
     '36 750'
   ),
 
@@ -208,7 +241,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['86'],
     ['Emre Belözoglu'],
     ['56'],
-    { ...stadiumsStore['Korea Republic']?.incheon.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.incheon.locationAndNames,
+    } as StadiumInfo,
     '42 299'
   ),
 
@@ -221,7 +256,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['10, 13', '38', '62', '64'],
     ['P.Wanchope', 'R.Gómez'],
     ['39', '56'],
-    { ...stadiumsStore['Korea Republic']?.suwon.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.suwon.locationAndNames,
+    } as StadiumInfo,
     '38 524'
   ),
 
@@ -234,7 +271,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['6', '9', '62', '85'],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.seoul.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.seoul.locationAndNames,
+    } as StadiumInfo,
     '43 605'
   ),
 
@@ -247,7 +286,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['26', '53'],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.busan.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.busan.locationAndNames,
+    } as StadiumInfo,
     '48 760'
   ),
 
@@ -260,7 +301,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['4', '29(o.g.)', '36'],
     ['Beto', 'J.Agoos'],
     ['39', '71(o.g.)'],
-    { ...stadiumsStore['Korea Republic']?.suwon.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.suwon.locationAndNames,
+    } as StadiumInfo,
     '37 306'
   ),
 
@@ -273,7 +316,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['78'],
     ['C.Mathis'],
     ['24'],
-    { ...stadiumsStore['Korea Republic']?.daegu.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.daegu.locationAndNames,
+    } as StadiumInfo,
     '60 778'
   ),
 
@@ -286,7 +331,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['14, 65, 77', '88'],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.jeonju.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.jeonju.locationAndNames,
+    } as StadiumInfo,
     '31 000'
   ),
 
@@ -299,7 +346,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['70'],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.incheon.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.incheon.locationAndNames,
+    } as StadiumInfo,
     '50 239'
   ),
 
@@ -312,7 +361,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['3', '5', '66'],
     ['L.Donovan'],
     ['83'],
-    { ...stadiumsStore['Korea Republic']?.daejeon.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.daejeon.locationAndNames,
+    } as StadiumInfo,
     '26 482'
   ),
 
@@ -334,7 +385,14 @@ export const finalStageMatches2002: MatchInfo[] = [
     tournamentStages.groupE,
     ['Germany', 'Saudi Arabia'],
     [[8, 0], [], []],
-    ['M.Klose', 'M.Ballack', 'C.Jancker', 'T.Linke', 'O.Bierhoff', 'B.Schneider'],
+    [
+      'M.Klose',
+      'M.Ballack',
+      'C.Jancker',
+      'T.Linke',
+      'O.Bierhoff',
+      'B.Schneider',
+    ],
     ['20, 25, 70', '40', '45+1', '73', '84', '90+1'],
     [],
     [],
@@ -637,7 +695,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['88'],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.jeju.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.jeju.locationAndNames,
+    } as StadiumInfo,
     '25 176'
   ),
 
@@ -680,7 +740,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['8'],
     ['Robbie Keane'],
     ['90(p)'],
-    { ...stadiumsStore['Korea Republic']?.suwon.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.suwon.locationAndNames,
+    } as StadiumInfo,
     '38 926'
   ),
 
@@ -693,7 +755,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['8', '65'],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.jeonju.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.jeonju.locationAndNames,
+    } as StadiumInfo,
     '36 380'
   ),
 
@@ -732,7 +796,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['88', '117'],
     ['C.Vieri'],
     ['18'],
-    { ...stadiumsStore['Korea Republic']?.daejeon.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.daejeon.locationAndNames,
+    } as StadiumInfo,
     '38 588'
   ),
 
@@ -758,7 +824,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['39'],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.ulsan.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.ulsan.locationAndNames,
+    } as StadiumInfo,
     '37 337'
   ),
 
@@ -775,7 +843,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     [],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.gwangju.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.gwangju.locationAndNames,
+    } as StadiumInfo,
     '42 114'
   ),
 
@@ -801,7 +871,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['75'],
     [],
     [],
-    { ...stadiumsStore['Korea Republic']?.seoul.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.seoul.locationAndNames,
+    } as StadiumInfo,
     '65 256'
   ),
 
@@ -827,7 +899,9 @@ export const finalStageMatches2002: MatchInfo[] = [
     ['1', '13, 32'],
     ['Lee Eul-yong', 'Song Chong-gug'],
     ['9', '90+3'],
-    { ...stadiumsStore['Korea Republic']?.daegu.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['Korea Republic']?.daegu.locationAndNames,
+    } as StadiumInfo,
     '63 483'
   ),
 

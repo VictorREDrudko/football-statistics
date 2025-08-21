@@ -1,7 +1,10 @@
 import { stadiumsStore } from '@/shared/model/stadiums-store/stadiumsStore'
 import { Match } from '@/shared/model/tournament-config/class-match/Match'
-import { MatchInfo, StadiumInfo } from '@/shared/model/tournament-config/class-match/types'
-import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/tournamentStages'
+import {
+  MatchInfo,
+  StadiumInfo,
+} from '@/shared/model/tournament-config/class-match/types'
+import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/CHAMPIONSHIP_STAGES'
 
 export const finalStageMatches1998: MatchInfo[] = [
   new Match(
@@ -65,7 +68,9 @@ export const finalStageMatches1998: MatchInfo[] = [
     ['23, 85', '46'],
     [],
     [],
-    { ...stadiumsStore.France?.geoffroyGuichard.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore.France?.geoffroyGuichard.locationAndNames,
+    } as StadiumInfo,
     '30 600'
   ),
 
@@ -117,7 +122,9 @@ export const finalStageMatches1998: MatchInfo[] = [
     ['70'],
     ['I.Vastić'],
     ['90+2'],
-    { ...stadiumsStore.France?.geoffroyGuichard.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore.France?.geoffroyGuichard.locationAndNames,
+    } as StadiumInfo,
     '30 600'
   ),
 
@@ -286,7 +293,9 @@ export const finalStageMatches1998: MatchInfo[] = [
     [],
     [],
     [],
-    { ...stadiumsStore.France?.geoffroyGuichard.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore.France?.geoffroyGuichard.locationAndNames,
+    } as StadiumInfo,
     '30 600'
   ),
 
@@ -377,7 +386,9 @@ export const finalStageMatches1998: MatchInfo[] = [
     ['4', '18'],
     ['R.Pelaez', 'Luis Hernandez'],
     ['75', '90+4'],
-    { ...stadiumsStore.France?.geoffroyGuichard.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore.France?.geoffroyGuichard.locationAndNames,
+    } as StadiumInfo,
     '30 600'
   ),
 
@@ -403,7 +414,9 @@ export const finalStageMatches1998: MatchInfo[] = [
     ['73'],
     [],
     [],
-    { ...stadiumsStore.France?.geoffroyGuichard.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore.France?.geoffroyGuichard.locationAndNames,
+    } as StadiumInfo,
     '30 600'
   ),
 
@@ -732,7 +745,9 @@ export const finalStageMatches1998: MatchInfo[] = [
     ['5(p)', '45+1'],
     ['A.Shearer', 'M.Owen'],
     ['9(p)', '16'],
-    { ...stadiumsStore.France?.geoffroyGuichard.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore.France?.geoffroyGuichard.locationAndNames,
+    } as StadiumInfo,
     '30 600'
   ),
 

@@ -1,8 +1,8 @@
 import s from './GroupTable.module.scss'
 import { tableHeaderData } from '../model/tableHeaderData'
 import { Title } from '@/shared'
-import { CountryTeam } from '@/entities/countryTeam/ui/CountryTeam'
 import { TeamTableData } from '@/widgets/national-championship/model/types'
+import { CountryTeam } from '@/entities'
 
 type Props = {
   tableData: TeamTableData[]

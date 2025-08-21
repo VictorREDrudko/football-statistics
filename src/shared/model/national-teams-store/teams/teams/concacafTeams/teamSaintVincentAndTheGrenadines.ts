@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagSaintVincentAndTheGrenadines } from '@/shared/assets/flags'
-import { coatOfArmsSaintVincentAndTheGrenadines } from '@/shared/assets/coat-of-arms'
+import { flagSaintVincentAndTheGrenadines } from '@/shared/assets/image/flags'
+import { coatOfArmsSaintVincentAndTheGrenadines } from '@/shared/assets/image/coat-of-arms'
 import { iconSaintVincentAndTheGrenadines } from '@/shared/assets/iconFootballAssociation'
 
 export const teamSaintVincentAndTheGrenadines = new Team({

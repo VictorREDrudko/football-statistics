@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagBurkinaFaso } from '@/shared/assets/flags'
-import { coatOfArmsBurkinaFaso } from '@/shared/assets/coat-of-arms'
+import { flagBurkinaFaso } from '@/shared/assets/image/flags'
+import { coatOfArmsBurkinaFaso } from '@/shared/assets/image/coat-of-arms'
 import { iconBurkinaFaso } from '@/shared/assets/iconFootballAssociation'
 
 export const teamBurkinaFaso = new Team({

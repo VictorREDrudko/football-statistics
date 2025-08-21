@@ -11,28 +11,27 @@
 }
 
 .containerMatch {
-  background-color: var(--color-light-100-transparent-50);
+  background-color: var(--color-white-transparent-50);
   border-radius: 15px 0;
   cursor: pointer;
   box-shadow:
-    0px 1px 2px 0px var(--color-dark-700),
-    1px 2px 4px 0px var(--color-dark-600),
-    2px 4px 8px 0px var(--color-dark-500),
-    2px 4px 16px 0px var(--color-light-100);
+    0px 1px 2px 0px var(--color-black),
+    1px 2px 4px 0px var(--color-black-transparent-30),
+    2px 4px 8px 0px var(--color-black),
+    2px 4px 16px 0px var(--color-white);
   transition: all 0.3s;
 
   &:hover {
     transform: scale(1.02);
-    background-color: var(--color-light-100-transparent-70);
+    background-color: var(--color-white-transparent-70);
   }
 
   @media (max-width: 480px) {
     .containerMatch {
       border-radius: 10px 0;
       box-shadow:
-        0px 1px 2px 0px var(--color-light-100-transparent-70),
-        1px 2px 4px 0px var(--color-light-100-transparent-50);
+        0px 1px 2px 0px var(--color-white-transparent-70),
+        1px 2px 4px 0px var(--color-white-transparent-50);
     }
   }
 }
-

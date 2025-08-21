@@ -1,0 +1,11 @@
+import { createTeam } from '@/entities/team/lib'
+
+export const teamAzerbaijan = createTeam({
+  confederation: 'UEFA',
+  country: 'Azerbaijan',
+  names: [{ name: 'Azerbaijan', period: '1992-p.t.' }],
+  flagsPeriod: ['1992-p.t.'],
+  founded: '1992',
+  fifa: '1994',
+  confederationDate: '1994',
+})

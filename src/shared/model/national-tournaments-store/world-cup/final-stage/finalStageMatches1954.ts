@@ -1,7 +1,10 @@
 import { stadiumsStore } from '@/shared/model/stadiums-store/stadiumsStore'
 import { Match } from '@/shared/model/tournament-config/class-match/Match'
-import { MatchInfo, StadiumInfo } from '@/shared/model/tournament-config/class-match/types'
-import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/tournamentStages'
+import {
+  MatchInfo,
+  StadiumInfo,
+} from '@/shared/model/tournament-config/class-match/types'
+import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/CHAMPIONSHIP_STAGES'
 
 export const finalStageMatches1954: MatchInfo[] = [
   // Группа 1
@@ -14,7 +17,9 @@ export const finalStageMatches1954: MatchInfo[] = [
     ['23', '30', '34', '44', '69'],
     [],
     [],
-    { ...stadiumsStore.Switzerland?.charmilles.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore.Switzerland?.charmilles.locationAndNames,
+    } as StadiumInfo,
     '13 470'
   ),
 
@@ -53,7 +58,9 @@ export const finalStageMatches1954: MatchInfo[] = [
     ['19', '46(o.g.)', '88(p)'],
     ['Lamadrid', 'Balcázar'],
     ['54', '85'],
-    { ...stadiumsStore.Switzerland?.charmilles.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore.Switzerland?.charmilles.locationAndNames,
+    } as StadiumInfo,
     '19 000'
   ),
 
@@ -106,7 +113,9 @@ export const finalStageMatches1954: MatchInfo[] = [
     ['10', '24', '30', '37', '64', '70', '76'],
     [],
     [],
-    { ...stadiumsStore.Switzerland?.charmilles.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore.Switzerland?.charmilles.locationAndNames,
+    } as StadiumInfo,
     '3 541'
   ),
 
@@ -278,7 +287,9 @@ export const finalStageMatches1954: MatchInfo[] = [
     ['9(o.g.)', '85'],
     [],
     [],
-    { ...stadiumsStore.Switzerland?.charmilles.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore.Switzerland?.charmilles.locationAndNames,
+    } as StadiumInfo,
     '17 000'
   ),
 

@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagNorthernIreland } from '@/shared/assets/flags'
-import { coatOfArmsNorthernIreland } from '@/shared/assets/coat-of-arms'
+import { flagNorthernIreland } from '@/shared/assets/image/flags'
+import { coatOfArmsNorthernIreland } from '@/shared/assets/image/coat-of-arms'
 import { iconNorthernIreland } from '@/shared/assets/iconFootballAssociation'
 
 export const teamNorthernIreland = new Team({

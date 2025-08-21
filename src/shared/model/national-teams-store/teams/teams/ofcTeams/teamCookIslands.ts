@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagCookIslands } from '@/shared/assets/flags'
-import { coatOfArmsCookIslands } from '@/shared/assets/coat-of-arms'
+import { flagCookIslands } from '@/shared/assets/image/flags'
+import { coatOfArmsCookIslands } from '@/shared/assets/image/coat-of-arms'
 import { iconCookIslands } from '@/shared/assets/iconFootballAssociation'
 
 export const teamCookIslands = new Team({

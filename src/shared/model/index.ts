@@ -22,6 +22,7 @@ import {
 } from './national-tournaments-stats-store/types'
 import { nationalTournamentStore } from './national-tournaments-store/nationalTournamentStore'
 import {
+  ChampionshipBackground,
   ChampionshipInfo,
   NationalTournaments,
 } from './national-tournaments-store/types'
@@ -52,9 +53,9 @@ export type {
   Indicator,
   TeamsStats,
   ChampionshipfinalStageStats,
-  Country,
   StadiumInfo,
   NamesStadium,
   MatchInfo,
-  GoalsInfo
+  GoalsInfo,
+  ChampionshipBackground
 }

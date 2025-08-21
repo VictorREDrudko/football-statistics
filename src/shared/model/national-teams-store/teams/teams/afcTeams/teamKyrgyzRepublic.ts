@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagKyrgyzRepublic } from '@/shared/assets/flags'
-import { coatOfArmsKyrgyzRepublic } from '@/shared/assets/coat-of-arms'
+import { flagKyrgyzRepublic } from '@/shared/assets/image/flags'
+import { coatOfArmsKyrgyzRepublic } from '@/shared/assets/image/coat-of-arms'
 import { iconKyrgyzRepublic } from '@/shared/assets/iconFootballAssociation'
 
 export const teamKyrgyzRepublic = new Team({

@@ -1,4 +1,4 @@
-import { notFound } from '@/shared/assets'
+// import { notFound } from '@/shared/assets'
 import s from './NoData.module.scss'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '@/shared'
@@ -19,7 +19,7 @@ export const NoData = ({
   return (
     <div className={s.container}>
       <img
-        src={notFound}
+        src={'notFound'}
         alt="not found football data image"
         className={s.image}
       />

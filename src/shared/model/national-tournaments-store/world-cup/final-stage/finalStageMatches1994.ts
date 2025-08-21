@@ -1,7 +1,10 @@
 import { stadiumsStore } from '@/shared/model/stadiums-store/stadiumsStore'
 import { Match } from '@/shared/model/tournament-config/class-match/Match'
-import { MatchInfo, StadiumInfo } from '@/shared/model/tournament-config/class-match/types'
-import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/tournamentStages'
+import {
+  MatchInfo,
+  StadiumInfo,
+} from '@/shared/model/tournament-config/class-match/types'
+import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/CHAMPIONSHIP_STAGES'
 
 export const finalStageMatches1994: MatchInfo[] = [
   new Match(
@@ -13,7 +16,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['45'],
     ['G.Bregy'],
     ['39'],
-    { ...stadiumsStore['United States']?.pontiac.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.pontiac.locationAndNames,
+    } as StadiumInfo,
     '73 425'
   ),
 
@@ -39,7 +44,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['16', '52', '66, 72'],
     ['G.Hagi'],
     ['35'],
-    { ...stadiumsStore['United States']?.pontiac.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.pontiac.locationAndNames,
+    } as StadiumInfo,
     '61 428'
   ),
 
@@ -65,7 +72,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['44', '90+1'],
     [],
     [],
-    { ...stadiumsStore['United States']?.stanford.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.stanford.locationAndNames,
+    } as StadiumInfo,
     '83 401'
   ),
 
@@ -104,7 +113,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['26', '52(p)'],
     [],
     [],
-    { ...stadiumsStore['United States']?.stanford.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.stanford.locationAndNames,
+    } as StadiumInfo,
     '81 061'
   ),
 
@@ -117,7 +128,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['39', '66', '73'],
     [],
     [],
-    { ...stadiumsStore['United States']?.stanford.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.stanford.locationAndNames,
+    } as StadiumInfo,
     '83 401'
   ),
 
@@ -130,7 +143,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['37(p)', '59, 81'],
     ['O.Salenko'],
     ['4(p)'],
-    { ...stadiumsStore['United States']?.pontiac.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.pontiac.locationAndNames,
+    } as StadiumInfo,
     '71 528'
   ),
 
@@ -143,7 +158,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['15, 41, 44(p), 72, 75', '81'],
     ['R.Milla'],
     ['46'],
-    { ...stadiumsStore['United States']?.stanford.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.stanford.locationAndNames,
+    } as StadiumInfo,
     '74 914'
   ),
 
@@ -156,7 +173,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['47'],
     ['K.Andersson'],
     ['23'],
-    { ...stadiumsStore['United States']?.pontiac.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.pontiac.locationAndNames,
+    } as StadiumInfo,
     '77 217'
   ),
 
@@ -169,7 +188,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['61'],
     [],
     [],
-    { ...stadiumsStore['United States']?.soldier.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.soldier.locationAndNames,
+    } as StadiumInfo,
     '63 117'
   ),
 
@@ -182,7 +203,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['51', '56'],
     ['Hong Myung-bo', 'Seo Jung-won'],
     ['85', '90'],
-    { ...stadiumsStore['United States']?.cotton.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.cotton.locationAndNames,
+    } as StadiumInfo,
     '56 247'
   ),
 
@@ -195,7 +218,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['48'],
     ['A.Goikoetxea'],
     ['14'],
-    { ...stadiumsStore['United States']?.soldier.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.soldier.locationAndNames,
+    } as StadiumInfo,
     '63 113'
   ),
 
@@ -208,7 +233,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     [],
     [],
     [],
-    { ...stadiumsStore['United States']?.foxboro.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.foxboro.locationAndNames,
+    } as StadiumInfo,
     '54 453'
   ),
 
@@ -221,7 +248,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['19(p)', '66, 70'],
     ['E.Sanchez'],
     ['67'],
-    { ...stadiumsStore['United States']?.soldier.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.soldier.locationAndNames,
+    } as StadiumInfo,
     '63 089'
   ),
 
@@ -234,7 +263,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['12, 37', '20'],
     ['Hwang Sun-hong', 'Hong Myung-bo'],
     ['52', '63'],
-    { ...stadiumsStore['United States']?.cotton.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.cotton.locationAndNames,
+    } as StadiumInfo,
     '63 998'
   ),
 
@@ -247,7 +278,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['2, 44, 90(p)', '60'],
     [],
     [],
-    { ...stadiumsStore['United States']?.foxboro.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.foxboro.locationAndNames,
+    } as StadiumInfo,
     '54 456'
   ),
 
@@ -260,7 +293,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['21', '43', '55'],
     [],
     [],
-    { ...stadiumsStore['United States']?.cotton.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.cotton.locationAndNames,
+    } as StadiumInfo,
     '44 132'
   ),
 
@@ -273,7 +308,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['21, 28'],
     ['S.Siasia'],
     ['8'],
-    { ...stadiumsStore['United States']?.foxboro.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.foxboro.locationAndNames,
+    } as StadiumInfo,
     '54 453'
   ),
 
@@ -286,7 +323,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['5(p), 55', '66', '90'],
     [],
     [],
-    { ...stadiumsStore['United States']?.soldier.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.soldier.locationAndNames,
+    } as StadiumInfo,
     '63 160'
   ),
 
@@ -299,7 +338,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['61', '90+3'],
     [],
     [],
-    { ...stadiumsStore['United States']?.cotton.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.cotton.locationAndNames,
+    } as StadiumInfo,
     '63 998'
   ),
 
@@ -312,7 +353,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['45+2', '90+5'],
     [],
     [],
-    { ...stadiumsStore['United States']?.foxboro.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.foxboro.locationAndNames,
+    } as StadiumInfo,
     '53 001'
   ),
 
@@ -325,7 +368,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['12'],
     [],
     [],
-    { ...stadiumsStore['United States']?.giants.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.giants.locationAndNames,
+    } as StadiumInfo,
     '75 338'
   ),
 
@@ -338,7 +383,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['85'],
     [],
     [],
-    { ...stadiumsStore['United States']?.kennedy.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.kennedy.locationAndNames,
+    } as StadiumInfo,
     '52 395'
   ),
 
@@ -351,7 +398,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['69'],
     [],
     [],
-    { ...stadiumsStore['United States']?.giants.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.giants.locationAndNames,
+    } as StadiumInfo,
     '74 624'
   ),
 
@@ -364,7 +413,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['42, 65'],
     ['J.Aldridge'],
     ['84'],
-    { ...stadiumsStore['United States']?.citrus.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.citrus.locationAndNames,
+    } as StadiumInfo,
     '60 790'
   ),
 
@@ -377,7 +428,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['48'],
     ['M.Bernal'],
     ['57'],
-    { ...stadiumsStore['United States']?.kennedy.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.kennedy.locationAndNames,
+    } as StadiumInfo,
     '52 535'
   ),
 
@@ -390,7 +443,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     [],
     [],
     [],
-    { ...stadiumsStore['United States']?.giants.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.giants.locationAndNames,
+    } as StadiumInfo,
     '72 404'
   ),
 
@@ -403,7 +458,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['11'],
     [],
     [],
-    { ...stadiumsStore['United States']?.citrus.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.citrus.locationAndNames,
+    } as StadiumInfo,
     '61 219'
   ),
 
@@ -416,7 +473,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['50', '86'],
     ['F.Amin'],
     ['18'],
-    { ...stadiumsStore['United States']?.kennedy.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.kennedy.locationAndNames,
+    } as StadiumInfo,
     '50 535'
   ),
 
@@ -429,7 +488,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['65'],
     [],
     [],
-    { ...stadiumsStore['United States']?.citrus.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.citrus.locationAndNames,
+    } as StadiumInfo,
     '62 387'
   ),
 
@@ -442,7 +503,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['7(p)', '45'],
     ['M.Chaouch'],
     ['26'],
-    { ...stadiumsStore['United States']?.giants.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.giants.locationAndNames,
+    } as StadiumInfo,
     '76 322'
   ),
 
@@ -455,7 +518,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['5'],
     [],
     [],
-    { ...stadiumsStore['United States']?.kennedy.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.kennedy.locationAndNames,
+    } as StadiumInfo,
     '52 959'
   ),
 
@@ -468,7 +533,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['43', '77'],
     ['H.Nader'],
     ['47'],
-    { ...stadiumsStore['United States']?.citrus.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.citrus.locationAndNames,
+    } as StadiumInfo,
     '60 578'
   ),
 
@@ -481,7 +548,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['6, 38', '11'],
     ['G.Grün', 'P.Albert'],
     ['8', '90'],
-    { ...stadiumsStore['United States']?.soldier.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.soldier.locationAndNames,
+    } as StadiumInfo,
     '60 246'
   ),
 
@@ -494,7 +563,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['15', '74', '86(p)'],
     [],
     [],
-    { ...stadiumsStore['United States']?.kennedy.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.kennedy.locationAndNames,
+    } as StadiumInfo,
     '53 121'
   ),
 
@@ -507,7 +578,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['6', '51, 88'],
     ['Fahad Al Ghesheyan'],
     ['85'],
-    { ...stadiumsStore['United States']?.cotton.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.cotton.locationAndNames,
+    } as StadiumInfo,
     '60 277'
   ),
 
@@ -533,7 +606,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['11', '41'],
     [],
     [],
-    { ...stadiumsStore['United States']?.citrus.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.citrus.locationAndNames,
+    } as StadiumInfo,
     '61 355'
   ),
 
@@ -546,7 +621,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['72'],
     [],
     [],
-    { ...stadiumsStore['United States']?.stanford.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.stanford.locationAndNames,
+    } as StadiumInfo,
     '84 147'
   ),
 
@@ -559,7 +636,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['88', '102'],
     ['E.Amunike'],
     ['25'],
-    { ...stadiumsStore['United States']?.foxboro.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.foxboro.locationAndNames,
+    } as StadiumInfo,
     '54 367'
   ),
 
@@ -576,7 +655,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['6'],
     ['García Aspe'],
     ['18(p)'],
-    { ...stadiumsStore['United States']?.giants.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.giants.locationAndNames,
+    } as StadiumInfo,
     '71 030'
   ),
 
@@ -589,7 +670,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['25', '88'],
     ['J.L.Caminero'],
     ['58'],
-    { ...stadiumsStore['United States']?.foxboro.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.foxboro.locationAndNames,
+    } as StadiumInfo,
     '53 400'
   ),
 
@@ -602,7 +685,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['53', '63', '81'],
     ['D.Bergkamp', 'A.Winter'],
     ['64', '76'],
-    { ...stadiumsStore['United States']?.cotton.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.cotton.locationAndNames,
+    } as StadiumInfo,
     '63 500'
   ),
 
@@ -615,7 +700,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['75', '78'],
     ['L.Matthäus'],
     ['47(p)'],
-    { ...stadiumsStore['United States']?.giants.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.giants.locationAndNames,
+    } as StadiumInfo,
     '72 416'
   ),
 
@@ -632,7 +719,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['78', '115'],
     ['F.Răducioiu'],
     ['88, 101'],
-    { ...stadiumsStore['United States']?.stanford.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.stanford.locationAndNames,
+    } as StadiumInfo,
     '83 500'
   ),
 
@@ -645,7 +734,9 @@ export const finalStageMatches1994: MatchInfo[] = [
     ['21, 25'],
     ['H.Stoichkov'],
     ['44(p)'],
-    { ...stadiumsStore['United States']?.giants.locationAndNames } as StadiumInfo,
+    {
+      ...stadiumsStore['United States']?.giants.locationAndNames,
+    } as StadiumInfo,
     '74 110'
   ),
 

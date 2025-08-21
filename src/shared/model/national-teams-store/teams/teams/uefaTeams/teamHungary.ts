@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagHungary, flagHungary1, flagHungary2, flagHungary3 } from '@/shared/assets/flags'
-import { coatOfArmsHungary } from '@/shared/assets/coat-of-arms'
+import { flagHungary, flagHungary1, flagHungary2, flagHungary3 } from '@/shared/assets/image/flags'
+import { coatOfArmsHungary } from '@/shared/assets/image/coat-of-arms'
 import { iconHungary } from '@/shared/assets/iconFootballAssociation'
 
 export const teamHungary = new Team({

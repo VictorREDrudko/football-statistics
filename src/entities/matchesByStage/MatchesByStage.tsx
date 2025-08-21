@@ -1,7 +1,6 @@
 import s from './MatchesByStage.module.scss'
-import { Match } from '../match/Match'
+import { Match } from '../match/ui/Match'
 import { MatchInfo } from '@/shared/model'
-
 
 type Props = {
   matches: MatchInfo[]

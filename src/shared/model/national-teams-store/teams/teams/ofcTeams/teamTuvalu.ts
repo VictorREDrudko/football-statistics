@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagTuvalu } from '@/shared/assets/flags'
-import { coatOfArmsTuvalu } from '@/shared/assets/coat-of-arms'
+import { flagTuvalu } from '@/shared/assets/image/flags'
+import { coatOfArmsTuvalu } from '@/shared/assets/image/coat-of-arms'
 import { iconTuvalu } from '@/shared/assets/iconFootballAssociation'
 
 export const teamTuvalu = new Team({

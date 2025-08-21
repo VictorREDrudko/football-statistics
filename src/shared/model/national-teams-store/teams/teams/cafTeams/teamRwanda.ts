@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagRwanda } from '@/shared/assets/flags'
-import { coatOfArmsRwanda } from '@/shared/assets/coat-of-arms'
+import { flagRwanda } from '@/shared/assets/image/flags'
+import { coatOfArmsRwanda } from '@/shared/assets/image/coat-of-arms'
 import { iconRwanda } from '@/shared/assets/iconFootballAssociation'
 
 export const teamRwanda = new Team({

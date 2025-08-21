@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagSouthSudan } from '@/shared/assets/flags'
-import { coatOfArmsSouthSudan } from '@/shared/assets/coat-of-arms'
+import { flagSouthSudan } from '@/shared/assets/image/flags'
+import { coatOfArmsSouthSudan } from '@/shared/assets/image/coat-of-arms'
 import { iconSouthSudan } from '@/shared/assets/iconFootballAssociation'
 
 export const teamSouthSudan = new Team({

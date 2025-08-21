@@ -1,12 +1,16 @@
-import { Match } from '@/entities/match/model/types'
-import { TableData, TeamTableData } from '../types'
+import { MatchInfo } from '@/shared/model'
+import { TableData, TeamTableData } from '../model/types'
+import { getTeamsNameFromMatches } from './getTeamsNameFromMatches'
 
-export const createGroupTableData = (qualifiedTeams: string[], matches: Match[]): TeamTableData[] => {
-  const groupTeamNames: string[] = Array.from(new Set(matches.map((match) => match.teams).flat()))
+export const createGroupTableData = (
+  qualifiedTeams: string[],
+  matches: MatchInfo[]
+): TeamTableData[] => {
+  const teamNames: string[] = getTeamsNameFromMatches(matches)
   const tableData: TableData = {}
   const teamsDataByGroup: TeamTableData[] = []
 
-  groupTeamNames.map((countryName) => {
+  teamNames.map((countryName) => {
     tableData[countryName] = {
       position: 0,
       team: countryName,
@@ -37,10 +41,14 @@ export const createGroupTableData = (qualifiedTeams: string[], matches: Match[])
     if (match.score[0].length > 0) {
       tableData[team1].played++
       tableData[team1].goalsFor += isExtraTime ? totalGoalsTeam1 : goalsTeam1
-      tableData[team1].goalsAgainst += isExtraTime ? totalGoalsTeam2 : goalsTeam2
+      tableData[team1].goalsAgainst += isExtraTime
+        ? totalGoalsTeam2
+        : goalsTeam2
       tableData[team2].played++
       tableData[team2].goalsFor += isExtraTime ? totalGoalsTeam2 : goalsTeam2
-      tableData[team2].goalsAgainst += isExtraTime ? totalGoalsTeam1 : goalsTeam1
+      tableData[team2].goalsAgainst += isExtraTime
+        ? totalGoalsTeam1
+        : goalsTeam1
 
       if (match.score[1].length === 0) {
         if (goalsTeam1 > goalsTeam2) {
@@ -88,14 +96,16 @@ export const createGroupTableData = (qualifiedTeams: string[], matches: Match[])
   })
 
   // add goalsDifference, points and qualification
-  groupTeamNames.map((countryName) => {
+  teamNames.map((countryName) => {
     const team = tableData[countryName]
 
     team.goalsDifference = team.goalsFor - team.goalsAgainst
 
     team.qualification = qualifiedTeams.includes(team.team, 0) ? '+' : ''
 
-    team.points = team.pointsByDate ? team.won * 2 + team.drawn * 1 : team.won * 3 + team.drawn * 1
+    team.points = team.pointsByDate
+      ? team.won * 2 + team.drawn * 1
+      : team.won * 3 + team.drawn * 1
 
     teamsDataByGroup.push(team)
   })

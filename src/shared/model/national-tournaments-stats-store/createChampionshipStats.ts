@@ -2,7 +2,7 @@ import { MatchInfo } from '@/shared'
 import { ChampionshipfinalStageStats } from './types'
 import { initialTeamStats, updateTeamStats } from '@/shared/lib'
 import { updateTopScorers } from '../stats/utils/updateTopScorers'
-import { tournamentStages } from '../tournament-config/tournament-stages/tournamentStages'
+import { tournamentStages } from '../tournament-config/tournament-stages/CHAMPIONSHIP_STAGES'
 
 export const createChampionshipStats = (
   championshipMatches: MatchInfo[]

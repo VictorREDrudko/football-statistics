@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagNorthernMarianaIslands } from '@/shared/assets/flags'
-import { coatOfArmsNorthernMarianaIslands } from '@/shared/assets/coat-of-arms'
+import { flagNorthernMarianaIslands } from '@/shared/assets/image/flags'
+import { coatOfArmsNorthernMarianaIslands } from '@/shared/assets/image/coat-of-arms'
 import { iconNorthernMarianaIslands } from '@/shared/assets/iconFootballAssociation'
 
 export const teamNorthernMarianaIslands = new Team({

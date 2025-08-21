@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagMauritius } from '@/shared/assets/flags'
-import { coatOfArmsMauritius } from '@/shared/assets/coat-of-arms'
+import { flagMauritius } from '@/shared/assets/image/flags'
+import { coatOfArmsMauritius } from '@/shared/assets/image/coat-of-arms'
 import { iconMauritius } from '@/shared/assets/iconFootballAssociation'
 
 export const teamMauritius = new Team({

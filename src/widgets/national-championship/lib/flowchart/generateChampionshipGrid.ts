@@ -1,19 +1,32 @@
 import { MatchInfo } from '@/shared'
 import { changeScoreMatchesReplay } from './changeScoreMatchesReplay'
 import { deleteMatchesReplay } from './deleteMatchesReplay'
-import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/tournamentStages'
+import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/CHAMPIONSHIP_STAGES'
 
 // сортировка матчей внутри стадий (формирование сетки турнира)
-export const generateChampionshipGrid = (matchesByStage: MatchInfo[][], stages: string[]) => {
+export const generateChampionshipGrid = (
+  matchesByStage: MatchInfo[][],
+  stages: string[]
+) => {
   const numberStages = matchesByStage.length
   const grid: MatchInfo[][] = []
 
   const matches = matchesByStage.flat()
-  const finalMatch = matches.filter((match) => match.stage === tournamentStages.final)
-  const thirdPlaceMatch = matches.filter((match) => match.stage === tournamentStages.place3)
-  const semiFinalsMatches = matches.filter((match) => match.stage === tournamentStages[1_2])
-  const quarterFinalsMatches = matches.filter((match) => match.stage === tournamentStages[1_4])
-  const roundOf16Matches = matches.filter((match) => match.stage === tournamentStages[1_8])
+  const finalMatch = matches.filter(
+    (match) => match.stage === tournamentStages.final
+  )
+  const thirdPlaceMatch = matches.filter(
+    (match) => match.stage === tournamentStages.place3
+  )
+  const semiFinalsMatches = matches.filter(
+    (match) => match.stage === tournamentStages[1_2]
+  )
+  const quarterFinalsMatches = matches.filter(
+    (match) => match.stage === tournamentStages[1_4]
+  )
+  const roundOf16Matches = matches.filter(
+    (match) => match.stage === tournamentStages[1_8]
+  )
 
   // Option 1: stages includes final and the match for 3rd place (2 stages)
   if (numberStages === 2 && stages.includes(tournamentStages.place3)) {
@@ -41,18 +54,29 @@ export const generateChampionshipGrid = (matchesByStage: MatchInfo[][], stages: 
     }
 
     // если первыми идут матчи не с командой чемпионом, то меняем порядок матчей
-    const sortedSemiFinalsMatches = semiFinalsMatches[0].teams.includes(teamChampion)
+    const sortedSemiFinalsMatches = semiFinalsMatches[0].teams.includes(
+      teamChampion
+    )
       ? semiFinalsMatches
       : semiFinalsMatches.reverse()
     const teamSemiFinalLoser1 = sortedSemiFinalsMatches[0].teams[1]
-    const teamSemiFinalLoser2 = sortedSemiFinalsMatches[sortedSemiFinalsMatches.length - 1].teams[1]
+    const teamSemiFinalLoser2 =
+      sortedSemiFinalsMatches[sortedSemiFinalsMatches.length - 1].teams[1]
 
     // 4. массив матчей четвертьфинала
     // массивы 1, 2, 3, 4 матча четвертьфинала
-    const quarterFinalsMatches1 = quarterFinalsMatches.filter((match) => match.teams.includes(teamChampion))
-    const quarterFinalsMatches2 = quarterFinalsMatches.filter((match) => match.teams.includes(teamSemiFinalLoser1))
-    const quarterFinalsMatches3 = quarterFinalsMatches.filter((match) => match.teams.includes(teamRunnerUp))
-    const quarterFinalsMatches4 = quarterFinalsMatches.filter((match) => match.teams.includes(teamSemiFinalLoser2))
+    const quarterFinalsMatches1 = quarterFinalsMatches.filter((match) =>
+      match.teams.includes(teamChampion)
+    )
+    const quarterFinalsMatches2 = quarterFinalsMatches.filter((match) =>
+      match.teams.includes(teamSemiFinalLoser1)
+    )
+    const quarterFinalsMatches3 = quarterFinalsMatches.filter((match) =>
+      match.teams.includes(teamRunnerUp)
+    )
+    const quarterFinalsMatches4 = quarterFinalsMatches.filter((match) =>
+      match.teams.includes(teamSemiFinalLoser2)
+    )
 
     // переменные-метки команд для формирования сетки play-off
     const teamQuarterFinalLoser1 = quarterFinalsMatches1[0].teams[1]
@@ -69,19 +93,39 @@ export const generateChampionshipGrid = (matchesByStage: MatchInfo[][], stages: 
     ]
 
     // счет матчей сформирован с учетом переигровок
-    const quarterFinalsMatchesWithChangeScore = changeScoreMatchesReplay(sortedQuarterFinalsMatches)
+    const quarterFinalsMatchesWithChangeScore = changeScoreMatchesReplay(
+      sortedQuarterFinalsMatches
+    )
     // матчи четвертьфинала без отображения переигровок
-    const quarterFinalsMatchesWithoutReplay = deleteMatchesReplay(quarterFinalsMatchesWithChangeScore)
+    const quarterFinalsMatchesWithoutReplay = deleteMatchesReplay(
+      quarterFinalsMatchesWithChangeScore
+    )
 
     // 5. массив матчей 1/8 финала
-    const teamRoundOf16Loser1 = roundOf16Matches.filter((match) => match.teams.includes(teamChampion))
-    const teamRoundOf16Loser2 = roundOf16Matches.filter((match) => match.teams.includes(teamQuarterFinalLoser1))
-    const teamRoundOf16Loser3 = roundOf16Matches.filter((match) => match.teams.includes(teamSemiFinalLoser1))
-    const teamRoundOf16Loser4 = roundOf16Matches.filter((match) => match.teams.includes(teamQuarterFinalLoser2))
-    const teamRoundOf16Loser5 = roundOf16Matches.filter((match) => match.teams.includes(teamRunnerUp))
-    const teamRoundOf16Loser6 = roundOf16Matches.filter((match) => match.teams.includes(teamQuarterFinalLoser3))
-    const teamRoundOf16Loser7 = roundOf16Matches.filter((match) => match.teams.includes(teamSemiFinalLoser2))
-    const teamRoundOf16Loser8 = roundOf16Matches.filter((match) => match.teams.includes(teamQuarterFinalLoser4))
+    const teamRoundOf16Loser1 = roundOf16Matches.filter((match) =>
+      match.teams.includes(teamChampion)
+    )
+    const teamRoundOf16Loser2 = roundOf16Matches.filter((match) =>
+      match.teams.includes(teamQuarterFinalLoser1)
+    )
+    const teamRoundOf16Loser3 = roundOf16Matches.filter((match) =>
+      match.teams.includes(teamSemiFinalLoser1)
+    )
+    const teamRoundOf16Loser4 = roundOf16Matches.filter((match) =>
+      match.teams.includes(teamQuarterFinalLoser2)
+    )
+    const teamRoundOf16Loser5 = roundOf16Matches.filter((match) =>
+      match.teams.includes(teamRunnerUp)
+    )
+    const teamRoundOf16Loser6 = roundOf16Matches.filter((match) =>
+      match.teams.includes(teamQuarterFinalLoser3)
+    )
+    const teamRoundOf16Loser7 = roundOf16Matches.filter((match) =>
+      match.teams.includes(teamSemiFinalLoser2)
+    )
+    const teamRoundOf16Loser8 = roundOf16Matches.filter((match) =>
+      match.teams.includes(teamQuarterFinalLoser4)
+    )
 
     const sortedRoundOf16: MatchInfo[] = [
       ...teamRoundOf16Loser1,
@@ -94,8 +138,11 @@ export const generateChampionshipGrid = (matchesByStage: MatchInfo[][], stages: 
       ...teamRoundOf16Loser8,
     ]
 
-    const roundOf16MatchesWithChangeScore = changeScoreMatchesReplay(sortedRoundOf16)
-    const roundOf16MatchesWithoutReplay = deleteMatchesReplay(roundOf16MatchesWithChangeScore)
+    const roundOf16MatchesWithChangeScore =
+      changeScoreMatchesReplay(sortedRoundOf16)
+    const roundOf16MatchesWithoutReplay = deleteMatchesReplay(
+      roundOf16MatchesWithChangeScore
+    )
 
     grid.push(
       finalMatch,

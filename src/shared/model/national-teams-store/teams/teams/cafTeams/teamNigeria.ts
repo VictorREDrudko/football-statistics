@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagNigeria } from '@/shared/assets/flags'
-import { coatOfArmsNigeria } from '@/shared/assets/coat-of-arms'
+import { flagNigeria } from '@/shared/assets/image/flags'
+import { coatOfArmsNigeria } from '@/shared/assets/image/coat-of-arms'
 import { iconNigeria } from '@/shared/assets/iconFootballAssociation'
 
 export const teamNigeria = new Team({

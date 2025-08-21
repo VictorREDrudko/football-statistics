@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagCaymanIslands } from '@/shared/assets/flags'
-import { coatOfArmsCaymanIslands } from '@/shared/assets/coat-of-arms'
+import { flagCaymanIslands } from '@/shared/assets/image/flags'
+import { coatOfArmsCaymanIslands } from '@/shared/assets/image/coat-of-arms'
 import { iconCaymanIslands } from '@/shared/assets/iconFootballAssociation'
 
 export const teamCaymanIslands = new Team({

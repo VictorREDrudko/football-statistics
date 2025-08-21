@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagKosovo } from '@/shared/assets/flags'
-import { coatOfArmsKosovo } from '@/shared/assets/coat-of-arms'
+import { flagKosovo } from '@/shared/assets/image/flags'
+import { coatOfArmsKosovo } from '@/shared/assets/image/coat-of-arms'
 import { iconKosovo } from '@/shared/assets/iconFootballAssociation'
 
 export const teamKosovo = new Team({

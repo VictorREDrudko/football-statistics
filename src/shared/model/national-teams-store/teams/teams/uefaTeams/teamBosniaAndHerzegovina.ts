@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagBosniaAndHerzegovina } from '@/shared/assets/flags'
-import { coatOfArmsBosniaAndHerzegovina } from '@/shared/assets/coat-of-arms'
+import { flagBosniaAndHerzegovina } from '@/shared/assets/image/flags'
+import { coatOfArmsBosniaAndHerzegovina } from '@/shared/assets/image/coat-of-arms'
 import { iconBosniaAndHerzegovina } from '@/shared/assets/iconFootballAssociation'
 
 export const teamBosniaAndHerzegovina = new Team({

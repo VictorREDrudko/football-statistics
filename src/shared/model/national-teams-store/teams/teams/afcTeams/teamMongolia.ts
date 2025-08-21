@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagMongolia } from '@/shared/assets/flags'
-import { coatOfArmsMongolia } from '@/shared/assets/coat-of-arms'
+import { flagMongolia } from '@/shared/assets/image/flags'
+import { coatOfArmsMongolia } from '@/shared/assets/image/coat-of-arms'
 import { iconMongolia } from '@/shared/assets/iconFootballAssociation'
 
 export const teamMongolia = new Team({

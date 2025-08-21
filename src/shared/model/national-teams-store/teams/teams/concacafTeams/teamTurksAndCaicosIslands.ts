@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagTurksAndCaicosIslands } from '@/shared/assets/flags'
-import { coatOfArmsTurksAndCaicosIslands } from '@/shared/assets/coat-of-arms'
+import { flagTurksAndCaicosIslands } from '@/shared/assets/image/flags'
+import { coatOfArmsTurksAndCaicosIslands } from '@/shared/assets/image/coat-of-arms'
 import { iconTurksAndCaicosIslands } from '@/shared/assets/iconFootballAssociation'
 
 export const teamTurksAndCaicosIslands = new Team({

@@ -6,7 +6,7 @@ import './index.css';
 import App from './app/App';
 import { BrowserRouter } from "react-router-dom"
 import { Provider } from 'react-redux';
-import { store } from './app/store/store';
+// import { store } from './app/store/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,11 +14,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Provider store={store}>
+      {/* <Provider store={store}> */}
         <Theme appearance="dark">
           <App />
         </Theme>
-      </Provider>
+      {/* </Provider> */}
     </BrowserRouter>
   </React.StrictMode>
 );

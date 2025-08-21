@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagGuadeloupe } from '@/shared/assets/flags'
-import { coatOfArmsGuadeloupe } from '@/shared/assets/coat-of-arms'
+import { flagGuadeloupe } from '@/shared/assets/image/flags'
+import { coatOfArmsGuadeloupe } from '@/shared/assets/image/coat-of-arms'
 import { iconGuadeloupe } from '@/shared/assets/iconFootballAssociation'
 
 export const teamGuadeloupe = new Team({

@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagKuwait } from '@/shared/assets/flags'
-import { coatOfArmsKuwait } from '@/shared/assets/coat-of-arms'
+import { flagKuwait } from '@/shared/assets/image/flags'
+import { coatOfArmsKuwait } from '@/shared/assets/image/coat-of-arms'
 import { iconKuwait } from '@/shared/assets/iconFootballAssociation'
 
 export const teamKuwait = new Team({

@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagSierraLeone } from '@/shared/assets/flags'
-import { coatOfArmsSierraLeone } from '@/shared/assets/coat-of-arms'
+import { flagSierraLeone } from '@/shared/assets/image/flags'
+import { coatOfArmsSierraLeone } from '@/shared/assets/image/coat-of-arms'
 import { iconSierraLeone } from '@/shared/assets/iconFootballAssociation'
 
 export const teamSierraLeone = new Team({

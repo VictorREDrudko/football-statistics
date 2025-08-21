@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagDominica } from '@/shared/assets/flags'
-import { coatOfArmsDominica } from '@/shared/assets/coat-of-arms'
+import { flagDominica } from '@/shared/assets/image/flags'
+import { coatOfArmsDominica } from '@/shared/assets/image/coat-of-arms'
 import { iconDominica } from '@/shared/assets/iconFootballAssociation'
 
 export const teamDominica = new Team({

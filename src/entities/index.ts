@@ -17,7 +17,7 @@ import { NationalTeamsCard } from './national-team/ui/nation-team-card/NationTea
 import { History } from './history-football/ui/History'
 import { OrganizationFootballLevel } from './organization-football-level/ui/OrganizationFootballLevel'
 import { ChampionshipCard } from './championship-card/ui/ChampionshipCard'
-import { Match } from './match/Match'
+import { Match } from './match/ui/Match'
 import { CountryTeam } from './countryTeam/ui/CountryTeam'
 import { Flag } from './countryTeam/ui/flag/Flag'
 import { ChampionshipParameter } from './championship-parameter/ChampionshipParameter'
@@ -36,7 +36,7 @@ export {
   Match,
   CountryTeam,
   Flag,
-  ChampionshipParameter
+  ChampionshipParameter,
 }
 
 export type {

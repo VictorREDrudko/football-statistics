@@ -243,7 +243,7 @@ import {
   flagZambia,
   flagZanzibar,
   flagZimbabwe,
-} from '@shared/assets/flags'
+} from '@/shared/assets/image/flags'
 import { NationalTeam } from './NationalTeam'
 import {
   coatOfArmsAfghanistan,
@@ -472,7 +472,7 @@ import {
   coatOfArmsZambia,
   coatOfArmsZanzibar,
   coatOfArmsZimbabwe,
-} from '@shared/assets/coat-of-arms'
+} from '@/shared/assets/image/coat-of-arms'
 import {
   iconAfghanistan,
   iconAlbania,

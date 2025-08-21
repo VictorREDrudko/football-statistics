@@ -1,4 +1,4 @@
-import { DEFAULT_RATING, DEFAULT_IS_COUNTRY_REAL } from './constants'
+import { DEFAULT_IS_COUNTRY_REAL, DEFAULT_RATING } from '@/entities/team/model/constants'
 import { v1 } from 'uuid'
 import { AssociationDate, CountryFlag, CountryName } from './types/types'
 

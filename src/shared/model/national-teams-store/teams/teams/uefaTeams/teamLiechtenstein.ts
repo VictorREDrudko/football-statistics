@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagLiechtenstein } from '@/shared/assets/flags'
-import { coatOfArmsLiechtenstein } from '@/shared/assets/coat-of-arms'
+import { flagLiechtenstein } from '@/shared/assets/image/flags'
+import { coatOfArmsLiechtenstein } from '@/shared/assets/image/coat-of-arms'
 import { iconLiechtenstein } from '@/shared/assets/iconFootballAssociation'
 
 export const teamLiechtenstein = new Team({

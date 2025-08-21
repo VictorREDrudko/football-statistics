@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagEquatorialGuinea } from '@/shared/assets/flags'
-import { coatOfArmsEquatorialGuinea } from '@/shared/assets/coat-of-arms'
+import { flagEquatorialGuinea } from '@/shared/assets/image/flags'
+import { coatOfArmsEquatorialGuinea } from '@/shared/assets/image/coat-of-arms'
 import { iconEquatorialGuinea } from '@/shared/assets/iconFootballAssociation'
 
 export const teamEquatorialGuinea = new Team({

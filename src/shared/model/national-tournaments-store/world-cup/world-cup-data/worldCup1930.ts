@@ -2,10 +2,13 @@ import { worldCupLogo1930 } from '@/shared/assets'
 import { ChampionshipInfo } from '../../types'
 import { finalStageMatches1930 } from '../final-stage/finalStageMatches1930'
 import {
-  backgroundWorldCup1930_1,
-  backgroundWorldCup1930_2,
+  backgroundWorldCup1930_stadion,
+  backgroundWorldCup1930_goal,
 } from '@/shared/assets/backgrounds'
-import { worldCupLogoForCard1930, worldCupLogoWithoutBackground1930 } from '@/shared/assets/worldCupLogo'
+import {
+  worldCupLogoForCard1930,
+  worldCupLogoWithoutBackground1930,
+} from '@/shared/assets/worldCupLogo'
 import { footballStructure } from '@/shared/model'
 
 export const worldCup1930: ChampionshipInfo = {
@@ -17,7 +20,10 @@ export const worldCup1930: ChampionshipInfo = {
     origin: worldCupLogo1930,
     withoutBackground: worldCupLogoWithoutBackground1930,
   },
-  background: [backgroundWorldCup1930_1, backgroundWorldCup1930_2],
+  background: {
+    groupRound: backgroundWorldCup1930_goal,
+    knockoutRound: backgroundWorldCup1930_stadion,
+  },
   hostCountry: ['Uruguay'],
   finalStage: finalStageMatches1930,
   qualification: [],

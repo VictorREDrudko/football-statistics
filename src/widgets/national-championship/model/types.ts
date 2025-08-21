@@ -1,4 +1,4 @@
-import { MatchInfo } from "@/shared"
+import { MatchInfo } from "@/shared/model"
 import { Position } from "@xyflow/react"
 
 export type FinalPositions = {

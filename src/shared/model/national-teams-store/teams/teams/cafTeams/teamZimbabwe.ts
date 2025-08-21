@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagZimbabwe } from '@/shared/assets/flags'
-import { coatOfArmsZimbabwe } from '@/shared/assets/coat-of-arms'
+import { flagZimbabwe } from '@/shared/assets/image/flags'
+import { coatOfArmsZimbabwe } from '@/shared/assets/image/coat-of-arms'
 import { iconZimbabwe } from '@/shared/assets/iconFootballAssociation'
 
 export const teamZimbabwe = new Team({

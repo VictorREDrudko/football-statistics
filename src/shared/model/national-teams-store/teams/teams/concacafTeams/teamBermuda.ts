@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagBermuda } from '@/shared/assets/flags'
-import { coatOfArmsBermuda } from '@/shared/assets/coat-of-arms'
+import { flagBermuda } from '@/shared/assets/image/flags'
+import { coatOfArmsBermuda } from '@/shared/assets/image/coat-of-arms'
 import { iconBermuda } from '@/shared/assets/iconFootballAssociation'
 
 export const teamBermuda = new Team({

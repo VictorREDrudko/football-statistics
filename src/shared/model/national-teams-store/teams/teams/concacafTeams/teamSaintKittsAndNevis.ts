@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagSaintKittsAndNevis } from '@/shared/assets/flags'
-import { coatOfArmsSaintKittsAndNevis } from '@/shared/assets/coat-of-arms'
+import { flagSaintKittsAndNevis } from '@/shared/assets/image/flags'
+import { coatOfArmsSaintKittsAndNevis } from '@/shared/assets/image/coat-of-arms'
 import { iconSaintKittsAndNevis } from '@/shared/assets/iconFootballAssociation'
 
 export const teamSaintKittsAndNevis = new Team({

@@ -1,7 +1,10 @@
 import { stadiumsStore } from '@/shared/model/stadiums-store/stadiumsStore'
 import { Match } from '@/shared/model/tournament-config/class-match/Match'
-import { MatchInfo, StadiumInfo } from '@/shared/model/tournament-config/class-match/types'
-import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/tournamentStages'
+import {
+  MatchInfo,
+  StadiumInfo,
+} from '@/shared/model/tournament-config/class-match/types'
+import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/CHAMPIONSHIP_STAGES'
 
 export const finalStageMatches1974: MatchInfo[] = [
   new Match(

@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagAndorra } from '@/shared/assets/flags'
-import { coatOfArmsAndorra } from '@/shared/assets/coat-of-arms'
+import { flagAndorra } from '@/shared/assets/image/flags'
+import { coatOfArmsAndorra } from '@/shared/assets/image/coat-of-arms'
 import { iconAndorra } from '@/shared/assets/iconFootballAssociation'
 
 export const teamAndorra = new Team({

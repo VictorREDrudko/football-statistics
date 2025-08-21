@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagUSVirginIslands } from '@/shared/assets/flags'
-import { coatOfArmsUSVirginIslands } from '@/shared/assets/coat-of-arms'
+import { flagUSVirginIslands } from '@/shared/assets/image/flags'
+import { coatOfArmsUSVirginIslands } from '@/shared/assets/image/coat-of-arms'
 import { iconUSVirginIslands } from '@/shared/assets/iconFootballAssociation'
 
 export const teamUSVirginIslands = new Team({

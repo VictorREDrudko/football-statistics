@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagSintMaarten } from '@/shared/assets/flags'
-import { coatOfArmsSintMaarten } from '@/shared/assets/coat-of-arms'
+import { flagSintMaarten } from '@/shared/assets/image/flags'
+import { coatOfArmsSintMaarten } from '@/shared/assets/image/coat-of-arms'
 import { iconSintMaarten } from '@/shared/assets/iconFootballAssociation'
 
 export const teamSintMaarten = new Team({

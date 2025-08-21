@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagTaiwan } from '@/shared/assets/flags'
-import { coatOfArmsTaiwan } from '@/shared/assets/coat-of-arms'
+import { flagTaiwan } from '@/shared/assets/image/flags'
+import { coatOfArmsTaiwan } from '@/shared/assets/image/coat-of-arms'
 import { iconTaiwan } from '@/shared/assets/iconFootballAssociation'
 
 export const teamTaiwan = new Team({

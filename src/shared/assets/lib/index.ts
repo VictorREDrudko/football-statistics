@@ -1,0 +1,1 @@
+export { getTeamAssets } from './getTeamAssets'

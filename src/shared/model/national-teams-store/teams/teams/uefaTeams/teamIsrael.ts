@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagIsrael } from '@/shared/assets/flags'
-import { coatOfArmsIsrael } from '@/shared/assets/coat-of-arms'
+import { flagIsrael } from '@/shared/assets/image/flags'
+import { coatOfArmsIsrael } from '@/shared/assets/image/coat-of-arms'
 import { iconIsrael } from '@/shared/assets/iconFootballAssociation'
 
 export const teamIsrael = new Team({

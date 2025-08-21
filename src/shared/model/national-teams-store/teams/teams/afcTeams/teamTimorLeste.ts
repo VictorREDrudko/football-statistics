@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagTimorLeste } from '@/shared/assets/flags'
-import { coatOfArmsTimorLeste } from '@/shared/assets/coat-of-arms'
+import { flagTimorLeste } from '@/shared/assets/image/flags'
+import { coatOfArmsTimorLeste } from '@/shared/assets/image/coat-of-arms'
 import { iconTimorLeste } from '@/shared/assets/iconFootballAssociation'
 
 export const teamTimorLeste = new Team({

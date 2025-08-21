@@ -5,9 +5,13 @@ import { generateMatchesByStage } from './generateMatchesByStage'
 import { generateChampionshipGrid } from './generateChampionshipGrid'
 import { NodeType } from '../../model/types'
 import { ConfederationCode } from '@/entities'
-import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/tournamentStages'
+import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/CHAMPIONSHIP_STAGES'
 
-export const createNodes = (stages: string[], matches: MatchInfo[], organizationCode: ConfederationCode) => {
+export const createNodes = (
+  stages: string[],
+  matches: MatchInfo[],
+  organizationCode: ConfederationCode
+) => {
   const matchesByStage = generateMatchesByStage(stages, matches)
   const numberStages = matchesByStage.length
   const grid = generateChampionshipGrid(matchesByStage, stages).reverse()
@@ -16,7 +20,10 @@ export const createNodes = (stages: string[], matches: MatchInfo[], organization
   const classNameForLastNode = s[`lastNode--${organizationCode}`]
 
   // вариант 0: создание nodes когда play-off включает финал и матч за 3 место (2 стадии)
-  if (numberStages === 2 && matchesByStage[0][0].stage === tournamentStages.thirdPlace) {
+  if (
+    numberStages === 2 &&
+    matchesByStage[0][0].stage === tournamentStages.thirdPlace
+  ) {
     nodes = matches.map((match, index) => {
       return {
         id: String(index + 1),
@@ -33,7 +40,10 @@ export const createNodes = (stages: string[], matches: MatchInfo[], organization
   }
 
   // вариант 1: создание nodes когда play-off включает финал и полуфинал (2 стадии)
-  if (matchesByStage.length === 2 && matchesByStage[0][0].stage !== tournamentStages.thirdPlace) {
+  if (
+    matchesByStage.length === 2 &&
+    matchesByStage[0][0].stage !== tournamentStages.thirdPlace
+  ) {
     nodes = matches.map((match, index) => {
       return {
         id: String(index + 1),

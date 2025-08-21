@@ -59,6 +59,8 @@ import { teamCzechoslovakia } from './teams/teams/uefaTeams/teamCzechoslovakia'
 import { teamSovietUnion } from './teams/teams/uefaTeams/teamSovietUnion'
 import { teamYugoslavia } from './teams/teams/uefaTeams/teamYugoslavia'
 import { teamEastGermany } from './teams/teams/uefaTeams/teamEastGermany'
+
+
 import { teamEgypt } from './teams/teams/cafTeams/teamEgypt'
 import { teamLibya } from './teams/teams/cafTeams/teamLibya'
 import { teamMorocco } from './teams/teams/cafTeams/teamMorocco'
@@ -115,6 +117,9 @@ import { teamSouthAfrica } from './teams/teams/cafTeams/teamSouthAfrica'
 import { teamZambia } from './teams/teams/cafTeams/teamZambia'
 import { teamZimbabwe } from './teams/teams/cafTeams/teamZimbabwe'
 import { teamEswatini } from './teams/teams/cafTeams/teamEswatini'
+
+
+
 import { teamAfghanistan } from './teams/teams/afcTeams/teamAfghanistan'
 import { teamAustralia } from './teams/teams/afcTeams/teamAustralia'
 import { teamBrunei } from './teams/teams/afcTeams/teamBrunei'
@@ -162,6 +167,8 @@ import { teamSaudiArabia } from './teams/teams/afcTeams/teamSaudiArabia'
 import { teamSyria } from './teams/teams/afcTeams/teamSyria'
 import { teamUnitedArabEmirates } from './teams/teams/afcTeams/teamUnitedArabEmirates'
 import { teamYemen } from './teams/teams/afcTeams/teamYemen'
+
+
 import { teamCanada } from './teams/teams/concacafTeams/teamCanada'
 import { teamMexico } from './teams/teams/concacafTeams/teamMexico'
 import { teamAnguilla } from './teams/teams/concacafTeams/teamAnguilla'
@@ -203,6 +210,8 @@ import { teamSuriname } from './teams/teams/concacafTeams/teamSuriname'
 import { teamTrinidadAndTobago } from './teams/teams/concacafTeams/teamTrinidadAndTobago'
 import { teamTurksAndCaicosIslands } from './teams/teams/concacafTeams/teamTurksAndCaicosIslands'
 import { teamUSVirginIslands } from './teams/teams/concacafTeams/teamUSVirginIslands'
+
+
 import { teamAmericanSamoa } from './teams/teams/ofcTeams/teamAmericanSamoa'
 import { teamCookIslands } from './teams/teams/ofcTeams/teamCookIslands'
 import { teamFiji } from './teams/teams/ofcTeams/teamFiji'
@@ -216,6 +225,8 @@ import { teamTahiti } from './teams/teams/ofcTeams/teamTahiti'
 import { teamTonga } from './teams/teams/ofcTeams/teamTonga'
 import { teamTuvalu } from './teams/teams/ofcTeams/teamTuvalu'
 import { teamVanuatu } from './teams/teams/ofcTeams/teamVanuatu'
+
+
 import { teamArgentina } from './teams/teams/conmebolTeams/teamArgentina'
 import { teamBolivia } from './teams/teams/conmebolTeams/teamBolivia'
 import { teamBrazil } from './teams/teams/conmebolTeams/teamBrazil'

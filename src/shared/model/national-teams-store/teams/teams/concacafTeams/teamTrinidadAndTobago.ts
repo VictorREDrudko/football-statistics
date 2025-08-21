@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagTrinidadAndTobago } from '@/shared/assets/flags'
-import { coatOfArmsTrinidadAndTobago } from '@/shared/assets/coat-of-arms'
+import { flagTrinidadAndTobago } from '@/shared/assets/image/flags'
+import { coatOfArmsTrinidadAndTobago } from '@/shared/assets/image/coat-of-arms'
 import { iconTrinidadAndTobago } from '@/shared/assets/iconFootballAssociation'
 
 export const teamTrinidadAndTobago = new Team({

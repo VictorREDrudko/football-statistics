@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagMontserrat } from '@/shared/assets/flags'
-import { coatOfArmsMontserrat } from '@/shared/assets/coat-of-arms'
+import { flagMontserrat } from '@/shared/assets/image/flags'
+import { coatOfArmsMontserrat } from '@/shared/assets/image/coat-of-arms'
 import { iconMontserrat } from '@/shared/assets/iconFootballAssociation'
 
 export const teamMontserrat = new Team({

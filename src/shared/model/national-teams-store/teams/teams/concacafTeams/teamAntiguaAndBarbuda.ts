@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagAntiguaAndBarbuda } from '@/shared/assets/flags'
-import { coatOfArmsAntiguaAndBarbuda } from '@/shared/assets/coat-of-arms'
+import { flagAntiguaAndBarbuda } from '@/shared/assets/image/flags'
+import { coatOfArmsAntiguaAndBarbuda } from '@/shared/assets/image/coat-of-arms'
 import { iconAntiguaAndBarbuda } from '@/shared/assets/iconFootballAssociation'
 
 export const teamAntiguaAndBarbuda = new Team({

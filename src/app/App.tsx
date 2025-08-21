@@ -11,11 +11,16 @@ import {
   TournamentFinalStage,
   TournamentsPage,
 } from '@/pages'
+import { teamYugoslavia } from '@/entities/team/model/data/uefa'
+
+
 
 function App() {
+  console.log(teamYugoslavia)
   return (
     <>
-      <Header />
+    <div>'fgjhkl;'</div>
+      {/* <Header />
       <Routes>
         <Route path="/" element={<StartPage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -35,7 +40,7 @@ function App() {
           path="/tournaments/:tournament/final-stage/:urlYear"
           element={<TournamentFinalStage />}
         />
-      </Routes>
+      </Routes> */}
     </>
   )
 }

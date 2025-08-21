@@ -7,8 +7,8 @@ import {
   flagSpain4,
   flagSpain5,
   flagSpain6,
-} from '@/shared/assets/flags'
-import { coatOfArmsSpain } from '@/shared/assets/coat-of-arms'
+} from '@/shared/assets/image/flags'
+import { coatOfArmsSpain } from '@/shared/assets/image/coat-of-arms'
 import { iconSpain } from '@/shared/assets/iconFootballAssociation'
 
 export const teamSpain = new Team({

@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagCzechRepublic } from '@/shared/assets/flags'
-import { coatOfArmsCzechRepublic } from '@/shared/assets/coat-of-arms'
+import { flagCzechRepublic } from '@/shared/assets/image/flags'
+import { coatOfArmsCzechRepublic } from '@/shared/assets/image/coat-of-arms'
 import { iconCzechRepublic } from '@/shared/assets/iconFootballAssociation'
 
 export const teamCzechRepublic = new Team({

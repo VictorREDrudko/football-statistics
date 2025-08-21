@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagCroatia } from '@/shared/assets/flags'
-import { coatOfArmsCroatia } from '@/shared/assets/coat-of-arms'
+import { flagCroatia } from '@/shared/assets/image/flags'
+import { coatOfArmsCroatia } from '@/shared/assets/image/coat-of-arms'
 import { iconCroatia } from '@/shared/assets/iconFootballAssociation'
 
 export const teamCroatia = new Team({

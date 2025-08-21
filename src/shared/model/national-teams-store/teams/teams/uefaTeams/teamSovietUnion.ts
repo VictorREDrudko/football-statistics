@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagSovietUnion } from '@/shared/assets/flags'
-import { coatOfArmsSovietUnion } from '@/shared/assets/coat-of-arms'
+import { flagSovietUnion } from '@/shared/assets/image/flags'
+import { coatOfArmsSovietUnion } from '@/shared/assets/image/coat-of-arms'
 import { iconSovietUnion } from '@/shared/assets/iconFootballAssociation'
 
 export const teamSovietUnion = new Team({

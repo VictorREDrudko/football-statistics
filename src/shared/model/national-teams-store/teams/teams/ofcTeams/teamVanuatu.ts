@@ -1,6 +1,6 @@
 import { Team } from '../../classTeam/classTeam'
-import { flagVanuatu } from '@/shared/assets/flags'
-import { coatOfArmsVanuatu } from '@/shared/assets/coat-of-arms'
+import { flagVanuatu } from '@/shared/assets/image/flags'
+import { coatOfArmsVanuatu } from '@/shared/assets/image/coat-of-arms'
 import { iconVanuatu } from '@/shared/assets/iconFootballAssociation'
 
 export const teamVanuatu = new Team({
