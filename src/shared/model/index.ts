@@ -26,8 +26,6 @@ import {
   ChampionshipInfo,
   NationalTournaments,
 } from './national-tournaments-store/types'
-import { stadiumsStore } from './stadiums-store/stadiumsStore'
-import { NamesStadium } from './stadiums-store/types'
 import { GoalsInfo, MatchInfo, StadiumInfo } from './tournament-config/class-match/types'
 
 export {
@@ -36,7 +34,6 @@ export {
   nationalTournamentStatsStore,
   championshipIndicators,
   nationalTeamsStore,
-  stadiumsStore
 }
 
 export type {
@@ -54,7 +51,6 @@ export type {
   TeamsStats,
   ChampionshipfinalStageStats,
   StadiumInfo,
-  NamesStadium,
   MatchInfo,
   GoalsInfo,
   ChampionshipBackground

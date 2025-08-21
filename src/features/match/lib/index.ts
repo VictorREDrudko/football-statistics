@@ -1,0 +1,1 @@
+export { useMatchViewMode } from './useMatchViewMode'

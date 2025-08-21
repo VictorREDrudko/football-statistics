@@ -1,4 +1,4 @@
-import { GoalsInfo } from '../../../../entities/match/model/types'
+import { GoalsInfo } from '../../../../entities/match/types/match'
 import { StatsScorers } from '../types'
 import { checkOGTime } from './checkOGTime'
 

@@ -1,4 +1,4 @@
-import { Stage } from "@/shared/constants/tournament/types"
+import { Stage } from '@/shared/constants/tournament/types'
 
 export type MatchInfo = {
   id: string
@@ -20,8 +20,6 @@ export type StadiumInfo = {
   location: LocationStadium
   attendance: string
 }
-
-
 
 export type MatchScore = {
   team1Goals: string
