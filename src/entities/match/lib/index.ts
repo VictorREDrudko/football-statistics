@@ -1,0 +1,1 @@
+export { getYearFromMatchDate } from './getYearFromMatchDate'

@@ -11,13 +11,15 @@ import {
   TournamentFinalStage,
   TournamentsPage,
 } from '@/pages'
-import { teamYugoslavia } from '@/entities/team/model/data/uefa'
+import { CountryTeamWithData } from '@/features/country-team-data/ui/CountryTeamWithData'
+import { store } from './store/store'
 
 function App() {
-  console.log(teamYugoslavia)
+  // console.log(store.getState().teams)
   return (
     <>
-      <Header />
+      <CountryTeamWithData countryName='Germany' year='1933'/>
+      {/* <Header />
       <Routes>
         <Route path="/" element={<StartPage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -37,7 +39,7 @@ function App() {
           path="/tournaments/:tournament/final-stage/:urlYear"
           element={<TournamentFinalStage />}
         />
-      </Routes>
+      </Routes> */}
     </>
   )
 }

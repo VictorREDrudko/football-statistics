@@ -250,12 +250,13 @@ import paraguay from './Paraguay.png'
 import peru from './Peru.png'
 import uruguay from './Uruguay.png'
 import venezuela from './Venezuela.png'
+
 import { Country } from '@/shared/types/country'
 
 // Record<Keys, Type> - создает объект, где:
 // Keys (Country) - тип для ключей объекта
 // Type (string | string[]) - тип для значений объекта
-export const flags: Record<Country, string | string[]> = {
+export const flags: Partial<Record<Country, string | string[]>> = {
   Germany: [germany, germany1, germany2],
   England: england,
   Italy: [italy, italy1],

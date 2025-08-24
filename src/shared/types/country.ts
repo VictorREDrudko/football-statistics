@@ -228,6 +228,7 @@ type HistoricalCountry =
   | 'Soviet Union'
   | 'Yugoslavia'
   | 'Czechoslovakia'
+  | 'German Empire'
   | 'East Germany'
   | 'German Reich'
   | 'West Germany'

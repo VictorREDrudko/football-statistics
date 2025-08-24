@@ -1,4 +1,4 @@
-import { MatchViewMode } from '@/entities/match/types'
+import { MatchViewMode } from '@/entities/match/model'
 import { useState } from 'react'
 
 export const useMatchViewMode = (): MatchViewMode => {
