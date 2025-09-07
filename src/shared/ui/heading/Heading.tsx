@@ -15,7 +15,7 @@ type HeadingProps = {
 
 export const Heading = ({
   children,
-  align = 'left',
+  align = 'center',
   color = 'primary',
   size = '6',
   weight = 'bold',

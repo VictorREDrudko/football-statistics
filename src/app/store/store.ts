@@ -1,16 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit'
-import aboutProjectReducer from '@entities/about/model/aboutProjectSlice'
 import historyFootballReducer from '@entities/history-football/model/historyFootballSlice'
 import { baseApi } from '@/shared/api'
 import {
+  aboutProjectSlice,
   headerMenuSlice,
   nationalTeamsSlice,
   stadiumsSlice,
 } from './model/slices'
 
+
 export const store = configureStore({
   reducer: {
-    // aboutProject: aboutProjectReducer,
+    [aboutProjectSlice.reducerPath]: aboutProjectSlice.reducer,
     // historyFootball: historyFootballReducer,
     [baseApi.reducerPath]: baseApi.reducer,
     [nationalTeamsSlice.name]: nationalTeamsSlice.reducer,

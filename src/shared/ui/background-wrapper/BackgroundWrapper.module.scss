@@ -26,10 +26,12 @@
   z-index: 2;
   height: 100%;
   width: 100%;
-}
 
-@media (max-width: 1024px) {
-  .content {
+  @media (max-width: 1024px) {
     padding-top: 80px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 100px 10px 60px 10px;
   }
 }

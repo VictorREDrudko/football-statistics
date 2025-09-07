@@ -4,13 +4,12 @@ import {
   AboutPage,
   HistoryFootballPage,
   NationalTeams,
-  NationalTournaments,
-  StartPage,
   TournamentChampionships,
   TournamentFinalStage,
   TournamentsPage,
 } from '@/pages'
 import './App.css'
+import { StartPage } from '@/pages/start'
 
 function App() {
   return (
