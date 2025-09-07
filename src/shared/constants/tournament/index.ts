@@ -1,1 +1,1 @@
-export { STAGES } from './stages'
+export type { Stage } from './types'

@@ -1,9 +1,9 @@
 import { v1 } from 'uuid'
-import { Stadium, Location, StadiumName } from '../types'
+import { LocationStadium, Stadium, StadiumName } from '../types'
 
 export class StadiumEntity implements Stadium {
   readonly id: string
-  readonly location: Location
+  readonly location: LocationStadium
   readonly names: StadiumName[]
   readonly isActive: boolean
   readonly capacity: string
@@ -12,7 +12,7 @@ export class StadiumEntity implements Stadium {
   readonly homeTeams: string[]
 
   constructor(
-    location: Location,
+    location: LocationStadium,
     names: StadiumName[],
     isActive: boolean,
     capacity: string,

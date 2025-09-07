@@ -230,7 +230,7 @@ import iconParaguay from './Paraguay.png'
 import iconPeru from './Peru.png'
 import iconUruguay from './Uruguay.png'
 import iconVenezuela from './Venezuela.png'
-import { Country } from '@/shared/types/country'
+import { Country } from '@/shared/types/country/country'
 
 export const iconsAssociation: Record<Country, string> = {
   Germany: iconGermany,

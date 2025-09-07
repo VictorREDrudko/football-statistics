@@ -1,6 +1,12 @@
+export { Match } from './ui/Match'
+
 export type {
-  MatchInfo,
-  GoalsInfo,
-  MatchStadiumInfo,
+  MatchMode,
+  FormattedMatchData,
+  MatchBasicInfo,
+  MatchAdditionalInfo,
+  MatchStadiumBasicInfo,
+  GoalsDetails,
+  GoalDetails,
   MatchScore,
 } from './model'

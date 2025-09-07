@@ -1,5 +1,8 @@
-import { Country } from '@/shared/types/country'
+import { Country } from '@/shared/types/country/country'
 import { ConfederationCode } from './footballOrganizationCode'
+import { Team } from '../class/team'
+
+export type Teams = Partial<Record<Country, Team>>
 
 export type TeamConstructor = {
   id?: string

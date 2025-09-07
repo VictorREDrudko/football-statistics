@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  gap: 5px;
+}
+
+.container span {
+  font-size: 0.9rem;
+
+  @media (max-width: 480px) {
+    font-size: 0.65rem;
+  }
+}
+
+.stadiumTitle,
+.attendance {
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .container span:nth-child(3) {
+    display: none;
+  }
+}

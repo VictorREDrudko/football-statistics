@@ -1,24 +1,44 @@
 import './App.css'
-import { Navigate, Route, Routes } from 'react-router-dom'
-import { Header } from '@/widgets'
-import {
-  AboutPage,
-  HistoryFootballPage,
-  NationalTeams,
-  NationalTournaments,
-  StartPage,
-  TournamentChampionships,
-  TournamentFinalStage,
-  TournamentsPage,
-} from '@/pages'
-import { CountryTeamWithData } from '@/features/country-team-data/ui/CountryTeamWithData'
-import { store } from './store/store'
+// import { Navigate, Route, Routes } from 'react-router-dom'
+// import { Header } from '@/widgets'
+// import {
+//   AboutPage,
+//   HistoryFootballPage,
+//   NationalTeams,
+//   NationalTournaments,
+//   StartPage,
+//   TournamentChampionships,
+//   TournamentFinalStage,
+//   TournamentsPage,
+// } from '@/pages'
+
+import { RootState, store } from './store/store'
+
+import { MatchDisplay } from '@/features/matchDisplay/ui/MatchDisplay'
+
+import { Match } from '@/features/matchDisplay/model/class/Match'
+import { STAGES } from '@/shared/constants/tournament/stages'
+import { getStadium } from '@/features/matchDisplay'
+
 
 function App() {
-  // console.log(store.getState().teams)
+  const m = new Match(
+    '13.07.1930',
+    STAGES.GROUP_1,
+    ['Germany', 'Mexico'],
+    [[1, 1], [], []],
+    ['L. Laurent', 'Langiller', 'Maschinot'],
+    ['19', '40', '43, 87'],
+    ['Carreño'],
+    ['80'],
+    getStadium('Uruguay', 'pocitos'),
+    '4 444'
+  )
+  // console.log(store.getState().stadiums)
   return (
     <>
-      <CountryTeamWithData countryName='Germany' year='1933'/>
+      
+      <MatchDisplay match={m}></MatchDisplay>
       {/* <Header />
       <Routes>
         <Route path="/" element={<StartPage />} />

@@ -1,4 +1,4 @@
-import { Country } from '@/shared/types/country'
+import { Country } from '@/shared/types/country/country'
 import { coatOfArms, flags, iconsAssociation } from '@/shared/assets/image'
 
 export const getTeamAssets = (country: Country) => {

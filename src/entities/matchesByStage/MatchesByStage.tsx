@@ -1,5 +1,5 @@
 import s from './MatchesByStage.module.scss'
-import { Match } from '../match/ui/Match'
+import { Match } from '../../features/matchDisplay/ui/MatchDisplay'
 import { MatchInfo } from '@/shared/model'
 
 type Props = {

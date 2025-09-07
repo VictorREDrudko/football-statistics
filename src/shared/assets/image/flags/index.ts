@@ -251,7 +251,7 @@ import peru from './Peru.png'
 import uruguay from './Uruguay.png'
 import venezuela from './Venezuela.png'
 
-import { Country } from '@/shared/types/country'
+import { Country } from '@/shared/types/country/country'
 
 // Record<Keys, Type> - создает объект, где:
 // Keys (Country) - тип для ключей объекта

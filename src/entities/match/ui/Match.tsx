@@ -1,29 +1,27 @@
-import { useState } from 'react'
-import s from './Match.module.scss'
-import { MatchInfo } from '@/shared/model'
+import { FormattedMatchData, MatchMode } from '../model'
+import { MatchFullInfo } from './matchFullInfo/MatchFullInfo'
 import { MatchPartialInfo } from './matchPartialInfo/MatchPartialInfo'
-import { MatchAllInfo } from './matchAllInfo/MatchAllInfo'
+import s from './Match.module.scss'
 
 type Props = {
-  match: MatchInfo
+  mode: MatchMode
+  matchData: FormattedMatchData
 }
 
-export const Match = ({ match }: Props) => {
-  const [mode, setMode] = useState(true)
-
-  const onClickHandler = () => {
-    setMode(!mode)
-  }
-
-  const matchInfo = mode ? (
-    <div className={s.container} onClick={onClickHandler}>
-      <MatchPartialInfo match={match} />
-    </div>
-  ) : (
-    <div onClick={onClickHandler} className={s.containerAll}>
-      <MatchAllInfo match={match} />
-    </div>
+export const Match = ({ mode, matchData }: Props) => {
+  const { matchBasicInfo } = matchData
+  return (
+    <>
+      {mode === 'partial' && (
+        <div className={s.container}>
+          <MatchPartialInfo matchBasicInfo={matchBasicInfo} />
+        </div>
+      )}
+      {mode === 'full' && (
+        <div className={s.containerFullInfo}>
+          <MatchFullInfo matchData={matchData} />
+        </div>
+      )}
+    </>
   )
-
-  return <> {matchInfo} </>
 }

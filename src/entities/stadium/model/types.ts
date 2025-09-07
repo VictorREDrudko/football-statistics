@@ -10,7 +10,7 @@ export type StadiumsData = {
 
 export type Stadium = {
   id: string
-  location: Location
+  location: LocationStadium
   names: StadiumName[]
   isActive: boolean
   capacity: string
@@ -24,7 +24,7 @@ export type StadiumName = {
   period: string // "1930-p.t." или "1990-2005"
 }
 
-export type Location = {
+export type LocationStadium = {
   city: string
   country: Country
 }

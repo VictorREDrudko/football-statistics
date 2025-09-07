@@ -230,7 +230,7 @@ import coatOfArmsParaguay from './Paraguay.png'
 import coatOfArmsPeru from './Peru.png'
 import coatOfArmsUruguay from './Uruguay.png'
 import coatOfArmsVenezuela from './Venezuela.png'
-import { Country } from '@/shared/types/country'
+import { Country } from '@/shared/types/country/country'
 
 export const coatOfArms: Record<Country, string> = {
   Germany: coatOfArmsGermany,

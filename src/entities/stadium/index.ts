@@ -3,9 +3,25 @@ export { StadiumEntity } from './model/class/stadium'
 export type {
   Stadium,
   StadiumName,
-  Location,
+  LocationStadium,
   StadiumsByCountry,
   StadiumsData,
 } from './model/types'
 
-export * from './model/data'
+export {
+  stadiumsArgentina,
+  stadiumsBrazil,
+  stadiumsChile,
+  stadiumsEngland,
+  stadiumsFrance,
+  stadiumsGermany,
+  stadiumsItaly,
+  stadiumsJapan,
+  stadiumsMexico,
+  stadiumsSouthKorea,
+  stadiumsSpain,
+  stadiumsSweden,
+  stadiumsSwitzerland,
+  stadiumsUruguay,
+  stadiumsUSA,
+} from './model/data'

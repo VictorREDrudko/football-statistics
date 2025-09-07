@@ -1,8 +1,10 @@
-// export type { MatchViewMode } from './matchViewMode'
-// export type { FormattedMatchData } from './formattedMatchData'
 export type {
-  MatchInfo,
-  GoalsInfo,
-  MatchStadiumInfo,
+  MatchMode,
+  FormattedMatchData,
+  MatchBasicInfo,
+  MatchAdditionalInfo,
+  MatchStadiumBasicInfo,
+  GoalsDetails,
+  GoalDetails,
   MatchScore,
-} from './types/match'
+} from './types'
