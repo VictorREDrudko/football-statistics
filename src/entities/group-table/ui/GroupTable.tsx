@@ -1,8 +1,11 @@
 import s from './GroupTable.module.scss'
 import { tableHeaderData } from '../model/tableHeaderData'
-import { Title } from '@/shared'
+
 import { TeamTableData } from '@/widgets/national-championship/model/types'
-import { CountryTeam } from '@/entities'
+import { CountryTeam } from '@/shared/ui/country-team'
+import { Title } from '@/shared/ui/title/Title'
+
+
 
 type Props = {
   tableData: TeamTableData[]
@@ -30,7 +33,7 @@ export const GroupTable = ({ tableData, year, groupName }: Props) => {
         <th>{teamData.position}</th>
         <th>
           {' '}
-          <CountryTeam countryName={teamData.team} year={year} />
+          {/* <CountryTeam countryName={teamData.team} year={year} /> */}
         </th>
         <th>{teamData.played}</th>
         <th>{teamData.won}</th>

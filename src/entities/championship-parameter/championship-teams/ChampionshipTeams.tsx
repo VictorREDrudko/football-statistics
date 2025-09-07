@@ -1,5 +1,6 @@
+import { Container } from '@/shared/ui/container/Container'
 import s from './ChampionshipTeams.module.scss'
-import { Container } from '@/shared'
+
 
 type Props = {
   teamsFinalStage: number

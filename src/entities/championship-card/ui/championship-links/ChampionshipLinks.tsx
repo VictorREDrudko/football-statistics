@@ -1,4 +1,5 @@
-import { Link } from '@/shared'
+
+import { Link } from '@/shared/ui/link/Link'
 import s from './ChampionshipLinks.module.scss'
 
 type Props = {

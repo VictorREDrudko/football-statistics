@@ -1,5 +1,8 @@
-import { Heading, Icon } from '@/shared'
+
+
+import { Icon } from '@/shared/ui'
 import s from './TournamentOrganizer.module.scss'
+import { Heading } from '@/shared/ui/heading/Heading'
 
 type Props = {
   iconPath: string

@@ -1,13 +1,5 @@
-import {
-  attendanceIcon,
-  dateIcon,
-  goalIcon,
-  hostCountryIcon,
-  matchesIcon,
-  positionIcon,
-  scorerIcon,
-  teamsIcon,
-} from '@/shared/assets/iconIndicate'
+
+import { hostCountryIcon, dateIcon, positionIcon, teamsIcon, matchesIcon, goalIcon, attendanceIcon, scorerIcon } from '@/shared/assets/image/iconIndicate'
 import { ChampionshipIndicators, Indicator } from './types'
 
 const nationalChampionshipIndicators: Indicator[] = [

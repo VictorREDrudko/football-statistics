@@ -1,5 +1,6 @@
+import { Container } from '@/shared/ui/container/Container'
 import s from './ChampionshipAttendance.module.scss'
-import { Container } from '@/shared'
+
 
 type Props = {
   attendance: string

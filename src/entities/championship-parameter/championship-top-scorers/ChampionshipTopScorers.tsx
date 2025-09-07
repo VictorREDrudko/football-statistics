@@ -1,7 +1,9 @@
-import { Container } from '@/shared'
+
+import { Container } from '@/shared/ui/container/Container'
 import s from './ChampionshipTopScorers.module.scss'
 import { StatsScorers } from '@/shared/model/stats/types'
-import { Flag } from '@/entities'
+import { Flag } from '@/shared/ui/country-team/ui/flag/Flag'
+
 
 type Props = {
   scorers: StatsScorers
@@ -19,7 +21,7 @@ export const ChampionshipTopScorers = ({ scorers, year }: Props) => {
         key={index}>
         <span className={s.goals}>{`${player.goals} goals`}</span>
         <Container align="center" gap="2">
-          <Flag countryName={player.country} year={year} />
+          {/* <Flag countryName={player.country} year={year} /> */}
           <span className={s.player}>{player.name}</span>
         </Container>
       </Container>

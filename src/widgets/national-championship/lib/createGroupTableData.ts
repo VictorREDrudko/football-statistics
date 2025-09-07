@@ -1,4 +1,5 @@
-import { MatchInfo } from '@/shared/model'
+
+import { MatchInfo } from '@/features/matchDisplay'
 import { TableData, TeamTableData } from '../model/types'
 import { getTeamsNameFromMatches } from './getTeamsNameFromMatches'
 

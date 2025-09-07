@@ -1,6 +1,7 @@
 import { NationalTournamentsStats } from "./types";
-import { worldCupStatsStore } from "./world-cup-stats/worldCupStatsStore";
+// import { worldCupStatsStore } from "./world-cup-stats/worldCupStatsStore";
 
 export const nationalTournamentStatsStore: NationalTournamentsStats = {
-  'world-cup': worldCupStatsStore,
+  // 'world-cup': worldCupStatsStore,
+  'world-cup': {},
 }

@@ -1,6 +1,8 @@
-import { BackgroundImage } from '@/shared'
+
+import { BackgroundImage } from '@/shared/ui/background-image/BackgroundImage'
+import { CountryTeam } from '@/shared/ui/country-team'
 import s from './ChampionshipLogoAndChampion.module.scss'
-import { CountryTeam } from '@/entities/countryTeam/ui/CountryTeam'
+
 
 type Props = {
   logoPath: string
@@ -34,11 +36,11 @@ export const ChampionshipLogoAndChampion = ({
             />
           </div>
           <div className={s.containerCountryTeam}>
-            <CountryTeam
+            {/* <CountryTeam
               countryName={championCountryName}
               year={year}
               classNameSpan={s.countryName}
-            />
+            /> */}
           </div>
         </div>
       )}

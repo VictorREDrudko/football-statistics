@@ -28,10 +28,10 @@ import mainBigLogo from './image/logo/main-big-logo-1000x500.png'
 
 
 
-// export {
-//   projectLogo,
-//   ratingLogo,
-//   mainBigLogo,
+export {
+  projectLogo,
+  ratingLogo,
+  mainBigLogo,
 //   worldCupLogo1930,
 //   worldCupLogo1934,
 //   worldCupLogo1938,
@@ -55,4 +55,4 @@ import mainBigLogo from './image/logo/main-big-logo-1000x500.png'
 //   worldCupLogo2018,
 //   worldCupLogo2022,
 //   notFound,
-// }
+}

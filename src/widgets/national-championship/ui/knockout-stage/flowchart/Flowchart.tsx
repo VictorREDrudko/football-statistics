@@ -2,10 +2,12 @@ import s from './Flowchart.module.scss'
 import { ReactFlow, ReactFlowProvider } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
 import { CustomNodeComponent } from './customNodeComponent/CustomNodeComponent'
-import { MatchInfo } from '@/shared'
-import { ConfederationCode } from '@/entities'
-import { createNodes, createEdges } from '@/logics/worldCup/flowchartRenderer'
+
 import { createHeightContainerFlowchart } from '@/widgets/national-championship/lib/flowchart/createHeightContainerFlowchart'
+import { ConfederationCode } from '@/entities/team/model/types'
+import { MatchInfo } from '@/features/matchDisplay'
+import { createEdges } from '@/widgets/national-championship/lib/flowchart/createEdgesFlowchart'
+import { createNodes } from '@/widgets/national-championship/lib/flowchart/createNodes'
 
 // Настройка карты типов узлов
 const nodeTypes = {

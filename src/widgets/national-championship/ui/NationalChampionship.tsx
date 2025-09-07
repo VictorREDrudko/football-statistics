@@ -1,14 +1,10 @@
-import { ConfederationCode, confederationData } from '@/entities'
-import { getQualifiedTeamsForPlayoff } from '@/logics/worldCup/worldCupFinalStageLogic'
-import { GroupFinalStage } from '@/features/worldCup/finalStage/groupFinalStage/GroupFinalStage'
-import { GroupSecondStage } from '@/features/worldCup/finalStage/groupSecondStage/GroupSecondStage'
-import { PlayOffStage } from '@/features/worldCup/finalStage/playOffStage/PlayOffStage'
 import { ChampionshipGroupRound } from './championship-group-round/ChampionshipGroupRound'
 import { KnockoutStage } from './knockout-stage/KnockoutStage'
-import { ChampionshipInfo, MatchInfo } from '@/shared/model'
 import { getChampionshipYear } from '@/shared/lib'
 import { ChampionshipStat } from './championship-stat/ChampionshipStat'
 import { getTeamsNameFromMatches } from '../lib/getTeamsNameFromMatches'
+import { MatchInfo } from '@/features/matchDisplay'
+import { ChampionshipInfo } from '@/shared/model/national-tournaments-store/types'
 
 type Props = {
   championshipData: ChampionshipInfo
@@ -71,7 +67,7 @@ export const NationalChampionship = ({ championshipData }: Props) => {
         <KnockoutStage
           background={championshipData.background.knockoutRound}
           matches={knockoutStageMatches}
-          organizationCode={'WORLD'}
+          organizationCode={'UEFA'}
         />
       )}
       {/* {hasMatchesGroupFinalRound && <GroupFinalStage  groupStageMatches={finalRoundMatches} 

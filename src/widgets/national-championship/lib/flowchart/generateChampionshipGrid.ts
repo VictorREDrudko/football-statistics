@@ -1,7 +1,9 @@
-import { MatchInfo } from '@/shared'
+
+import { MatchInfo } from '@/features/matchDisplay'
 import { changeScoreMatchesReplay } from './changeScoreMatchesReplay'
 import { deleteMatchesReplay } from './deleteMatchesReplay'
-import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/CHAMPIONSHIP_STAGES'
+import { STAGES } from '@/shared/constants/tournament/stages'
+
 
 // сортировка матчей внутри стадий (формирование сетки турнира)
 export const generateChampionshipGrid = (
@@ -13,28 +15,28 @@ export const generateChampionshipGrid = (
 
   const matches = matchesByStage.flat()
   const finalMatch = matches.filter(
-    (match) => match.stage === tournamentStages.final
+    (match) => match.stage === STAGES.FINAL
   )
   const thirdPlaceMatch = matches.filter(
-    (match) => match.stage === tournamentStages.place3
+    (match) => match.stage === STAGES.THIRD_PLACE
   )
   const semiFinalsMatches = matches.filter(
-    (match) => match.stage === tournamentStages[1_2]
+    (match) => match.stage === STAGES.SEMI_FINAL
   )
   const quarterFinalsMatches = matches.filter(
-    (match) => match.stage === tournamentStages[1_4]
+    (match) => match.stage === STAGES.QUARTER_FINAL
   )
   const roundOf16Matches = matches.filter(
-    (match) => match.stage === tournamentStages[1_8]
+    (match) => match.stage === STAGES.ROUND_OF_16
   )
 
   // Option 1: stages includes final and the match for 3rd place (2 stages)
-  if (numberStages === 2 && stages.includes(tournamentStages.place3)) {
+  if (numberStages === 2 && stages.includes(STAGES.THIRD_PLACE)) {
     grid.push(finalMatch, thirdPlaceMatch)
   }
 
   // Option 2: stages includes final and semi-final (2 stages)
-  if (numberStages === 2 && !stages.includes(tournamentStages.place3)) {
+  if (numberStages === 2 && !stages.includes(STAGES.THIRD_PLACE)) {
     grid.push(finalMatch, semiFinalsMatches)
   }
 

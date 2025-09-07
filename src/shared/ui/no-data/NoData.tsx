@@ -1,7 +1,7 @@
 // import { notFound } from '@/shared/assets'
+import { Button } from '../button/Button'
 import s from './NoData.module.scss'
 import { useNavigate } from 'react-router-dom'
-import { Button } from '@/shared'
 
 type Props = {
   message?: string

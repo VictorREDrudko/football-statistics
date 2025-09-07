@@ -1,7 +1,8 @@
-import { Container } from '@/shared'
+
+import { Container } from '@/shared/ui/container/Container'
 import s from './ChampionshipPosition.module.scss'
 import { FinalPositions } from '@/features'
-import { Flag } from '@/entities'
+
 
 type Props = {
   positions: FinalPositions
@@ -30,7 +31,7 @@ export const ChampionshipPosition = ({ positions, year }: Props) => {
                 : '4 place'}
         </span>
         <Container align="center" gap="2">
-          <Flag countryName={positions[positionKey]} year={year} />
+          {/* <Flag countryName={positions[positionKey]} year={year} /> */}
           <span className={s.countryName}>{positions[positionKey]}</span>
         </Container>
       </Container>

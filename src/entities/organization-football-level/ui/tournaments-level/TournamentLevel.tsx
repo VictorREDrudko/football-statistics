@@ -1,11 +1,8 @@
-import {
-  GlobalOrganizationCode,
-  OrganizationData,
-  TournamentsData,
-} from '@/shared/model'
+
 import s from './TournamentLevel.module.scss'
 import { TournamentOrganizer } from './tournament-organizer/TournamentOrganizer'
 import { TournamentLinksCard } from './tournament-links-card/TournamentLinksCard'
+import { OrganizationData, GlobalOrganizationCode, TournamentsData } from '@/shared/model/football-structure/types'
 
 type Props = {
   organizationData: OrganizationData

@@ -1,6 +1,6 @@
 type ItemMenu = {
-  title: "About" | "Tournaments" | "National teams" | "Clubs";
-  path: string;
-};
+  title: 'About' | 'Tournaments' | 'National teams' | 'Clubs'
+  path: string
+}
 
-export type NavItems = ItemMenu[];
+export type Menu = ItemMenu[]

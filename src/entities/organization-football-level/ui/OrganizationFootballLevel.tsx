@@ -1,8 +1,10 @@
-import { BackgroundWrapper, Heading } from '@/shared'
-import { OrganizationData } from '@/shared/model'
+
 import { TournamentLevel } from './tournaments-level/TournamentLevel'
 import BackgroundImage from '../assets/background-world.png'
 import s from './OrganizationFootballLevel.module.scss'
+import { OrganizationData } from '@/shared/model/football-structure/types'
+import { BackgroundWrapper } from '@/shared/ui/background-wrapper/BackgroundWrapper'
+import { Heading } from '@radix-ui/themes'
 
 type Props = {
   title: string

@@ -1,5 +1,9 @@
-import { Icon, Link, TextElement } from '@/shared'
+
+import { Link } from '@/shared/ui/link/Link'
 import s from './TournamentLink.module.scss'
+
+import { TextElement } from '@/shared/ui/text-element/TextElement'
+import { Icon } from '@/shared/ui'
 
 type Props = {
   title: string

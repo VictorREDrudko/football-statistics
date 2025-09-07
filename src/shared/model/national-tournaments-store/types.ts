@@ -1,6 +1,6 @@
+import { Country } from "@/shared/types"
 import { TournamentInfo } from "../football-structure/types"
-import { Country } from "../national-teams-store/teams/classTeam/types"
-import { MatchInfo } from "../tournament-config/class-match/types"
+import { MatchInfo } from "@/features/matchDisplay"
 
 export type ChampionshipInfo = {
   id: string

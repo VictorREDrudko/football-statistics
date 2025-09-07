@@ -1,11 +1,13 @@
-import { Title } from '@/shared'
+
 import s from './KnockoutStage.module.scss'
 import { getUniqueStage } from '../../lib/getUniqueStage'
 import { MatchesByStage } from '@/entities/matchesByStage/MatchesByStage'
 import { Flowchart } from './flowchart/Flowchart'
-import { ConfederationCode } from '@/entities'
-import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/CHAMPIONSHIP_STAGES'
-import { MatchInfo } from '@/shared/model'
+import { MatchInfo } from '@/features/matchDisplay'
+import { ConfederationCode } from '@/entities/team/model/types'
+import { STAGES } from '@/shared/constants/tournament/stages'
+import { Title } from '@/shared/ui/title/Title'
+
 
 type Props = {
   background: string
@@ -22,17 +24,17 @@ export const KnockoutStage = ({
   const isEvenNumberStages = uniqueStages.length % 2 === 0
 
   const finalMatch = matches.filter(
-    (match) => match.stage === tournamentStages.final
+    (match) => match.stage === STAGES.FINAL
   )
   const thirdPlaceMatch = matches.filter(
-    (match) => match.stage === tournamentStages.thirdPlace
+    (match) => match.stage === STAGES.THIRD_PLACE
   )
   const regularStages = isEvenNumberStages
     ? uniqueStages
     : uniqueStages.filter(
         (stageName) =>
-          ![tournamentStages.final, tournamentStages.thirdPlace].includes(
-            stageName
+          ![STAGES.FINAL, STAGES.THIRD_PLACE].includes(
+            '1:final'
           )
       )
 
@@ -51,7 +53,7 @@ export const KnockoutStage = ({
       {finalMatch && (
         <>
           <Title
-            title={tournamentStages.final.split(':')[1]}
+            title={STAGES.FINAL.split(':')[1]}
             variant="sub-stage"
           />
           <MatchesByStage matches={finalMatch} />
@@ -60,7 +62,7 @@ export const KnockoutStage = ({
       {thirdPlaceMatch && (
         <div className={s.thirdPlaceContainer}>
           <Title
-            title={tournamentStages.thirdPlace.split(':')[1]}
+            title={STAGES.THIRD_PLACE.split(':')[1]}
             variant="sub-stage"
           />
           <MatchesByStage matches={thirdPlaceMatch} />

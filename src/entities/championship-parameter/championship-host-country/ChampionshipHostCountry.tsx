@@ -1,6 +1,7 @@
-import { Container } from '@/shared'
+
+import { Container } from '@/shared/ui/container/Container'
 import s from './ChampionshipHostCountry.module.scss'
-import { Flag } from '@/entities'
+
 
 type Props = {
   countryNames: string[]
@@ -16,7 +17,7 @@ export const ChampionshipHostCountry = ({ countryNames, year }: Props) => {
         gap="2"
         className={s.containerCountry}
         key={index}>
-        <Flag countryName={countryName} year={year} />
+        {/* <Flag countryName={countryName} year={year} /> */}
         <span className={s.countryName}>{countryName}</span>
       </Container>
     )

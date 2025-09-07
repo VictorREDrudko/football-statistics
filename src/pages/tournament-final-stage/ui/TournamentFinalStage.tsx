@@ -1,11 +1,8 @@
 import { useParams } from 'react-router-dom'
 import { NationalChampionship } from '@/widgets'
-import { NoData } from '@/shared'
-import {
-  ChampionshipInfo,
-  NationalTournaments,
-  nationalTournamentStore,
-} from '@/shared/model'
+import { nationalTournamentStore } from '@/shared/model/national-tournaments-store/nationalTournamentStore'
+import { ChampionshipInfo, NationalTournaments } from '@/shared/model/national-tournaments-store/types'
+import { NoData } from '@/shared/ui/no-data/NoData'
 
 export const TournamentFinalStage = () => {
   const { tournament, urlYear } = useParams<{

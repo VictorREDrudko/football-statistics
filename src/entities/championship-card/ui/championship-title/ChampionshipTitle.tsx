@@ -1,7 +1,9 @@
-import { Badge } from '@/shared'
+
+import { Flag } from '@/shared/ui/country-team/ui/flag/Flag'
 import { ChampionshipName } from './championship-name/ChampionshipName'
 import s from './ChampionshipTitle.module.scss'
-import { Flag } from '@/entities/countryTeam/ui/flag/Flag'
+import { Badge } from '@/shared/ui/number/Badge'
+
 
 type Props = {
   title: string
@@ -18,7 +20,8 @@ export const ChampionshipTitle = ({
 }: Props) => {
   const hostCountryFlags = hostCountries.map(
     (countryName: string, index: number) => {
-      return <Flag countryName={countryName} year={year} key={index} />
+      return 'dhsgh'
+      // return <Flag countryName={countryName} year={year} key={index} />
     }
   )
 

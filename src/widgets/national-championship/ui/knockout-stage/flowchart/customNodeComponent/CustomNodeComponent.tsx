@@ -2,7 +2,8 @@ import { Handle, Position } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import s from './CustomNodeComponent.module.scss'
 import { MatchFlowchart } from "../matchFlowchart/MatchFlowchart";
-import { MatchInfo } from '@/shared';
+import { MatchInfo } from '@/features/matchDisplay';
+
 
 type CustomNodeData = {
   label: string

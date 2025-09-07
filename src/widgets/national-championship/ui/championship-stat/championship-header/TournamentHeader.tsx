@@ -1,6 +1,7 @@
-import { Heading } from '@/shared'
+
 import { getChampionshipTitleWithoutYear } from '@/shared/lib'
 import s from './TournamentHeader.module.scss'
+import { Heading } from '@/shared/ui/heading/Heading'
 
 type Props = {
   title: string

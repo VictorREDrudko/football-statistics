@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+
+  @media (max-width: 1024px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.link,
+.active {
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+
+.link {
+  color: var(--color-gray-8);
+}
+
+.link:hover {
+  color: var(--color-grass-7);
+  scale: 1.1;
+}
+
+.active {
+  color: var(--color-grass-9);
+}

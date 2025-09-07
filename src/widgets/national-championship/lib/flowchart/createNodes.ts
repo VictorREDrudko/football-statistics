@@ -1,11 +1,13 @@
 import { Position } from '@xyflow/react'
 import s from '../../ui/knockout-stage/flowchart/Flowchart.module.scss'
-import { MatchInfo } from '@/shared'
+
 import { generateMatchesByStage } from './generateMatchesByStage'
 import { generateChampionshipGrid } from './generateChampionshipGrid'
 import { NodeType } from '../../model/types'
-import { ConfederationCode } from '@/entities'
-import { tournamentStages } from '@/shared/model/tournament-config/tournament-stages/CHAMPIONSHIP_STAGES'
+import { ConfederationCode } from '@/entities/team/model/types'
+import { MatchInfo } from '@/features/matchDisplay'
+import { STAGES } from '@/shared/constants/tournament/stages'
+
 
 export const createNodes = (
   stages: string[],
@@ -22,7 +24,7 @@ export const createNodes = (
   // вариант 0: создание nodes когда play-off включает финал и матч за 3 место (2 стадии)
   if (
     numberStages === 2 &&
-    matchesByStage[0][0].stage === tournamentStages.thirdPlace
+    matchesByStage[0][0].stage === STAGES.THIRD_PLACE
   ) {
     nodes = matches.map((match, index) => {
       return {
@@ -42,7 +44,7 @@ export const createNodes = (
   // вариант 1: создание nodes когда play-off включает финал и полуфинал (2 стадии)
   if (
     matchesByStage.length === 2 &&
-    matchesByStage[0][0].stage !== tournamentStages.thirdPlace
+    matchesByStage[0][0].stage !== STAGES.THIRD_PLACE
   ) {
     nodes = matches.map((match, index) => {
       return {

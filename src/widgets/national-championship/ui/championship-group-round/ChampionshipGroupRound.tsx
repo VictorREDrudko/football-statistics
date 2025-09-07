@@ -1,10 +1,12 @@
 import s from './ChampionshipGroupRound.module.scss'
-import { GroupTable } from '@/entities'
-import { Title } from '@/shared'
+
 import { MatchesByStage } from '@/entities/matchesByStage/MatchesByStage'
 import { sortGroupNames } from '../../lib/sortGroupNames'
 import { createGroupTableData } from '../../lib/createGroupTableData'
-import { ChampionshipBackground, MatchInfo } from '@/shared/model'
+import { MatchInfo } from '@/features/matchDisplay'
+import { GroupTable } from '@/entities/group-table/ui/GroupTable'
+import { Title } from '@/shared/ui/title/Title'
+
 
 type Props = {
   background: string

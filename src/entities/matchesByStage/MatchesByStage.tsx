@@ -1,6 +1,7 @@
+import { MatchDisplay, MatchInfo } from '@/features/matchDisplay'
 import s from './MatchesByStage.module.scss'
-import { Match } from '../../features/matchDisplay/ui/MatchDisplay'
-import { MatchInfo } from '@/shared/model'
+import { Match } from '../match/ui/Match'
+
 
 type Props = {
   matches: MatchInfo[]
@@ -10,7 +11,7 @@ export const MatchesByStage = ({ matches }: Props) => {
   const groupMatches = matches.map((match) => {
     return (
       <div key={match.id} className={s.containerMatch}>
-        <Match match={match} />
+        <MatchDisplay match={match} />
       </div>
     )
   })

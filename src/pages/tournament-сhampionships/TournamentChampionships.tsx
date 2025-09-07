@@ -1,8 +1,10 @@
 import { useParams } from 'react-router-dom'
-import { ChampionshipCard } from '@/entities'
-import { Heading, NoData } from '@/shared'
-import { NationalTournaments, nationalTournamentStore } from '@/shared/model'
 import s from './TournamentChampionships.module.scss'
+import { Heading } from '@/shared/ui/heading/Heading'
+import { NoData } from '@/shared/ui/no-data/NoData'
+import { ChampionshipCard } from '@/entities/championship-card/ui/ChampionshipCard'
+import { NationalTournaments } from '@/shared/model/national-tournaments-store/types'
+import { nationalTournamentStore } from '@/shared/model/national-tournaments-store/nationalTournamentStore'
 
 export const TournamentChampionships = () => {
   const { tournament } = useParams()

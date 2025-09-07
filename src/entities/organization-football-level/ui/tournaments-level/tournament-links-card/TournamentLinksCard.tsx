@@ -1,7 +1,9 @@
-import { Heading } from '@/shared'
-import { TournamentData } from '@/shared/model'
+
+import { TournamentData } from '@/shared/model/football-structure/types'
+
 import { TournamentLink } from './tournament-link/TournamentLink'
 import s from './TournamentLinksCard.module.scss'
+import { Heading } from '@/shared/ui/heading/Heading'
 
 type Props = {
   title: string

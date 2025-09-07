@@ -1,4 +1,5 @@
-import { Container } from '@/shared'
+
+import { Container } from '@/shared/ui/container/Container'
 import s from './ChampionshipParameter.module.scss'
 
 type Props = {

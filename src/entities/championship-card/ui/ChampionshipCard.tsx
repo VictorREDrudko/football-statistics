@@ -1,5 +1,4 @@
-import { BackgroundImage, Container, getTournamentNumber } from '@/shared'
-import { ChampionshipInfo } from '@/shared/model'
+
 import {
   getChampionshipTitleWithoutYear,
   getChampionshipYear,
@@ -9,6 +8,11 @@ import { ChampionshipLogoAndChampion } from './championship-logo-and-champion/Ch
 import { ChampionshipLinks } from './championship-links/ChampionshipLinks'
 import backgroundCard from '../assets/background-card.png'
 import s from './ChampionshipCard.module.scss'
+import { getTournamentNumber } from '@/shared/lib/helpers/getTournamentNumber'
+import { ChampionshipInfo } from '@/shared/model/national-tournaments-store/types'
+import { BackgroundImage } from '@/shared/ui/background-image/BackgroundImage'
+import { Container } from '@/shared/ui/container/Container'
+
 
 type Props = {
   championship: ChampionshipInfo

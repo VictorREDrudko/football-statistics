@@ -1,11 +1,10 @@
+import { namesTeamByConfederation } from '@/entities/national-team/model/namesTeamByConfederation';
+import { nationalTeamsData } from '@/entities/national-team/model/nationalTeamsData';
+import { TeamsFullStats, TeamPartStats } from '@/entities/national-team/model/types/typeStats';
+import { ConfederationCode } from '@/entities/team/model/types';
+import { ratingCalculation } from '@/features';
+import { NationalTeamsCard } from '@/features/nationalTeams1/nationTeamCard/NationTeamCard';
 import s from './NationalTeamsView.module.css'
-import { createTeamsStats, ratingCalculation, TeamsDashboard } from '@/features'
-import {  ConfederationCode, 
-          namesTeamByConfederation, 
-          NationalTeamsCard, 
-          nationalTeamsData, 
-          TeamPartStats, 
-          TeamsFullStats } from '@/entities'
 import { NationalTeamsList } from './national-teams-list/NationalTeamsList';
 
 type Props = {
@@ -25,30 +24,30 @@ export const NationalTeamsView = ({
   onConfederationChange, 
   searchParams
 }: Props) => {
-  const teamsFullStats: TeamsFullStats = createTeamsStats();
+  // const teamsFullStats: TeamsFullStats = createTeamsStats();
 
-  const teamStats: TeamPartStats = {
-    worldCupStats: teamsFullStats.worldCupStats.teamsStats[team],
-    nationalCompetitionStats: teamsFullStats.nationalCompetitionStats.teamsStats['plag'],
-  }
+  // const teamStats: TeamPartStats = {
+  //   worldCupStats: teamsFullStats.worldCupStats.teamsStats[team],
+  //   nationalCompetitionStats: teamsFullStats.nationalCompetitionStats.teamsStats['plag'],
+  // }
 
-  ratingCalculation(teamsFullStats)
+  // ratingCalculation(teamsFullStats)
 
-  const renderPage = team ? <NationalTeamsCard  teamData={nationalTeamsData[team]} 
-                                                closeCard={onCloseTeamCard} 
-                                                teamStats={teamStats}/>
-      : (<>
-          <TeamsDashboard numberTeams={namesTeamByConfederation[confederation].length}
-                          confederation={confederation}
-                          setConfederation={onConfederationChange} />
-          <NationalTeamsList  confederation={confederation}
-                              onTeamSelect={onTeamSelect}
-                              searchParams={searchParams}/>
-        </>)
+  // const renderPage = team ? <NationalTeamsCard  teamData={nationalTeamsData[team]} 
+  //                                               closeCard={onCloseTeamCard} 
+  //                                               teamStats={teamStats}/>
+  //     : (<>
+  //         <TeamsDashboard numberTeams={namesTeamByConfederation[confederation].length}
+  //                         confederation={confederation}
+  //                         setConfederation={onConfederationChange} />
+  //         <NationalTeamsList  confederation={confederation}
+  //                             onTeamSelect={onTeamSelect}
+  //                             searchParams={searchParams}/>
+  //       </>)
 
   return (
     <div className={s.container}>
-      {renderPage}
+      {/* {renderPage} */}
     </div>
   );
 };

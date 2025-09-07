@@ -2,7 +2,11 @@ import { configureStore } from '@reduxjs/toolkit'
 import aboutProjectReducer from '@entities/about/model/aboutProjectSlice'
 import historyFootballReducer from '@entities/history-football/model/historyFootballSlice'
 import { baseApi } from '@/shared/api'
-import { nationalTeamsSlice, stadiumsSlice } from './model/slices'
+import {
+  headerMenuSlice,
+  nationalTeamsSlice,
+  stadiumsSlice,
+} from './model/slices'
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +15,7 @@ export const store = configureStore({
     [baseApi.reducerPath]: baseApi.reducer,
     [nationalTeamsSlice.name]: nationalTeamsSlice.reducer,
     [stadiumsSlice.name]: stadiumsSlice.reducer,
+    [headerMenuSlice.name]: headerMenuSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(baseApi.middleware),

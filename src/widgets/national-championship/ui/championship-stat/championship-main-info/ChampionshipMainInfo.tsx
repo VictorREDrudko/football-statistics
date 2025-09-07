@@ -1,14 +1,14 @@
 import { createChampionshipStatsData } from '@/features'
-import {
-  championshipIndicators,
-  ChampionshipInfo,
-  Indicator,
-  NationalTournamentsStats,
-  nationalTournamentStatsStore,
-} from '@/shared/model'
+
 import s from './ChampionshipMainInfo.module.scss'
-import { ChampionshipParameter } from '@/entities'
+
 import { ChampionshipHostCountry, ChampionshipDate, ChampionshipPosition, ChampionshipTeams, ChampionshipMatches, ChampionshipGoals, ChampionshipAttendance, ChampionshipTopScorers } from '@/entities/championship-parameter'
+import { ChampionshipParameter } from '@/entities/championship-parameter/ChampionshipParameter'
+import { championshipIndicators } from '@/shared/model/championship-indicators/championshipIndicators'
+import { Indicator } from '@/shared/model/championship-indicators/types'
+import { nationalTournamentStatsStore } from '@/shared/model/national-tournaments-stats-store/nationalTournamentStatsStore'
+import { NationalTournamentsStats } from '@/shared/model/national-tournaments-stats-store/types'
+import { ChampionshipInfo } from '@/shared/model/national-tournaments-store/types'
 
 type Props = {
   championshipData: ChampionshipInfo

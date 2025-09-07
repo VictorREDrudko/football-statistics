@@ -1,4 +1,5 @@
-import { ChampionshipInfo } from '@/shared/model'
+
+import { ChampionshipInfo } from '@/shared/model/national-tournaments-store/types'
 import s from './ChampionshipStat.module.scss'
 import { ChampionshipHeader } from './championship-header/TournamentHeader'
 import { ChampionshipMainInfo } from './championship-main-info/ChampionshipMainInfo'

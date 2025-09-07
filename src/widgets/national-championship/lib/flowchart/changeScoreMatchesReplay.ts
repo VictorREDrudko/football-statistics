@@ -1,4 +1,5 @@
-import { MatchInfo } from "@/shared";
+import { MatchInfo } from "@/features/matchDisplay";
+
 
 export const changeScoreMatchesReplay = (matches: MatchInfo[]) => {
   const matchesStage = structuredClone(matches);
