@@ -1,6 +1,6 @@
 import { useAppSelector } from '@/shared/hooks'
-import s from './AboutProject.module.scss'
 import { Heading, Icon, Link, TextElement } from '@/shared/ui'
+import s from './AboutProject.module.scss'
 
 export const AboutProject = () => {
   const { title, text, iconsPath } = useAppSelector(

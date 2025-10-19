@@ -1,0 +1,45 @@
+.trigger {
+  color: var(--gray-11);
+  min-width: 85px;
+}
+
+.trigger:hover {
+  background-color: var(--gray-4);
+  cursor: pointer;
+}
+
+.trigger:focus {
+  outline: 1px solid var(--gray-10);
+}
+
+.context {
+  background-color: var(--gray-4);
+}
+
+.item {
+  font-size: 12px;
+}
+
+.item:hover {
+  background-color: var(--gray-10);
+  cursor: pointer;
+}
+
+.item:focus {
+  background-color: var(--gray-10);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.text {
+  font-size: 12px;
+}
+
+.flag {
+  width: 40px;
+  border-radius: 2px;
+}

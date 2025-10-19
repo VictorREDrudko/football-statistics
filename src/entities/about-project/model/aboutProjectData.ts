@@ -1,4 +1,4 @@
-import { projectLogo } from '@/shared/assets'
+import { headerLogo } from '@/shared/assets'
 import { AboutProjectData } from './types'
 import { statisticsIcon, viewIcon, thinkIcon, historyIcon } from '../assets'
 
@@ -11,7 +11,7 @@ export const aboutProjectData: AboutProjectData = {
     "It's the perfect tool for those who love not just watching the game but truly understanding its dynamics!",
   ],
   iconsPath: {
-    projectLogo,
+    projectLogo: headerLogo.projectLogo.dark,
     statisticsIcon,
     viewIcon,
     thinkIcon,

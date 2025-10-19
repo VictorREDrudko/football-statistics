@@ -1,85 +1,99 @@
-/* Определение переменных в корневом селекторе */
-:root {
-  /* Gray (серые) */
-  --color-gray-1: #fcfcfc;
-  --color-gray-2: #f9f9f9;
-  --color-gray-3: #f0f0f0;
-  --color-gray-4: #e8e8e8;
-  --color-gray-5: #e0e0e0; //color body
-  --color-gray-6: #d9d9d9;
-  --color-gray-7: #cecece;
-  --color-gray-8: #bbbbbb;
-  --color-gray-9: #8d8d8d;
-  --color-gray-10: #838383;
-  --color-gray-11: #646464;
-  --color-gray-12: #202020; //bacground body
+// /* Определение переменных в корневом селекторе */
+// :root {
+//   /* Gray scale */
+//   // --gray-1: var(--gray-1);
+//   // --gray-2: var(--gray-2);
+//   // --gray-3: var(--gray-3);
+//   // --gray-4: var(--gray-4);
+//   // --gray-5: var(--gray-5);
+//   // --gray-6: var(--gray-6);
+//   // --gray-7: var(--gray-7);
+//   // --gray-8: var(--gray-8);
+//   // --gray-9: var(--gray-9);
+//   // --gray-10: var(--gray-10);
+//   // --gray-11: var(--gray-11);
+//   // --gray-12: var(--gray-12);
 
-  /* Tomato (красные/оранжевые) */
-  --color-tomato-1: #fffcfc;
-  --color-tomato-2: #fff8f7;
-  --color-tomato-3: #feebe7;
-  --color-tomato-4: #ffdcd3;
-  --color-tomato-5: #ffcdc2;
-  --color-tomato-6: #fdbdaf;
-  --color-tomato-7: #f5a898;
-  --color-tomato-8: #ec8e7b;
-  --color-tomato-9: #e54d2e;
-  --color-tomato-10: #dd4425;
-  --color-tomato-11: #d13415;
-  --color-tomato-12: #5c271f;
+//   /* Gray (серые) */
+//   --color-gray-1: var(--gray-1);
+//   --color-gray-2: var(--gray-2);
+//   --color-gray-3: var(--gray-3);
+//   --color-gray-4: var(--gray-4);
+//   --color-gray-5: var(--gray-5); //color body
+//   --color-gray-6: var(--gray-6);
+//   --color-gray-7: var(--gray-7);
+//   --color-gray-8: var(--gray-8);
+//   --color-gray-9: var(--gray-9);
+//   --color-gray-10: var(--gray-10);
+//   --color-gray-11: var(--gray-11);
+//   --color-gray-12: var(--gray-12); //bacground body
 
-  /* Grass (зелёные) */
-  --color-grass-1: #fbfefb;
-  --color-grass-2: #f3fcf3;
-  --color-grass-3: #ebf9eb;
-  --color-grass-4: #dff3df;
-  --color-grass-5: #ceebcf;
-  --color-grass-6: #b7dfba;
-  --color-grass-7: #97cf9c;
-  --color-grass-8: #65ba75;
-  --color-grass-9: #46a758;
-  --color-grass-10: #3d9a50;
-  --color-grass-11: #297c3b;
-  --color-grass-12: #1b311e;
+//   /* Tomato (красные/оранжевые) */
+//   --color-tomato-1: #fffcfc;
+//   --color-tomato-2: #fff8f7;
+//   --color-tomato-3: #feebe7;
+//   --color-tomato-4: #ffdcd3;
+//   --color-tomato-5: #ffcdc2;
+//   --color-tomato-6: #fdbdaf;
+//   --color-tomato-7: #f5a898;
+//   --color-tomato-8: #ec8e7b;
+//   --color-tomato-9: #e54d2e;
+//   --color-tomato-10: #dd4425;
+//   --color-tomato-11: #d13415;
+//   --color-tomato-12: #5c271f;
 
-  /* Yellow (жёлтые) */
-  --color-yellow-1: #fdfdf9;
-  --color-yellow-2: #fffce8;
-  --color-yellow-3: #fffbd1;
-  --color-yellow-4: #fff8bb;
-  --color-yellow-5: #fef2a4;
-  --color-yellow-6: #f9e68c;
-  --color-yellow-7: #efd36c;
-  --color-yellow-8: #ebbc00;
-  --color-yellow-9: #f5d90a;
-  --color-yellow-10: #f7ce00;
-  --color-yellow-11: #946800;
-  --color-yellow-12: #35290f;
+//   /* Grass (зелёные) */
+//   --color-grass-1: #fbfefb;
+//   --color-grass-2: #f3fcf3;
+//   --color-grass-3: #ebf9eb;
+//   --color-grass-4: #dff3df;
+//   --color-grass-5: #ceebcf;
+//   --color-grass-6: #b7dfba;
+//   --color-grass-7: #97cf9c;
+//   --color-grass-8: #65ba75;
+//   --color-grass-9: #46a758;
+//   --color-grass-10: #3d9a50;
+//   --color-grass-11: #297c3b;
+//   --color-grass-12: #1b311e;
 
-  /* Lime (салатовые) */
-  --color-lime-1: #fcfdfa;
-  --color-lime-2: #f7fcf0;
-  --color-lime-3: #eefadc;
-  --color-lime-4: #e4f7c7;
-  --color-lime-5: #d7f2b0;
-  --color-lime-6: #c9e894;
-  --color-lime-7: #b1d16a;
-  --color-lime-8: #94ba2c;
-  --color-lime-9: #99d52a;
-  --color-lime-10: #93c926;
-  --color-lime-11: #5d770d;
-  --color-lime-12: #263209;
+//   /* Yellow (жёлтые) */
+//   --color-yellow-1: #fdfdf9;
+//   --color-yellow-2: #fffce8;
+//   --color-yellow-3: #fffbd1;
+//   --color-yellow-4: #fff8bb;
+//   --color-yellow-5: #fef2a4;
+//   --color-yellow-6: #f9e68c;
+//   --color-yellow-7: #efd36c;
+//   --color-yellow-8: #ebbc00;
+//   --color-yellow-9: #f5d90a;
+//   --color-yellow-10: #f7ce00;
+//   --color-yellow-11: #946800;
+//   --color-yellow-12: #35290f;
 
-  /* Black & White */
-  --color-black: #000000;
-  --color-black-transparent-30: rgba(0, 0, 0, 0.3);
-  --color-black-transparent-50: rgba(0, 0, 0, 0.5);
-  --color-black-transparent-60: rgba(0, 0, 0, 0.6);
-  --color-black-transparent-70: rgba(0, 0, 0, 0.7);
-  --color-black-transparent-80: rgba(0, 0, 0, 0.8);
-  --color-black-transparent-90: rgba(0, 0, 0, 0.9);
-  --color-white: #ffffff;
-  --color-white-transparent-20: rgba(250, 250, 250, 0.2);
-  --color-white-transparent-50: rgba(250, 250, 250, 0.5);
-  --color-white-transparent-70: rgba(250, 250, 250, 0.7);
-}
+//   /* Lime (салатовые) */
+//   --color-lime-1: #fcfdfa;
+//   --color-lime-2: #f7fcf0;
+//   --color-lime-3: #eefadc;
+//   --color-lime-4: #e4f7c7;
+//   --color-lime-5: #d7f2b0;
+//   --color-lime-6: #c9e894;
+//   --color-lime-7: #b1d16a;
+//   --color-lime-8: #94ba2c;
+//   --color-lime-9: #99d52a;
+//   --color-lime-10: #93c926;
+//   --color-lime-11: #5d770d;
+//   --color-lime-12: #263209;
+
+//   /* Black & White */
+//   --color-black: #000000;
+//   --color-black-transparent-30: rgba(0, 0, 0, 0.3);
+//   --color-black-transparent-50: rgba(0, 0, 0, 0.5);
+//   --color-black-transparent-60: rgba(0, 0, 0, 0.6);
+//   --color-black-transparent-70: rgba(0, 0, 0, 0.7);
+//   --color-black-transparent-80: rgba(0, 0, 0, 0.8);
+//   --color-black-transparent-90: rgba(0, 0, 0, 0.9);
+//   --color-white: #ffffff;
+//   --color-white-transparent-20: rgba(250, 250, 250, 0.2);
+//   --color-white-transparent-50: rgba(250, 250, 250, 0.5);
+//   --color-white-transparent-70: rgba(250, 250, 250, 0.7);
+// }

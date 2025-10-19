@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import { Theme } from '@radix-ui/themes'
+
 import '@radix-ui/themes/styles.css' // <─ Глобальные стили Radix
+
 import App from './app/App'
 import { store } from './app/store/store'
 import './index.css'
@@ -13,14 +14,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <Theme appearance="dark">
-          <App />
-        </Theme>
+        <App />
       </Provider>
     </BrowserRouter>
   </React.StrictMode>
 )
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

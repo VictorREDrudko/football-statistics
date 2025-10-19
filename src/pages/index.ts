@@ -1,3 +1,4 @@
+import { StartPage } from './start'
 import { AboutPage } from './about/AboutPage'
 import { HistoryFootballPage } from './history-football/ui/HistoryFootballPage'
 import { NationalTeams } from './national-teams/NationalTeams'
@@ -8,12 +9,12 @@ import { TournamentChampionships } from './tournament-сhampionships/TournamentC
 import { TournamentsPage } from './tournaments/ui/TournamentsPage'
 
 export {
+  StartPage,
   NationalTeams,
   NationalTournaments,
   AboutPage,
-
   TournamentChampionships,
   TournamentFinalStage,
   HistoryFootballPage,
-  TournamentsPage
+  TournamentsPage,
 }

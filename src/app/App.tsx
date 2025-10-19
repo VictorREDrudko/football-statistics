@@ -1,41 +1,19 @@
-import { Navigate, Route, Routes } from 'react-router-dom'
 import { Header } from '@/widgets'
-import {
-  AboutPage,
-  HistoryFootballPage,
-  NationalTeams,
-  TournamentChampionships,
-  TournamentFinalStage,
-  TournamentsPage,
-} from '@/pages'
+import { Theme } from '@radix-ui/themes'
+import { useAppSelector } from '@/shared/hooks'
+import { AppRouter } from './app-router/AppRouter'
 import './App.css'
-import { StartPage } from '@/pages/start'
 
 function App() {
+  const theme = useAppSelector((state) => state.theme)
+
   return (
-    <div className='container'>
+    <Theme appearance={theme.mode}>
       <Header />
-      <Routes>
-        <Route path="/" element={<StartPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/history-football" element={<HistoryFootballPage />} />
-        <Route path="/tournaments" element={<TournamentsPage />} />
-        <Route
-          path="/tournaments/:tournament"
-          element={<TournamentChampionships />}
-        />
-        <Route path="/teams" element={<Navigate to="/teams/UEFA" />} />
-        <Route path="/teams/:confederationRoute" element={<NationalTeams />} />
-        <Route
-          path="/teams/:confederationRoute/:teamRoute"
-          element={<NationalTeams />}
-        />
-        <Route
-          path="/tournaments/:tournament/final-stage/:urlYear"
-          element={<TournamentFinalStage />}
-        />
-      </Routes>
-    </div>
+      <main className='wrapper'>
+        <AppRouter />
+      </main>
+    </Theme>
   )
 }
 

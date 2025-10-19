@@ -250,6 +250,7 @@ import paraguay from './Paraguay.png'
 import peru from './Peru.png'
 import uruguay from './Uruguay.png'
 import venezuela from './Venezuela.png'
+import unitedKingdom from './United-Kingdom.png'
 
 import { Country } from '@/shared/types/country/country'
 
@@ -258,7 +259,7 @@ import { Country } from '@/shared/types/country/country'
 // Type (string | string[]) - тип для значений объекта
 export const flags: Partial<Record<Country, string | string[]>> = {
   Germany: [germany, germany1, germany2],
-  England: england,
+  England: [england, unitedKingdom],
   Italy: [italy, italy1],
   Spain: [spain, spain1, spain2, spain3, spain4, spain5, spain6],
   France: france,

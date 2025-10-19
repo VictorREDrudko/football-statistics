@@ -1,13 +1,8 @@
-.container {
+.wrapper {
   position: relative;
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  /* border: 1px solid green; */
 }
 
-@media (max-width: 480px) {
-  .container {
-    padding: 0 10px;
-  }
-}

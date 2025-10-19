@@ -1,9 +1,10 @@
-@import url('./app/theme/theme.scss');
-
 @font-face {
   font-family: 'Poppins';
-  src: url('./fonts/poppins/Poppins-Light.ttf') format('ttf');
-  font-weight: normal;
+  src:
+    url('./fonts/poppins/Poppins-Light.woff2') format('woff2'),
+    url('./fonts/poppins/Poppins-Light.woff') format('woff'),
+    url('./fonts/poppins/Poppins-Light.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -14,19 +15,10 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-padding-top: 160px;
-}
-
 body {
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Poppins', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-gray-12);
-  color: var(--color-gray-5);
   font-size: 16px;
   min-height: 100vh;
 }

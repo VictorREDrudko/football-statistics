@@ -98,17 +98,14 @@
 
 // Размеры (адаптированные под Radix UI spacing)
 .size--small {
-  padding: var(--space-1) var(--space-2);
   font-size: var(--font-size-2);
 }
 
 .size--medium {
-  padding: var(--space-2) var(--space-3);
   font-size: var(--font-size-3);
 }
 
 .size--large {
-  padding: var(--space-3) var(--space-4);
   font-size: var(--font-size-4);
 }
 
