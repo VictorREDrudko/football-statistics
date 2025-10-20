@@ -9,18 +9,19 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  padding: 0 20px;
 }
 
 .title {
   text-shadow:
-    0px 0px 10px var(--color-black),
-    -1px 1px 1px var(--color-black),
-    -5px 5px 5px var(--color-black),
-    -7px 7px 7px var(--color-black);
+    0px 0px 10px var(--gray-2),
+    -1px 1px 1px var(--gray-2),
+    -5px 5px 5px var(--gray-2),
+    -7px 7px 7px var(--gray-2);
   text-transform: uppercase;
 }
 
-.description {
+.subtitle {
   margin-bottom: 20px;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -31,6 +32,9 @@
   border-radius: 40px;
   max-width: 480px;
   width: 100%;
-  border: 1px solid var(--color-grass-11);
-  box-shadow: 5px 5px 10px var(--color-grass-11);
+}
+
+.text {
+  margin-bottom: 40px;
+  letter-spacing: 2px;
 }

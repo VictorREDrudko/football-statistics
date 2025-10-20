@@ -2,8 +2,14 @@ import projectLogoLight from './image/logo/main-logo-400x400-light.png'
 import projectLogoDark from './image/logo/main-logo-400x400-dark.png'
 import ratingLogoLight from './image/logo/rating-logo-400x400.png'
 import ratingLogoDark from './image/logo/rating-logo-400x400.png'
-import mainBigLogo from './image/logo/main-big-logo-1000x500.png'
-import { backgroundStartPage, flags } from './image'
+
+import {
+  backgroundStartPageDark,
+  backgroundStartPageLight,
+  bigLogoDark,
+  bigLogoLight,
+  flags,
+} from './image'
 
 // import worldCupLogo1930 from './logo/world-cup/world-cup-logo-1930.png'
 // import worldCupLogo1934 from './logo/world-cup/world-cup-logo-1934.png'
@@ -37,14 +43,15 @@ export const headerLogo = {
   ratingLogo: {
     light: ratingLogoLight,
     dark: ratingLogoDark,
-  }
+  },
 }
 
 export {
-  backgroundStartPage,
-  mainBigLogo,
+  backgroundStartPageDark,
+  backgroundStartPageLight,
   flags,
-
+  bigLogoDark,
+  bigLogoLight,
   //   worldCupLogo1930,
   //   worldCupLogo1934,
   //   worldCupLogo1938,

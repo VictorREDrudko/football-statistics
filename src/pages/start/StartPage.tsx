@@ -1,13 +1,23 @@
-import { mainBigLogo } from '@/shared/assets'
 import { BackgroundWrapper, Heading, TextElement } from '@/shared/ui'
-import image from './assets/background-start.png'
+
 import s from './StartPage.module.scss'
 import { useAppSelector } from '@/shared/hooks'
 
 export const StartPage = () => {
-  const { title, text, backgroundPath } = useAppSelector(
+  const theme = useAppSelector((state) => state.theme)
+  const language = useAppSelector((state) => state.language)
+
+  const { en, ru, backgroundPath, logoPath } = useAppSelector(
     (state) => state['start-page']
   )
+
+  const image =
+    theme.mode === 'dark' ? backgroundPath.dark : backgroundPath.light
+
+  const logo = theme.mode === 'dark' ? logoPath.dark : logoPath.light
+  const title = language.mode === 'en' ? en.title : ru.title
+  const subtitle = language.mode === 'en' ? en.subtitle : ru.subtitle
+  const text = language.mode === 'en' ? en.text : ru.text
 
   return (
     <BackgroundWrapper imageUrl={image} className={s.container}>
@@ -18,7 +28,7 @@ export const StartPage = () => {
           size="9"
           weight="bold"
           align="center">
-          {'football is life'}
+          {title}
         </Heading>
         <TextElement
           as="p"
@@ -26,10 +36,19 @@ export const StartPage = () => {
           weight="regular"
           color="gray"
           align="center"
-          className={s.description}>
-          {'This project is about football'}
+          className={s.subtitle}>
+          {subtitle}
         </TextElement>
-        <img className={s.image} src={mainBigLogo} alt="Main logo" />
+        <img className={s.image} src={logo} alt="Main logo" />
+        <TextElement
+          as="p"
+          size="3"
+          weight="regular"
+          color="gray"
+          align="right"
+          className={s.text}>
+          {text}
+        </TextElement>
       </div>
     </BackgroundWrapper>
   )
