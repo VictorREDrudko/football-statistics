@@ -1,6 +1,7 @@
 import { Icon, Link } from '@/shared/ui'
-import s from './IconLink.module.scss'
 import { useAppSelector } from '@/shared/hooks'
+
+import s from './IconLink.module.scss'
 
 type Props = {
   routePath: string

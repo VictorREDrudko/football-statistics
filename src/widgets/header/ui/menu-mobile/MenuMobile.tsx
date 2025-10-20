@@ -3,16 +3,23 @@ import { Location } from 'react-router-dom'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import { Link } from '@/shared/ui'
-import { Menu } from '../../model'
+
 import s from './MenuMobile.module.scss'
+import { useAppSelector } from '@/shared/hooks'
+import { Theme } from '@radix-ui/themes'
 
 type Props = {
-  items: Menu
   location: Location
 }
 
-export const MenuMobile = ({ items, location }: Props) => {
+export const MenuMobile = ({ location }: Props) => {
   const [isOpen, setIsOpen] = useState(false)
+  const theme = useAppSelector((state) => state.theme)
+
+  const language = useAppSelector((state) => state.language.mode)
+  const menuData = useAppSelector((state) => state['header-menu'])
+  const isEnglish = language === 'en'
+  const items = isEnglish ? menuData.en : menuData.ru
 
   const renderItems = items.map((item) => {
     return (
@@ -37,21 +44,22 @@ export const MenuMobile = ({ items, location }: Props) => {
       <DropdownMenu.Trigger asChild>
         <button className={s.menuButton}>
           {isOpen ? (
-            <AiOutlineClose size={30} color="white" />
+            <AiOutlineClose size={30} className={s.trigger} />
           ) : (
-            <AiOutlineMenu size={30} color="white" />
+            <AiOutlineMenu size={30} className={s.trigger} />
           )}
         </button>
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Portal>
-        <DropdownMenu.Content
-          className={s.mobileMenuContent}
-          sideOffset={10}
-          align="end">
-          <div className={s.overlay}>{renderItems}</div>
-          <DropdownMenu.Arrow className={s.menuArrow} />
-        </DropdownMenu.Content>
+        <Theme appearance={theme.mode}>
+          <DropdownMenu.Content
+            className={s.mobileMenuContent}
+            sideOffset={10}
+            align="end">
+            <div className={s.overlay}>{renderItems}</div>
+          </DropdownMenu.Content>
+        </Theme>
       </DropdownMenu.Portal>
     </DropdownMenu.Root>
   )

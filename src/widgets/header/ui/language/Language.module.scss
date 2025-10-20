@@ -1,6 +1,10 @@
 .trigger {
   color: var(--gray-11);
   min-width: 85px;
+
+  @media (max-width: 1000px) {
+    min-width: 45px;
+  }
 }
 
 .trigger:hover {
@@ -37,6 +41,10 @@
 
 .text {
   font-size: 12px;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 }
 
 .flag {

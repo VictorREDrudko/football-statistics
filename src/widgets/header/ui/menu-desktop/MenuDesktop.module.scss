@@ -15,19 +15,19 @@
 .link,
 .active {
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
 }
 
 .link {
-  color: var(--color-gray-8);
+  color: var(--gray-11);
 }
 
 .link:hover {
-  color: var(--color-grass-7);
+  color: var(--grass-11);
   scale: 1.1;
 }
 
 .active {
-  color: var(--color-grass-9);
+  color: var(--grass-11);
 }

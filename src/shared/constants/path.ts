@@ -1,6 +1,7 @@
 export const PATH = {
   home: '/',
   about: '/about',
+  history: '/history',
   tournaments: '/tournaments',
   teams: '/teams',
   clubs: '/clubs',
