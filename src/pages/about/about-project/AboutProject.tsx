@@ -1,23 +1,35 @@
 import { useAppSelector } from '@/shared/hooks'
 import { Heading, Icon, Link, TextElement } from '@/shared/ui'
+
 import s from './AboutProject.module.scss'
 
 export const AboutProject = () => {
-  const { title, text, iconsPath } = useAppSelector(
+  const theme = useAppSelector((state) => state.theme.mode)
+  const language = useAppSelector((state) => state.language.mode)
+
+  const { en, ru, iconsPath } = useAppSelector(
     (state) => state['about-project']
   )
+
+  const title = language === 'en' ? en.title : ru.title
+  const linkText = language === 'en' ? en.link : ru.link
+  const descriptions = language === 'en' ? en.text : ru.text
 
   const { projectLogo, statisticsIcon, viewIcon, thinkIcon, historyIcon } =
     iconsPath
 
   const icons = [projectLogo, statisticsIcon, viewIcon, thinkIcon]
 
-  const descriptionItem = text.map((paragraph, index) => {
+  const content = descriptions.map((text, index) => {
     return (
       <li className={s.containerIconAndText} key={index}>
-        <Icon src={icons[index]} alt="icon description about" size={60} />
+        <Icon
+          src={theme === 'dark' ? icons[index].dark : icons[index].light}
+          alt="icon description about"
+          size={60}
+        />
         <TextElement as="p" size="5" weight="regular" color="gray">
-          {paragraph}
+          {text}
         </TextElement>
       </li>
     )
@@ -31,13 +43,15 @@ export const AboutProject = () => {
             {title}
           </Heading>
           <Link to={'/history-football'} variant="text" size="large">
-            <Icon src={historyIcon} alt="Icon history football" size={60} />
-            <span className="textLink">
-              {'Show about football history ...'}
-            </span>
+            <Icon
+              src={theme === 'dark' ? historyIcon.dark : historyIcon.light}
+              alt="Icon history football"
+              size={60}
+            />
+            <span>{linkText}</span>
           </Link>
         </div>
-        <ul className={s.containerDescription}>{descriptionItem}</ul>
+        <ul className={s.containerDescription}>{content}</ul>
       </div>
     </div>
   )

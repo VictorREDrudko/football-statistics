@@ -4,20 +4,19 @@ import s from './StartPage.module.scss'
 import { useAppSelector } from '@/shared/hooks'
 
 export const StartPage = () => {
-  const theme = useAppSelector((state) => state.theme)
-  const language = useAppSelector((state) => state.language)
+  const theme = useAppSelector((state) => state.theme.mode)
+  const language = useAppSelector((state) => state.language.mode)
 
   const { en, ru, backgroundPath, logoPath } = useAppSelector(
     (state) => state['start-page']
   )
 
-  const image =
-    theme.mode === 'dark' ? backgroundPath.dark : backgroundPath.light
+  const image = theme === 'dark' ? backgroundPath.dark : backgroundPath.light
 
-  const logo = theme.mode === 'dark' ? logoPath.dark : logoPath.light
-  const title = language.mode === 'en' ? en.title : ru.title
-  const subtitle = language.mode === 'en' ? en.subtitle : ru.subtitle
-  const text = language.mode === 'en' ? en.text : ru.text
+  const logo = theme === 'dark' ? logoPath.dark : logoPath.light
+  const title = language === 'en' ? en.title : ru.title
+  const subtitle = language === 'en' ? en.subtitle : ru.subtitle
+  const text = language === 'en' ? en.text : ru.text
 
   return (
     <BackgroundWrapper imageUrl={image} className={s.container}>

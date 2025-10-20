@@ -35,12 +35,20 @@ import backgroundWorldCup2002_1 from './world-cup/background-world-cup-2002-1.pn
 import backgroundWorldCup2002_2 from './world-cup/background-world-cup-2002-2.png'
 import backgroundWorldCup2006_1 from './world-cup/background-world-cup-2006-1.png'
 import backgroundWorldCup2006_2 from './world-cup/background-world-cup-2006-2.png'
+
 import backgroundStartPageDark from './start-page/background-start-dark.png'
 import backgroundStartPageLight from './start-page/background-start-light.png'
+import backgroundAboutProjectDark from './about-page/background-football-dark.png'
+import backgroundAboutProjectLight from './about-page/background-football-light.png'
+
+
 
 export {
   backgroundStartPageDark,
   backgroundStartPageLight,
+  backgroundAboutProjectDark,
+  backgroundAboutProjectLight,
+
   backgroundWorldCup1930_stadion,
   backgroundWorldCup1930_goal,
   backgroundWorldCup1934_1,
