@@ -6,6 +6,7 @@ import {
   startPageSlice,
   aboutProjectSlice,
   headerMenuSlice,
+  historySlice,
   nationalTeamsSlice,
   stadiumsSlice,
 } from './model/slices'
@@ -16,6 +17,7 @@ export const store = configureStore({
     [languageSlice.reducerPath]: languageSlice.reducer,
     [startPageSlice.reducerPath]: startPageSlice.reducer,
     [aboutProjectSlice.reducerPath]: aboutProjectSlice.reducer,
+    [historySlice.reducerPath]: historySlice.reducer,
     [baseApi.reducerPath]: baseApi.reducer,
     [nationalTeamsSlice.name]: nationalTeamsSlice.reducer,
     [stadiumsSlice.name]: stadiumsSlice.reducer,

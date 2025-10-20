@@ -2,6 +2,7 @@ import { useAppSelector } from '@/shared/hooks'
 import { Heading, Icon, Link, TextElement } from '@/shared/ui'
 
 import s from './AboutProject.module.scss'
+import { PATH } from '@/shared/constants'
 
 export const AboutProject = () => {
   const theme = useAppSelector((state) => state.theme.mode)
@@ -42,7 +43,7 @@ export const AboutProject = () => {
           <Heading color="gray" size="9" weight="bold" className={s.title}>
             {title}
           </Heading>
-          <Link to={'/history-football'} variant="text" size="large">
+          <Link to={PATH.history} variant="text" size="large">
             <Icon
               src={theme === 'dark' ? historyIcon.dark : historyIcon.light}
               alt="Icon history football"

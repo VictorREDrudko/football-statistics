@@ -1,6 +1,6 @@
 import { StartPage } from './start'
 import { AboutPage } from './about/AboutPage'
-import { HistoryFootballPage } from './history-football/ui/HistoryFootballPage'
+import { HistoryFootballPage } from './history-football/HistoryFootballPage'
 import { NationalTeams } from './national-teams/NationalTeams'
 import { NationalTournaments } from './national-tourmaments/ui/NationalTournaments'
 

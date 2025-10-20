@@ -3,6 +3,8 @@ export {
   backgroundStartPageLight,
   backgroundAboutProjectDark,
   backgroundAboutProjectLight,
+  backgroundHistoryPageDark,
+  backgroundHistoryPageLight,
 } from './backgrounds'
 
 export { flags } from './flags'

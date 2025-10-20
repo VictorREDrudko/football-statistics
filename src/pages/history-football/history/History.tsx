@@ -1,19 +1,24 @@
-import { Heading, TextElement } from '@/shared'
+import { useAppSelector } from '@/shared/hooks'
+import { Heading, TextElement } from '@/shared/ui'
+
 import s from './History.module.scss'
-import { useSelector } from 'react-redux'
-import { RootState } from '@/app/store/store'
 
 export const History = () => {
-  const { historicalDates } = useSelector((state: RootState) => state.historyFootball)
+  const theme = useAppSelector((state) => state.theme.mode)
+  const language = useAppSelector((state) => state.language.mode)
+  const { en, ru } = useAppSelector((state) => state['history'])
 
-  const historyList = historicalDates.map((historicalData, index) => {
+  const title = language === 'en' ? en.title : ru.title
+  const info = language === 'en' ? en.info : ru.info
+
+  const historyList = info.map((text, index) => {
     return (
       <li key={index} className={s.containerText}>
         <TextElement as="span" size="5" weight="bold" color="green">
-          {historicalData.slice(0, 5)}
+          {text.slice(0, 5)}
         </TextElement>
         <TextElement as="span" size="5" weight="regular" color="ligth">
-          {historicalData.slice(5)}
+          {text.slice(5)}
         </TextElement>
       </li>
     )
@@ -23,7 +28,7 @@ export const History = () => {
     <div className={s.container}>
       <div className={s.containerContent}>
         <Heading color="primary" size="8" weight="bold" className={s.title}>
-          {'Football History'}
+          {title}
         </Heading>
         <ul>{historyList}</ul>
       </div>

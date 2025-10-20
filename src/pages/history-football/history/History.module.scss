@@ -1,6 +1,11 @@
 .container {
   display: flex;
   justify-content: end;
+  padding: 100px 20px;
+
+  @media (max-width: 480px) {
+    padding: 100px 10px;
+  }
 }
 
 .containerContent {
@@ -19,6 +24,10 @@
     1px 2px 4px 0px var(--gray-8),
     2px 4px 8px 0px var(--gray-7),
     2px 4px 16px 0px var(--gray-9);
+
+  @media (max-width: 480px) {
+    padding: 20px 10px;
+  }
 }
 
 .containerText {

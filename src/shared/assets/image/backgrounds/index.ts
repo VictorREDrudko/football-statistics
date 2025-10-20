@@ -40,14 +40,16 @@ import backgroundStartPageDark from './start-page/background-start-dark.png'
 import backgroundStartPageLight from './start-page/background-start-light.png'
 import backgroundAboutProjectDark from './about-page/background-football-dark.png'
 import backgroundAboutProjectLight from './about-page/background-football-light.png'
-
-
+import backgroundHistoryPageDark from './history-page/history-background-dark.png'
+import backgroundHistoryPageLight from './history-page/history-background-light.png'
 
 export {
   backgroundStartPageDark,
   backgroundStartPageLight,
   backgroundAboutProjectDark,
   backgroundAboutProjectLight,
+  backgroundHistoryPageDark,
+  backgroundHistoryPageLight,
 
   backgroundWorldCup1930_stadion,
   backgroundWorldCup1930_goal,

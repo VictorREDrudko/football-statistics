@@ -19,6 +19,8 @@ import {
   thinkIconPathLight,
   viewIconPathDark,
   viewIconPathLight,
+  backgroundHistoryPageDark,
+  backgroundHistoryPageLight,
 } from './image'
 
 // import worldCupLogo1930 from './logo/world-cup/world-cup-logo-1930.png'
@@ -72,6 +74,8 @@ export {
   thinkIconPathLight,
   viewIconPathLight,
   statisticsIconPathLight,
+  backgroundHistoryPageDark,
+  backgroundHistoryPageLight,
   //   worldCupLogo1930,
   //   worldCupLogo1934,
   //   worldCupLogo1938,
